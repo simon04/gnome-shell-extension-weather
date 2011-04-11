@@ -1,4 +1,12 @@
 
+// Weather extension for Gnome shell
+// ----------
+// - Displays a small weather information on the top panel
+// - On click, gives a popup with details about the weather
+// ----------
+// Copyright (C) 2011, Timur Kristóf <venemo@msn.com>
+// - Licensed under the terms of the GPL license
+
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
 const Lang = imports.lang;
