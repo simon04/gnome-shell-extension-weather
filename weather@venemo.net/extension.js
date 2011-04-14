@@ -61,7 +61,7 @@ WeatherMenuButton.prototype = {
         }
         
         // Label
-        this._weatherInfo = new St.Label({ text: 'Loading weather...' });
+        this._weatherInfo = new St.Label({ text: _('Loading weather...') });
 
         // Panel menu item - the current class
         let menuAlignment = 0.25;
@@ -118,9 +118,9 @@ WeatherMenuButton.prototype = {
         
         this._currentWeatherSummary.text = comment;
         this._currentWeatherLocation.text = location;
-        this._currentWeatherTemperature.text = 'Temperature: ' + temperature + ' ' + temperature_unit;
-        this._currentWeatherHumidity.text = 'Humidity: ' + humidity;
-        this._currentWeatherWind.text = 'Wind: ' + wind;
+        this._currentWeatherTemperature.text = _('Temperature: ') + temperature + ' ' + temperature_unit;
+        this._currentWeatherHumidity.text = _('Humidity: ') + humidity;
+        this._currentWeatherWind.text = _('Wind: ') + wind;
         
     },
     
@@ -137,8 +137,8 @@ WeatherMenuButton.prototype = {
     showLoadingUi: function() {
         this.destroyCurrentWeather();
         this.destroyFutureWeather();
-        this._currentWeather.set_child(new St.Label({ text: 'Loading current weather...' }));
-        this._futureWeather.set_child(new St.Label({ text: 'Loading future weather...' }));
+        this._currentWeather.set_child(new St.Label({ text: _('Loading current weather...') }));
+        this._futureWeather.set_child(new St.Label({ text: _('Loading future weather...') }));
     },
     
     rebuildCurrentWeatherUi: function() {
@@ -157,10 +157,10 @@ WeatherMenuButton.prototype = {
         this._currentWeatherSummary = new St.Label({ text: 'Loading...' });
         this._currentWeatherSummary.set_style('font-size: 35px;');
         // Other labels
-        this._currentWeatherLocation = new St.Label({ text: 'Please wait' });
-        this._currentWeatherTemperature = new St.Label({ text: 'Temperature: ...' });
-        this._currentWeatherHumidity = new St.Label({ text: 'Humidity: ...' });
-        this._currentWeatherWind = new St.Label({ text: 'Wind: ...' });
+        this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
+        this._currentWeatherTemperature = new St.Label({ text: _('Temperature: ...') });
+        this._currentWeatherHumidity = new St.Label({ text: _('Humidity: ...') });
+        this._currentWeatherWind = new St.Label({ text: _('Wind: ...') });
         
         let bb = new St.BoxLayout();
         bb.set_vertical(true);
