@@ -4,8 +4,25 @@
 // - Displays a small weather information on the top panel
 // - On click, gives a popup with details about the weather
 // ----------
-// Copyright (C) 2011, Timur Kristóf <venemo@msn.com>
-// - Licensed under the terms of the GPL license
+/*
+    Copyright (C) 2011 Timur Kristóf <venemo@msn.com>, Elad Alfassa <elad@fedoraproject.org>
+
+    This file is part of gnome-shell-extension-weather.
+
+    gnome-shell-extension-weather is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Foobar is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with gnome-shell-extension-weather.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
 
 const GLib = imports.gi.GLib;
 const Gio = imports.gi.Gio;
