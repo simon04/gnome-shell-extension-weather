@@ -1,0 +1,4 @@
+TODO List:
+* Write the deamon that talks with libgweather (or make sure libgweather is fixed upstream)
+** Implement talking to the deamon with DBus
+* Find how to deal with translations (autotools?)
