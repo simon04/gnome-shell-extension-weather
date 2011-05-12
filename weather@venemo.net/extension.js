@@ -170,10 +170,10 @@ WeatherMenuButton.prototype = {
         
         this._currentWeatherSummary.text = comment;
         this._currentWeatherLocation.text = location;
-        this._currentWeatherTemperature.text = _('Temperature') + ': ' + temperature + ' ' + temperature_unit;
-        this._currentWeatherHumidity.text = _('Humidity') + ': ' + humidity;
-        this._currentWeatherPressure.text = _('Pressure') + ': ' + pressure + ' ' + pressure_unit;
-        this._currentWeatherWind.text = _('Wind') + ': ' + wind_direction + ' ' + wind + ' ' + wind_unit;
+        this._currentWeatherTemperature.text = temperature + ' ' + temperature_unit;
+        this._currentWeatherHumidity.text = humidity;
+        this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
+        this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
 
         // Repeatedly refresh weather
         here = this;
@@ -228,11 +228,20 @@ WeatherMenuButton.prototype = {
         this._currentWeatherPressure = new St.Label({ text: _('Pressure') + ': ...' });
         this._currentWeatherWind = new St.Label({ text: _('Wind') + ': ...' });
         
-        let rb = new St.BoxLayout({vertical: true, style_class: 'weather-current-databox'});
-        rb.add_actor(this._currentWeatherTemperature);
-        rb.add_actor(this._currentWeatherHumidity);
-        rb.add_actor(this._currentWeatherPressure);
-        rb.add_actor(this._currentWeatherWind);
+        let rb = new St.BoxLayout({style_class: 'weather-current-databox'});
+        rb_captions = new St.BoxLayout({vertical: true, style_class: 'weather-current-databox-captions'});
+        rb_values = new St.BoxLayout({vertical: true, style_class: 'weather-current-databox-values'});
+        rb.add_actor(rb_captions);
+        rb.add_actor(rb_values);
+
+        rb_captions.add_actor(new St.Label({text: _('Temperature:')}));
+        rb_values.add_actor(this._currentWeatherTemperature);
+        rb_captions.add_actor(new St.Label({text: _('Humidity:')}));
+        rb_values.add_actor(this._currentWeatherHumidity);
+        rb_captions.add_actor(new St.Label({text: _('Pressure:')}));
+        rb_values.add_actor(this._currentWeatherPressure);
+        rb_captions.add_actor(new St.Label({text: _('Wind:')}));
+        rb_values.add_actor(this._currentWeatherWind);
         
         let xb = new St.BoxLayout();
         xb.add_actor(bb);
