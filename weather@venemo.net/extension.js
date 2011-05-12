@@ -35,11 +35,15 @@ const St = imports.gi.St;
 const Gettext = imports.gettext.domain('gnome-shell');
 const _ = Gettext.gettext;
 
-const Util = imports.misc.util;
+const Json = imports.gi.Json;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-const Calendar = imports.ui.calendar;
+const Soup = imports.gi.Soup;
+const Util = imports.misc.util;
+
+const YAHOO_ID = "AUXX0010";
+const WEATHER_URL = "http://weather.yahooapis.com/forecastjson?u=c&p=" + YAHOO_ID;
 
 
 function WeatherMenuButton() {
@@ -61,7 +65,7 @@ WeatherMenuButton.prototype = {
         }
         
         // Label
-        this._weatherInfo = new St.Label({ text: _('Loading weather...') });
+        this._weatherInfo = new St.Label({ text: _('...') });
 
         // Panel menu item - the current class
         let menuAlignment = 0.25;
@@ -97,30 +101,87 @@ WeatherMenuButton.prototype = {
         // Items
         this.showLoadingUi();
         
-        // TODO: start weather request and hook up event handlers.
-        
         this.rebuildCurrentWeatherUi();
+
+        // Show weather
         this.refreshWeather();
+
     },
+
+    get_weather_icon: function(code) {
+        switch (parseInt(code, 10)){
+            case 4:
+                return 'weather-storm';
+            case 5:
+            case 10:
+            case 11:
+            case 12:
+            case 39:
+            case 40:
+                return 'weather-showers';
+            case 26:
+                return 'weather-overcast';
+            case 28:
+            case 30:
+            case 44:
+                return 'weather-few-clouds';
+            case 32:
+            case 34:
+            case 36:
+                return 'weather-clear';
+            default:
+                return 'weather-snow';
+        }
+    },
+
     
     refreshWeather: function() {
+
+        // Fetching current weather
+        let weather;
+        {
+            var session = new Soup.SessionSync();
+            var message = Soup.Message.new("GET", WEATHER_URL);
+            stat = session.send_message(message);
+            jp = new Json.Parser();
+            jp.load_from_data(message.response_body.data, -1);
+            weather = jp.get_root().get_object();
+        }
+
+        /*
+        weather.constructor.prototype.get_data = function(a, b) {
+            return weather.get_object_member(a).get_strig_member(b);
+        };
+        */
+
         // Refreshing current weather
-        let location = 'Budapest'; /* TODO */
-        let comment = 'Snowing'; /* TODO */
-        let temperature = '0'; /* TODO */
-        let temperature_unit = 'C'; /* TODO */
-        let humidity = '20 %'; /* TODO */
-        let wind = 'Northwest 20 km/h'; /* TODO */
-        let iconname = 'weather-snow-symbolic'; /* TODO */
+        let location = weather.get_object_member("location").get_string_member("city");
+        let comment = weather.get_object_member("condition").get_string_member("text");
+        let temperature = weather.get_object_member("condition").get_double_member("temperature");
+        let temperature_unit = weather.get_object_member("units").get_string_member("temperature");
+        let humidity = weather.get_object_member("atmosphere").get_string_member("humidity") + " %";
+        let pressure = weather.get_object_member("atmosphere").get_double_member("pressure");
+        let pressure_unit = weather.get_object_member("units").get_string_member("pressure");
+        let wind_direction = weather.get_object_member("wind").get_string_member("direction");
+        let wind = weather.get_object_member("wind").get_double_member("speed");
+        let wind_unit = weather.get_object_member("units").get_string_member("speed");
+        let iconname = this.get_weather_icon(weather.get_object_member("condition").get_string_member("code"));
         
         this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
         this._weatherInfo.text = (comment + ', ' + temperature + ' ' + temperature_unit);
         
         this._currentWeatherSummary.text = comment;
         this._currentWeatherLocation.text = location;
-        this._currentWeatherTemperature.text = _('Temperature: ') + temperature + ' ' + temperature_unit;
-        this._currentWeatherHumidity.text = _('Humidity: ') + humidity;
-        this._currentWeatherWind.text = _('Wind: ') + wind;
+        this._currentWeatherTemperature.text = _('Temperature') + ': ' + temperature + ' ' + temperature_unit;
+        this._currentWeatherHumidity.text = _('Humidity') + ': ' + humidity;
+        this._currentWeatherPressure.text = _('Pressure') + ': ' + pressure + ' ' + pressure_unit;
+        this._currentWeatherWind.text = _('Wind') + ': ' + wind_direction + ' ' + wind + ' ' + wind_unit;
+
+        // Repeatedly refresh weather
+        here = this;
+        Mainloop.timeout_add(1000*60*4, function() {
+            here.refreshWeather();
+        });
         
     },
     
@@ -137,8 +198,8 @@ WeatherMenuButton.prototype = {
     showLoadingUi: function() {
         this.destroyCurrentWeather();
         this.destroyFutureWeather();
-        this._currentWeather.set_child(new St.Label({ text: _('Loading current weather...') }));
-        this._futureWeather.set_child(new St.Label({ text: _('Loading future weather...') }));
+        this._currentWeather.set_child(new St.Label({ text: _('Loading current weather ...') }));
+        this._futureWeather.set_child(new St.Label({ text: _('Loading future weather ...') }));
     },
     
     rebuildCurrentWeatherUi: function() {
@@ -146,21 +207,25 @@ WeatherMenuButton.prototype = {
         
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({ icon_type: St.IconType.FULLCOLOR, icon_size: 64, icon_name: 'view-refresh-symbolic' });
+        /*
         if (Main.panel.actor.get_direction() == St.TextDirection.RTL) {
-            this._currentWeatherIcon.set_style('padding-left: 10px;');
+            this._currentWeatherIcon.set_style('padding-left: 30px;');
         }
         else {
-            this._currentWeatherIcon.set_style('padding-right: 10px;');
+            this._currentWeatherIcon.set_style('padding-right: 30px;');
         }
+        */
+        this._currentWeatherIcon.set_style('padding: 0 30px;');
         
         // The summary of the current weather
         this._currentWeatherSummary = new St.Label({ text: 'Loading...' });
         this._currentWeatherSummary.set_style('font-size: 35px;');
         // Other labels
         this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
-        this._currentWeatherTemperature = new St.Label({ text: _('Temperature: ...') });
-        this._currentWeatherHumidity = new St.Label({ text: _('Humidity: ...') });
-        this._currentWeatherWind = new St.Label({ text: _('Wind: ...') });
+        this._currentWeatherTemperature = new St.Label({ text: _('Temperature') + ': ...' });
+        this._currentWeatherHumidity = new St.Label({ text: _('Humidity') + ': ...' });
+        this._currentWeatherPressure = new St.Label({ text: _('Pressure') + ': ...' });
+        this._currentWeatherWind = new St.Label({ text: _('Wind') + ': ...' });
         
         let bb = new St.BoxLayout();
         bb.set_vertical(true);
@@ -172,8 +237,9 @@ WeatherMenuButton.prototype = {
         rb.set_vertical(true);
         rb.add_actor(this._currentWeatherTemperature);
         rb.add_actor(this._currentWeatherHumidity);
+        rb.add_actor(this._currentWeatherPressure);
         rb.add_actor(this._currentWeatherWind);
-        rb.set_style('padding-top: 15px; padding-left: 10px;');
+        rb.set_style('padding-top: 15px; padding-left: 30px;');
         
         let xb = new St.BoxLayout();
         xb.add_actor(bb);
