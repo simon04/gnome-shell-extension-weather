@@ -1,1 +1,24 @@
+.weather-current-summary {
+    padding-top: 15px;
+}
 
+.weather-current-databox {
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+.weather-current-icon {
+    padding: 0 30px;
+}
+
+.weather-current-iconbox {
+    padding: 10px;
+}
+
+.weather-icon {
+    padding-right: 5px;
+}
+
+.weather-icon-rtl {
+    padding-left: 5px;
+}

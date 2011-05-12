@@ -56,13 +56,12 @@ WeatherMenuButton.prototype = {
     _init: function() {
     
         // Panel icon
-        this._weatherIcon = new St.Icon({ icon_type: St.IconType.FULLCOLOR, icon_size: Main.panel.button.get_child().height - 4, icon_name: 'view-refresh-symbolic' });
-        if (Main.panel.actor.get_direction() == St.TextDirection.RTL) {
-            this._weatherIcon.set_style('padding-left: 5px;');
-        }
-        else {
-            this._weatherIcon.set_style('padding-right: 5px;');
-        }
+        this._weatherIcon = new St.Icon({
+            icon_type: St.IconType.FULLCOLOR,
+            icon_size: Main.panel.button.get_child().height - 4,
+            icon_name: 'view-refresh-symbolic',
+            style_class: 'weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
+        });
         
         // Label
         this._weatherInfo = new St.Label({ text: _('...') });
@@ -206,16 +205,12 @@ WeatherMenuButton.prototype = {
         this.destroyCurrentWeather();
         
         // This will hold the icon for the current weather
-        this._currentWeatherIcon = new St.Icon({ icon_type: St.IconType.FULLCOLOR, icon_size: 64, icon_name: 'view-refresh-symbolic' });
-        /*
-        if (Main.panel.actor.get_direction() == St.TextDirection.RTL) {
-            this._currentWeatherIcon.set_style('padding-left: 30px;');
-        }
-        else {
-            this._currentWeatherIcon.set_style('padding-right: 30px;');
-        }
-        */
-        this._currentWeatherIcon.set_style('padding: 0 30px;');
+        this._currentWeatherIcon = new St.Icon({
+            icon_type: St.IconType.FULLCOLOR,
+            icon_size: 64,
+            icon_name: 'view-refresh-symbolic',
+            style_class: "weather-current-icon"
+        });
         
         // The summary of the current weather
         this._currentWeatherSummary = new St.Label({ text: 'Loading...' });
@@ -227,28 +222,25 @@ WeatherMenuButton.prototype = {
         this._currentWeatherPressure = new St.Label({ text: _('Pressure') + ': ...' });
         this._currentWeatherWind = new St.Label({ text: _('Wind') + ': ...' });
         
-        let bb = new St.BoxLayout();
+        let bb = new St.BoxLayout({style_class: "weather-current-summary"});
         bb.set_vertical(true);
         bb.add_actor(this._currentWeatherLocation);
         bb.add_actor(this._currentWeatherSummary);
-        bb.set_style('padding-top: 15px;');
         
-        let rb = new St.BoxLayout();
+        let rb = new St.BoxLayout({style_class: "weather-current-databox"});
         rb.set_vertical(true);
         rb.add_actor(this._currentWeatherTemperature);
         rb.add_actor(this._currentWeatherHumidity);
         rb.add_actor(this._currentWeatherPressure);
         rb.add_actor(this._currentWeatherWind);
-        rb.set_style('padding-top: 15px; padding-left: 30px;');
         
         let xb = new St.BoxLayout();
         xb.add_actor(bb);
         xb.add_actor(rb);
         
-        let box = new St.BoxLayout();
+        let box = new St.BoxLayout({style_class: "weather-current-iconbox"});
         box.add_actor(this._currentWeatherIcon);
         box.add_actor(xb);
-        box.set_style('padding: 10px;');
         this._currentWeather.set_child(box);
         
     },
