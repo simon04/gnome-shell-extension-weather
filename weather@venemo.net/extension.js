@@ -42,8 +42,8 @@ const PopupMenu = imports.ui.popupMenu;
 const Soup = imports.gi.Soup;
 const Util = imports.misc.util;
 
-const YAHOO_ID = "AUXX0010";
-const WEATHER_URL = "http://weather.yahooapis.com/forecastjson?u=c&p=" + YAHOO_ID;
+const YAHOO_ID = 'AUXX0010';
+const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=c&p=' + YAHOO_ID;
 
 
 function WeatherMenuButton() {
@@ -140,7 +140,7 @@ WeatherMenuButton.prototype = {
         let weather;
         {
             var session = new Soup.SessionSync();
-            var message = Soup.Message.new("GET", WEATHER_URL);
+            var message = Soup.Message.new('GET', WEATHER_URL);
             stat = session.send_message(message);
             jp = new Json.Parser();
             jp.load_from_data(message.response_body.data, -1);
@@ -154,17 +154,17 @@ WeatherMenuButton.prototype = {
         */
 
         // Refreshing current weather
-        let location = weather.get_object_member("location").get_string_member("city");
-        let comment = weather.get_object_member("condition").get_string_member("text");
-        let temperature = weather.get_object_member("condition").get_double_member("temperature");
-        let temperature_unit = weather.get_object_member("units").get_string_member("temperature");
-        let humidity = weather.get_object_member("atmosphere").get_string_member("humidity") + " %";
-        let pressure = weather.get_object_member("atmosphere").get_double_member("pressure");
-        let pressure_unit = weather.get_object_member("units").get_string_member("pressure");
-        let wind_direction = weather.get_object_member("wind").get_string_member("direction");
-        let wind = weather.get_object_member("wind").get_double_member("speed");
-        let wind_unit = weather.get_object_member("units").get_string_member("speed");
-        let iconname = this.get_weather_icon(weather.get_object_member("condition").get_string_member("code"));
+        let location = weather.get_object_member('location').get_string_member('city');
+        let comment = weather.get_object_member('condition').get_string_member('text');
+        let temperature = weather.get_object_member('condition').get_double_member('temperature');
+        let temperature_unit = weather.get_object_member('units').get_string_member('temperature');
+        let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
+        let pressure = weather.get_object_member('atmosphere').get_double_member('pressure');
+        let pressure_unit = weather.get_object_member('units').get_string_member('pressure');
+        let wind_direction = weather.get_object_member('wind').get_string_member('direction');
+        let wind = weather.get_object_member('wind').get_double_member('speed');
+        let wind_unit = weather.get_object_member('units').get_string_member('speed');
+        let iconname = this.get_weather_icon(weather.get_object_member('condition').get_string_member('code'));
         
         this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
         this._weatherInfo.text = (comment + ', ' + temperature + ' ' + temperature_unit);
@@ -209,7 +209,7 @@ WeatherMenuButton.prototype = {
             icon_type: St.IconType.FULLCOLOR,
             icon_size: 64,
             icon_name: 'view-refresh-symbolic',
-            style_class: "weather-current-icon"
+            style_class: 'weather-current-icon'
         });
         
         // The summary of the current weather
@@ -222,12 +222,12 @@ WeatherMenuButton.prototype = {
         this._currentWeatherPressure = new St.Label({ text: _('Pressure') + ': ...' });
         this._currentWeatherWind = new St.Label({ text: _('Wind') + ': ...' });
         
-        let bb = new St.BoxLayout({style_class: "weather-current-summary"});
+        let bb = new St.BoxLayout({style_class: 'weather-current-summary'});
         bb.set_vertical(true);
         bb.add_actor(this._currentWeatherLocation);
         bb.add_actor(this._currentWeatherSummary);
         
-        let rb = new St.BoxLayout({style_class: "weather-current-databox"});
+        let rb = new St.BoxLayout({style_class: 'weather-current-databox'});
         rb.set_vertical(true);
         rb.add_actor(this._currentWeatherTemperature);
         rb.add_actor(this._currentWeatherHumidity);
@@ -238,7 +238,7 @@ WeatherMenuButton.prototype = {
         xb.add_actor(bb);
         xb.add_actor(rb);
         
-        let box = new St.BoxLayout({style_class: "weather-current-iconbox"});
+        let box = new St.BoxLayout({style_class: 'weather-current-iconbox'});
         box.add_actor(this._currentWeatherIcon);
         box.add_actor(xb);
         this._currentWeather.set_child(box);
