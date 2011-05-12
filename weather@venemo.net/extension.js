@@ -89,8 +89,7 @@ WeatherMenuButton.prototype = {
         this._separatorArea.connect('repaint', Lang.bind(this, this._onSeparatorAreaRepaint));
         
         // Putting the popup item together
-        let mainBox = new St.BoxLayout();
-        mainBox.set_vertical(true);
+        let mainBox = new St.BoxLayout({vertical: true});
         mainBox.add_actor(this._currentWeather);
         mainBox.add_actor(this._separatorArea);
         //mainBox.add_actor(this._futureWeather);
@@ -213,22 +212,23 @@ WeatherMenuButton.prototype = {
         });
         
         // The summary of the current weather
-        this._currentWeatherSummary = new St.Label({ text: 'Loading...' });
-        this._currentWeatherSummary.set_style('font-size: 35px;');
-        // Other labels
+        this._currentWeatherSummary = new St.Label({
+            text: 'Loading...',
+            style_class: 'weather-current-summary'
+        });
         this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
+
+        let bb = new St.BoxLayout({vertical: true, style_class: 'weather-current-summarybox'});
+        bb.add_actor(this._currentWeatherLocation);
+        bb.add_actor(this._currentWeatherSummary);
+        
+        // Other labels
         this._currentWeatherTemperature = new St.Label({ text: _('Temperature') + ': ...' });
         this._currentWeatherHumidity = new St.Label({ text: _('Humidity') + ': ...' });
         this._currentWeatherPressure = new St.Label({ text: _('Pressure') + ': ...' });
         this._currentWeatherWind = new St.Label({ text: _('Wind') + ': ...' });
         
-        let bb = new St.BoxLayout({style_class: 'weather-current-summary'});
-        bb.set_vertical(true);
-        bb.add_actor(this._currentWeatherLocation);
-        bb.add_actor(this._currentWeatherSummary);
-        
-        let rb = new St.BoxLayout({style_class: 'weather-current-databox'});
-        rb.set_vertical(true);
+        let rb = new St.BoxLayout({vertical: true, style_class: 'weather-current-databox'});
         rb.add_actor(this._currentWeatherTemperature);
         rb.add_actor(this._currentWeatherHumidity);
         rb.add_actor(this._currentWeatherPressure);

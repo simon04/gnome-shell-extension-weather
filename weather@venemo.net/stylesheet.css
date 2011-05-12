@@ -1,5 +1,9 @@
-.weather-current-summary {
+.weather-current-summarybox {
     padding-top: 15px;
+}
+
+.weather-current-summary {
+    font-size: 35px;
 }
 
 .weather-current-databox {
