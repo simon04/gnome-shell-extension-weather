@@ -1,1 +1,1 @@
-{"shell-version": ["3.0.0.2"], "uuid": "weather@venemo.net", "name": "Weather", "description": "Shows wheater notifications"}
+{"shell-version": ["3.0.1"], "uuid": "weather@venemo.net", "name": "Weather", "description": "Adds weather information next to the clock."}
