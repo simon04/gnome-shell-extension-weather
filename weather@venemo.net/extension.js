@@ -44,6 +44,7 @@ const Util = imports.misc.util;
 
 const YAHOO_ID = 'AUXX0010';
 const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=c&p=' + YAHOO_ID;
+//http://query.yahooapis.com/v1/public/yql?q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22AUXX0010%22%20%20and%20u='c'&format=json
 
 
 function WeatherMenuButton() {
