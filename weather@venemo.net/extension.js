@@ -179,9 +179,6 @@ WeatherMenuButton.prototype = {
         this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
         this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
 
-        jsdlkfsjf[34] = 'sd';
-
-
         for (let i = 0; i <= 1; i++) {
             let forecastUi = this._forecast[i];
             let weatherData = weather.get_array_member('forecast').get_elements()[i].get_object();
