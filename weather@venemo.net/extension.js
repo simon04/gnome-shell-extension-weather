@@ -230,7 +230,7 @@ WeatherMenuButton.prototype = {
         
         // The summary of the current weather
         this._currentWeatherSummary = new St.Label({
-            text: 'Loading...',
+            text: _('Loading ...'),
             style_class: 'weather-current-summary'
         });
         this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
