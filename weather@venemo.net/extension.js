@@ -78,6 +78,7 @@ WeatherMenuButton.prototype = {
         topBox.add_actor(this._weatherIcon);
         topBox.add_actor(this._weatherInfo);
         this.actor.set_child(topBox);
+        Main.panel._centerBox.add(this.actor, { y_fill: true });
 
         // Current weather
         this._currentWeather = new St.Bin();
@@ -133,25 +134,22 @@ WeatherMenuButton.prototype = {
         }
     },
 
+    load_json: function(url) {
+        var session = new Soup.SessionSync();
+        var message = Soup.Message.new('GET', url);
+        stat = session.send_message(message);
+        jp = new Json.Parser();
+        jp.load_from_data(message.response_body.data, -1);
+        return jp.get_root();
+    },
+
     
     refreshWeather: function() {
 
-        // Fetching current weather
-        let weather;
-        {
-            var session = new Soup.SessionSync();
-            var message = Soup.Message.new('GET', WEATHER_URL);
-            stat = session.send_message(message);
-            jp = new Json.Parser();
-            jp.load_from_data(message.response_body.data, -1);
-            weather = jp.get_root().get_object();
-        }
+        try {
 
-        /*
-        weather.constructor.prototype.get_data = function(a, b) {
-            return weather.get_object_member(a).get_strig_member(b);
-        };
-        */
+        // Fetching current weather
+        let weather = this.load_json(WEATHER_URL).get_object();
 
         // Refreshing current weather
         let location = weather.get_object_member('location').get_string_member('city');
@@ -176,11 +174,12 @@ WeatherMenuButton.prototype = {
         this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
         this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
 
+        } catch (e) {
+            //TODO
+        }
+
         // Repeatedly refresh weather
-        here = this;
-        Mainloop.timeout_add(1000*60*4, function() {
-            here.refreshWeather();
-        });
+        Mainloop.timeout_add_seconds(60*4, Lang.bind(this, this.refreshWeather));
         
     },
     
@@ -283,6 +282,5 @@ WeatherMenuButton.prototype = {
 
 function main() {
     this._weatherMenu = new WeatherMenuButton();
-    Main.panel._centerBox.add(this._weatherMenu.actor, { y_fill: true });
 }
 
