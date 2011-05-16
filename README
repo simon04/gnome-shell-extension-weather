@@ -2,12 +2,17 @@ gnome-shell-extension-weather is a simple extension for displaying weather notif
 
 Installation:
 
+    Change YAHOO_ID to your location in extension.js (cf. WOEID)
     Put directory weather@venemo.com in ~/.local/share/gnome-shell/extensions/
+    Enjoy, contribute, ...
 
 
 Licence:
 
-    Copyright (C) 2011 Timur Kristóf <venemo@msn.com>, Elad Alfassa <elad@fedoraproject.org>
+    Copyright (C) 2011
+        Timur Kristóf <venemo@msn.com>,
+        Elad Alfassa <elad@fedoraproject.org>,
+        Simon Legner <Simon.Legner@gmail.com>
 
     This file is part of gnome-shell-extension-weather.
 

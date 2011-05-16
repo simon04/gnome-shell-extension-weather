@@ -1,11 +1,13 @@
-
-// Weather extension for Gnome shell
-// ----------
-// - Displays a small weather information on the top panel
-// - On click, gives a popup with details about the weather
-// ----------
 /*
-    Copyright (C) 2011 Timur Kristóf <venemo@msn.com>, Elad Alfassa <elad@fedoraproject.org>
+
+ *  Weather extension for Gnome shell
+ *  - Displays a small weather information on the top panel
+ *  - On click, gives a popup with details about the weather
+
+    Copyright (C) 2011
+        Timur Kristóf <venemo@msn.com>,
+        Elad Alfassa <elad@fedoraproject.org>,
+        Simon Legner <Simon.Legner@gmail.com>
 
     This file is part of gnome-shell-extension-weather.
 
