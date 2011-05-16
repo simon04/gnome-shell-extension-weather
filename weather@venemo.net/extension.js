@@ -77,6 +77,7 @@ WeatherMenuButton.prototype = {
         topBox.add_actor(this._weatherIcon);
         topBox.add_actor(this._weatherInfo);
         this.actor.set_child(topBox);
+        Main.panel._centerBox.add(this.actor, { y_fill: true });
 
         // Current weather
         this._currentWeather = new St.Bin();
@@ -146,8 +147,8 @@ WeatherMenuButton.prototype = {
 
         try {
 
-            // Fetching current weather
-            let weather = this.load_json(WEATHER_URL).get_object();
+        // Fetching current weather
+        let weather = this.load_json(WEATHER_URL).get_object();
 
         // Refreshing current weather
         let location = weather.get_object_member('location').get_string_member('city');
@@ -177,10 +178,7 @@ WeatherMenuButton.prototype = {
         }
 
         // Repeatedly refresh weather
-        here = this;
-        Mainloop.timeout_add(1000*60*4, function() {
-            here.refreshWeather();
-        });
+        Mainloop.timeout_add_seconds(60*4, Lang.bind(this, this.refreshWeather));
         
     },
     
@@ -283,6 +281,5 @@ WeatherMenuButton.prototype = {
 
 function main() {
     this._weatherMenu = new WeatherMenuButton();
-    Main.panel._centerBox.add(this._weatherMenu.actor, { y_fill: true });
 }
 
