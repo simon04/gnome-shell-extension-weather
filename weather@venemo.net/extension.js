@@ -42,9 +42,10 @@ const PopupMenu = imports.ui.popupMenu;
 const Soup = imports.gi.Soup;
 const Util = imports.misc.util;
 
+const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius
 const YAHOO_ID = 'AUXX0010';
-const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=c&p=' + YAHOO_ID;
-//http://query.yahooapis.com/v1/public/yql?q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22AUXX0010%22%20%20and%20u='c'&format=json
+const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=' + UNITS + '&p=' + YAHOO_ID;
+const FORECAST_URL = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + YAHOO_ID + '%22%20%20and%20u="' + UNITS + '"';
 
 
 function WeatherMenuButton() {
@@ -81,9 +82,9 @@ WeatherMenuButton.prototype = {
         Main.panel._centerBox.add(this.actor, { y_fill: true });
 
         // Current weather
-        this._currentWeather = new St.Bin();
+        this._currentWeather = new St.Bin({style_class: 'current'});
         // Future weather
-        this._futureWeather = new St.Bin();
+        this._futureWeather = new St.Bin({style_class: 'forecast'/*, x_align: St.Align.START*/});
         
         // Separator (copied from Gnome shell's popupMenu.js)
         this._separatorArea = new St.DrawingArea({ style_class: 'popup-separator-menu-item' });
@@ -94,7 +95,7 @@ WeatherMenuButton.prototype = {
         let mainBox = new St.BoxLayout({vertical: true});
         mainBox.add_actor(this._currentWeather);
         mainBox.add_actor(this._separatorArea);
-        //mainBox.add_actor(this._futureWeather);
+        mainBox.add_actor(this._futureWeather);
         
         this.menu.addActor(mainBox);
         
@@ -102,6 +103,7 @@ WeatherMenuButton.prototype = {
         this.showLoadingUi();
         
         this.rebuildCurrentWeatherUi();
+        this.rebuildFutureWeatherUi();
 
         // Show weather
         this.refreshWeather();
@@ -150,18 +152,19 @@ WeatherMenuButton.prototype = {
 
         // Fetching current weather
         let weather = this.load_json(WEATHER_URL).get_object();
+        let forecast = this.load_json(FORECAST_URL).get_object();
 
         // Refreshing current weather
         let location = weather.get_object_member('location').get_string_member('city');
         let comment = weather.get_object_member('condition').get_string_member('text');
         let temperature = weather.get_object_member('condition').get_double_member('temperature');
-        let temperature_unit = weather.get_object_member('units').get_string_member('temperature');
+        temperature_unit = weather.get_object_member('units').get_string_member('temperature');
         let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
         let pressure = weather.get_object_member('atmosphere').get_double_member('pressure');
-        let pressure_unit = weather.get_object_member('units').get_string_member('pressure');
+        pressure_unit = weather.get_object_member('units').get_string_member('pressure');
         let wind_direction = weather.get_object_member('wind').get_string_member('direction');
         let wind = weather.get_object_member('wind').get_double_member('speed');
-        let wind_unit = weather.get_object_member('units').get_string_member('speed');
+        wind_unit = weather.get_object_member('units').get_string_member('speed');
         let iconname = this.get_weather_icon(weather.get_object_member('condition').get_string_member('code'));
         
         this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
@@ -173,6 +176,21 @@ WeatherMenuButton.prototype = {
         this._currentWeatherHumidity.text = humidity;
         this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
         this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
+
+        jsdlkfsjf[34] = 'sd';
+
+
+        for (let i = 0; i <= 1; i++) {
+            let forecastUi = this._forecast[i];
+            let weatherData = weather.get_array_member('forecast').get_elements()[i].get_object();
+            let forecastData = forecast.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
+            forecastData = forecastData[i].get_object();
+            forecastData = forecastData.get_object_member('item').get_object_member('forecast');
+            forecastUi.Day.text = weatherData.get_string_member('day');
+            forecastUi.Summary.text = forecastData.get_string_member('text');
+            forecastUi.Temperature.text = forecastData.get_string_member('low') + '\u2013' + forecastData.get_string_member('high') + ' ' + temperature_unit;
+            forecastUi.Icon.icon_name = this.get_weather_icon(forecastData.get_string_member('code'));
+        }
 
         } catch (e) {
             //TODO
@@ -255,6 +273,38 @@ WeatherMenuButton.prototype = {
     },
     
     rebuildFutureWeatherUi: function() {
+        this.destroyFutureWeather();
+
+        this._forecast = [];
+        this._forecastBox = new St.BoxLayout();
+        this._futureWeather.set_child(this._forecastBox);
+
+        for (let i = 0; i <= 1; i++) {
+            let forecastWeather = {};
+
+            forecastWeather.Icon = new St.Icon({
+                icon_type: St.IconType.FULLCOLOR,
+                icon_size: 48,
+                icon_name: 'view-refresh-symbolic',
+                style_class: 'weather-forecast-icon'
+            });
+            forecastWeather.Day = new St.Label({style_class: 'weather-forecast-day'});
+            forecastWeather.Summary = new St.Label({style_class: 'weather-forecast-summary'});
+            forecastWeather.Temperature = new St.Label({style_class: 'weather-forecast-temperature'});
+
+            let by = new St.BoxLayout({vertical: true, style_class: 'weather-forecast-databox'});
+            by.add_actor(forecastWeather.Day);
+            by.add_actor(forecastWeather.Summary);
+            by.add_actor(forecastWeather.Temperature);
+
+            let bb = new St.BoxLayout({style_class: 'weather-forecast-box'});
+            bb.add_actor(forecastWeather.Icon);
+            bb.add_actor(by);
+
+            this._forecast[i] = forecastWeather;
+            this._forecastBox.add_actor(bb);
+
+        }
         
     },
     
