@@ -108,7 +108,10 @@ WeatherMenuButton.prototype = {
         this.rebuildFutureWeatherUi();
 
         // Show weather
-        this.refreshWeather();
+        here = this;
+        Mainloop.timeout_add(3000, function() {
+            here.refreshWeather();
+        });
 
     },
 
@@ -147,53 +150,67 @@ WeatherMenuButton.prototype = {
         return jp.get_root();
     },
 
+    load_json_async: function(url, fun) {
+        here = this;
+        let session = new Soup.SessionAsync();
+        let message = Soup.Message.new('GET', url);
+        session.queue_message(message, function(session, message) {
+            jp = new Json.Parser();
+            jp.load_from_data(message.response_body.data, -1);
+            fun.call(here, jp.get_root().get_object());
+        });
+    },
     
     refreshWeather: function() {
 
-        try {
+        // Refresh current weather
+        this.load_json_async(WEATHER_URL, function(weather) {
 
-        // Fetching current weather
-        let weather = this.load_json(WEATHER_URL).get_object();
-        let forecast = this.load_json(FORECAST_URL).get_object();
+            let location = weather.get_object_member('location').get_string_member('city');
+            let comment = weather.get_object_member('condition').get_string_member('text');
+            let temperature = weather.get_object_member('condition').get_double_member('temperature');
+            let temperature_unit = weather.get_object_member('units').get_string_member('temperature');
+            let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
+            let pressure = weather.get_object_member('atmosphere').get_double_member('pressure');
+            pressure_unit = weather.get_object_member('units').get_string_member('pressure');
+            let wind_direction = weather.get_object_member('wind').get_string_member('direction');
+            let wind = weather.get_object_member('wind').get_double_member('speed');
+            wind_unit = weather.get_object_member('units').get_string_member('speed');
+            let iconname = this.get_weather_icon(weather.get_object_member('condition').get_string_member('code'));
 
-        // Refreshing current weather
-        let location = weather.get_object_member('location').get_string_member('city');
-        let comment = weather.get_object_member('condition').get_string_member('text');
-        let temperature = weather.get_object_member('condition').get_double_member('temperature');
-        temperature_unit = weather.get_object_member('units').get_string_member('temperature');
-        let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
-        let pressure = weather.get_object_member('atmosphere').get_double_member('pressure');
-        pressure_unit = weather.get_object_member('units').get_string_member('pressure');
-        let wind_direction = weather.get_object_member('wind').get_string_member('direction');
-        let wind = weather.get_object_member('wind').get_double_member('speed');
-        wind_unit = weather.get_object_member('units').get_string_member('speed');
-        let iconname = this.get_weather_icon(weather.get_object_member('condition').get_string_member('code'));
-        
-        this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
-        this._weatherInfo.text = (comment + ', ' + temperature + ' ' + temperature_unit);
-        
-        this._currentWeatherSummary.text = comment;
-        this._currentWeatherLocation.text = location;
-        this._currentWeatherTemperature.text = temperature + ' ' + temperature_unit;
-        this._currentWeatherHumidity.text = humidity;
-        this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
-        this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
+            this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
+            this._weatherInfo.text = (comment + ', ' + temperature + ' ' + temperature_unit);
 
-        for (let i = 0; i <= 1; i++) {
-            let forecastUi = this._forecast[i];
-            let weatherData = weather.get_array_member('forecast').get_elements()[i].get_object();
-            let forecastData = forecast.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
-            forecastData = forecastData[i].get_object();
-            forecastData = forecastData.get_object_member('item').get_object_member('forecast');
-            forecastUi.Day.text = weatherData.get_string_member('day');
-            forecastUi.Summary.text = forecastData.get_string_member('text');
-            forecastUi.Temperature.text = forecastData.get_string_member('low') + '\u2013' + forecastData.get_string_member('high') + ' ' + temperature_unit;
-            forecastUi.Icon.icon_name = this.get_weather_icon(forecastData.get_string_member('code'));
-        }
+            this._currentWeatherSummary.text = comment;
+            this._currentWeatherLocation.text = location;
+            this._currentWeatherTemperature.text = temperature + ' ' + temperature_unit;
+            this._currentWeatherHumidity.text = humidity;
+            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
+            this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
 
-        } catch (e) {
-            //TODO
-        }
+        });
+
+        // Refresh forecast
+        this.load_json_async(FORECAST_URL, function(forecast) {
+
+            date_string = ['Today', 'Tomorrow'];
+            forecast2 = forecast.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
+            for (let i = 0; i <= 1; i++) {
+                let forecastUi = this._forecast[i];
+                let forecastData = forecast2[i].get_object().get_object_member('item').get_object_member('forecast');
+
+                let code = forecastData.get_string_member('code');
+                let comment = forecastData.get_string_member('text');
+                let t_low = forecastData.get_string_member('low');
+                let t_high = forecastData.get_string_member('high');
+
+                forecastUi.Day.text = date_string[i] + ' (' + forecastData.get_string_member('day') + ')';
+                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + UNITS.toUpperCase();
+                forecastUi.Summary.text = comment;
+                forecastUi.Icon.icon_name = this.get_weather_icon(code);
+            }
+
+        });
 
         // Repeatedly refresh weather
         Mainloop.timeout_add_seconds(60*4, Lang.bind(this, this.refreshWeather));
@@ -240,10 +257,10 @@ WeatherMenuButton.prototype = {
         bb.add_actor(this._currentWeatherSummary);
         
         // Other labels
-        this._currentWeatherTemperature = new St.Label({ text: _('Temperature') + ': ...' });
-        this._currentWeatherHumidity = new St.Label({ text: _('Humidity') + ': ...' });
-        this._currentWeatherPressure = new St.Label({ text: _('Pressure') + ': ...' });
-        this._currentWeatherWind = new St.Label({ text: _('Wind') + ': ...' });
+        this._currentWeatherTemperature = new St.Label({ text: '...' });
+        this._currentWeatherHumidity = new St.Label({ text:  '...' });
+        this._currentWeatherPressure = new St.Label({ text: '...' });
+        this._currentWeatherWind = new St.Label({ text: '...' });
         
         let rb = new St.BoxLayout({style_class: 'weather-current-databox'});
         rb_captions = new St.BoxLayout({vertical: true, style_class: 'weather-current-databox-captions'});
