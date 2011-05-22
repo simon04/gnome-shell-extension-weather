@@ -4,6 +4,7 @@ Installation:
 
     Change YAHOO_ID to your location in extension.js (cf. WOEID)
     Put directory weather@venemo.com in ~/.local/share/gnome-shell/extensions/
+    Restart Gnome Shell ([Alt]+[F2], `r`)
     Enjoy, contribute, ...
 
 
