@@ -117,103 +117,104 @@ WeatherMenuButton.prototype = {
 
     get_weather_icon: function(code) {
         switch (parseInt(code, 10)){
-            case 0:
+        /* see http://developer.yahoo.com/weather/#codetable */
+            case 0:/* tornado */
                 return 'weather-severe-alert';
-            case 1:
+            case 1:/* tropical storm */
                 return 'weather-severe-alert';
-            case 2:
+            case 2:/* hurricane */
                 return 'weather-severe-alert';
-            case 3:
+            case 3:/* severe thunderstorms */
                 return 'weather-severe-alert';
-            case 4:
+            case 4:/* thunderstorms */
                 return 'weather-storm';
-            case 5:
+            case 5:/* mixed rain and snow */
                 return 'weather-snow-rain';
-            case 6:
+            case 6:/* mixed rain and sleet */
                 return 'weather-snow-rain';
-            case 7:
+            case 7:/* mixed snow and sleet */
                 return 'weather-snow';
-            case 8:
+            case 8:/* freezing drizzle */
                 return 'weather-freezing-rain';
-            case 9:
+            case 9:/* drizzle */
                 return 'weather-fog';
-            case 10:
+            case 10:/* freezing rain */
                 return 'weather-freezing-rain';
-            case 11:
+            case 11:/* showers */
                 return 'weather-showers';
-            case 12:
+            case 12:/* showers */
                 return 'weather-showers';
-            case 13:
+            case 13:/* snow flurries */
                 return 'weather-snow';
-            case 14:
+            case 14:/* light snow showers */
                 return 'weather-snow';
-            case 15:
+            case 15:/* blowing snow */
                 return 'weather-snow';
-            case 16:
+            case 16:/* snow */
                 return 'weather-snow';
-            case 17:
+            case 17:/* hail */
                 return 'weather-snow';
-            case 18:
+            case 18:/* sleet */
                 return 'weather-snow';
-            case 19:
+            case 19:/* dust */
                 return 'weather-fog';
-            case 20:
+            case 20:/* foggy */
                 return 'weather-fog';
-            case 21:
+            case 21:/* haze */
                 return 'weather-fog';
-            case 22:
+            case 22:/* smoky */
                 return 'weather-fog';
-            case 23:
+            case 23:/* blustery */
                 return 'weather-few-clouds';
-            case 24:
+            case 24:/* windy */
                 return 'weather-few-clouds';
-            case 25:
+            case 25:/* cold */
                 return 'weather-few-clouds';
-            case 26:
+            case 26:/* cloudy */
                 return 'weather-overcast';
-            case 27:
+            case 27:/* mostly cloudy (night) */
                 return 'weather-clouds-night';
-            case 28:
+            case 28:/* mostly cloudy (day) */
                 return 'weather-few-clouds';
-            case 29:
+            case 29:/* partly cloudy (night) */
                 return 'weather-few-clouds-night';
-            case 30:
+            case 30:/* partly cloudy (day) */
                 return 'weather-few-clouds';
-            case 31:
+            case 31:/* clear (night) */
                 return 'weather-clear-night';
-            case 32:
+            case 32:/* sunny */
                 return 'weather-clear';
-            case 33:
+            case 33:/* fair (night) */
                 return 'weather-clear';
-            case 34:
+            case 34:/* fair (day) */
                 return 'weather-clear-night';
-            case 35:
+            case 35:/* mixed rain and hail */
                 return 'weather-snow-rain';
-            case 36:
+            case 36:/* hot */
                 return 'weather-clear';
-            case 37:
+            case 37:/* isolated thunderstorms */
                 return 'weather-storm';
-            case 38:
+            case 38:/* scattered thunderstorms */
                 return 'weather-storm';
-            case 39:
+            case 39:/* scattered thunderstorms */
                 return 'weather-storm';
-            case 40:
+            case 40:/* scattered showers */
                 return 'weather-showers-scattered';
-            case 41:
+            case 41:/* heavy snow */
                 return 'weather-snow';
-            case 42:
+            case 42:/* scattered snow showers */
                 return 'weather-snow';
-            case 43:
+            case 43:/* heavy snow */
                 return 'weather-snow';
-            case 44:
+            case 44:/* partly cloudy */
                 return 'weather-few-clouds';
-            case 45:
+            case 45:/* thundershowers */
                 return 'weather-storm';
-            case 46:
+            case 46:/* snow showers */
                 return 'weather-snow';
-            case 47:
+            case 47:/* isolated thundershowers */
                 return 'weather-storm';
-            case 3200:
+            case 3200:/* not available */
                 return 'weather-severe-alert';
             default:
                 return 'weather-severe-alert';
