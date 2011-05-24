@@ -276,7 +276,7 @@ WeatherMenuButton.prototype = {
         
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({
-            icon_type: St.IconType.FULLCOLOR,
+            icon_type: St.IconType.FULLCOLOR, //TODO SYMBOLIC not available in 64x64!?
             icon_size: 64,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-current-icon'
@@ -336,7 +336,7 @@ WeatherMenuButton.prototype = {
             let forecastWeather = {};
 
             forecastWeather.Icon = new St.Icon({
-                icon_type: St.IconType.FULLCOLOR,
+                icon_type: St.IconType.SYMBOLIC,
                 icon_size: 48,
                 icon_name: 'view-refresh-symbolic',
                 style_class: 'weather-forecast-icon'
