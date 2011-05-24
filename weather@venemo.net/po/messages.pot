@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-24 16:54+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js:73
+msgid "..."
+msgstr ""
+
+#: extension.js:315
+msgid "Loading current weather ..."
+msgstr ""
+
+#: extension.js:316
+msgid "Loading future weather ..."
+msgstr ""
+
+#: extension.js:332
+msgid "Loading ..."
+msgstr ""
+
+#: extension.js:335
+msgid "Please wait"
+msgstr ""
+
+#: extension.js:353
+msgid "Temperature:"
+msgstr ""
+
+#: extension.js:355
+msgid "Humidity:"
+msgstr ""
+
+#: extension.js:357
+msgid "Pressure:"
+msgstr ""
+
+#: extension.js:359
+msgid "Wind:"
+msgstr ""
