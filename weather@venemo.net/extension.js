@@ -84,6 +84,7 @@ WeatherMenuButton.prototype = {
         topBox.add_actor(this._weatherInfo);
         this.actor.set_child(topBox);
         Main.panel._centerBox.add(this.actor, { y_fill: true });
+        Main.panel._menus.addMenu(this.menu);
 
         // Current weather
         this._currentWeather = new St.Bin({style_class: 'current'});
@@ -251,7 +252,7 @@ WeatherMenuButton.prototype = {
             let location = weather.get_object_member('location').get_string_member('city');
             let comment = weather.get_object_member('condition').get_string_member('text');
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
-            let temperature_unit = weather.get_object_member('units').get_string_member('temperature');
+            let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
             let pressure = weather.get_object_member('atmosphere').get_double_member('pressure');
             pressure_unit = weather.get_object_member('units').get_string_member('pressure');
@@ -321,7 +322,7 @@ WeatherMenuButton.prototype = {
         
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({
-            icon_type: St.IconType.FULLCOLOR,
+            icon_type: St.IconType.FULLCOLOR, //TODO SYMBOLIC not available in 64x64!?
             icon_size: 64,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-current-icon'
@@ -381,7 +382,7 @@ WeatherMenuButton.prototype = {
             let forecastWeather = {};
 
             forecastWeather.Icon = new St.Icon({
-                icon_type: St.IconType.FULLCOLOR,
+                icon_type: St.IconType.SYMBOLIC,
                 icon_size: 48,
                 icon_name: 'view-refresh-symbolic',
                 style_class: 'weather-forecast-icon'
