@@ -117,27 +117,106 @@ WeatherMenuButton.prototype = {
 
     get_weather_icon: function(code) {
         switch (parseInt(code, 10)){
+            case 0:
+                return 'weather-severe-alert';
+            case 1:
+                return 'weather-severe-alert';
+            case 2:
+                return 'weather-severe-alert';
+            case 3:
+                return 'weather-severe-alert';
             case 4:
                 return 'weather-storm';
             case 5:
+                return 'weather-snow-rain';
+            case 6:
+                return 'weather-snow-rain';
+            case 7:
+                return 'weather-snow';
+            case 8:
+                return 'weather-freezing-rain';
+            case 9:
+                return 'weather-fog';
             case 10:
+                return 'weather-freezing-rain';
             case 11:
-            case 12:
-            case 39:
-            case 40:
                 return 'weather-showers';
+            case 12:
+                return 'weather-showers';
+            case 13:
+                return 'weather-snow';
+            case 14:
+                return 'weather-snow';
+            case 15:
+                return 'weather-snow';
+            case 16:
+                return 'weather-snow';
+            case 17:
+                return 'weather-snow';
+            case 18:
+                return 'weather-snow';
+            case 19:
+                return 'weather-fog';
+            case 20:
+                return 'weather-fog';
+            case 21:
+                return 'weather-fog';
+            case 22:
+                return 'weather-fog';
+            case 23:
+                return 'weather-few-clouds';
+            case 24:
+                return 'weather-few-clouds';
+            case 25:
+                return 'weather-few-clouds';
             case 26:
                 return 'weather-overcast';
+            case 27:
+                return 'weather-clouds-night';
             case 28:
-            case 30:
-            case 44:
                 return 'weather-few-clouds';
+            case 29:
+                return 'weather-few-clouds-night';
+            case 30:
+                return 'weather-few-clouds';
+            case 31:
+                return 'weather-clear-night';
             case 32:
+                return 'weather-clear';
+            case 33:
+                return 'weather-clear';
             case 34:
+                return 'weather-clear-night';
+            case 35:
+                return 'weather-snow-rain';
             case 36:
                 return 'weather-clear';
-            default:
+            case 37:
+                return 'weather-storm';
+            case 38:
+                return 'weather-storm';
+            case 39:
+                return 'weather-storm';
+            case 40:
+                return 'weather-showers-scattered';
+            case 41:
                 return 'weather-snow';
+            case 42:
+                return 'weather-snow';
+            case 43:
+                return 'weather-snow';
+            case 44:
+                return 'weather-few-clouds';
+            case 45:
+                return 'weather-storm';
+            case 46:
+                return 'weather-snow';
+            case 47:
+                return 'weather-storm';
+            case 3200:
+                return 'weather-severe-alert';
+            default:
+                return 'weather-severe-alert';
         }
     },
 
