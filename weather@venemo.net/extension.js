@@ -5,7 +5,7 @@
  *  - On click, gives a popup with details about the weather
 
     Copyright (C) 2011
-        Timur Kristóf <venemo@msn.com>,
+        Timur Kristof <venemo@msn.com>,
         Elad Alfassa <elad@fedoraproject.org>,
         Simon Legner <Simon.Legner@gmail.com>
 
@@ -35,6 +35,8 @@ const Clutter = imports.gi.Clutter;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Gettext = imports.gettext.domain('gnome-shell');
+Gettext.textdomain("weather@venemo.net");
+Gettext.bindtextdomain("weather@venemo.net", ExtensionSystem.extensionMeta["weather@venemo.net"].path + "/locale");
 const _ = Gettext.gettext;
 
 const Json = imports.gi.Json;
@@ -89,7 +91,7 @@ WeatherMenuButton.prototype = {
         this._futureWeather = new St.Bin({style_class: 'forecast'/*, x_align: St.Align.START*/});
         
         // Separator (copied from Gnome shell's popupMenu.js)
-        this._separatorArea = new St.DrawingArea({ style_class: 'popup-separator-menu-item' });
+        this._separatorArea = new St.DrawingArea({  style_class: 'popup-separator-menu-item' });
         this._separatorArea.width = 200;
         this._separatorArea.connect('repaint', Lang.bind(this, this._onSeparatorAreaRepaint));
         
@@ -405,7 +407,7 @@ WeatherMenuButton.prototype = {
     },
     
     // Copied from Gnome shell's popupMenu.js
-    _onSeparatorAreaRepaint: function(area) {
+    _onSeparatorAreaRepaint: function(area){
         let cr = area.get_context();
         let themeNode = area.get_theme_node();
         let [width, height] = area.get_surface_size();
