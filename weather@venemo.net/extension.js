@@ -116,28 +116,65 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_icon: function(code) {
-        switch (parseInt(code, 10)){
-            case 4:
+        /* see http://developer.yahoo.com/weather/#codetable */
+        switch (parseInt(code, 10)) {
+            case 0: /* tornado */
+            case 1: /* tropical storm */
+            case 2: /* hurricane */
+            case 3: /* severe thunderstorms */
+            case 4: /* thunderstorms */
+            case 17: /* hail */
+            case 35: /* mixed rain and hail */
+            case 37: /* isolated thunderstorms */
+            case 38: /* scattered thunderstorms */
+            case 39: /* scattered thunderstorms */
+            case 45: /* thundershowers */
+            case 47: /* isolated thundershowers */
                 return 'weather-storm';
-            case 5:
-            case 10:
-            case 11:
-            case 12:
-            case 39:
-            case 40:
-                return 'weather-showers';
-            case 26:
-                return 'weather-overcast';
-            case 28:
-            case 30:
-            case 44:
-                return 'weather-few-clouds';
-            case 32:
-            case 34:
-            case 36:
-                return 'weather-clear';
-            default:
+            case 5: /* mixed rain and snow */
+            case 7: /* mixed snow and sleet */
+            case 13: /* snow flurries */
+            case 14: /* light snow showers */
+            case 15: /* blowing snow */
+            case 16: /* snow */
+            case 18: /* sleet */
+            case 41: /* heavy snow */
+            case 42: /* scattered snow showers */
+            case 43: /* heavy snow */
+            case 46: /* snow showers */
                 return 'weather-snow';
+            case 6: /* mixed rain and sleet */
+            case 8: /* freezing drizzle */
+            case 9: /* drizzle */
+            case 10: /* freezing rain */
+            case 11: /* showers */
+            case 12: /* showers */
+            case 40: /* scattered showers */
+                return 'weather-showers';
+            case 26: /* cloudy */
+            case 28: /* mostly cloudy (day) */
+            case 30: /* partly cloudy (day) */
+            case 44: /* partly cloudy */
+                return 'weather-clouds';
+            case 27: /* mostly cloudy (night) */
+            case 29: /* partly cloudy (night) */
+                return 'weather-clouds-night';
+            case 31: /* clear (night) */
+            case 33: /* fair (night) */
+                return 'weather-clear-night';
+            case 32: /* sunny */
+            case 34: /* fair (day) */
+            case 36: /* hot */
+                return 'weather-clear';
+            case 19: /* dust */
+            case 20: /* foggy */
+            case 21: /* haze */
+            case 22: /* smoky */
+            case 23: /* blustery */
+            case 24: /* windy */
+            case 25: /* cold */
+            default:
+                return 'weather-clear';
         }
     },
 
