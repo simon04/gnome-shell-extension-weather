@@ -117,65 +117,108 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_icon: function(code) {
+        switch (parseInt(code, 10)){
         /* see http://developer.yahoo.com/weather/#codetable */
-        switch (parseInt(code, 10)) {
-            case 0: /* tornado */
-            case 1: /* tropical storm */
-            case 2: /* hurricane */
-            case 3: /* severe thunderstorms */
-            case 4: /* thunderstorms */
-            case 17: /* hail */
-            case 35: /* mixed rain and hail */
-            case 37: /* isolated thunderstorms */
-            case 38: /* scattered thunderstorms */
-            case 39: /* scattered thunderstorms */
-            case 45: /* thundershowers */
-            case 47: /* isolated thundershowers */
+            case 0:/* tornado */
+                return 'weather-severe-alert';
+            case 1:/* tropical storm */
+                return 'weather-severe-alert';
+            case 2:/* hurricane */
+                return 'weather-severe-alert';
+            case 3:/* severe thunderstorms */
+                return 'weather-severe-alert';
+            case 4:/* thunderstorms */
                 return 'weather-storm';
-            case 5: /* mixed rain and snow */
-            case 7: /* mixed snow and sleet */
-            case 13: /* snow flurries */
-            case 14: /* light snow showers */
-            case 15: /* blowing snow */
-            case 16: /* snow */
-            case 18: /* sleet */
-            case 41: /* heavy snow */
-            case 42: /* scattered snow showers */
-            case 43: /* heavy snow */
-            case 46: /* snow showers */
+            case 5:/* mixed rain and snow */
+                return 'weather-snow-rain';
+            case 6:/* mixed rain and sleet */
+                return 'weather-snow-rain';
+            case 7:/* mixed snow and sleet */
                 return 'weather-snow';
-            case 6: /* mixed rain and sleet */
-            case 8: /* freezing drizzle */
-            case 9: /* drizzle */
-            case 10: /* freezing rain */
-            case 11: /* showers */
-            case 12: /* showers */
-            case 40: /* scattered showers */
+            case 8:/* freezing drizzle */
+                return 'weather-freezing-rain';
+            case 9:/* drizzle */
+                return 'weather-fog';
+            case 10:/* freezing rain */
+                return 'weather-freezing-rain';
+            case 11:/* showers */
                 return 'weather-showers';
-            case 26: /* cloudy */
-            case 28: /* mostly cloudy (day) */
-            case 30: /* partly cloudy (day) */
-            case 44: /* partly cloudy */
-                return 'weather-clouds';
-            case 27: /* mostly cloudy (night) */
-            case 29: /* partly cloudy (night) */
+            case 12:/* showers */
+                return 'weather-showers';
+            case 13:/* snow flurries */
+                return 'weather-snow';
+            case 14:/* light snow showers */
+                return 'weather-snow';
+            case 15:/* blowing snow */
+                return 'weather-snow';
+            case 16:/* snow */
+                return 'weather-snow';
+            case 17:/* hail */
+                return 'weather-snow';
+            case 18:/* sleet */
+                return 'weather-snow';
+            case 19:/* dust */
+                return 'weather-fog';
+            case 20:/* foggy */
+                return 'weather-fog';
+            case 21:/* haze */
+                return 'weather-fog';
+            case 22:/* smoky */
+                return 'weather-fog';
+            case 23:/* blustery */
+                return 'weather-few-clouds';
+            case 24:/* windy */
+                return 'weather-few-clouds';
+            case 25:/* cold */
+                return 'weather-few-clouds';
+            case 26:/* cloudy */
+                return 'weather-overcast';
+            case 27:/* mostly cloudy (night) */
                 return 'weather-clouds-night';
-            case 31: /* clear (night) */
-            case 33: /* fair (night) */
+            case 28:/* mostly cloudy (day) */
+                return 'weather-few-clouds';
+            case 29:/* partly cloudy (night) */
+                return 'weather-few-clouds-night';
+            case 30:/* partly cloudy (day) */
+                return 'weather-few-clouds';
+            case 31:/* clear (night) */
                 return 'weather-clear-night';
-            case 32: /* sunny */
-            case 34: /* fair (day) */
-            case 36: /* hot */
+            case 32:/* sunny */
                 return 'weather-clear';
-            case 19: /* dust */
-            case 20: /* foggy */
-            case 21: /* haze */
-            case 22: /* smoky */
-            case 23: /* blustery */
-            case 24: /* windy */
-            case 25: /* cold */
+            case 33:/* fair (night) */
+                return 'weather-clear';
+            case 34:/* fair (day) */
+                return 'weather-clear-night';
+            case 35:/* mixed rain and hail */
+                return 'weather-snow-rain';
+            case 36:/* hot */
+                return 'weather-clear';
+            case 37:/* isolated thunderstorms */
+                return 'weather-storm';
+            case 38:/* scattered thunderstorms */
+                return 'weather-storm';
+            case 39:/* scattered thunderstorms */
+                return 'weather-storm';
+            case 40:/* scattered showers */
+                return 'weather-showers-scattered';
+            case 41:/* heavy snow */
+                return 'weather-snow';
+            case 42:/* scattered snow showers */
+                return 'weather-snow';
+            case 43:/* heavy snow */
+                return 'weather-snow';
+            case 44:/* partly cloudy */
+                return 'weather-few-clouds';
+            case 45:/* thundershowers */
+                return 'weather-storm';
+            case 46:/* snow showers */
+                return 'weather-snow';
+            case 47:/* isolated thundershowers */
+                return 'weather-storm';
+            case 3200:/* not available */
+                return 'weather-severe-alert';
             default:
-                return 'weather-clear';
+                return 'weather-severe-alert';
         }
     },
 
