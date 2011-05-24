@@ -82,6 +82,7 @@ WeatherMenuButton.prototype = {
         topBox.add_actor(this._weatherInfo);
         this.actor.set_child(topBox);
         Main.panel._centerBox.add(this.actor, { y_fill: true });
+        Main.panel._menus.addMenu(this.menu);
 
         // Current weather
         this._currentWeather = new St.Bin({style_class: 'current'});
