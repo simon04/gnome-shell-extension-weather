@@ -6,7 +6,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Screenshot
 
-![Screenshot](screenshot.png)
+![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/screenshot.png)
 
 ### Installation
 
