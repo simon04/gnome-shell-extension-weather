@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-24 16:54+0200\n"
+"POT-Creation-Date: 2011-05-26 06:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,38 +17,38 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:73
+#: extension.js:71
 msgid "..."
 msgstr ""
 
-#: extension.js:315
+#: extension.js:314
 msgid "Loading current weather ..."
 msgstr ""
 
-#: extension.js:316
+#: extension.js:315
 msgid "Loading future weather ..."
 msgstr ""
 
-#: extension.js:332
+#: extension.js:331
 msgid "Loading ..."
 msgstr ""
 
-#: extension.js:335
+#: extension.js:334
 msgid "Please wait"
 msgstr ""
 
-#: extension.js:353
+#: extension.js:352
 msgid "Temperature:"
 msgstr ""
 
-#: extension.js:355
+#: extension.js:354
 msgid "Humidity:"
 msgstr ""
 
-#: extension.js:357
+#: extension.js:356
 msgid "Pressure:"
 msgstr ""
 
-#: extension.js:359
+#: extension.js:358
 msgid "Wind:"
 msgstr ""
