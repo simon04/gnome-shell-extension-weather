@@ -46,7 +46,8 @@ const Soup = imports.gi.Soup;
 const Util = imports.misc.util;
 
 const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius
-const YAHOO_ID = 'AUXX0010';
+const CITY_DISPLAYED = 'your city';
+const YAHOO_ID = 'your yahoo woeid';
 const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=' + UNITS + '&p=' + YAHOO_ID;
 const FORECAST_URL = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + YAHOO_ID + '%22%20%20and%20u="' + UNITS + '"';
 
@@ -347,7 +348,7 @@ WeatherMenuButton.prototype = {
         // Refresh current weather
         this.load_json_async(WEATHER_URL, function(weather) {
 
-            let location = weather.get_object_member('location').get_string_member('city');
+            let location = CITY_DISPLAYED;
             let comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));//weather.get_object_member('condition').get_string_member('text');
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');

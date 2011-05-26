@@ -4,10 +4,15 @@ gnome-shell-extension-weather is a simple extension for displaying weather notif
 
 Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo](http://weather.yahoo.com/).
 
+### Screenshot
+
+![Screenshot](https://github.com/ecyrbe/gnome-shell-extension-weather/raw/master/data/screenshot.png)
+
 ### Installation
 
 1. Change `YAHOO_ID` to your location in extension.js (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
-2. from command line run the following commands :
+2. chage the 'CITY_DIPLAYED' to the real name of your location as the WOEID doesn't always match your tiny town
+3. from command line run the following commands :
 > ./autogen.sh --prefix="/usr"
 > make
 > sudo make install
@@ -17,7 +22,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Licence
 
 Copyright (C) 2011
-ecyrbe <ecyrbe+spam@gmail.com> //remove +spam to email
+Ecyrbe <ecyrbe+spam@gmail.com>,
 Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
 Simon Legner <Simon.Legner@gmail.com>

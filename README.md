@@ -11,7 +11,8 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Installation
 
 1. Change `YAHOO_ID` to your location in extension.js (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
-2. from command line run the following commands :
+2. chage the 'CITY_DIPLAYED' to the real name of your location as the WOEID doesn't always match your tiny town
+3. from command line run the following commands :
 > ./autogen.sh --prefix="/usr"
 > make
 > sudo make install
