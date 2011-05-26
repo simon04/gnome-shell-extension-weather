@@ -5,6 +5,7 @@
  *  - On click, gives a popup with details about the weather
 
     Copyright (C) 2011
+        ecyrbe <ecyrbe+spam@gmail.com>,
         Timur Kristof <venemo@msn.com>,
         Elad Alfassa <elad@fedoraproject.org>,
         Simon Legner <Simon.Legner@gmail.com>
@@ -62,7 +63,7 @@ WeatherMenuButton.prototype = {
         // Panel icon
         this._weatherIcon = new St.Icon({
             icon_type: St.IconType.SYMBOLIC,
-            icon_size: Main.panel.button.get_child().height - 4,
+            icon_size: Main.panel.button.get_child().height,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
         });
@@ -196,7 +197,6 @@ WeatherMenuButton.prototype = {
             case 37:/* isolated thunderstorms */
                 return 'weather-storm';
             case 38:/* scattered thunderstorms */
-                return 'weather-storm';
             case 39:/* scattered thunderstorms */
                 return 'weather-storm';
             case 40:/* scattered showers */
@@ -216,11 +216,111 @@ WeatherMenuButton.prototype = {
             case 47:/* isolated thundershowers */
                 return 'weather-storm';
             case 3200:/* not available */
-                return 'weather-severe-alert';
             default:
                 return 'weather-severe-alert';
         }
     },
+    
+    get_weather_condition: function(code) {
+        switch (parseInt(code, 10)){
+            case 0:/* tornado */
+                return _('Tornado');
+            case 1:/* tropical storm */
+                return _('Tropical storm');
+            case 2:/* hurricane */
+                return _('Hurricane');
+            case 3:/* severe thunderstorms */
+                return _('Severe thunderstorms');
+            case 4:/* thunderstorms */
+                return _('Thunderstorms');
+            case 5:/* mixed rain and snow */
+                return _('Mixed rain and snow');
+            case 6:/* mixed rain and sleet */
+                return _('Mixed rain and sleet');
+            case 7:/* mixed snow and sleet */
+                return _('Mixed snow and sleet');
+            case 8:/* freezing drizzle */
+                return _('Freezing drizzle');
+            case 9:/* drizzle */
+                return _('Drizzle');
+            case 10:/* freezing rain */
+                return _('Freezing rain');
+            case 11:/* showers */
+                return _('Showers');
+            case 12:/* showers */
+                return _('Showers');
+            case 13:/* snow flurries */
+                return _('Snow flurries');
+            case 14:/* light snow showers */
+                return _('Light snow showers');
+            case 15:/* blowing snow */
+                return _('Blowing snow');
+            case 16:/* snow */
+                return _('Snow');
+            case 17:/* hail */
+                return _('Hail');
+            case 18:/* sleet */
+                return _('Sleet');
+            case 19:/* dust */
+                return _('Dust');
+            case 20:/* foggy */
+                return _('Foggy');
+            case 21:/* haze */
+                return _('Haze');
+            case 22:/* smoky */
+                return _('Smoky');
+            case 23:/* blustery */
+                return _('Blustery');
+            case 24:/* windy */
+                return _('Windy');
+            case 25:/* cold */
+                return _('Cold');
+            case 26:/* cloudy */
+                return _('Cloudy');
+            case 27:/* mostly cloudy (night) */
+            case 28:/* mostly cloudy (day) */
+                return _('Mostly cloudy');
+            case 29:/* partly cloudy (night) */
+            case 30:/* partly cloudy (day) */
+                return _('Partly cloudy');
+            case 31:/* clear (night) */
+                return _('Clear');
+            case 32:/* sunny */
+                return _('Sunny');
+            case 33:/* fair (night) */
+            case 34:/* fair (day) */
+                return _('Fair');
+            case 35:/* mixed rain and hail */
+                return _('Mixed rain and hail');
+            case 36:/* hot */
+                return _('Hot');
+            case 37:/* isolated thunderstorms */
+                return _('Isolated thunderstorms');
+            case 38:/* scattered thunderstorms */
+            case 39:/* scattered thunderstorms */
+                return _('Scattered thunderstorms');
+            case 40:/* scattered showers */
+                return _('Scattered showers');
+            case 41:/* heavy snow */
+                return _('Heavy snow');
+            case 42:/* scattered snow showers */
+                return _('Scattered snow showers');
+            case 43:/* heavy snow */
+                return _('Heavy snow');
+            case 44:/* partly cloudy */
+                return _('Partly cloudy');
+            case 45:/* thundershowers */
+                return _('Thundershowers');
+            case 46:/* snow showers */
+                return _('Snow showers');
+            case 47:/* isolated thundershowers */
+                return _('Isolated thundershowers');
+            case 3200:/* not available */
+            default:
+                return _('Not available');
+        }
+    },    
+    
 
     load_json: function(url) {
         var session = new Soup.SessionSync();
@@ -248,7 +348,7 @@ WeatherMenuButton.prototype = {
         this.load_json_async(WEATHER_URL, function(weather) {
 
             let location = weather.get_object_member('location').get_string_member('city');
-            let comment = weather.get_object_member('condition').get_string_member('text');
+            let comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));//weather.get_object_member('condition').get_string_member('text');
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
@@ -274,19 +374,19 @@ WeatherMenuButton.prototype = {
         // Refresh forecast
         this.load_json_async(FORECAST_URL, function(forecast) {
 
-            date_string = ['Today', 'Tomorrow'];
+            date_string = [_('Today'), _('Tomorrow')];
             forecast2 = forecast.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
             for (let i = 0; i <= 1; i++) {
                 let forecastUi = this._forecast[i];
                 let forecastData = forecast2[i].get_object().get_object_member('item').get_object_member('forecast');
 
                 let code = forecastData.get_string_member('code');
-                let comment = forecastData.get_string_member('text');
+                let comment = this.get_weather_condition(code);//forecastData.get_string_member('text');
                 let t_low = forecastData.get_string_member('low');
                 let t_high = forecastData.get_string_member('high');
 
                 forecastUi.Day.text = date_string[i] + ' (' + forecastData.get_string_member('day') + ')';
-                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + UNITS.toUpperCase();
+                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' \u00b0' + UNITS.toUpperCase();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon(code);
             }
