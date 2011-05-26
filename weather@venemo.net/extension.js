@@ -186,9 +186,9 @@ WeatherMenuButton.prototype = {
             case 32:/* sunny */
                 return 'weather-clear';
             case 33:/* fair (night) */
-                return 'weather-clear';
-            case 34:/* fair (day) */
                 return 'weather-clear-night';
+            case 34:/* fair (day) */
+                return 'weather-clear';
             case 35:/* mixed rain and hail */
                 return 'weather-snow-rain';
             case 36:/* hot */
