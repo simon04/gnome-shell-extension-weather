@@ -34,9 +34,7 @@ const Cairo = imports.cairo;
 const Clutter = imports.gi.Clutter;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
-const Gettext = imports.gettext;
-Gettext.textdomain("weather@venemo.net"); 
-//Gettext.bindtextdomain("weather@venemo.net", ExtensionSystem.extensionMeta["weather@venemo.net"].path + "/locale");
+const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
 const _ = Gettext.gettext;
 
 const Json = imports.gi.Json;

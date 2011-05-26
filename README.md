@@ -6,7 +6,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Screenshot
 
-![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/screenshot.png)
+![Screenshot](https://github.com/ecyrbe/gnome-shell-extension-weather/raw/master/data/screenshot.png)
 
 ### Installation
 
@@ -18,6 +18,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Licence
 
 Copyright (C) 2011
+Ecyrbe <ecyrbe+spam@gmail.com>,
 Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
 Simon Legner <Simon.Legner@gmail.com>

@@ -6,9 +6,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-24 16:54+0200\n"
+"POT-Creation-Date: 2011-05-26 06:23+0200\n"
 "PO-Revision-Date: 2011-05-24 16:58+0200\n"
 "Last-Translator: Simon Claessens <gagalago@gmail.com>\n"
 "Language-Team: Français <>\n"
@@ -18,38 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: extension.js:73
+#: extension.js:71
 msgid "..."
 msgstr "..."
 
-#: extension.js:315
+#: extension.js:314
 msgid "Loading current weather ..."
 msgstr "Chargement de la météo ..."
 
-#: extension.js:316
+#: extension.js:315
 msgid "Loading future weather ..."
 msgstr "Chargement de la météo future ..."
 
-#: extension.js:332
+#: extension.js:331
 msgid "Loading ..."
 msgstr "Chargement ..."
 
-#: extension.js:335
+#: extension.js:334
 msgid "Please wait"
 msgstr "Patientez s'il vous plaît"
 
-#: extension.js:353
+#: extension.js:352
 msgid "Temperature:"
 msgstr "Temperature :"
 
-#: extension.js:355
+#: extension.js:354
 msgid "Humidity:"
 msgstr "Humidité :"
 
-#: extension.js:357
+#: extension.js:356
 msgid "Pressure:"
 msgstr "Pression :"
 
-#: extension.js:359
+#: extension.js:358
 msgid "Wind:"
 msgstr "Vent :"
