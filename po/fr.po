@@ -3,53 +3,230 @@
 # Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Simon Claessens <gagalago@gmail.com>, 2011.
+# ecyrbe <ecyrbe@gmail.com>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-26 06:23+0200\n"
-"PO-Revision-Date: 2011-05-24 16:58+0200\n"
-"Last-Translator: Simon Claessens <gagalago@gmail.com>\n"
-"Language-Team: Français <>\n"
+"POT-Creation-Date: 2011-05-26 08:06+0200\n"
+"PO-Revision-Date: 2011-05-26 08:10+0200\n"
+"Last-Translator: ecyrbe <ecyrbe@gmail.com>\n"
+"Language-Team: Français <ecyrbe@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: extension.js:71
+#: extension.js:72
 msgid "..."
 msgstr "..."
 
-#: extension.js:314
+#: extension.js:227
+msgid "Tornado"
+msgstr "Tornade"
+
+#: extension.js:229
+msgid "Tropical storm"
+msgstr "Tempête tropicale"
+
+#: extension.js:231
+msgid "Hurricane"
+msgstr "Ouragan"
+
+#: extension.js:233
+msgid "Severe thunderstorms"
+msgstr "Orage sévère"
+
+#: extension.js:235
+msgid "Thunderstorms"
+msgstr "Orage"
+
+#: extension.js:237
+msgid "Mixed rain and snow"
+msgstr "Neige et pluie"
+
+#: extension.js:239
+msgid "Mixed rain and sleet"
+msgstr "Grêle et pluie"
+
+#: extension.js:241
+msgid "Mixed snow and sleet"
+msgstr "Neige et Grêle"
+
+#: extension.js:243
+msgid "Freezing drizzle"
+msgstr "Pluie verglaçante"
+
+#: extension.js:245
+msgid "Drizzle"
+msgstr "Pluie fine"
+
+#: extension.js:247
+msgid "Freezing rain"
+msgstr "Pluie verglaçante"
+
+#: extension.js:249 extension.js:251
+msgid "Showers"
+msgstr "Averses"
+
+#: extension.js:253
+msgid "Snow flurries"
+msgstr "Neige"
+
+#: extension.js:255
+msgid "Light snow showers"
+msgstr "Neige"
+
+#: extension.js:257
+msgid "Blowing snow"
+msgstr "Neige"
+
+#: extension.js:259
+msgid "Snow"
+msgstr "Neige"
+
+#: extension.js:261
+msgid "Hail"
+msgstr "Grêle"
+
+#: extension.js:263
+msgid "Sleet"
+msgstr "Grêlons"
+
+#: extension.js:265
+msgid "Dust"
+msgstr "Brouillard"
+
+#: extension.js:267
+msgid "Foggy"
+msgstr "Brouillard"
+
+#: extension.js:269
+msgid "Haze"
+msgstr "Brume"
+
+#: extension.js:271
+msgid "Smoky"
+msgstr "Brouillard"
+
+#: extension.js:273
+msgid "Blustery"
+msgstr "Bourrasques de vent"
+
+#: extension.js:275
+msgid "Windy"
+msgstr "Venteux"
+
+#: extension.js:277
+msgid "Cold"
+msgstr "Froid"
+
+#: extension.js:279
+msgid "Cloudy"
+msgstr "Nuageux"
+
+#: extension.js:282
+msgid "Mostly cloudy"
+msgstr "Nuageux"
+
+#: extension.js:285 extension.js:311
+msgid "Partly cloudy"
+msgstr "Éclaicies"
+
+#: extension.js:287
+msgid "Clear"
+msgstr "Beau"
+
+#: extension.js:289
+msgid "Sunny"
+msgstr "Ensoleillé"
+
+#: extension.js:292
+msgid "Fair"
+msgstr "Beau"
+
+#: extension.js:294
+msgid "Mixed rain and hail"
+msgstr "Pluie et Grêle"
+
+#: extension.js:296
+msgid "Hot"
+msgstr "Chaud"
+
+#: extension.js:298
+msgid "Isolated thunderstorms"
+msgstr "Orageux"
+
+#: extension.js:301
+msgid "Scattered thunderstorms"
+msgstr "Orageux"
+
+#: extension.js:303
+msgid "Scattered showers"
+msgstr "Grosses averses"
+
+#: extension.js:305 extension.js:309
+msgid "Heavy snow"
+msgstr "Tempête de neige"
+
+#: extension.js:307
+msgid "Scattered snow showers"
+msgstr "Tempête de neige"
+
+#: extension.js:313
+msgid "Thundershowers"
+msgstr "Orages"
+
+#: extension.js:315
+msgid "Snow showers"
+msgstr "Tempête de neige"
+
+#: extension.js:317
+msgid "Isolated thundershowers"
+msgstr "Orageux"
+
+#: extension.js:320
+msgid "Not available"
+msgstr "Non disponible"
+
+#: extension.js:377
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#: extension.js:377
+msgid "Tomorrow"
+msgstr "Demain"
+
+#: extension.js:414
 msgid "Loading current weather ..."
 msgstr "Chargement de la météo ..."
 
-#: extension.js:315
+#: extension.js:415
 msgid "Loading future weather ..."
-msgstr "Chargement de la météo future ..."
+msgstr "Chargement des prévisions ..."
 
-#: extension.js:331
+#: extension.js:431
 msgid "Loading ..."
 msgstr "Chargement ..."
 
-#: extension.js:334
+#: extension.js:434
 msgid "Please wait"
 msgstr "Patientez s'il vous plaît"
 
-#: extension.js:352
+#: extension.js:452
 msgid "Temperature:"
-msgstr "Temperature :"
+msgstr "Température :"
 
-#: extension.js:354
+#: extension.js:454
 msgid "Humidity:"
 msgstr "Humidité :"
 
-#: extension.js:356
+#: extension.js:456
 msgid "Pressure:"
 msgstr "Pression :"
 
-#: extension.js:358
+#: extension.js:458
 msgid "Wind:"
 msgstr "Vent :"

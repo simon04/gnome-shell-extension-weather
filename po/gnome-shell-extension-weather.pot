@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-26 06:23+0200\n"
+"POT-Creation-Date: 2011-05-26 08:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,38 +17,214 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:71
+#: extension.js:72
 msgid "..."
 msgstr ""
 
-#: extension.js:314
-msgid "Loading current weather ..."
+#: extension.js:227
+msgid "Tornado"
+msgstr ""
+
+#: extension.js:229
+msgid "Tropical storm"
+msgstr ""
+
+#: extension.js:231
+msgid "Hurricane"
+msgstr ""
+
+#: extension.js:233
+msgid "Severe thunderstorms"
+msgstr ""
+
+#: extension.js:235
+msgid "Thunderstorms"
+msgstr ""
+
+#: extension.js:237
+msgid "Mixed rain and snow"
+msgstr ""
+
+#: extension.js:239
+msgid "Mixed rain and sleet"
+msgstr ""
+
+#: extension.js:241
+msgid "Mixed snow and sleet"
+msgstr ""
+
+#: extension.js:243
+msgid "Freezing drizzle"
+msgstr ""
+
+#: extension.js:245
+msgid "Drizzle"
+msgstr ""
+
+#: extension.js:247
+msgid "Freezing rain"
+msgstr ""
+
+#: extension.js:249 extension.js:251
+msgid "Showers"
+msgstr ""
+
+#: extension.js:253
+msgid "Snow flurries"
+msgstr ""
+
+#: extension.js:255
+msgid "Light snow showers"
+msgstr ""
+
+#: extension.js:257
+msgid "Blowing snow"
+msgstr ""
+
+#: extension.js:259
+msgid "Snow"
+msgstr ""
+
+#: extension.js:261
+msgid "Hail"
+msgstr ""
+
+#: extension.js:263
+msgid "Sleet"
+msgstr ""
+
+#: extension.js:265
+msgid "Dust"
+msgstr ""
+
+#: extension.js:267
+msgid "Foggy"
+msgstr ""
+
+#: extension.js:269
+msgid "Haze"
+msgstr ""
+
+#: extension.js:271
+msgid "Smoky"
+msgstr ""
+
+#: extension.js:273
+msgid "Blustery"
+msgstr ""
+
+#: extension.js:275
+msgid "Windy"
+msgstr ""
+
+#: extension.js:277
+msgid "Cold"
+msgstr ""
+
+#: extension.js:279
+msgid "Cloudy"
+msgstr ""
+
+#: extension.js:282
+msgid "Mostly cloudy"
+msgstr ""
+
+#: extension.js:285 extension.js:311
+msgid "Partly cloudy"
+msgstr ""
+
+#: extension.js:287
+msgid "Clear"
+msgstr ""
+
+#: extension.js:289
+msgid "Sunny"
+msgstr ""
+
+#: extension.js:292
+msgid "Fair"
+msgstr ""
+
+#: extension.js:294
+msgid "Mixed rain and hail"
+msgstr ""
+
+#: extension.js:296
+msgid "Hot"
+msgstr ""
+
+#: extension.js:298
+msgid "Isolated thunderstorms"
+msgstr ""
+
+#: extension.js:301
+msgid "Scattered thunderstorms"
+msgstr ""
+
+#: extension.js:303
+msgid "Scattered showers"
+msgstr ""
+
+#: extension.js:305 extension.js:309
+msgid "Heavy snow"
+msgstr ""
+
+#: extension.js:307
+msgid "Scattered snow showers"
+msgstr ""
+
+#: extension.js:313
+msgid "Thundershowers"
 msgstr ""
 
 #: extension.js:315
+msgid "Snow showers"
+msgstr ""
+
+#: extension.js:317
+msgid "Isolated thundershowers"
+msgstr ""
+
+#: extension.js:320
+msgid "Not available"
+msgstr ""
+
+#: extension.js:377
+msgid "Today"
+msgstr ""
+
+#: extension.js:377
+msgid "Tomorrow"
+msgstr ""
+
+#: extension.js:414
+msgid "Loading current weather ..."
+msgstr ""
+
+#: extension.js:415
 msgid "Loading future weather ..."
 msgstr ""
 
-#: extension.js:331
+#: extension.js:431
 msgid "Loading ..."
 msgstr ""
 
-#: extension.js:334
+#: extension.js:434
 msgid "Please wait"
 msgstr ""
 
-#: extension.js:352
+#: extension.js:452
 msgid "Temperature:"
 msgstr ""
 
-#: extension.js:354
+#: extension.js:454
 msgid "Humidity:"
 msgstr ""
 
-#: extension.js:356
+#: extension.js:456
 msgid "Pressure:"
 msgstr ""
 
-#: extension.js:358
+#: extension.js:458
 msgid "Wind:"
 msgstr ""
