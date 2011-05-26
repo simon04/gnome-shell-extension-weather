@@ -320,8 +320,22 @@ WeatherMenuButton.prototype = {
             default:
                 return _('Not available');
         }
-    },    
+    },
     
+    parse_day: function(abr) {
+        let yahoo_days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+        for(var i =0;i<yahoo_days.length;i++){
+            if( yahoo_days[i].substr(0,abr.length) == abr.toLowerCase()){
+                return i;
+            }
+        }
+        return 0;    
+    },
+    
+    get_locale_day: function(abr) {
+        let days = [_('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday'), _('Sunday')];
+        return days[this.parse_day(abr)].substr(0,abr.length);
+    },
 
     load_json: function(url) {
         var session = new Soup.SessionSync();
@@ -349,7 +363,7 @@ WeatherMenuButton.prototype = {
         this.load_json_async(WEATHER_URL, function(weather) {
 
             let location = CITY_DISPLAYED;
-            let comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));//weather.get_object_member('condition').get_string_member('text');
+            let comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
@@ -382,11 +396,11 @@ WeatherMenuButton.prototype = {
                 let forecastData = forecast2[i].get_object().get_object_member('item').get_object_member('forecast');
 
                 let code = forecastData.get_string_member('code');
-                let comment = this.get_weather_condition(code);//forecastData.get_string_member('text');
+                let comment = this.get_weather_condition(code);
                 let t_low = forecastData.get_string_member('low');
                 let t_high = forecastData.get_string_member('high');
 
-                forecastUi.Day.text = date_string[i] + ' (' + forecastData.get_string_member('day') + ')';
+                forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
                 forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' \u00b0' + UNITS.toUpperCase();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon(code);
