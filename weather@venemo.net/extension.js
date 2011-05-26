@@ -176,7 +176,7 @@ WeatherMenuButton.prototype = {
             case 27:/* mostly cloudy (night) */
                 return 'weather-clouds-night';
             case 28:/* mostly cloudy (day) */
-                return 'weather-few-clouds';
+                return 'weather-clouds';
             case 29:/* partly cloudy (night) */
                 return 'weather-few-clouds-night';
             case 30:/* partly cloudy (day) */
