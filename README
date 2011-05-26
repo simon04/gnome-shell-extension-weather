@@ -7,7 +7,10 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Installation
 
 1. Change `YAHOO_ID` to your location in extension.js (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
-2. Put directory `weather@venemo.com/` in `~/.local/share/gnome-shell/extensions/`
+2. from command line run the following commands :
+> ./autogen.sh --prefix="/usr"
+> make
+> sudo make install
 3. Restart Gnome Shell (`[Alt]+[F2]`, `r`)
 4. Enjoy, contribute, ...
 
