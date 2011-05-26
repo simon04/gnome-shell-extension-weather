@@ -5,7 +5,10 @@
  *  - On click, gives a popup with details about the weather
 
     Copyright (C) 2011
+<<<<<<< HEAD
         ecyrbe <ecyrbe+spam@gmail.com>,
+=======
+>>>>>>> de7c7d0808483c81c7f69584284dd537beb40f0e
         Timur Kristof <venemo@msn.com>,
         Elad Alfassa <elad@fedoraproject.org>,
         Simon Legner <Simon.Legner@gmail.com>
@@ -36,6 +39,7 @@ const Clutter = imports.gi.Clutter;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
+//Gettext.bindtextdomain("weather@venemo.net", ExtensionSystem.extensionMeta["weather@venemo.net"].path + "/locale");
 const _ = Gettext.gettext;
 
 const Json = imports.gi.Json;
