@@ -61,7 +61,7 @@ WeatherMenuButton.prototype = {
     
         // Panel icon
         this._weatherIcon = new St.Icon({
-            icon_type: St.IconType.FULLCOLOR,
+            icon_type: St.IconType.SYMBOLIC,
             icon_size: Main.panel.button.get_child().height - 4,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
@@ -320,7 +320,7 @@ WeatherMenuButton.prototype = {
         
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({
-            icon_type: St.IconType.FULLCOLOR, //TODO SYMBOLIC not available in 64x64!?
+            icon_type: St.IconType.SYMBOLIC,
             icon_size: 64,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-current-icon'
