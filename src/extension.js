@@ -61,17 +61,18 @@ function WeatherMenuButton() {
     this._init();
 }
 
+function getSettings(schema) {
+    if (Gio.Settings.list_schemas().indexOf(schema) == -1)
+        throw _("Schema \"%s\" not found.").format(schema);
+    return new Gio.Settings({ schema: schema });
+}
+
 WeatherMenuButton.prototype = {
     __proto__: PanelMenu.Button.prototype,
 
     _init: function() {
-        //check for the schemas before loading
-        if(!this.has_schema(WEATHER_SETTINGS_SCHEMA)){
-            global.log('xml weather schemas not installed');
-            return;
-        }
         // Load Settings
-        this._settings = new Gio.Settings({ schema: WEATHER_SETTINGS_SCHEMA });
+        this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
         this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
