@@ -11,11 +11,12 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Installation
 
 From the command line
+
 1. ./autogen.sh --prefix="/usr"
 2. make
 3. sudo make install
-
-that's it!
+  
+That's it!
 
 ### Configuration
 
