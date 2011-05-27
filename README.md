@@ -37,11 +37,13 @@ You can modify the temperature unit with the following command
 ```bash
  gsettings set org.gnome.shell.extensions.weather unit 'celsius'
  ```
- or
+ or  
+
 ```bash
 gsettings set org.gnome.shell.extensions.weather unit 'fahrenheit'
 ```
-### Displayed location (optional)
+
+#### Displayed location (optional)
 
 Sometimes your woeid location isn't quite right. it's the next major city around. to customise the displayed city you can type :
 
