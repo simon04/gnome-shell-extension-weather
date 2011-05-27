@@ -4,9 +4,13 @@ gnome-shell-extension-weather is a simple extension for displaying weather notif
 
 Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo](http://weather.yahoo.com/).
 
-### Screenshot
+### Screenshots
 
 ![Screenshot](https://github.com/ecyrbe/gnome-shell-extension-weather/raw/master/data/screenshot.png)
+
+And with french translation:  
+
+![Screenshot](https://github.com/ecyrbe/gnome-shell-extension-weather/raw/master/data/screenshot2.png)
 
 ### Installation
 
