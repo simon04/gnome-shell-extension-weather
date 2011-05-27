@@ -30,7 +30,7 @@ You can specify your location buy using this command:
 gsettings set org.gnome.shell.extensions.weather woeid 'your location'
 ```
 
-### Temperature units (optional, celsius by default)
+#### Temperature units (optional, celsius by default)
 
 You can modify the temperature unit with the following command
 
