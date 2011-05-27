@@ -65,16 +65,17 @@ WeatherMenuButton.prototype = {
     __proto__: PanelMenu.Button.prototype,
 
     _init: function() {
-        // Load Settings
-        this._settings = new Gio.Settings({ schema: WEATHER_SETTINGS_SCHEMA });
-        if(this._settings==null){
+        //check for the schemas before loading
+        if(!this.has_schema(WEATHER_SETTINGS_SCHEMA)){
             global.log('xml weather schemas not installed');
             return;
         }
+        // Load Settings
+        this._settings = new Gio.Settings({ schema: WEATHER_SETTINGS_SCHEMA });
         this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
-                
+        
         // Panel icon
         this._weatherIcon = new St.Icon({
             icon_type: St.IconType.SYMBOLIC,
@@ -130,6 +131,16 @@ WeatherMenuButton.prototype = {
             here.refreshWeather();
         });
 
+    },
+    
+    has_schema: function(schema){
+        let schemas = Gio.Settings.list_schemas();
+        for(let i=0;i<schemas.length;i++){
+           if(schemas[i]==schema){
+                return true;
+           }
+        }
+        return false;
     },
     
     unit_to_string: function(unit) {
