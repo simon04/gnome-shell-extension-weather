@@ -20,23 +20,34 @@ That's it!
 
 ### Configuration
 
-Gnome extension weather use gsettings to save your configuration  
+Gnome extension weather use gsettings to save your configuration. you can use dconf-editor or gsettings from the command line to modify some parameters
+
+#### Location (cf [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
+
+You can specify your location buy using this command:
+
+```bash
+gsettings set org.gnome.shell.extensions.weather woeid 'your location'
+```
+
+### Temperature units (optional, celsius by default)
+
 You can modify the temperature unit with the following command
 
-. gsettings set org.gnome.shell.extensions.weather unit 'celsius'
-
+```bash
+ gsettings set org.gnome.shell.extensions.weather unit 'celsius'
+ ```
  or
-
-. gsettings set org.gnome.shell.extensions.weather unit 'fahrenheit'
-  
-You can specify your location buy using this command, (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
-
-. gsettings set org.gnome.shell.extensions.weather woeid 'your location'
+```bash
+gsettings set org.gnome.shell.extensions.weather unit 'fahrenheit'
+```
+### Displayed location (optional)
 
 Sometimes your woeid location isn't quite right. it's the next major city around. to customise the displayed city you can type :
 
-. gsettings set org.gnome.shell.extensions.weather city 'your city'
-
+```bash
+gsettings set org.gnome.shell.extensions.weather city 'your city'
+```
 ### Restart Gnome-Shell
 
 Don't forget to restart Gnome-Shell
