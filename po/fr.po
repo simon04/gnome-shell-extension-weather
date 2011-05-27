@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-05-27 01:22+0200\n"
-"PO-Revision-Date: 2011-05-27 01:24+0200\n"
+"PO-Revision-Date: 2011-05-27 09:44+0200\n"
 "Last-Translator: ecyrbe <ecyrbe@gmail.com>\n"
 "Language-Team: Français <ecyrbe@gmail.com>\n"
 "Language: fr\n"
@@ -133,7 +133,7 @@ msgstr "Nuageux"
 
 #: extension.js:286 extension.js:312
 msgid "Partly cloudy"
-msgstr "Éclaicies"
+msgstr "Éclaircies"
 
 #: extension.js:288
 msgid "Clear"
