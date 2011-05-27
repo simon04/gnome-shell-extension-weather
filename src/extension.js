@@ -45,12 +45,17 @@ const PopupMenu = imports.ui.popupMenu;
 const Soup = imports.gi.Soup;
 const Util = imports.misc.util;
 
-const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius
-const CITY_DISPLAYED = 'your city';
-const YAHOO_ID = 'your yahoo woeid';
-const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=' + UNITS + '&p=' + YAHOO_ID;
-const FORECAST_URL = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + YAHOO_ID + '%22%20%20and%20u="' + UNITS + '"';
+// Settings
+const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
+const WEATHER_UNIT_KEY = 'unit';
+const WEATHER_CITY_KEY = 'city';
+const WEATHER_WOEID_KEY = 'woeid';
 
+// Keep enums in sync with GSettings schemas
+const WeatherUnits = {
+    CELSIUS: 0,
+    FAHRENHEIT: 1
+};
 
 function WeatherMenuButton() {
     this._init();
@@ -60,7 +65,16 @@ WeatherMenuButton.prototype = {
     __proto__: PanelMenu.Button.prototype,
 
     _init: function() {
-    
+        // Load Settings
+        this._settings = new Gio.Settings({ schema: WEATHER_SETTINGS_SCHEMA });
+        if(this._settings==null){
+            global.log('xml weather schemas not installed');
+            return;
+        }
+        this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
+        this._city  = this._settings.get_string(WEATHER_CITY_KEY);
+        this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
+                
         // Panel icon
         this._weatherIcon = new St.Icon({
             icon_type: St.IconType.SYMBOLIC,
@@ -116,6 +130,22 @@ WeatherMenuButton.prototype = {
             here.refreshWeather();
         });
 
+    },
+    
+    unit_to_string: function(unit) {
+        if(unit == WeatherUnits.FAHRENHEIT){
+            return 'f';
+        }else {
+            return 'c';
+        }
+    },
+    
+    get_weather_url: function() {
+        return 'http://weather.yahooapis.com/forecastjson?u=' + this.unit_to_string(this._units) + '&p=' + this._woeid;
+    },
+    
+    get_forecast_url: function() {
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + this._woeid + '%22%20%20and%20u="' + this.unit_to_string(this._units) + '"';
     },
 
     get_weather_icon: function(code) {
@@ -358,11 +388,13 @@ WeatherMenuButton.prototype = {
     },
     
     refreshWeather: function() {
-
         // Refresh current weather
-        this.load_json_async(WEATHER_URL, function(weather) {
+        this.load_json_async(this.get_weather_url(), function(weather) {
 
-            let location = CITY_DISPLAYED;
+            let location = weather.get_object_member('location').get_string_member('city');
+            if(this._city!=null && this._city.length>0) {
+                location = this._city;
+            }
             let comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');
@@ -387,7 +419,7 @@ WeatherMenuButton.prototype = {
         });
 
         // Refresh forecast
-        this.load_json_async(FORECAST_URL, function(forecast) {
+        this.load_json_async(this.get_forecast_url(), function(forecast) {
 
             date_string = [_('Today'), _('Tomorrow')];
             forecast2 = forecast.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
@@ -401,7 +433,7 @@ WeatherMenuButton.prototype = {
                 let t_high = forecastData.get_string_member('high');
 
                 forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
-                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' \u00b0' + UNITS.toUpperCase();
+                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' \u00b0' + this.unit_to_string(this._units).toUpperCase();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon(code);
             }

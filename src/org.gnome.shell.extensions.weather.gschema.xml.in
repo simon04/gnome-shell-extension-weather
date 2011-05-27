@@ -1,0 +1,23 @@
+<schemalist gettext-domain="gnome-shell-extension-weather">
+  <enum id="org.gnome.shell.extensions.weather.unit">
+    <value nick="celsius" value="0" />
+    <value nick="fahrenheit" value="1" />
+  </enum>
+  <schema id="org.gnome.shell.extensions.weather" path="/org/gnome/shell/extensions/weather/">
+    <key name="unit" enum="org.gnome.shell.extensions.weather.unit">
+      <default>'celsius'</default>
+      <_summary>display units</_summary>
+      <_description>Choose the units you want the temperatures. Allowed values are 'celsius' or 'fahrenheit'</_description>
+    </key>
+    <key name="woeid" type="s">
+      <default>'FRXX6724'</default>
+      <_summary>Forecast Yahoo WOEID</_summary>
+      <_description>Set Yahoo id location to retrieve the corresponding forecast informations</_description>
+    </key>
+    <key name="city" type="s">
+      <default>''</default>
+      <_summary>City to be displayed</_summary>
+      <_description>Optional, you can override the displayed city provided by the woeid location</_description>
+    </key>
+  </schema>
+</schemalist>

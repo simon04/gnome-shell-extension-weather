@@ -10,14 +10,38 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Installation
 
-1. Change `YAHOO_ID` to your location in extension.js (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
-2. chage the 'CITY_DIPLAYED' to the real name of your location as the WOEID doesn't always match your tiny town
-3. from command line run the following commands :
-> ./autogen.sh --prefix="/usr"
-> make
-> sudo make install
-3. Restart Gnome Shell (`[Alt]+[F2]`, `r`)
-4. Enjoy, contribute, ...
+From the command line
+1. ./autogen.sh --prefix="/usr"
+2. make
+3. sudo make install
+
+that's it!
+
+### Configuration
+
+Gnome extension weather use gsettings to save your configuration  
+You can modify the temperature unit with the following command
+
+. gsettings set org.gnome.shell.extensions.weather unit 'celsius'
+
+ or
+
+. gsettings set org.gnome.shell.extensions.weather unit 'fahrenheit'
+  
+You can specify your location buy using this command, (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
+
+. gsettings set org.gnome.shell.extensions.weather woeid 'your location'
+
+Sometimes your woeid location isn't quite right. it's the next major city around. to customise the displayed city you can type :
+
+. gsettings set org.gnome.shell.extensions.weather city 'your city'
+
+### Restart Gnome-Shell
+
+Don't forget to restart Gnome-Shell
+
+1. Restart Gnome Shell (`[Alt]+[F2]`, `r`)
+2. Fork this project as you like
 
 ### Licence
 
