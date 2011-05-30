@@ -1,4 +1,4 @@
-## gnome-shell-extension-weather
+### gnome-shell-extension-weather
 
 gnome-shell-extension-weather is a simple extension for displaying weather notifications in Gnome Shell.
 
