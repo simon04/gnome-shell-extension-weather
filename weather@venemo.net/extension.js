@@ -47,7 +47,7 @@ const PopupMenu = imports.ui.popupMenu;
 const Soup = imports.gi.Soup;
 const Util = imports.misc.util;
 
-const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius
+const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius.
 const YAHOO_ID = 'FRXX0072'; // Yahoo town ID.
 const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=' + UNITS + '&p=' + YAHOO_ID;
 const FORECAST_URL = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + YAHOO_ID + '%22%20%20and%20u="' + UNITS + '"';
