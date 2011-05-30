@@ -18,7 +18,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Licence
 
 Copyright (C) 2011
-Caccc <d_dref@yahoo.fr>
+Caccc <d_dref@yahoo.fr>,
 Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
 Simon Legner <Simon.Legner@gmail.com>
