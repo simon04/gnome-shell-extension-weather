@@ -1,0 +1,16 @@
+0.4
+===
+- add autotools support
+ 
+ 0.3
+ ===
+- add translation support
+ 
+ 0.2
+ ===
+- add yahoo backend
+- add symbolic icons
+ 
+ 0.1 (
+ ===
+ first skeleton implementation

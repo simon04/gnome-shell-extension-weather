@@ -1,0 +1,8 @@
+{
+"uuid": "@uuid@",
+"name": "Weather indicator",
+"description": "Adds weather information menu",
+"shell-version": [ "@shell_current@" ],
+"localedir": "@LOCALEDIR@",
+"url": "@url@"
+}
