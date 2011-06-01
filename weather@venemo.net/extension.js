@@ -5,6 +5,7 @@
  *  - On click, gives a popup with details about the weather
 
     Copyright (C) 2011
+	Caccc <d_dref@yahoo.fr>
         Timur Kristóf <venemo@msn.com>,
         Elad Alfassa <elad@fedoraproject.org>,
         Simon Legner <Simon.Legner@gmail.com>
@@ -34,7 +35,9 @@ const Cairo = imports.cairo;
 const Clutter = imports.gi.Clutter;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
-const Gettext = imports.gettext.domain('gnome-shell');
+const Gettext = imports.gettext;
+const Btd = Gettext.bindtextdomain("weather", '.local/share/gnome-shell/extensions/weather@venemo.net/locale');
+const Td = Gettext.textdomain("weather");
 const _ = Gettext.gettext;
 
 const Json = imports.gi.Json;
@@ -44,8 +47,8 @@ const PopupMenu = imports.ui.popupMenu;
 const Soup = imports.gi.Soup;
 const Util = imports.misc.util;
 
-const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius
-const YAHOO_ID = 'AUXX0010';
+const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius.
+const YAHOO_ID = 'FRXX0072'; // Yahoo town ID.
 const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=' + UNITS + '&p=' + YAHOO_ID;
 const FORECAST_URL = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + YAHOO_ID + '%22%20%20and%20u="' + UNITS + '"';
 
@@ -247,8 +250,9 @@ WeatherMenuButton.prototype = {
         // Refresh current weather
         this.load_json_async(WEATHER_URL, function(weather) {
 
+
             let location = weather.get_object_member('location').get_string_member('city');
-            let comment = weather.get_object_member('condition').get_string_member('text');
+            let comment = _(weather.get_object_member('condition').get_string_member('text'));
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
@@ -258,7 +262,8 @@ WeatherMenuButton.prototype = {
             let wind = weather.get_object_member('wind').get_double_member('speed');
             wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon(weather.get_object_member('condition').get_string_member('code'));
-
+	    let sunrise = weather.get_object_member('astronomy').get_string_member('sunrise');
+	    let sunset = weather.get_object_member('astronomy').get_string_member('sunset');
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
             this._weatherInfo.text = (comment + ', ' + temperature + ' ' + temperature_unit);
 
@@ -267,7 +272,8 @@ WeatherMenuButton.prototype = {
             this._currentWeatherTemperature.text = temperature + ' ' + temperature_unit;
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
-            this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
+            this._currentWeatherWind.text = wind_direction + ' - ' + wind + ' ' + wind_unit;
+            this._currentWeatherAstronomy.text = _('Sunrise') + ' : ' + sunrise + ' - ' + _('Sunset') + ' : ' + sunset;
 
         });
 
@@ -285,9 +291,9 @@ WeatherMenuButton.prototype = {
                 let t_low = forecastData.get_string_member('low');
                 let t_high = forecastData.get_string_member('high');
 
-                forecastUi.Day.text = date_string[i] + ' (' + forecastData.get_string_member('day') + ')';
-                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + UNITS.toUpperCase();
-                forecastUi.Summary.text = comment;
+                forecastUi.Day.text = _(date_string[i]) + ' (' + _(forecastData.get_string_member('day')) + ')';
+                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + '\u00b0' + UNITS.toUpperCase();
+                forecastUi.Summary.text = _(comment);
                 forecastUi.Icon.icon_name = this.get_weather_icon(code);
             }
 
@@ -342,6 +348,7 @@ WeatherMenuButton.prototype = {
         this._currentWeatherHumidity = new St.Label({ text:  '...' });
         this._currentWeatherPressure = new St.Label({ text: '...' });
         this._currentWeatherWind = new St.Label({ text: '...' });
+	this._currentWeatherAstronomy = new St.Label({ text: '...' });
         
         let rb = new St.BoxLayout({style_class: 'weather-current-databox'});
         rb_captions = new St.BoxLayout({vertical: true, style_class: 'weather-current-databox-captions'});
@@ -349,14 +356,16 @@ WeatherMenuButton.prototype = {
         rb.add_actor(rb_captions);
         rb.add_actor(rb_values);
 
-        rb_captions.add_actor(new St.Label({text: _('Temperature:')}));
+        rb_captions.add_actor(new St.Label({text: _('Temperature')+" : "}));
         rb_values.add_actor(this._currentWeatherTemperature);
-        rb_captions.add_actor(new St.Label({text: _('Humidity:')}));
+        rb_captions.add_actor(new St.Label({text: _('Humidity')+" : "}));
         rb_values.add_actor(this._currentWeatherHumidity);
-        rb_captions.add_actor(new St.Label({text: _('Pressure:')}));
+        rb_captions.add_actor(new St.Label({text: _('Pressure')+" : "}));
         rb_values.add_actor(this._currentWeatherPressure);
-        rb_captions.add_actor(new St.Label({text: _('Wind:')}));
+        rb_captions.add_actor(new St.Label({text: _('Wind')+" : "}));
         rb_values.add_actor(this._currentWeatherWind);
+        rb_captions.add_actor(new St.Label({text: _('Astronomie')+" : "}));
+        rb_values.add_actor(this._currentWeatherAstronomy);
         
         let xb = new St.BoxLayout();
         xb.add_actor(bb);
@@ -428,6 +437,9 @@ WeatherMenuButton.prototype = {
 };
 
 function main() {
-    this._weatherMenu = new WeatherMenuButton();
+	   
+
+     this._weatherMenu = new WeatherMenuButton();
 }
+
 

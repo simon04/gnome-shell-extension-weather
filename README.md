@@ -1,4 +1,4 @@
-## gnome-shell-extension-weather
+### gnome-shell-extension-weather
 
 gnome-shell-extension-weather is a simple extension for displaying weather notifications in Gnome Shell.
 
@@ -6,7 +6,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Screenshot
 
-![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/screenshot.png)
+![Screenshot](https://github.com/caccc/gnome-shell-extension-weather/raw/master/screenshot.png)
 
 ### Installation
 
@@ -17,7 +17,8 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Licence
 
-Copyright (C) 2011
+Copyright (C) 2011,
+Caccc <d_dref@yahoo.fr>,
 Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
 Simon Legner <Simon.Legner@gmail.com>
