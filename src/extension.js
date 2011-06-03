@@ -5,7 +5,8 @@
  *  - On click, gives a popup with details about the weather
 
     Copyright (C) 2011
-        Timur Kristóf <venemo@msn.com>,
+        ecyrbe <ecyrbe+spam@gmail.com>,
+        Timur Kristof <venemo@msn.com>,
         Elad Alfassa <elad@fedoraproject.org>,
         Simon Legner <Simon.Legner@gmail.com>
 
@@ -34,7 +35,7 @@ const Cairo = imports.cairo;
 const Clutter = imports.gi.Clutter;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
-const Gettext = imports.gettext.domain('gnome-shell');
+const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
 const _ = Gettext.gettext;
 
 const Json = imports.gi.Json;
@@ -44,25 +45,42 @@ const PopupMenu = imports.ui.popupMenu;
 const Soup = imports.gi.Soup;
 const Util = imports.misc.util;
 
-const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius
-const YAHOO_ID = 'AUXX0010';
-const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=' + UNITS + '&p=' + YAHOO_ID;
-const FORECAST_URL = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + YAHOO_ID + '%22%20%20and%20u="' + UNITS + '"';
+// Settings
+const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
+const WEATHER_UNIT_KEY = 'unit';
+const WEATHER_CITY_KEY = 'city';
+const WEATHER_WOEID_KEY = 'woeid';
 
+// Keep enums in sync with GSettings schemas
+const WeatherUnits = {
+    CELSIUS: 0,
+    FAHRENHEIT: 1
+};
 
 function WeatherMenuButton() {
     this._init();
+}
+
+function getSettings(schema) {
+    if (Gio.Settings.list_schemas().indexOf(schema) == -1)
+        throw _("Schema \"%s\" not found.").format(schema);
+    return new Gio.Settings({ schema: schema });
 }
 
 WeatherMenuButton.prototype = {
     __proto__: PanelMenu.Button.prototype,
 
     _init: function() {
-    
+        // Load Settings
+        this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
+        this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
+        this._city  = this._settings.get_string(WEATHER_CITY_KEY);
+        this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
+        
         // Panel icon
         this._weatherIcon = new St.Icon({
-            icon_type: St.IconType.FULLCOLOR,
-            icon_size: Main.panel.button.get_child().height - 4,
+            icon_type: St.IconType.SYMBOLIC,
+            icon_size: Main.panel.button.get_child().height,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
         });
@@ -90,7 +108,7 @@ WeatherMenuButton.prototype = {
         this._futureWeather = new St.Bin({style_class: 'forecast'/*, x_align: St.Align.START*/});
         
         // Separator (copied from Gnome shell's popupMenu.js)
-        this._separatorArea = new St.DrawingArea({ style_class: 'popup-separator-menu-item' });
+        this._separatorArea = new St.DrawingArea({  style_class: 'popup-separator-menu-item' });
         this._separatorArea.width = 200;
         this._separatorArea.connect('repaint', Lang.bind(this, this._onSeparatorAreaRepaint));
         
@@ -114,6 +132,32 @@ WeatherMenuButton.prototype = {
             here.refreshWeather();
         });
 
+    },
+    
+    has_schema: function(schema){
+        let schemas = Gio.Settings.list_schemas();
+        for(let i=0;i<schemas.length;i++){
+           if(schemas[i]==schema){
+                return true;
+           }
+        }
+        return false;
+    },
+    
+    unit_to_string: function(unit) {
+        if(unit == WeatherUnits.FAHRENHEIT){
+            return 'f';
+        }else {
+            return 'c';
+        }
+    },
+    
+    get_weather_url: function() {
+        return 'http://weather.yahooapis.com/forecastjson?u=' + this.unit_to_string(this._units) + '&p=' + this._woeid;
+    },
+    
+    get_forecast_url: function() {
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + this._woeid + '%22%20%20and%20u="' + this.unit_to_string(this._units) + '"';
     },
 
     get_weather_icon: function(code) {
@@ -196,7 +240,6 @@ WeatherMenuButton.prototype = {
             case 37:/* isolated thunderstorms */
                 return 'weather-storm';
             case 38:/* scattered thunderstorms */
-                return 'weather-storm';
             case 39:/* scattered thunderstorms */
                 return 'weather-storm';
             case 40:/* scattered showers */
@@ -216,10 +259,124 @@ WeatherMenuButton.prototype = {
             case 47:/* isolated thundershowers */
                 return 'weather-storm';
             case 3200:/* not available */
-                return 'weather-severe-alert';
             default:
                 return 'weather-severe-alert';
         }
+    },
+    
+    get_weather_condition: function(code) {
+        switch (parseInt(code, 10)){
+            case 0:/* tornado */
+                return _('Tornado');
+            case 1:/* tropical storm */
+                return _('Tropical storm');
+            case 2:/* hurricane */
+                return _('Hurricane');
+            case 3:/* severe thunderstorms */
+                return _('Severe thunderstorms');
+            case 4:/* thunderstorms */
+                return _('Thunderstorms');
+            case 5:/* mixed rain and snow */
+                return _('Mixed rain and snow');
+            case 6:/* mixed rain and sleet */
+                return _('Mixed rain and sleet');
+            case 7:/* mixed snow and sleet */
+                return _('Mixed snow and sleet');
+            case 8:/* freezing drizzle */
+                return _('Freezing drizzle');
+            case 9:/* drizzle */
+                return _('Drizzle');
+            case 10:/* freezing rain */
+                return _('Freezing rain');
+            case 11:/* showers */
+                return _('Showers');
+            case 12:/* showers */
+                return _('Showers');
+            case 13:/* snow flurries */
+                return _('Snow flurries');
+            case 14:/* light snow showers */
+                return _('Light snow showers');
+            case 15:/* blowing snow */
+                return _('Blowing snow');
+            case 16:/* snow */
+                return _('Snow');
+            case 17:/* hail */
+                return _('Hail');
+            case 18:/* sleet */
+                return _('Sleet');
+            case 19:/* dust */
+                return _('Dust');
+            case 20:/* foggy */
+                return _('Foggy');
+            case 21:/* haze */
+                return _('Haze');
+            case 22:/* smoky */
+                return _('Smoky');
+            case 23:/* blustery */
+                return _('Blustery');
+            case 24:/* windy */
+                return _('Windy');
+            case 25:/* cold */
+                return _('Cold');
+            case 26:/* cloudy */
+                return _('Cloudy');
+            case 27:/* mostly cloudy (night) */
+            case 28:/* mostly cloudy (day) */
+                return _('Mostly cloudy');
+            case 29:/* partly cloudy (night) */
+            case 30:/* partly cloudy (day) */
+                return _('Partly cloudy');
+            case 31:/* clear (night) */
+                return _('Clear');
+            case 32:/* sunny */
+                return _('Sunny');
+            case 33:/* fair (night) */
+            case 34:/* fair (day) */
+                return _('Fair');
+            case 35:/* mixed rain and hail */
+                return _('Mixed rain and hail');
+            case 36:/* hot */
+                return _('Hot');
+            case 37:/* isolated thunderstorms */
+                return _('Isolated thunderstorms');
+            case 38:/* scattered thunderstorms */
+            case 39:/* scattered thunderstorms */
+                return _('Scattered thunderstorms');
+            case 40:/* scattered showers */
+                return _('Scattered showers');
+            case 41:/* heavy snow */
+                return _('Heavy snow');
+            case 42:/* scattered snow showers */
+                return _('Scattered snow showers');
+            case 43:/* heavy snow */
+                return _('Heavy snow');
+            case 44:/* partly cloudy */
+                return _('Partly cloudy');
+            case 45:/* thundershowers */
+                return _('Thundershowers');
+            case 46:/* snow showers */
+                return _('Snow showers');
+            case 47:/* isolated thundershowers */
+                return _('Isolated thundershowers');
+            case 3200:/* not available */
+            default:
+                return _('Not available');
+        }
+    },
+    
+    parse_day: function(abr) {
+        let yahoo_days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+        for(var i =0;i<yahoo_days.length;i++){
+            if( yahoo_days[i].substr(0,abr.length) == abr.toLowerCase()){
+                return i;
+            }
+        }
+        return 0;    
+    },
+    
+    get_locale_day: function(abr) {
+        let days = [_('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday'), _('Sunday')];
+        return days[this.parse_day(abr)].substr(0,abr.length);
     },
 
     load_json: function(url) {
@@ -243,12 +400,14 @@ WeatherMenuButton.prototype = {
     },
     
     refreshWeather: function() {
-
         // Refresh current weather
-        this.load_json_async(WEATHER_URL, function(weather) {
+        this.load_json_async(this.get_weather_url(), function(weather) {
 
             let location = weather.get_object_member('location').get_string_member('city');
-            let comment = weather.get_object_member('condition').get_string_member('text');
+            if(this._city!=null && this._city.length>0) {
+                location = this._city;
+            }
+            let comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
@@ -272,21 +431,21 @@ WeatherMenuButton.prototype = {
         });
 
         // Refresh forecast
-        this.load_json_async(FORECAST_URL, function(forecast) {
+        this.load_json_async(this.get_forecast_url(), function(forecast) {
 
-            date_string = ['Today', 'Tomorrow'];
+            date_string = [_('Today'), _('Tomorrow')];
             forecast2 = forecast.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
             for (let i = 0; i <= 1; i++) {
                 let forecastUi = this._forecast[i];
                 let forecastData = forecast2[i].get_object().get_object_member('item').get_object_member('forecast');
 
                 let code = forecastData.get_string_member('code');
-                let comment = forecastData.get_string_member('text');
+                let comment = this.get_weather_condition(code);
                 let t_low = forecastData.get_string_member('low');
                 let t_high = forecastData.get_string_member('high');
 
-                forecastUi.Day.text = date_string[i] + ' (' + forecastData.get_string_member('day') + ')';
-                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + UNITS.toUpperCase();
+                forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
+                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' \u00b0' + this.unit_to_string(this._units).toUpperCase();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon(code);
             }
@@ -320,7 +479,7 @@ WeatherMenuButton.prototype = {
         
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({
-            icon_type: St.IconType.FULLCOLOR, //TODO SYMBOLIC not available in 64x64!?
+            icon_type: St.IconType.SYMBOLIC,
             icon_size: 64,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-current-icon'
@@ -406,7 +565,7 @@ WeatherMenuButton.prototype = {
     },
     
     // Copied from Gnome shell's popupMenu.js
-    _onSeparatorAreaRepaint: function(area) {
+    _onSeparatorAreaRepaint: function(area){
         let cr = area.get_context();
         let themeNode = area.get_theme_node();
         let [width, height] = area.get_surface_size();
