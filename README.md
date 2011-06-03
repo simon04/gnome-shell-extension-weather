@@ -2,23 +2,25 @@
 
 gnome-shell-extension-weather is a simple extension for displaying weather notifications in Gnome Shell.
 
-Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo](http://weather.yahoo.com/).
+Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo! Weather](http://weather.yahoo.com/).
 
 ### Screenshots
 
-![Screenshot](https://github.com/ecyrbe/gnome-shell-extension-weather/raw/master/data/screenshot.png)
+![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot.png)
 
-And with french translation:  
+And with French translation:  
 
-![Screenshot](https://github.com/ecyrbe/gnome-shell-extension-weather/raw/master/data/screenshot2.png)
+![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot2.png)
 
 ### Installation
 
-From the command line
+For installation, run the following commands:
 
-1. ./autogen.sh --prefix="/usr"
-2. make
-3. sudo make install
+```bash
+./autogen.sh --prefix=/usr
+make
+sudo make install
+```
   
 That's it!
 
@@ -26,37 +28,34 @@ That's it!
 
 Gnome extension weather use gsettings to save your configuration. you can use dconf-editor or gsettings from the command line to modify some parameters
 
-#### Location (cf [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
+#### Location (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
 
 You can specify your location buy using this command:
 
 ```bash
-gsettings set org.gnome.shell.extensions.weather woeid 'your location'
+gsettings set org.gnome.shell.extensions.weather woeid your_woeid
 ```
 
 #### Temperature units (optional, celsius by default)
 
-You can modify the temperature unit with the following command
+You can modify the temperature unit with one of the following commands:
 
 ```bash
- gsettings set org.gnome.shell.extensions.weather unit 'celsius'
- ```
- or  
-
-```bash
-gsettings set org.gnome.shell.extensions.weather unit 'fahrenheit'
+gsettings set org.gnome.shell.extensions.weather unit celsius
+gsettings set org.gnome.shell.extensions.weather unit fahrenheit
 ```
 
 #### Displayed location (optional)
 
-Sometimes your woeid location isn't quite right. it's the next major city around. to customise the displayed city you can type :
+Sometimes your WOEID location isn't quite right (it's the next major city around). To customise the displayed city you can type:
 
 ```bash
-gsettings set org.gnome.shell.extensions.weather city 'your city'
+gsettings set org.gnome.shell.extensions.weather city your_city
 ```
+
 ### Restart Gnome-Shell
 
-Don't forget to restart Gnome-Shell
+Don't forget to restart GNOME Shell:
 
 1. Restart Gnome Shell (`[Alt]+[F2]`, `r`)
 2. Fork this project as you like
