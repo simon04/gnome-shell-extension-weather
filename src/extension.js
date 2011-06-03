@@ -147,20 +147,20 @@ WeatherMenuButton.prototype = {
         return false;
     },
     
-    unit_to_string: function(unit) {
-        if (unit == WeatherUnits.FAHRENHEIT) {
-            return 'f';
-        } else {
-            return 'c';
-        }
+    unit_to_url: function() {
+        return this._units == WeatherUnits.FAHRENHEIT ? 'f' : 'c';
+    },
+    
+    unit_to_unicode: function() {
+        return this._units == WeatherUnits.FAHRENHEIT ? '\u2109' : '\u2103';
     },
     
     get_weather_url: function() {
-        return 'http://weather.yahooapis.com/forecastjson?u=' + this.unit_to_string(this._units) + '&p=' + this._woeid;
+        return 'http://weather.yahooapis.com/forecastjson?u=' + this.unit_to_url() + '&p=' + this._woeid;
     },
     
     get_forecast_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + this._woeid + '%22%20%20and%20u="' + this.unit_to_string(this._units) + '"';
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + this._woeid + '%22%20%20and%20u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
@@ -414,7 +414,6 @@ WeatherMenuButton.prototype = {
             if (this._translate_condition)
                 comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
-            let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
             let pressure = weather.get_object_member('atmosphere').get_double_member('pressure');
             pressure_unit = weather.get_object_member('units').get_string_member('pressure');
@@ -424,11 +423,11 @@ WeatherMenuButton.prototype = {
             let iconname = this.get_weather_icon(weather.get_object_member('condition').get_string_member('code'));
 
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
-            this._weatherInfo.text = (comment + ', ' + temperature + ' ' + temperature_unit);
+            this._weatherInfo.text = (comment + ', ' + temperature + ' ' + this.unit_to_unicode());
 
             this._currentWeatherSummary.text = comment;
             this._currentWeatherLocation.text = location;
-            this._currentWeatherTemperature.text = temperature + ' ' + temperature_unit;
+            this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
             this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
@@ -450,7 +449,7 @@ WeatherMenuButton.prototype = {
                 let t_high = forecastData.get_string_member('high');
 
                 forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
-                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' \u00b0' + this.unit_to_string(this._units).toUpperCase();
+                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + this.unit_to_unicode();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon(code);
             }
