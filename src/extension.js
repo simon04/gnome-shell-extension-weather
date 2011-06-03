@@ -50,6 +50,7 @@ const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_WOEID_KEY = 'woeid';
+const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 
 // Keep enums in sync with GSettings schemas
 const WeatherUnits = {
@@ -76,6 +77,7 @@ WeatherMenuButton.prototype = {
         this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
+        this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
         
         // Panel icon
         this._weatherIcon = new St.Icon({
@@ -407,7 +409,9 @@ WeatherMenuButton.prototype = {
             if(this._city!=null && this._city.length>0) {
                 location = this._city;
             }
-            let comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));
+            let comment = weather.get_object_member('condition').get_string_member('text');
+            if (this._translate_condition)
+                comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let temperature_unit = '\u00b0' + weather.get_object_member('units').get_string_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
