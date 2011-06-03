@@ -379,7 +379,7 @@ WeatherMenuButton.prototype = {
     
     get_locale_day: function(abr) {
         let days = [_('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday'), _('Sunday')];
-        return days[this.parse_day(abr)].substr(0, abr.length);
+        return days[this.parse_day(abr)];
     },
 
     load_json: function(url) {
