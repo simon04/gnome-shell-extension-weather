@@ -46,7 +46,7 @@ const Util = imports.misc.util;
 
 const UNITS = 'c'; // Units for temperature (case sensitive). f: Fahrenheit. c: Celsius
 const YAHOO_ID = 'AUXX0010';
-const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?u=' + UNITS + '&p=' + YAHOO_ID;
+const WEATHER_URL = 'http://weather.yahooapis.com/forecastjson?w=' + YAHOO_ID + '&u=' + UNITS;
 const FORECAST_URL = 'http://query.yahooapis.com/v1/public/yql?format=json&q=select%20item.forecast%20from%20weather.forecast%20where%20location%3D%22' + YAHOO_ID + '%22%20%20and%20u="' + UNITS + '"';
 
 
