@@ -105,17 +105,17 @@ WeatherMenuButton.prototype = {
         Main.panel._menus.addMenu(this.menu);
 
         // Current weather
-        this._currentWeather = new St.Bin({style_class: 'current'});
+        this._currentWeather = new St.Bin({ style_class: 'current' });
         // Future weather
-        this._futureWeather = new St.Bin({style_class: 'forecast'/*, x_align: St.Align.START*/});
+        this._futureWeather = new St.Bin({ style_class: 'forecast' /*, x_align: St.Align.START*/});
         
         // Separator (copied from Gnome shell's popupMenu.js)
-        this._separatorArea = new St.DrawingArea({  style_class: 'popup-separator-menu-item' });
+        this._separatorArea = new St.DrawingArea({ style_class: 'popup-separator-menu-item' });
         this._separatorArea.width = 200;
         this._separatorArea.connect('repaint', Lang.bind(this, this._onSeparatorAreaRepaint));
         
         // Putting the popup item together
-        let mainBox = new St.BoxLayout({vertical: true});
+        let mainBox = new St.BoxLayout({ vertical: true });
         mainBox.add_actor(this._currentWeather);
         mainBox.add_actor(this._separatorArea);
         mainBox.add_actor(this._futureWeather);
@@ -136,10 +136,10 @@ WeatherMenuButton.prototype = {
 
     },
     
-    has_schema: function(schema){
+    has_schema: function(schema) {
         let schemas = Gio.Settings.list_schemas();
-        for(let i=0;i<schemas.length;i++){
-           if(schemas[i]==schema){
+        for (let i = 0; i < schemas.length; i++) {
+            if (schemas[i] == schema) {
                 return true;
            }
         }
@@ -147,9 +147,9 @@ WeatherMenuButton.prototype = {
     },
     
     unit_to_string: function(unit) {
-        if(unit == WeatherUnits.FAHRENHEIT){
+        if (unit == WeatherUnits.FAHRENHEIT) {
             return 'f';
-        }else {
+        } else {
             return 'c';
         }
     },
@@ -163,7 +163,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_icon: function(code) {
-        switch (parseInt(code, 10)){
+        switch (parseInt(code, 10)) {
         /* see http://developer.yahoo.com/weather/#codetable */
             case 0:/* tornado */
                 return 'weather-severe-alert';
@@ -367,9 +367,9 @@ WeatherMenuButton.prototype = {
     },
     
     parse_day: function(abr) {
-        let yahoo_days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
-        for(var i =0;i<yahoo_days.length;i++){
-            if( yahoo_days[i].substr(0,abr.length) == abr.toLowerCase()){
+        let yahoo_days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        for (var i = 0; i < yahoo_days.length; i++) {
+            if (yahoo_days[i].substr(0, abr.length) == abr.toLowerCase()) {
                 return i;
             }
         }
@@ -378,7 +378,7 @@ WeatherMenuButton.prototype = {
     
     get_locale_day: function(abr) {
         let days = [_('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday'), _('Sunday')];
-        return days[this.parse_day(abr)].substr(0,abr.length);
+        return days[this.parse_day(abr)].substr(0, abr.length);
     },
 
     load_json: function(url) {
@@ -406,7 +406,7 @@ WeatherMenuButton.prototype = {
         this.load_json_async(this.get_weather_url(), function(weather) {
 
             let location = weather.get_object_member('location').get_string_member('city');
-            if(this._city!=null && this._city.length>0) {
+            if (this._city != null && this._city.length > 0) {
                 location = this._city;
             }
             let comment = weather.get_object_member('condition').get_string_member('text');
@@ -457,7 +457,7 @@ WeatherMenuButton.prototype = {
         });
 
         // Repeatedly refresh weather
-        Mainloop.timeout_add_seconds(60*4, Lang.bind(this, this.refreshWeather));
+        Mainloop.timeout_add_seconds(60 * 4, Lang.bind(this, this.refreshWeather));
         
     },
     
@@ -496,7 +496,10 @@ WeatherMenuButton.prototype = {
         });
         this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
 
-        let bb = new St.BoxLayout({vertical: true, style_class: 'weather-current-summarybox'});
+        let bb = new St.BoxLayout({
+            vertical: true,
+            style_class: 'weather-current-summarybox'
+        });
         bb.add_actor(this._currentWeatherLocation);
         bb.add_actor(this._currentWeatherSummary);
         
@@ -506,9 +509,17 @@ WeatherMenuButton.prototype = {
         this._currentWeatherPressure = new St.Label({ text: '...' });
         this._currentWeatherWind = new St.Label({ text: '...' });
         
-        let rb = new St.BoxLayout({style_class: 'weather-current-databox'});
-        rb_captions = new St.BoxLayout({vertical: true, style_class: 'weather-current-databox-captions'});
-        rb_values = new St.BoxLayout({vertical: true, style_class: 'weather-current-databox-values'});
+        let rb = new St.BoxLayout({
+            style_class: 'weather-current-databox'
+        });
+        rb_captions = new St.BoxLayout({
+            vertical: true,
+            style_class: 'weather-current-databox-captions'
+        });
+        rb_values = new St.BoxLayout({
+            vertical: true,
+            style_class: 'weather-current-databox-values'
+        });
         rb.add_actor(rb_captions);
         rb.add_actor(rb_values);
 
@@ -525,7 +536,9 @@ WeatherMenuButton.prototype = {
         xb.add_actor(bb);
         xb.add_actor(rb);
         
-        let box = new St.BoxLayout({style_class: 'weather-current-iconbox'});
+        let box = new St.BoxLayout({
+            style_class: 'weather-current-iconbox'
+        });
         box.add_actor(this._currentWeatherIcon);
         box.add_actor(xb);
         this._currentWeather.set_child(box);
@@ -548,16 +561,27 @@ WeatherMenuButton.prototype = {
                 icon_name: 'view-refresh-symbolic',
                 style_class: 'weather-forecast-icon'
             });
-            forecastWeather.Day = new St.Label({style_class: 'weather-forecast-day'});
-            forecastWeather.Summary = new St.Label({style_class: 'weather-forecast-summary'});
-            forecastWeather.Temperature = new St.Label({style_class: 'weather-forecast-temperature'});
+            forecastWeather.Day = new St.Label({
+                style_class: 'weather-forecast-day'
+            });
+            forecastWeather.Summary = new St.Label({
+                style_class: 'weather-forecast-summary'
+            });
+            forecastWeather.Temperature = new St.Label({
+                style_class: 'weather-forecast-temperature'
+            });
 
-            let by = new St.BoxLayout({vertical: true, style_class: 'weather-forecast-databox'});
+            let by = new St.BoxLayout({
+                vertical: true,
+                style_class: 'weather-forecast-databox'
+            });
             by.add_actor(forecastWeather.Day);
             by.add_actor(forecastWeather.Summary);
             by.add_actor(forecastWeather.Temperature);
 
-            let bb = new St.BoxLayout({style_class: 'weather-forecast-box'});
+            let bb = new St.BoxLayout({
+                style_class: 'weather-forecast-box'
+            });
             bb.add_actor(forecastWeather.Icon);
             bb.add_actor(by);
 
@@ -569,7 +593,7 @@ WeatherMenuButton.prototype = {
     },
     
     // Copied from Gnome shell's popupMenu.js
-    _onSeparatorAreaRepaint: function(area){
+    _onSeparatorAreaRepaint: function(area) {
         let cr = area.get_context();
         let themeNode = area.get_theme_node();
         let [width, height] = area.get_surface_size();
