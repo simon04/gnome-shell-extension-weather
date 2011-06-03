@@ -407,12 +407,13 @@ WeatherMenuButton.prototype = {
         this.load_json_async(this.get_weather_url(), function(weather) {
 
             let location = weather.get_object_member('location').get_string_member('city');
-            if (this._city != null && this._city.length > 0) {
+            if (this._city != null && this._city.length > 0)
                 location = this._city;
-            }
+
             let comment = weather.get_object_member('condition').get_string_member('text');
             if (this._translate_condition)
                 comment = this.get_weather_condition(weather.get_object_member('condition').get_string_member('code'));
+
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
             let pressure = weather.get_object_member('atmosphere').get_double_member('pressure');
