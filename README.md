@@ -4,6 +4,8 @@ gnome-shell-extension-weather is a simple extension for displaying weather notif
 
 Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo! Weather](http://weather.yahoo.com/).
 
+----
+
 ### Screenshots
 
 ![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot.png)
@@ -11,6 +13,8 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 And with French translation:  
 
 ![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot2.png)
+
+----
 
 ### Installation
 
@@ -23,6 +27,8 @@ sudo make install
 ```
   
 That's it!
+
+----
 
 ### Configuration
 
@@ -62,12 +68,14 @@ gsettings set org.gnome.shell.extensions.weather translate-condition true
 gsettings set org.gnome.shell.extensions.weather translate-condition false
 ```
 
-### Restart Gnome-Shell
+#### Restart Gnome-Shell
 
 Don't forget to restart GNOME Shell:
 
 1. Restart Gnome Shell (`[Alt]+[F2]`, `r`)
 2. Fork this project as you like
+
+----
 
 ### Licence
 
