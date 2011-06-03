@@ -445,9 +445,12 @@ WeatherMenuButton.prototype = {
                 let forecastData = forecast2[i].get_object().get_object_member('item').get_object_member('forecast');
 
                 let code = forecastData.get_string_member('code');
-                let comment = this.get_weather_condition(code);
                 let t_low = forecastData.get_string_member('low');
                 let t_high = forecastData.get_string_member('high');
+
+                let comment = forecastData.get_string_member('text');
+                if (this._translate_condition)
+                    comment = this.get_weather_condition(code);
 
                 forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
                 forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + this.unit_to_unicode();
