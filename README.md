@@ -53,6 +53,15 @@ Sometimes your WOEID location isn't quite right (it's the next major city around
 gsettings set org.gnome.shell.extensions.weather city your_city
 ```
 
+#### Translate weather conditions (optional, true by default)
+
+You may want to configure whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.
+
+```bash
+gsettings set org.gnome.shell.extensions.weather translate-condition true
+gsettings set org.gnome.shell.extensions.weather translate-condition false
+```
+
 ### Restart Gnome-Shell
 
 Don't forget to restart GNOME Shell:
@@ -66,7 +75,8 @@ Copyright (C) 2011
 Ecyrbe <ecyrbe+spam@gmail.com>,
 Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
-Simon Legner <Simon.Legner@gmail.com>
+Simon Legner <Simon.Legner@gmail.com>,
+Simon Claessens <gagalago@gmail.com>
 
 This file is part of gnome-shell-extension-weather.
 
