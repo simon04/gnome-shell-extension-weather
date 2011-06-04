@@ -399,6 +399,27 @@ WeatherMenuButton.prototype = {
         // Refresh current weather
         this.load_json_async(this.get_weather_url(), function(weather) {
 
+            // Fixes wrong woeid if necessary
+            try {
+                // Wrong woeid specified
+                if (weather.get_int_member('code') == 500) {
+                    // Fetch correct woeid
+                    this.load_json_async(this.get_weather_url().replace('p=', 'w='), function(weather) {
+                        try {
+                            // Take correct woeid, update gsettings
+                            this._woeid = weather.get_object_member('location').get_string_member('location_id');
+                            this._settings.set_string(WEATHER_WOEID_KEY, this._woeid);
+                            // Loads weather with correct woeid
+                            this.refreshWeather();
+                        } catch(e) {
+                        }
+                    });
+                    return;
+                }
+            } catch(e) {
+                global.log('A ' + e.name + ' has occured: ' + e.message);
+            }
+
             let location = weather.get_object_member('location').get_string_member('city');
             if (this._city != null && this._city.length > 0)
                 location = this._city;
