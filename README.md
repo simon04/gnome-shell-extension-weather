@@ -1,6 +1,6 @@
 ## gnome-shell-extension-weather
 
-gnome-shell-extension-weather is a simple extension for displaying weather notifications in Gnome Shell.
+gnome-shell-extension-weather is a simple extension for displaying weather notifications in GNOME Shell.
 
 Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo! Weather](http://weather.yahoo.com/).
 
@@ -30,17 +30,17 @@ That's it!
 
 ### Configuration
 
-Gnome extension weather use gsettings to save your configuration. you can use dconf-editor or gsettings from the command line to modify some parameters
+gnome-shell-extension-weather uses gsettings to save your configuration. You can use `dconf-editor` or `gsettings` from the command line to modify some parameters.
 
 #### Location (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
 
-You can specify your location buy using this command:
+You can specify your location using the following command:
 
     gsettings set org.gnome.shell.extensions.weather woeid your_woeid
 
 #### Temperature Units (optional, celsius by default)
 
-You can modify the temperature unit with one of the following commands:
+You can modify the temperature unit using one of the following commands:
 
     gsettings set org.gnome.shell.extensions.weather unit celsius
     gsettings set org.gnome.shell.extensions.weather unit fahrenheit
@@ -69,7 +69,7 @@ If desired, you can enable the usage of symbolic icons to display the weather co
 
 Don't forget to restart GNOME Shell:
 
-1. Restart Gnome Shell (`[Alt]+[F2]`, `r`)
+1. Restart GNOME Shell (`[Alt]+[F2]`, `r`)
 2. Fork this project as you like
 
 ----
