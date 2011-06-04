@@ -82,6 +82,27 @@ WeatherMenuButton.prototype = {
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
         this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
         
+        // Watch settings for changes
+        let load_settings_and_refresh_weather = Lang.bind(this, function() {
+            this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
+            this._city  = this._settings.get_string(WEATHER_CITY_KEY);
+            this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
+            this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+            this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+            this.refreshWeather();
+        });
+        this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_SYMBOLIC_ICONS, Lang.bind(this, function() {
+            this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+            this._weatherIcon.icon_type = this._icontype;
+            this._currentWeatherIcon.icon_type = this._icontype;
+            this._forecast[0].Icon.icon_type = this._icontype;
+            this._forecast[1].Icon.icon_type = this._icontype;
+        }));
+
         // Panel icon
         this._weatherIcon = new St.Icon({
             icon_type: this._icontype,
