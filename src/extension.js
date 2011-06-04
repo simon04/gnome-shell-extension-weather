@@ -384,15 +384,6 @@ WeatherMenuButton.prototype = {
         return days[this.parse_day(abr)];
     },
 
-    load_json: function(url) {
-        var session = new Soup.SessionSync();
-        var message = Soup.Message.new('GET', url);
-        stat = session.send_message(message);
-        jp = new Json.Parser();
-        jp.load_from_data(message.response_body.data, -1);
-        return jp.get_root();
-    },
-
     load_json_async: function(url, fun) {
         here = this;
         let session = new Soup.SessionAsync();
