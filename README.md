@@ -8,11 +8,11 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Screenshots
 
-![Screenshot](raw/master/data/screenshot.png)
+![Screenshot](gnome-shell-extension-weather/raw/master/data/screenshot.png)
 
 And with French translation:  
 
-![Screenshot](raw/master/data/screenshot2.png)
+![Screenshot](gnome-shell-extension-weather/raw/master/data/screenshot2.png)
 
 ----
 
