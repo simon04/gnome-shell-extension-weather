@@ -52,6 +52,7 @@ const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
+const WEATHER_SYMBOLIC_ICONS = 'use-symbolic-icons';
 
 // Keep enums in sync with GSettings schemas
 const WeatherUnits = {
@@ -79,10 +80,11 @@ WeatherMenuButton.prototype = {
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+        this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
         
         // Panel icon
         this._weatherIcon = new St.Icon({
-            icon_type: St.IconType.SYMBOLIC,
+            icon_type: this._icontype,
             icon_size: Main.panel.button.get_child().height,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
@@ -487,7 +489,7 @@ WeatherMenuButton.prototype = {
         
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({
-            icon_type: St.IconType.SYMBOLIC,
+            icon_type: this._icontype,
             icon_size: 64,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-current-icon'
@@ -560,7 +562,7 @@ WeatherMenuButton.prototype = {
             let forecastWeather = {};
 
             forecastWeather.Icon = new St.Icon({
-                icon_type: St.IconType.SYMBOLIC,
+                icon_type: this._icontype,
                 icon_size: 48,
                 icon_name: 'view-refresh-symbolic',
                 style_class: 'weather-forecast-icon'

@@ -42,7 +42,7 @@ You can specify your location buy using this command:
 gsettings set org.gnome.shell.extensions.weather woeid your_woeid
 ```
 
-#### Temperature units (optional, celsius by default)
+#### Temperature Units (optional, celsius by default)
 
 You can modify the temperature unit with one of the following commands:
 
@@ -51,7 +51,7 @@ gsettings set org.gnome.shell.extensions.weather unit celsius
 gsettings set org.gnome.shell.extensions.weather unit fahrenheit
 ```
 
-#### Displayed location (optional)
+#### Displayed Location (optional)
 
 Sometimes your WOEID location isn't quite right (it's the next major city around). To customise the displayed city you can type:
 
@@ -59,7 +59,7 @@ Sometimes your WOEID location isn't quite right (it's the next major city around
 gsettings set org.gnome.shell.extensions.weather city your_city
 ```
 
-#### Translate weather conditions (optional, true by default)
+#### Translate Weather Conditions (optional, true by default)
 
 You may want to configure whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.
 
@@ -68,7 +68,16 @@ gsettings set org.gnome.shell.extensions.weather translate-condition true
 gsettings set org.gnome.shell.extensions.weather translate-condition false
 ```
 
-#### Restart Gnome-Shell
+#### Use Symbolic Icons (optional, false by default)
+
+If desired, you can enable the usage of symbolic icons to display the weather condition (instead of full-colored icons).
+
+```bash
+gsettings set org.gnome.shell.extensions.weather use-symbolic-icons false
+gsettings set org.gnome.shell.extensions.weather use-symbolic-icons true
+```
+
+#### Restart GNOME Shell
 
 Don't forget to restart GNOME Shell:
 

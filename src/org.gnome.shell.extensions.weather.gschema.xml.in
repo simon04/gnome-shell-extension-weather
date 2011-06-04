@@ -24,5 +24,10 @@
       <_summary>Whether to translate the weather condition</_summary>
       <_description>Whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.</_description>
     </key>
+    <key name="use-symbolic-icons" type="b">
+      <default>false</default>
+      <_summary>Whether to use symbolic icons</_summary>
+      <_description>Whether to use symbolic icons instead of full-colored icons.</_description>
+    </key>
   </schema>
 </schemalist>
