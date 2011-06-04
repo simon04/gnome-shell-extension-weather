@@ -8,11 +8,11 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Screenshots
 
-![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot.png)
+![Screenshot](raw/master/data/screenshot.png)
 
 And with French translation:  
 
-![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot2.png)
+![Screenshot](raw/master/data/screenshot2.png)
 
 ----
 
@@ -20,11 +20,9 @@ And with French translation:
 
 For installation, run the following commands:
 
-```bash
-./autogen.sh --prefix=/usr
-make
-sudo make install
-```
+    ./autogen.sh --prefix=/usr
+    make
+    sudo make install
   
 That's it!
 
@@ -38,44 +36,34 @@ Gnome extension weather use gsettings to save your configuration. you can use dc
 
 You can specify your location buy using this command:
 
-```bash
-gsettings set org.gnome.shell.extensions.weather woeid your_woeid
-```
+    gsettings set org.gnome.shell.extensions.weather woeid your_woeid
 
 #### Temperature Units (optional, celsius by default)
 
 You can modify the temperature unit with one of the following commands:
 
-```bash
-gsettings set org.gnome.shell.extensions.weather unit celsius
-gsettings set org.gnome.shell.extensions.weather unit fahrenheit
-```
+    gsettings set org.gnome.shell.extensions.weather unit celsius
+    gsettings set org.gnome.shell.extensions.weather unit fahrenheit
 
 #### Displayed Location (optional)
 
 Sometimes your WOEID location isn't quite right (it's the next major city around). To customise the displayed city you can type:
 
-```bash
-gsettings set org.gnome.shell.extensions.weather city your_city
-```
+    gsettings set org.gnome.shell.extensions.weather city your_city
 
 #### Translate Weather Conditions (optional, true by default)
 
 You may want to configure whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.
 
-```bash
-gsettings set org.gnome.shell.extensions.weather translate-condition true
-gsettings set org.gnome.shell.extensions.weather translate-condition false
-```
+    gsettings set org.gnome.shell.extensions.weather translate-condition true
+    gsettings set org.gnome.shell.extensions.weather translate-condition false
 
 #### Use Symbolic Icons (optional, false by default)
 
 If desired, you can enable the usage of symbolic icons to display the weather condition (instead of full-colored icons).
 
-```bash
-gsettings set org.gnome.shell.extensions.weather use-symbolic-icons false
-gsettings set org.gnome.shell.extensions.weather use-symbolic-icons true
-```
+    gsettings set org.gnome.shell.extensions.weather use-symbolic-icons false
+    gsettings set org.gnome.shell.extensions.weather use-symbolic-icons true
 
 #### Restart GNOME Shell
 
