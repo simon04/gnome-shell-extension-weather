@@ -431,7 +431,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
-            this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
+            this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
 
         });
 
