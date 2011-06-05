@@ -1,0 +1,257 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Gankov Andrey <gav@qsolution.ru>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-27 01:22+0200\n"
+"PO-Revision-Date: 2011-06-05 23:00+0400\n"
+"Last-Translator: Gankov Andrey <gav@qsolution.ru>\n"
+"Language-Team: openSUSE <opensuse-translation-ru@opensuse.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js:73
+msgid "..."
+msgstr "..."
+
+#: extension.js:228
+msgid "Tornado"
+msgstr "Торнадо"
+
+#: extension.js:230
+msgid "Tropical storm"
+msgstr "Тропический шторм"
+
+#: extension.js:232
+msgid "Hurricane"
+msgstr "Ураган"
+
+#: extension.js:234
+msgid "Severe thunderstorms"
+msgstr "Сильные грозы"
+
+#: extension.js:236
+msgid "Thunderstorms"
+msgstr "Грозы"
+
+#: extension.js:238
+msgid "Mixed rain and snow"
+msgstr "Дождь и снег"
+
+#: extension.js:240
+msgid "Mixed rain and sleet"
+msgstr "Дождь и мокрый снег"
+
+#: extension.js:242
+msgid "Mixed snow and sleet"
+msgstr "Снег и мокрый снег"
+
+#: extension.js:244
+msgid "Freezing drizzle"
+msgstr "Изморось"
+
+#: extension.js:246
+msgid "Drizzle"
+msgstr "Морось"
+
+#: extension.js:248
+msgid "Freezing rain"
+msgstr "Ледяной дождь"
+
+#: extension.js:250 extension.js:252
+msgid "Showers"
+msgstr "Ливни"
+
+#: extension.js:254
+msgid "Snow flurries"
+msgstr "Шквалистый снег"
+
+#: extension.js:256
+msgid "Light snow showers"
+msgstr "Небольшой снегопад"
+
+#: extension.js:258
+msgid "Blowing snow"
+msgstr "Низовая метель"
+
+#: extension.js:260
+msgid "Snow"
+msgstr "Снег"
+
+#: extension.js:262
+msgid "Hail"
+msgstr "Град"
+
+#: extension.js:264
+msgid "Sleet"
+msgstr "Мокрый снег"
+
+#: extension.js:266
+msgid "Dust"
+msgstr "Пыль"
+
+#: extension.js:268
+msgid "Foggy"
+msgstr "Туман"
+
+#: extension.js:270
+msgid "Haze"
+msgstr "Легкий туман"
+
+#: extension.js:272
+msgid "Smoky"
+msgstr "Дымка"
+
+#: extension.js:274
+msgid "Blustery"
+msgstr "Порывы ветра"
+
+#: extension.js:276
+msgid "Windy"
+msgstr "Ветрено"
+
+#: extension.js:278
+msgid "Cold"
+msgstr "Холодно"
+
+#: extension.js:280
+msgid "Cloudy"
+msgstr "Облачно"
+
+#: extension.js:283
+msgid "Mostly cloudy"
+msgstr "Преимущественно облачно"
+
+#: extension.js:286 extension.js:312
+msgid "Partly cloudy"
+msgstr "Переменная облачность"
+
+#: extension.js:288
+msgid "Clear"
+msgstr "Безоблачно"
+
+#: extension.js:290
+msgid "Sunny"
+msgstr "Солнечно"
+
+#: extension.js:293
+msgid "Fair"
+msgstr "Ясно"
+
+#: extension.js:295
+msgid "Mixed rain and hail"
+msgstr "Дождь и град"
+
+#: extension.js:297
+msgid "Hot"
+msgstr "Жара"
+
+#: extension.js:299
+msgid "Isolated thunderstorms"
+msgstr "Единичные грозы"
+
+#: extension.js:302
+msgid "Scattered thunderstorms"
+msgstr "Местами грозы"
+
+#: extension.js:304
+msgid "Scattered showers"
+msgstr "Местами ливни"
+
+#: extension.js:306 extension.js:310
+msgid "Heavy snow"
+msgstr "Сильный снегопад"
+
+#: extension.js:308
+msgid "Scattered snow showers"
+msgstr "Местами снегопад"
+
+#: extension.js:314
+msgid "Thundershowers"
+msgstr "Грозовые ливни"
+
+#: extension.js:316
+msgid "Snow showers"
+msgstr "Снегопад"
+
+#: extension.js:318
+msgid "Isolated thundershowers"
+msgstr "Единичные грозовые ливни"
+
+#: extension.js:321
+msgid "Not available"
+msgstr "Недоступно"
+
+#: extension.js:336
+msgid "Monday"
+msgstr "Понедельник"
+
+#: extension.js:336
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: extension.js:336
+msgid "Wednesday"
+msgstr "Среда"
+
+#: extension.js:336
+msgid "Thursday"
+msgstr "Четверг"
+
+#: extension.js:336
+msgid "Friday"
+msgstr "Пятница"
+
+#: extension.js:336
+msgid "Saturday"
+msgstr "Суббота"
+
+#: extension.js:336
+msgid "Sunday"
+msgstr "Воскресенье"
+
+#: extension.js:392
+msgid "Today"
+msgstr "Сегодня"
+
+#: extension.js:392
+msgid "Tomorrow"
+msgstr "Завтра"
+
+#: extension.js:429
+msgid "Loading current weather ..."
+msgstr "Загрузка текущей погоды ..."
+
+#: extension.js:430
+msgid "Loading future weather ..."
+msgstr "Загрузка прогноза погоды ..."
+
+#: extension.js:446
+msgid "Loading ..."
+msgstr "Загрузка ..."
+
+#: extension.js:449
+msgid "Please wait"
+msgstr "Подождите"
+
+#: extension.js:467
+msgid "Temperature:"
+msgstr "Температура:"
+
+#: extension.js:469
+msgid "Humidity:"
+msgstr "Влажность:"
+
+#: extension.js:471
+msgid "Pressure:"
+msgstr "Давление:"
+
+#: extension.js:473
+msgid "Wind:"
+msgstr "Ветер:"
