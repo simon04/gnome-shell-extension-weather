@@ -89,7 +89,7 @@ WeatherMenuButton.prototype = {
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
             this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-            this.refreshWeather();
+            this.refreshWeather(false);
         });
         this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
@@ -153,10 +153,9 @@ WeatherMenuButton.prototype = {
         this.rebuildFutureWeatherUi();
         
         // Show weather
-        here = this;
-        Mainloop.timeout_add(3000, function() {
-            here.refreshWeather();
-        });
+        Mainloop.timeout_add_seconds(3, Lang.bind(this, function() {
+            this.refreshWeather(true);
+        }));
         
     },
 
@@ -406,7 +405,7 @@ WeatherMenuButton.prototype = {
         });
     },
 
-    refreshWeather: function() {
+    refreshWeather: function(recurse) {
         // Refresh current weather
         this.load_json_async(this.get_weather_url(), function(weather) {
         
@@ -421,7 +420,7 @@ WeatherMenuButton.prototype = {
                             this._woeid = weather.get_object_member('location').get_string_member('location_id');
                             this._settings.set_string(WEATHER_WOEID_KEY, this._woeid);
                             // Load weather with correct woeid
-                            this.refreshWeather();
+                            this.refreshWeather(false);
                         } catch(e) {
                         }
                     });
@@ -485,8 +484,12 @@ WeatherMenuButton.prototype = {
         
         });
         
-        // Repeatedly refresh weather
-        Mainloop.timeout_add_seconds(60 * 4, Lang.bind(this, this.refreshWeather));
+        // Repeatedly refresh weather if recurse is set
+        if (recurse) {
+            Mainloop.timeout_add_seconds(60 * 4, Lang.bind(this, function() {
+                this.refreshWeather(true);
+            }));
+        }
         
     },
 
