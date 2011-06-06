@@ -3,6 +3,10 @@
     <value nick="celsius" value="0" />
     <value nick="fahrenheit" value="1" />
   </enum>
+  <enum id="org.gnome.shell.extensions.weather.position">
+    <value nick="center" value="0" />
+    <value nick="right" value="1" />
+  </enum>
   <schema id="org.gnome.shell.extensions.weather" path="/org/gnome/shell/extensions/weather/">
     <key name="unit" enum="org.gnome.shell.extensions.weather.unit">
       <default>'celsius'</default>
@@ -33,6 +37,11 @@
       <default>true</default>
       <_summary>Whether to show the text in the panel.</_summary>
       <_description>Whether to show the weather condition text together with the temperature in the panel (requires restart).</_description>
+    </key>
+    <key name="position-in-panel" enum="org.gnome.shell.extensions.weather.position">
+      <default>'center'</default>
+      <_summary>Position in panel</_summary>
+      <_description>Set the position of this GNOME Shell extension in the panel to either 'center' or 'right' (requires restart).</_description>
     </key>
   </schema>
 </schemalist>

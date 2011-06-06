@@ -55,12 +55,17 @@ const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
+const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
 
 // Keep enums in sync with GSettings schemas
 const WeatherUnits = {
     CELSIUS: 0,
     FAHRENHEIT: 1
-};
+}
+const WeatherPosition = {
+    CENTER: 0,
+    RIGHT: 1
+}
 
 function WeatherMenuButton() {
     this._init();
@@ -84,6 +89,7 @@ WeatherMenuButton.prototype = {
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
         this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
         this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
+        this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
         
         // Watch settings for changes
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
@@ -130,7 +136,16 @@ WeatherMenuButton.prototype = {
         if (this._text_in_panel)
             topBox.add_actor(this._weatherInfo);
         this.actor.set_child(topBox);
-        Main.panel._centerBox.add(this.actor, { y_fill: true });
+        
+        switch (this._position_in_panel) {
+            case WeatherPosition.CENTER: 
+                Main.panel._centerBox.add(this.actor, { y_fill: true });
+                break;
+            case WeatherPosition.RIGHT:
+                Main.panel._rightBox.add(this.actor, { y_fill: true });
+                break;
+        }
+        
         Main.panel._menus.addMenu(this.menu);
         
         // Current weather
