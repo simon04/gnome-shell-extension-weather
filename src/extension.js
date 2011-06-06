@@ -28,24 +28,20 @@
  *
  */
 
-const GLib = imports.gi.GLib;
+const Cairo = imports.cairo;
+const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
+const Json = imports.gi.Json;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
-const Cairo = imports.cairo;
-const Clutter = imports.gi.Clutter;
-const Shell = imports.gi.Shell;
+const Soup = imports.gi.Soup;
 const St = imports.gi.St;
-const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
 const _ = Gettext.gettext;
 
-const Json = imports.gi.Json;
 const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
-const Soup = imports.gi.Soup;
-const Util = imports.misc.util;
 
 // Settings
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
