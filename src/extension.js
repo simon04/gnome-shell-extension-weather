@@ -54,6 +54,7 @@ const WEATHER_CITY_KEY = 'city';
 const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 const WEATHER_SYMBOLIC_ICONS = 'use-symbolic-icons';
+const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 
 // Keep enums in sync with GSettings schemas
 const WeatherUnits = {
@@ -82,6 +83,7 @@ WeatherMenuButton.prototype = {
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
         this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+        this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
         
         // Watch settings for changes
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
@@ -125,7 +127,8 @@ WeatherMenuButton.prototype = {
         // Putting the panel item together
         let topBox = new St.BoxLayout();        
         topBox.add_actor(this._weatherIcon);
-        topBox.add_actor(this._weatherInfo);
+        if (this._text_in_panel)
+            topBox.add_actor(this._weatherInfo);
         this.actor.set_child(topBox);
         Main.panel._centerBox.add(this.actor, { y_fill: true });
         Main.panel._menus.addMenu(this.menu);

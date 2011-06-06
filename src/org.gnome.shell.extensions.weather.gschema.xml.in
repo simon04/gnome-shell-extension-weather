@@ -29,5 +29,10 @@
       <_summary>Whether to use symbolic icons</_summary>
       <_description>Whether to use symbolic icons instead of full-colored icons.</_description>
     </key>
+    <key name="show-text-in-panel" type="b">
+      <default>true</default>
+      <_summary>Whether to show the text in the panel.</_summary>
+      <_description>Whether to show the weather condition text together with the temperature in the panel (requires restart).</_description>
+    </key>
   </schema>
 </schemalist>

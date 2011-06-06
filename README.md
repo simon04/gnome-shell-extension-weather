@@ -65,6 +65,13 @@ If desired, you can enable the usage of symbolic icons to display the weather co
     gsettings set org.gnome.shell.extensions.weather use-symbolic-icons false
     gsettings set org.gnome.shell.extensions.weather use-symbolic-icons true
 
+#### Show Text in Panel (optional, true by default)
+
+You can configure whether to show the weather condition text together with the temperature in the panel (requires restart of GNOME Shell).
+
+    gsettings set org.gnome.shell.extensions.weather show-text-in-panel true
+    gsettings set org.gnome.shell.extensions.weather show-text-in-panel false
+
 #### Restart GNOME Shell
 
 Don't forget to restart GNOME Shell:
