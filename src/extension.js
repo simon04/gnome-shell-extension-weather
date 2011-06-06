@@ -53,7 +53,7 @@ const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
-const WEATHER_SYMBOLIC_ICONS = 'use-symbolic-icons';
+const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 
 // Keep enums in sync with GSettings schemas
@@ -82,7 +82,7 @@ WeatherMenuButton.prototype = {
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-        this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+        this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
         this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
         
         // Watch settings for changes
@@ -91,25 +91,25 @@ WeatherMenuButton.prototype = {
             this._city  = this._settings.get_string(WEATHER_CITY_KEY);
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-            this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+            this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
             this.refreshWeather(false);
         });
         this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_SYMBOLIC_ICONS, Lang.bind(this, function() {
-            this._icontype = this._settings.get_boolean(WEATHER_SYMBOLIC_ICONS) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-            this._weatherIcon.icon_type = this._icontype;
-            this._currentWeatherIcon.icon_type = this._icontype;
-            this._forecast[0].Icon.icon_type = this._icontype;
-            this._forecast[1].Icon.icon_type = this._icontype;
+        this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
+            this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+            this._weatherIcon.icon_type = this._icon_type;
+            this._currentWeatherIcon.icon_type = this._icon_type;
+            this._forecast[0].Icon.icon_type = this._icon_type;
+            this._forecast[1].Icon.icon_type = this._icon_type;
             this.refreshWeather(false);
         }));
         
         // Panel icon
         this._weatherIcon = new St.Icon({
-            icon_type: this._icontype,
+            icon_type: this._icon_type,
             icon_size: Main.panel.button.get_child().height,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
@@ -296,7 +296,7 @@ WeatherMenuButton.prototype = {
 
     has_icon: function(icon) {
         //TODO correct symbolic name? (cf. symbolic_names_for_icon)
-        return Gtk.IconTheme.get_default().has_icon(icon + (this._icontype == St.IconType.SYMBOLIC ? '-symbolic' : ''));
+        return Gtk.IconTheme.get_default().has_icon(icon + (this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''));
     },
 
     get_weather_condition: function(code) {
@@ -535,7 +535,7 @@ WeatherMenuButton.prototype = {
         
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({
-            icon_type: this._icontype,
+            icon_type: this._icon_type,
             icon_size: 64,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-current-icon'
@@ -608,7 +608,7 @@ WeatherMenuButton.prototype = {
             let forecastWeather = {};
             
             forecastWeather.Icon = new St.Icon({
-                icon_type: this._icontype,
+                icon_type: this._icon_type,
                 icon_size: 48,
                 icon_name: 'view-refresh-symbolic',
                 style_class: 'weather-forecast-icon'
