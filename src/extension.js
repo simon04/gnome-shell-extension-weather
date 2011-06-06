@@ -284,10 +284,11 @@ WeatherMenuButton.prototype = {
 
     get_weather_icon_safely: function(code) {
         let iconname = this.get_weather_icon(code);
-        if (!this.has_icon(iconname[0]) && iconname.length > 1)
-            return iconname[1];
-        else
-            return iconname[0];
+        for (let i = 0; i < iconname.length; i++) {
+            if (this.has_icon(iconname[i]))
+                return iconname[i];
+        }
+        return 'weather-severe-alert';
      },
 
     has_icon: function(icon) {
