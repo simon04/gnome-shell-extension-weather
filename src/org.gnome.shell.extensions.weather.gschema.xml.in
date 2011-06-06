@@ -6,18 +6,18 @@
   <schema id="org.gnome.shell.extensions.weather" path="/org/gnome/shell/extensions/weather/">
     <key name="unit" enum="org.gnome.shell.extensions.weather.unit">
       <default>'celsius'</default>
-      <_summary>display units</_summary>
-      <_description>Choose the units you want the temperatures. Allowed values are 'celsius' or 'fahrenheit'</_description>
+      <_summary>Units</_summary>
+      <_description>Choose the unit system for temperatures etc. Allowed values are 'celsius' or 'fahrenheit'.</_description>
     </key>
     <key name="woeid" type="s">
-      <default>'FRXX6724'</default>
-      <_summary>Forecast Yahoo WOEID</_summary>
-      <_description>Set Yahoo id location to retrieve the corresponding forecast informations</_description>
+      <default>'AUXX0010'</default>
+      <_summary>Yahoo WOEID</_summary>
+      <_description>Set the Yahoo location ID (aka. WOEID, Where On Earth Identifier), which is used to retrieve the corresponding weather+forecast information.</_description>
     </key>
     <key name="city" type="s">
       <default>''</default>
       <_summary>City to be displayed</_summary>
-      <_description>Optional, you can override the displayed city provided by the woeid location</_description>
+      <_description>Optionally, you can override the displayed city. This one is displayed instead of the one from the Yahoo service.</_description>
     </key>
     <key name="translate-condition" type="b">
       <default>true</default>
