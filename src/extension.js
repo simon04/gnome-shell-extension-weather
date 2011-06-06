@@ -681,3 +681,4 @@ function main() {
     this._weatherMenu = new WeatherMenuButton();
 }
 
+// vim:set ts=4 sw=4 et:
