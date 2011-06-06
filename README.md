@@ -76,8 +76,8 @@ You can configure whether to show the weather condition text together with the t
 
 The position of this GNOME Shell extension in the panel can be configured to either 'center' or 'right' (requires restart of GNOME Shell).
 
-    gnome-shell-extension-weather]$ gsettings set org.gnome.shell.extensions.weather position-in-panel center
-    gnome-shell-extension-weather]$ gsettings set org.gnome.shell.extensions.weather position-in-panel right
+    gsettings set org.gnome.shell.extensions.weather position-in-panel center
+    gsettings set org.gnome.shell.extensions.weather position-in-panel right
 
 #### Restart GNOME Shell
 
