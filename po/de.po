@@ -1,0 +1,256 @@
+# German translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Evilandi666 <Evilandi.AUR@googlemail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-07 13:00+0200\n"
+"PO-Revision-Date: 2011-06-07 13:00+0200\n"
+"Last-Translator: Evilandi666 <Evilandi.AUR@googlemail.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js:73
+msgid "..."
+msgstr "..."
+
+#: extension.js:228
+msgid "Tornado"
+msgstr "Tornado"
+
+#: extension.js:230
+msgid "Tropical storm"
+msgstr "Tropischer Sturm"
+
+#: extension.js:232
+msgid "Hurricane"
+msgstr "Orkan"
+
+#: extension.js:234
+msgid "Severe thunderstorms"
+msgstr "Schwere Gewitter"
+
+#: extension.js:236
+msgid "Thunderstorms"
+msgstr "Gewitter"
+
+#: extension.js:238
+msgid "Mixed rain and snow"
+msgstr "Regen und Schnee"
+
+#: extension.js:240
+msgid "Mixed rain and sleet"
+msgstr "Regen und Graupel"
+
+#: extension.js:242
+msgid "Mixed snow and sleet"
+msgstr "Schnee und Graupel"
+
+#: extension.js:244
+msgid "Freezing drizzle"
+msgstr "Gefrierender Nieselregen"
+
+#: extension.js:246
+msgid "Drizzle"
+msgstr "Nieselregen"
+
+#: extension.js:248
+msgid "Freezing rain"
+msgstr "Gefrierender Regen"
+
+#: extension.js:250 extension.js:252
+msgid "Showers"
+msgstr "Regenschauer"
+
+#: extension.js:254
+msgid "Snow flurries"
+msgstr "Schneegestöber"
+
+#: extension.js:256
+msgid "Light snow showers"
+msgstr "Leichter Schneefall"
+
+#: extension.js:258
+msgid "Blowing snow"
+msgstr "Schneesturm"
+
+#: extension.js:260
+msgid "Snow"
+msgstr "Schnee"
+
+#: extension.js:262
+msgid "Hail"
+msgstr "Hagel"
+
+#: extension.js:264
+msgid "Sleet"
+msgstr "Graupel"
+
+#: extension.js:266
+msgid "Dust"
+msgstr "Staubig"
+
+#: extension.js:268
+msgid "Foggy"
+msgstr "Nebelig"
+
+#: extension.js:270
+msgid "Haze"
+msgstr "Dunstig"
+
+#: extension.js:272
+msgid "Smoky"
+msgstr "Nebelig"
+
+#: extension.js:274
+msgid "Blustery"
+msgstr "Stürmisch"
+
+#: extension.js:276
+msgid "Windy"
+msgstr "Windig"
+
+#: extension.js:278
+msgid "Cold"
+msgstr "Frostig"
+
+#: extension.js:280
+msgid "Cloudy"
+msgstr "Bewölkt"
+
+#: extension.js:283
+msgid "Mostly cloudy"
+msgstr "Größtenteils bewölkt"
+
+#: extension.js:286 extension.js:312
+msgid "Partly cloudy"
+msgstr "Vereinzelt bewölkt"
+
+#: extension.js:288
+msgid "Clear"
+msgstr "Klar"
+
+#: extension.js:290
+msgid "Sunny"
+msgstr "Sonnig"
+
+#: extension.js:293
+msgid "Fair"
+msgstr "Heiter"
+
+#: extension.js:295
+msgid "Mixed rain and hail"
+msgstr "Regen und Hagel"
+
+#: extension.js:297
+msgid "Hot"
+msgstr "Hitze"
+
+#: extension.js:299
+msgid "Isolated thunderstorms"
+msgstr "Vereinzelte Gewitter"
+
+#: extension.js:302
+msgid "Scattered thunderstorms"
+msgstr "Vereinzelte Gewitter"
+
+#: extension.js:304
+msgid "Scattered showers"
+msgstr "Vereinzelte Schauer"
+
+#: extension.js:306 extension.js:310
+msgid "Heavy snow"
+msgstr "Heftiger Schneefall"
+
+#: extension.js:308
+msgid "Scattered snow showers"
+msgstr "Vereinzelte Schneeschauer"
+
+#: extension.js:314
+msgid "Thundershowers"
+msgstr "Gewittrige Schauer"
+
+#: extension.js:316
+msgid "Snow showers"
+msgstr "Schneeschauer"
+
+#: extension.js:318
+msgid "Isolated thundershowers"
+msgstr "Vereinzelte Gewitter"
+
+#: extension.js:321
+msgid "Not available"
+msgstr "Nicht verfügbar"
+
+#: extension.js:336
+msgid "Monday"
+msgstr "Montag"
+
+#: extension.js:336
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: extension.js:336
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: extension.js:336
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: extension.js:336
+msgid "Friday"
+msgstr "Freitag"
+
+#: extension.js:336
+msgid "Saturday"
+msgstr "Samstag"
+
+#: extension.js:336
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: extension.js:392
+msgid "Today"
+msgstr "Heute"
+
+#: extension.js:392
+msgid "Tomorrow"
+msgstr "Morgen"
+
+#: extension.js:429
+msgid "Loading current weather ..."
+msgstr "Lade aktuelles Wetter ..."
+
+#: extension.js:430
+msgid "Loading future weather ..."
+msgstr "Lade zukünftiges Wetter ..."
+
+#: extension.js:446
+msgid "Loading ..."
+msgstr "Lade ..."
+
+#: extension.js:449
+msgid "Please wait"
+msgstr "Bitte warten"
+
+#: extension.js:467
+msgid "Temperature:"
+msgstr "Temperatur:"
+
+#: extension.js:469
+msgid "Humidity:"
+msgstr "Luftfeuchtigkeit:"
+
+#: extension.js:471
+msgid "Pressure:"
+msgstr "Luftdruck:"
+
+#: extension.js:473
+msgid "Wind:"
+msgstr "Windgeschwindigkeit:"
