@@ -172,7 +172,7 @@ WeatherMenuButton.prototype = {
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
-        item = new PopupMenu.PopupMenuItem("Preferences...");
+        let item = new PopupMenu.PopupMenuItem("Preferences...");
         item.connect('activate', Open_Perference);
         this.menu.addMenuItem(item);
         
