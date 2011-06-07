@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Weather Extension Perference
+GenericName=Perference Editor for gnome-shell-extension-weather
+Exec=system-monitor-applet-config
+Terminal=false
+Type=Application
+Icon=utilities-system-monitor
+Categories=GNOME;System;
