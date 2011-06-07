@@ -166,6 +166,7 @@ WeatherMenuButton.prototype = {
         
         this.menu.addActor(mainBox);
 
+        /* TODO install script via Makefile
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
         let item = new PopupMenu.PopupMenuItem(_("Preferences..."));
@@ -173,6 +174,7 @@ WeatherMenuButton.prototype = {
             Util.spawn(["weather-extension-configurator"]);
         });
         this.menu.addMenuItem(item);
+        */
         
         // Items
         this.showLoadingUi();
