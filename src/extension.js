@@ -97,12 +97,14 @@ WeatherMenuButton.prototype = {
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+            this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
             this.refreshWeather(false);
         });
         this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
             this._weatherIcon.icon_type = this._icon_type;
