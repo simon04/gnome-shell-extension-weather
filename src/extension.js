@@ -65,10 +65,6 @@ const WeatherPosition = {
     RIGHT: 1
 }
 
-function Open_Perference() {
-    Util.spawn(["weather-extension-configurator"]);
-}
-
 function WeatherMenuButton() {
     this._init();
 }
@@ -172,8 +168,10 @@ WeatherMenuButton.prototype = {
 
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
-        let item = new PopupMenu.PopupMenuItem("Preferences...");
-        item.connect('activate', Open_Perference);
+        let item = new PopupMenu.PopupMenuItem(_("Preferences..."));
+        item.connect('activate', function() {
+            Util.spawn(["weather-extension-configurator"]);
+        });
         this.menu.addMenuItem(item);
         
         // Items
