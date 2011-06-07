@@ -36,12 +36,12 @@
     <key name="show-text-in-panel" type="b">
       <default>true</default>
       <_summary>Whether to show the text in the panel.</_summary>
-      <_description>Whether to show the weather condition text together with the temperature in the panel (requires restart).</_description>
+      <_description>Whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart). If only weather condition text is undesired, consider show-comment-in-panel option.</_description>
     </key>
     <key name="show-comment-in-panel" type="b">
       <default>false</default>
-      <_summary>Whether to show the comment text in the panel (the temperature is still shown).</_summary>
-      <_description>Whether to show the weather comment text(i.e. Windy, Clear) in the panel (requires restart).</_description>
+      <_summary>Whether to show the comment in the panel.</_summary>
+      <_description>Whether to show the comment (aka. weather condition text, e.g. "Windy", "Clear") in the panel. Note that the temperature is still shown (if undesired, consider show-text-in-panel option).</_description>
     </key>
     <key name="position-in-panel" enum="org.gnome.shell.extensions.weather.position">
       <default>'center'</default>

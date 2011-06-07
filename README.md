@@ -67,10 +67,17 @@ If desired, you can enable the usage of symbolic icons to display the weather co
 
 #### Show Text in Panel (optional, true by default)
 
-You can configure whether to show the weather condition text together with the temperature in the panel (requires restart of GNOME Shell).
+You can configure whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart). If only weather condition text is undesired, consider show-comment-in-panel option.
 
     gsettings set org.gnome.shell.extensions.weather show-text-in-panel true
     gsettings set org.gnome.shell.extensions.weather show-text-in-panel false
+
+#### Show Comment in Panel (optional, false by default)
+
+Configures whether to show the comment (aka. weather condition text, e.g. "Windy", "Clear") in the panel. Note that the temperature is still shown (if undesired, consider show-text-in-panel option).
+
+    gsettings set org.gnome.shell.extensions.weather show-comment-in-panel false
+    gsettings set org.gnome.shell.extensions.weather show-comment-in-panel true
 
 #### Position in Panel (optional, center by default)
 
