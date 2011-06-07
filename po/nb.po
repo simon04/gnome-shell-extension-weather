@@ -1,6 +1,6 @@
 # Norwegian Bokmål translation for gnome-shell-extension-weather
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
 # Stian Ellingsen <stiell@stiell.org>, 2011.
 #
 msgid ""

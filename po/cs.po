@@ -1,11 +1,11 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Czech translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
 # David Štancl <dstancl@dstancl.cz>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-05-27 01:22+0200\n"
 "PO-Revision-Date: 2011-06-06 23:40+0100\n"

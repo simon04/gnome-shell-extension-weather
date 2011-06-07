@@ -1,7 +1,7 @@
-# French translations for PACKAGE package
-# Traductions françaises du paquet PACKAGE.
-# Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# French translation for gnome-shell-extension-weather
+# Traductions françaises du paquet gnome-shell-extension-weather.
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
 # Simon Claessens <gagalago@gmail.com>, 2011.
 # ecyrbe <ecyrbe@gmail.com>, 2011.
 #
