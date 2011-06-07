@@ -426,11 +426,11 @@ WeatherMenuButton.prototype = {
     },
 
     load_json_async: function(url, fun) {
-        here = this;
+        let here = this;
         let session = new Soup.SessionAsync();
         let message = Soup.Message.new('GET', url);
         session.queue_message(message, function(session, message) {
-            jp = new Json.Parser();
+            let jp = new Json.Parser();
             jp.load_from_data(message.response_body.data, -1);
             fun.call(here, jp.get_root().get_object());
         });
@@ -443,7 +443,7 @@ WeatherMenuButton.prototype = {
             // Fixes wrong woeid if necessary
             try {
                 // Wrong woeid specified
-                if (weather.get_int_member('code') == 500) {
+                if (weather.has_member('code') && weather.get_int_member('code') == 500) {
                     // Fetch correct woeid
                     this.load_json_async(this.get_weather_url().replace('p=', 'w='), function(weather) {
                         try {
@@ -472,10 +472,10 @@ WeatherMenuButton.prototype = {
             let temperature = weather.get_object_member('condition').get_double_member('temperature');
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
             let pressure = weather.get_object_member('atmosphere').get_double_member('pressure');
-            pressure_unit = weather.get_object_member('units').get_string_member('pressure');
+            let pressure_unit = weather.get_object_member('units').get_string_member('pressure');
             let wind_direction = weather.get_object_member('wind').get_string_member('direction');
             let wind = weather.get_object_member('wind').get_double_member('speed');
-            wind_unit = weather.get_object_member('units').get_string_member('speed');
+            let wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon_safely(weather.get_object_member('condition').get_string_member('code'));
             
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
@@ -493,11 +493,11 @@ WeatherMenuButton.prototype = {
         // Refresh forecast
         this.load_json_async(this.get_forecast_url(), function(forecast) {
             
-            date_string = [_('Today'), _('Tomorrow')];
-            forecast2 = forecast.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
+            let date_string = [_('Today'), _('Tomorrow')];
+            forecast = forecast.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
             for (let i = 0; i <= 1; i++) {
                 let forecastUi = this._forecast[i];
-                let forecastData = forecast2[i].get_object().get_object_member('item').get_object_member('forecast');
+                let forecastData = forecast[i].get_object().get_object_member('item').get_object_member('forecast');
                 
                 let code = forecastData.get_string_member('code');
                 let t_low = forecastData.get_string_member('low');
@@ -575,11 +575,11 @@ WeatherMenuButton.prototype = {
         let rb = new St.BoxLayout({
             style_class: 'weather-current-databox'
         });
-        rb_captions = new St.BoxLayout({
+        let rb_captions = new St.BoxLayout({
             vertical: true,
             style_class: 'weather-current-databox-captions'
         });
-        rb_values = new St.BoxLayout({
+        let rb_values = new St.BoxLayout({
             vertical: true,
             style_class: 'weather-current-databox-values'
         });
