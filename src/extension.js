@@ -52,6 +52,7 @@ const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
+const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
 
 // Keep enums in sync with GSettings schemas
 const WeatherUnits = {
@@ -86,6 +87,7 @@ WeatherMenuButton.prototype = {
         this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
         this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
         this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
+        this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
         
         // Watch settings for changes
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
@@ -138,7 +140,8 @@ WeatherMenuButton.prototype = {
                 Main.panel._centerBox.add(this.actor, { y_fill: true });
                 break;
             case WeatherPosition.RIGHT:
-                Main.panel._rightBox.add(this.actor, { y_fill: true });
+                let children = Main.panel._rightBox.get_children();
+                Main.panel._rightBox.insert_actor(this.actor, children.length-1);
                 break;
         }
         
@@ -479,7 +482,13 @@ WeatherMenuButton.prototype = {
             let iconname = this.get_weather_icon_safely(weather.get_object_member('condition').get_string_member('code'));
             
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
-            this._weatherInfo.text = (comment + ', ' + temperature + ' ' + this.unit_to_unicode());
+
+            if(this._comment_in_panel)
+                this._weatherInfo.text = (comment + ' ' + temperature + ' ' + this.unit_to_unicode());
+            else
+                this._weatherInfo.text = (temperature + ' ' + this.unit_to_unicode());
+
+
             
             this._currentWeatherSummary.text = comment;
             this._currentWeatherLocation.text = location;
