@@ -37,6 +37,7 @@ const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const Soup = imports.gi.Soup;
 const St = imports.gi.St;
+const Util = imports.misc.util;
 const _ = Gettext.gettext;
 
 const Main = imports.ui.main;
@@ -62,6 +63,10 @@ const WeatherUnits = {
 const WeatherPosition = {
     CENTER: 0,
     RIGHT: 1
+}
+
+function Open_Perference() {
+    Util.spawn(["weather-extension-configurator"]);
 }
 
 function WeatherMenuButton() {
@@ -164,6 +169,12 @@ WeatherMenuButton.prototype = {
         mainBox.add_actor(this._futureWeather);
         
         this.menu.addActor(mainBox);
+
+        this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
+
+        item = new PopupMenu.PopupMenuItem("Preferences...");
+        item.connect('activate', Open_Perference);
+        this.menu.addMenuItem(item);
         
         // Items
         this.showLoadingUi();
