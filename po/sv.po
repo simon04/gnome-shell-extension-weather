@@ -1,0 +1,256 @@
+# Swedish translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Mauricio Barraza <mauricio@barraza.se>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-09 17:43+0200\n"
+"PO-Revision-Date: 2011-06-09 17:43+0200\n"
+"Last-Translator: Mauricio Barraza <mauricio@barraza.se>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js:73
+msgid "..."
+msgstr "..."
+
+#: extension.js:228
+msgid "Tornado"
+msgstr "Tornado"
+
+#: extension.js:230
+msgid "Tropical storm"
+msgstr "Tropisk storm"
+
+#: extension.js:232
+msgid "Hurricane"
+msgstr "Orkan"
+
+#: extension.js:234
+msgid "Severe thunderstorms"
+msgstr "Kraftig åska"
+
+#: extension.js:236
+msgid "Thunderstorms"
+msgstr "Åska"
+
+#: extension.js:238
+msgid "Mixed rain and snow"
+msgstr "Snöblandat regn"
+
+#: extension.js:240
+msgid "Mixed rain and sleet"
+msgstr "Regn och slask"
+
+#: extension.js:242
+msgid "Mixed snow and sleet"
+msgstr "Snö och slask"
+
+#: extension.js:244
+msgid "Freezing drizzle"
+msgstr "Underkylt duggregn"
+
+#: extension.js:246
+msgid "Drizzle"
+msgstr "Duggregn"
+
+#: extension.js:248
+msgid "Freezing rain"
+msgstr "Underkylt regn"
+
+#: extension.js:250 extension.js:252
+msgid "Showers"
+msgstr "Regnskurar"
+
+#: extension.js:254
+msgid "Snow flurries"
+msgstr "Lätt snöfall"
+
+#: extension.js:256
+msgid "Light snow showers"
+msgstr "Lätta snöbyar"
+
+#: extension.js:258
+msgid "Blowing snow"
+msgstr "Snöstorm"
+
+#: extension.js:260
+msgid "Snow"
+msgstr "Snö"
+
+#: extension.js:262
+msgid "Hail"
+msgstr "Hagel"
+
+#: extension.js:264
+msgid "Sleet"
+msgstr "Slask"
+
+#: extension.js:266
+msgid "Dust"
+msgstr "Damm"
+
+#: extension.js:268
+msgid "Foggy"
+msgstr "Dimma"
+
+#: extension.js:270
+msgid "Haze"
+msgstr "Dis"
+
+#: extension.js:272
+msgid "Smoky"
+msgstr "Rök"
+
+#: extension.js:274
+msgid "Blustery"
+msgstr "Vindbyar"
+
+#: extension.js:276
+msgid "Windy"
+msgstr "Blåsigt"
+
+#: extension.js:278
+msgid "Cold"
+msgstr "Kallt"
+
+#: extension.js:280
+msgid "Cloudy"
+msgstr "Molnigt"
+
+#: extension.js:283
+msgid "Mostly cloudy"
+msgstr "Mestadels molnigt"
+
+#: extension.js:286 extension.js:312
+msgid "Partly cloudy"
+msgstr "Delvis molnigt"
+
+#: extension.js:288
+msgid "Clear"
+msgstr "Klart"
+
+#: extension.js:290
+msgid "Sunny"
+msgstr "Soligt"
+
+#: extension.js:293
+msgid "Fair"
+msgstr "Uppehåll"
+
+#: extension.js:295
+msgid "Mixed rain and hail"
+msgstr "Regn och hagel"
+
+#: extension.js:297
+msgid "Hot"
+msgstr "Varmt"
+
+#: extension.js:299
+msgid "Isolated thunderstorms"
+msgstr "Lokal åska"
+
+#: extension.js:302
+msgid "Scattered thunderstorms"
+msgstr "Utspridd åska"
+
+#: extension.js:304
+msgid "Scattered showers"
+msgstr "Utspridda regnskurar"
+
+#: extension.js:306 extension.js:310
+msgid "Heavy snow"
+msgstr "Häftigt snöfall"
+
+#: extension.js:308
+msgid "Scattered snow showers"
+msgstr "Utspridda snöbyar"
+
+#: extension.js:314
+msgid "Thundershowers"
+msgstr "Åskbyar"
+
+#: extension.js:316
+msgid "Snow showers"
+msgstr "Snöbyar"
+
+#: extension.js:318
+msgid "Isolated thundershowers"
+msgstr "Lokala åskbyar"
+
+#: extension.js:321
+msgid "Not available"
+msgstr "Inte tillgänglig"
+
+#: extension.js:336
+msgid "Monday"
+msgstr "Måndag"
+
+#: extension.js:336
+msgid "Tuesday"
+msgstr "Tisdag"
+
+#: extension.js:336
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: extension.js:336
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: extension.js:336
+msgid "Friday"
+msgstr "Fredag"
+
+#: extension.js:336
+msgid "Saturday"
+msgstr "Lördag"
+
+#: extension.js:336
+msgid "Sunday"
+msgstr "Söndag"
+
+#: extension.js:392
+msgid "Today"
+msgstr "Idag"
+
+#: extension.js:392
+msgid "Tomorrow"
+msgstr "Imorgon"
+
+#: extension.js:429
+msgid "Loading current weather ..."
+msgstr "Laddar nuvarande väder..."
+
+#: extension.js:430
+msgid "Loading future weather ..."
+msgstr "Laddar kommande väder..."
+
+#: extension.js:446
+msgid "Loading ..."
+msgstr "Laddar..."
+
+#: extension.js:449
+msgid "Please wait"
+msgstr "Vänligen vänta"
+
+#: extension.js:467
+msgid "Temperature:"
+msgstr "Temperatur:"
+
+#: extension.js:469
+msgid "Humidity:"
+msgstr "Fuktighet:"
+
+#: extension.js:471
+msgid "Pressure:"
+msgstr "Lufttryck:"
+
+#: extension.js:473
+msgid "Wind:"
+msgstr "Vind:"
