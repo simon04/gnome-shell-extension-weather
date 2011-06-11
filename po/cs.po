@@ -67,7 +67,7 @@ msgstr "Namrzající déšť"
 #: extension.js:250
 #: extension.js:252
 msgid "Showers"
-msgstr "Sněžení"
+msgstr "Přeháňky"
 
 #: extension.js:254
 msgid "Snow flurries"
@@ -177,7 +177,7 @@ msgstr "Občasné sněžení"
 
 #: extension.js:314
 msgid "Thundershowers"
-msgstr "Sněžné bouře"
+msgstr "Bouřky s přeháňkami"
 
 #: extension.js:316
 msgid "Snow showers"
@@ -185,7 +185,7 @@ msgstr "Sněhové přeháňky"
 
 #: extension.js:318
 msgid "Isolated thundershowers"
-msgstr "Osamocené sněhové bouřky"
+msgstr "Osamocené bouřky s deštěm"
 
 #: extension.js:321
 msgid "Not available"
