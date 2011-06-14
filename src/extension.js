@@ -62,7 +62,8 @@ const WeatherUnits = {
 }
 const WeatherPosition = {
     CENTER: 0,
-    RIGHT: 1
+    RIGHT: 1,
+    LEFT: 2
 }
 
 function WeatherMenuButton() {
@@ -137,13 +138,18 @@ WeatherMenuButton.prototype = {
         if (this._text_in_panel)
             topBox.add_actor(this._weatherInfo);
         this.actor.set_child(topBox);
-        
+
+        let children = null;
         switch (this._position_in_panel) {
-            case WeatherPosition.CENTER: 
+            case WeatherPosition.LEFT:
+                children = Main.panel._leftBox.get_children();
+                Main.panel._leftBox.insert_actor (this.actor, children.length-1);
+                break;
+            case WeatherPosition.CENTER:
                 Main.panel._centerBox.add(this.actor, { y_fill: true });
                 break;
             case WeatherPosition.RIGHT:
-                let children = Main.panel._rightBox.get_children();
+                children = Main.panel._rightBox.get_children();
                 Main.panel._rightBox.insert_actor(this.actor, children.length-1);
                 break;
         }

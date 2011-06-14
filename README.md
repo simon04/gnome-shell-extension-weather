@@ -10,7 +10,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ![Screenshot](gnome-shell-extension-weather/raw/master/data/screenshot.png)
 
-And with French translation:  
+And with French translation:
 
 ![Screenshot](gnome-shell-extension-weather/raw/master/data/screenshot2.png)
 
@@ -23,7 +23,7 @@ For installation, run the following commands:
     ./autogen.sh --prefix=/usr
     make
     sudo make install
-  
+
 That's it!
 
 ----
@@ -81,9 +81,10 @@ Configures whether to show the comment (aka. weather condition text, e.g. "Windy
 
 #### Position in Panel (optional, center by default)
 
-The position of this GNOME Shell extension in the panel can be configured to either 'center' or 'right' (requires restart of GNOME Shell).
+The position of this GNOME Shell extension in the panel can be configured to either 'left', 'center' or 'right' (requires restart of GNOME Shell).
 
     gsettings set org.gnome.shell.extensions.weather position-in-panel center
+    gsettings set org.gnome.shell.extensions.weather position-in-panel left
     gsettings set org.gnome.shell.extensions.weather position-in-panel right
 
 #### Restart GNOME Shell

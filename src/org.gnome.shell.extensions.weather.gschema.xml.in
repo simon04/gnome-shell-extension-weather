@@ -6,6 +6,7 @@
   <enum id="org.gnome.shell.extensions.weather.position">
     <value nick="center" value="0" />
     <value nick="right" value="1" />
+    <value nick="left" value="2"  />
   </enum>
   <schema id="org.gnome.shell.extensions.weather" path="/org/gnome/shell/extensions/weather/">
     <key name="unit" enum="org.gnome.shell.extensions.weather.unit">
@@ -46,7 +47,7 @@
     <key name="position-in-panel" enum="org.gnome.shell.extensions.weather.position">
       <default>'center'</default>
       <_summary>Position in panel</_summary>
-      <_description>Set the position of this GNOME Shell extension in the panel to either 'center' or 'right' (requires restart).</_description>
+      <_description>Set the position of this GNOME Shell extension in the panel to either 'center', 'left' or 'right' (requires restart).</_description>
     </key>
   </schema>
 </schemalist>
