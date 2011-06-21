@@ -32,11 +32,12 @@ That's it!
 
 gnome-shell-extension-weather uses gsettings to save your configuration. You can use `dconf-editor` or `gsettings` from the command line to modify some parameters.
 
-#### Location (cf. [WOEID](http://developer.yahoo.com/geo/geoplanet/guide/concepts.html))
+#### Location
 
-You can specify your location using the following command:
+See [WOEID Info](http://sigizmund.info/woeidinfo/) to determine your WOEID.  You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
 
     gsettings set org.gnome.shell.extensions.weather woeid your_woeid
+    gsettings set org.gnome.shell.extensions.weather woeid "'your_woeid'"
 
 #### Temperature Units (optional, celsius by default)
 
