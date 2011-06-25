@@ -1,0 +1,265 @@
+# Romanian translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Marian Vasile <marianvasile@upcmail.ro>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: simon04-gnome-shell-extension-weather\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-27 01:22+0200\n"
+"PO-Revision-Date: 2011-06-25 19:05+0200\n"
+"Last-Translator: Marian Vasile <marianvasile@upcmail.ro>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 == 0) && (n != 0))) ? 2: 1));\\n\"\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: extension.js:73
+msgid "..."
+msgstr "..."
+
+#: extension.js:228
+msgid "Tornado"
+msgstr "Tornadă"
+
+#: extension.js:230
+msgid "Tropical storm"
+msgstr "Furtună tropicală"
+
+#: extension.js:232
+msgid "Hurricane"
+msgstr "Uragan"
+
+#: extension.js:234
+msgid "Severe thunderstorms"
+msgstr "Furtuni severe"
+
+#: extension.js:236
+msgid "Thunderstorms"
+msgstr "Furtuni"
+
+#: extension.js:238
+msgid "Mixed rain and snow"
+msgstr "Lapoviță"
+
+#: extension.js:240
+msgid "Mixed rain and sleet"
+msgstr "Măzăriche"
+
+#: extension.js:242
+msgid "Mixed snow and sleet"
+msgstr "Măzăriche"
+
+#: extension.js:244
+msgid "Freezing drizzle"
+msgstr "Burniță rece"
+
+#: extension.js:246
+msgid "Drizzle"
+msgstr "Burniță"
+
+#: extension.js:248
+msgid "Freezing rain"
+msgstr "Ploaie rece"
+
+#: extension.js:250
+#: extension.js:252
+msgid "Showers"
+msgstr "Averse"
+
+#: extension.js:254
+msgid "Snow flurries"
+msgstr "Ninsoare ușoară"
+
+#: extension.js:256
+msgid "Light snow showers"
+msgstr "Ninsoare ușoară în averse"
+
+#: extension.js:258
+msgid "Blowing snow"
+msgstr "Ninsoare viscolită"
+
+#: extension.js:260
+msgid "Snow"
+msgstr "Ninsoare"
+
+#: extension.js:262
+msgid "Hail"
+msgstr "Grindină"
+
+#: extension.js:264
+msgid "Sleet"
+msgstr "Lapoviță"
+
+#: extension.js:266
+msgid "Dust"
+msgstr "Praf"
+
+#: extension.js:268
+msgid "Foggy"
+msgstr "Ceață"
+
+#: extension.js:270
+msgid "Haze"
+msgstr "Ceață ușoară"
+
+#: extension.js:272
+msgid "Smoky"
+msgstr "Întunecat"
+
+#: extension.js:274
+msgid "Blustery"
+msgstr "Zgomotos"
+
+#: extension.js:276
+msgid "Windy"
+msgstr "Rafale de vânt"
+
+#: extension.js:278
+msgid "Cold"
+msgstr "Rece"
+
+#: extension.js:280
+msgid "Cloudy"
+msgstr "Înnorat"
+
+#: extension.js:283
+msgid "Mostly cloudy"
+msgstr "Majoritar înnorat "
+
+#: extension.js:286
+#: extension.js:312
+msgid "Partly cloudy"
+msgstr "Parțial înnorat"
+
+#: extension.js:288
+msgid "Clear"
+msgstr "Senin"
+
+#: extension.js:290
+msgid "Sunny"
+msgstr "Însorit"
+
+#: extension.js:293
+msgid "Fair"
+msgstr "Vreme bună"
+
+#: extension.js:295
+msgid "Mixed rain and hail"
+msgstr "Ploaie cu grindină"
+
+#: extension.js:297
+msgid "Hot"
+msgstr "Foarte cald"
+
+#: extension.js:299
+msgid "Isolated thunderstorms"
+msgstr "Furtuni izolate"
+
+#: extension.js:302
+msgid "Scattered thunderstorms"
+msgstr "Furtuni răzlețe"
+
+#: extension.js:304
+msgid "Scattered showers"
+msgstr "Averse răzlețe"
+
+#: extension.js:306
+#: extension.js:310
+msgid "Heavy snow"
+msgstr "Ninsoare abundentă"
+
+#: extension.js:308
+msgid "Scattered snow showers"
+msgstr "Ninsori răzlețe"
+
+#: extension.js:314
+msgid "Thundershowers"
+msgstr "Ploi abundente în averse"
+
+#: extension.js:316
+msgid "Snow showers"
+msgstr "Ninsori în averse"
+
+#: extension.js:318
+msgid "Isolated thundershowers"
+msgstr "Ploi izolate"
+
+#: extension.js:321
+msgid "Not available"
+msgstr "Indisponibil"
+
+#: extension.js:336
+msgid "Monday"
+msgstr "Luni"
+
+#: extension.js:336
+msgid "Tuesday"
+msgstr "Marți"
+
+#: extension.js:336
+msgid "Wednesday"
+msgstr "Miercuri"
+
+#: extension.js:336
+msgid "Thursday"
+msgstr "Joi"
+
+#: extension.js:336
+msgid "Friday"
+msgstr "Vineri"
+
+#: extension.js:336
+msgid "Saturday"
+msgstr "Sâmbătă"
+
+#: extension.js:336
+msgid "Sunday"
+msgstr "Duminică"
+
+#: extension.js:392
+msgid "Today"
+msgstr "Azi"
+
+#: extension.js:392
+msgid "Tomorrow"
+msgstr "Mâine"
+
+#: extension.js:429
+msgid "Loading current weather ..."
+msgstr "Se încarcă vremea curentă..."
+
+#: extension.js:430
+msgid "Loading future weather ..."
+msgstr "Se încarcă prognoza..."
+
+#: extension.js:446
+msgid "Loading ..."
+msgstr "Se încarcă"
+
+#: extension.js:449
+msgid "Please wait"
+msgstr "Așteptați"
+
+#: extension.js:467
+msgid "Temperature:"
+msgstr "Temperatură:"
+
+#: extension.js:469
+msgid "Humidity:"
+msgstr "Umiditate:"
+
+#: extension.js:471
+msgid "Pressure:"
+msgstr "Presiune:"
+
+#: extension.js:473
+msgid "Wind:"
+msgstr "Vânt:"
+
