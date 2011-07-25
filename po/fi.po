@@ -1,0 +1,260 @@
+# Finnish translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Simon Claessens <gagalago@gmail.com>, 2011.
+# ecyrbe <ecyrbe@gmail.com>, 2011.
+# Jesse Jaara <jesse.jaara@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-27 01:22+0200\n"
+"PO-Revision-Date: 2011-07-25 18:39+0300\n"
+"Last-Translator: Jesse Jaara <jesse.jaara@gmail.com>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Language-Team: suomi <>\n"
+
+#: extension.js:73
+msgid "..."
+msgstr "..."
+
+#: extension.js:228
+msgid "Tornado"
+msgstr "Tornado"
+
+#: extension.js:230
+msgid "Tropical storm"
+msgstr "Trooppinen myrsky"
+
+#: extension.js:232
+msgid "Hurricane"
+msgstr "Hurrikaani"
+
+#: extension.js:234
+msgid "Severe thunderstorms"
+msgstr "Voimakkaita ukkosmyrskyjä"
+
+#: extension.js:236
+msgid "Thunderstorms"
+msgstr "Ukkosmyrskyjä"
+
+#: extension.js:238
+msgid "Mixed rain and snow"
+msgstr "Räntäsade"
+
+#: extension.js:240
+msgid "Mixed rain and sleet"
+msgstr "Räntäsadetta ja loskaa"
+
+#: extension.js:242
+msgid "Mixed snow and sleet"
+msgstr "Lumisadetta ja loskaa"
+
+#: extension.js:244
+msgid "Freezing drizzle"
+msgstr "Kylmä tihkusade"
+
+#: extension.js:246
+msgid "Drizzle"
+msgstr "Tihkusadetta"
+
+#: extension.js:248
+msgid "Freezing rain"
+msgstr "Jäätävää sadetta"
+
+#: extension.js:250 extension.js:252
+msgid "Showers"
+msgstr "Sadekuuroja"
+
+#: extension.js:254
+msgid "Snow flurries"
+msgstr "Lumikuuroja"
+
+#: extension.js:256
+msgid "Light snow showers"
+msgstr "Kevyttä lumisadetta"
+
+#: extension.js:258
+msgid "Blowing snow"
+msgstr "Lumipyry"
+
+#: extension.js:260
+msgid "Snow"
+msgstr "Lumisadetta"
+
+#: extension.js:262
+msgid "Hail"
+msgstr "Viima"
+
+#: extension.js:264
+msgid "Sleet"
+msgstr "Loskaa"
+
+#: extension.js:266
+msgid "Dust"
+msgstr "Pölyä"
+
+#: extension.js:268
+msgid "Foggy"
+msgstr "Sumua"
+
+#: extension.js:270
+msgid "Haze"
+msgstr "Usvaa"
+
+#: extension.js:272
+msgid "Smoky"
+msgstr "Savuinen sää"
+
+#: extension.js:274
+msgid "Blustery"
+msgstr "Myrskyisä"
+
+#: extension.js:276
+msgid "Windy"
+msgstr "Tuulinen"
+
+#: extension.js:278
+msgid "Cold"
+msgstr "Kylmä"
+
+#: extension.js:280
+msgid "Cloudy"
+msgstr "Pilvinen"
+
+#: extension.js:283
+msgid "Mostly cloudy"
+msgstr "Pilvipeite rakoilee"
+
+#: extension.js:286 extension.js:312
+msgid "Partly cloudy"
+msgstr "Puolipilvistä"
+
+#: extension.js:288
+msgid "Clear"
+msgstr "Selkeää"
+
+#: extension.js:290
+msgid "Sunny"
+msgstr "Aurinko paistaa"
+
+#: extension.js:293
+msgid "Fair"
+msgstr "Lämmintä"
+
+#: extension.js:295
+msgid "Mixed rain and hail"
+msgstr "Puhreja ja viimaa"
+
+#: extension.js:297
+msgid "Hot"
+msgstr "Kuuma"
+
+#: extension.js:299
+msgid "Isolated thunderstorms"
+msgstr "Yksittäisiä ukkosmyrskyjä"
+
+#: extension.js:302
+msgid "Scattered thunderstorms"
+msgstr "Hajanaisia ukkosmyrskyjä"
+
+#: extension.js:304
+msgid "Scattered showers"
+msgstr "Hajanaisia sateita"
+
+#: extension.js:306 extension.js:310
+msgid "Heavy snow"
+msgstr "Märkää lunta"
+
+#: extension.js:308
+msgid "Scattered snow showers"
+msgstr "Hajanaisia lumisateita"
+
+#: extension.js:314
+msgid "Thundershowers"
+msgstr "Ukkosta ja sadetta"
+
+#: extension.js:316
+msgid "Snow showers"
+msgstr "Lumikuuroja"
+
+#: extension.js:318
+msgid "Isolated thundershowers"
+msgstr "Yksittäisiä ukkosmyrskyjä ja sadetta"
+
+#: extension.js:321
+msgid "Not available"
+msgstr "Ei saatavilla"
+
+#: extension.js:336
+msgid "Monday"
+msgstr "Maanantai"
+
+#: extension.js:336
+msgid "Tuesday"
+msgstr "Tiistai"
+
+#: extension.js:336
+msgid "Wednesday"
+msgstr "Keskiviikko"
+
+#: extension.js:336
+msgid "Thursday"
+msgstr "Torstai"
+
+#: extension.js:336
+msgid "Friday"
+msgstr "Perjantai"
+
+#: extension.js:336
+msgid "Saturday"
+msgstr "Launtai"
+
+#: extension.js:336
+msgid "Sunday"
+msgstr "Sunnuntai"
+
+#: extension.js:392
+msgid "Today"
+msgstr "Tänään"
+
+#: extension.js:392
+msgid "Tomorrow"
+msgstr "Huomenna"
+
+#: extension.js:429
+msgid "Loading current weather ..."
+msgstr "Ladataan säätietoja"
+
+#: extension.js:430
+msgid "Loading future weather ..."
+msgstr "Ladataan huomisen säätietoja"
+
+#: extension.js:446
+msgid "Loading ..."
+msgstr "Ladataan..."
+
+#: extension.js:449
+msgid "Please wait"
+msgstr "Odota"
+
+#: extension.js:467
+msgid "Temperature:"
+msgstr "Lämpötila"
+
+#: extension.js:469
+msgid "Humidity:"
+msgstr "Kosteusprosentti:"
+
+#: extension.js:471
+msgid "Pressure:"
+msgstr "Ilmanpaine:"
+
+#: extension.js:473
+msgid "Wind:"
+msgstr "Tuulen nopeus:"
