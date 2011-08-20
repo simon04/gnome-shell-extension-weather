@@ -118,9 +118,8 @@ WeatherMenuButton.prototype = {
         // Panel icon
         this._weatherIcon = new St.Icon({
             icon_type: this._icon_type,
-            icon_size: Main.panel.actor.get_theme_node().get_height() - 2,
             icon_name: 'view-refresh-symbolic',
-            style_class: 'weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
+            style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
         });
 
         // Label
