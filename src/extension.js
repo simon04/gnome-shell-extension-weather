@@ -704,8 +704,18 @@ WeatherMenuButton.prototype = {
     }
 };
 
-function main() {
-    this._weatherMenu = new WeatherMenuButton();
+let weatherMenu;
+
+function init() {
+}
+
+function enable() {
+    weatherMenu = new WeatherMenuButton();
+    Main.panel.addToStatusArea('weatherMenu', weatherMenu);
+}
+
+function disable() {
+    weatherMenu.destroy();
 }
 
 // vim:set ts=4 sw=4 et:
