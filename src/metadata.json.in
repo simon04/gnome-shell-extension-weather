@@ -2,7 +2,7 @@
 "uuid": "@uuid@",
 "name": "Weather indicator",
 "description": "Adds weather information menu",
-"shell-version": [ "@shell_current@" ],
+"shell-version": [ "3.1.90", "3.1.91" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }
