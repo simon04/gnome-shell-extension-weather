@@ -136,7 +136,7 @@ WeatherMenuButton.prototype = {
         topBox.add_actor(this._weatherIcon);
         if (this._text_in_panel)
             topBox.add_actor(this._weatherInfo);
-        this.actor.set_child(topBox);
+        this.actor.add_actor(topBox);
 
         let children = null;
         switch (this._position_in_panel) {
