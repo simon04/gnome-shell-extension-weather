@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-05-27 01:22+0200\n"
 "PO-Revision-Date: 2011-06-07 18:21+0100\n"
-"Last-Translator: Miguel Aguilar Molina <zodiac_es@yahoo.es>\n"
+"Last-Translator: Fitoschido <fitoschido@gmail.com>\n"
 "Language-Team: Español; Castellano <zodiac_es@yahoo.es>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Huracán"
 
 #: extension.js:234
 msgid "Severe thunderstorms"
-msgstr "Severas tormentas"
+msgstr "Tormentas severas"
 
 #: extension.js:236
 msgid "Thunderstorms"
@@ -226,23 +226,23 @@ msgstr "Hoy"
 
 #: extension.js:392
 msgid "Tomorrow"
-msgstr "Manaña"
+msgstr "Mañana"
 
 #: extension.js:429
 msgid "Loading current weather ..."
-msgstr "Cargando meteorología actual ..."
+msgstr "Cargando la meteorología actual..."
 
 #: extension.js:430
 msgid "Loading future weather ..."
-msgstr "Cargando meteorología futura ..."
+msgstr "Cargando la meteorología futura..."
 
 #: extension.js:446
 msgid "Loading ..."
-msgstr "Cargando ..."
+msgstr "Cargando..."
 
 #: extension.js:449
 msgid "Please wait"
-msgstr "Espere por favor"
+msgstr "Espere un momento"
 
 #: extension.js:467
 msgid "Temperature:"
