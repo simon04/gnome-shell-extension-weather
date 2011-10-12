@@ -82,8 +82,8 @@ def set_int(spin, schema, name):
     schema.set_int(name, spin.get_value_as_int())
     return False
 
-def set_text(tb, schema, name):
-    schema.set_text(name, tb.get_text())
+def set_string(tb, schema, name):
+    schema.set_string(name, tb.get_text())
 
 def set_enum(combo, schema, name):
     schema.set_enum(name, combo.get_active())
@@ -115,13 +115,13 @@ class SettingFrame:
                               self.schema.get_string(key))
                 self.items.append(item)
                 self.hbox1.add(item.actor)
-                item.entry.connect('insert-at-cursor', set_text, self.schema, key)
+                item.entry.connect('activate', set_string, self.schema, key)
             elif key == 'woeid':
                 item = TextSelect('Enter WOEID',
                               self.schema.get_string(key))
                 self.items.append(item)
                 self.hbox1.add(item.actor)
-                item.entry.connect('insert-at-cursor', set_text, self.schema, key)
+                item.entry.connect('activate', set_string, self.schema, key)
 
             elif key == 'position-in-panel':
                 item = Select('Position in Panel',
