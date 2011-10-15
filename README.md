@@ -18,11 +18,11 @@ And with French translation:
 
 ### Installation
 
-For installation, run the following commands:
-
-    ./autogen.sh --prefix=/usr
-    make
-    sudo make install
+* [Arch Linux](https://aur.archlinux.org/packages.php?ID=49409)
+* [Ubuntu](https://launchpad.net/~webupd8team/+archive/gnome3/+packages)
+* Generic: For a generic installation, run the following commands:
+  `./autogen.sh --prefix=/usr && make && sudo make install`
+* *Please report further links!*
 
 That's it!
 
