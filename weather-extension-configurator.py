@@ -101,10 +101,10 @@ class WeatherConfigurator:
         self.add_text('woeid', 'WOEID', 'The Where On Earth ID determinees the location/city')
         self.add_radio('unit', 'Temperature Unit', ['celsius', 'fahrenheit'])
         self.add_text('city', 'Label', "Sometimes your WOEID location isn't quite right (it's the next major city around)")
-        self.add_radio('position-in-panel', 'Position in Panel', ['center', 'left', 'right'], "The position of this GNOME Shell extension in the panel (requires restart of GNOME Shell).")
+        self.add_radio('position-in-panel', 'Position in Panel*', ['center', 'left', 'right'], "The position of this GNOME Shell extension in the panel (requires restart of GNOME Shell).")
         self.add_check('translate-condition', 'Translate Weather Conditions', "If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string 'PM Thunderstorms' cannot be expressed in terms of weather codes.")
         self.add_check('use-symbolic-icons', 'Symbolic Icons', "Display symbolic icons instead of full-colored icons")
-        self.add_check('show-text-in-panel', 'Show Text in Panel', "Whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart of GNOME Shell).")
+        self.add_check('show-text-in-panel', 'Show Text in Panel*', "Whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart of GNOME Shell).")
         self.add_check('show-comment-in-panel', 'Show Comment in Panel', "Whether to show the comment (aka. weather condition text, e.g. 'Windy', 'Clear') in the panel.")
 
         table = Gtk.Table(rows=len(self.elements)/2, columns=2, homogeneous=False)
