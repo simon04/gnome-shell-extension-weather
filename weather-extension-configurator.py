@@ -5,7 +5,7 @@
 
 # weather-extension-configurator: 
 # configures gnome-shell-extension-weather by simon04
-# Copyright (C) 2011 Igor Ingultsov aka inv, aka invy
+# Copyright (C) 2011 Simon Legner
 #
 # based on a configurator for system-monitor-extension by Florian Mounier aka paradoxxxzero
 
@@ -22,194 +22,105 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Author: Igor Ingultsov aka inv, aka invy
+# Author: Simon Legner aka simon04
+# original version of: Igor Ingultsov aka inv, aka invy
 
 """
 gnome-shell-weather-extension-config
 Tool for editing gnome-shell-weather-extension-config preference as
 an alternative of dconf-editor
-
 """
 
 from gi.repository import Gtk, Gio, Gdk
 
-
-def up_first(string):
-    return string[0].upper() + string[1:]
-
-
-class IntSelect:
-    def __init__(self, name, value, minv, maxv, incre, page):
-        self.label = Gtk.Label(name + ":")
-        self.spin = Gtk.SpinButton()
-        self.actor = Gtk.HBox()
-        self.actor.add(self.label)
-        self.actor.add(self.spin)
-        self.spin.set_range(minv, maxv)
-        self.spin.set_increments(incre, page)
-        self.spin.set_numeric(True)
-        self.spin.set_value(value)
-
-
-class TextSelect:
-    def __init__(self, name, value):
-        self.label = Gtk.Label(name + ":")
-        self.entry = Gtk.Entry()
-        self.actor = Gtk.HBox()
-        self.actor.add(self.label)
-        self.actor.add(self.entry)
-        self.entry.set_text(value)
-
-
-
-class Select:
-    def __init__(self, name, value, items):
-        self.label = Gtk.Label(name + ":")
-        self.selector = Gtk.ComboBoxText()
-        self.actor = Gtk.HBox()
-        for item in items:
-            self.selector.append_text(item)
-        self.selector.set_active(value)
-        self.actor.add(self.label)
-        self.actor.add(self.selector)
-
-
-def set_boolean(check, schema, name):
-    schema.set_boolean(name, check.get_active())
-
-
-def set_int(spin, schema, name):
-    schema.set_int(name, spin.get_value_as_int())
-    return False
-
-def set_text(tb, schema, name):
-    schema.set_text(name, tb.get_text())
-
-def set_enum(combo, schema, name):
-    schema.set_enum(name, combo.get_active())
-
-
-def set_color(cb, schema, name):
-    schema.set_string(name, color_to_hex(cb.get_rgba()))
-
-
-class SettingFrame:
-    def __init__(self, name, schema):
-        self.schema = schema
-        self.label = Gtk.Label(name)
-        self.frame = Gtk.Frame()
-        self.frame.set_border_width(10)
-        self.vbox = Gtk.VBox(spacing=20)
-        self.hbox0 = Gtk.HBox(spacing=20)
-        self.hbox1 = Gtk.HBox(spacing=20)
-        self.hbox2 = Gtk.HBox(spacing=20)
-        self.frame.add(self.vbox)
-        self.vbox.add(self.hbox0)
-        self.vbox.add(self.hbox1)
-        self.vbox.add(self.hbox2)
-        self.items = []
-
-    def add(self, key):
-            if key == 'city':
-                item = TextSelect('City',
-                              self.schema.get_string(key))
-                self.items.append(item)
-                self.hbox1.add(item.actor)
-                item.entry.connect('insert-at-cursor', set_text, self.schema, key)
-            elif key == 'woeid':
-                item = TextSelect('Enter WOEID',
-                              self.schema.get_string(key))
-                self.items.append(item)
-                self.hbox1.add(item.actor)
-                item.entry.connect('insert-at-cursor', set_text, self.schema, key)
-
-            elif key == 'position-in-panel':
-                item = Select('Position in Panel',
-                          self.schema.get_enum(key),
-                          ('Center', 'Right'))
-                self.items.append(item)
-                self.hbox0.add(item.actor)
-                item.selector.connect('changed', set_enum, self.schema, key)
-            elif key == 'unit':
-                item = Select('Units',
-                          self.schema.get_enum(key),
-                          ('c', 'f'))
-                self.items.append(item)
-                self.hbox0.add(item.actor)
-                item.selector.connect('changed', set_enum, self.schema, key)
-
-            elif key == 'show-comment-in-panel':
-                item = Gtk.CheckButton(label='Show comment in Panel')
-                item.set_active(self.schema.get_boolean(key))
-                self.items.append(item)
-                self.hbox1.add(item)
-                item.connect('toggled', set_boolean, self.schema, key)
-            elif key == 'show-text-in-panel':
-                item = Gtk.CheckButton(label='Show text in Panel')
-                item.set_active(self.schema.get_boolean(key))
-                self.items.append(item)
-                self.hbox1.add(item)
-                item.connect('toggled', set_boolean, self.schema, key)
-            elif key == 'translate-condition':
-                item = Gtk.CheckButton(label='Translate Conditions')
-                item.set_active(self.schema.get_boolean(key))
-                self.items.append(item)
-                self.hbox1.add(item)
-                item.connect('toggled', set_boolean, self.schema, key)
-            elif key == 'use-symbolic-icons':
-                item = Gtk.CheckButton(label='Use symbolic icons')
-                item.set_active(self.schema.get_boolean(key))
-                self.items.append(item)
-                self.hbox1.add(item)
-                item.connect('toggled', set_boolean, self.schema, key)
-
-
-
-class App:
-    opt = {}
-    setting_items = ('location', 'appearences')
+class WeatherConfigurator:
 
     def keypress(self, widget, event):
         if event.keyval == 65307: #Gtk.keysyms.Escape:
             Gtk.main_quit()
 
+    def add_tooltip(self, item, tt):
+        def tooltip(item, x, y, key_mode, tooltip):
+            tooltip.set_text(tt)
+            return True
+        if tt:
+            item.set_has_tooltip(True)
+            item.connect('query-tooltip', tooltip)
+
+    def add_label(self, label, tooltip):
+        label = Gtk.Label(label + ":")
+        label.set_alignment(1, 0.5)
+        self.add_tooltip(label, tooltip)
+        self.elements.append(label)
+
+    def add_text(self, key, label, tooltip=None):
+        def set(tb):
+            self.schema.set_string(key, tb.get_text())
+        entry = Gtk.Entry()
+        entry.set_text(self.schema.get_string(key))
+        entry.connect('activate', set)
+        self.add_tooltip(entry, tooltip)
+        self.add_label(label, tooltip)
+        self.elements.append(entry)
+
+    def add_radio(self, key, label, items, tooltip=None):
+        def set(rb):
+            if rb.get_active():
+                self.schema.set_enum(key, items.index(rb.get_label()))
+        vbox = Gtk.VBox()
+        buttonFirst = None
+        active = self.schema.get_enum(key)
+        for (idx,item) in enumerate(items):
+            button = Gtk.RadioButton(group=buttonFirst, label=item)
+            if not(buttonFirst): buttonFirst = button
+            button.set_active(active == idx)
+            button.connect('toggled', set)
+            self.add_tooltip(button, tooltip)
+            vbox.add(button)
+        self.add_label(label, tooltip)
+        self.elements.append(vbox)
+
+    def add_check(self, key, label, tooltip=None):
+        button = Gtk.CheckButton(None)
+        active = self.schema.get_boolean(key)
+        button.set_active(active)
+        self.add_tooltip(button, tooltip)
+        self.add_label(label, tooltip)
+        self.elements.append(button)
+
     def __init__(self):
         self.schema = Gio.Settings('org.gnome.shell.extensions.weather')
         keys = self.schema.keys()
-        self.window = Gtk.Window(title='Weather Extension Configurator')
+
+        self.window = Gtk.Window(title='Gnome Shell: Weather Configurator')
         self.window.connect('destroy', Gtk.main_quit)
         self.window.connect('key-press-event', self.keypress)
-        self.window.set_border_width(10)
-        self.items = []
-        self.settings = {}
-        for setting in self.setting_items:
-            self.settings[setting] = SettingFrame(
-                up_first(setting), self.schema)
 
-        self.main_vbox = Gtk.VBox(spacing=10)
-        self.main_vbox.set_border_width(10)
-        self.hbox1 = Gtk.HBox(spacing=20)
-        self.hbox1.set_border_width(10)
-        self.main_vbox.add(self.hbox1)
-        self.window.add(self.main_vbox)
+        self.elements = []
 
-        for key in keys:
-                sections = key.split('-')
-                if sections[0] == 'city' or sections[0] == 'woeid':
-                    self.settings['location'].add(key)
-                else:
-                    self.settings['appearences'].add(key)
+        self.add_text('woeid', 'WOEID', 'The Where On Earth ID determinees the location/city')
+        self.add_radio('unit', 'Temperature Unit', ['celsius', 'fahrenheit'])
+        self.add_text('city', 'Label', "Sometimes your WOEID location isn't quite right (it's the next major city around)")
+        self.add_radio('position-in-panel', 'Position in Panel', ['center', 'left', 'right'], "The position of this GNOME Shell extension in the panel (requires restart of GNOME Shell).")
+        self.add_check('translate-condition', 'Translate Weather Conditions', "If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string 'PM Thunderstorms' cannot be expressed in terms of weather codes.")
+        self.add_check('use-symbolic-icons', 'Symbolic Icons', "Display symbolic icons instead of full-colored icons")
+        self.add_check('show-text-in-panel', 'Show Text in Panel', "Whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart of GNOME Shell).")
+        self.add_check('show-comment-in-panel', 'Show Comment in Panel', "Whether to show the comment (aka. weather condition text, e.g. 'Windy', 'Clear') in the panel.")
 
-        self.notebook = Gtk.Notebook()
-        for setting in self.setting_items:
-            self.notebook.append_page(
-                self.settings[setting].frame, self.settings[setting].label)
-        self.main_vbox.add(self.notebook)
+        table = Gtk.Table(rows=len(self.elements)/2, columns=2, homogeneous=False)
+        for (idx,el) in enumerate(self.elements):
+            row = idx / 2
+            col = idx % 2
+            table.attach(el, col, col+1, row, row+1)
+            table.set_row_spacing(row, 20)
+            table.set_col_spacing(col, 10)
+        self.window.add(table)
+
+        self.window.set_border_width(20)
         self.window.show_all()
 
-
 def main():
-    App()
+    WeatherConfigurator()
     Gtk.main()
 
 if __name__ == '__main__':
