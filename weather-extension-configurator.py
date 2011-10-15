@@ -169,11 +169,16 @@ class App:
     opt = {}
     setting_items = ('location', 'appearences')
 
+    def keypress(self, widget, event):
+        if event.keyval == 65307: #Gtk.keysyms.Escape:
+            Gtk.main_quit()
+
     def __init__(self):
         self.schema = Gio.Settings('org.gnome.shell.extensions.weather')
         keys = self.schema.keys()
         self.window = Gtk.Window(title='Weather Extension Configurator')
         self.window.connect('destroy', Gtk.main_quit)
+        self.window.connect('key-press-event', self.keypress)
         self.window.set_border_width(10)
         self.items = []
         self.settings = {}
