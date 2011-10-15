@@ -10,10 +10,6 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot.png)
 
-And with French translation:
-
-![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot2.png)
-
 ----
 
 ### Installation
