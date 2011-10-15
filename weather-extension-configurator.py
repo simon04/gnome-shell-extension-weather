@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 # -*- Mode: Python; py-indent-offset: 4 -*-
 # vim: tabstop=4 shiftwidth=4 expandtab
@@ -127,41 +127,41 @@ class SettingFrame:
                 item = Select('Position in Panel',
                           self.schema.get_enum(key),
                           ('Center', 'Right'))
-	        self.items.append(item)
-            	self.hbox0.add(item.actor)
- 	        item.selector.connect('changed', set_enum, self.schema, key)
+                self.items.append(item)
+                self.hbox0.add(item.actor)
+                item.selector.connect('changed', set_enum, self.schema, key)
             elif key == 'unit':
                 item = Select('Units',
                           self.schema.get_enum(key),
                           ('c', 'f'))
-	        self.items.append(item)
-            	self.hbox0.add(item.actor)
- 	        item.selector.connect('changed', set_enum, self.schema, key)
+                self.items.append(item)
+                self.hbox0.add(item.actor)
+                item.selector.connect('changed', set_enum, self.schema, key)
 
             elif key == 'show-comment-in-panel':
                 item = Gtk.CheckButton(label='Show comment in Panel')
-		item.set_active(self.schema.get_boolean(key))
-		self.items.append(item)
-		self.hbox1.add(item)
-		item.connect('toggled', set_boolean, self.schema, key)
+                item.set_active(self.schema.get_boolean(key))
+                self.items.append(item)
+                self.hbox1.add(item)
+                item.connect('toggled', set_boolean, self.schema, key)
             elif key == 'show-text-in-panel':
                 item = Gtk.CheckButton(label='Show text in Panel')
-		item.set_active(self.schema.get_boolean(key))
-		self.items.append(item)
-		self.hbox1.add(item)
-		item.connect('toggled', set_boolean, self.schema, key)
+                item.set_active(self.schema.get_boolean(key))
+                self.items.append(item)
+                self.hbox1.add(item)
+                item.connect('toggled', set_boolean, self.schema, key)
             elif key == 'translate-condition':
                 item = Gtk.CheckButton(label='Translate Conditions')
-		item.set_active(self.schema.get_boolean(key))
-		self.items.append(item)
-		self.hbox1.add(item)
-		item.connect('toggled', set_boolean, self.schema, key)
+                item.set_active(self.schema.get_boolean(key))
+                self.items.append(item)
+                self.hbox1.add(item)
+                item.connect('toggled', set_boolean, self.schema, key)
             elif key == 'use-symbolic-icons':
                 item = Gtk.CheckButton(label='Use symbolic icons')
-		item.set_active(self.schema.get_boolean(key))
-		self.items.append(item)
-		self.hbox1.add(item)
-		item.connect('toggled', set_boolean, self.schema, key)
+                item.set_active(self.schema.get_boolean(key))
+                self.items.append(item)
+                self.hbox1.add(item)
+                item.connect('toggled', set_boolean, self.schema, key)
 
 
 
