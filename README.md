@@ -26,6 +26,13 @@ And with French translation:
 
 That's it!
 
+### Versions
+
+Due to incompatible changes between GNOME 3.0 and 3.2, separate versions of this extension are provided:
+
+* For GNOME Shell 3.2, use the `master` branch.
+* For GNOME Shell 3.0, use the `gnome3.0` branch.
+
 ----
 
 ### Configuration
