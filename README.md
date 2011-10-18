@@ -15,6 +15,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Installation
 
 * [Arch Linux](https://aur.archlinux.org/packages.php?ID=49409)
+* [Frugalware](http://www.frugalware.org/packages/119339)
 * [Ubuntu](https://launchpad.net/~webupd8team/+archive/gnome3/+packages)
 * Generic: For a generic installation, run the following commands:
   `./autogen.sh --prefix=/usr && make && sudo make install`
