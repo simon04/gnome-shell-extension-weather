@@ -81,9 +81,12 @@ class WeatherConfigurator:
         self.elements.append(vbox)
 
     def add_check(self, key, label, tooltip=None):
+        def set(cb):
+            self.schema.set_boolean(key, cb.get_active())
         button = Gtk.CheckButton(None)
         active = self.schema.get_boolean(key)
         button.set_active(active)
+        button.connect('toggled', set)
         self.add_tooltip(button, tooltip)
         self.add_label(label, tooltip)
         self.elements.append(button)
