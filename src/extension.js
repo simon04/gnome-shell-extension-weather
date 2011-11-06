@@ -196,7 +196,7 @@ WeatherMenuButton.prototype = {
             style_class: 'panel-button'
         });
         prefButton.connect('clicked', function() {
-            Util.spawn(["weather-extension-configurator"]);
+            Util.spawn(["weather-extension-configurator.py"]);
         });
         let prefBox = new St.BoxLayout({
             style_class: 'weather-config',
