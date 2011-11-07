@@ -449,6 +449,10 @@ WeatherMenuButton.prototype = {
     load_json_async: function(url, fun) {
         let here = this;
         let session = new Soup.SessionAsync();
+
+        if (Soup.Session.prototype.add_feature != null)
+            Soup.Session.prototype.add_feature.call(session, new Soup.ProxyResolverDefault());
+
         let message = Soup.Message.new('GET', url);
         session.queue_message(message, function(session, message) {
             let jp = new Json.Parser();
