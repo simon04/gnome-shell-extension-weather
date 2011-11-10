@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Gnome Shell: Weather Configurator
-GenericName=Configurator for the Weather extension of Gnome Shell
-Exec=weather-extension-configurator.py
-Terminal=false
-Type=Application
-Icon=utilities-system-monitor
-Categories=GNOME;System;
