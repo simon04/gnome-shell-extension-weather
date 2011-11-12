@@ -173,9 +173,20 @@ WeatherMenuButton.prototype = {
 
         this.menu.addActor(mainBox);
 
-        /* TODO install script via Makefile
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
+        // TODO: start this item disabled and re-enable it after the url gets
+        // set; PopupMenuItem doesn't have a good way to do this in 3.0
+        this._detailsItem = new PopupMenu.PopupMenuItem(_("Details..."));
+        this._detailsItem.url = '';
+        this._detailsItem.connect('activate', Lang.bind(this, function() {
+            if (this._detailsItem.url.length > 0)
+                Gio.app_info_launch_default_for_uri(
+                        this._detailsItem.url,
+                        global.create_app_launch_context());
+        }));
+        this.menu.addMenuItem(this._detailsItem);
+        /* TODO install script via Makefile
         let item = new PopupMenu.PopupMenuItem(_("Preferences..."));
         item.connect('activate', function() {
             Util.spawn(["weather-extension-configurator"]);
@@ -506,8 +517,6 @@ WeatherMenuButton.prototype = {
             else
                 this._weatherInfo.text = (temperature + ' ' + this.unit_to_unicode());
 
-
-
             this._currentWeatherSummary.text = comment;
             this._currentWeatherLocation.text = location;
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
@@ -515,6 +524,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
             this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
 
+            this._detailsItem.url = weather.get_string_member('url');
         });
 
         // Refresh forecast
