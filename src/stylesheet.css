@@ -4,7 +4,7 @@
     background-gradient-start: rgba(255, 255, 255, 0.2);
     background-gradient-end: rgba(255, 255, 255, 0);
     border: 1px solid #808080;
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 .weather-current-location-link:selected,
