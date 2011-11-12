@@ -535,11 +535,23 @@ WeatherMenuButton.prototype = {
                 this._weatherInfo.text = (temperature + ' ' + this.unit_to_unicode());
 
             this._currentWeatherSummary.text = comment;
-            this._currentWeatherLocation.text = location;
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
             this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+            this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+
+            this._currentWeatherLocationLabel.text = location;
+            // make the location into a link, and make it look like a button
+            this._currentWeatherLocation.style_class = 'weather-current-location-link';
+            this._currentWeatherLocation.url = weather.get_string_member('url');
+            this._currentWeatherLocation.connect('clicked', Lang.bind(this, function() {
+                Gio.app_info_launch_default_for_uri(
+                        this._currentWeatherLocation.url,
+                        global.create_app_launch_context());
+                this.menu.close();
+            }));
+
 
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
@@ -608,7 +620,9 @@ WeatherMenuButton.prototype = {
             text: _('Loading ...'),
             style_class: 'weather-current-summary'
         });
-        this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
+        this._currentWeatherLocation = new St.Button({ reactive: true });
+        this._currentWeatherLocationLabel = new St.Label({ text: _('Please wait') });
+        this._currentWeatherLocation.set_child(this._currentWeatherLocationLabel);
 
         let bb = new St.BoxLayout({
             vertical: true,
