@@ -19,6 +19,8 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 * [Ubuntu](https://launchpad.net/~webupd8team/+archive/gnome3/+packages)
 * Generic: For a generic installation, run the following commands:
   `./autogen.sh --prefix=/usr && make && sudo make install`
+  * Make sure you have the libglib2.0-dev package (or equivalent for your distribution)
+    installed, or else you'll get an error about GLIB_GSETTINGS.
 * *Please report further links!*
 
 That's it!
