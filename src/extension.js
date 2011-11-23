@@ -92,7 +92,6 @@ WeatherMenuButton.prototype = {
         this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
         this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
         this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
-        global.log(this._refresh_interval);
 
         // Watch settings for changes
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
@@ -119,7 +118,6 @@ WeatherMenuButton.prototype = {
         }));
         this._settings.connect('changed::' + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
             this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
-            global.log(this._refresh_interval);
         }));
 
         // Panel icon
