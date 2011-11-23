@@ -54,6 +54,7 @@ const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
 const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
+const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
 
 // Keep enums in sync with GSettings schemas
 const WeatherUnits = {
@@ -90,6 +91,8 @@ WeatherMenuButton.prototype = {
         this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
         this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
         this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
+        this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
+        global.log(this._refresh_interval);
 
         // Watch settings for changes
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
@@ -113,6 +116,10 @@ WeatherMenuButton.prototype = {
             this._forecast[0].Icon.icon_type = this._icon_type;
             this._forecast[1].Icon.icon_type = this._icon_type;
             this.refreshWeather(false);
+        }));
+        this._settings.connect('changed::' + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
+            this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
+            global.log(this._refresh_interval);
         }));
 
         // Panel icon
@@ -460,6 +467,7 @@ WeatherMenuButton.prototype = {
     refreshWeather: function(recurse) {
         this.load_json_async(this.get_weather_url(), function(json) {
 
+            try {
             let weather = json.get_object_member('query').get_object_member('results').get_object_member('channel');
             let weather_c = weather.get_object_member('item').get_object_member('condition');
             let forecast = weather.get_object_member('item').get_array_member('forecast').get_elements();
@@ -539,11 +547,14 @@ WeatherMenuButton.prototype = {
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
             }
 
+            } catch(e) {
+                global.log('A ' + e.name + ' has occured: ' + e.message);
+            }
         });
 
         // Repeatedly refresh weather if recurse is set
         if (recurse) {
-            Mainloop.timeout_add_seconds(60 * 4, Lang.bind(this, function() {
+            Mainloop.timeout_add_seconds(this._refresh_interval, Lang.bind(this, function() {
                 this.refreshWeather(true);
             }));
         }

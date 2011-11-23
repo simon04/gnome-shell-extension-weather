@@ -94,6 +94,12 @@ The position of this GNOME Shell extension in the panel can be configured to eit
     gsettings set org.gnome.shell.extensions.weather position-in-panel left
     gsettings set org.gnome.shell.extensions.weather position-in-panel right
 
+#### Refresh Interval (optional, 240 by default)
+
+The interval to refresh the weather information may be set arbitrarily and is specified in seconds.
+
+    gsettings set org.gnome.shell.extensions.weather refresh-interval 240
+
 #### Restart GNOME Shell
 
 Don't forget to restart GNOME Shell:
