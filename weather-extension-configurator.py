@@ -59,6 +59,7 @@ class WeatherConfigurator:
         entry = Gtk.Entry()
         entry.set_text(self.schema.get_string(key))
         entry.connect('activate', set)
+        entry.connect('focus-out-event', lambda x, y: set(x))
         self.add_tooltip(entry, tooltip)
         self.add_label(label, tooltip)
         self.elements.append(entry)
