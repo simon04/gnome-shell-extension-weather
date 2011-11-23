@@ -67,11 +67,12 @@ class WeatherConfigurator:
     def add_radio(self, key, label, items, tooltip=None):
         def set(rb):
             if rb.get_active():
-                self.schema.set_enum(key, items.index(rb.get_label()))
+                val = [item[0] for item in items if item[1] == rb.get_label()][0]
+                self.schema.set_enum(key, val)
         vbox = Gtk.VBox()
         buttonFirst = None
         active = self.schema.get_enum(key)
-        for (idx,item) in enumerate(items):
+        for (idx,item) in items:
             button = Gtk.RadioButton(group=buttonFirst, label=item)
             if not(buttonFirst): buttonFirst = button
             button.set_active(active == idx)
@@ -103,9 +104,9 @@ class WeatherConfigurator:
         self.elements = []
 
         self.add_text('woeid', 'WOEID', 'The Where On Earth ID determinees the location/city')
-        self.add_radio('unit', 'Temperature Unit', ['celsius', 'fahrenheit'])
+        self.add_radio('unit', 'Temperature Unit', [(0, 'celsius'), (1, 'fahrenheit')])
         self.add_text('city', 'Label', "Sometimes your WOEID location isn't quite right (it's the next major city around)")
-        self.add_radio('position-in-panel', 'Position in Panel*', ['center', 'right', 'left'], "The position of this GNOME Shell extension in the panel (requires restart of GNOME Shell).")
+        self.add_radio('position-in-panel', 'Position in Panel*', [(2, 'left'), (0, 'center'), (1, 'right')], "The position of this GNOME Shell extension in the panel (requires restart of GNOME Shell).")
         self.add_check('translate-condition', 'Translate Weather Conditions', "If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string 'PM Thunderstorms' cannot be expressed in terms of weather codes.")
         self.add_check('use-symbolic-icons', 'Symbolic Icons', "Display symbolic icons instead of full-colored icons")
         self.add_check('show-text-in-panel', 'Show Text in Panel*', "Whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart of GNOME Shell).")
