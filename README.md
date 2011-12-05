@@ -40,7 +40,9 @@ gnome-shell-extension-weather uses gsettings to save your configuration. You can
 
 #### Location
 
-See [WOEID Info](http://sigizmund.info/woeidinfo/) to determine your WOEID.  You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
+At the moment, only WOEIDs consisting of 4 uppercase letters followed by 4 digits are supported. Determine your WOEID using [edg3.co.uk](http://edg3.co.uk/snippets/weather-location-codes/) or [xoap.weather.com](http://xoap.weather.com/search/search?where=Innsbruck).
+
+You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
 
     gsettings set org.gnome.shell.extensions.weather woeid your_woeid
     gsettings set org.gnome.shell.extensions.weather woeid "'your_woeid'"
