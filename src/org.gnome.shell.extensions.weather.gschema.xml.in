@@ -49,5 +49,10 @@
       <_summary>Position in panel</_summary>
       <_description>Set the position of this GNOME Shell extension in the panel to either 'center', 'left' or 'right' (requires restart).</_description>
     </key>
+    <key name="refresh-interval" type="i">
+      <default>240</default>
+      <_summary>Refresh interval in seconds</_summary>
+      <_description>The interval in seconds to refresh the weather information.</_description>
+    </key>
   </schema>
 </schemalist>

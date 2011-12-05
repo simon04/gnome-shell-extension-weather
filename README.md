@@ -19,6 +19,8 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 * [Ubuntu](https://launchpad.net/~webupd8team/+archive/gnome3/+packages)
 * Generic: For a generic installation, run the following commands:
   `./autogen.sh --prefix=/usr && make && sudo make install`
+  * Make sure you have the `libglib2.0-dev` package (or equivalent for your distribution)
+    installed, or else you'll get an error about `GLIB_GSETTINGS`.
 * *Please report further links!*
 
 That's it!
@@ -38,7 +40,9 @@ gnome-shell-extension-weather uses gsettings to save your configuration. You can
 
 #### Location
 
-See [WOEID Info](http://sigizmund.info/woeidinfo/) to determine your WOEID.  You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
+At the moment, only WOEIDs consisting of 4 uppercase letters followed by 4 digits are supported. Determine your WOEID using [edg3.co.uk](http://edg3.co.uk/snippets/weather-location-codes/) or [xoap.weather.com](http://xoap.weather.com/search/search?where=Innsbruck).
+
+You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
 
     gsettings set org.gnome.shell.extensions.weather woeid your_woeid
     gsettings set org.gnome.shell.extensions.weather woeid "'your_woeid'"
@@ -91,6 +95,12 @@ The position of this GNOME Shell extension in the panel can be configured to eit
     gsettings set org.gnome.shell.extensions.weather position-in-panel center
     gsettings set org.gnome.shell.extensions.weather position-in-panel left
     gsettings set org.gnome.shell.extensions.weather position-in-panel right
+
+#### Refresh Interval (optional, 240 by default)
+
+The interval to refresh the weather information may be set arbitrarily and is specified in seconds.
+
+    gsettings set org.gnome.shell.extensions.weather refresh-interval 240
 
 #### Restart GNOME Shell
 
