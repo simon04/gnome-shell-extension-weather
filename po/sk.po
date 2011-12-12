@@ -1,0 +1,261 @@
+# Slovakian translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Dušan Kazik <prescott66@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-27 01:22+0200\n"
+"PO-Revision-Date: 2011-12-11 14:59+0100\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"Language-Team: \n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js:73
+msgid "..."
+msgstr "..."
+
+#: extension.js:228
+msgid "Tornado"
+msgstr "Tornádo"
+
+#: extension.js:230
+msgid "Tropical storm"
+msgstr "Tropická búrka"
+
+#: extension.js:232
+msgid "Hurricane"
+msgstr "Hurikán"
+
+#: extension.js:234
+msgid "Severe thunderstorms"
+msgstr "Výrazné búrky"
+
+#: extension.js:236
+msgid "Thunderstorms"
+msgstr "Búrky"
+
+#: extension.js:238
+msgid "Mixed rain and snow"
+msgstr "Dážď so snehom"
+
+#: extension.js:240
+msgid "Mixed rain and sleet"
+msgstr "Dážď a poľadovica"
+
+#: extension.js:242
+msgid "Mixed snow and sleet"
+msgstr "Sneh a poľadovica"
+
+#: extension.js:244
+msgid "Freezing drizzle"
+msgstr "Mráz a mrholenie"
+
+#: extension.js:246
+msgid "Drizzle"
+msgstr "Mrholenie"
+
+#: extension.js:248
+msgid "Freezing rain"
+msgstr "Mrznúci dážď"
+
+#: extension.js:250
+#: extension.js:252
+msgid "Showers"
+msgstr "Prehánky"
+
+#: extension.js:254
+msgid "Snow flurries"
+msgstr "Snehové záveje"
+
+#: extension.js:256
+msgid "Light snow showers"
+msgstr "Mierne snehové prehánky"
+
+#: extension.js:258
+msgid "Blowing snow"
+msgstr "Husté sneženie"
+
+#: extension.js:260
+msgid "Snow"
+msgstr "Sneženie"
+
+#: extension.js:262
+msgid "Hail"
+msgstr "Krúpy"
+
+#: extension.js:264
+msgid "Sleet"
+msgstr "Poľadovica"
+
+#: extension.js:266
+msgid "Dust"
+msgstr "Prašno"
+
+#: extension.js:268
+msgid "Foggy"
+msgstr "Hmlisto"
+
+#: extension.js:270
+msgid "Haze"
+msgstr "Hmla"
+
+#: extension.js:272
+msgid "Smoky"
+msgstr "Dym"
+
+#: extension.js:274
+msgid "Blustery"
+msgstr "Búrlivo"
+
+#: extension.js:276
+msgid "Windy"
+msgstr "Veterno"
+
+#: extension.js:278
+msgid "Cold"
+msgstr "Chladno"
+
+#: extension.js:280
+msgid "Cloudy"
+msgstr "Oblačno"
+
+#: extension.js:283
+msgid "Mostly cloudy"
+msgstr "Zamračené"
+
+#: extension.js:286
+#: extension.js:312
+msgid "Partly cloudy"
+msgstr "Polojasno"
+
+#: extension.js:288
+msgid "Clear"
+msgstr "Jasno"
+
+#: extension.js:290
+msgid "Sunny"
+msgstr "Slnečno"
+
+#: extension.js:293
+msgid "Fair"
+msgstr "Pekne"
+
+#: extension.js:295
+msgid "Mixed rain and hail"
+msgstr "Dážď s krúpami"
+
+#: extension.js:297
+msgid "Hot"
+msgstr "Horúco"
+
+#: extension.js:299
+msgid "Isolated thunderstorms"
+msgstr "Ojedinelé búrky"
+
+#: extension.js:302
+msgid "Scattered thunderstorms"
+msgstr "Občasné búrky"
+
+#: extension.js:304
+msgid "Scattered showers"
+msgstr "Občasné prehánky"
+
+#: extension.js:306
+#: extension.js:310
+msgid "Heavy snow"
+msgstr "Husté sneženie"
+
+#: extension.js:308
+msgid "Scattered snow showers"
+msgstr "Občasné snehové prehánky"
+
+#: extension.js:314
+msgid "Thundershowers"
+msgstr "Búrky s prehánkami"
+
+#: extension.js:316
+msgid "Snow showers"
+msgstr "Snehové prehánky"
+
+#: extension.js:318
+msgid "Isolated thundershowers"
+msgstr "Ojedinelé búrky s prehánkami"
+
+#: extension.js:321
+msgid "Not available"
+msgstr "Nedostupný"
+
+#: extension.js:336
+msgid "Monday"
+msgstr "Pondelok"
+
+#: extension.js:336
+msgid "Tuesday"
+msgstr "Utorok"
+
+#: extension.js:336
+msgid "Wednesday"
+msgstr "Streda"
+
+#: extension.js:336
+msgid "Thursday"
+msgstr "Štvrtok"
+
+#: extension.js:336
+msgid "Friday"
+msgstr "Piatok"
+
+#: extension.js:336
+msgid "Saturday"
+msgstr "Sobota"
+
+#: extension.js:336
+msgid "Sunday"
+msgstr "Nedeľa"
+
+#: extension.js:392
+msgid "Today"
+msgstr "Dnes"
+
+#: extension.js:392
+msgid "Tomorrow"
+msgstr "Zajtra"
+
+#: extension.js:429
+msgid "Loading current weather ..."
+msgstr "Načítava sa aktuálne počasie ..."
+
+#: extension.js:430
+msgid "Loading future weather ..."
+msgstr "Načítava sa predpoveď počasia ..."
+
+#: extension.js:446
+msgid "Loading ..."
+msgstr "Načítava sa ..."
+
+#: extension.js:449
+msgid "Please wait"
+msgstr "Prosím, čakajte"
+
+#: extension.js:467
+msgid "Temperature:"
+msgstr "Teplota:"
+
+#: extension.js:469
+msgid "Humidity:"
+msgstr "Vlhkosť:"
+
+#: extension.js:471
+msgid "Pressure:"
+msgstr "Tlak:"
+
+#: extension.js:473
+msgid "Wind:"
+msgstr "Vietor:"
+
