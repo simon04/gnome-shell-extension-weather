@@ -1,4 +1,4 @@
-# Spanish translation for gnome-shell-extension-weather
+# Portuguese translation for gnome-shell-extension-weather
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # Daniel Miranda <dmiranda@gmail.com>, 2011.
