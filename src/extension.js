@@ -448,8 +448,8 @@ WeatherMenuButton.prototype = {
     },
 
     get_compass_direction: function(deg) {
-        let directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-        return _(directions[Math.round(deg / 45)]);
+        let directions = [_('N'), _('NE'), _('E'), _('SE'), _('S'), _('SW'), _('W'), _('NW')];
+        return directions[Math.round(deg / 45) % directions.length];
     },
 
     load_json_async: function(url, fun) {
