@@ -447,6 +447,11 @@ WeatherMenuButton.prototype = {
         return days[this.parse_day(abr)];
     },
 
+    get_compass_direction: function(deg) {
+        let directions = [_('N'), _('NE'), _('E'), _('SE'), _('S'), _('SW'), _('W'), _('NW')];
+        return directions[Math.round(deg / 45) % directions.length];
+    },
+
     load_json_async: function(url, fun) {
         let here = this;
         let session = new Soup.SessionAsync();
@@ -506,7 +511,7 @@ WeatherMenuButton.prototype = {
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
             let pressure = weather.get_object_member('atmosphere').get_string_member('pressure');
             let pressure_unit = weather.get_object_member('units').get_string_member('pressure');
-            let wind_direction = weather.get_object_member('wind').get_string_member('direction');
+            let wind_direction = this.get_compass_direction(weather.get_object_member('wind').get_string_member('direction'));
             let wind = weather.get_object_member('wind').get_string_member('speed');
             let wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
@@ -523,7 +528,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
-            this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+            this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
 
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
