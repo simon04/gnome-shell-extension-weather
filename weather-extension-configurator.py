@@ -49,9 +49,11 @@ class WeatherConfigurator:
 
     def add_label(self, label, tooltip):
         label = Gtk.Label(label + ":")
+        label.set_use_markup(True)
         label.set_alignment(1, 0.5)
         self.add_tooltip(label, tooltip)
         self.elements.append(label)
+        return label
 
     def add_text(self, key, label, tooltip=None):
         def set(tb):
@@ -59,26 +61,32 @@ class WeatherConfigurator:
         entry = Gtk.Entry()
         entry.set_text(self.schema.get_string(key))
         entry.connect('activate', set)
+        entry.connect('focus-out-event', lambda x, y: set(x))
         self.add_tooltip(entry, tooltip)
-        self.add_label(label, tooltip)
+        label = self.add_label(label, tooltip)
         self.elements.append(entry)
+        return (entry, label)
 
     def add_radio(self, key, label, items, tooltip=None):
         def set(rb):
             if rb.get_active():
-                self.schema.set_enum(key, items.index(rb.get_label()))
+                val = [item[0] for item in items if item[1] == rb.get_label()][0]
+                self.schema.set_enum(key, val)
         vbox = Gtk.VBox()
         buttonFirst = None
         active = self.schema.get_enum(key)
-        for (idx,item) in enumerate(items):
+        buttons = []
+        for (idx,item) in items:
             button = Gtk.RadioButton(group=buttonFirst, label=item)
             if not(buttonFirst): buttonFirst = button
             button.set_active(active == idx)
             button.connect('toggled', set)
             self.add_tooltip(button, tooltip)
             vbox.add(button)
-        self.add_label(label, tooltip)
+            buttons.append(button)
+        label = self.add_label(label, tooltip)
         self.elements.append(vbox)
+        return (buttons, label)
 
     def add_check(self, key, label, tooltip=None):
         def set(cb):
@@ -88,8 +96,9 @@ class WeatherConfigurator:
         button.set_active(active)
         button.connect('toggled', set)
         self.add_tooltip(button, tooltip)
-        self.add_label(label, tooltip)
+        label = self.add_label(label, tooltip)
         self.elements.append(button)
+        return (button, label)
 
     def __init__(self):
         self.schema = Gio.Settings('org.gnome.shell.extensions.weather')
@@ -101,14 +110,30 @@ class WeatherConfigurator:
 
         self.elements = []
 
-        self.add_text('woeid', 'WOEID', 'The Where On Earth ID determinees the location/city')
-        self.add_radio('unit', 'Temperature Unit', ['celsius', 'fahrenheit'])
-        self.add_text('city', 'Label', "Sometimes your WOEID location isn't quite right (it's the next major city around)")
-        self.add_radio('position-in-panel', 'Position in Panel*', ['center', 'right', 'left'], "The position of this GNOME Shell extension in the panel (requires restart of GNOME Shell).")
-        self.add_check('translate-condition', 'Translate Weather Conditions', "If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string 'PM Thunderstorms' cannot be expressed in terms of weather codes.")
-        self.add_check('use-symbolic-icons', 'Symbolic Icons', "Display symbolic icons instead of full-colored icons")
-        self.add_check('show-text-in-panel', 'Show Text in Panel*', "Whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart of GNOME Shell).")
-        self.add_check('show-comment-in-panel', 'Show Comment in Panel', "Whether to show the comment (aka. weather condition text, e.g. 'Windy', 'Clear') in the panel.")
+        self.add_text('woeid', '<b>WOEID</b>',
+                "The Where On Earth ID determinees the location/city")
+        self.add_radio('unit', 'Temperature Unit',
+                [(0, 'celsius'), (1, 'fahrenheit')])
+        self.add_text('city', 'Override Location Label',
+                "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
+        self.add_radio('position-in-panel', 'Position in Panel',
+                [(2, 'left'), (0, 'center'), (1, 'right')],
+                "The position of this GNOME Shell extension in the panel. (Requires restart of GNOME Shell.)")
+        self.add_check('translate-condition', 'Translate Weather Conditions',
+                "If enabled, the condition is translated based on the weather code.\nIf disabled, the condition string from Yahoo is taken.\nNote: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string “PM Thunderstorms” cannot be expressed in terms of weather codes.")
+        self.add_check('use-symbolic-icons', 'Symbolic Icons',
+                "Display symbolic icons instead of full-colored icons")
+        (b_text, _) = self.add_check('show-text-in-panel', 'Show Text in Panel',
+                "Display current temperature in panel. If disabled, only the current condition icon is shown. (Requires restart of GNOME Shell.)")
+        (b_cond, l_cond) = self.add_check('show-comment-in-panel', '    Include Condition',
+                "Whether to show the weather condition (e.g., “Windy”, “Clear”) in the panel.")
+
+        # add dependency between text-in-panel and comment-in-panel
+        def depend(rb):
+            b_cond.set_sensitive(rb.get_active())
+            l_cond.set_sensitive(rb.get_active())
+        b_text.connect('toggled', depend)
+        depend(b_text)
 
         table = Gtk.Table(rows=len(self.elements)/2, columns=2, homogeneous=False)
         for (idx,el) in enumerate(self.elements):

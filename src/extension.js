@@ -178,16 +178,6 @@ WeatherMenuButton.prototype = {
 
         this.menu.addActor(mainBox);
 
-        /* TODO install script via Makefile
-        this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
-
-        let item = new PopupMenu.PopupMenuItem(_("Preferences..."));
-        item.connect('activate', function() {
-            Util.spawn(["weather-extension-configurator"]);
-        });
-        this.menu.addMenuItem(item);
-        */
-
         // Items
         this.showLoadingUi();
 
@@ -199,6 +189,27 @@ WeatherMenuButton.prototype = {
             this.refreshWeather(true);
         }));
 
+    },
+
+    getPreferencesIcon: function() {
+        let prefIcon = new St.Icon ({
+            icon_type: this._icon_type,
+            icon_size: 16,
+            icon_name: 'system-run'
+        });
+        let prefButton = new St.Button({
+            style_class: 'panel-button'
+        });
+        prefButton.connect('clicked', function() {
+            Util.spawn(["weather-extension-configurator"]);
+        });
+        let prefBox = new St.BoxLayout({
+            style_class: 'weather-config',
+            vertical: true
+        });
+        prefButton.add_actor(prefIcon);
+        prefBox.add_actor(prefButton);
+        return prefBox;
     },
 
     unit_to_url: function() {
@@ -638,6 +649,7 @@ WeatherMenuButton.prototype = {
         let xb = new St.BoxLayout();
         xb.add_actor(bb);
         xb.add_actor(rb);
+        xb.add_actor(this.getPreferencesIcon());
 
         let box = new St.BoxLayout({
             style_class: 'weather-current-iconbox'
