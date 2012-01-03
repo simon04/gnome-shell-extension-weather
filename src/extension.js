@@ -221,7 +221,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
@@ -544,7 +544,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherLocationLabel.text = location;
             // make the location into a link, and make it look like a button
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
-            this._currentWeatherLocation.url = weather.get_string_member('url');
+            this._currentWeatherLocation.url = weather.get_string_member('link');
             this._currentWeatherLocation.connect('clicked', Lang.bind(this, function() {
                 Gio.app_info_launch_default_for_uri(
                         this._currentWeatherLocation.url,
