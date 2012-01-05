@@ -549,7 +549,6 @@ WeatherMenuButton.prototype = {
                 Gio.app_info_launch_default_for_uri(
                         this._currentWeatherLocation.url,
                         global.create_app_launch_context());
-                this.menu.close(true);
             }));
 
 
