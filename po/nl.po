@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-27 21:00+0200\n"
-"PO-Revision-Date: 2011-09-27 21:00+0200\n"
+"PO-Revision-Date: 2012-01-05 10:00+0200\n"
 "Last-Translator: Peter van Ieperen <p.v.ieperen77@gmail.com>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "Tornado"
 
 #: extension.js:230
 msgid "Tropical storm"
-msgstr "Tropische Storm"
+msgstr "Tropische storm"
 
 #: extension.js:232
 msgid "Hurricane"
@@ -33,7 +33,7 @@ msgstr "Orkaan"
 
 #: extension.js:234
 msgid "Severe thunderstorms"
-msgstr "Zware Onweer"
+msgstr "Zware onweer"
 
 #: extension.js:236
 msgid "Thunderstorms"
@@ -53,7 +53,7 @@ msgstr "Sneeuw en hagel"
 
 #: extension.js:244
 msgid "Freezing drizzle"
-msgstr "Vriezende motregen"
+msgstr "Motijzel"
 
 #: extension.js:246
 msgid "Drizzle"
@@ -61,7 +61,7 @@ msgstr "Motregen"
 
 #: extension.js:248
 msgid "Freezing rain"
-msgstr "Vriesende regen"
+msgstr "IJzel"
 
 #: extension.js:250 extension.js:252
 msgid "Showers"
@@ -69,11 +69,11 @@ msgstr "Regenbuien"
 
 #: extension.js:254
 msgid "Snow flurries"
-msgstr "Sneeuw vlagen"
+msgstr "Lichte sneeuwval"
 
 #: extension.js:256
 msgid "Light snow showers"
-msgstr "Lichte sneeuwval"
+msgstr "Lichte sneeuwbuien"
 
 #: extension.js:258
 msgid "Blowing snow"
@@ -109,7 +109,7 @@ msgstr "Smok"
 
 #: extension.js:274
 msgid "Blustery"
-msgstr "Stormachtig"
+msgstr "Windvlagen"
 
 #: extension.js:276
 msgid "Windy"
@@ -125,7 +125,7 @@ msgstr "Bewolkt"
 
 #: extension.js:283
 msgid "Mostly cloudy"
-msgstr "Grotendeels bewolkt"
+msgstr "Zwaar bewolkt"
 
 #: extension.js:286 extension.js:312
 msgid "Partly cloudy"
@@ -181,7 +181,7 @@ msgstr "Sneeuwbuien"
 
 #: extension.js:318
 msgid "Isolated thundershowers"
-msgstr "Geïsoleerde onweer"
+msgstr "Geïsoleerde onweersbuien"
 
 #: extension.js:321
 msgid "Not available"
