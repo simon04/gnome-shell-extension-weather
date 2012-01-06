@@ -38,14 +38,12 @@ Due to incompatible changes between GNOME 3.0 and 3.2, separate versions of this
 
 gnome-shell-extension-weather uses gsettings to save your configuration. You can use `dconf-editor` or `gsettings` from the command line to modify some parameters.
 
-#### Location
-
-At the moment, only WOEIDs consisting of 4 uppercase letters followed by 4 digits are supported. Determine your WOEID using [edg3.co.uk](http://edg3.co.uk/snippets/weather-location-codes/) or [xoap.weather.com](http://xoap.weather.com/search/search?where=Innsbruck).
+#### Location ("Cambridge, MA" (GNOME Foundation) by default)
 
 You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
 
-    gsettings set org.gnome.shell.extensions.weather woeid your_woeid
-    gsettings set org.gnome.shell.extensions.weather woeid "'your_woeid'"
+    gsettings set org.gnome.shell.extensions.weather city your_city
+    gsettings set org.gnome.shell.extensions.weather city "'your_city'"
 
 #### Temperature Units (optional, celsius by default)
 
@@ -54,12 +52,6 @@ You can modify the temperature unit using one of the following commands:
     gsettings set org.gnome.shell.extensions.weather unit celsius
     gsettings set org.gnome.shell.extensions.weather unit fahrenheit
 
-#### Displayed Location (optional)
-
-Sometimes your WOEID location isn't quite right (it's the next major city around). To customise the displayed city you can type:
-
-    gsettings set org.gnome.shell.extensions.weather city your_city
-
 #### Translate Weather Conditions (optional, true by default)
 
 You may want to configure whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.
@@ -67,7 +59,7 @@ You may want to configure whether to translate the weather condition. If enabled
     gsettings set org.gnome.shell.extensions.weather translate-condition true
     gsettings set org.gnome.shell.extensions.weather translate-condition false
 
-#### Use Symbolic Icons (optional, false by default)
+#### Use Symbolic Icons (optional, true by default)
 
 If desired, you can enable the usage of symbolic icons to display the weather condition (instead of full-colored icons).
 
@@ -96,11 +88,11 @@ The position of this GNOME Shell extension in the panel can be configured to eit
     gsettings set org.gnome.shell.extensions.weather position-in-panel left
     gsettings set org.gnome.shell.extensions.weather position-in-panel right
 
-#### Refresh Interval (optional, 240 by default)
+#### Refresh Interval (optional, 300 by default)
 
 The interval to refresh the weather information may be set arbitrarily and is specified in seconds.
 
-    gsettings set org.gnome.shell.extensions.weather refresh-interval 240
+    gsettings set org.gnome.shell.extensions.weather refresh-interval 300
 
 #### Restart GNOME Shell
 
