@@ -48,7 +48,6 @@ const PopupMenu = imports.ui.popupMenu;
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_CITY_KEY = 'city';
-const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
@@ -85,7 +84,6 @@ WeatherMenuButton.prototype = {
         this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
         this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
-        this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
         this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
         this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
@@ -97,7 +95,6 @@ WeatherMenuButton.prototype = {
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
             this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
             this._city  = this._settings.get_string(WEATHER_CITY_KEY);
-            this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
             this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
@@ -105,7 +102,6 @@ WeatherMenuButton.prototype = {
         });
         this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
@@ -221,7 +217,8 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        return encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location in (select id from xml where url="http://xoap.weather.com/search/search?where='+ encodeURI( this._city ) +'" and itemPath="search.loc") and u="' + this.unit_to_url() + '"');
+    /* see http://jonathantrevor.net/?p=40 */
     },
 
     get_weather_icon: function(code) {
@@ -472,9 +469,8 @@ WeatherMenuButton.prototype = {
 
         let message = Soup.Message.new('GET', url);
         session.queue_message(message, function(session, message) {
-            let jp = new Json.Parser();
-            jp.load_from_data(message.response_body.data, -1);
-            fun.call(here, jp.get_root().get_object());
+        let jp = JSON.parse(message.response_body.data);
+            fun.call(here, jp);
         });
     },
 
@@ -482,50 +478,38 @@ WeatherMenuButton.prototype = {
         this.load_json_async(this.get_weather_url(), function(json) {
 
             try {
-            let weather = json.get_object_member('query').get_object_member('results').get_object_member('channel');
-            let weather_c = weather.get_object_member('item').get_object_member('condition');
-            let forecast = weather.get_object_member('item').get_array_member('forecast').get_elements();
-
-            /* TODO won't work with the new URL
-            // Fixes wrong woeid if necessary
-            try {
-                // Wrong woeid specified
-                if (weather.has_member('code') && weather.get_int_member('code') == 500) {
-                    // Fetch correct woeid
-                    this.load_json_async(this.get_weather_url().replace('p=', 'w='), function(weather) {
-                        try {
-                            // Take correct woeid, update gsettings
-                            this._woeid = weather.get_object_member('location').get_string_member('location_id');
-                            this._settings.set_string(WEATHER_WOEID_KEY, this._woeid);
-                            // Load weather with correct woeid
-                            this.refreshWeather(false);
-                        } catch(e) {
-                        }
-                    });
-                    return;
+            let weather = json.query.results.channel;
+            let many = 0;
+                if(typeof weather[0] != "undefined")
+                {
+                weather = weather[0];
+                many = 1;
                 }
-            } catch(e) {
-                global.log('A ' + e.name + ' has occured: ' + e.message);
-            }
-            */
+            let weather_c = weather.item.condition;
+            let forecast = weather.item.forecast;
+            let location = this._city;
+                if (weather.location.city)
+                location = weather.location.city;
 
-            let location = weather.get_object_member('location').get_string_member('city');
-            if (this._city != null && this._city.length > 0)
-                location = this._city;
+                if (many && weather.location.region)
+                location = location +", "+ weather.location.region;
+                else
+                    if (many && weather.location.country)
+                    location = location +", "+ weather.location.country;
 
             // Refresh current weather
-            let comment = weather_c.get_string_member('text');
+            let comment = weather_c.text;
             if (this._translate_condition)
-                comment = this.get_weather_condition(weather_c.get_string_member('code'));
+                comment = this.get_weather_condition(weather_c.code);
 
-            let temperature = weather_c.get_string_member('temp');
-            let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
-            let pressure = weather.get_object_member('atmosphere').get_string_member('pressure');
-            let pressure_unit = weather.get_object_member('units').get_string_member('pressure');
-            let wind_direction = this.get_compass_direction(weather.get_object_member('wind').get_string_member('direction'));
-            let wind = weather.get_object_member('wind').get_string_member('speed');
-            let wind_unit = weather.get_object_member('units').get_string_member('speed');
-            let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
+            let temperature = weather_c.temp;
+            let humidity = weather.atmosphere.humidity + ' %';
+            let pressure = weather.atmosphere.pressure;
+            let pressure_unit = weather.units.pressure;
+            let wind_direction = this.get_compass_direction(weather.wind.direction);
+            let wind = weather.wind.speed;
+            let wind_unit = weather.units.speed;
+            let iconname = this.get_weather_icon_safely(weather_c.code);
 
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
@@ -545,17 +529,17 @@ WeatherMenuButton.prototype = {
             let date_string = [_('Today'), _('Tomorrow')];
             for (let i = 0; i <= 1; i++) {
                 let forecastUi = this._forecast[i];
-                let forecastData = forecast[i].get_object();
+                let forecastData = forecast[i];
 
-                let code = forecastData.get_string_member('code');
-                let t_low = forecastData.get_string_member('low');
-                let t_high = forecastData.get_string_member('high');
+                let code = forecastData.code;
+                let t_low = forecastData.low;
+                let t_high = forecastData.high;
 
-                let comment = forecastData.get_string_member('text');
+                let comment = forecastData.text;
                 if (this._translate_condition)
                     comment = this.get_weather_condition(code);
 
-                forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
+                forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.day) + ')';
                 forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + this.unit_to_unicode();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);

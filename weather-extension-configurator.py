@@ -110,12 +110,10 @@ class WeatherConfigurator:
 
         self.elements = []
 
-        self.add_text('woeid', '<b>WOEID</b>',
-                "The Where On Earth ID determinees the location/city")
+        self.add_text('city', 'City',
+                "Example : New York, USA")
         self.add_radio('unit', 'Temperature Unit',
                 [(0, 'celsius'), (1, 'fahrenheit')])
-        self.add_text('city', 'Override Location Label',
-                "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
         self.add_radio('position-in-panel', 'Position in Panel',
                 [(2, 'left'), (0, 'center'), (1, 'right')],
                 "The position of this GNOME Shell extension in the panel. (Requires restart of GNOME Shell.)")
@@ -125,7 +123,7 @@ class WeatherConfigurator:
                 "Display symbolic icons instead of full-colored icons")
         (b_text, _) = self.add_check('show-text-in-panel', 'Show Text in Panel',
                 "Display current temperature in panel. If disabled, only the current condition icon is shown. (Requires restart of GNOME Shell.)")
-        (b_cond, l_cond) = self.add_check('show-comment-in-panel', '    Include Condition',
+        (b_cond, l_cond) = self.add_check('show-comment-in-panel', 'Include Condition',
                 "Whether to show the weather condition (e.g., “Windy”, “Clear”) in the panel.")
 
         # add dependency between text-in-panel and comment-in-panel

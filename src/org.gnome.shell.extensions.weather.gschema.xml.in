@@ -14,11 +14,6 @@
       <_summary>Units</_summary>
       <_description>Choose the unit system for temperatures etc. Allowed values are 'celsius' or 'fahrenheit'.</_description>
     </key>
-    <key name="woeid" type="s">
-      <default>'AUXX0010'</default>
-      <_summary>Yahoo WOEID</_summary>
-      <_description>Set the Yahoo location ID (aka. WOEID, Where On Earth Identifier), which is used to retrieve the corresponding weather+forecast information.</_description>
-    </key>
     <key name="city" type="s">
       <default>''</default>
       <_summary>City to be displayed</_summary>
@@ -30,7 +25,7 @@
       <_description>Whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.</_description>
     </key>
     <key name="use-symbolic-icons" type="b">
-      <default>false</default>
+      <default>true</default>
       <_summary>Whether to use symbolic icons</_summary>
       <_description>Whether to use symbolic icons instead of full-colored icons.</_description>
     </key>
@@ -50,7 +45,7 @@
       <_description>Set the position of this GNOME Shell extension in the panel to either 'center', 'left' or 'right' (requires restart).</_description>
     </key>
     <key name="refresh-interval" type="i">
-      <default>240</default>
+      <default>300</default>
       <_summary>Refresh interval in seconds</_summary>
       <_description>The interval in seconds to refresh the weather information.</_description>
     </key>
