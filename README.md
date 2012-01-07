@@ -6,7 +6,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ----
 
-### Screenshots
+### Screenshot
 
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.png)
 
@@ -14,8 +14,9 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Depends
 
+* `python2`.
 * `libglib2.0-dev`, without you'll get an error about `GLIB_GSETTINGS`.
-* `gnome-common`
+* `gnome-common`.
 
 ----
 
@@ -23,6 +24,8 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 Run the following commands in the `gnome-shell-extension-weather` directory:
 
+	git clone git://github.com/Neroth/gnome-shell-extension-weather.git
+	cd gnome-shell-extension-weather
 	./autogen.sh --prefix=/usr
 	make
 	sudo make install
@@ -30,7 +33,7 @@ Run the following commands in the `gnome-shell-extension-weather` directory:
 
 That's it!
 
-### Versions
+### Version
 
 Only for GNOME Shell 3.2 (not tested under GNOME Shell 3.0)
 
