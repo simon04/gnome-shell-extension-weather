@@ -12,33 +12,32 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ----
 
+### Depends
+
+* `libglib2.0-dev`, without you'll get an error about `GLIB_GSETTINGS`.
+* `gnome-common`
+
+----
+
 ### Installation
 
-* [Arch Linux](https://aur.archlinux.org/packages.php?ID=49409)
-* [Frugalware](http://www.frugalware.org/packages/119339)
-* [Ubuntu](https://launchpad.net/~webupd8team/+archive/gnome3/+packages)
-* Generic: For a generic installation, run the following commands:
-  `./autogen.sh --prefix=/usr && make && sudo make install`
-  * Make sure you have the `libglib2.0-dev` package (or equivalent for your distribution)
-    installed, or else you'll get an error about `GLIB_GSETTINGS`.
-* *Please report further links!*
+Run the following commands in the `gnome-shell-extension-weather` directory:
+`./autogen.sh --prefix=/usr && make && sudo make install && sudo `
 
 That's it!
 
 ### Versions
 
-Due to incompatible changes between GNOME 3.0 and 3.2, separate versions of this extension are provided:
-
-* For GNOME Shell 3.2, use the `master` branch.
-* For GNOME Shell 3.0, use the `gnome3.0` branch.
+Only for GNOME Shell 3.2 (not tested under GNOME Shell 3.0)
 
 ----
 
 ### Configuration
 
-gnome-shell-extension-weather uses gsettings to save your configuration. You can use `dconf-editor` or `gsettings` from the command line to modify some parameters.
+Use the `Weather Settings` button to edit the configuration.
+You can also use `dconf-editor` or `gsettings` to modify some parameters from the command line.
 
-#### Location ("Cambridge, MA" (GNOME Foundation) by default)
+#### City (`Cambridge, MA` (GNOME Foundation) by default)
 
 You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
 
@@ -52,6 +51,14 @@ You can modify the temperature unit using one of the following commands:
     gsettings set org.gnome.shell.extensions.weather unit celsius
     gsettings set org.gnome.shell.extensions.weather unit fahrenheit
 
+#### Position in Panel (optional, center by default)
+
+The position of this GNOME Shell extension in the panel can be configured to either 'left', 'center' or 'right' (requires restart of GNOME Shell).
+
+    gsettings set org.gnome.shell.extensions.weather position-in-panel center
+    gsettings set org.gnome.shell.extensions.weather position-in-panel left
+    gsettings set org.gnome.shell.extensions.weather position-in-panel right
+
 #### Translate Weather Conditions (optional, true by default)
 
 You may want to configure whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.
@@ -59,12 +66,12 @@ You may want to configure whether to translate the weather condition. If enabled
     gsettings set org.gnome.shell.extensions.weather translate-condition true
     gsettings set org.gnome.shell.extensions.weather translate-condition false
 
-#### Use Symbolic Icons (optional, true by default)
+#### Symbolic Icons (optional, true by default)
 
-If desired, you can enable the usage of symbolic icons to display the weather condition (instead of full-colored icons).
+If desired, you can enable the usage of full-colored icons to display the weather condition (instead of symbolic icons).
 
-    gsettings set org.gnome.shell.extensions.weather use-symbolic-icons false
     gsettings set org.gnome.shell.extensions.weather use-symbolic-icons true
+    gsettings set org.gnome.shell.extensions.weather use-symbolic-icons false
 
 #### Show Text in Panel (optional, true by default)
 
@@ -73,20 +80,12 @@ You can configure whether to show the weather condition text (aka. comment) toge
     gsettings set org.gnome.shell.extensions.weather show-text-in-panel true
     gsettings set org.gnome.shell.extensions.weather show-text-in-panel false
 
-#### Show Comment in Panel (optional, false by default)
+#### Include condition (optional, false by default)
 
 Configures whether to show the comment (aka. weather condition text, e.g. "Windy", "Clear") in the panel. Note that the temperature is still shown (if undesired, consider show-text-in-panel option).
 
     gsettings set org.gnome.shell.extensions.weather show-comment-in-panel false
     gsettings set org.gnome.shell.extensions.weather show-comment-in-panel true
-
-#### Position in Panel (optional, center by default)
-
-The position of this GNOME Shell extension in the panel can be configured to either 'left', 'center' or 'right' (requires restart of GNOME Shell).
-
-    gsettings set org.gnome.shell.extensions.weather position-in-panel center
-    gsettings set org.gnome.shell.extensions.weather position-in-panel left
-    gsettings set org.gnome.shell.extensions.weather position-in-panel right
 
 #### Refresh Interval (optional, 300 by default)
 
@@ -111,6 +110,7 @@ Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
 Simon Legner <Simon.Legner@gmail.com>,
 Simon Claessens <gagalago@gmail.com>
+Christian METZLER <neroth@xeked.com>
 
 This file is part of gnome-shell-extension-weather.
 

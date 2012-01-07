@@ -271,6 +271,9 @@ msgstr "Pression :"
 msgid "Wind:"
 msgstr "Vent :"
 
+#: extension.js:689
+msgid "Weather Settings"
+msgstr "Paramètres de météo"
 
 #: weather-extension-configurator.py:113
 msgid "City"

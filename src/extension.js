@@ -32,7 +32,6 @@ const Cairo = imports.cairo;
 const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
-const Json = imports.gi.Json;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const Soup = imports.gi.Soup;
@@ -160,10 +159,11 @@ WeatherMenuButton.prototype = {
         this._currentWeather = new St.Bin({ style_class: 'current' });
         // Future weather
         this._futureWeather = new St.Bin({ style_class: 'forecast' /*, x_align: St.Align.START*/});
+        // Setting button
+        this._settingWeather = new St.Bin({ style_class: 'setting' });
 
-        // Separator (copied from Gnome shell's popupMenu.js)
+        // Separators (copied from Gnome shell's popupMenu.js)
         this._separatorArea = new St.DrawingArea({ style_class: 'popup-separator-menu-item' });
-        this._separatorArea.width = 200;
         this._separatorArea.connect('repaint', Lang.bind(this, this._onSeparatorAreaRepaint));
 
         // Putting the popup item together
@@ -171,6 +171,7 @@ WeatherMenuButton.prototype = {
         mainBox.add_actor(this._currentWeather);
         mainBox.add_actor(this._separatorArea);
         mainBox.add_actor(this._futureWeather);
+        mainBox.add_actor(this._settingWeather);
 
         this.menu.addActor(mainBox);
 
@@ -179,6 +180,7 @@ WeatherMenuButton.prototype = {
 
         this.rebuildCurrentWeatherUi();
         this.rebuildFutureWeatherUi();
+        this.rebuildSettingWeatherUi();
 
         // Show weather
         Mainloop.timeout_add_seconds(3, Lang.bind(this, function() {
@@ -187,25 +189,8 @@ WeatherMenuButton.prototype = {
 
     },
 
-    getPreferencesIcon: function() {
-        let prefIcon = new St.Icon ({
-            icon_type: this._icon_type,
-            icon_size: 16,
-            icon_name: 'system-run'
-        });
-        let prefButton = new St.Button({
-            style_class: 'panel-button'
-        });
-        prefButton.connect('clicked', function() {
-            Util.spawn(["weather-extension-configurator"]);
-        });
-        let prefBox = new St.BoxLayout({
-            style_class: 'weather-config',
-            vertical: true
-        });
-        prefButton.add_actor(prefIcon);
-        prefBox.add_actor(prefButton);
-        return prefBox;
+    _onPreferencesActivate : function() {
+        Util.spawn(["weather-extension-configurator"]);
     },
 
     unit_to_url: function() {
@@ -569,6 +554,11 @@ WeatherMenuButton.prototype = {
             this._futureWeather.get_child().destroy();
     },
 
+    destroySettingWeather: function() {
+        if (this._settingWeather.get_child() != null)
+            this._settingWeather.get_child().destroy();
+    },
+
     showLoadingUi: function() {
         this.destroyCurrentWeather();
         this.destroyFutureWeather();
@@ -582,7 +572,7 @@ WeatherMenuButton.prototype = {
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({
             icon_type: this._icon_type,
-            icon_size: 64,
+            icon_size: 72,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-current-icon'
         });
@@ -633,7 +623,6 @@ WeatherMenuButton.prototype = {
         let xb = new St.BoxLayout();
         xb.add_actor(bb);
         xb.add_actor(rb);
-        xb.add_actor(this.getPreferencesIcon());
 
         let box = new St.BoxLayout({
             style_class: 'weather-current-iconbox'
@@ -689,6 +678,17 @@ WeatherMenuButton.prototype = {
 
         }
 
+    },
+
+    rebuildSettingWeatherUi: function() {
+        this.destroySettingWeather();
+
+        let item = new PopupMenu.PopupSeparatorMenuItem();
+        this.menu.addMenuItem(item);
+
+        let item = new PopupMenu.PopupMenuItem(_("Weather Settings"));
+        item.connect('activate', Lang.bind(this, this._onPreferencesActivate));
+        this.menu.addMenuItem(item);
     },
 
     // Copied from Gnome shell's popupMenu.js
