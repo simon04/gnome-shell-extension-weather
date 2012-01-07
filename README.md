@@ -22,7 +22,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Installation
 
-Run the following commands in the `gnome-shell-extension-weather` directory:
+Run the following commands:
 
 	git clone git://github.com/Neroth/gnome-shell-extension-weather.git
 	cd gnome-shell-extension-weather
