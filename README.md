@@ -22,7 +22,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Installation
 
 Run the following commands in the `gnome-shell-extension-weather` directory:
-`./autogen.sh --prefix=/usr && make && sudo make install && sudo `
+`./autogen.sh --prefix=/usr && make && sudo make install && sudo install -D weather-extension-configurator.py /usr/bin/weather-extension-configurator`
 
 That's it!
 
