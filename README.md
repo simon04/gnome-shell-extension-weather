@@ -113,7 +113,7 @@ Ecyrbe <ecyrbe+spam@gmail.com>,
 Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
 Simon Legner <Simon.Legner@gmail.com>,
-Simon Claessens <gagalago@gmail.com>
+Simon Claessens <gagalago@gmail.com>,
 Christian METZLER <neroth@xeked.com>
 
 This file is part of gnome-shell-extension-weather.
