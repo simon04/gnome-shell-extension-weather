@@ -6,15 +6,15 @@
 }
 
 .weather-current-databox {
-    padding: 0 15px 5px 30px;
+    padding: 0 15px 0px 30px;
 }
 
 .weather-current-icon {
-    padding: 0px 30px 10px 30px;
+    padding: 0px 30px;
 }
 
 .weather-current-iconbox {
-    padding: 0 20px 0 0;
+    padding-right: 20px;
 }
 
 .weather-icon {
@@ -36,18 +36,10 @@
 }
 
 .weather-forecast-databox {
-  padding: 5px 30px 5px 0;
+  padding-right: 30px;
 }
 
 .weather-forecast-day {
   color: #999999;
   font-size: 90%;
-}
-
-.weather-setting-button {
-  padding-top: 500px;
-}
-
-.weather-config {
-  padding-right: 10px;
 }

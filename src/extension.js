@@ -4,11 +4,12 @@
  *  - Displays a small weather information on the top panel.
  *  - On click, gives a popup with details about the weather.
  *
- * Copyright (C) 2011
+ * Copyright (C) 2011 - 2012
  *     ecyrbe <ecyrbe+spam@gmail.com>,
  *     Timur Kristof <venemo@msn.com>,
  *     Elad Alfassa <elad@fedoraproject.org>,
- *     Simon Legner <Simon.Legner@gmail.com>
+ *     Simon Legner <Simon.Legner@gmail.com>,
+ *     Christian METZLER <neroth@xeked.com>
  *
  *
  * This file is part of gnome-shell-extension-weather.
@@ -162,30 +163,29 @@ WeatherMenuButton.prototype = {
         // Setting button
         this._settingWeather = new St.Bin({ style_class: 'setting' });
 
-        // Separators (copied from Gnome shell's popupMenu.js)
-        this._separatorArea = new St.DrawingArea({ style_class: 'popup-separator-menu-item' });
-        this._separatorArea.connect('repaint', Lang.bind(this, this._onSeparatorAreaRepaint));
-
         // Putting the popup item together
-        let mainBox = new St.BoxLayout({ vertical: true });
-        mainBox.add_actor(this._currentWeather);
-        mainBox.add_actor(this._separatorArea);
-        mainBox.add_actor(this._futureWeather);
-        mainBox.add_actor(this._settingWeather);
+        this.menu.addActor(this._currentWeather);
 
-        this.menu.addActor(mainBox);
+        let item = new PopupMenu.PopupSeparatorMenuItem();
+        this.menu.addMenuItem(item);
+
+        this.menu.addActor(this._futureWeather);
+
+        let item = new PopupMenu.PopupSeparatorMenuItem();
+        this.menu.addMenuItem(item);
+
+        let item = new PopupMenu.PopupMenuItem(_("Weather Settings"));
+        item.connect('activate', Lang.bind(this, this._onPreferencesActivate));
+        this.menu.addMenuItem(item);
 
         // Items
         this.showLoadingUi();
 
         this.rebuildCurrentWeatherUi();
         this.rebuildFutureWeatherUi();
-        this.rebuildSettingWeatherUi();
 
         // Show weather
-        Mainloop.timeout_add_seconds(3, Lang.bind(this, function() {
-            this.refreshWeather(true);
-        }));
+        this.refreshWeather(true);
 
     },
 
@@ -554,11 +554,6 @@ WeatherMenuButton.prototype = {
             this._futureWeather.get_child().destroy();
     },
 
-    destroySettingWeather: function() {
-        if (this._settingWeather.get_child() != null)
-            this._settingWeather.get_child().destroy();
-    },
-
     showLoadingUi: function() {
         this.destroyCurrentWeather();
         this.destroyFutureWeather();
@@ -678,38 +673,6 @@ WeatherMenuButton.prototype = {
 
         }
 
-    },
-
-    rebuildSettingWeatherUi: function() {
-        this.destroySettingWeather();
-
-        let item = new PopupMenu.PopupSeparatorMenuItem();
-        this.menu.addMenuItem(item);
-
-        let item = new PopupMenu.PopupMenuItem(_("Weather Settings"));
-        item.connect('activate', Lang.bind(this, this._onPreferencesActivate));
-        this.menu.addMenuItem(item);
-    },
-
-    // Copied from Gnome shell's popupMenu.js
-    _onSeparatorAreaRepaint: function(area) {
-        let cr = area.get_context();
-        let themeNode = area.get_theme_node();
-        let [width, height] = area.get_surface_size();
-        let margin = themeNode.get_length('-margin-horizontal');
-        let gradientHeight = themeNode.get_length('-gradient-height');
-        let startColor = themeNode.get_color('-gradient-start');
-        let endColor = themeNode.get_color('-gradient-end');
-
-        let gradientWidth = (width - margin * 2);
-        let gradientOffset = (height - gradientHeight) / 2;
-        let pattern = new Cairo.LinearGradient(margin, gradientOffset, width - margin, gradientOffset + gradientHeight);
-        pattern.addColorStopRGBA(0, startColor.red / 255, startColor.green / 255, startColor.blue / 255, startColor.alpha / 255);
-        pattern.addColorStopRGBA(0.5, endColor.red / 255, endColor.green / 255, endColor.blue / 255, endColor.alpha / 255);
-        pattern.addColorStopRGBA(1, startColor.red / 255, startColor.green / 255, startColor.blue / 255, startColor.alpha / 255);
-        cr.setSource(pattern);
-        cr.rectangle(margin, gradientOffset, gradientWidth, gradientHeight);
-        cr.fill();
     }
 };
 
