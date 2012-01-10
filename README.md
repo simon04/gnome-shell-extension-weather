@@ -14,9 +14,11 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Depends
 
+* `git`.
 * `python2`.
 * `libglib2.0-dev`, without you'll get an error about `GLIB_GSETTINGS`.
 * `gnome-common`.
+* `gnome-tweak-tool`.
 
 ----
 
@@ -24,18 +26,19 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 Run the following commands:
 
-	git clone git://github.com/Neroth/gnome-shell-extension-weather.git
-	cd gnome-shell-extension-weather
-	./autogen.sh --prefix=/usr
-	make
-	sudo make install
+	cd ~ && git clone git://github.com/Neroth/gnome-shell-extension-weather.git
+	cd ~/gnome-shell-extension-weather
+	./autogen.sh --prefix=/usr && make && sudo make install
 	sudo install -D weather-extension-configurator.py /usr/bin/weather-extension-configurator
+
+Active the extension in `gnome-tweak-tool` and restart GNOME Shell (`[Alt]+[F2]`, `r`).
 
 That's it!
 
-### Version
+### Versions
 
-Only for GNOME Shell 3.2 (not tested under GNOME Shell 3.0)
+GNOME Shell 3.2 : OK
+GNOME Shell 3.0 : not tested => Use the `gnome3.0` branch.
 
 ----
 
