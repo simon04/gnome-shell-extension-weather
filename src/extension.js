@@ -67,6 +67,10 @@ const WeatherPosition = {
     LEFT: 2
 }
 
+// Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64)
+const _httpSession = new Soup.SessionAsync();
+Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
+
 function WeatherMenuButton() {
     this._init();
 }
@@ -465,13 +469,9 @@ WeatherMenuButton.prototype = {
 
     load_json_async: function(url, fun) {
         let here = this;
-        let session = new Soup.SessionAsync();
-
-        if (Soup.Session.prototype.add_feature != null)
-            Soup.Session.prototype.add_feature.call(session, new Soup.ProxyResolverDefault());
 
         let message = Soup.Message.new('GET', url);
-        session.queue_message(message, function(session, message) {
+        _httpSession.queue_message(message, function(session, message) {
             let jp = new Json.Parser();
             jp.load_from_data(message.response_body.data, -1);
             fun.call(here, jp.get_root().get_object());
