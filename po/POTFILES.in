@@ -1,2 +1,2 @@
 src/extension.js
-weather-extension-configurator.py
+src/weather-settings.js.in

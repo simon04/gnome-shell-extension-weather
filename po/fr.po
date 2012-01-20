@@ -272,69 +272,53 @@ msgid "Wind:"
 msgstr "Vent :"
 
 #: extension.js:689
+msgid "Reload Weather Informations"
+msgstr "Recharger les informations météo"
+
+#: extension.js && weather-settings.js
 msgid "Weather Settings"
 msgstr "Paramètres de la météo"
 
-#: weather-extension-configurator.py:113
+#: weather-settings.js
 msgid "City"
 msgstr "Ville"
 
-#: weather-extension-configurator.py:114
-msgid "Example : New York, USA"
-msgstr "Exemple : Toulouse, France"
+#: weather-settings.js
+msgid "Translate Condition"
+msgstr "Traduire les conditions"
 
-#: weather-extension-configurator.py:115
+#: weather-settings.js
 msgid "Temperature Unit"
 msgstr "Unité de temperature"
 
-#: weather-extension-configurator.py:117
+#: weather-settings.js
 msgid "Position in Panel"
 msgstr "Position sur le panel"
 
-#: weather-extension-configurator.py:118
-msgid "left"
-msgstr "gauche"
+#: weather-settings.js
+msgid "Left"
+msgstr "Gauche"
 
-#: weather-extension-configurator.py:118
-msgid "center"
-msgstr "centre"
+#: weather-settings.js
+msgid "Center"
+msgstr "Centre"
 
-#: weather-extension-configurator.py:118
-msgid "right"
-msgstr "droite"
+#: weather-settings.js
+msgid "Right"
+msgstr "Droite"
 
-#: weather-extension-configurator.py:119
-msgid "The position of this GNOME Shell extension in the panel. (Requires restart of GNOME Shell.)"
-msgstr "La position de cette extension GNOME Shell sur le panel. (Requière le redémarrage de GNOME Shell.)"
+#: weather-settings.js
+msgid "Translate Conditions"
+msgstr "Traduction des conditions"
 
-#: weather-extension-configurator.py:120
-msgid "Translate Weather Conditions"
-msgstr "Traduction des conditions météo"
-
-#: weather-extension-configurator.py:121
-msgid "If enabled, the condition is translated based on the weather code.\nIf disabled, the condition string from Yahoo is taken.\nNote: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string “PM Thunderstorms” cannot be expressed in terms of weather codes."
-msgstr "Si activé, les conditions météo seront traduites à partir du code météo.\nSi désactivé, elles seront en langue originale.\nNote: Activer la traduction peut parfois réduire l'acuité, p. ex., le code météo \"Orage nocturne\" n'existe pas et il sera traduit par \"Orage\"."
-
-#: weather-extension-configurator.py:122
+#: weather-settings.js
 msgid "Symbolic Icons"
 msgstr "Icones symboliques"
 
-#: weather-extension-configurator.py:123
-msgid "Display symbolic icons instead of full-colored icons"
-msgstr "Affiche des icones symboliques à la place des icones colorés"
+#: weather-settings.js
+msgid "Temperature in Panel"
+msgstr "Temperature sur le panel"
 
-#: weather-extension-configurator.py:124
-msgid "Show Text in Panel"
-msgstr "Afficher le texte dans le panel"
-
-#: weather-extension-configurator.py:125
-msgid "Display current temperature in panel. If disabled, only the current condition icon is shown. (Requires restart of GNOME Shell.)"
-msgstr "Affiche la temperature actuel dans le panel. Si désactivé, seul l'icone de l'actuel condition météo est affiché. (Requière le redémarrage de GNOME Shell.)"
-
-#: weather-extension-configurator.py:126
-msgid "Include Condition"
-msgstr "Inclure les conditions météo"
-
-#: weather-extension-configurator.py:127
-msgid "Whether to show the weather condition (e.g., “Windy”, “Clear”) in the panel."
-msgstr "Affiche la condition météo actuel (p. ex., “Venteux”, “Beau”) dans le panel."
+#: weather-settings.js
+msgid "Condition in Panel"
+msgstr "Conditions sur le panel"
