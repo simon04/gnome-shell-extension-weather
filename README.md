@@ -6,7 +6,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ----
 
-### What up ?!
+### What's up ?!
 
 * Now you can add more than one city !
 * New settings panel.
@@ -21,11 +21,11 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Depends
 
-* `git`.
-* `seed`.
-* `libglib2.0-dev`, without you'll get an error about `GLIB_GSETTINGS`.
-* `gnome-common`.
-* `gnome-tweak-tool`.
+* `git` : For cloning the extension.
+* `seed` : Needed by the weather settings panel.
+* `libglib2.0-dev` : Without you'll get an error about `GLIB_GSETTINGS`.
+* `gnome-common` : Automaking.
+* `gnome-tweak-tool` : Activating the extention.
 
 ----
 
