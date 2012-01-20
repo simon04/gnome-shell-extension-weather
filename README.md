@@ -6,6 +6,13 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ----
 
+### What up ?!
+
+* Now you can add more than one city !
+* New settings panel.
+
+----
+
 ### Screenshot
 
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.png)
@@ -15,7 +22,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 ### Depends
 
 * `git`.
-* `python2`.
+* `seed`.
 * `libglib2.0-dev`, without you'll get an error about `GLIB_GSETTINGS`.
 * `gnome-common`.
 * `gnome-tweak-tool`.
@@ -29,16 +36,15 @@ Run the following commands:
 	cd ~ && git clone git://github.com/Neroth/gnome-shell-extension-weather.git
 	cd ~/gnome-shell-extension-weather
 	./autogen.sh --prefix=/usr && make && sudo make install
-	sudo install -D weather-extension-configurator.py /usr/bin/weather-extension-configurator
 
-Active the extension in `gnome-tweak-tool` and restart GNOME Shell (`[Alt]+[F2]`, `r`).
+Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.
 
 That's it!
 
 ### Versions
 
-GNOME Shell 3.2 : OK
-GNOME Shell 3.0 : not tested => Use the `gnome3.0` branch.
+* GNOME Shell 3.2 : OK.
+* GNOME Shell 3.0 : not tested => Use the `gnome3.0` branch.
 
 ----
 
@@ -51,8 +57,8 @@ You can also use `dconf-editor` or `gsettings` to modify some parameters from th
 
 You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
 
-    gsettings set org.gnome.shell.extensions.weather city your_city
-    gsettings set org.gnome.shell.extensions.weather city "'your_city'"
+    gsettings set org.gnome.shell.extensions.weather city your_city (for more : your_city && another_city && ...)
+    gsettings set org.gnome.shell.extensions.weather city "'your_city (for more : your_city && another_city && ...)'"
 
 #### Temperature Units (optional, celsius by default)
 
