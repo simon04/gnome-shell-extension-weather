@@ -317,8 +317,20 @@ msgstr "Icones symboliques"
 
 #: weather-settings.js
 msgid "Temperature in Panel"
-msgstr "Temperature sur le panel"
+msgstr "Température sur le panel"
 
 #: weather-settings.js
-msgid "Condition in Panel"
+msgid "Conditions in Panel"
 msgstr "Conditions sur le panel"
+
+#: weather-settings.js
+msgid "Name of the city"
+msgstr "Nom de la ville"
+
+#: weather-settings.js
+msgid "Add..."
+msgstr "Ajouter"
+
+#: weather-settings.js
+msgid "Remove %s ?"
+msgstr "Supprimer %s"

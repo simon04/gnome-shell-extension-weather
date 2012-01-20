@@ -461,7 +461,7 @@ WeatherSetting.prototype =
 	this.addSwitch("icon_type");
 	this.addLabel(_("Temperature in Panel"));
 	this.addSwitch("text_in_panel");
-	this.addLabel(_("Condition in Panel"));
+	this.addLabel(_("Conditions in Panel"));
 	this.addSwitch("comment_in_panel");
 	},
 
