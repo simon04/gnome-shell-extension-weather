@@ -36,6 +36,7 @@ const Gtk = imports.gi.Gtk;
 const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 const Soup = imports.gi.Soup;
+const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Util = imports.misc.util;
 const _ = Gettext.gettext;
@@ -48,6 +49,7 @@ const PopupMenu = imports.ui.popupMenu;
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_CITY_KEY = 'city';
+const WEATHER_ACTUAL_CITY_KEY = 'actual-city';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
@@ -70,51 +72,12 @@ function WeatherMenuButton() {
     this._init();
 }
 
-function getSettings(schema) {
-    if (Gio.Settings.list_schemas().indexOf(schema) == -1)
-        throw _("Schema \"%s\" not found.").format(schema);
-    return new Gio.Settings({ schema: schema });
-}
-
 WeatherMenuButton.prototype = {
     __proto__: PanelMenu.Button.prototype,
 
     _init: function() {
         // Load settings
-        this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
-        this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
-        this._city  = this._settings.get_string(WEATHER_CITY_KEY);
-        this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-        this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-        this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
-        this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
-        this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
-        this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
-
-        // Watch settings for changes
-        let load_settings_and_refresh_weather = Lang.bind(this, function() {
-            this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
-            this._city  = this._settings.get_string(WEATHER_CITY_KEY);
-            this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-            this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-            this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
-            this.refreshWeather(false);
-        });
-        this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
-            this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-            this._weatherIcon.icon_type = this._icon_type;
-            this._currentWeatherIcon.icon_type = this._icon_type;
-            this._forecast[0].Icon.icon_type = this._icon_type;
-            this._forecast[1].Icon.icon_type = this._icon_type;
-            this.refreshWeather(false);
-        }));
-        this._settings.connect('changed::' + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
-            this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
-        }));
+        this.loadConfig();
 
         // Panel icon
         this._weatherIcon = new St.Icon({
@@ -174,6 +137,10 @@ WeatherMenuButton.prototype = {
         let item = new PopupMenu.PopupSeparatorMenuItem();
         this.menu.addMenuItem(item);
 
+        let item = new PopupMenu.PopupMenuItem(_("Reload Weather Informations"));
+        item.connect('activate', Lang.bind(this, function(){this.refreshWeather(false);}));
+        this.menu.addMenuItem(item);
+
         let item = new PopupMenu.PopupMenuItem(_("Weather Settings"));
         item.connect('activate', Lang.bind(this, this._onPreferencesActivate));
         this.menu.addMenuItem(item);
@@ -189,8 +156,210 @@ WeatherMenuButton.prototype = {
 
     },
 
+    noCity : function()
+    {
+    },
+
+	loadConfig : function()
+	{
+	var that = this;
+	var schema = WEATHER_SETTINGS_SCHEMA;
+	 	if (Gio.Settings.list_schemas().indexOf(schema) == -1)
+		throw _("Schema \"%s\" not found.").format(schema);
+   	this._settings = new Gio.Settings({ schema: schema });
+    this._settings.connect("changed",function(){that.refreshWeather(false);});
+	},
+
+	get _units()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_enum(WEATHER_UNIT_KEY);
+	},
+
+	set _units(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_enum(WEATHER_UNIT_KEY,v);
+	},
+
+	get _citys()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_string(WEATHER_CITY_KEY);
+	},
+
+	set _citys(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_string(WEATHER_CITY_KEY,v);
+	},
+
+	get _actual_city()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	var a = this._settings.get_int(WEATHER_ACTUAL_CITY_KEY);
+	var b = a;
+	var citys = this._citys.split(" && ");
+
+		if(typeof citys != "object")
+		citys = [citys];
+
+	var l = citys.length-1;
+
+		if(a < 0)
+		a = 0;
+
+		if(l < 0)
+		l = 0;
+
+		if(a > l)
+		a = l;
+
+	return a;
+	},
+
+	set _actual_city(a)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	var citys = this._citys.split(" && ");
+
+		if(typeof citys != "object")
+		citys = [citys];
+
+	var l = citys.length-1;
+
+		if(a < 0)
+		a = 0;
+
+		if(l < 0)
+		l = 0;
+
+		if(a > l)
+		a = l;
+
+	this._settings.set_int(WEATHER_ACTUAL_CITY_KEY,a);
+	},
+
+    get _city()
+    {
+    let citys = this._citys;
+    let citys = citys.split(" && ");
+		if(citys && typeof citys == "string")
+		citys = [citys];
+        if(!citys[0])
+        return "";
+    citys = citys[this._actual_city];
+	return citys;
+    },
+
+    set _city(v)
+    {
+    let citys = this._citys;
+    citys = citys.split(" && ");
+		if(citys && typeof citys == "string")
+		citys = [citys];
+        if(!citys[0])
+        citys = [];
+    citys.splice(this.actual_city,1,v);
+    citys = citys.join(" && ");
+        if(typeof citys != "string")
+        citys = citys[0];
+	this._citys = citys;
+    },
+
+	get _translate_condition()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+	},
+
+	set _translate_condition(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_boolean(WEATHER_TRANSLATE_CONDITION_KEY,v);
+	},
+
+	get _icon_type()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+	},
+
+	set _icon_type(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY,v == St.IconType.SYMBOLIC ? 1 : 0);
+	},
+
+	get _text_in_panel()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
+	},
+
+	set _text_in_panel(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY,v);
+	},
+
+	get _position_in_panel()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
+	},
+
+	set _position_in_panel(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_enum(WEATHER_POSITION_IN_PANEL_KEY,v);
+	},
+
+	get _comment_in_panel()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
+	},
+
+	set _comment_in_panel(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY,v);
+	},
+
+	get _refresh_interval()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_int(WEATHER_REFRESH_INTERVAL);
+	},
+
+	set _refresh_interval(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_int(WEATHER_REFRESH_INTERVAL,v);
+	},
+
     _onPreferencesActivate : function() {
-        Util.spawn(["weather-extension-configurator"]);
+    let app = Shell.AppSystem.get_default().lookup_app('weather-settings.desktop');
+    app.activate();
     },
 
     unit_to_url: function() {
@@ -453,16 +622,50 @@ WeatherMenuButton.prototype = {
             Soup.Session.prototype.add_feature.call(session, new Soup.ProxyResolverDefault());
 
         let message = Soup.Message.new('GET', url);
+
         session.queue_message(message, function(session, message) {
-        let jp = JSON.parse(message.response_body.data);
+            if(!message.response_body.data)
+            {
+            fun.call(here,0);
+            return 0;
+            }
+
+            try
+            {
+            let jp = JSON.parse(message.response_body.data);
             fun.call(here, jp);
+            }
+            catch(e)
+            {
+            fun.call(here,0);
+            return 0;
+            }
         });
     },
 
     refreshWeather: function(recurse) {
+        if(!this._city)
+        {
+        this.noCity();
+        return 0;
+        }
         this.load_json_async(this.get_weather_url(), function(json) {
-
-            try {
+            if(this.hold)
+            {
+                Mainloop.timeout_add_seconds(2, Lang.bind(this, function() {
+                this.refreshWeather(recurse);
+                }));
+            return 0;
+            }
+        this.hold = 1;
+                if(!json)
+                {
+                    Mainloop.timeout_add_seconds(2, Lang.bind(this, function() {
+                    this.refreshWeather(recurse);
+                    }));
+                this.hold = 0;
+                return 0;
+                }
             let weather = json.query.results.channel;
             let many = 0;
                 if(typeof weather[0] != "undefined")
@@ -529,10 +732,7 @@ WeatherMenuButton.prototype = {
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
             }
-
-            } catch(e) {
-                global.log('A ' + e.name + ' has occured: ' + e.message);
-            }
+        this.hold = 0;
         });
 
         // Repeatedly refresh weather if recurse is set
@@ -689,5 +889,3 @@ function enable() {
 function disable() {
     weatherMenu.destroy();
 }
-
-// vim:set ts=4 sw=4 et:
