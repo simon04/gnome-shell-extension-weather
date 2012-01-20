@@ -19,6 +19,11 @@
       <_summary>City to be displayed</_summary>
       <_description>Optionally, you can override the displayed city. This one is displayed instead of the one from the Yahoo service.</_description>
     </key>
+    <key name="actual-city" type="i">
+      <default>0</default>
+      <_summary>Actual City</_summary>
+      <_description></_description>
+    </key>
     <key name="translate-condition" type="b">
       <default>true</default>
       <_summary>Whether to translate the weather condition</_summary>
