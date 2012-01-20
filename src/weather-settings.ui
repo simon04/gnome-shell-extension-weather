@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkWindow" id="main-window">
+    <property name="can_focus">False</property>
+    <property name="resizable">False</property>
+    <child>
+      <object class="GtkBox" id="main-widget">
+  	  <property name="border-width">14</property>
+		  <child>
+		    <object class="GtkTable" id="left-widget">
+		      <property name="visible">True</property>
+		      <property name="can_focus">False</property>
+		      <property name="n_rows">2</property>
+		      <property name="n_columns">1</property>
+		      <property name="column_spacing">6</property>
+		      <child>
+		        <object class="GtkScrolledWindow" id="tree-scrolledwindow">
+		          <property name="visible">True</property>
+		          <property name="can_focus">True</property>
+		          <property name="shadow_type">in</property>
+		          <property name="min_content_width">200</property>
+		          <property name="min_content_height">250</property>
+		          <child>
+		            <object class="GtkTreeView" id="tree-treeview">
+		              <property name="visible">True</property>
+		              <property name="can_focus">True</property>
+		              <property name="headers_visible">False</property>
+		              <property name="show_expanders">False</property>
+		              <property name="level_indentation">12</property>
+		              <child internal-child="selection">
+		                <object class="GtkTreeSelection" id="treeview-selection">
+										<signal name="changed" handler="selection_changed"/>
+										</object>
+		              </child>
+		            </object>
+		          </child>
+		        </object>
+		        <packing>
+		          <property name="x_options">GTK_FILL</property>
+		        </packing>
+		      </child>
+		      <child>
+		        <object class="GtkToolbar" id="tree-toolbar">
+		          <property name="visible">True</property>
+		          <property name="can_focus">False</property>
+		          <property name="toolbar_style">icons</property>
+		          <property name="icon_size">1</property>
+		          <style>
+		            <class name="inline-toolbar"/>
+		          </style>
+		          <child>
+		            <object class="GtkToolButton" id="tree-toolbutton-add">
+		              <property name="visible">True</property>
+		              <property name="can_focus">False</property>
+		              <property name="use_action_appearance">False</property>
+		              <property name="icon_name">list-add-symbolic</property>
+		              <signal name="clicked" handler="add_button_clicked"/>
+		            </object>
+		            <packing>
+		              <property name="expand">False</property>
+		              <property name="homogeneous">True</property>
+		            </packing>
+		          </child>
+		          <child>
+		            <object class="GtkToolButton" id="tree-toolbutton-remove">
+		              <property name="visible">True</property>
+		              <property name="can_focus">False</property>
+		              <property name="use_action_appearance">False</property>
+		              <property name="icon_name">list-remove-symbolic</property>
+		              <signal name="clicked" handler="remove_button_clicked"/>
+		            </object>
+		            <packing>
+		              <property name="expand">False</property>
+		              <property name="homogeneous">True</property>
+		            </packing>
+		          </child>
+		        </object>
+		        <packing>
+		          <property name="top_attach">1</property>
+		          <property name="bottom_attach">2</property>
+		          <property name="x_options">GTK_FILL</property>
+		          <property name="y_options">GTK_SHRINK</property>
+		        </packing>
+		      </child>
+		    </object>
+		  </child>
+		  <child>
+          <object class="GtkBox" id="right-widget">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="homogeneous">True</property>
+						  <child>
+								<object class="GtkTable" id="right-widget-table">
+								<property name="visible">True</property>
+								<property name="can_focus">False</property>
+								<property name="n_rows">6</property>
+								<property name="n_columns">2</property>
+								<property name="column_spacing">36</property>
+								<property name="row_spacing">20</property>
+								<property name="margin_left">36</property>
+								</object>
+						  </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+          </packing>
+		  </child>
+		</object>
+		</child>
+  </object>
+</interface>

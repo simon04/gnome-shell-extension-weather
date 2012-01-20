@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=Weather Settings
+Comment=Weather preferences panel
+Exec=@EXTENSIONDIR@/weather-settings
+Icon=preferences-system
+Terminal=false
+Categories=GNOME;Settings;
+StartupNotify=true
+Name[fr]=Paramètres de la météo
+Comment[fr]=Panel de préférences météo
