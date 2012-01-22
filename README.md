@@ -58,7 +58,7 @@ You can also use `dconf-editor` or `gsettings` to modify some parameters from th
 You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
 
     gsettings set org.gnome.shell.extensions.weather city your_city (for more : your_city && another_city && ...)
-    gsettings set org.gnome.shell.extensions.weather city "'your_city (for more : your_city && another_city && ...)'"
+    gsettings set org.gnome.shell.extensions.weather city "your_city" (for more : your_city && another_city && ...)
 
 #### Actual City (`0` by default)
 
