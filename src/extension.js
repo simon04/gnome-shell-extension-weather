@@ -68,6 +68,10 @@ const WeatherPosition = {
     LEFT: 2
 }
 
+// Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64) (Simon Legner)
+const _httpSession = new Soup.SessionAsync();
+Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
+
 function WeatherMenuButton() {
     this._init();
 }
@@ -616,14 +620,10 @@ WeatherMenuButton.prototype = {
 
     load_json_async: function(url, fun) {
         let here = this;
-        let session = new Soup.SessionAsync();
-
-        if (Soup.Session.prototype.add_feature != null)
-            Soup.Session.prototype.add_feature.call(session, new Soup.ProxyResolverDefault());
 
         let message = Soup.Message.new('GET', url);
 
-        session.queue_message(message, function(session, message) {
+        _httpSession.queue_message(message, function(_httpSession, message) {
             if(!message.response_body.data)
             {
             fun.call(here,0);
@@ -650,20 +650,11 @@ WeatherMenuButton.prototype = {
         return 0;
         }
         this.load_json_async(this.get_weather_url(), function(json) {
-            if(this.hold)
-            {
-                Mainloop.timeout_add_seconds(2, Lang.bind(this, function() {
-                this.refreshWeather(recurse);
-                }));
-            return 0;
-            }
-        this.hold = 1;
                 if(!json)
                 {
                     Mainloop.timeout_add_seconds(2, Lang.bind(this, function() {
                     this.refreshWeather(recurse);
                     }));
-                this.hold = 0;
                 return 0;
                 }
             let weather = json.query.results.channel;
@@ -732,7 +723,6 @@ WeatherMenuButton.prototype = {
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
             }
-        this.hold = 0;
         });
 
         // Repeatedly refresh weather if recurse is set
