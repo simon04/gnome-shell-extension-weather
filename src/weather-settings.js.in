@@ -94,7 +94,7 @@ WeatherSetting.prototype =
 	var that = this;
 	var city = this.city.split(" && ");
 	var ac = this.actual_city;
-	var textDialog = _("Remove "+city[ac]+" ?");
+	var textDialog = _("Remove %s ?").format(city[ac]);
 	var dialog = new Gtk.Dialog({title : ""});
 	var label = new Gtk.Label({label : textDialog});
 

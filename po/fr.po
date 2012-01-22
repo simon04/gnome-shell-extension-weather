@@ -289,7 +289,7 @@ msgstr "Traduire les conditions"
 
 #: weather-settings.js
 msgid "Temperature Unit"
-msgstr "Unité de temperature"
+msgstr "Unité de température"
 
 #: weather-settings.js
 msgid "Position in Panel"
@@ -333,4 +333,4 @@ msgstr "Ajouter"
 
 #: weather-settings.js
 msgid "Remove %s ?"
-msgstr "Supprimer %s"
+msgstr "Supprimer %s ?"
