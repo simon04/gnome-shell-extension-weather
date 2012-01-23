@@ -95,6 +95,8 @@ WeatherSetting.prototype =
 	{
 	var that = this;
 	var city = this.city.split(" && ");
+		if(!city.length)
+		return 0;
 	var ac = this.actual_city;
 	var textDialog = _("Remove %s ?").replace("%s",city[ac]);
 	var dialog = new Gtk.Dialog({title : ""});
@@ -320,6 +322,8 @@ WeatherSetting.prototype =
 
 	refreshUI : function()
 	{
+	this.Window.get_object("tree-toolbutton-remove").sensitive = Boolean(this.city.length);
+
 		if(typeof this.liststore != "undefined")
 		this.liststore.clear();
 
