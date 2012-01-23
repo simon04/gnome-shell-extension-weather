@@ -188,14 +188,14 @@ WeatherMenuButton.prototype = {
 	this._settings.set_enum(WEATHER_UNIT_KEY,v);
 	},
 
-	get _citys()
+	get _cities()
 	{
 		if(!this._settings)
 		this.loadConfig();
 	return this._settings.get_string(WEATHER_CITY_KEY);
 	},
 
-	set _citys(v)
+	set _cities(v)
 	{
 		if(!this._settings)
 		this.loadConfig();
@@ -208,12 +208,12 @@ WeatherMenuButton.prototype = {
 		this.loadConfig();
 	var a = this._settings.get_int(WEATHER_ACTUAL_CITY_KEY);
 	var b = a;
-	var citys = this._citys.split(" && ");
+	var cities = this._cities.split(" && ");
 
-		if(typeof citys != "object")
-		citys = [citys];
+		if(typeof cities != "object")
+		cities = [cities];
 
-	var l = citys.length-1;
+	var l = cities.length-1;
 
 		if(a < 0)
 		a = 0;
@@ -231,12 +231,12 @@ WeatherMenuButton.prototype = {
 	{
 		if(!this._settings)
 		this.loadConfig();
-	var citys = this._citys.split(" && ");
+	var cities = this._cities.split(" && ");
 
-		if(typeof citys != "object")
-		citys = [citys];
+		if(typeof cities != "object")
+		cities = [cities];
 
-	var l = citys.length-1;
+	var l = cities.length-1;
 
 		if(a < 0)
 		a = 0;
@@ -252,29 +252,29 @@ WeatherMenuButton.prototype = {
 
     get _city()
     {
-    let citys = this._citys;
-    let citys = citys.split(" && ");
-		if(citys && typeof citys == "string")
-		citys = [citys];
-        if(!citys[0])
+    let cities = this._cities;
+    let cities = cities.split(" && ");
+		if(cities && typeof cities == "string")
+		cities = [cities];
+        if(!cities[0])
         return "";
-    citys = citys[this._actual_city];
-	return citys;
+    cities = cities[this._actual_city];
+	return cities;
     },
 
     set _city(v)
     {
-    let citys = this._citys;
-    citys = citys.split(" && ");
-		if(citys && typeof citys == "string")
-		citys = [citys];
-        if(!citys[0])
-        citys = [];
-    citys.splice(this.actual_city,1,v);
-    citys = citys.join(" && ");
-        if(typeof citys != "string")
-        citys = citys[0];
-	this._citys = citys;
+    let cities = this._cities;
+    cities = cities.split(" && ");
+		if(cities && typeof cities == "string")
+		cities = [cities];
+        if(!cities[0])
+        cities = [];
+    cities.splice(this.actual_city,1,v);
+    cities = cities.join(" && ");
+        if(typeof cities != "string")
+        cities = cities[0];
+	this._cities = cities;
     },
 
 	get _translate_condition()
