@@ -1,25 +1,16 @@
-## gnome-shell-extension-weather
+![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.png)
 
-gnome-shell-extension-weather is a simple extension for displaying weather notifications in GNOME Shell.
+**gnome-shell-extension-weather** is a simple extension for displaying weather informations from several cities in GNOME Shell.
+
+Compared to the original version, this fork brings you : multiple city, no WOEID, a symmetric style, and a settings panel in JavaScript (Seed).
 
 Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo! Weather](http://weather.yahoo.com/).
 
 ----
 
-### What's up ?!
+# Installation
 
-* Now you can add more than one city !
-* New settings panel.
-
-----
-
-### Screenshot
-
-![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.png)
-
-----
-
-### Depends
+Before the installation, make sure you have these dependencies :
 
 * `git`.
 * `seed`.
@@ -27,11 +18,16 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 * `gnome-common`.
 * `gnome-tweak-tool`.
 
-----
-
-### Installation
+## Package manager installation
 
 * [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
+
+Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.
+
+## Generic installation
+
+Run the following commands :
+
 
 For a generic installation, run the following commands:
 
@@ -41,19 +37,15 @@ For a generic installation, run the following commands:
 
 Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.
 
-That's it!
-
-### Versions
-
-* GNOME Shell 3.2 : OK.
-* GNOME Shell 3.0 : not tested => Use the `gnome3.0` branch.
-
 ----
 
-### Configuration
+# Configuration
 
 Use the `Weather Settings` button to edit the configuration.
-You can also use `dconf-editor` or `gsettings` to modify some parameters from the command line.
+
+![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/weather-settings.gif)
+
+You can also use `dconf-editor` or `gsettings` to modify some parameters from the command line :
 
 #### City (`Cambridge, MA` (GNOME Foundation) by default)
 
@@ -121,22 +113,20 @@ The interval to refresh the weather information may be set arbitrarily and is sp
 
 #### Restart GNOME Shell
 
-Don't forget to restart GNOME Shell:
-
-1. Restart GNOME Shell (`[Alt]+[F2]`, `r`)
-2. Fork this project as you like
+Don't forget to restart GNOME Shell (`[Alt]+[F2]`, `r`)
 
 ----
 
-### Licence
+# Licence
 
-Copyright (C) 2011
-Ecyrbe <ecyrbe+spam@gmail.com>,
-Timur Kristóf <venemo@msn.com>,
-Elad Alfassa <elad@fedoraproject.org>,
-Simon Legner <Simon.Legner@gmail.com>,
-Simon Claessens <gagalago@gmail.com>,
-Christian METZLER <neroth@xeked.com>
+Copyright (C) 2011 - 2012
+
+* Ecyrbe <ecyrbe+spam@gmail.com>,
+* Timur Kristóf <venemo@msn.com>,
+* Elad Alfassa <elad@fedoraproject.org>,
+* Simon Legner <Simon.Legner@gmail.com>,
+* Simon Claessens <gagalago@gmail.com>,
+* Christian METZLER <neroth@xeked.com>
 
 This file is part of gnome-shell-extension-weather.
 
@@ -145,4 +135,3 @@ gnome-shell-extension-weather is free software: you can redistribute it and/or m
 gnome-shell-extension-weather is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with gnome-shell-extension-weather.  If not, see <http://www.gnu.org/licenses/>.
-
