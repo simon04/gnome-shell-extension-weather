@@ -65,6 +65,8 @@ WeatherSetting.prototype =
 	var textDialog = _("Name of the city");
 	var dialog = new Gtk.Dialog({title : ""});
 	var entry = new Gtk.Entry();
+	entry.margin_top = 12;
+	entry.margin_bottom = 12;
 	var label = new Gtk.Label({label : textDialog});
 
 	dialog.set_border_width(12);
@@ -73,7 +75,7 @@ WeatherSetting.prototype =
 	dialog.set_transient_for(this.Window.get_object("main-window"));
 
 	dialog.add_button(Gtk.STOCK_CANCEL, 0);
-	dialog.add_button(_("Add..."), 1);
+	dialog.add_button(Gtk.STOCK_OK, 1);
 	var dialog_area = dialog.get_content_area();
 	dialog_area.pack_start(label);
 	dialog_area.pack_start(entry);
@@ -97,6 +99,7 @@ WeatherSetting.prototype =
 	var textDialog = _("Remove %s ?").replace("%s",city[ac]);
 	var dialog = new Gtk.Dialog({title : ""});
 	var label = new Gtk.Label({label : textDialog});
+	label.margin_bottom = 12;
 
 	dialog.set_border_width(12);
 	dialog.set_modal(1);
