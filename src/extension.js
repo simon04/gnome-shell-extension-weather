@@ -541,7 +541,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
             this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
 
-            this._currentWeatherLocationLabel.text = location + '...';
+            this._currentWeatherLocation.label = location + '...';
             // make the location act like a button
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
             this._currentWeatherLocation.url = weather.get_string_member('link');
@@ -616,9 +616,8 @@ WeatherMenuButton.prototype = {
         });
 
         // The location name and link to the details page
-        this._currentWeatherLocation = new St.Button({ reactive: true });
-        this._currentWeatherLocationLabel = new St.Label({ text: _('Please wait') });
-        this._currentWeatherLocation.set_child(this._currentWeatherLocationLabel);
+        this._currentWeatherLocation = new St.Button({ reactive: true,
+                                                   label: _('Please wait') });
         this._currentWeatherLocation.connect('clicked', Lang.bind(this, function() {
             if (this._currentWeatherLocation.url == null)
                 return;
