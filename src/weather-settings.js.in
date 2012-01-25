@@ -75,7 +75,12 @@ WeatherSetting.prototype =
 	dialog.set_transient_for(this.Window.get_object("main-window"));
 
 	dialog.add_button(Gtk.STOCK_CANCEL, 0);
-	dialog.add_button(Gtk.STOCK_OK, 1);
+	var d = dialog.add_button(Gtk.STOCK_YES, 1);
+
+	d.set_can_default(true);
+	dialog.set_default(d);
+	entry.activates_default = true;
+
 	var dialog_area = dialog.get_content_area();
 	dialog_area.pack_start(label);
 	dialog_area.pack_start(entry);
@@ -109,7 +114,11 @@ WeatherSetting.prototype =
 	dialog.set_transient_for(this.Window.get_object("main-window"));
 
 	dialog.add_button(Gtk.STOCK_NO, 0);
-	dialog.add_button(Gtk.STOCK_YES, 1);
+	var d = dialog.add_button(Gtk.STOCK_YES, 1);
+
+	d.set_can_default(true);
+	dialog.set_default(d);
+
 	var dialog_area = dialog.get_content_area();
 	dialog_area.pack_start(label);
 		dialog.signal.response.connect(function(w, response_id)
