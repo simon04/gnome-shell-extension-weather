@@ -126,9 +126,7 @@ WeatherMenuButton.prototype = {
         // Current weather
         this._currentWeather = new St.Bin({ style_class: 'current' });
         // Future weather
-        this._futureWeather = new St.Bin({ style_class: 'forecast' /*, x_align: St.Align.START*/});
-        // Setting button
-        this._settingWeather = new St.Bin({ style_class: 'setting' });
+        this._futureWeather = new St.Bin({ style_class: 'forecast'});
 
         // Putting the popup item together
         this.menu.addActor(this._currentWeather);
@@ -169,7 +167,7 @@ WeatherMenuButton.prototype = {
 	var that = this;
 	var schema = WEATHER_SETTINGS_SCHEMA;
 	 	if (Gio.Settings.list_schemas().indexOf(schema) == -1)
-		throw _("Schema \"%s\" not found.").format(schema);
+		throw _("Schema \"%s\" not found.").replace("%s",schema);
    	this._settings = new Gio.Settings({ schema: schema });
     this._settings.connect("changed",function(){that.refreshWeather(false);});
 	},
