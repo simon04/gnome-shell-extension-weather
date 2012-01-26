@@ -43,6 +43,10 @@ Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak
 
 Use the `Weather Settings` button to edit the configuration.
 
+**Always use this format when you add a city : "My City, My Country".**
+
+Example : "New york, USA", "Paris, France", "Tokyo, Japan" ...
+
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/weather-settings.gif)
 
 You can also use `dconf-editor` or `gsettings` to modify some parameters from the command line :
