@@ -28,7 +28,7 @@ Add the PPA **ppa:xeked/gnome** in your source list, update package list, instal
 	sudo apt-get update
 	sudo apt-get install gnome-shell-extension-weather
 
----
+**Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.**
 
 ### [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
 
@@ -36,8 +36,6 @@ Add the PPA **ppa:xeked/gnome** in your source list, update package list, instal
 	tar xvzf gnome-shell-extension-weather-neroth-git.tar.gz
 	cd gnome-shell-extension-weather-neroth-git
 	makepkg && sudo pacman -U *.pkg.tar.xz
-
----
 
 **Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.**
 
