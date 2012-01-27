@@ -20,22 +20,36 @@ Before the installation, make sure you have these dependencies :
 
 ## Package manager installation
 
-* [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
+### [Ubuntu](https://launchpad.net/~xeked/+archive/gnome/+packages)
 
-Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.
+Add the PPA **ppa:xeked/gnome** in your source list, update package list, install **gnome-shell-extension-weather**.
+
+	sudo add-apt-repository ppa:xeked/gnome
+	sudo apt-get update
+	sudo apt-get install gnome-shell-extension-weather
+
+---
+
+### [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
+
+	wget https://aur.archlinux.org/packages/gn/gnome-shell-extension-weather-neroth-git/gnome-shell-extension-weather-neroth-git.tar.gz
+	tar xvzf gnome-shell-extension-weather-neroth-git.tar.gz
+	cd gnome-shell-extension-weather-neroth-git
+	makepkg && sudo pacman -U *.pkg.tar.xz
+
+---
+
+**Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.**
 
 ## Generic installation
 
 Run the following commands :
 
-
-For a generic installation, run the following commands:
-
 	cd ~ && git clone git://github.com/Neroth/gnome-shell-extension-weather.git
 	cd ~/gnome-shell-extension-weather
 	./autogen.sh --prefix=/usr && make && sudo make install
 
-Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.
+**Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.**
 
 ----
 
