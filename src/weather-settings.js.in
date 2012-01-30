@@ -470,7 +470,7 @@ WeatherSetting.prototype =
 	this.addLabel(_("Temperature Unit"));
 	this.addComboBox(["°C","°F"],"units");
 	this.addLabel(_("Position in Panel"));
-	this.addComboBox([_("Center"),_("Left"),_("Right")],"position_in_panel");
+	this.addComboBox([_("Center"),_("Right"),_("Left")],"position_in_panel");
 	this.addLabel(_("Translate Conditions"));
 	this.addSwitch("translate_condition");
 	this.addLabel(_("Symbolic Icons"));
