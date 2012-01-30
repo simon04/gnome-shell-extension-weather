@@ -25,6 +25,7 @@ Before the installation, make sure you have these dependencies :
 Add the PPA **ppa:xeked/gnome** in your source list, update package list, install **gnome-shell-extension-weather**.
 
 	sudo add-apt-repository ppa:xeked/gnome
+	sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0B5C004838624188
 	sudo apt-get update
 	sudo apt-get install gnome-shell-extension-weather
 
