@@ -225,7 +225,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
@@ -535,11 +535,17 @@ WeatherMenuButton.prototype = {
                 this._weatherInfo.text = (temperature + ' ' + this.unit_to_unicode());
 
             this._currentWeatherSummary.text = comment;
-            this._currentWeatherLocation.text = location;
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
             this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+            this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+
+            this._currentWeatherLocation.label = location + '...';
+            // make the location act like a button
+            this._currentWeatherLocation.style_class = 'weather-current-location-link';
+            this._currentWeatherLocation.url = weather.get_string_member('link');
+
 
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
@@ -608,7 +614,17 @@ WeatherMenuButton.prototype = {
             text: _('Loading ...'),
             style_class: 'weather-current-summary'
         });
-        this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
+
+        // The location name and link to the details page
+        this._currentWeatherLocation = new St.Button({ reactive: true,
+                                                   label: _('Please wait') });
+        this._currentWeatherLocation.connect('clicked', Lang.bind(this, function() {
+            if (this._currentWeatherLocation.url == null)
+                return;
+            Gio.app_info_launch_default_for_uri(
+                    this._currentWeatherLocation.url,
+                    global.create_app_launch_context());
+        }));
 
         let bb = new St.BoxLayout({
             vertical: true,
