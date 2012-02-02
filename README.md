@@ -16,7 +16,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
 
-Make package for AUR and install.
+Make package form AUR and install.
 
 	wget https://aur.archlinux.org/packages/gn/gnome-shell-extension-weather-neroth-git/gnome-shell-extension-weather-neroth-git.tar.gz
 	tar xvzf gnome-shell-extension-weather-neroth-git.tar.gz
