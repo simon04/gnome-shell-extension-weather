@@ -10,7 +10,34 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 # Installation
 
-Before the installation, make sure you have these dependencies :
+**At end of installation restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.**
+
+## Package manager
+
+### [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
+
+Make package for AUR and install.
+
+	wget https://aur.archlinux.org/packages/gn/gnome-shell-extension-weather-neroth-git/gnome-shell-extension-weather-neroth-git.tar.gz
+	tar xvzf gnome-shell-extension-weather-neroth-git.tar.gz
+	cd gnome-shell-extension-weather-neroth-git && makepkg -si
+
+### [Ubuntu](https://launchpad.net/~xeked/+archive/gnome/+packages)
+
+Add the PPA **ppa:xeked/gnome** in your source list, add key **0B5C004838624188** form `keyserver.ubuntu.com`, update package list and install **gnome-shell-extension-weather**.
+
+	sudo add-apt-repository ppa:xeked/gnome
+	sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0B5C004838624188
+	sudo apt-get update
+	sudo apt-get install gnome-shell-extension-weather
+
+### [ALT Linux](http://packages.altlinux.org/en/Sisyphus/srpms/gnome-shell-extension-weather)
+
+Install **gnome-shell-extension-weather** with apt-rpm from Sisyphus.
+
+## Generic
+
+Make sure you have these dependencies :
 
 * `git`.
 * `seed`.
@@ -18,36 +45,11 @@ Before the installation, make sure you have these dependencies :
 * `gnome-common`.
 * `gnome-tweak-tool`.
 
-## Package manager installation
-
-### [Ubuntu](https://launchpad.net/~xeked/+archive/gnome/+packages)
-
-Add the PPA **ppa:xeked/gnome** in your source list, update package list, install **gnome-shell-extension-weather**.
-
-	sudo add-apt-repository ppa:xeked/gnome
-	sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0B5C004838624188
-	sudo apt-get update
-	sudo apt-get install gnome-shell-extension-weather
-
-**Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.**
-
-### [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
-
-	wget https://aur.archlinux.org/packages/gn/gnome-shell-extension-weather-neroth-git/gnome-shell-extension-weather-neroth-git.tar.gz
-	tar xvzf gnome-shell-extension-weather-neroth-git.tar.gz
-	cd gnome-shell-extension-weather-neroth-git && makepkg -si
-
-**Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.**
-
-## Generic installation
-
 Run the following commands :
 
 	cd ~ && git clone git://github.com/Neroth/gnome-shell-extension-weather.git
 	cd ~/gnome-shell-extension-weather
 	./autogen.sh --prefix=/usr && make && sudo make install
-
-**Restart GNOME Shell (`[Alt]+[F2]`, `r`) and active the extension in `gnome-tweak-tool`.**
 
 ----
 
