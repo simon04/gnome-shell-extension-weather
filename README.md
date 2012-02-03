@@ -35,6 +35,9 @@ Add the PPA **ppa:xeked/gnome** in your source list, add key **0B5C004838624188*
 
 Install **gnome-shell-extension-weather** with apt-rpm from Sisyphus.
 
+	sudo apt-get update
+	sudo apt-get install gnome-shell-extension-weather
+
 ## Generic
 
 Make sure you have these dependencies :
