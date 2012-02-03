@@ -11,48 +11,39 @@
   <schema id="org.gnome.shell.extensions.weather" path="/org/gnome/shell/extensions/weather/">
     <key name="unit" enum="org.gnome.shell.extensions.weather.unit">
       <default>'celsius'</default>
-      <_summary>Units</_summary>
-      <_description>Choose the unit system for temperatures etc. Allowed values are 'celsius' or 'fahrenheit'.</_description>
+      <_summary>Temperature Unit</_summary>
     </key>
     <key name="city" type="s">
       <default>'Cambridge, MA'</default>
       <_summary>City to be displayed</_summary>
-      <_description>Optionally, you can override the displayed city. This one is displayed instead of the one from the Yahoo service.</_description>
     </key>
     <key name="actual-city" type="i">
       <default>0</default>
       <_summary>Actual City</_summary>
-      <_description></_description>
     </key>
     <key name="translate-condition" type="b">
       <default>true</default>
-      <_summary>Whether to translate the weather condition</_summary>
-      <_description>Whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.</_description>
+      <_summary>Translate Conditions</_summary>
     </key>
     <key name="use-symbolic-icons" type="b">
       <default>true</default>
-      <_summary>Whether to use symbolic icons</_summary>
-      <_description>Whether to use symbolic icons instead of full-colored icons.</_description>
+      <_summary>Symbolic Icons</_summary>
     </key>
     <key name="show-text-in-panel" type="b">
       <default>true</default>
-      <_summary>Whether to show the text in the panel.</_summary>
-      <_description>Whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart). If only weather condition text is undesired, consider show-comment-in-panel option.</_description>
+      <_summary>Temperature in Panel</_summary>
     </key>
     <key name="show-comment-in-panel" type="b">
       <default>false</default>
-      <_summary>Whether to show the comment in the panel.</_summary>
-      <_description>Whether to show the comment (aka. weather condition text, e.g. "Windy", "Clear") in the panel. Note that the temperature is still shown (if undesired, consider show-text-in-panel option).</_description>
+      <_summary>Conditions in Panel</_summary>
     </key>
     <key name="position-in-panel" enum="org.gnome.shell.extensions.weather.position">
       <default>'center'</default>
-      <_summary>Position in panel</_summary>
-      <_description>Set the position of this GNOME Shell extension in the panel to either 'center', 'left' or 'right' (requires restart).</_description>
+      <_summary>Position in Panel</_summary>
     </key>
     <key name="refresh-interval" type="i">
       <default>300</default>
-      <_summary>Refresh interval in seconds</_summary>
-      <_description>The interval in seconds to refresh the weather information.</_description>
+      <_summary>Refresh interval</_summary>
     </key>
   </schema>
 </schemalist>

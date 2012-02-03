@@ -1,2 +1,3 @@
 src/extension.js
 src/weather-settings.js.in
+src/org.gnome.shell.extensions.weather.gschema.xml.in
