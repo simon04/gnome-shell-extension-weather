@@ -77,90 +77,86 @@ function WeatherMenuButton() {
 }
 
 WeatherMenuButton.prototype = {
-    __proto__: PanelMenu.Button.prototype,
+	__proto__: PanelMenu.Button.prototype,
 
-    _init: function() {
-        // Load settings
-        this.loadConfig();
+	_init: function() {
+	// Load settings
+	this.loadConfig();
 
-        // Panel icon
-        this._weatherIcon = new St.Icon({
-            icon_type: this._icon_type,
-            icon_name: 'view-refresh-symbolic',
-            style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
-        });
+	// Panel icon
+	this._weatherIcon = new St.Icon({
+	    icon_type: this._icon_type,
+	    icon_name: 'view-refresh-symbolic',
+	    style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
+	});
 
-        // Label
-        this._weatherInfo = new St.Label({ text: _('...') });
+	// Label
+	this._weatherInfo = new St.Label({ text: _('...') });
 
-        // Panel menu item - the current class
-        let menuAlignment = 0.25;
-        if (St.Widget.get_default_direction() == St.TextDirection.RTL)
-            menuAlignment = 1.0 - menuAlignment;
-        PanelMenu.Button.prototype._init.call(this, menuAlignment);
+	// Panel menu item - the current class
+	let menuAlignment = 0.25;
+	if (St.Widget.get_default_direction() == St.TextDirection.RTL)
+	    menuAlignment = 1.0 - menuAlignment;
+	PanelMenu.Button.prototype._init.call(this, menuAlignment);
 
-        // Putting the panel item together
-        let topBox = new St.BoxLayout();
-        topBox.add_actor(this._weatherIcon);
-        if (this._text_in_panel)
-            topBox.add_actor(this._weatherInfo);
-        this.actor.add_actor(topBox);
+	// Putting the panel item together
+	let topBox = new St.BoxLayout();
+	topBox.add_actor(this._weatherIcon);
+	if (this._text_in_panel)
+	    topBox.add_actor(this._weatherInfo);
+	this.actor.add_actor(topBox);
 
-        let children = null;
-        switch (this._position_in_panel) {
-            case WeatherPosition.LEFT:
-                children = Main.panel._leftBox.get_children();
-                Main.panel._leftBox.insert_actor (this.actor, children.length-1);
-                break;
-            case WeatherPosition.CENTER:
-                Main.panel._centerBox.add(this.actor, { y_fill: true });
-                break;
-            case WeatherPosition.RIGHT:
-                children = Main.panel._rightBox.get_children();
-                Main.panel._rightBox.insert_actor(this.actor, children.length-1);
-                break;
-        }
+	let children = null;
+	switch (this._position_in_panel) {
+	    case WeatherPosition.LEFT:
+		children = Main.panel._leftBox.get_children();
+		Main.panel._leftBox.insert_actor (this.actor, children.length-1);
+		break;
+	    case WeatherPosition.CENTER:
+		Main.panel._centerBox.add(this.actor, { y_fill: true });
+		break;
+	    case WeatherPosition.RIGHT:
+		children = Main.panel._rightBox.get_children();
+		Main.panel._rightBox.insert_actor(this.actor, children.length-1);
+		break;
+	}
 
-        Main.panel._menus.addMenu(this.menu);
+	Main.panel._menus.addMenu(this.menu);
 
-        // Current weather
-        this._currentWeather = new St.Bin({ style_class: 'current' });
-        // Future weather
-        this._futureWeather = new St.Bin({ style_class: 'forecast'});
+	// Current weather
+	this._currentWeather = new St.Bin({ style_class: 'current' });
+	// Future weather
+	this._futureWeather = new St.Bin({ style_class: 'forecast'});
 
-        // Putting the popup item together
-        this.menu.addActor(this._currentWeather);
+	// Putting the popup item together
+	this.menu.addActor(this._currentWeather);
 
-        let item = new PopupMenu.PopupSeparatorMenuItem();
-        this.menu.addMenuItem(item);
+	let item = new PopupMenu.PopupSeparatorMenuItem();
+	this.menu.addMenuItem(item);
 
-        this.menu.addActor(this._futureWeather);
+	this.menu.addActor(this._futureWeather);
 
-        let item = new PopupMenu.PopupSeparatorMenuItem();
-        this.menu.addMenuItem(item);
+	let item = new PopupMenu.PopupSeparatorMenuItem();
+	this.menu.addMenuItem(item);
 
-        let item = new PopupMenu.PopupMenuItem(_("Reload Weather Informations"));
-        item.connect('activate', Lang.bind(this, function(){this.refreshWeather(false);}));
-        this.menu.addMenuItem(item);
+	let item = new PopupMenu.PopupMenuItem(_("Reload Weather Informations"));
+	item.connect('activate', Lang.bind(this, function(){this.refreshWeather(false);}));
+	this.menu.addMenuItem(item);
 
-        let item = new PopupMenu.PopupMenuItem(_("Weather Settings"));
-        item.connect('activate', Lang.bind(this, this._onPreferencesActivate));
-        this.menu.addMenuItem(item);
+	let item = new PopupMenu.PopupMenuItem(_("Weather Settings"));
+	item.connect('activate', Lang.bind(this, this._onPreferencesActivate));
+	this.menu.addMenuItem(item);
 
-        // Items
-        this.showLoadingUi();
+	// Items
+	this.showLoadingUi();
 
-        this.rebuildCurrentWeatherUi();
-        this.rebuildFutureWeatherUi();
+	this.rebuildCurrentWeatherUi();
+	this.rebuildFutureWeatherUi();
 
-        // Show weather
-        this.refreshWeather(true);
+	// Show weather
+	this.refreshWeather(true);
 
-    },
-
-    noCity : function()
-    {
-    },
+	},
 
 	loadConfig : function()
 	{
@@ -169,7 +165,7 @@ WeatherMenuButton.prototype = {
 	 	if (Gio.Settings.list_schemas().indexOf(schema) == -1)
 		throw _("Schema \"%s\" not found.").replace("%s",schema);
    	this._settings = new Gio.Settings({ schema: schema });
-    this._settings.connect("changed",function(){that.refreshWeather(false);});
+	this._settings.connect("changed",function(){that.refreshWeather(false);});
 	},
 
 	get _units()
@@ -248,32 +244,32 @@ WeatherMenuButton.prototype = {
 	this._settings.set_int(WEATHER_ACTUAL_CITY_KEY,a);
 	},
 
-    get _city()
-    {
-    let cities = this._cities;
-    let cities = cities.split(" && ");
+	get _city()
+	{
+	let cities = this._cities;
+	let cities = cities.split(" && ");
 		if(cities && typeof cities == "string")
 		cities = [cities];
-        if(!cities[0])
-        return "";
-    cities = cities[this._actual_city];
+		if(!cities[0])
+		return "";
+	cities = cities[this._actual_city];
 	return cities;
-    },
+	},
 
-    set _city(v)
-    {
-    let cities = this._cities;
-    cities = cities.split(" && ");
+	set _city(v)
+	{
+	let cities = this._cities;
+	cities = cities.split(" && ");
 		if(cities && typeof cities == "string")
 		cities = [cities];
-        if(!cities[0])
-        cities = [];
-    cities.splice(this.actual_city,1,v);
-    cities = cities.join(" && ");
-        if(typeof cities != "string")
-        cities = cities[0];
+		if(!cities[0])
+		cities = [];
+	cities.splice(this.actual_city,1,v);
+	cities = cities.join(" && ");
+		if(typeof cities != "string")
+		cities = cities[0];
 	this._cities = cities;
-    },
+	},
 
 	get _translate_condition()
 	{
@@ -643,18 +639,10 @@ WeatherMenuButton.prototype = {
 
     refreshWeather: function(recurse) {
         if(!this._city)
-        {
-        this.noCity();
         return 0;
-        }
         this.load_json_async(this.get_weather_url(), function(json) {
                 if(!json)
-                {
-                    Mainloop.timeout_add_seconds(2, Lang.bind(this, function() {
-                    this.refreshWeather(recurse);
-                    }));
                 return 0;
-                }
             let weather = json.query.results.channel;
             let many = 0;
                 if(typeof weather[0] != "undefined")
