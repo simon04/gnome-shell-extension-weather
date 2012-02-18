@@ -556,7 +556,7 @@ WeatherMenuButton.prototype = {
                     comment = this.get_weather_condition(code);
 
                 forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
-                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + this.unit_to_unicode();
+                forecastUi.Temperature.text = t_low + ' \u2013 ' + t_high + ' ' + this.unit_to_unicode();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
             }
