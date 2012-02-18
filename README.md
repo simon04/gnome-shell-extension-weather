@@ -54,6 +54,15 @@ You can modify the temperature unit using one of the following commands:
     gsettings set org.gnome.shell.extensions.weather unit celsius
     gsettings set org.gnome.shell.extensions.weather unit fahrenheit
 
+#### Wind Speed Units (optional, kilometers per hour (km/h) by default)
+
+You can modify the wind speed unit using one of the following commands:
+
+    gsettings set org.gnome.shell.extensions.weather wind-speed-unit kph
+    gsettings set org.gnome.shell.extensions.weather wind-speed-unit mph
+    gsettings set org.gnome.shell.extensions.weather wind-speed-unit m/s
+    gsettings set org.gnome.shell.extensions.weather wind-speed-unit knots
+
 #### Displayed Location (optional)
 
 Sometimes your WOEID location isn't quite right (it's the next major city around). To customise the displayed city you can type:

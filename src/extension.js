@@ -47,6 +47,7 @@ const PopupMenu = imports.ui.popupMenu;
 // Settings
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
+const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
@@ -61,11 +62,22 @@ const WeatherUnits = {
     CELSIUS: 0,
     FAHRENHEIT: 1
 }
+const WeatherWindSpeedUnits = {
+    KPH: 0,
+    MPH: 1,
+    MPS: 2,
+    KNOTS: 3
+}
 const WeatherPosition = {
     CENTER: 0,
     RIGHT: 1,
     LEFT: 2
 }
+
+// Conversion Factors
+const WEATHER_CONV_MPH_IN_MPS = 2.23693629;
+const WEATHER_CONV_KPH_IN_MPS = 3.6;
+const WEATHER_CONV_KNOTS_IN_MPS = 1.94384449;
 
 // Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64)
 const _httpSession = new Soup.SessionAsync();
@@ -88,6 +100,7 @@ WeatherMenuButton.prototype = {
         // Load settings
         this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
         this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
+        this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
@@ -100,6 +113,7 @@ WeatherMenuButton.prototype = {
         // Watch settings for changes
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
             this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
+            this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
             this._city  = this._settings.get_string(WEATHER_CITY_KEY);
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
@@ -108,6 +122,7 @@ WeatherMenuButton.prototype = {
             this.refreshWeather(false);
         });
         this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_WIND_SPEED_UNIT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
@@ -538,6 +553,43 @@ WeatherMenuButton.prototype = {
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
+
+            // Override wind units with our preference
+            // Need to consider what units the Yahoo API has returned it in
+            switch (this._wind_speed_units) {
+                case WeatherWindSpeedUnits.KPH:
+                    // Round to whole units
+                    if (this._units == WeatherUnits.FAHRENHEIT) {
+                        wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KPH_IN_MPS);
+                        wind_unit = 'km/h';
+                    }
+                    // Otherwise no conversion needed - already in correct units
+                    break;
+                case WeatherWindSpeedUnits.MPH:
+                    // Round to whole units
+                    if (this._units == WeatherUnits.CELSIUS) {
+                        wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_MPH_IN_MPS);
+                        wind_unit = 'mph';
+                    }
+                    // Otherwise no conversion needed - already in correct units
+                    break;
+                case WeatherWindSpeedUnits.MPS:
+                    // Precision to one decimal place as 1 m/s is quite a large unit
+                    if (this._units == WeatherUnits.CELSIUS)
+                        wind = Math.round ((wind / WEATHER_CONV_KPH_IN_MPS) * 10)/ 10;
+                    else
+                        wind = Math.round ((wind / WEATHER_CONV_MPH_IN_MPS) * 10)/ 10;
+                    wind_unit = 'm/s';
+                    break;
+                case WeatherWindSpeedUnits.KNOTS:
+                    // Round to whole units
+                    if (this._units == WeatherUnits.CELSIUS)
+                        wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
+                    else
+                        wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
+                    wind_unit = 'knots';
+                    break;
+            }
             this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
             this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
 
@@ -562,7 +614,7 @@ WeatherMenuButton.prototype = {
                     comment = this.get_weather_condition(code);
 
                 forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
-                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + this.unit_to_unicode();
+                forecastUi.Temperature.text = t_low + ' \u2013 ' + t_high + ' ' + this.unit_to_unicode();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
             }

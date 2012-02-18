@@ -114,6 +114,8 @@ class WeatherConfigurator:
                 "The Where On Earth ID determinees the location/city")
         self.add_radio('unit', 'Temperature Unit',
                 [(0, 'celsius'), (1, 'fahrenheit')])
+        self.add_radio('wind-speed-unit', 'Wind Speed Unit',
+                [(0, 'kph'), (1, 'mph'), (2, 'm/s'), (3, 'knots')])
         self.add_text('city', 'Override Location Label',
                 "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
         self.add_radio('position-in-panel', 'Position in Panel',
