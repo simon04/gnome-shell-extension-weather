@@ -13,16 +13,15 @@ The weather report, including forecasts for today and tomorrow, is fetched from 
 
 ### Configuration
 
-cinnamon-weather uses gsettings to save your configuration. You can use `gsettings` from the command line with tab completion.
+Use `gsettings` from the command line, with tab completion.
 
 #### Location
 
 At the moment, only WOEIDs consisting of 4 uppercase letters followed by 4 digits are supported. Determine your WOEID using [edg3.co.uk](http://edg3.co.uk/snippets/weather-location-codes/) or [xoap.weather.com](http://xoap.weather.com/search/search?where=Innsbruck).
 
-You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
+You can specify your location using the following command.
 
     gsettings set cinnamon-weather@mockturtl woeid your_woeid
-    gsettings set cinnamon-weather@mockturtl woeid "'your_woeid'"
 
 #### Temperature Units (optional, celsius by default)
 
@@ -85,4 +84,4 @@ The interval to refresh the weather information may be set arbitrarily and is sp
 Don't forget to restart Cinnamon:
 
 1. Restart Cinnamon (`[Alt]+[F2]`, `r`)
-2. Fork this project as you like
+2. Fork this [howyalike](http://www.youtube.com/watch?v=63Abcq3FRTc)
