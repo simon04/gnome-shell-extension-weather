@@ -33,8 +33,8 @@
     
 const Applet = imports.ui.applet; 
 const Cairo = imports.cairo;
-//const Gettext = imports.gettext.domain('cinnamon-applets');
-//const _ = Gettext.gettext;
+const Gettext = imports.gettext.domain('cinnamon-applets');
+const _ = Gettext.gettext;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
