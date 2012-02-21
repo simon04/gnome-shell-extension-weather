@@ -1,6 +1,6 @@
 ## cinnamon-weather
 
-cinnamon-weather is a simple applet for displaying weather notifications in Cinnamon.
+cinnamon-weather is a simple applet for displaying weather notifications in Cinnamon.  It's a fork of [gnome-shell-extension-weather](https://github.com/simon04/gnome-shell-extension-weather).
 
 Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo! Weather](http://weather.yahoo.com/).
 
