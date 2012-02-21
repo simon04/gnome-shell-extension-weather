@@ -2,7 +2,7 @@
 
 cinnamon-weather is a simple applet for displaying local weather conditions in Cinnamon.  It's a fork of [gnome-shell-extension-weather](https://github.com/simon04/gnome-shell-extension-weather).
 
-Currently, the weather report including forecast for today and tomorrow is fetched from [Yahoo! Weather](http://weather.yahoo.com/).
+The weather report, including forecasts for today and tomorrow, is fetched from [Yahoo! Weather](http://weather.yahoo.com/).
 
 ----
 
@@ -10,8 +10,6 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 * Generic: For a generic installation, run the following commands:
   `./test`  
-
-That's it!
 
 ### Configuration
 
