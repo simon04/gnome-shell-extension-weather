@@ -26,14 +26,14 @@
 # original version of: Igor Ingultsov aka inv, aka invy
 
 """
-gnome-shell-weather-extension-config
-Tool for editing gnome-shell-weather-extension-config preference as
-an alternative of dconf-editor
+cinnamon-weather-settings
+Tool for editing cinnamon-weather preferences as
+an alternative of dconf-editor or gsettings
 """
 
 from gi.repository import Gtk, Gio, Gdk
 
-class WeatherConfigurator:
+class CinnamonWeatherSettings:
 
     def keypress(self, widget, event):
         if event.keyval == 65307: #Gtk.keysyms.Escape:
@@ -101,10 +101,10 @@ class WeatherConfigurator:
         return (button, label)
 
     def __init__(self):
-        self.schema = Gio.Settings('org.gnome.shell.extensions.weather')
+        self.schema = Gio.Settings('cinnamon-weather@mockturtl')
         keys = self.schema.keys()
 
-        self.window = Gtk.Window(title='Gnome Shell: Weather Configurator')
+        self.window = Gtk.Window(title='Cinnamon Weather Settings')
         self.window.connect('destroy', Gtk.main_quit)
         self.window.connect('key-press-event', self.keypress)
 
@@ -114,19 +114,19 @@ class WeatherConfigurator:
                 "The Where On Earth ID determinees the location/city")
         self.add_radio('unit', 'Temperature Unit',
                 [(0, 'celsius'), (1, 'fahrenheit')])
-        self.add_radio('wind-speed-unit', 'Wind Speed Unit',
-                [(0, 'kph'), (1, 'mph'), (2, 'm/s'), (3, 'knots')])
+#        self.add_radio('wind-speed-unit', 'Wind Speed Unit',
+#                [(0, 'kph'), (1, 'mph'), (2, 'm/s'), (3, 'knots')])
         self.add_text('city', 'Override Location Label',
                 "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
-        self.add_radio('position-in-panel', 'Position in Panel',
-                [(2, 'left'), (0, 'center'), (1, 'right')],
-                "The position of this GNOME Shell extension in the panel. (Requires restart of GNOME Shell.)")
+#        self.add_radio('position-in-panel', 'Position in Panel',
+#                [(2, 'left'), (0, 'center'), (1, 'right')],
+#                "The position of this Cinnamon applet in the panel. (Requires restart of Cinnamon.)")
         self.add_check('translate-condition', 'Translate Weather Conditions',
                 "If enabled, the condition is translated based on the weather code.\nIf disabled, the condition string from Yahoo is taken.\nNote: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string “PM Thunderstorms” cannot be expressed in terms of weather codes.")
-        self.add_check('use-symbolic-icons', 'Symbolic Icons',
-                "Display symbolic icons instead of full-colored icons")
+#        self.add_check('use-symbolic-icons', 'Symbolic Icons',
+#                "Display symbolic icons instead of full-colored icons")
         (b_text, _) = self.add_check('show-text-in-panel', 'Show Text in Panel',
-                "Display current temperature in panel. If disabled, only the current condition icon is shown. (Requires restart of GNOME Shell.)")
+                "Display current temperature in panel. If disabled, only the current condition icon is shown. (Requires restart of Cinnamon.)")
         (b_cond, l_cond) = self.add_check('show-comment-in-panel', '    Include Condition',
                 "Whether to show the weather condition (e.g., “Windy”, “Clear”) in the panel.")
 
