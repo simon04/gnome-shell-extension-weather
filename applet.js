@@ -584,7 +584,7 @@ MyApplet.prototype = {
             vertical: true
         });
         prefButton.add_actor(prefIcon);
-//        prefBox.add_actor(prefButton);
+        prefBox.add_actor(prefButton);
         return prefBox;
     },
     

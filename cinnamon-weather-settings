@@ -3,8 +3,8 @@
 # -*- Mode: Python; py-indent-offset: 4 -*-
 # vim: tabstop=4 shiftwidth=4 expandtab
 
-# weather-extension-configurator: 
-# configures gnome-shell-extension-weather by simon04
+# cinnamon-weather-settings 
+# configures cinnamon-weather
 # Copyright (C) 2011 Simon Legner
 #
 # based on a configurator for system-monitor-extension by Florian Mounier aka paradoxxxzero
@@ -150,7 +150,7 @@ class CinnamonWeatherSettings:
         self.window.show_all()
 
 def main():
-    WeatherConfigurator()
+    CinnamonWeatherSettings()
     Gtk.main()
 
 if __name__ == '__main__':
