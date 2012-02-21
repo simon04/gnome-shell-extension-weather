@@ -10,7 +10,6 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 * Generic: For a generic installation, run the following commands:
   `./test`  
-* *Please report further links!*
 
 That's it!
 
