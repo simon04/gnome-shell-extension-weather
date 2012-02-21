@@ -3,7 +3,7 @@ sudo cp -f cinnamon-weather@mockturtl.gschema.xml /usr/share/glib-2.0/schemas/ &
 glib-compile-schemas --dry-run /usr/share/glib-2.0/schemas/ &&
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 
-#sudo ln -sf ~/.local/share/cinnamon/applets/cinnamon-weather@mockturtl/cinnamon-weather-settings /usr/local/bin
+sudo ln -sf ~/.local/share/cinnamon/applets/cinnamon-weather@mockturtl/cinnamon-weather-settings /usr/local/bin
 
 TARGET=~/.local/share/cinnamon/applets/cinnamon-weather@mockturtl
 rm -rf $TARGET
