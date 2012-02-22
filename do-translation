@@ -39,3 +39,4 @@ msgfmt -c po/uk.po -o $APPLET/locale/uk/LC_MESSAGES/cinnamon-weather@mockturtl.m
 msgfmt -c po/zh_CN.po -o $APPLET/locale/zh_CN/LC_MESSAGES/cinnamon-weather@mockturtl.mo
 
 cp -r $APPLET/locale/ ~/.local/share
+rm -rf $APPLET/locale
