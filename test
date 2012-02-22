@@ -9,3 +9,5 @@ TARGET=~/.local/share/cinnamon/applets/cinnamon-weather@mockturtl
 rm -rf $TARGET
 mkdir -p $TARGET
 cp -f metadata.json applet.js cinnamon-weather-settings $TARGET
+
+./do-translation
