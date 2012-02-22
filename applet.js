@@ -385,8 +385,8 @@ MyApplet.prototype = {
 
 //				this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 				this._currentWeatherIcon.icon_name = iconname;
-				this.set_applet_icon_name(iconname /*+ this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''*/);
-				
+				this.set_applet_icon_name(iconname);
+				this.set_applet_icon_symbolic_name(iconname);
 				
 				if (this._comment_in_panel)
 					this.set_applet_label(comment + ' ' + temperature + ' ' + this.unit_to_unicode());
