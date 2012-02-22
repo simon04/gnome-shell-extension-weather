@@ -9,6 +9,12 @@
     <value value="1" nick="right"/>
     <value value="2" nick="left"/>
   </enum>
+  <enum id="cinnamon-weather.wind-speed-unit">
+    <value nick="kph" value="0" />
+    <value nick="mph" value="1" />
+    <value nick="m/s" value="2" />
+    <value nick="knots" value="3" />
+  </enum>
   <schema path="/org/cinnamon/weather/" id="cinnamon-weather@mockturtl">
     <key name="unit" enum="cinnamon-weather.unit">
       <default>'celsius'</default>
@@ -24,6 +30,11 @@
       <default>''</default>
       <summary>City to be displayed</summary>
       <description>Optionally, you can override the displayed city. This one is displayed instead of the one from the Yahoo service.</description>
+    </key>
+    <key name="wind-speed-unit" enum="cinnamon-weather.wind-speed-unit">
+      <default>'kph'</default>
+      <summary>Wind Speed Units</summary>
+      <description>Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s' or 'knots'.</description>
     </key>
     <key type="b" name="translate-condition">
       <default>true</default>
