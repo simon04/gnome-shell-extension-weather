@@ -1,56 +1,41 @@
-mkdir -p locale/ca/LC_MESSAGES
-mkdir -p locale/cs/LC_MESSAGES
-mkdir -p locale/de/LC_MESSAGES
-mkdir -p locale/es/LC_MESSAGES
-mkdir -p locale/fi/LC_MESSAGES
-mkdir -p locale/fr/LC_MESSAGES
-mkdir -p locale/he/LC_MESSAGES
-mkdir -p locale/it/LC_MESSAGES
-mkdir -p locale/nb/LC_MESSAGES
-mkdir -p locale/nl/LC_MESSAGES
-mkdir -p locale/pl/LC_MESSAGES
-mkdir -p locale/pt/LC_MESSAGES
-mkdir -p locale/ro/LC_MESSAGES
-mkdir -p locale/ru/LC_MESSAGES
-mkdir -p locale/sk/LC_MESSAGES
-mkdir -p locale/sv/LC_MESSAGES
-mkdir -p locale/uk/LC_MESSAGES
-mkdir -p locale/zh_CN/LC_MESSAGES
+APPLET=~/.local/share/cinnamon/applets/cinnamon-weather@mockturtl
 
-msgfmt -c -v po/ca.po -o locale/ca/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/cs.po -o locale/cs/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/de.po -o locale/de/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/es.po -o locale/es/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/fi.po -o locale/fi/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/fr.po -o locale/fr/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/he.po -o locale/he/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/it.po -o locale/it/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/nb.po -o locale/nb/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/nl.po -o locale/nl/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/pl.po -o locale/pl/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/pt.po -o locale/pt/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/ro.po -o locale/ro/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/ru.po -o locale/ru/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/sk.po -o locale/sk/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/sv.po -o locale/sv/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/uk.po -o locale/uk/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-msgfmt -c -v po/zh_CN.po -o locale/zh_CN/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
+mkdir -p $APPLET/locale/ca/LC_MESSAGES
+mkdir -p $APPLET/locale/cs/LC_MESSAGES
+mkdir -p $APPLET/locale/de/LC_MESSAGES
+mkdir -p $APPLET/locale/es/LC_MESSAGES
+mkdir -p $APPLET/locale/fi/LC_MESSAGES
+mkdir -p $APPLET/locale/fr/LC_MESSAGES
+mkdir -p $APPLET/locale/he/LC_MESSAGES
+mkdir -p $APPLET/locale/it/LC_MESSAGES
+mkdir -p $APPLET/locale/nb/LC_MESSAGES
+mkdir -p $APPLET/locale/nl/LC_MESSAGES
+mkdir -p $APPLET/locale/pl/LC_MESSAGES
+mkdir -p $APPLET/locale/pt/LC_MESSAGES
+mkdir -p $APPLET/locale/ro/LC_MESSAGES
+mkdir -p $APPLET/locale/ru/LC_MESSAGES
+mkdir -p $APPLET/locale/sk/LC_MESSAGES
+mkdir -p $APPLET/locale/sv/LC_MESSAGES
+mkdir -p $APPLET/locale/uk/LC_MESSAGES
+mkdir -p $APPLET/locale/zh_CN/LC_MESSAGES
 
-sudo cp locale/ca/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/ca/LC_MESSAGES/cinnamon-weather@mockturtl.gmo 
-sudo cp locale/cs/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/cs/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/de/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/de/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/es/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/es/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/fi/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/fi/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/fr/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/fr/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/he/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/he/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/it/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/it/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/nb/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/nb/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/nl/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/nl/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/pl/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/pl/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/pt/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/pt/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/ro/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/ro/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/ru/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/ru/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/sk/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/sk/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/sv/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/sv/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/uk/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/uk/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
-sudo cp locale/zh_CN/LC_MESSAGES/cinnamon-weather@mockturtl.gmo /usr/share/locale/zh_CN/LC_MESSAGES/cinnamon-weather@mockturtl.gmo
+msgfmt -c po/ca.po -o $APPLET/locale/ca/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/cs.po -o $APPLET/locale/cs/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/de.po -o $APPLET/locale/de/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/es.po -o $APPLET/locale/es/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/fi.po -o $APPLET/locale/fi/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/fr.po -o $APPLET/locale/fr/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/he.po -o $APPLET/locale/he/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/it.po -o $APPLET/locale/it/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/nb.po -o $APPLET/locale/nb/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/nl.po -o $APPLET/locale/nl/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/pl.po -o $APPLET/locale/pl/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/pt.po -o $APPLET/locale/pt/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/ro.po -o $APPLET/locale/ro/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/ru.po -o $APPLET/locale/ru/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/sk.po -o $APPLET/locale/sk/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/sv.po -o $APPLET/locale/sv/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/uk.po -o $APPLET/locale/uk/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+msgfmt -c po/zh_CN.po -o $APPLET/locale/zh_CN/LC_MESSAGES/cinnamon-weather@mockturtl.mo
+
+cp -r $APPLET/locale/ ~/.local/share

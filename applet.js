@@ -33,9 +33,8 @@
     
 const Applet = imports.ui.applet; 
 const Cairo = imports.cairo;
+const ExtensionSystem = imports.ui.extensionSystem;
 const Gettext = imports.gettext;
-Gettext.textdomain("cinnamon-weather@mockturtl");
-Gettext.bindtextdomain("cinnamon-weather@mockturtl", ExtensionSystem.extensionMeta["cinnamon-weather@mockturtl"].path + "/locale");
 const _ = Gettext.gettext;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
@@ -106,6 +105,16 @@ function getSettings(schema) {
         throw _("Schema \"%s\" not found.").format(schema);
     return new Gio.Settings({ schema: schema });
 }
+
+//----------------------------------------------------------------------
+//
+//  l10n
+//
+//----------------------------------------------------------------------
+
+Gettext.textdomain("cinnamon-weather@mockturtl");
+//Gettext.bindtextdomain("cinnamon-weather@mockturtl", "/usr/share/locale");
+Gettext.bindtextdomain("cinnamon-weather@mockturtl", GLib.get_home_dir() +"/.local/share/locale");
 
 //----------------------------------------------------------------------
 //
@@ -190,8 +199,7 @@ MyApplet.prototype = {
 			//----------------------------------
 			//  initialize settings
 			//----------------------------------
-			global.log("cinnamon-weather::_init: initializing");
-            this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
+			this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
             this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
             this._city  = this._settings.get_string(WEATHER_CITY_KEY);
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
@@ -201,7 +209,6 @@ MyApplet.prototype = {
             //this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
             this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
             this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
-            global.log("cinnamon-weather::_init: initialized");
             
             //----------------------------------
 			//  bind settings
@@ -248,8 +255,6 @@ MyApplet.prototype = {
 			this.showLoadingUi();
 			this.rebuildCurrentWeatherUi();
 			this.rebuildFutureWeatherUi();
-			
-			global.log("cinnamon-weather::_init: built UI");
 			
 			//------------------------------
 			//  run
@@ -577,7 +582,6 @@ MyApplet.prototype = {
             style_class: 'panel-button'
         });
         prefButton.connect('clicked', function() {
-			//	TODO: can't find the python file unless it's symlinked
             Util.spawn(["cinnamon-weather-settings"]);
             global.log("cinnamon-weather::Click: preferences");
         });
