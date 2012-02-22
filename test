@@ -8,6 +8,6 @@ sudo ln -sf ~/.local/share/cinnamon/applets/cinnamon-weather@mockturtl/cinnamon-
 TARGET=~/.local/share/cinnamon/applets/cinnamon-weather@mockturtl
 rm -rf $TARGET
 mkdir -p $TARGET
-cp -f metadata.json applet.js cinnamon-weather-settings $TARGET
+cp -f metadata.json applet.js cinnamon-weather-settings stylesheet.css $TARGET
 
 ./do-translation
