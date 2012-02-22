@@ -33,7 +33,9 @@
     
 const Applet = imports.ui.applet; 
 const Cairo = imports.cairo;
-const Gettext = imports.gettext.domain('cinnamon-applets');
+const Gettext = imports.gettext;
+Gettext.textdomain("cinnamon-weather@mockturtl");
+Gettext.bindtextdomain("cinnamon-weather@mockturtl", ExtensionSystem.extensionMeta["cinnamon-weather@mockturtl"].path + "/locale");
 const _ = Gettext.gettext;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;

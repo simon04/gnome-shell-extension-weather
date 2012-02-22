@@ -1,0 +1,299 @@
+# Polish translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Piotr Sokół <psokol@jabster.pl>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-22 01:07-0500\n"
+"PO-Revision-Date: 2011-10-19 11:47+0200\n"
+"Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
+"Language-Team: Polish <>\n"
+"Language: po\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : ((n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20)) ? 1 : 2));\n"
+
+#: applet.js:106
+#, perl-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: applet.js:168
+msgid "Click to open"
+msgstr ""
+
+#: applet.js:381
+msgid "Today"
+msgstr "Dziś"
+
+#: applet.js:381
+msgid "Tomorrow"
+msgstr "Jutro"
+
+#: applet.js:436
+msgid "Loading current weather ..."
+msgstr "Wczytywanie bieżącej pogody"
+
+#: applet.js:437
+msgid "Loading future weather ..."
+msgstr "Wczytywanie prognozy pogody..."
+
+#: applet.js:457
+msgid "Loading ..."
+msgstr "Wczytywanie..."
+
+#: applet.js:461
+msgid "Please wait"
+msgstr "Proszę czekać"
+
+#: applet.js:490
+msgid "Temperature:"
+msgstr "Temperatura:"
+
+#: applet.js:492
+msgid "Humidity:"
+msgstr "Wilgotność:"
+
+#: applet.js:494
+msgid "Pressure:"
+msgstr "Ciśnienie atmosferyczne:"
+
+#: applet.js:496
+msgid "Wind:"
+msgstr "Wiatr:"
+
+#: applet.js:748
+msgid "Tornado"
+msgstr "Tornado"
+
+#: applet.js:750
+msgid "Tropical storm"
+msgstr "Tropikalny deszcz"
+
+#: applet.js:752
+msgid "Hurricane"
+msgstr "Huragan"
+
+#: applet.js:754
+msgid "Severe thunderstorms"
+msgstr "Silne burze"
+
+#: applet.js:756
+msgid "Thunderstorms"
+msgstr "Burze"
+
+#: applet.js:758
+msgid "Mixed rain and snow"
+msgstr "Deszcz ze śniegiem"
+
+#: applet.js:760
+msgid "Mixed rain and sleet"
+msgstr "Deszcz z ziarnami lodowymi"
+
+#: applet.js:762
+msgid "Mixed snow and sleet"
+msgstr "Śnieg z ziarnami lodowymi"
+
+#: applet.js:764
+msgid "Freezing drizzle"
+msgstr "Marznąca mżawka"
+
+#: applet.js:766
+msgid "Drizzle"
+msgstr "Mżawka"
+
+#: applet.js:768
+msgid "Freezing rain"
+msgstr "Marznący deszcz"
+
+#: applet.js:770 applet.js:772
+msgid "Showers"
+msgstr "Przelotne opady deszczu"
+
+#: applet.js:774
+msgid "Snow flurries"
+msgstr "Lekki śnieg"
+
+#: applet.js:776
+msgid "Light snow showers"
+msgstr "Lekkie przelotne opady śniegu"
+
+#: applet.js:778
+msgid "Blowing snow"
+msgstr "Zamieć śnieżna"
+
+#: applet.js:780
+msgid "Snow"
+msgstr "Śnieg"
+
+#: applet.js:782
+msgid "Hail"
+msgstr "Grad"
+
+#: applet.js:784
+msgid "Sleet"
+msgstr "Ziarna lodowe"
+
+#: applet.js:786
+msgid "Dust"
+msgstr "Pył"
+
+#: applet.js:788
+msgid "Foggy"
+msgstr "Mgła"
+
+#: applet.js:790
+msgid "Haze"
+msgstr "Łagodna mgła"
+
+#: applet.js:792
+msgid "Smoky"
+msgstr "Dym"
+
+#: applet.js:794
+msgid "Blustery"
+msgstr "Silny wiatr"
+
+#: applet.js:796
+msgid "Windy"
+msgstr "Wietrznie"
+
+#: applet.js:798
+msgid "Cold"
+msgstr "Zimno"
+
+#: applet.js:800
+msgid "Cloudy"
+msgstr "Pochmurnie"
+
+#: applet.js:803
+msgid "Mostly cloudy"
+msgstr "Duże zachmurzenie"
+
+#: applet.js:806 applet.js:832
+msgid "Partly cloudy"
+msgstr "Częściowe zachmurzenie"
+
+#: applet.js:808
+msgid "Clear"
+msgstr "Pogodnie"
+
+#: applet.js:810
+msgid "Sunny"
+msgstr "Słonecznie"
+
+#: applet.js:813
+msgid "Fair"
+msgstr "Umiarkowanie"
+
+#: applet.js:815
+msgid "Mixed rain and hail"
+msgstr "Deszcz z gradem"
+
+#: applet.js:817
+msgid "Hot"
+msgstr "Gorąco"
+
+#: applet.js:819
+msgid "Isolated thunderstorms"
+msgstr "Lokalne burze"
+
+#: applet.js:822
+msgid "Scattered thunderstorms"
+msgstr "Rozproszone burze"
+
+#: applet.js:824
+msgid "Scattered showers"
+msgstr "Rozproszone przelotne opady deszczu"
+
+#: applet.js:826 applet.js:830
+msgid "Heavy snow"
+msgstr "Silny śnieg"
+
+#: applet.js:828
+msgid "Scattered snow showers"
+msgstr "Rozproszone przelotne opady śniegu"
+
+#: applet.js:834
+msgid "Thundershowers"
+msgstr "Burze z przelotnymi opadami deszczu"
+
+#: applet.js:836
+msgid "Snow showers"
+msgstr "Przelotne opady śniegu"
+
+#: applet.js:838
+msgid "Isolated thundershowers"
+msgstr "Lokalne burze z przelotnymi opadami deszczu"
+
+#: applet.js:841
+msgid "Not available"
+msgstr "Nie dostępne"
+
+#: applet.js:849
+msgid "Monday"
+msgstr "Poniedziałek"
+
+#: applet.js:849
+msgid "Tuesday"
+msgstr "Wtorek"
+
+#: applet.js:849
+msgid "Wednesday"
+msgstr "Środa"
+
+#: applet.js:849
+msgid "Thursday"
+msgstr "Czwartek"
+
+#: applet.js:849
+msgid "Friday"
+msgstr "Piątek"
+
+#: applet.js:849
+msgid "Saturday"
+msgstr "Sobota"
+
+#: applet.js:849
+msgid "Sunday"
+msgstr "Niedziela"
+
+#: applet.js:857
+msgid "N"
+msgstr ""
+
+#: applet.js:857
+msgid "NE"
+msgstr ""
+
+#: applet.js:857
+msgid "E"
+msgstr ""
+
+#: applet.js:857
+msgid "SE"
+msgstr ""
+
+#: applet.js:857
+msgid "S"
+msgstr ""
+
+#: applet.js:857
+msgid "SW"
+msgstr ""
+
+#: applet.js:857
+msgid "W"
+msgstr ""
+
+#: applet.js:857
+msgid "NW"
+msgstr ""
+
+#~ msgid "..."
+#~ msgstr "..."

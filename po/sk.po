@@ -1,0 +1,297 @@
+# Slovakian translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Dušan Kazik <prescott66@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-22 01:07-0500\n"
+"PO-Revision-Date: 2011-12-11 14:59+0100\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"Language-Team: \n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: applet.js:106
+#, perl-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: applet.js:168
+msgid "Click to open"
+msgstr ""
+
+#: applet.js:381
+msgid "Today"
+msgstr "Dnes"
+
+#: applet.js:381
+msgid "Tomorrow"
+msgstr "Zajtra"
+
+#: applet.js:436
+msgid "Loading current weather ..."
+msgstr "Načítava sa aktuálne počasie ..."
+
+#: applet.js:437
+msgid "Loading future weather ..."
+msgstr "Načítava sa predpoveď počasia ..."
+
+#: applet.js:457
+msgid "Loading ..."
+msgstr "Načítava sa ..."
+
+#: applet.js:461
+msgid "Please wait"
+msgstr "Prosím, čakajte"
+
+#: applet.js:490
+msgid "Temperature:"
+msgstr "Teplota:"
+
+#: applet.js:492
+msgid "Humidity:"
+msgstr "Vlhkosť:"
+
+#: applet.js:494
+msgid "Pressure:"
+msgstr "Tlak:"
+
+#: applet.js:496
+msgid "Wind:"
+msgstr "Vietor:"
+
+#: applet.js:748
+msgid "Tornado"
+msgstr "Tornádo"
+
+#: applet.js:750
+msgid "Tropical storm"
+msgstr "Tropická búrka"
+
+#: applet.js:752
+msgid "Hurricane"
+msgstr "Hurikán"
+
+#: applet.js:754
+msgid "Severe thunderstorms"
+msgstr "Výrazné búrky"
+
+#: applet.js:756
+msgid "Thunderstorms"
+msgstr "Búrky"
+
+#: applet.js:758
+msgid "Mixed rain and snow"
+msgstr "Dážď so snehom"
+
+#: applet.js:760
+msgid "Mixed rain and sleet"
+msgstr "Dážď a poľadovica"
+
+#: applet.js:762
+msgid "Mixed snow and sleet"
+msgstr "Sneh a poľadovica"
+
+#: applet.js:764
+msgid "Freezing drizzle"
+msgstr "Mráz a mrholenie"
+
+#: applet.js:766
+msgid "Drizzle"
+msgstr "Mrholenie"
+
+#: applet.js:768
+msgid "Freezing rain"
+msgstr "Mrznúci dážď"
+
+#: applet.js:770 applet.js:772
+msgid "Showers"
+msgstr "Prehánky"
+
+#: applet.js:774
+msgid "Snow flurries"
+msgstr "Snehové záveje"
+
+#: applet.js:776
+msgid "Light snow showers"
+msgstr "Mierne snehové prehánky"
+
+#: applet.js:778
+msgid "Blowing snow"
+msgstr "Husté sneženie"
+
+#: applet.js:780
+msgid "Snow"
+msgstr "Sneženie"
+
+#: applet.js:782
+msgid "Hail"
+msgstr "Krúpy"
+
+#: applet.js:784
+msgid "Sleet"
+msgstr "Poľadovica"
+
+#: applet.js:786
+msgid "Dust"
+msgstr "Prašno"
+
+#: applet.js:788
+msgid "Foggy"
+msgstr "Hmlisto"
+
+#: applet.js:790
+msgid "Haze"
+msgstr "Hmla"
+
+#: applet.js:792
+msgid "Smoky"
+msgstr "Dym"
+
+#: applet.js:794
+msgid "Blustery"
+msgstr "Búrlivo"
+
+#: applet.js:796
+msgid "Windy"
+msgstr "Veterno"
+
+#: applet.js:798
+msgid "Cold"
+msgstr "Chladno"
+
+#: applet.js:800
+msgid "Cloudy"
+msgstr "Oblačno"
+
+#: applet.js:803
+msgid "Mostly cloudy"
+msgstr "Zamračené"
+
+#: applet.js:806 applet.js:832
+msgid "Partly cloudy"
+msgstr "Polojasno"
+
+#: applet.js:808
+msgid "Clear"
+msgstr "Jasno"
+
+#: applet.js:810
+msgid "Sunny"
+msgstr "Slnečno"
+
+#: applet.js:813
+msgid "Fair"
+msgstr "Pekne"
+
+#: applet.js:815
+msgid "Mixed rain and hail"
+msgstr "Dážď s krúpami"
+
+#: applet.js:817
+msgid "Hot"
+msgstr "Horúco"
+
+#: applet.js:819
+msgid "Isolated thunderstorms"
+msgstr "Ojedinelé búrky"
+
+#: applet.js:822
+msgid "Scattered thunderstorms"
+msgstr "Občasné búrky"
+
+#: applet.js:824
+msgid "Scattered showers"
+msgstr "Občasné prehánky"
+
+#: applet.js:826 applet.js:830
+msgid "Heavy snow"
+msgstr "Husté sneženie"
+
+#: applet.js:828
+msgid "Scattered snow showers"
+msgstr "Občasné snehové prehánky"
+
+#: applet.js:834
+msgid "Thundershowers"
+msgstr "Búrky s prehánkami"
+
+#: applet.js:836
+msgid "Snow showers"
+msgstr "Snehové prehánky"
+
+#: applet.js:838
+msgid "Isolated thundershowers"
+msgstr "Ojedinelé búrky s prehánkami"
+
+#: applet.js:841
+msgid "Not available"
+msgstr "Nedostupný"
+
+#: applet.js:849
+msgid "Monday"
+msgstr "Pondelok"
+
+#: applet.js:849
+msgid "Tuesday"
+msgstr "Utorok"
+
+#: applet.js:849
+msgid "Wednesday"
+msgstr "Streda"
+
+#: applet.js:849
+msgid "Thursday"
+msgstr "Štvrtok"
+
+#: applet.js:849
+msgid "Friday"
+msgstr "Piatok"
+
+#: applet.js:849
+msgid "Saturday"
+msgstr "Sobota"
+
+#: applet.js:849
+msgid "Sunday"
+msgstr "Nedeľa"
+
+#: applet.js:857
+msgid "N"
+msgstr ""
+
+#: applet.js:857
+msgid "NE"
+msgstr ""
+
+#: applet.js:857
+msgid "E"
+msgstr ""
+
+#: applet.js:857
+msgid "SE"
+msgstr ""
+
+#: applet.js:857
+msgid "S"
+msgstr ""
+
+#: applet.js:857
+msgid "SW"
+msgstr ""
+
+#: applet.js:857
+msgid "W"
+msgstr ""
+
+#: applet.js:857
+msgid "NW"
+msgstr ""
+
+#~ msgid "..."
+#~ msgstr "..."

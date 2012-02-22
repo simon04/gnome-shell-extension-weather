@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-22 01:07-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: applet.js:106
+#, perl-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: applet.js:168
+msgid "Click to open"
+msgstr ""
+
+#: applet.js:381
+msgid "Today"
+msgstr ""
+
+#: applet.js:381
+msgid "Tomorrow"
+msgstr ""
+
+#: applet.js:436
+msgid "Loading current weather ..."
+msgstr ""
+
+#: applet.js:437
+msgid "Loading future weather ..."
+msgstr ""
+
+#: applet.js:457
+msgid "Loading ..."
+msgstr ""
+
+#: applet.js:461
+msgid "Please wait"
+msgstr ""
+
+#: applet.js:490
+msgid "Temperature:"
+msgstr ""
+
+#: applet.js:492
+msgid "Humidity:"
+msgstr ""
+
+#: applet.js:494
+msgid "Pressure:"
+msgstr ""
+
+#: applet.js:496
+msgid "Wind:"
+msgstr ""
+
+#: applet.js:748
+msgid "Tornado"
+msgstr ""
+
+#: applet.js:750
+msgid "Tropical storm"
+msgstr ""
+
+#: applet.js:752
+msgid "Hurricane"
+msgstr ""
+
+#: applet.js:754
+msgid "Severe thunderstorms"
+msgstr ""
+
+#: applet.js:756
+msgid "Thunderstorms"
+msgstr ""
+
+#: applet.js:758
+msgid "Mixed rain and snow"
+msgstr ""
+
+#: applet.js:760
+msgid "Mixed rain and sleet"
+msgstr ""
+
+#: applet.js:762
+msgid "Mixed snow and sleet"
+msgstr ""
+
+#: applet.js:764
+msgid "Freezing drizzle"
+msgstr ""
+
+#: applet.js:766
+msgid "Drizzle"
+msgstr ""
+
+#: applet.js:768
+msgid "Freezing rain"
+msgstr ""
+
+#: applet.js:770 applet.js:772
+msgid "Showers"
+msgstr ""
+
+#: applet.js:774
+msgid "Snow flurries"
+msgstr ""
+
+#: applet.js:776
+msgid "Light snow showers"
+msgstr ""
+
+#: applet.js:778
+msgid "Blowing snow"
+msgstr ""
+
+#: applet.js:780
+msgid "Snow"
+msgstr ""
+
+#: applet.js:782
+msgid "Hail"
+msgstr ""
+
+#: applet.js:784
+msgid "Sleet"
+msgstr ""
+
+#: applet.js:786
+msgid "Dust"
+msgstr ""
+
+#: applet.js:788
+msgid "Foggy"
+msgstr ""
+
+#: applet.js:790
+msgid "Haze"
+msgstr ""
+
+#: applet.js:792
+msgid "Smoky"
+msgstr ""
+
+#: applet.js:794
+msgid "Blustery"
+msgstr ""
+
+#: applet.js:796
+msgid "Windy"
+msgstr ""
+
+#: applet.js:798
+msgid "Cold"
+msgstr ""
+
+#: applet.js:800
+msgid "Cloudy"
+msgstr ""
+
+#: applet.js:803
+msgid "Mostly cloudy"
+msgstr ""
+
+#: applet.js:806 applet.js:832
+msgid "Partly cloudy"
+msgstr ""
+
+#: applet.js:808
+msgid "Clear"
+msgstr ""
+
+#: applet.js:810
+msgid "Sunny"
+msgstr ""
+
+#: applet.js:813
+msgid "Fair"
+msgstr ""
+
+#: applet.js:815
+msgid "Mixed rain and hail"
+msgstr ""
+
+#: applet.js:817
+msgid "Hot"
+msgstr ""
+
+#: applet.js:819
+msgid "Isolated thunderstorms"
+msgstr ""
+
+#: applet.js:822
+msgid "Scattered thunderstorms"
+msgstr ""
+
+#: applet.js:824
+msgid "Scattered showers"
+msgstr ""
+
+#: applet.js:826 applet.js:830
+msgid "Heavy snow"
+msgstr ""
+
+#: applet.js:828
+msgid "Scattered snow showers"
+msgstr ""
+
+#: applet.js:834
+msgid "Thundershowers"
+msgstr ""
+
+#: applet.js:836
+msgid "Snow showers"
+msgstr ""
+
+#: applet.js:838
+msgid "Isolated thundershowers"
+msgstr ""
+
+#: applet.js:841
+msgid "Not available"
+msgstr ""
+
+#: applet.js:849
+msgid "Monday"
+msgstr ""
+
+#: applet.js:849
+msgid "Tuesday"
+msgstr ""
+
+#: applet.js:849
+msgid "Wednesday"
+msgstr ""
+
+#: applet.js:849
+msgid "Thursday"
+msgstr ""
+
+#: applet.js:849
+msgid "Friday"
+msgstr ""
+
+#: applet.js:849
+msgid "Saturday"
+msgstr ""
+
+#: applet.js:849
+msgid "Sunday"
+msgstr ""
+
+#: applet.js:857
+msgid "N"
+msgstr ""
+
+#: applet.js:857
+msgid "NE"
+msgstr ""
+
+#: applet.js:857
+msgid "E"
+msgstr ""
+
+#: applet.js:857
+msgid "SE"
+msgstr ""
+
+#: applet.js:857
+msgid "S"
+msgstr ""
+
+#: applet.js:857
+msgid "SW"
+msgstr ""
+
+#: applet.js:857
+msgid "W"
+msgstr ""
+
+#: applet.js:857
+msgid "NW"
+msgstr ""
