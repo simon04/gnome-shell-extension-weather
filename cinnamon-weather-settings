@@ -3,7 +3,7 @@
 # -*- Mode: Python; py-indent-offset: 4 -*-
 # vim: tabstop=4 shiftwidth=4 expandtab
 
-# cinnamon-weather-settings 
+# cinnamon-weather-settings
 # configures cinnamon-weather
 # Copyright (C) 2011 Simon Legner
 #
@@ -101,7 +101,7 @@ class CinnamonWeatherSettings:
         return (button, label)
 
     def __init__(self):
-        self.schema = Gio.Settings('cinnamon-weather@mockturtl')
+        self.schema = Gio.Settings('org.cinnamon.applets.cinnamon-weather@mockturtl')
         keys = self.schema.keys()
 
         self.window = Gtk.Window(title='Cinnamon Weather Settings')
@@ -112,11 +112,11 @@ class CinnamonWeatherSettings:
 
         self.add_text('woeid', '<b>WOEID</b>',
                 "The Where On Earth ID determinees the location/city")
-        self.add_radio('unit', 'Temperature Unit',
+        self.add_radio('temperature-unit', 'Temperature Unit',
                 [(0, 'celsius'), (1, 'fahrenheit')])
         self.add_radio('wind-speed-unit', 'Wind Speed Unit',
                 [(0, 'kph'), (1, 'mph'), (2, 'm/s'), (3, 'knots')])
-        self.add_text('city', 'Override Location Label',
+        self.add_text('location-label-override', 'Override Location Label',
                 "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
 #        self.add_radio('position-in-panel', 'Position in Panel',
 #                [(2, 'left'), (0, 'center'), (1, 'right')],

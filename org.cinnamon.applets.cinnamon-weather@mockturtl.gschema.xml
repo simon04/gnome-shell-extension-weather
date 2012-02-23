@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="cinnamon">
-  <enum id="cinnamon-weather.unit">
+  <enum id="cinnamon-weather.temperature-unit">
     <value value="0" nick="celsius"/>
     <value value="1" nick="fahrenheit"/>
   </enum>
@@ -15,8 +15,8 @@
     <value nick="m/s" value="2" />
     <value nick="knots" value="3" />
   </enum>
-  <schema path="/org/cinnamon/weather/" id="cinnamon-weather@mockturtl">
-    <key name="unit" enum="cinnamon-weather.unit">
+  <schema path="/org/cinnamon/applets/cinnamon-weather@mockturtl/" id="org.cinnamon.applets.cinnamon-weather@mockturtl">
+    <key name="temperature-unit" enum="cinnamon-weather.temperature-unit">
       <default>'celsius'</default>
       <summary>Units</summary>
       <description>Choose the unit system for temperatures etc. Allowed values are 'Celsius' or 'Fahrenheit'.</description>
@@ -26,7 +26,7 @@
       <summary>Yahoo WOEID</summary>
       <description>Set the Yahoo location ID (aka. WOEID, Where On Earth Identifier), which is used to retrieve the corresponding weather+forecast information.</description>
     </key>
-    <key type="s" name="city">
+    <key type="s" name="location-label-override">
       <default>''</default>
       <summary>City to be displayed</summary>
       <description>Optionally, you can override the displayed city. This one is displayed instead of the one from the Yahoo service.</description>
