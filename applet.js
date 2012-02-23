@@ -391,13 +391,15 @@ MyApplet.prototype = {
 					this.set_applet_icon_symbolic_name(iconname) :
 					this.set_applet_icon_name(iconname);
 
-				if (this._text_in_panel)
-					if (this._comment_in_panel)
+				if (this._text_in_panel) {
+					if (this._comment_in_panel) {
 						this.set_applet_label(comment + ' ' + temperature + ' ' + this.unit_to_unicode());
-					else
-						this.set_applet_label(temperature + ' ' + this.unit_to_unicode());
-				else
-						this.set_applet_label('');
+					} else {
+						this.set_applet_label(temperature + ' ' + this.unit_to_unicode()); 
+					}
+				} else {
+					this.set_applet_label('');
+				}
 
 				this._currentWeatherSummary.text = comment;
 				this._currentWeatherLocation.text = location;
