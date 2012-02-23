@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="cinnamon">
-  <enum id="cinnamon-weather.temperature-unit">
+  <enum id="weather.temperature-unit">
     <value value="0" nick="celsius"/>
     <value value="1" nick="fahrenheit"/>
   </enum>
-  <enum id="cinnamon-weather.position">
+<!--
+  <enum id="weather.position">
     <value value="0" nick="center"/>
     <value value="1" nick="right"/>
     <value value="2" nick="left"/>
   </enum>
-  <enum id="cinnamon-weather.wind-speed-unit">
+-->
+  <enum id="weather.wind-speed-unit">
     <value nick="kph" value="0" />
     <value nick="mph" value="1" />
     <value nick="m/s" value="2" />
     <value nick="knots" value="3" />
   </enum>
-  <schema path="/org/cinnamon/applets/cinnamon-weather@mockturtl/" id="org.cinnamon.applets.cinnamon-weather@mockturtl">
-    <key name="temperature-unit" enum="cinnamon-weather.temperature-unit">
+  <schema path="/org/cinnamon/applets/weather@mockturtl/" id="org.cinnamon.applets.weather@mockturtl">
+    <key name="temperature-unit" enum="weather.temperature-unit">
       <default>'celsius'</default>
       <summary>Units</summary>
       <description>Choose the unit system for temperatures etc. Allowed values are 'Celsius' or 'Fahrenheit'.</description>
@@ -31,7 +33,7 @@
       <summary>City to be displayed</summary>
       <description>Optionally, you can override the displayed city. This one is displayed instead of the one from the Yahoo service.</description>
     </key>
-    <key name="wind-speed-unit" enum="cinnamon-weather.wind-speed-unit">
+    <key name="wind-speed-unit" enum="weather.wind-speed-unit">
       <default>'kph'</default>
       <summary>Wind Speed Units</summary>
       <description>Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s' or 'knots'.</description>
@@ -57,7 +59,7 @@
       <description>Whether to show the comment (aka. weather condition text, e.g. "Windy", "Clear") in the panel. Note that the temperature is still shown (if undesired, consider show-text-in-panel option).</description>
     </key>
 <!--
-    <key name="position-in-panel" enum="cinnamon-weather.position">
+    <key name="position-in-panel" enum="weather.position">
       <default>'center'</default>
       <summary>Position in panel</summary>
       <description>Set the position of this Cinnamon extension in the panel to either 'center', 'left' or 'right' (requires restart).</description>

@@ -101,7 +101,7 @@ class CinnamonWeatherSettings:
         return (button, label)
 
     def __init__(self):
-        self.schema = Gio.Settings('org.cinnamon.applets.cinnamon-weather@mockturtl')
+        self.schema = Gio.Settings('org.cinnamon.applets.weather@mockturtl')
         keys = self.schema.keys()
 
         self.window = Gtk.Window(title='Cinnamon Weather Settings')

@@ -55,7 +55,7 @@ const Util = imports.misc.util;
 //
 //----------------------------------------------------------------------
 
-const WEATHER_SETTINGS_SCHEMA = 'org.cinnamon.applets.cinnamon-weather@mockturtl';
+const WEATHER_SETTINGS_SCHEMA = 'org.cinnamon.applets.weather@mockturtl';
 
 // Schema keys
 const WEATHER_CITY_KEY = 'location-label-override';
@@ -76,7 +76,7 @@ const WEATHER_CONV_KNOTS_IN_MPS = 1.94384449;
 
 //----------------------------------------------------------------------
 //
-//  Enumerations: cinnamon-weather@mockturtl.gschema.xml
+//  Enumerations: org.cinnamon.applets.weather@mockturtl.gschema.xml
 //
 //----------------------------------------------------------------------
 
@@ -126,9 +126,9 @@ function getSettings(schema) {
 //
 //----------------------------------------------------------------------
 
-Gettext.textdomain("cinnamon-weather@mockturtl");
-//Gettext.bindtextdomain("cinnamon-weather@mockturtl", "/usr/share/locale");
-Gettext.bindtextdomain("cinnamon-weather@mockturtl", GLib.get_home_dir() +"/.local/share/locale");
+Gettext.textdomain("weather@mockturtl");
+//Gettext.bindtextdomain("weather@mockturtl", "/usr/share/locale");
+Gettext.bindtextdomain("weather@mockturtl", GLib.get_home_dir() +"/.local/share/locale");
 
 //----------------------------------------------------------------------
 //

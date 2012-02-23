@@ -1,10 +1,12 @@
 #!/bin/sh
 
-UUID="cinnamon-weather@mockturtl"
+UUID="weather@mockturtl"
+OLD_UUID="cinnamon-weather@mockturtl"
 SCHEMA_DIR="/usr/share/glib-2.0/schemas/"
-OLD_SCHEMA="${UUID}.gschema.xml"
+OLD_SCHEMA="${OLD_UUID}.gschema.xml"
 SCHEMA="org.cinnamon.applets.${UUID}.gschema.xml"
 INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${UUID}"
+OLD_INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${OLD_UUID}"
 LOCALES="ca cs de es fi fr he it nb nl pl pt ro ru sk sv uk zh_CN"
 LOCALE_DIR="${HOME}/.local/share/locale"
 
@@ -14,11 +16,7 @@ do_install() {
 
 	Installing applet in ${INSTALL_DIR}...
 EOF
-	if [ -f "${SCHEMA_DIR}/${OLD_SCHEMA}" ]; then
-		sudo rm -f ${SCHEMA_DIR}/${OLD_SCHEMA}
-		dconf reset -f /org/cinnamon/weather/
-	fi
-
+	
 	sudo cp -f ${SCHEMA} ${SCHEMA_DIR} &&
 		glib-compile-schemas --dry-run ${SCHEMA_DIR} &&
 		sudo glib-compile-schemas ${SCHEMA_DIR}
@@ -46,7 +44,7 @@ do_uninstall() {
 EOF
 	if [ -f "${SCHEMA_DIR}/${SCHEMA}" ]; then
 		sudo rm -f ${SCHEMA_DIR}/${SCHEMA}
-		dconf reset -f /org/cinnamon/applets/cinnamon-weather@mockturtl/
+		dconf reset -f /org/cinnamon/applets/weather@mockturtl/
 	fi
 
 	sudo rm -f ${SCHEMA_DIR}/${SCHEMA} &&
@@ -64,12 +62,38 @@ EOF
 	done
 }
 
+do_cleanup() {
+	cat << EOF
+
+	Removing old installation of applet from ${OLD_INSTALL_DIR}...
+EOF
+	if [ -f "${SCHEMA_DIR}/${OLD_SCHEMA}" ]; then
+		sudo rm -f ${SCHEMA_DIR}/${OLD_SCHEMA}
+		dconf reset -f /org/cinnamon/weather/
+	fi
+	
+	glib-compile-schemas --dry-run ${SCHEMA_DIR} &&
+		sudo glib-compile-schemas ${SCHEMA_DIR}
+	
+	rm -rf ${OLD_INSTALL_DIR}
+		
+	cat << EOF
+	Removing old applet locales from ${LOCALE_DIR} ...
+EOF
+	for LOCALE in ${LOCALES}; do
+		rm -f ${LOCALE_DIR}/${LOCALE}/LC_MESSAGES/${OLD_UUID}.mo
+	done
+}
+
 case `basename $0` in
 	"install.sh")
 		do_install
 		;;
 	"uninstall.sh")
 		do_uninstall
+		;;
+	"cleanup.sh")
+		do_cleanup
 		;;
 esac
 
