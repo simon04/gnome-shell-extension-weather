@@ -117,7 +117,7 @@ class CinnamonWeatherSettings:
         self.add_radio('wind-speed-unit', 'Wind Speed Unit',
                 [(0, 'kph'), (1, 'mph'), (2, 'm/s'), (3, 'knots')])
         self.add_text('location-label-override', 'Override Location Label',
-                "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
+                "Sometimes your WOEID location isn’t quite right (it’s the next major city around).\nThis label is used to override the location displayed.")
 #        self.add_radio('position-in-panel', 'Position in Panel',
 #                [(2, 'left'), (0, 'center'), (1, 'right')],
 #                "The position of this Cinnamon applet in the panel. (Requires restart of Cinnamon.)")
@@ -127,7 +127,7 @@ class CinnamonWeatherSettings:
                 "Display symbolic icons instead of full-colored icons")
         (b_text, _) = self.add_check('show-text-in-panel', 'Show Text in Panel',
                 "Display current temperature in panel. If disabled, only the current condition icon is shown. (Requires restart of Cinnamon.)")
-        (b_cond, l_cond) = self.add_check('show-comment-in-panel', '    Include Condition',
+        (b_cond, l_cond) = self.add_check('show-comment-in-panel', 'Include Condition in Panel',
                 "Whether to show the weather condition (e.g., “Windy”, “Clear”) in the panel.")
 
         # add dependency between text-in-panel and comment-in-panel
