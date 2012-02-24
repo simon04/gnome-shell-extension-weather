@@ -15,7 +15,7 @@ Run `./install`.
 
 ### Configuration
 
-Use `gsettings` from the command line, with tab completion.
+Click the gear icon in the menu to launch `cinnamon-weather-settings`, or use `gsettings` from the command line, with tab completion.
 
 #### Location
 
