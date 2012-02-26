@@ -48,7 +48,7 @@ msgstr "Carregando..."
 
 #: applet.js:461
 msgid "Please wait"
-msgstr "Espere un momento"
+msgstr "Espere um momento"
 
 #: applet.js:490
 msgid "Temperature:"
@@ -56,7 +56,7 @@ msgstr "Temperatura:"
 
 #: applet.js:492
 msgid "Humidity:"
-msgstr "Humidade"
+msgstr "Umidade"
 
 #: applet.js:494
 msgid "Pressure:"
@@ -116,15 +116,15 @@ msgstr "Chuva"
 
 #: applet.js:774
 msgid "Snow flurries"
-msgstr "Neve"
+msgstr "Flocos de neve"
 
 #: applet.js:776
 msgid "Light snow showers"
-msgstr "Neve"
+msgstr "Neve fraca"
 
 #: applet.js:778
 msgid "Blowing snow"
-msgstr "Neve"
+msgstr "Nevasca"
 
 #: applet.js:780
 msgid "Snow"
