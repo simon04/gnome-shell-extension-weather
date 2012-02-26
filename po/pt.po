@@ -56,7 +56,7 @@ msgstr "Temperatura:"
 
 #: applet.js:492
 msgid "Humidity:"
-msgstr "Umidade"
+msgstr "Umidade:"
 
 #: applet.js:494
 msgid "Pressure:"
