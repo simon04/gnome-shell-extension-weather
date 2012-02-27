@@ -66,6 +66,11 @@ class CinnamonWeatherSettings:
         label = self.add_label(label, tooltip)
         self.elements.append(entry)
         return (entry, label)
+               
+    def add_link(self, key, label, tag, tooltip=None):
+        pair = self.add_text(key, label, tooltip)
+        pair[1].set_markup(tag)
+        return pair
 
     def add_radio(self, key, label, items, tooltip=None):
         def set(rb):
@@ -110,7 +115,8 @@ class CinnamonWeatherSettings:
 
         self.elements = []
 
-        self.add_text('woeid', '<b>WOEID</b>',
+        self.add_link('woeid', '<b>WOEID</b>', 
+                "<b><a href='http://edg3.co.uk/snippets/weather-location-codes/'>WOEID</a></b>",
                 "The Where On Earth ID determinees the location/city")
         self.add_radio('temperature-unit', 'Temperature Unit',
                 [(0, 'celsius'), (1, 'fahrenheit')])
