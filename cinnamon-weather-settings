@@ -116,7 +116,7 @@ class CinnamonWeatherSettings:
         self.elements = []
 
         self.add_link('woeid', '<b>WOEID</b>', 
-                "<b><a href='http://edg3.co.uk/snippets/weather-location-codes/'>WOEID</a></b>",
+                "<b><a href='http://edg3.co.uk/snippets/weather-location-codes/'>WOEID</a></b>:",
                 "The Where On Earth ID determinees the location/city")
         self.add_radio('temperature-unit', 'Temperature Unit',
                 [(0, 'celsius'), (1, 'fahrenheit')])
