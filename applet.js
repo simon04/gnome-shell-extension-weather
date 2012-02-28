@@ -647,7 +647,7 @@ MyApplet.prototype = {
 		});
 		prefButton.connect('clicked', function() {
 			Util.spawn(["cinnamon-weather-settings"]);
-			global.log("cinnamon-weather::Click: preferences");
+			//global.log("cinnamon-weather::Click: preferences");
 		});
 		let prefBox = new St.BoxLayout({
 			style_class: 'weather-config',
