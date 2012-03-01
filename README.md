@@ -29,8 +29,8 @@ You can specify your location using the following command.
 
 You can modify the temperature unit using one of the following commands:
 
-    gsettings set org.cinnamon.applets.weather@mockturtl unit celsius
-    gsettings set org.cinnamon.applets.weather@mockturtl unit fahrenheit
+    gsettings set org.cinnamon.applets.weather@mockturtl temperature-unit celsius
+    gsettings set org.cinnamon.applets.weather@mockturtl temperature-unit fahrenheit
 
 #### Wind Speed Units (optional, kilometers per hour (km/h) by default)
 
