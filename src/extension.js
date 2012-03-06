@@ -240,7 +240,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where woeid="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
@@ -495,11 +495,11 @@ WeatherMenuButton.prototype = {
 
     refreshWeather: function(recurse) {
         this.load_json_async(this.get_weather_url(), function(json) {
-
             try {
-            let weather = json.get_object_member('query').get_object_member('results').get_object_member('channel');
+            let weathers = json.get_object_member('query').get_object_member('results').get_array_member('channel').get_elements();
+            let weather = weathers[0].get_object();
             let weather_c = weather.get_object_member('item').get_object_member('condition');
-            let forecast = weather.get_object_member('item').get_array_member('forecast').get_elements();
+            let forecast = weather.get_object_member('item').get_object_member('forecast');
 
             /* TODO won't work with the new URL
             // Fixes wrong woeid if necessary
@@ -603,7 +603,8 @@ WeatherMenuButton.prototype = {
             let date_string = [_('Today'), _('Tomorrow')];
             for (let i = 0; i <= 1; i++) {
                 let forecastUi = this._forecast[i];
-                let forecastData = forecast[i].get_object();
+
+                let forecastData = weathers[i].get_object().get_object_member('item').get_object_member('forecast');
 
                 let code = forecastData.get_string_member('code');
                 let t_low = forecastData.get_string_member('low');
