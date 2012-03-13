@@ -29,6 +29,7 @@
  */
 
 const Cairo = imports.cairo;
+const Clutter = imports.gi.Clutter;
 const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
@@ -143,7 +144,7 @@ WeatherMenuButton.prototype = {
         this._weatherIcon = new St.Icon({
             icon_type: this._icon_type,
             icon_name: 'view-refresh-symbolic',
-            style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
+            style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_text_direction() == Clutter.TextDirection.RTL ? '-rtl' : '')
         });
 
         // Label
@@ -151,7 +152,7 @@ WeatherMenuButton.prototype = {
 
         // Panel menu item - the current class
         let menuAlignment = 0.25;
-        if (St.Widget.get_default_direction() == St.TextDirection.RTL)
+        if (Clutter.get_default_text_direction() == Clutter.TextDirection.RTL)
             menuAlignment = 1.0 - menuAlignment;
         PanelMenu.Button.prototype._init.call(this, menuAlignment);
 
