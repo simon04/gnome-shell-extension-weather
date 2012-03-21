@@ -1,6 +1,6 @@
 {
 "uuid": "weather@mockturtl",
-"name": "Cinnamon Weather",
+"name": "Weather",
 "description": "View your local weather forecast",
 "icon": "weather-clear"
 }
