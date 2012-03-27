@@ -241,7 +241,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,astronomy,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
@@ -543,6 +543,9 @@ WeatherMenuButton.prototype = {
             let wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
 
+            let sunrise = weather.get_object_member('astronomy').get_string_member('sunrise');
+            let sunset = weather.get_object_member('astronomy').get_string_member('sunset');
+
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
             if (this._comment_in_panel)
@@ -599,6 +602,8 @@ WeatherMenuButton.prototype = {
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
             this._currentWeatherLocation.url = weather.get_string_member('link');
 
+            this._currentWeatherSunrise.text = sunrise;
+            this._currentWeatherSunset.text = sunset;
 
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
@@ -692,6 +697,9 @@ WeatherMenuButton.prototype = {
         this._currentWeatherPressure = new St.Label({ text: '...' });
         this._currentWeatherWind = new St.Label({ text: '...' });
 
+        this._currentWeatherSunrise = new St.Label({ text: '...' });
+        this._currentWeatherSunset = new St.Label({ text: '...' });
+
         let rb = new St.BoxLayout({
             style_class: 'weather-current-databox'
         });
@@ -714,6 +722,11 @@ WeatherMenuButton.prototype = {
         rb_values.add_actor(this._currentWeatherPressure);
         rb_captions.add_actor(new St.Label({text: _('Wind:')}));
         rb_values.add_actor(this._currentWeatherWind);
+
+        rb_captions.add_actor(new St.Label({text: _('Sunrise:')}));
+        rb_values.add_actor(this._currentWeatherSunrise);
+        rb_captions.add_actor(new St.Label({text: _('Sunset:')}));
+        rb_values.add_actor(this._currentWeatherSunset);
 
         let xb = new St.BoxLayout();
         xb.add_actor(bb);
