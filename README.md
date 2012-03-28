@@ -76,6 +76,13 @@ You may want to configure whether to translate the weather condition. If enabled
     gsettings set org.gnome.shell.extensions.weather translate-condition true
     gsettings set org.gnome.shell.extensions.weather translate-condition false
 
+#### Show Sunrise / Sunset times (optional, true by default)
+
+You may display today's Sunrise / Sunset times as retrieved from Yahoo! Weather in the current weather panel
+
+    gsettings set org.gnome.shell.extensions.weather show-sunrise-sunset true
+    gsettings set org.gnome.shell.extensions.weather show-sunrise-sunset false
+
 #### Use Symbolic Icons (optional, false by default)
 
 If desired, you can enable the usage of symbolic icons to display the weather condition (instead of full-colored icons).
@@ -122,12 +129,13 @@ Don't forget to restart GNOME Shell:
 
 ### Licence
 
-Copyright (C) 2011
+Copyright (C) 2011-2012
 Ecyrbe <ecyrbe+spam@gmail.com>,
 Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
 Simon Legner <Simon.Legner@gmail.com>,
-Simon Claessens <gagalago@gmail.com>
+Simon Claessens <gagalago@gmail.com>,
+Mark Benjamin <weather.gnome.Markie1@dfgh.net>
 
 This file is part of gnome-shell-extension-weather.
 

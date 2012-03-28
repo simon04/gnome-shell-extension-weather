@@ -42,6 +42,10 @@
     color: #999999;
 }
 
+.weather-current-astronomy {
+    color: #AAAAAA;
+}
+
 .weather-forecast-icon {
   padding: 0 15px 0 30px;
 }
