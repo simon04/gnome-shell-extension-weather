@@ -43,7 +43,7 @@
     <key name="show-sunrise-sunset" type="b">
       <default>true</default>
       <_summary>Whether to display sunrise / sunset times</_summary>
-      <_description>Whether to display sunrise & sunset times for today in current weather</_description>
+      <_description>Whether to display sunrise and sunset times for today in current weather</_description>
     </key>
     <key name="use-symbolic-icons" type="b">
       <default>false</default>
