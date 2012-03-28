@@ -9,7 +9,7 @@
  *     Timur Kristof <venemo@msn.com>,
  *     Elad Alfassa <elad@fedoraproject.org>,
  *     Simon Legner <Simon.Legner@gmail.com>
- *
+ *     Mark Benjamin <weather.gnome.Markie1@dfgh.net>
  *
  * This file is part of gnome-shell-extension-weather.
  *
@@ -51,6 +51,7 @@ const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
+const WEATHER_SHOW_SUNRISE_SUNSET_KEY = 'show-sunrise-sunset';
 const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
@@ -104,6 +105,7 @@ WeatherMenuButton.prototype = {
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+        this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
         this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
         this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
         this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
@@ -117,6 +119,7 @@ WeatherMenuButton.prototype = {
             this._city  = this._settings.get_string(WEATHER_CITY_KEY);
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+            this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
             this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
             this.refreshWeather(false);
@@ -126,6 +129,7 @@ WeatherMenuButton.prototype = {
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_SHOW_SUNRISE_SUNSET_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
@@ -240,7 +244,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
@@ -541,7 +545,10 @@ WeatherMenuButton.prototype = {
             let wind = weather.get_object_member('wind').get_string_member('speed');
             let wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
-
+            if (this._show_sunrise) {
+                let sunrise = weather.get_object_member('astronomy').get_string_member('sunrise');
+                let sunset = weather.get_object_member('astronomy').get_string_member('sunset');
+	    }
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
             if (this._comment_in_panel)
@@ -597,8 +604,10 @@ WeatherMenuButton.prototype = {
             // make the location act like a button
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
             this._currentWeatherLocation.url = weather.get_string_member('link');
-
-
+            if (this._show_sunrise) {
+                this._currentWeatherSunrise.text = sunrise;
+                this._currentWeatherSunset.text = sunset;
+	    }
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
             for (let i = 0; i <= 1; i++) {
@@ -682,9 +691,32 @@ WeatherMenuButton.prototype = {
             vertical: true,
             style_class: 'weather-current-summarybox'
         });
+
         bb.add_actor(this._currentWeatherLocation);
         bb.add_actor(this._currentWeatherSummary);
 
+	if (this._show_sunrise) {
+            this._currentWeatherSunrise = new St.Label({ text: '-' });
+            this._currentWeatherSunset = new St.Label({ text: '-' });
+
+            let ab = new St.BoxLayout({
+                style_class: 'weather-current-astronomy'
+            });
+
+            let ab_sunriselabel = new St.Label({ text: _('Sunrise') + ': ' });
+            let ab_spacerlabel = new St.Label({ text: '   ' });
+            let ab_sunsetlabel = new St.Label({ text: _('Sunset') + ': ' });
+
+            ab.add_actor(ab_sunriselabel);
+            ab.add_actor(this._currentWeatherSunrise);
+            ab.add_actor(ab_spacerlabel);
+            ab.add_actor(ab_sunsetlabel);
+            ab.add_actor(this._currentWeatherSunset);
+
+            let bb_spacerlabel = new St.Label({ text: '   ' });
+            bb.add_actor(bb_spacerlabel);
+            bb.add_actor(ab);
+        }
         // Other labels
         this._currentWeatherTemperature = new St.Label({ text: '...' });
         this._currentWeatherHumidity = new St.Label({ text:  '...' });
