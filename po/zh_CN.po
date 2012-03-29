@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-27 01:22+0200\n"
+"POT-Creation-Date: 2012-03-29 22:49+0200\n"
 "PO-Revision-Date: 2011-12-02 14:44+0800\n"
 "Last-Translator: Tao Zhu <bill_zt@sina.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -17,246 +17,287 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:73
+#: extension.js:93
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: extension.js:154
 msgid "..."
 msgstr "..."
 
-#: extension.js:228
+#: extension.js:372
 msgid "Tornado"
 msgstr "龙卷风"
 
-#: extension.js:230
+#: extension.js:374
 msgid "Tropical storm"
 msgstr "热带风暴"
 
-#: extension.js:232
+#: extension.js:376
 msgid "Hurricane"
 msgstr "飓风"
 
-#: extension.js:234
+#: extension.js:378
 msgid "Severe thunderstorms"
 msgstr "雷暴"
 
-#: extension.js:236
+#: extension.js:380
 msgid "Thunderstorms"
 msgstr "雷阵雨"
 
-#: extension.js:238
+#: extension.js:382
 msgid "Mixed rain and snow"
 msgstr "雨夹雪"
 
-#: extension.js:240
+#: extension.js:384
 msgid "Mixed rain and sleet"
 msgstr "雨夹雪"
 
-#: extension.js:242
+#: extension.js:386
 msgid "Mixed snow and sleet"
 msgstr "雨夹雪"
 
-#: extension.js:244
+#: extension.js:388
 msgid "Freezing drizzle"
 msgstr "冻雨"
 
-#: extension.js:246
+#: extension.js:390
 msgid "Drizzle"
 msgstr "小雨"
 
-#: extension.js:248
+#: extension.js:392
 msgid "Freezing rain"
 msgstr "冻雨"
 
-#: extension.js:250
-#: extension.js:252
+#: extension.js:394 extension.js:396
 msgid "Showers"
 msgstr "阵雨"
 
-#: extension.js:254
+#: extension.js:398
 msgid "Snow flurries"
 msgstr "阵雪"
 
-#: extension.js:256
+#: extension.js:400
 msgid "Light snow showers"
 msgstr "小雪"
 
-#: extension.js:258
+#: extension.js:402
 msgid "Blowing snow"
 msgstr "暴雪"
 
-#: extension.js:260
+#: extension.js:404
 msgid "Snow"
 msgstr "雪"
 
-#: extension.js:262
+#: extension.js:406
 msgid "Hail"
 msgstr "冰雹"
 
-#: extension.js:264
+#: extension.js:408
 msgid "Sleet"
 msgstr "雨夹雪"
 
-#: extension.js:266
+#: extension.js:410
 msgid "Dust"
 msgstr "扬沙"
 
-#: extension.js:268
+#: extension.js:412
 msgid "Foggy"
 msgstr "雾"
 
-#: extension.js:270
+#: extension.js:414
 msgid "Haze"
 msgstr "霾"
 
-#: extension.js:272
+#: extension.js:416
 msgid "Smoky"
 msgstr "烟雾"
 
-#: extension.js:274
+#: extension.js:418
 msgid "Blustery"
 msgstr "大风"
 
-#: extension.js:276
+#: extension.js:420
 msgid "Windy"
 msgstr "刮风"
 
-#: extension.js:278
+#: extension.js:422
 msgid "Cold"
 msgstr "冷"
 
-#: extension.js:280
+#: extension.js:424
 msgid "Cloudy"
 msgstr "多云"
 
-#: extension.js:283
+#: extension.js:427
 msgid "Mostly cloudy"
 msgstr "多云"
 
-#: extension.js:286
-#: extension.js:312
+#: extension.js:430 extension.js:456
 msgid "Partly cloudy"
 msgstr "晴转多云 "
 
-#: extension.js:288
+#: extension.js:432
 msgid "Clear"
 msgstr "晴"
 
-#: extension.js:290
+#: extension.js:434
 msgid "Sunny"
 msgstr "晴"
 
-#: extension.js:293
+#: extension.js:437
 msgid "Fair"
 msgstr "晴"
 
-#: extension.js:295
+#: extension.js:439
 msgid "Mixed rain and hail"
 msgstr "冰雹"
 
-#: extension.js:297
+#: extension.js:441
 msgid "Hot"
 msgstr "炎热"
 
-#: extension.js:299
+#: extension.js:443
 msgid "Isolated thunderstorms"
 msgstr "局地雷阵雨"
 
-#: extension.js:302
+#: extension.js:446
 msgid "Scattered thunderstorms"
 msgstr "零星雷阵雨"
 
-#: extension.js:304
+#: extension.js:448
 msgid "Scattered showers"
 msgstr "零星小雪"
 
-#: extension.js:306
-#: extension.js:310
+#: extension.js:450 extension.js:454
 msgid "Heavy snow"
 msgstr "大雪"
 
-#: extension.js:308
+#: extension.js:452
 msgid "Scattered snow showers"
 msgstr "零星阵雪"
 
-#: extension.js:314
+#: extension.js:458
 msgid "Thundershowers"
 msgstr "雷阵雨"
 
-#: extension.js:316
+#: extension.js:460
 msgid "Snow showers"
 msgstr "阵雪"
 
-#: extension.js:318
+#: extension.js:462
 msgid "Isolated thundershowers"
 msgstr "局地雷阵雨"
 
-#: extension.js:321
+#: extension.js:465
 msgid "Not available"
 msgstr "不可用"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Monday"
 msgstr "星期一"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Tuesday"
 msgstr "星期二"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Wednesday"
 msgstr "星期三"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Thursday"
 msgstr "星期四"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Friday"
 msgstr "星期五"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Saturday"
 msgstr "星期六"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Sunday"
 msgstr "星期日"
 
-#: extension.js:392
+#: extension.js:485
+msgid "N"
+msgstr ""
+
+#: extension.js:485
+msgid "NE"
+msgstr ""
+
+#: extension.js:485
+msgid "E"
+msgstr ""
+
+#: extension.js:485
+msgid "SE"
+msgstr ""
+
+#: extension.js:485
+msgid "S"
+msgstr ""
+
+#: extension.js:485
+msgid "SW"
+msgstr ""
+
+#: extension.js:485
+msgid "W"
+msgstr ""
+
+#: extension.js:485
+msgid "NW"
+msgstr ""
+
+#: extension.js:612
 msgid "Today"
 msgstr "今天"
 
-#: extension.js:392
+#: extension.js:612
 msgid "Tomorrow"
 msgstr "明天"
 
-#: extension.js:429
+#: extension.js:658
 msgid "Loading current weather ..."
 msgstr "正在加载当前天气 ..."
 
-#: extension.js:430
+#: extension.js:659
 msgid "Loading future weather ..."
 msgstr "正在加载预报天气 ..."
 
-#: extension.js:446
+#: extension.js:675
 msgid "Loading ..."
 msgstr "正在加载 ..."
 
-#: extension.js:449
+#: extension.js:681
 msgid "Please wait"
 msgstr "请等待"
 
-#: extension.js:467
+#: extension.js:706
+msgid "Sunrise"
+msgstr ""
+
+#: extension.js:708
+msgid "Sunset"
+msgstr ""
+
+#: extension.js:740
 msgid "Temperature:"
 msgstr "温度："
 
-#: extension.js:469
+#: extension.js:742
 msgid "Humidity:"
 msgstr "湿度："
 
-#: extension.js:471
+#: extension.js:744
 msgid "Pressure:"
 msgstr "气压："
 
-#: extension.js:473
+#: extension.js:746
 msgid "Wind:"
 msgstr "风力："
-

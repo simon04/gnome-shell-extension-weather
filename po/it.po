@@ -6,194 +6,298 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-27 01:22+0200\n"
+"POT-Creation-Date: 2012-03-29 22:49+0200\n"
 "PO-Revision-Date: 2011-11-04 15:25+0100\n"
 "Last-Translator: Odysseus86 <hal8600@hotmail.it>\n"
+"Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"Language-Team: \n"
 "X-Poedit-Language: Italian\n"
 
+#: extension.js:93
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: extension.js:154
 msgid "..."
 msgstr "..."
 
-msgid "Blowing snow"
-msgstr "Neve "
-
-msgid "Blustery"
-msgstr "Raffiche di vento "
-
-msgid "Clear"
-msgstr "Limpido "
-
-msgid "Cloudy"
-msgstr "Nuvoloso "
-
-msgid "Cold"
-msgstr "Freddo "
-
-msgid "Drizzle"
-msgstr "Pioggia leggera "
-
-msgid "Dust"
-msgstr "Nebbia "
-
-msgid "Fair"
-msgstr "Sereno "
-
-msgid "Foggy"
-msgstr "Nebbia "
-
-msgid "Freezing drizzle"
-msgstr "Pioggerella fredda "
-
-msgid "Freezing rain"
-msgstr "Pioggia fredda "
-
-msgid "Friday"
-msgstr "Venerdì"
-
-msgid "Hail"
-msgstr "Grandine "
-
-msgid "Haze"
-msgstr "Foschia "
-
-msgid "Heavy snow"
-msgstr "Tempesta di neve "
-
-msgid "Hot"
-msgstr "Caldo "
-
-msgid "Humidity:"
-msgstr "Umidità :"
-
-msgid "Hurricane"
-msgstr "Uragano "
-
-msgid "Isolated thundershowers"
-msgstr "Rovesci temporaleschi isolati "
-
-msgid "Isolated thunderstorms"
-msgstr "Temporali isolati"
-
-msgid "Light snow showers"
-msgstr "Rovesci di neve leggera "
-
-msgid "Loading ..."
-msgstr "Caricamento ..."
-
-msgid "Loading current weather ..."
-msgstr "Caricamento meteo ..."
-
-msgid "Loading future weather ..."
-msgstr "Caricamento previsioni ..."
-
-msgid "Mixed rain and hail"
-msgstr "Pioggia mista a grandine "
-
-msgid "Mixed rain and sleet"
-msgstr "Pioggia mista a nevischio "
-
-msgid "Mixed rain and snow"
-msgstr "Pioggia mista a neve "
-
-msgid "Mixed snow and sleet"
-msgstr "Neve mista a nevischio "
-
-msgid "Monday"
-msgstr "Lunedì"
-
-msgid "Mostly cloudy"
-msgstr "Cielo coperto "
-
-msgid "Not available"
-msgstr "Non disponibile "
-
-msgid "Partly cloudy"
-msgstr "Poco nuvoloso "
-
-msgid "Please wait"
-msgstr "Attendere, prego"
-
-msgid "Pressure:"
-msgstr "Pressione :"
-
-msgid "Saturday"
-msgstr "Sabato"
-
-msgid "Scattered showers"
-msgstr "Pioggia intensa "
-
-msgid "Scattered snow showers"
-msgstr "Tempesta di neve "
-
-msgid "Scattered thunderstorms"
-msgstr "Temporali sparsi "
-
-msgid "Severe thunderstorms"
-msgstr "Violenti temporali "
-
-msgid "Showers"
-msgstr "Pioggia "
-
-msgid "Sleet"
-msgstr "Nevischio "
-
-msgid "Smoky"
-msgstr "Nebbioso "
-
-msgid "Snow"
-msgstr "Neve "
-
-msgid "Snow flurries"
-msgstr "Folate di neve "
-
-msgid "Snow showers"
-msgstr "Rovesci nevosi "
-
-msgid "Sunday"
-msgstr "Domenica"
-
-msgid "Sunny"
-msgstr "Soleggiato "
-
-msgid "Temperature:"
-msgstr "Temperatura :"
-
-msgid "Thundershowers"
-msgstr "Rovesci temporaleschi "
-
-msgid "Thunderstorms"
-msgstr "Temporali "
-
-msgid "Thursday"
-msgstr "Giovedì"
-
-msgid "Today"
-msgstr "Oggi"
-
-msgid "Tomorrow"
-msgstr "Domani"
-
+#: extension.js:372
 msgid "Tornado"
 msgstr "Tornado "
 
+#: extension.js:374
 msgid "Tropical storm"
 msgstr "Tempesta tropicale "
 
-msgid "Tuesday"
-msgstr "Martedì"
+#: extension.js:376
+msgid "Hurricane"
+msgstr "Uragano "
 
-msgid "Wednesday"
-msgstr "Mercoledì"
+#: extension.js:378
+msgid "Severe thunderstorms"
+msgstr "Violenti temporali "
 
-msgid "Wind:"
-msgstr "Vento :"
+#: extension.js:380
+msgid "Thunderstorms"
+msgstr "Temporali "
 
+#: extension.js:382
+msgid "Mixed rain and snow"
+msgstr "Pioggia mista a neve "
+
+#: extension.js:384
+msgid "Mixed rain and sleet"
+msgstr "Pioggia mista a nevischio "
+
+#: extension.js:386
+msgid "Mixed snow and sleet"
+msgstr "Neve mista a nevischio "
+
+#: extension.js:388
+msgid "Freezing drizzle"
+msgstr "Pioggerella fredda "
+
+#: extension.js:390
+msgid "Drizzle"
+msgstr "Pioggia leggera "
+
+#: extension.js:392
+msgid "Freezing rain"
+msgstr "Pioggia fredda "
+
+#: extension.js:394 extension.js:396
+msgid "Showers"
+msgstr "Pioggia "
+
+#: extension.js:398
+msgid "Snow flurries"
+msgstr "Folate di neve "
+
+#: extension.js:400
+msgid "Light snow showers"
+msgstr "Rovesci di neve leggera "
+
+#: extension.js:402
+msgid "Blowing snow"
+msgstr "Neve "
+
+#: extension.js:404
+msgid "Snow"
+msgstr "Neve "
+
+#: extension.js:406
+msgid "Hail"
+msgstr "Grandine "
+
+#: extension.js:408
+msgid "Sleet"
+msgstr "Nevischio "
+
+#: extension.js:410
+msgid "Dust"
+msgstr "Nebbia "
+
+#: extension.js:412
+msgid "Foggy"
+msgstr "Nebbia "
+
+#: extension.js:414
+msgid "Haze"
+msgstr "Foschia "
+
+#: extension.js:416
+msgid "Smoky"
+msgstr "Nebbioso "
+
+#: extension.js:418
+msgid "Blustery"
+msgstr "Raffiche di vento "
+
+#: extension.js:420
 msgid "Windy"
 msgstr "Ventoso "
 
+#: extension.js:422
+msgid "Cold"
+msgstr "Freddo "
+
+#: extension.js:424
+msgid "Cloudy"
+msgstr "Nuvoloso "
+
+#: extension.js:427
+msgid "Mostly cloudy"
+msgstr "Cielo coperto "
+
+#: extension.js:430 extension.js:456
+msgid "Partly cloudy"
+msgstr "Poco nuvoloso "
+
+#: extension.js:432
+msgid "Clear"
+msgstr "Limpido "
+
+#: extension.js:434
+msgid "Sunny"
+msgstr "Soleggiato "
+
+#: extension.js:437
+msgid "Fair"
+msgstr "Sereno "
+
+#: extension.js:439
+msgid "Mixed rain and hail"
+msgstr "Pioggia mista a grandine "
+
+#: extension.js:441
+msgid "Hot"
+msgstr "Caldo "
+
+#: extension.js:443
+msgid "Isolated thunderstorms"
+msgstr "Temporali isolati"
+
+#: extension.js:446
+msgid "Scattered thunderstorms"
+msgstr "Temporali sparsi "
+
+#: extension.js:448
+msgid "Scattered showers"
+msgstr "Pioggia intensa "
+
+#: extension.js:450 extension.js:454
+msgid "Heavy snow"
+msgstr "Tempesta di neve "
+
+#: extension.js:452
+msgid "Scattered snow showers"
+msgstr "Tempesta di neve "
+
+#: extension.js:458
+msgid "Thundershowers"
+msgstr "Rovesci temporaleschi "
+
+#: extension.js:460
+msgid "Snow showers"
+msgstr "Rovesci nevosi "
+
+#: extension.js:462
+msgid "Isolated thundershowers"
+msgstr "Rovesci temporaleschi isolati "
+
+#: extension.js:465
+msgid "Not available"
+msgstr "Non disponibile "
+
+#: extension.js:480
+msgid "Monday"
+msgstr "Lunedì"
+
+#: extension.js:480
+msgid "Tuesday"
+msgstr "Martedì"
+
+#: extension.js:480
+msgid "Wednesday"
+msgstr "Mercoledì"
+
+#: extension.js:480
+msgid "Thursday"
+msgstr "Giovedì"
+
+#: extension.js:480
+msgid "Friday"
+msgstr "Venerdì"
+
+#: extension.js:480
+msgid "Saturday"
+msgstr "Sabato"
+
+#: extension.js:480
+msgid "Sunday"
+msgstr "Domenica"
+
+#: extension.js:485
+msgid "N"
+msgstr ""
+
+#: extension.js:485
+msgid "NE"
+msgstr ""
+
+#: extension.js:485
+msgid "E"
+msgstr ""
+
+#: extension.js:485
+msgid "SE"
+msgstr ""
+
+#: extension.js:485
+msgid "S"
+msgstr ""
+
+#: extension.js:485
+msgid "SW"
+msgstr ""
+
+#: extension.js:485
+msgid "W"
+msgstr ""
+
+#: extension.js:485
+msgid "NW"
+msgstr ""
+
+#: extension.js:612
+msgid "Today"
+msgstr "Oggi"
+
+#: extension.js:612
+msgid "Tomorrow"
+msgstr "Domani"
+
+#: extension.js:658
+msgid "Loading current weather ..."
+msgstr "Caricamento meteo ..."
+
+#: extension.js:659
+msgid "Loading future weather ..."
+msgstr "Caricamento previsioni ..."
+
+#: extension.js:675
+msgid "Loading ..."
+msgstr "Caricamento ..."
+
+#: extension.js:681
+msgid "Please wait"
+msgstr "Attendere, prego"
+
+#: extension.js:706
+msgid "Sunrise"
+msgstr ""
+
+#: extension.js:708
+msgid "Sunset"
+msgstr ""
+
+#: extension.js:740
+msgid "Temperature:"
+msgstr "Temperatura :"
+
+#: extension.js:742
+msgid "Humidity:"
+msgstr "Umidità :"
+
+#: extension.js:744
+msgid "Pressure:"
+msgstr "Pressione :"
+
+#: extension.js:746
+msgid "Wind:"
+msgstr "Vento :"

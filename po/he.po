@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-27 01:22+0200\n"
+"POT-Creation-Date: 2012-03-29 22:49+0200\n"
 "PO-Revision-Date: 2012-01-31 21:37+0200\n"
 "Last-Translator: Yaron Sheffer <yaronf@gmx.com>\n"
 "Language-Team: Hebrew <none@example.com>\n"
@@ -17,242 +17,287 @@ msgstr ""
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: extension.js:73
+#: extension.js:93
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: extension.js:154
 msgid "..."
 msgstr "..."
 
-#: extension.js:228
+#: extension.js:372
 msgid "Tornado"
 msgstr "טורנדו"
 
-#: extension.js:230
+#: extension.js:374
 msgid "Tropical storm"
 msgstr "סופה טרופית"
 
-#: extension.js:232
+#: extension.js:376
 msgid "Hurricane"
 msgstr "הוריקן"
 
-#: extension.js:234
+#: extension.js:378
 msgid "Severe thunderstorms"
 msgstr "סופות רעמים קשות"
 
-#: extension.js:236
+#: extension.js:380
 msgid "Thunderstorms"
 msgstr "סופות רעמים"
 
-#: extension.js:238
+#: extension.js:382
 msgid "Mixed rain and snow"
 msgstr "גשם מעורב בשלג"
 
-#: extension.js:240
+#: extension.js:384
 msgid "Mixed rain and sleet"
 msgstr "גשם ושלג מימי"
 
-#: extension.js:242
+#: extension.js:386
 msgid "Mixed snow and sleet"
 msgstr "שלג מימי בחלקו"
 
-#: extension.js:244
+#: extension.js:388
 msgid "Freezing drizzle"
 msgstr "טפטוף קפוא"
 
-#: extension.js:246
+#: extension.js:390
 msgid "Drizzle"
 msgstr "טפטוף"
 
-#: extension.js:248
+#: extension.js:392
 msgid "Freezing rain"
 msgstr "גשם קפוא"
 
-#: extension.js:250 extension.js:252
+#: extension.js:394 extension.js:396
 msgid "Showers"
 msgstr "ממטרים"
 
-#: extension.js:254
+#: extension.js:398
 msgid "Snow flurries"
 msgstr "מטחי שלג קצרים"
 
-#: extension.js:256
+#: extension.js:400
 msgid "Light snow showers"
 msgstr "ממטרי שלג קלים"
 
-#: extension.js:258
+#: extension.js:402
 msgid "Blowing snow"
 msgstr "שלג מנשב"
 
-#: extension.js:260
+#: extension.js:404
 msgid "Snow"
 msgstr "שלג"
 
-#: extension.js:262
+#: extension.js:406
 msgid "Hail"
 msgstr "ברד"
 
-#: extension.js:264
+#: extension.js:408
 msgid "Sleet"
 msgstr "שלג מימי"
 
-#: extension.js:266
+#: extension.js:410
 msgid "Dust"
 msgstr "אבק"
 
-#: extension.js:268
+#: extension.js:412
 msgid "Foggy"
 msgstr "מעורפל"
 
-#: extension.js:270
+#: extension.js:414
 msgid "Haze"
 msgstr "אובך"
 
-#: extension.js:272
+#: extension.js:416
 msgid "Smoky"
 msgstr "מלא עשן"
 
-#: extension.js:274
+#: extension.js:418
 msgid "Blustery"
 msgstr "סוער"
 
-#: extension.js:276
+#: extension.js:420
 msgid "Windy"
 msgstr "סוער"
 
-#: extension.js:278
+#: extension.js:422
 msgid "Cold"
 msgstr "קר"
 
-#: extension.js:280
+#: extension.js:424
 msgid "Cloudy"
 msgstr "מעונן"
 
-#: extension.js:283
+#: extension.js:427
 msgid "Mostly cloudy"
 msgstr "מעונן ברובו"
 
-#: extension.js:286 extension.js:312
+#: extension.js:430 extension.js:456
 msgid "Partly cloudy"
 msgstr "מעונן חלקית"
 
-#: extension.js:288
+#: extension.js:432
 msgid "Clear"
 msgstr "בהיר"
 
-#: extension.js:290
+#: extension.js:434
 msgid "Sunny"
 msgstr "שמשי"
 
-#: extension.js:293
+#: extension.js:437
 msgid "Fair"
 msgstr "נאה"
 
-#: extension.js:295
+#: extension.js:439
 msgid "Mixed rain and hail"
 msgstr "גשם מעורב בברד"
 
-#: extension.js:297
+#: extension.js:441
 msgid "Hot"
 msgstr "חם"
 
-#: extension.js:299
+#: extension.js:443
 msgid "Isolated thunderstorms"
 msgstr "סופות רעמים בודדות"
 
-#: extension.js:302
+#: extension.js:446
 msgid "Scattered thunderstorms"
 msgstr "סופות רעמים מקומיות"
 
-#: extension.js:304
+#: extension.js:448
 msgid "Scattered showers"
 msgstr "ממטרים מקומיים"
 
-#: extension.js:306 extension.js:310
+#: extension.js:450 extension.js:454
 msgid "Heavy snow"
 msgstr "שלג כבד"
 
-#: extension.js:308
+#: extension.js:452
 msgid "Scattered snow showers"
 msgstr "ממטרי שלג מקומיים"
 
-#: extension.js:314
+#: extension.js:458
 msgid "Thundershowers"
 msgstr "סופות רעמים"
 
-#: extension.js:316
+#: extension.js:460
 msgid "Snow showers"
 msgstr "ממטרי שלג"
 
-#: extension.js:318
+#: extension.js:462
 msgid "Isolated thundershowers"
 msgstr "סופות רעמים בודדות"
 
-#: extension.js:321
+#: extension.js:465
 msgid "Not available"
 msgstr "לא זמין"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Monday"
 msgstr "יום ב"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Tuesday"
 msgstr "יום ג"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Wednesday"
 msgstr "יום ד"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Thursday"
 msgstr "יום ה"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Friday"
 msgstr "יום ו"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Saturday"
 msgstr "שבת"
 
-#: extension.js:336
+#: extension.js:480
 msgid "Sunday"
 msgstr "יום א"
 
-#: extension.js:392
+#: extension.js:485
+msgid "N"
+msgstr ""
+
+#: extension.js:485
+msgid "NE"
+msgstr ""
+
+#: extension.js:485
+msgid "E"
+msgstr ""
+
+#: extension.js:485
+msgid "SE"
+msgstr ""
+
+#: extension.js:485
+msgid "S"
+msgstr ""
+
+#: extension.js:485
+msgid "SW"
+msgstr ""
+
+#: extension.js:485
+msgid "W"
+msgstr ""
+
+#: extension.js:485
+msgid "NW"
+msgstr ""
+
+#: extension.js:612
 msgid "Today"
 msgstr "היום"
 
-#: extension.js:392
+#: extension.js:612
 msgid "Tomorrow"
 msgstr "מחר"
 
-#: extension.js:429
+#: extension.js:658
 msgid "Loading current weather ..."
 msgstr "טוען מזג אויר עכשווי..."
 
-#: extension.js:430
+#: extension.js:659
 msgid "Loading future weather ..."
 msgstr "טוען מזג אויר עתידי..."
 
-#: extension.js:446
+#: extension.js:675
 msgid "Loading ..."
 msgstr "טוען..."
 
-#: extension.js:449
+#: extension.js:681
 msgid "Please wait"
 msgstr "נא להמתין"
 
-#: extension.js:467
+#: extension.js:706
+msgid "Sunrise"
+msgstr ""
+
+#: extension.js:708
+msgid "Sunset"
+msgstr ""
+
+#: extension.js:740
 msgid "Temperature:"
 msgstr "טמפרטורה:"
 
-#: extension.js:469
+#: extension.js:742
 msgid "Humidity:"
 msgstr "לחות:"
 
-#: extension.js:471
+#: extension.js:744
 msgid "Pressure:"
 msgstr "לחץ ברומטרי:"
 
-#: extension.js:473
+#: extension.js:746
 msgid "Wind:"
 msgstr "רוח:"
