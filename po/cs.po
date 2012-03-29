@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 13:42+0200\n"
+"POT-Creation-Date: 2012-03-29 22:49+0200\n"
 "PO-Revision-Date: 2012-03-29 13:43+0100\n"
 "Last-Translator: David Štancl <dstancl@dstancl.cz>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
@@ -16,290 +16,287 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:73 ../src/extension.js:154
-msgid "..."
-msgstr "..."
-
-#: extension.js:228 ../src/extension.js:372
-msgid "Tornado"
-msgstr "Tornádo"
-
-#: extension.js:230 ../src/extension.js:374
-msgid "Tropical storm"
-msgstr "Tropická bouře"
-
-#: extension.js:232 ../src/extension.js:376
-msgid "Hurricane"
-msgstr "Hurikán"
-
-#: extension.js:234 ../src/extension.js:378
-msgid "Severe thunderstorms"
-msgstr "Četné bouřky"
-
-#: extension.js:236 ../src/extension.js:380
-msgid "Thunderstorms"
-msgstr "Bouřky"
-
-#: extension.js:238 ../src/extension.js:382
-msgid "Mixed rain and snow"
-msgstr "Sníh s deštěm"
-
-#: extension.js:240 ../src/extension.js:384
-msgid "Mixed rain and sleet"
-msgstr "Déšť a plískanice"
-
-#: extension.js:242 ../src/extension.js:386
-msgid "Mixed snow and sleet"
-msgstr "Sníh a plískanice"
-
-#: extension.js:244 ../src/extension.js:388
-msgid "Freezing drizzle"
-msgstr "Namrzající mrholení"
-
-#: extension.js:246 ../src/extension.js:390
-msgid "Drizzle"
-msgstr "Mrholení"
-
-#: extension.js:248 ../src/extension.js:392
-msgid "Freezing rain"
-msgstr "Namrzající déšť"
-
-#: extension.js:250 extension.js:252 ../src/extension.js:394
-#: ../src/extension.js:396
-msgid "Showers"
-msgstr "Přeháňky"
-
-#: extension.js:254 ../src/extension.js:398
-msgid "Snow flurries"
-msgstr "Sněhové přívaly"
-
-#: extension.js:256 ../src/extension.js:400
-msgid "Light snow showers"
-msgstr "Mírné sněžení"
-
-#: extension.js:258 ../src/extension.js:402
-msgid "Blowing snow"
-msgstr "Husté sněžení"
-
-#: extension.js:260 ../src/extension.js:404
-msgid "Snow"
-msgstr "Sněžení"
-
-#: extension.js:262 ../src/extension.js:406
-msgid "Hail"
-msgstr "Kroupy"
-
-#: extension.js:264 ../src/extension.js:408
-msgid "Sleet"
-msgstr "Plískanice"
-
-#: extension.js:266 ../src/extension.js:410
-msgid "Dust"
-msgstr "Prašno"
-
-#: extension.js:268 ../src/extension.js:412
-msgid "Foggy"
-msgstr "Mlha"
-
-#: extension.js:270 ../src/extension.js:414
-msgid "Haze"
-msgstr "Opar"
-
-#: extension.js:272 ../src/extension.js:416
-msgid "Smoky"
-msgstr "Kouřmo"
-
-#: extension.js:274 ../src/extension.js:418
-msgid "Blustery"
-msgstr "Bouřlivě"
-
-#: extension.js:276 ../src/extension.js:420
-msgid "Windy"
-msgstr "Větrno"
-
-#: extension.js:278 ../src/extension.js:422
-msgid "Cold"
-msgstr "Chladno"
-
-#: extension.js:280 ../src/extension.js:424
-msgid "Cloudy"
-msgstr "Zataženo"
-
-#: extension.js:283 ../src/extension.js:427
-msgid "Mostly cloudy"
-msgstr "Oblačno"
-
-#: extension.js:286 extension.js:312 ../src/extension.js:430
-#: ../src/extension.js:456
-msgid "Partly cloudy"
-msgstr "Polojasno"
-
-#: extension.js:288 ../src/extension.js:432
-msgid "Clear"
-msgstr "Jasno"
-
-#: extension.js:290 ../src/extension.js:434
-msgid "Sunny"
-msgstr "Slunečno"
-
-#: extension.js:293 ../src/extension.js:437
-msgid "Fair"
-msgstr "Pěkně"
-
-#: extension.js:295 ../src/extension.js:439
-msgid "Mixed rain and hail"
-msgstr "Déšť s kroupami"
-
-#: extension.js:297 ../src/extension.js:441
-msgid "Hot"
-msgstr "Horko"
-
-#: extension.js:299 ../src/extension.js:443
-msgid "Isolated thunderstorms"
-msgstr "Osamocené bouřky"
-
-#: extension.js:302 ../src/extension.js:446
-msgid "Scattered thunderstorms"
-msgstr "Občasné bouřky"
-
-#: extension.js:304 ../src/extension.js:448
-msgid "Scattered showers"
-msgstr "Občasné přeháňky"
-
-#: extension.js:306 extension.js:310 ../src/extension.js:450
-#: ../src/extension.js:454
-msgid "Heavy snow"
-msgstr "Husté sněžení"
-
-#: extension.js:308 ../src/extension.js:452
-msgid "Scattered snow showers"
-msgstr "Občasné sněžení"
-
-#: extension.js:314 ../src/extension.js:458
-msgid "Thundershowers"
-msgstr "Bouřky s přeháňkami"
-
-#: extension.js:316 ../src/extension.js:460
-msgid "Snow showers"
-msgstr "Sněhové přeháňky"
-
-#: extension.js:318 ../src/extension.js:462
-msgid "Isolated thundershowers"
-msgstr "Osamocené bouřky s deštěm"
-
-#: extension.js:321 ../src/extension.js:465
-msgid "Not available"
-msgstr "Není k dispozici"
-
-#: extension.js:336 ../src/extension.js:480
-msgid "Monday"
-msgstr "Pondělí"
-
-#: extension.js:336 ../src/extension.js:480
-msgid "Tuesday"
-msgstr "Úterý"
-
-#: extension.js:336 ../src/extension.js:480
-msgid "Wednesday"
-msgstr "Středa"
-
-#: extension.js:336 ../src/extension.js:480
-msgid "Thursday"
-msgstr "Čtvrtek"
-
-#: extension.js:336 ../src/extension.js:480
-msgid "Friday"
-msgstr "Pátek"
-
-#: extension.js:336 ../src/extension.js:480
-msgid "Saturday"
-msgstr "Sobota"
-
-#: extension.js:336 ../src/extension.js:480
-msgid "Sunday"
-msgstr "Neděle"
-
-#: extension.js:392 ../src/extension.js:612
-msgid "Today"
-msgstr "Dnes"
-
-#: extension.js:392 ../src/extension.js:612
-msgid "Tomorrow"
-msgstr "Zítra"
-
-#: extension.js:429 ../src/extension.js:658
-msgid "Loading current weather ..."
-msgstr "Načítá se aktuální počasí ..."
-
-#: extension.js:430 ../src/extension.js:659
-msgid "Loading future weather ..."
-msgstr "Načítá se předpověď ..."
-
-#: extension.js:446 ../src/extension.js:675
-msgid "Loading ..."
-msgstr "Načítá se ..."
-
-#: extension.js:449 ../src/extension.js:681
-msgid "Please wait"
-msgstr "Čekejte"
-
-#: extension.js:467 ../src/extension.js:740
-msgid "Temperature:"
-msgstr "Teplota:"
-
-#: extension.js:469 ../src/extension.js:742
-msgid "Humidity:"
-msgstr "Vlhkost:"
-
-#: extension.js:471 ../src/extension.js:744
-msgid "Pressure:"
-msgstr "Tlak:"
-
-#: extension.js:473 ../src/extension.js:746
-msgid "Wind:"
-msgstr "Vítr:"
-
-#: ../src/extension.js:93
+#: extension.js:93
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Schéma \"%s\" nebylo nalezeno."
 
-#: ../src/extension.js:485
+#: extension.js:154
+msgid "..."
+msgstr "..."
+
+#: extension.js:372
+msgid "Tornado"
+msgstr "Tornádo"
+
+#: extension.js:374
+msgid "Tropical storm"
+msgstr "Tropická bouře"
+
+#: extension.js:376
+msgid "Hurricane"
+msgstr "Hurikán"
+
+#: extension.js:378
+msgid "Severe thunderstorms"
+msgstr "Četné bouřky"
+
+#: extension.js:380
+msgid "Thunderstorms"
+msgstr "Bouřky"
+
+#: extension.js:382
+msgid "Mixed rain and snow"
+msgstr "Sníh s deštěm"
+
+#: extension.js:384
+msgid "Mixed rain and sleet"
+msgstr "Déšť a plískanice"
+
+#: extension.js:386
+msgid "Mixed snow and sleet"
+msgstr "Sníh a plískanice"
+
+#: extension.js:388
+msgid "Freezing drizzle"
+msgstr "Namrzající mrholení"
+
+#: extension.js:390
+msgid "Drizzle"
+msgstr "Mrholení"
+
+#: extension.js:392
+msgid "Freezing rain"
+msgstr "Namrzající déšť"
+
+#: extension.js:394 extension.js:396
+msgid "Showers"
+msgstr "Přeháňky"
+
+#: extension.js:398
+msgid "Snow flurries"
+msgstr "Sněhové přívaly"
+
+#: extension.js:400
+msgid "Light snow showers"
+msgstr "Mírné sněžení"
+
+#: extension.js:402
+msgid "Blowing snow"
+msgstr "Husté sněžení"
+
+#: extension.js:404
+msgid "Snow"
+msgstr "Sněžení"
+
+#: extension.js:406
+msgid "Hail"
+msgstr "Kroupy"
+
+#: extension.js:408
+msgid "Sleet"
+msgstr "Plískanice"
+
+#: extension.js:410
+msgid "Dust"
+msgstr "Prašno"
+
+#: extension.js:412
+msgid "Foggy"
+msgstr "Mlha"
+
+#: extension.js:414
+msgid "Haze"
+msgstr "Opar"
+
+#: extension.js:416
+msgid "Smoky"
+msgstr "Kouřmo"
+
+#: extension.js:418
+msgid "Blustery"
+msgstr "Bouřlivě"
+
+#: extension.js:420
+msgid "Windy"
+msgstr "Větrno"
+
+#: extension.js:422
+msgid "Cold"
+msgstr "Chladno"
+
+#: extension.js:424
+msgid "Cloudy"
+msgstr "Zataženo"
+
+#: extension.js:427
+msgid "Mostly cloudy"
+msgstr "Oblačno"
+
+#: extension.js:430 extension.js:456
+msgid "Partly cloudy"
+msgstr "Polojasno"
+
+#: extension.js:432
+msgid "Clear"
+msgstr "Jasno"
+
+#: extension.js:434
+msgid "Sunny"
+msgstr "Slunečno"
+
+#: extension.js:437
+msgid "Fair"
+msgstr "Pěkně"
+
+#: extension.js:439
+msgid "Mixed rain and hail"
+msgstr "Déšť s kroupami"
+
+#: extension.js:441
+msgid "Hot"
+msgstr "Horko"
+
+#: extension.js:443
+msgid "Isolated thunderstorms"
+msgstr "Osamocené bouřky"
+
+#: extension.js:446
+msgid "Scattered thunderstorms"
+msgstr "Občasné bouřky"
+
+#: extension.js:448
+msgid "Scattered showers"
+msgstr "Občasné přeháňky"
+
+#: extension.js:450 extension.js:454
+msgid "Heavy snow"
+msgstr "Husté sněžení"
+
+#: extension.js:452
+msgid "Scattered snow showers"
+msgstr "Občasné sněžení"
+
+#: extension.js:458
+msgid "Thundershowers"
+msgstr "Bouřky s přeháňkami"
+
+#: extension.js:460
+msgid "Snow showers"
+msgstr "Sněhové přeháňky"
+
+#: extension.js:462
+msgid "Isolated thundershowers"
+msgstr "Osamocené bouřky s deštěm"
+
+#: extension.js:465
+msgid "Not available"
+msgstr "Není k dispozici"
+
+#: extension.js:480
+msgid "Monday"
+msgstr "Pondělí"
+
+#: extension.js:480
+msgid "Tuesday"
+msgstr "Úterý"
+
+#: extension.js:480
+msgid "Wednesday"
+msgstr "Středa"
+
+#: extension.js:480
+msgid "Thursday"
+msgstr "Čtvrtek"
+
+#: extension.js:480
+msgid "Friday"
+msgstr "Pátek"
+
+#: extension.js:480
+msgid "Saturday"
+msgstr "Sobota"
+
+#: extension.js:480
+msgid "Sunday"
+msgstr "Neděle"
+
+#: extension.js:485
 msgid "N"
 msgstr "S"
 
-#: ../src/extension.js:485
+#: extension.js:485
 msgid "NE"
 msgstr "SV"
 
-#: ../src/extension.js:485
+#: extension.js:485
 msgid "E"
 msgstr "V"
 
-#: ../src/extension.js:485
+#: extension.js:485
 msgid "SE"
 msgstr "JV"
 
-#: ../src/extension.js:485
+#: extension.js:485
 msgid "S"
 msgstr "J"
 
-#: ../src/extension.js:485
+#: extension.js:485
 msgid "SW"
 msgstr "JZ"
 
-#: ../src/extension.js:485
+#: extension.js:485
 msgid "W"
 msgstr "Z"
 
-#: ../src/extension.js:485
+#: extension.js:485
 msgid "NW"
 msgstr "SZ"
 
-#: ../src/extension.js:706
+#: extension.js:612
+msgid "Today"
+msgstr "Dnes"
+
+#: extension.js:612
+msgid "Tomorrow"
+msgstr "Zítra"
+
+#: extension.js:658
+msgid "Loading current weather ..."
+msgstr "Načítá se aktuální počasí ..."
+
+#: extension.js:659
+msgid "Loading future weather ..."
+msgstr "Načítá se předpověď ..."
+
+#: extension.js:675
+msgid "Loading ..."
+msgstr "Načítá se ..."
+
+#: extension.js:681
+msgid "Please wait"
+msgstr "Čekejte"
+
+#: extension.js:706
 msgid "Sunrise"
 msgstr "Východ"
 
-#: ../src/extension.js:708
+#: extension.js:708
 msgid "Sunset"
 msgstr "Západ"
+
+#: extension.js:740
+msgid "Temperature:"
+msgstr "Teplota:"
+
+#: extension.js:742
+msgid "Humidity:"
+msgstr "Vlhkost:"
+
+#: extension.js:744
+msgid "Pressure:"
+msgstr "Tlak:"
+
+#: extension.js:746
+msgid "Wind:"
+msgstr "Vítr:"
