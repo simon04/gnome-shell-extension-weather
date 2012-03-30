@@ -171,14 +171,14 @@ WeatherMenuButton.prototype = {
         switch (this._position_in_panel) {
             case WeatherPosition.LEFT:
                 children = Main.panel._leftBox.get_children();
-                Main.panel._leftBox.insert_actor (this.actor, children.length-1);
+                Main.panel._leftBox.insert_child_at_index(this.actor, children.length-1);
                 break;
             case WeatherPosition.CENTER:
                 Main.panel._centerBox.add(this.actor, { y_fill: true });
                 break;
             case WeatherPosition.RIGHT:
                 children = Main.panel._rightBox.get_children();
-                Main.panel._rightBox.insert_actor(this.actor, children.length-1);
+                Main.panel._rightBox.insert_child_at_index(this.actor, children.length-1);
                 break;
         }
 
