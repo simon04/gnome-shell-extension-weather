@@ -598,7 +598,7 @@ WeatherMenuButton.prototype = {
                 }
                 this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
             } else
-                this._currentWeatherWind.text = ' - ';
+                this._currentWeatherWind.text = '\u2013';
 
             this._currentWeatherLocation.label = location + '...';
             // make the location act like a button
