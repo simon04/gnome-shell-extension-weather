@@ -244,7 +244,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
@@ -545,10 +545,8 @@ WeatherMenuButton.prototype = {
             let wind = weather.get_object_member('wind').get_string_member('speed');
             let wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
-            if (this._show_sunrise) {
-                let sunrise = weather.get_object_member('astronomy').get_string_member('sunrise');
-                let sunset = weather.get_object_member('astronomy').get_string_member('sunset');
-	    }
+            let sunrise = (this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunrise') : '');
+            let sunset = (this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunset') : '');
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
             if (this._comment_in_panel)
