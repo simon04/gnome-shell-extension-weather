@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-29 22:49+0200\n"
-"PO-Revision-Date: 2011-06-05 23:00+0400\n"
-"Last-Translator: Gankov Andrey <gav@qsolution.ru>\n"
+"PO-Revision-Date: 2012-04-04 11:53+0500\n"
+"Last-Translator: Timon <timosha@gmail.com>\n"
 "Language-Team: openSUSE <opensuse-translation-ru@opensuse.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: extension.js:93
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Схема \"%s\" не найдена."
 
 #: extension.js:154
 msgid "..."
@@ -69,7 +69,8 @@ msgstr "Морось"
 msgid "Freezing rain"
 msgstr "Ледяной дождь"
 
-#: extension.js:394 extension.js:396
+#: extension.js:394
+#: extension.js:396
 msgid "Showers"
 msgstr "Ливни"
 
@@ -133,7 +134,8 @@ msgstr "Облачно"
 msgid "Mostly cloudy"
 msgstr "Преимущественно облачно"
 
-#: extension.js:430 extension.js:456
+#: extension.js:430
+#: extension.js:456
 msgid "Partly cloudy"
 msgstr "Переменная облачность"
 
@@ -169,7 +171,8 @@ msgstr "Местами грозы"
 msgid "Scattered showers"
 msgstr "Местами ливни"
 
-#: extension.js:450 extension.js:454
+#: extension.js:450
+#: extension.js:454
 msgid "Heavy snow"
 msgstr "Сильный снегопад"
 
@@ -223,35 +226,35 @@ msgstr "Воскресенье"
 
 #: extension.js:485
 msgid "N"
-msgstr ""
+msgstr "С"
 
 #: extension.js:485
 msgid "NE"
-msgstr ""
+msgstr "СВ"
 
 #: extension.js:485
 msgid "E"
-msgstr ""
+msgstr "В"
 
 #: extension.js:485
 msgid "SE"
-msgstr ""
+msgstr "ЮВ"
 
 #: extension.js:485
 msgid "S"
-msgstr ""
+msgstr "Ю"
 
 #: extension.js:485
 msgid "SW"
-msgstr ""
+msgstr "ЮЗ"
 
 #: extension.js:485
 msgid "W"
-msgstr ""
+msgstr "З"
 
 #: extension.js:485
 msgid "NW"
-msgstr ""
+msgstr "СЗ"
 
 #: extension.js:612
 msgid "Today"
@@ -279,11 +282,11 @@ msgstr "Подождите"
 
 #: extension.js:706
 msgid "Sunrise"
-msgstr ""
+msgstr "Восход"
 
 #: extension.js:708
 msgid "Sunset"
-msgstr ""
+msgstr "Закат"
 
 #: extension.js:740
 msgid "Temperature:"
@@ -300,3 +303,4 @@ msgstr "Давление:"
 #: extension.js:746
 msgid "Wind:"
 msgstr "Ветер:"
+
