@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-04 10:22+0200\n"
 "PO-Revision-Date: 2011-12-02 14:44+0800\n"
 "Last-Translator: Tao Zhu <bill_zt@sina.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -254,50 +254,70 @@ msgstr ""
 msgid "NW"
 msgstr ""
 
-#: extension.js:612
+#: extension.js:492
+msgid "steady"
+msgstr ""
+
+#: extension.js:494
+msgid "rising"
+msgstr ""
+
+#: extension.js:496
+msgid "falling"
+msgstr ""
+
+#: extension.js:635
 msgid "Today"
 msgstr "今天"
 
-#: extension.js:612
+#: extension.js:635
 msgid "Tomorrow"
 msgstr "明天"
 
-#: extension.js:658
+#: extension.js:681
 msgid "Loading current weather ..."
 msgstr "正在加载当前天气 ..."
 
-#: extension.js:659
+#: extension.js:682
 msgid "Loading future weather ..."
 msgstr "正在加载预报天气 ..."
 
-#: extension.js:675
+#: extension.js:698
 msgid "Loading ..."
 msgstr "正在加载 ..."
 
-#: extension.js:681
+#: extension.js:704
 msgid "Please wait"
 msgstr "请等待"
 
-#: extension.js:706
+#: extension.js:729
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:708
+#: extension.js:731
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:740
+#: extension.js:764
 msgid "Temperature:"
 msgstr "温度："
 
-#: extension.js:742
+#: extension.js:766
+msgid "Feels like:"
+msgstr ""
+
+#: extension.js:768
 msgid "Humidity:"
 msgstr "湿度："
 
-#: extension.js:744
+#: extension.js:770
 msgid "Pressure:"
 msgstr "气压："
 
-#: extension.js:746
+#: extension.js:772
 msgid "Wind:"
 msgstr "风力："
+
+#, fuzzy
+#~ msgid "Wind chill:"
+#~ msgstr "风力："

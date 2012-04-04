@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-04 10:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -254,50 +254,66 @@ msgstr ""
 msgid "NW"
 msgstr ""
 
-#: extension.js:612
+#: extension.js:492
+msgid "steady"
+msgstr ""
+
+#: extension.js:494
+msgid "rising"
+msgstr ""
+
+#: extension.js:496
+msgid "falling"
+msgstr ""
+
+#: extension.js:635
 msgid "Today"
 msgstr ""
 
-#: extension.js:612
+#: extension.js:635
 msgid "Tomorrow"
 msgstr ""
 
-#: extension.js:658
+#: extension.js:681
 msgid "Loading current weather ..."
 msgstr ""
 
-#: extension.js:659
+#: extension.js:682
 msgid "Loading future weather ..."
 msgstr ""
 
-#: extension.js:675
+#: extension.js:698
 msgid "Loading ..."
 msgstr ""
 
-#: extension.js:681
+#: extension.js:704
 msgid "Please wait"
 msgstr ""
 
-#: extension.js:706
+#: extension.js:729
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:708
+#: extension.js:731
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:740
+#: extension.js:764
 msgid "Temperature:"
 msgstr ""
 
-#: extension.js:742
+#: extension.js:766
+msgid "Feels like:"
+msgstr ""
+
+#: extension.js:768
 msgid "Humidity:"
 msgstr ""
 
-#: extension.js:744
+#: extension.js:770
 msgid "Pressure:"
 msgstr ""
 
-#: extension.js:746
+#: extension.js:772
 msgid "Wind:"
 msgstr ""

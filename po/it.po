@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
-"PO-Revision-Date: 2012-03-30 10:00+0200\n"
-"Last-Translator: Odysseus86 <hal8600@hotmail.it>\n"
+"POT-Creation-Date: 2012-04-04 10:22+0200\n"
+"PO-Revision-Date: 2012-04-04 10:23+0100\n"
+"Last-Translator: Mattia Meneguzzo <hal8600@hotmail.it>\n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -70,7 +70,8 @@ msgstr "Pioggia leggera"
 msgid "Freezing rain"
 msgstr "Pioggia gelata"
 
-#: extension.js:394 extension.js:396
+#: extension.js:394
+#: extension.js:396
 msgid "Showers"
 msgstr "Rovesci piovosi"
 
@@ -134,7 +135,8 @@ msgstr "Nuvoloso"
 msgid "Mostly cloudy"
 msgstr "Molto nuvoloso"
 
-#: extension.js:430 extension.js:456
+#: extension.js:430
+#: extension.js:456
 msgid "Partly cloudy"
 msgstr "Parzialmente nuvoloso"
 
@@ -170,7 +172,8 @@ msgstr "Temporali sparsi"
 msgid "Scattered showers"
 msgstr "Rovesci piovosi sparsi"
 
-#: extension.js:450 extension.js:454
+#: extension.js:450
+#: extension.js:454
 msgid "Heavy snow"
 msgstr "Neve abbondante"
 
@@ -254,50 +257,69 @@ msgstr "O"
 msgid "NW"
 msgstr "NO"
 
-#: extension.js:612
+#: extension.js:492
+msgid "steady"
+msgstr "costante"
+
+#: extension.js:494
+msgid "rising"
+msgstr "in aumento"
+
+#: extension.js:496
+msgid "falling"
+msgstr "in diminuzione"
+
+#: extension.js:635
 msgid "Today"
 msgstr "Oggi"
 
-#: extension.js:612
+#: extension.js:635
 msgid "Tomorrow"
 msgstr "Domani"
 
-#: extension.js:658
+#: extension.js:681
 msgid "Loading current weather ..."
 msgstr "Caricamento condizioni meteo attuali ..."
 
-#: extension.js:659
+#: extension.js:682
 msgid "Loading future weather ..."
 msgstr "Caricamento previsioni meteo ..."
 
-#: extension.js:675
+#: extension.js:698
 msgid "Loading ..."
 msgstr "Caricamento ..."
 
-#: extension.js:681
+#: extension.js:704
 msgid "Please wait"
 msgstr "Attendere, prego"
 
-#: extension.js:706
+#: extension.js:729
 msgid "Sunrise"
 msgstr "Alba"
 
-#: extension.js:708
+#: extension.js:731
 msgid "Sunset"
 msgstr "Tramonto"
 
-#: extension.js:740
+#: extension.js:764
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: extension.js:742
+#: extension.js:766
+msgid "Feels like:"
+msgstr "Percepita:"
+
+#: extension.js:768
 msgid "Humidity:"
 msgstr "Umidità:"
 
-#: extension.js:744
+#: extension.js:770
 msgid "Pressure:"
 msgstr "Pressione:"
 
-#: extension.js:746
+#: extension.js:772
 msgid "Wind:"
 msgstr "Vento:"
+
+#~ msgid "Wind chill:"
+#~ msgstr "Temperatura percepita:"

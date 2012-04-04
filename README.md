@@ -135,7 +135,8 @@ Timur Kristóf <venemo@msn.com>,
 Elad Alfassa <elad@fedoraproject.org>,
 Simon Legner <Simon.Legner@gmail.com>,
 Simon Claessens <gagalago@gmail.com>,
-Mark Benjamin <weather.gnome.Markie1@dfgh.net>
+Mark Benjamin <weather.gnome.Markie1@dfgh.net>,
+Mattia Meneguzzo <hal8600@hotmail.it>
 
 This file is part of gnome-shell-extension-weather.
 

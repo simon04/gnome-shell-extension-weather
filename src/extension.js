@@ -485,6 +485,26 @@ WeatherMenuButton.prototype = {
         let directions = [_('N'), _('NE'), _('E'), _('SE'), _('S'), _('SW'), _('W'), _('NW')];
         return directions[Math.round(deg / 45) % directions.length];
     },
+    
+    get_pressure_state: function(state) {
+    	switch (parseInt(state, 3)) {
+    	case 0:
+    		return _('steady');
+    	case 1:
+    		return _('rising');
+    	case 2:
+    		return _('falling');
+    	}
+    },
+    
+	// Convert a string representing time in AM/PM format (i.e. "7:45 pm") to 24h format ("19:45")
+    time_to_24h_format: function(timeAmPm) {
+    	// Change time from 'x:yz AM' format to '0x:yz AM' format
+        let time = timeAmPm.length < 8 ? '0'.concat(timeAmPm) : timeAmPm 
+        let hour = (time.substr(0,2) * 1) + ((time.substr(6,2).toUpperCase() === 'PM') ? 12 : 0);
+        let minute = time.substr(3,2);
+        return hour.toString().concat(':').concat(minute);               
+    },
 
     load_json_async: function(url, fun) {
         let here = this;
@@ -541,6 +561,8 @@ WeatherMenuButton.prototype = {
             let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
             let pressure = weather.get_object_member('atmosphere').get_string_member('pressure');
             let pressure_unit = weather.get_object_member('units').get_string_member('pressure');
+            let pressure_state = weather.get_object_member('atmosphere').get_string_member('rising');
+            let chill = weather.get_object_member('wind').get_string_member('chill');
             let wind_direction = this.get_compass_direction(weather.get_object_member('wind').get_string_member('direction'));
             let wind = weather.get_object_member('wind').get_string_member('speed');
             let wind_unit = weather.get_object_member('units').get_string_member('speed');
@@ -556,8 +578,9 @@ WeatherMenuButton.prototype = {
 
             this._currentWeatherSummary.text = comment;
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
+            this._currentWeatherWindChill.text = chill + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
-            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
+            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ', ' + this.get_pressure_state(pressure_state);
 
             if (wind) {
                 // Override wind units with our preference
@@ -599,7 +622,7 @@ WeatherMenuButton.prototype = {
                 this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
             } else
                 this._currentWeatherWind.text = '\u2013';
-
+         
             this._currentWeatherLocation.label = location + '...';
             // make the location act like a button
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
@@ -719,6 +742,7 @@ WeatherMenuButton.prototype = {
         }
         // Other labels
         this._currentWeatherTemperature = new St.Label({ text: '...' });
+        this._currentWeatherWindChill = new St.Label({ text: '...' });
         this._currentWeatherHumidity = new St.Label({ text:  '...' });
         this._currentWeatherPressure = new St.Label({ text: '...' });
         this._currentWeatherWind = new St.Label({ text: '...' });
@@ -739,6 +763,8 @@ WeatherMenuButton.prototype = {
 
         rb_captions.add_actor(new St.Label({text: _('Temperature:')}));
         rb_values.add_actor(this._currentWeatherTemperature);
+        rb_captions.add_actor(new St.Label({text: _('Feels like:')}));
+        rb_values.add_actor(this._currentWeatherWindChill);
         rb_captions.add_actor(new St.Label({text: _('Humidity:')}));
         rb_values.add_actor(this._currentWeatherHumidity);
         rb_captions.add_actor(new St.Label({text: _('Pressure:')}));

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-04 10:22+0200\n"
 "PO-Revision-Date: 2012-04-04 11:53+0500\n"
 "Last-Translator: Timon <timosha@gmail.com>\n"
 "Language-Team: openSUSE <opensuse-translation-ru@opensuse.org>\n"
@@ -69,8 +69,7 @@ msgstr "Морось"
 msgid "Freezing rain"
 msgstr "Ледяной дождь"
 
-#: extension.js:394
-#: extension.js:396
+#: extension.js:394 extension.js:396
 msgid "Showers"
 msgstr "Ливни"
 
@@ -134,8 +133,7 @@ msgstr "Облачно"
 msgid "Mostly cloudy"
 msgstr "Преимущественно облачно"
 
-#: extension.js:430
-#: extension.js:456
+#: extension.js:430 extension.js:456
 msgid "Partly cloudy"
 msgstr "Переменная облачность"
 
@@ -171,8 +169,7 @@ msgstr "Местами грозы"
 msgid "Scattered showers"
 msgstr "Местами ливни"
 
-#: extension.js:450
-#: extension.js:454
+#: extension.js:450 extension.js:454
 msgid "Heavy snow"
 msgstr "Сильный снегопад"
 
@@ -256,51 +253,70 @@ msgstr "З"
 msgid "NW"
 msgstr "СЗ"
 
-#: extension.js:612
+#: extension.js:492
+msgid "steady"
+msgstr ""
+
+#: extension.js:494
+msgid "rising"
+msgstr ""
+
+#: extension.js:496
+msgid "falling"
+msgstr ""
+
+#: extension.js:635
 msgid "Today"
 msgstr "Сегодня"
 
-#: extension.js:612
+#: extension.js:635
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: extension.js:658
+#: extension.js:681
 msgid "Loading current weather ..."
 msgstr "Загрузка текущей погоды ..."
 
-#: extension.js:659
+#: extension.js:682
 msgid "Loading future weather ..."
 msgstr "Загрузка прогноза погоды ..."
 
-#: extension.js:675
+#: extension.js:698
 msgid "Loading ..."
 msgstr "Загрузка ..."
 
-#: extension.js:681
+#: extension.js:704
 msgid "Please wait"
 msgstr "Подождите"
 
-#: extension.js:706
+#: extension.js:729
 msgid "Sunrise"
 msgstr "Восход"
 
-#: extension.js:708
+#: extension.js:731
 msgid "Sunset"
 msgstr "Закат"
 
-#: extension.js:740
+#: extension.js:764
 msgid "Temperature:"
 msgstr "Температура:"
 
-#: extension.js:742
+#: extension.js:766
+msgid "Feels like:"
+msgstr ""
+
+#: extension.js:768
 msgid "Humidity:"
 msgstr "Влажность:"
 
-#: extension.js:744
+#: extension.js:770
 msgid "Pressure:"
 msgstr "Давление:"
 
-#: extension.js:746
+#: extension.js:772
 msgid "Wind:"
 msgstr "Ветер:"
 
+#, fuzzy
+#~ msgid "Wind chill:"
+#~ msgstr "Ветер:"

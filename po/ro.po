@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon04-gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-04 10:22+0200\n"
 "PO-Revision-Date: 2011-06-25 19:05+0200\n"
 "Last-Translator: Marian Vasile <marianvasile@upcmail.ro>\n"
 "Language-Team: \n"
@@ -258,50 +258,70 @@ msgstr ""
 msgid "NW"
 msgstr ""
 
-#: extension.js:612
+#: extension.js:492
+msgid "steady"
+msgstr ""
+
+#: extension.js:494
+msgid "rising"
+msgstr ""
+
+#: extension.js:496
+msgid "falling"
+msgstr ""
+
+#: extension.js:635
 msgid "Today"
 msgstr "Azi"
 
-#: extension.js:612
+#: extension.js:635
 msgid "Tomorrow"
 msgstr "Mâine"
 
-#: extension.js:658
+#: extension.js:681
 msgid "Loading current weather ..."
 msgstr "Se încarcă vremea curentă..."
 
-#: extension.js:659
+#: extension.js:682
 msgid "Loading future weather ..."
 msgstr "Se încarcă prognoza..."
 
-#: extension.js:675
+#: extension.js:698
 msgid "Loading ..."
 msgstr "Se încarcă"
 
-#: extension.js:681
+#: extension.js:704
 msgid "Please wait"
 msgstr "Așteptați"
 
-#: extension.js:706
+#: extension.js:729
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:708
+#: extension.js:731
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:740
+#: extension.js:764
 msgid "Temperature:"
 msgstr "Temperatură:"
 
-#: extension.js:742
+#: extension.js:766
+msgid "Feels like:"
+msgstr ""
+
+#: extension.js:768
 msgid "Humidity:"
 msgstr "Umiditate:"
 
-#: extension.js:744
+#: extension.js:770
 msgid "Pressure:"
 msgstr "Presiune:"
 
-#: extension.js:746
+#: extension.js:772
 msgid "Wind:"
 msgstr "Vânt:"
+
+#, fuzzy
+#~ msgid "Wind chill:"
+#~ msgstr "Vânt:"

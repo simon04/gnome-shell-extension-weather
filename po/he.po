@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-04 10:22+0200\n"
 "PO-Revision-Date: 2012-01-31 21:37+0200\n"
 "Last-Translator: Yaron Sheffer <yaronf@gmx.com>\n"
 "Language-Team: Hebrew <none@example.com>\n"
@@ -254,50 +254,70 @@ msgstr ""
 msgid "NW"
 msgstr ""
 
-#: extension.js:612
+#: extension.js:492
+msgid "steady"
+msgstr ""
+
+#: extension.js:494
+msgid "rising"
+msgstr ""
+
+#: extension.js:496
+msgid "falling"
+msgstr ""
+
+#: extension.js:635
 msgid "Today"
 msgstr "היום"
 
-#: extension.js:612
+#: extension.js:635
 msgid "Tomorrow"
 msgstr "מחר"
 
-#: extension.js:658
+#: extension.js:681
 msgid "Loading current weather ..."
 msgstr "טוען מזג אויר עכשווי..."
 
-#: extension.js:659
+#: extension.js:682
 msgid "Loading future weather ..."
 msgstr "טוען מזג אויר עתידי..."
 
-#: extension.js:675
+#: extension.js:698
 msgid "Loading ..."
 msgstr "טוען..."
 
-#: extension.js:681
+#: extension.js:704
 msgid "Please wait"
 msgstr "נא להמתין"
 
-#: extension.js:706
+#: extension.js:729
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:708
+#: extension.js:731
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:740
+#: extension.js:764
 msgid "Temperature:"
 msgstr "טמפרטורה:"
 
-#: extension.js:742
+#: extension.js:766
+msgid "Feels like:"
+msgstr ""
+
+#: extension.js:768
 msgid "Humidity:"
 msgstr "לחות:"
 
-#: extension.js:744
+#: extension.js:770
 msgid "Pressure:"
 msgstr "לחץ ברומטרי:"
 
-#: extension.js:746
+#: extension.js:772
 msgid "Wind:"
 msgstr "רוח:"
+
+#, fuzzy
+#~ msgid "Wind chill:"
+#~ msgstr "רוח:"
