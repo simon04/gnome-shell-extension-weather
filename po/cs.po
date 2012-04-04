@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-22 01:07-0500\n"
-"PO-Revision-Date: 2011-06-06 23:40+0100\n"
+"PO-Revision-Date: 2012-04-04 15:19-0400\n"
 "Last-Translator: David Štancl <dstancl@dstancl.cz>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
 "Language: \n"
@@ -19,7 +19,7 @@ msgstr ""
 #: applet.js:106
 #, perl-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Schéma \"%s\" nebylo nalezeno."
 
 #: applet.js:168
 msgid "Click to open"
@@ -263,35 +263,35 @@ msgstr "Neděle"
 
 #: applet.js:857
 msgid "N"
-msgstr ""
+msgstr "S"
 
 #: applet.js:857
 msgid "NE"
-msgstr ""
+msgstr "SV"
 
 #: applet.js:857
 msgid "E"
-msgstr ""
+msgstr "V"
 
 #: applet.js:857
 msgid "SE"
-msgstr ""
+msgstr "JV"
 
 #: applet.js:857
 msgid "S"
-msgstr ""
+msgstr "J"
 
 #: applet.js:857
 msgid "SW"
-msgstr ""
+msgstr "JZ"
 
 #: applet.js:857
 msgid "W"
-msgstr ""
+msgstr "Z"
 
 #: applet.js:857
 msgid "NW"
-msgstr ""
+msgstr "SZ"
 
 #~ msgid "..."
 #~ msgstr "..."

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-22 01:07-0500\n"
-"PO-Revision-Date: 2011-06-05 23:00+0400\n"
-"Last-Translator: Gankov Andrey <gav@qsolution.ru>\n"
+"PO-Revision-Date: 2012-04-04 16:03-0400\n"
+"Last-Translator: Timon <timosha@gmail.com>\n"
 "Language-Team: openSUSE <opensuse-translation-ru@opensuse.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: applet.js:106
 #, perl-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Схема \"%s\" не найдена."
 
 #: applet.js:168
 msgid "Click to open"
@@ -263,35 +263,35 @@ msgstr "Воскресенье"
 
 #: applet.js:857
 msgid "N"
-msgstr ""
+msgstr "C"
 
 #: applet.js:857
 msgid "NE"
-msgstr ""
+msgstr "CB"
 
 #: applet.js:857
 msgid "E"
-msgstr ""
+msgstr "B"
 
 #: applet.js:857
 msgid "SE"
-msgstr ""
+msgstr "ЮВ"
 
 #: applet.js:857
 msgid "S"
-msgstr ""
+msgstr "Ю"
 
 #: applet.js:857
 msgid "SW"
-msgstr ""
+msgstr "ЮЗ"
 
 #: applet.js:857
 msgid "W"
-msgstr ""
+msgstr "З"
 
 #: applet.js:857
 msgid "NW"
-msgstr ""
+msgstr "CЗ"
 
 #~ msgid "..."
 #~ msgstr "..."
