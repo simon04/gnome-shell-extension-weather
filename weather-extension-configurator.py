@@ -110,27 +110,29 @@ class WeatherConfigurator:
 
         self.elements = []
 
-        self.add_text('woeid', '<b>WOEID</b>',
-                "The Where On Earth ID determinees the location/city")
-        self.add_radio('unit', 'Temperature Unit',
+        self.add_text('woeid', 'WOEID',
+                "The Where On Earth ID determines the location/city.")
+        self.add_radio('unit', 'Temperature unit',
                 [(0, '℃ (Celsius)'), (1, '℉ (Fahrenheit)')])
-        self.add_radio('wind-speed-unit', 'Wind Speed Unit',
+        self.add_radio('wind-speed-unit', 'Wind speed unit',
                 [(0, 'km/h (kilometres per hour)'), (1, 'mi/h (miles per hour)'), (2, 'm/s (metres per second)'), (3, 'kn (knots)')])
-        self.add_text('city', 'Override Location Label',
+	self.add_check('use-24h-time-format', 'Time format', "If enabled, times are displayed in 24 h format instead of AM/PM format.")
+        self.add_text('city', 'Override location label',
                 "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
-        self.add_radio('position-in-panel', 'Position in Panel',
+        self.add_radio('position-in-panel', 'Position in panel',
                 [(2, 'left'), (0, 'center'), (1, 'right')],
                 "The position of this GNOME Shell extension in the panel. (Requires restart of GNOME Shell.)")
-        self.add_check('translate-condition', 'Translate Weather Conditions',
-                "If enabled, the condition is translated based on the weather code.\nIf disabled, the condition string from Yahoo is taken.\nNote: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string “PM Thunderstorms” cannot be expressed in terms of weather codes.")
+        self.add_check('translate-condition', 'Translate weather conditions',
+                "If enabled, the condition is translated based on the weather code.\nIf disabled, the condition string from Yahoo! is taken.\nNote: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string “PM Thunderstorms” cannot be expressed in terms of weather codes.")
         self.add_check('show-sunrise-sunset', 'Show sunrise and sunset times',
-                "Whether to show Sunrise / Sunset times in current weather")
-        self.add_check('use-symbolic-icons', 'Symbolic Icons',
-                "Display symbolic icons instead of full-colored icons")
-        (b_text, _) = self.add_check('show-text-in-panel', 'Show Text in Panel',
+                "Whether to show sunrise/sunset times in current weather.")
+        self.add_check('use-symbolic-icons', 'Symbolic icons',
+                "Display symbolic icons instead of full-colored icons.")
+        (b_text, _) = self.add_check('show-text-in-panel', 'Show text in panel',
                 "Display current temperature in panel. If disabled, only the current condition icon is shown. (Requires restart of GNOME Shell.)")
-        (b_cond, l_cond) = self.add_check('show-comment-in-panel', '    Include Condition',
-                "Whether to show the weather condition (e.g., “Windy”, “Clear”) in the panel.")
+        (b_cond, l_cond) = self.add_check('show-comment-in-panel', 'Include condition',
+                "Whether to show the weather condition (e.g. “Windy”, “Clear”) in the panel.")
+	self.add_int('refresh-interval', 'Refresh interval', "The interval in seconds to refresh the weather information.")
 
         # add dependency between text-in-panel and comment-in-panel
         def depend(rb):

@@ -25,6 +25,11 @@
       <_summary>Wind Speed Units</_summary>
       <_description>Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s' or 'knots'.</_description>
     </key>
+    <key name="use-24h-time-format" type="b">
+      <default>false</default>
+      <_summary>Whether to display times in 24 h format</_summary>
+      <_description>Whether to display times in 24 h format instead of AM/PM format.</_description>
+    </key>
     <key name="woeid" type="s">
       <default>'AUXX0010'</default>
       <_summary>Yahoo WOEID</_summary>

@@ -49,6 +49,7 @@ const PopupMenu = imports.ui.popupMenu;
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
+const WEATHER_USE_24H_TIME_FORMAT_KEY = 'use-24h-time-format';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
@@ -103,6 +104,7 @@ WeatherMenuButton.prototype = {
         this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
         this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
         this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
+        this._use_24h_time_format = this._settings.get_boolean(WEATHER_USE_24H_TIME_FORMAT_KEY);
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
@@ -117,6 +119,7 @@ WeatherMenuButton.prototype = {
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
             this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
             this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
+            this._use_24h_time_format = this._settings.get_boolean(WEATHER_USE_24H_TIME_FORMAT_KEY);
             this._city  = this._settings.get_string(WEATHER_CITY_KEY);
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
@@ -127,6 +130,7 @@ WeatherMenuButton.prototype = {
         });
         this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WIND_SPEED_UNIT_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_USE_24H_TIME_FORMAT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
@@ -500,11 +504,10 @@ WeatherMenuButton.prototype = {
     
 	// Convert a string representing time in AM/PM format (i.e. "7:45 pm") to 24h format ("19:45")
     time_to_24h_format: function(timeAmPm) {
-    	// Change time from 'x:yz AM' format to '0x:yz AM' format
-        let time = timeAmPm.length < 8 ? '0'.concat(timeAmPm) : timeAmPm 
-        let hour = (time.substr(0,2) * 1) + ((time.substr(6,2).toUpperCase() === 'PM') ? 12 : 0);
-        let minute = time.substr(3,2);
-        return hour.toString().concat(':').concat(minute);               
+    	let hourLength = timeAmPm.length < 8 ? 1 : 2; // Length of the string representing the hour
+        let hour24h = (time.substr(0, hourLength) * 1) + ((time.substr((hourLength + 4), 2).toUpperCase() === 'PM') ? 12 : 0);
+        let minute = time.substr((hourLength + 1), 2);
+        return hour24h.toString().concat(':').concat(minute);               
     },
 
     load_json_async: function(url, fun) {
@@ -628,10 +631,13 @@ WeatherMenuButton.prototype = {
             // make the location act like a button
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
             this._currentWeatherLocation.url = weather.get_string_member('link');
-            if (this._show_sunrise) {
-                this._currentWeatherSunrise.text = sunrise;
-                this._currentWeatherSunset.text = sunset;
-	    }
+            if (this._show_sunrise && this._use_24h_time_format) {
+            	this._currentWeatherSunrise.text = this.time_to_24h_format(sunrise);
+            	this._currentWeatherSunset.text = this.time_to_24h_format(sunset);
+            } else if (this._show_sunrise) {
+            	this._currentWeatherSunrise.text = sunrise.toUpperCase();
+            	this._currentWeatherSunset.text = sunset.toUpperCase();
+            }
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
             for (let i = 0; i <= 1; i++) {
