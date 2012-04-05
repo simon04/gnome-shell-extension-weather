@@ -8,8 +8,9 @@
  *     ecyrbe <ecyrbe+spam@gmail.com>,
  *     Timur Kristof <venemo@msn.com>,
  *     Elad Alfassa <elad@fedoraproject.org>,
- *     Simon Legner <Simon.Legner@gmail.com>
- *     Mark Benjamin <weather.gnome.Markie1@dfgh.net>
+ *     Simon Legner <Simon.Legner@gmail.com>,
+ *     Mark Benjamin <weather.gnome.Markie1@dfgh.net>,
+ *     Mattia Meneguzzo <hal8600@hotmail.it>
  *
  * This file is part of gnome-shell-extension-weather.
  *
@@ -598,7 +599,7 @@ WeatherMenuButton.prototype = {
                         // Round to whole units
                         if (this._units == WeatherUnits.CELSIUS) {
                             wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_MPH_IN_MPS);
-                            wind_unit = 'mph';
+                            wind_unit = 'mi/h';
                         }
                         // Otherwise no conversion needed - already in correct units
                         break;
@@ -616,7 +617,7 @@ WeatherMenuButton.prototype = {
                             wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
                         else
                             wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
-                        wind_unit = 'knots';
+                        wind_unit = 'kn';
                         break;
                 }
                 this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
