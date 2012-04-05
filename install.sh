@@ -24,7 +24,7 @@ EOF
 	mkdir -p ${INSTALL_DIR}
 
 	sudo ln -sf ${INSTALL_DIR}/cinnamon-weather-settings /usr/local/bin
-	cp -f metadata.json applet.js cinnamon-weather-settings stylesheet.css ${INSTALL_DIR}
+	cp -f metadata.json applet.js cinnamon-weather-settings icon.png stylesheet.css ${INSTALL_DIR}
 
 	cat << EOF
 	Installing applet locales in ${LOCALE_DIR}...
