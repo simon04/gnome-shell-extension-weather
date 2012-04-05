@@ -505,8 +505,8 @@ WeatherMenuButton.prototype = {
 	// Convert a string representing time in AM/PM format (i.e. "7:45 pm") to 24h format ("19:45")
     time_to_24h_format: function(timeAmPm) {
     	let hourLength = timeAmPm.length < 8 ? 1 : 2; // Length of the string representing the hour
-        let hour24h = (time.substr(0, hourLength) * 1) + ((time.substr((hourLength + 4), 2).toUpperCase() === 'PM') ? 12 : 0);
-        let minute = time.substr((hourLength + 1), 2);
+        let hour24h = (timeAmPm.substr(0, hourLength) * 1) + ((timeAmPm.substr((hourLength + 4), 2).toUpperCase() === 'PM') ? 12 : 0);
+        let minute = timeAmPm.substr((hourLength + 1), 2);
         return hour24h.toString().concat(':').concat(minute);               
     },
 
@@ -726,8 +726,8 @@ WeatherMenuButton.prototype = {
         bb.add_actor(this._currentWeatherSummary);
 
 	if (this._show_sunrise) {
-            this._currentWeatherSunrise = new St.Label({ text: '-' });
-            this._currentWeatherSunset = new St.Label({ text: '-' });
+            this._currentWeatherSunrise = new St.Label({ text: '\u2013' });
+            this._currentWeatherSunset = new St.Label({ text: '\u2013' });
 
             let ab = new St.BoxLayout({
                 style_class: 'weather-current-astronomy'

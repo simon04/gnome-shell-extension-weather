@@ -104,7 +104,7 @@ class WeatherConfigurator:
         self.schema = Gio.Settings('org.gnome.shell.extensions.weather')
         keys = self.schema.keys()
 
-        self.window = Gtk.Window(title='Gnome Shell: Weather Configurator')
+        self.window = Gtk.Window(title='GNOME Shell: Weather Configurator')
         self.window.connect('destroy', Gtk.main_quit)
         self.window.connect('key-press-event', self.keypress)
 
@@ -116,7 +116,7 @@ class WeatherConfigurator:
                 [(0, '℃ (Celsius)'), (1, '℉ (Fahrenheit)')])
         self.add_radio('wind-speed-unit', 'Wind speed unit',
                 [(0, 'km/h (kilometres per hour)'), (1, 'mi/h (miles per hour)'), (2, 'm/s (metres per second)'), (3, 'kn (knots)')])
-	self.add_check('use-24h-time-format', '24 h time format', "If enabled, times are displayed in 24 h format instead of AM/PM format.")
+	self.add_check('use-24h-time-format', 'Use 24 h time format', "If enabled, times are displayed in 24 h format (e.g. \"19.45\") instead of AM/PM format (i.e. \"7.45 PM\").")
         self.add_text('city', 'Override location label',
                 "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
         self.add_radio('position-in-panel', 'Position in panel',

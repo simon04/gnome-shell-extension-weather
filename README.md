@@ -63,9 +63,9 @@ You can modify the wind speed unit using one of the following commands:
     gsettings set org.gnome.shell.extensions.weather wind-speed-unit m/s
     gsettings set org.gnome.shell.extensions.weather wind-speed-unit knots
 
-#### 24 h time format (optional, false by default)
+#### Use 24 h time format (optional, false by default)
 
-You may want to display times in 24 h format instead of AM/PM format.
+You may want to display times in 24 h format (e.g. "19.45") instead of AM/PM format (i.e. "7.45 PM").
 
     gsettings set org.gnome.shell.extensions.weather use-24h-time-format true
     gsettings set org.gnome.shell.extensions.weather use-24h-time-format false
