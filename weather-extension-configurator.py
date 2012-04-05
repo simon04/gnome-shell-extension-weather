@@ -116,7 +116,7 @@ class WeatherConfigurator:
                 [(0, '℃ (Celsius)'), (1, '℉ (Fahrenheit)')])
         self.add_radio('wind-speed-unit', 'Wind speed unit',
                 [(0, 'km/h (kilometres per hour)'), (1, 'mi/h (miles per hour)'), (2, 'm/s (metres per second)'), (3, 'kn (knots)')])
-	self.add_check('use-24h-time-format', 'Time format', "If enabled, times are displayed in 24 h format instead of AM/PM format.")
+	self.add_check('use-24h-time-format', '24 h time format', "If enabled, times are displayed in 24 h format instead of AM/PM format.")
         self.add_text('city', 'Override location label',
                 "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
         self.add_radio('position-in-panel', 'Position in panel',
@@ -132,7 +132,6 @@ class WeatherConfigurator:
                 "Display current temperature in panel. If disabled, only the current condition icon is shown. (Requires restart of GNOME Shell.)")
         (b_cond, l_cond) = self.add_check('show-comment-in-panel', 'Include condition',
                 "Whether to show the weather condition (e.g. “Windy”, “Clear”) in the panel.")
-	self.add_int('refresh-interval', 'Refresh interval', "The interval in seconds to refresh the weather information.")
 
         # add dependency between text-in-panel and comment-in-panel
         def depend(rb):

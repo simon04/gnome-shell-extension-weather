@@ -63,7 +63,7 @@ You can modify the wind speed unit using one of the following commands:
     gsettings set org.gnome.shell.extensions.weather wind-speed-unit m/s
     gsettings set org.gnome.shell.extensions.weather wind-speed-unit knots
 
-#### Time format (optional, false by default)
+#### 24 h time format (optional, false by default)
 
 You may want to display times in 24 h format instead of AM/PM format.
 
@@ -84,7 +84,7 @@ The position of this GNOME Shell extension in the panel can be configured to eit
     gsettings set org.gnome.shell.extensions.weather position-in-panel left
     gsettings set org.gnome.shell.extensions.weather position-in-panel right
 
-#### TTranslate weather conditions (optional, true by default)
+#### Translate weather conditions (optional, true by default)
 
 You may want to configure whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo! is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.
 
