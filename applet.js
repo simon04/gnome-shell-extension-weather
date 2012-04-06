@@ -231,7 +231,6 @@ MyApplet.prototype = {
 			this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
 			this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 			this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
-			//this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
 			this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
 			this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
 
@@ -400,7 +399,6 @@ MyApplet.prototype = {
 				let wind_unit = weather.get_object_member('units').get_string_member('speed');
 				
 				let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
-//				this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 				this._currentWeatherIcon.icon_name = iconname;
 				this._icon_type == St.IconType.SYMBOLIC ?
 					this.set_applet_icon_symbolic_name(iconname) :
@@ -417,7 +415,6 @@ MyApplet.prototype = {
 				}
 				
 				this._currentWeatherSummary.text = comment;
-				this._currentWeatherLocation.text = location;
 				this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
 				this._currentWeatherHumidity.text = humidity;
 				this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
@@ -458,18 +455,15 @@ MyApplet.prototype = {
 						wind_unit = 'knots';
 						break;
 				}
-				//this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
 				this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
 				
-				/*/
-				// make the location act like a button
+				// location is a button
 				this._currentWeatherLocation.style_class = 'weather-current-location-link';
 				this._currentWeatherLocation.url = weather.get_string_member('link');
-				//*/
+				this._currentWeatherLocation.label = location;
 				
 				this._currentWeatherSunrise.text = this._show_sunrise ? (_('Sunrise') + ': ' + sunrise) : '';
 				this._currentWeatherSunset.text = this._show_sunrise ? (_('Sunset') + ': ' + sunset) : '';
-				
 				
 				// Refresh forecast
 				let date_string = [_('Today'), _('Tomorrow')];
@@ -552,9 +546,6 @@ MyApplet.prototype = {
 			style_class: 'weather-current-summary'
 		});
 		
-		//*/
-		this._currentWeatherLocation = new St.Label({ text: _('Please wait') });		
-		/*/
 		this._currentWeatherLocation = new St.Button({ 
 			reactive: true,
 			label: _('Please wait') 
@@ -568,7 +559,6 @@ MyApplet.prototype = {
 				global.create_app_launch_context()
 			);
 		}));
-		//*/
 		
 		let bb = new St.BoxLayout({
 			vertical: true,
@@ -586,14 +576,9 @@ MyApplet.prototype = {
 			style_class: 'weather-current-astronomy'
 		});
 		
-		//let ab_sunriselabel = new St.Label({ text: sunriseText});
-		let ab_spacerlabel = new St.Label({ text: '   ' });
-		//let ab_sunsetlabel = new St.Label({ text: sunsetText});
-		
-		//ab.add_actor(ab_sunriselabel);
 		ab.add_actor(this._currentWeatherSunrise);
+		let ab_spacerlabel = new St.Label({ text: '   ' });
 		ab.add_actor(ab_spacerlabel);
-		//ab.add_actor(ab_sunsetlabel);
 		ab.add_actor(this._currentWeatherSunset);
 		
 		let bb_spacerlabel = new St.Label({ text: '   ' });
