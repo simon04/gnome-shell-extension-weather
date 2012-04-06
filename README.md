@@ -54,6 +54,13 @@ You may want to configure whether to translate the weather condition. If enabled
     gsettings set org.cinnamon.applets.weather@mockturtl translate-condition true
     gsettings set org.cinnamon.applets.weather@mockturtl translate-condition false
 
+#### Show Sunrise / Sunset times (optional, true by default)
+
+You may display today's Sunrise / Sunset times as retrieved from Yahoo! Weather in the current weather panel
+
+    gsettings set org.cinnamon.applets.weather@mockturtl show-sunrise-sunset true
+    gsettings set org.cinnamon.applets.weather@mockturtl show-sunrise-sunset false
+
 #### Use Symbolic Icons (optional, false by default)
 
 If desired, you can enable the usage of symbolic icons to display the weather condition (instead of full-colored icons).

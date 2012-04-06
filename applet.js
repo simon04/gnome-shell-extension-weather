@@ -8,7 +8,8 @@
  *	 ecyrbe <ecyrbe+spam@gmail.com>,
  *	 Timur Kristof <venemo@msn.com>,
  *	 Elad Alfassa <elad@fedoraproject.org>,
- *	 Simon Legner <Simon.Legner@gmail.com>
+ *	 Simon Legner <Simon.Legner@gmail.com>,
+ *   Mark Benjamin <weather.gnome.Markie1@dfgh.net>
  *
  *
  * This file is part of cinnamon-weather.
@@ -62,6 +63,7 @@ const WEATHER_CITY_KEY = 'location-label-override';
 //const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
 const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
 const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
+const WEATHER_SHOW_SUNRISE_SUNSET_KEY = 'show-sunrise-sunset';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 const WEATHER_TEMPERATURE_UNIT_KEY = 'temperature-unit';
@@ -73,6 +75,16 @@ const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_CONV_MPH_IN_MPS = 2.23693629;
 const WEATHER_CONV_KPH_IN_MPS = 3.6;
 const WEATHER_CONV_KNOTS_IN_MPS = 1.94384449;
+
+// Magic strings
+const ELLIPSIS = '...';
+const EN_DASH = '\u2013';
+
+// Signals
+const SIGNAL_CHANGED = 'changed::';
+const SIGNAL_CLICKED = 'clicked';
+const SIGNAL_REPAINT = 'repaint';
+
 
 //----------------------------------------------------------------------
 //
@@ -90,13 +102,6 @@ const WeatherWindSpeedUnits = {
 	MPS: 2,
 	KNOTS: 3
 }
-/*
-const WeatherPosition = {
-	CENTER: 0,
-	RIGHT: 1,
-	LEFT: 2
-}
-//*/
 
 //----------------------------------------------------------------------
 //
@@ -187,7 +192,7 @@ MyApplet.prototype = {
 			//  Interface Methods: TextIconApplet
 			//----------------------------------
 			this.set_applet_icon_name("view-refresh-symbolic");
-			this.set_applet_label("...");
+			this.set_applet_label(ELLIPSIS);
 			this.set_applet_tooltip(_("Click to open"));
 
 			//----------------------------------
@@ -201,11 +206,13 @@ MyApplet.prototype = {
 			//  Event Handlers
 			//----------------------------------
 			let load_settings_and_refresh_weather = Lang.bind(this, function() {
+				//global.log("cinnamon-weather::load_settings_and_refresh_weather");
 				this._units = this._settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
 				this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
 				this._city  = this._settings.get_string(WEATHER_CITY_KEY);
 				this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
 				this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+				this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
 				this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 				this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
 				this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
@@ -221,6 +228,7 @@ MyApplet.prototype = {
 			this._city  = this._settings.get_string(WEATHER_CITY_KEY);
 			this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
 			this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+			this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
 			this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 			this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
 			//this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
@@ -230,14 +238,15 @@ MyApplet.prototype = {
 			//----------------------------------
 			//  bind settings
 			//----------------------------------
-			this._settings.connect('changed::' + WEATHER_TEMPERATURE_UNIT_KEY, load_settings_and_refresh_weather);
-			this._settings.connect('changed::' + WEATHER_WIND_SPEED_UNIT_KEY, load_settings_and_refresh_weather);
-			this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
-			this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
-			this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
-			this._settings.connect('changed::' + WEATHER_SHOW_TEXT_IN_PANEL_KEY, load_settings_and_refresh_weather);
-			this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
-			this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_TEMPERATURE_UNIT_KEY, load_settings_and_refresh_weather);
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_WIND_SPEED_UNIT_KEY, load_settings_and_refresh_weather);
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_SHOW_TEXT_IN_PANEL_KEY, load_settings_and_refresh_weather);
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_SHOW_SUNRISE_SUNSET_KEY, load_settings_and_refresh_weather);
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
 				this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 				this._applet_icon.icon_type = this._icon_type;
 				this._currentWeatherIcon.icon_type = this._icon_type;
@@ -245,7 +254,7 @@ MyApplet.prototype = {
 				this._forecast[1].Icon.icon_type = this._icon_type;
 				this.refreshWeather(false);
 			}));
-			this._settings.connect('changed::' + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
+			this._settings.connect(SIGNAL_CHANGED + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
 				this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
 			}));
 
@@ -264,7 +273,7 @@ MyApplet.prototype = {
 			//	horizontal rule
 			this._separatorArea = new St.DrawingArea({ style_class: 'popup-separator-menu-item' });
 			this._separatorArea.width = 200;
-			this._separatorArea.connect('repaint', Lang.bind(this, this._onSeparatorAreaRepaint));
+			this._separatorArea.connect(SIGNAL_REPAINT, Lang.bind(this, this._onSeparatorAreaRepaint));
 			mainBox.add_actor(this._separatorArea);
 
 			//	tomorrow's forecast
@@ -366,25 +375,31 @@ MyApplet.prototype = {
 				let weather = json.get_object_member('query').get_object_member('results').get_object_member('channel');
 				let weather_c = weather.get_object_member('item').get_object_member('condition');
 				let forecast = weather.get_object_member('item').get_array_member('forecast').get_elements();
-
+				
 				let location = weather.get_object_member('location').get_string_member('city');
 				if (this._city != null && this._city.length > 0)
 					location = this._city;
-
+				
 				// Refresh current weather
 				let comment = weather_c.get_string_member('text');
 				if (this._translate_condition)
 					comment = this.get_weather_condition(weather_c.get_string_member('code'));
-
-				let temperature = weather_c.get_string_member('temp');
+				
 				let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %';
+				
 				let pressure = weather.get_object_member('atmosphere').get_string_member('pressure');
 				let pressure_unit = weather.get_object_member('units').get_string_member('pressure');
-				let wind_direction = this.get_compass_direction(weather.get_object_member('wind').get_string_member('direction'));
+				
+				let sunrise = weather.get_object_member('astronomy').get_string_member('sunrise');
+				let sunset = weather.get_object_member('astronomy').get_string_member('sunset');
+				
+				let temperature = weather_c.get_string_member('temp');
+				
 				let wind = weather.get_object_member('wind').get_string_member('speed');
+				let wind_direction = this.get_compass_direction(weather.get_object_member('wind').get_string_member('direction'));
 				let wind_unit = weather.get_object_member('units').get_string_member('speed');
+				
 				let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
-
 //				this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 				this._currentWeatherIcon.icon_name = iconname;
 				this._icon_type == St.IconType.SYMBOLIC ?
@@ -400,13 +415,13 @@ MyApplet.prototype = {
 				} else {
 					this.set_applet_label('');
 				}
-
+				
 				this._currentWeatherSummary.text = comment;
 				this._currentWeatherLocation.text = location;
 				this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
 				this._currentWeatherHumidity.text = humidity;
 				this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
-
+				
 				// Override wind units with our preference
 				// Need to consider what units the Yahoo API has returned it in
 				switch (this._wind_speed_units) {
@@ -445,7 +460,17 @@ MyApplet.prototype = {
 				}
 				//this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
 				this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
-
+				
+				/*/
+				// make the location act like a button
+				this._currentWeatherLocation.style_class = 'weather-current-location-link';
+				this._currentWeatherLocation.url = weather.get_string_member('link');
+				//*/
+				
+				this._currentWeatherSunrise.text = this._show_sunrise ? (_('Sunrise') + ': ' + sunrise) : '';
+				this._currentWeatherSunset.text = this._show_sunrise ? (_('Sunset') + ': ' + sunset) : '';
+				
+				
 				// Refresh forecast
 				let date_string = [_('Today'), _('Tomorrow')];
 				for (let i = 0; i <= 1; i++) {
@@ -526,21 +551,60 @@ MyApplet.prototype = {
 			text: _('Loading ...'),
 			style_class: 'weather-current-summary'
 		});
-
-		this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
-
+		
+		//*/
+		this._currentWeatherLocation = new St.Label({ text: _('Please wait') });		
+		/*/
+		this._currentWeatherLocation = new St.Button({ 
+			reactive: true,
+			label: _('Please wait') 
+		});
+		// link to the details page
+		this._currentWeatherLocation.connect(SIGNAL_CLICKED, Lang.bind(this, function() {
+			if (this._currentWeatherLocation.url == null)
+				return;
+			Gio.app_info_launch_default_for_uri(
+				this._currentWeatherLocation.url,
+				global.create_app_launch_context()
+			);
+		}));
+		//*/
+		
 		let bb = new St.BoxLayout({
 			vertical: true,
 			style_class: 'weather-current-summarybox'
 		});
 		bb.add_actor(this._currentWeatherLocation);
 		bb.add_actor(this._currentWeatherSummary);
-
+		
+		
+		let textOb = { text: ELLIPSIS };
+		this._currentWeatherSunrise = new St.Label(textOb);
+		this._currentWeatherSunset = new St.Label(textOb);
+		
+		let ab = new St.BoxLayout({
+			style_class: 'weather-current-astronomy'
+		});
+		
+		//let ab_sunriselabel = new St.Label({ text: sunriseText});
+		let ab_spacerlabel = new St.Label({ text: '   ' });
+		//let ab_sunsetlabel = new St.Label({ text: sunsetText});
+		
+		//ab.add_actor(ab_sunriselabel);
+		ab.add_actor(this._currentWeatherSunrise);
+		ab.add_actor(ab_spacerlabel);
+		//ab.add_actor(ab_sunsetlabel);
+		ab.add_actor(this._currentWeatherSunset);
+		
+		let bb_spacerlabel = new St.Label({ text: '   ' });
+		bb.add_actor(bb_spacerlabel);
+		bb.add_actor(ab);
+		
 		// Other labels
-		this._currentWeatherTemperature = new St.Label({ text: '...' });
-		this._currentWeatherHumidity = new St.Label({ text:  '...' });
-		this._currentWeatherPressure = new St.Label({ text: '...' });
-		this._currentWeatherWind = new St.Label({ text: '...' });
+		this._currentWeatherTemperature = new St.Label(textOb);
+		this._currentWeatherHumidity = new St.Label(textOb);
+		this._currentWeatherPressure = new St.Label(textOb);
+		this._currentWeatherWind = new St.Label(textOb);
 
 		let rb = new St.BoxLayout({
 			style_class: 'weather-current-databox'
@@ -645,7 +709,7 @@ MyApplet.prototype = {
 		let prefButton = new St.Button({
 			style_class: 'panel-button'
 		});
-		prefButton.connect('clicked', function() {
+		prefButton.connect(SIGNAL_CLICKED, function() {
 			Util.spawn(["cinnamon-weather-settings"]);
 			//global.log("cinnamon-weather::Click: preferences");
 		});
@@ -676,7 +740,7 @@ MyApplet.prototype = {
 	 *
 	 */
 	get_weather_url: function() {
-		return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+		return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
 	},
 
 	/**
