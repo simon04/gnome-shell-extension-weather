@@ -85,6 +85,21 @@ EOF
 	done
 }
 
+# maintainer script for gettext
+do_translate() {
+	cat << EOF
+	Updating template...
+EOF
+	xgettext -d ${UUID} -o po/${UUID}.pot -L python -j --keyword=_ applet.js
+
+	cat << EOF
+	Merging existing translation files with new template...
+EOF
+	for LOCALE in ${LOCALES}; do
+		msgmerge -U po/${LOCALE}.po po/${UUID}.pot
+	done
+}
+
 case `basename $0` in
 	"install.sh")
 		do_install
@@ -94,6 +109,9 @@ case `basename $0` in
 		;;
 	"cleanup.sh")
 		do_cleanup
+		;;
+	"translate.sh")
+		do_translate
 		;;
 esac
 

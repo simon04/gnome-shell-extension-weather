@@ -462,8 +462,11 @@ MyApplet.prototype = {
 				this._currentWeatherLocation.url = weather.get_string_member('link');
 				this._currentWeatherLocation.label = location;
 				
-				this._currentWeatherSunrise.text = this._show_sunrise ? (_('Sunrise') + ': ' + sunrise) : '';
-				this._currentWeatherSunset.text = this._show_sunrise ? (_('Sunset') + ': ' + sunset) : '';
+				// gettext can't see these inline
+				let sunriseText = _('Sunrise');
+				let sunsetText = _('Sunset');
+				this._currentWeatherSunrise.text = this._show_sunrise ? (sunriseText + ': ' + sunrise) : '';
+				this._currentWeatherSunset.text = this._show_sunrise ? (sunsetText + ': ' + sunset) : '';
 				
 				// Refresh forecast
 				let date_string = [_('Today'), _('Tomorrow')];
