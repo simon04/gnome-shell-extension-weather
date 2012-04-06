@@ -32,11 +32,11 @@ msgstr ""
 
 #: applet.js:466
 msgid "Sunrise"
-msgstr ""
+msgstr "Saullēkts"
 
 #: applet.js:467
 msgid "Sunset"
-msgstr ""
+msgstr "Saulriets"
 
 #: applet.js:472
 msgid "Today"

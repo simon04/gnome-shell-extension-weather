@@ -27,11 +27,11 @@ msgstr ""
 
 #: applet.js:466
 msgid "Sunrise"
-msgstr ""
+msgstr "Восход"
 
 #: applet.js:467
 msgid "Sunset"
-msgstr ""
+msgstr "Закат"
 
 #: applet.js:472
 msgid "Today"
