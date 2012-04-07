@@ -9,7 +9,7 @@
  *	 Timur Kristof <venemo@msn.com>,
  *	 Elad Alfassa <elad@fedoraproject.org>,
  *	 Simon Legner <Simon.Legner@gmail.com>,
- *   Mark Benjamin <weather.gnome.Markie1@dfgh.net>
+ *	 Mark Benjamin <weather.gnome.Markie1@dfgh.net>
  *
  *
  * This file is part of cinnamon-weather.
@@ -44,7 +44,6 @@ const Json = imports.gi.Json;
 const Lang = imports.lang;
 const Main = imports.ui.main;
 const Mainloop = imports.mainloop;
-//const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 const Soup = imports.gi.Soup;
 const St = imports.gi.St;
@@ -56,20 +55,17 @@ const Util = imports.misc.util;
 //
 //----------------------------------------------------------------------
 
-const WEATHER_SETTINGS_SCHEMA = 'org.cinnamon.applets.weather@mockturtl';
+const UUID = 'weather@mockturtl';
 
-// Schema keys
-const WEATHER_CITY_KEY = 'location-label-override';
-//const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
-const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
-const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
-const WEATHER_SHOW_SUNRISE_SUNSET_KEY = 'show-sunrise-sunset';
-const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
-const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
-const WEATHER_TEMPERATURE_UNIT_KEY = 'temperature-unit';
-const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
-const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
-const WEATHER_WOEID_KEY = 'woeid';
+const APPLET_ICON = "view-refresh-symbolic";
+const APPLET_LABEL = "...";
+const APPLET_TOOLTIP = "Click to open";
+
+const ICON_PREFERENCES = 'system-run';
+
+const GSETTINGS_SCHEMA = 'org.cinnamon.applets.' + UUID;
+
+const COMMAND_CONFIGURE = "cinnamon-weather-settings";
 
 // Conversion Factors
 const WEATHER_CONV_MPH_IN_MPS = 2.23693629;
@@ -79,6 +75,24 @@ const WEATHER_CONV_KNOTS_IN_MPS = 1.94384449;
 // Magic strings
 const ELLIPSIS = '...';
 const EN_DASH = '\u2013';
+
+// Query
+const QUERY_PARAMS = '?format=json&q=select ';
+const QUERY_TABLE = 'weather.forecast';
+const QUERY_VIEW = 'link,location,wind,atmosphere,units,item.condition,item.forecast,astronomy';
+const QUERY_URL = 'http://query.yahooapis.com/v1/public/yql' + QUERY_PARAMS + QUERY_VIEW + ' from ' + QUERY_TABLE;
+
+// Schema keys
+const WEATHER_CITY_KEY = 'location-label-override';
+const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
+const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
+const WEATHER_SHOW_SUNRISE_SUNSET_KEY = 'show-sunrise-sunset';
+const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
+const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
+const WEATHER_TEMPERATURE_UNIT_KEY = 'temperature-unit';
+const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
+const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
+const WEATHER_WOEID_KEY = 'woeid';
 
 // Signals
 const SIGNAL_CHANGED = 'changed::';
@@ -131,9 +145,8 @@ function getSettings(schema) {
 //
 //----------------------------------------------------------------------
 
-Gettext.textdomain("weather@mockturtl");
-//Gettext.bindtextdomain("weather@mockturtl", "/usr/share/locale");
-Gettext.bindtextdomain("weather@mockturtl", GLib.get_home_dir() +"/.local/share/locale");
+Gettext.textdomain(UUID);
+Gettext.bindtextdomain(UUID, GLib.get_home_dir() +"/.local/share/locale");
 
 //----------------------------------------------------------------------
 //
@@ -191,9 +204,9 @@ MyApplet.prototype = {
 			//----------------------------------
 			//  Interface Methods: TextIconApplet
 			//----------------------------------
-			this.set_applet_icon_name("view-refresh-symbolic");
-			this.set_applet_label(ELLIPSIS);
-			this.set_applet_tooltip(_("Click to open"));
+			this.set_applet_icon_name(APPLET_ICON);
+			this.set_applet_label(APPLET_LABEL);
+			this.set_applet_tooltip(_(APPLET_TOOLTIP));
 
 			//----------------------------------
 			//  PopupMenu
@@ -222,7 +235,7 @@ MyApplet.prototype = {
 			//----------------------------------
 			//  initialize settings
 			//----------------------------------
-			this._settings = getSettings(WEATHER_SETTINGS_SCHEMA);
+			this._settings = getSettings(GSETTINGS_SCHEMA);
 			this._units = this._settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
 			this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
 			this._city  = this._settings.get_string(WEATHER_CITY_KEY);
@@ -237,14 +250,22 @@ MyApplet.prototype = {
 			//----------------------------------
 			//  bind settings
 			//----------------------------------
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_TEMPERATURE_UNIT_KEY, load_settings_and_refresh_weather);
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_WIND_SPEED_UNIT_KEY, load_settings_and_refresh_weather);
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_SHOW_TEXT_IN_PANEL_KEY, load_settings_and_refresh_weather);
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_SHOW_SUNRISE_SUNSET_KEY, load_settings_and_refresh_weather);
+			let refreshableKeys = [
+				WEATHER_TEMPERATURE_UNIT_KEY, 
+				WEATHER_WIND_SPEED_UNIT_KEY,
+				WEATHER_CITY_KEY,
+				WEATHER_WOEID_KEY,
+				WEATHER_TRANSLATE_CONDITION_KEY,
+				WEATHER_SHOW_TEXT_IN_PANEL_KEY,
+				WEATHER_SHOW_COMMENT_IN_PANEL_KEY,
+				WEATHER_SHOW_SUNRISE_SUNSET_KEY
+			];
+			context = this;
+			refreshableKeys.forEach(function (key) {
+				//global.log("cinnamon-weather::_init: adding CHANGED listener for " + key + "; " + context);
+				context._settings.connect(SIGNAL_CHANGED + key, load_settings_and_refresh_weather);
+			});
+			
 			this._settings.connect(SIGNAL_CHANGED + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
 				this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 				this._applet_icon.icon_type = this._icon_type;
@@ -253,6 +274,7 @@ MyApplet.prototype = {
 				this._forecast[1].Icon.icon_type = this._icon_type;
 				this.refreshWeather(false);
 			}));
+			
 			this._settings.connect(SIGNAL_CHANGED + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
 				this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
 			}));
@@ -539,7 +561,7 @@ MyApplet.prototype = {
 		this._currentWeatherIcon = new St.Icon({
 			icon_type: this._icon_type,
 			icon_size: 64,
-			icon_name: 'view-refresh-symbolic',
+			icon_name: APPLET_ICON,
 			style_class: 'weather-current-icon'
 		});
 
@@ -647,7 +669,7 @@ MyApplet.prototype = {
 			forecastWeather.Icon = new St.Icon({
 				icon_type: this._icon_type,
 				icon_size: 48,
-				icon_name: 'view-refresh-symbolic',
+				icon_name: APPLET_ICON,
 				style_class: 'weather-forecast-icon'
 			});
 			forecastWeather.Day = new St.Label({
@@ -692,13 +714,13 @@ MyApplet.prototype = {
 		let prefIcon = new St.Icon ({
 			icon_type: this._icon_type,
 			icon_size: 16,
-			icon_name: 'system-run'
+			icon_name: ICON_PREFERENCES
 		});
 		let prefButton = new St.Button({
 			style_class: 'panel-button'
 		});
 		prefButton.connect(SIGNAL_CLICKED, function() {
-			Util.spawn(["cinnamon-weather-settings"]);
+			Util.spawn([COMMAND_CONFIGURE]);
 			//global.log("cinnamon-weather::Click: preferences");
 		});
 		let prefBox = new St.BoxLayout({
@@ -728,7 +750,7 @@ MyApplet.prototype = {
 	 *
 	 */
 	get_weather_url: function() {
-		return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+		return QUERY_URL + ' where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
 	},
 
 	/**
