@@ -10,7 +10,7 @@ cinnamon-weather uses [Semantic Versioning](http://semver.org/).  For the curren
 
 [glib-compile-schemas](http://developer.gnome.org/gio/2.30/glib-compile-schemas.html) 
 
-* `sudo apt-get install libglib2.0-bin` on [Debian](packages.debian.org/libglib2.0-dev), [Ubuntu](packages.ubuntu.com/libglib2.0-dev)
+* `sudo apt-get install libglib2.0-bin` on [Debian](http://packages.debian.org/libglib2.0-dev), [Ubuntu](http://packages.ubuntu.com/libglib2.0-dev)
 
 ### Installation
 
@@ -23,3 +23,5 @@ Restart Cinnamon (`[Alt]+[F2]`, `r`).
 ### Configuration
 
 Click the gear icon in the menu to launch `cinnamon-weather-settings`, or use `gsettings` from the command line, with tab completion.
+
+###### [Mailing list](http://groups.google.com/group/cinnamon-weather)
