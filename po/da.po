@@ -1,0 +1,306 @@
+# Danish language file for cinnamon-weather.
+# Copyright (C) 2112
+# This file is distributed under the same license as the cinnamon-weather package.
+# Michael Rasmussen <mir@datanom.net>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"PO-Revision-Date: 2012-04-07 03:07+0200\n"
+"Last-Translator: Michael Rasmussen <mir@datanom.net>\n"
+"Language-Team: Danish <>\n"
+"Language: Danish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: extension.js:93
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr "Schema \"%s\" blev ikke fundet."
+
+#: extension.js:154
+msgid "..."
+msgstr ""
+
+#: extension.js:372
+msgid "Tornado"
+msgstr "Tornado"
+
+#: extension.js:374
+msgid "Tropical storm"
+msgstr "Tropisk storm"
+
+#: extension.js:376
+msgid "Hurricane"
+msgstr "Tyfon"
+
+#: extension.js:378
+msgid "Severe thunderstorms"
+msgstr "Kraftigt tordenvejr"
+
+#: extension.js:380
+msgid "Thunderstorms"
+msgstr "Tordenvejr"
+
+#: extension.js:382
+msgid "Mixed rain and snow"
+msgstr "Regn og slud"
+
+#: extension.js:384
+msgid "Mixed rain and sleet"
+msgstr "Regn og slud"
+
+#: extension.js:386
+msgid "Mixed snow and sleet"
+msgstr "Sne og slud"
+
+#: extension.js:388
+msgid "Freezing drizzle"
+msgstr "Frysende dugregn"
+
+#: extension.js:390
+msgid "Drizzle"
+msgstr "Dugregn"
+
+#: extension.js:392
+msgid "Freezing rain"
+msgstr "Isslag"
+
+#: extension.js:394 extension.js:396
+msgid "Showers"
+msgstr "Byger"
+
+#: extension.js:398
+msgid "Snow flurries"
+msgstr "Let sne"
+
+#: extension.js:400
+msgid "Light snow showers"
+msgstr "Lette snebyger"
+
+#: extension.js:402
+msgid "Blowing snow"
+msgstr "Snestorm"
+
+#: extension.js:404
+msgid "Snow"
+msgstr "Sne"
+
+#: extension.js:406
+msgid "Hail"
+msgstr "Hagl"
+
+#: extension.js:408
+msgid "Sleet"
+msgstr "Slud"
+
+#: extension.js:410
+msgid "Dust"
+msgstr "Støvet"
+
+#: extension.js:412
+msgid "Foggy"
+msgstr "Tåge"
+
+#: extension.js:414
+msgid "Haze"
+msgstr "Diset"
+
+#: extension.js:416
+msgid "Smoky"
+msgstr "Røgfyldt"
+
+#: extension.js:418
+msgid "Blustery"
+msgstr "Vindbyger"
+
+#: extension.js:420
+msgid "Windy"
+msgstr "Blæsende"
+
+#: extension.js:422
+msgid "Cold"
+msgstr "Kulde"
+
+#: extension.js:424
+msgid "Cloudy"
+msgstr "Overskyet"
+
+#: extension.js:427
+msgid "Mostly cloudy"
+msgstr "Næsten overskyet"
+
+#: extension.js:430 extension.js:456
+msgid "Partly cloudy"
+msgstr "Let overskyet"
+
+#: extension.js:432
+msgid "Clear"
+msgstr "Klart"
+
+#: extension.js:434
+msgid "Sunny"
+msgstr "Solrigt"
+
+#: extension.js:437
+msgid "Fair"
+msgstr "Opholdsvejr"
+
+#: extension.js:439
+msgid "Mixed rain and hail"
+msgstr "Regn og hagl"
+
+#: extension.js:441
+msgid "Hot"
+msgstr "Varmt"
+
+#: extension.js:443
+msgid "Isolated thunderstorms"
+msgstr "Lokale tordenbyger"
+
+#: extension.js:446
+msgid "Scattered thunderstorms"
+msgstr "Spredte tordenbyger"
+
+#: extension.js:448
+msgid "Scattered showers"
+msgstr "Spredte regnbyger"
+
+#: extension.js:450 extension.js:454
+msgid "Heavy snow"
+msgstr "Kraftig sne"
+
+#: extension.js:452
+msgid "Scattered snow showers"
+msgstr "Spredte snebyger"
+
+#: extension.js:458
+msgid "Thundershowers"
+msgstr "Tordenbyger"
+
+#: extension.js:460
+msgid "Snow showers"
+msgstr "Snebyger"
+
+#: extension.js:462
+msgid "Isolated thundershowers"
+msgstr "Lokale tordenskyld"
+
+#: extension.js:465
+msgid "Not available"
+msgstr "Ikke tilgængelig"
+
+#: extension.js:480
+msgid "Monday"
+msgstr "Mandag"
+
+#: extension.js:480
+msgid "Tuesday"
+msgstr "Tirsdag"
+
+#: extension.js:480
+msgid "Wednesday"
+msgstr "Onsdag"
+
+#: extension.js:480
+msgid "Thursday"
+msgstr "Torsdag"
+
+#: extension.js:480
+msgid "Friday"
+msgstr "Fredag"
+
+#: extension.js:480
+msgid "Saturday"
+msgstr "Lørdag"
+
+#: extension.js:480
+msgid "Sunday"
+msgstr "Søndag"
+
+#: extension.js:485
+msgid "N"
+msgstr "N"
+
+#: extension.js:485
+msgid "NE"
+msgstr "NØ"
+
+#: extension.js:485
+msgid "E"
+msgstr "Ø"
+
+#: extension.js:485
+msgid "SE"
+msgstr "SØ"
+
+#: extension.js:485
+msgid "S"
+msgstr "S"
+
+#: extension.js:485
+msgid "SW"
+msgstr "SV"
+
+#: extension.js:485
+msgid "W"
+msgstr "V"
+
+#: extension.js:485
+msgid "NW"
+msgstr "NV"
+
+#: extension.js:612
+msgid "Today"
+msgstr "I dag"
+
+#: extension.js:612
+msgid "Tomorrow"
+msgstr "I morgen"
+
+#: extension.js:658
+msgid "Loading current weather ..."
+msgstr "Henter nuværende vejrdata"
+
+#: extension.js:659
+msgid "Loading future weather ..."
+msgstr "Henter fremtidige vejrdata"
+
+#: extension.js:675
+msgid "Loading ..."
+msgstr "Henter ..."
+
+#: extension.js:681
+msgid "Please wait"
+msgstr "Vent venligst"
+
+#: extension.js:706
+msgid "Sunrise"
+msgstr "Sol stÃ¥r op"
+
+#: extension.js:708
+msgid "Sunset"
+msgstr "Sol gÃ¥r ned"
+
+#: extension.js:740
+msgid "Temperature:"
+msgstr "Temperatur"
+
+#: extension.js:742
+msgid "Humidity:"
+msgstr "Fugtighed:"
+
+#: extension.js:744
+msgid "Pressure:"
+msgstr "Tryk:"
+
+#: extension.js:746
+msgid "Wind:"
+msgstr "Vind:"
+
+#~ msgid "Click to open"
+#~ msgstr "Klik for at åbne"
