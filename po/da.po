@@ -1,6 +1,6 @@
-# Danish language file for cinnamon-weather.
+# Danish language file for gnome-shell-extension-weather.
 # Copyright (C) 2112
-# This file is distributed under the same license as the cinnamon-weather package.
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
 # Michael Rasmussen <mir@datanom.net>, 2012.
 #
 msgid ""
