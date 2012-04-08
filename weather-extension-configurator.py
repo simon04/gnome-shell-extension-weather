@@ -124,8 +124,8 @@ class WeatherConfigurator:
                 "The position of this GNOME Shell extension in the panel. (Requires restart of GNOME Shell.)")
         self.add_check('translate-condition', 'Translate weather conditions',
                 "If enabled, the condition is translated based on the weather code.\nIf disabled, the condition string from Yahoo! is taken.\nNote: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string “PM Thunderstorms” cannot be expressed in terms of weather codes.")
-#        self.add_check('show-sunrise-sunset', 'Show sunrise and sunset times',
-#                "Whether to show sunrise/sunset times in current weather.")
+        self.add_check('show-sunrise-sunset', 'Show sunrise and sunset times',
+                "Whether to show sunrise/sunset times in current weather.")
         self.add_check('use-symbolic-icons', 'Symbolic icons',
                 "Display symbolic icons instead of full-colored icons.")
         (b_text, _) = self.add_check('show-text-in-panel', 'Show text in panel',
