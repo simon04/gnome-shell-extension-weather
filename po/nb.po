@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-08 08:41+0200\n"
+"POT-Creation-Date: 2012-04-08 11:02+0200\n"
 "PO-Revision-Date: 2011-06-02 23:04+0200\n"
 "Last-Translator: Stian Ellingsen <stiell@stiell.org>\n"
 "Language: nb\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: extension.js:159
+#: extension.js:159 extension.js:717
 msgid "..."
 msgstr "…"
 
@@ -284,49 +284,48 @@ msgstr "Laster værvarsel …"
 msgid "Loading ..."
 msgstr "Laster …"
 
-#: extension.js:717
+#: extension.js:723
 msgid "Please wait"
 msgstr "Vent litt"
 
-#: extension.js:742
+#: extension.js:749
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:744
+#: extension.js:751
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:780
-msgid "Temperature:"
-msgstr "Temperatur:"
-
-#: extension.js:782
+#: extension.js:786
 msgid "Feels like:"
 msgstr ""
 
-#: extension.js:784
+#: extension.js:788
 msgid "Humidity:"
 msgstr "Fuktighet:"
 
-#: extension.js:786
+#: extension.js:790
 msgid "Pressure:"
 msgstr "Lufttrykk:"
 
-#: extension.js:788
+#: extension.js:792
 msgid "Visibility:"
 msgstr ""
 
-#: extension.js:790
+#: extension.js:794
 msgid "Wind:"
 msgstr "Vind:"
 
-#: extension.js:792
+#: extension.js:796
 msgid "Sunrise:"
 msgstr ""
 
-#: extension.js:794
+#: extension.js:798
 msgid "Sunset:"
 msgstr ""
+
+#~ msgid "Temperature:"
+#~ msgstr "Temperatur:"
 
 #, fuzzy
 #~ msgid "Wind chill:"
