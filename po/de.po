@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-08 08:41+0200\n"
+"POT-Creation-Date: 2012-04-08 10:18+0200\n"
 "PO-Revision-Date: 2011-06-07 13:00+0200\n"
 "Last-Translator: Evilandi666 <Evilandi.AUR@googlemail.com>\n"
 "Language: de\n"
@@ -264,67 +264,67 @@ msgstr ""
 msgid "falling"
 msgstr ""
 
-#: extension.js:648
-msgid "Today"
-msgstr "Heute"
-
-#: extension.js:648
-msgid "Tomorrow"
-msgstr "Morgen"
-
-#: extension.js:694
-msgid "Loading current weather ..."
-msgstr "Lade aktuelles Wetter ..."
-
-#: extension.js:695
-msgid "Loading future weather ..."
-msgstr "Lade zukünftiges Wetter ..."
-
-#: extension.js:711
-msgid "Loading ..."
-msgstr "Lade ..."
-
-#: extension.js:717
-msgid "Please wait"
-msgstr "Bitte warten"
-
-#: extension.js:742
+#: extension.js:639 extension.js:716 extension.js:749
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:744
+#: extension.js:639 extension.js:716 extension.js:751
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:780
+#: extension.js:642
+msgid "Today"
+msgstr "Heute"
+
+#: extension.js:642
+msgid "Tomorrow"
+msgstr "Morgen"
+
+#: extension.js:688
+msgid "Loading current weather ..."
+msgstr "Lade aktuelles Wetter ..."
+
+#: extension.js:689
+msgid "Loading future weather ..."
+msgstr "Lade zukünftiges Wetter ..."
+
+#: extension.js:705
+msgid "Loading ..."
+msgstr "Lade ..."
+
+#: extension.js:723
+msgid "Please wait"
+msgstr "Bitte warten"
+
+#: extension.js:784
 msgid "Temperature:"
 msgstr "Temperatur:"
 
-#: extension.js:782
+#: extension.js:786
 msgid "Feels like:"
 msgstr ""
 
-#: extension.js:784
+#: extension.js:788
 msgid "Humidity:"
 msgstr "Luftfeuchtigkeit:"
 
-#: extension.js:786
+#: extension.js:790
 msgid "Pressure:"
 msgstr "Luftdruck:"
 
-#: extension.js:788
+#: extension.js:792
 msgid "Visibility:"
 msgstr ""
 
-#: extension.js:790
+#: extension.js:794
 msgid "Wind:"
 msgstr "Windgeschwindigkeit:"
 
-#: extension.js:792
+#: extension.js:796
 msgid "Sunrise:"
 msgstr ""
 
-#: extension.js:794
+#: extension.js:798
 msgid "Sunset:"
 msgstr ""
 

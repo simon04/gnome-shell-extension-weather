@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-08 08:41+0200\n"
+"POT-Creation-Date: 2012-04-08 10:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -266,66 +266,66 @@ msgstr ""
 msgid "falling"
 msgstr ""
 
-#: extension.js:648
-msgid "Today"
-msgstr ""
-
-#: extension.js:648
-msgid "Tomorrow"
-msgstr ""
-
-#: extension.js:694
-msgid "Loading current weather ..."
-msgstr ""
-
-#: extension.js:695
-msgid "Loading future weather ..."
-msgstr ""
-
-#: extension.js:711
-msgid "Loading ..."
-msgstr ""
-
-#: extension.js:717
-msgid "Please wait"
-msgstr ""
-
-#: extension.js:742
+#: extension.js:639 extension.js:716 extension.js:749
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:744
+#: extension.js:639 extension.js:716 extension.js:751
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:780
-msgid "Temperature:"
+#: extension.js:642
+msgid "Today"
 msgstr ""
 
-#: extension.js:782
-msgid "Feels like:"
+#: extension.js:642
+msgid "Tomorrow"
+msgstr ""
+
+#: extension.js:688
+msgid "Loading current weather ..."
+msgstr ""
+
+#: extension.js:689
+msgid "Loading future weather ..."
+msgstr ""
+
+#: extension.js:705
+msgid "Loading ..."
+msgstr ""
+
+#: extension.js:723
+msgid "Please wait"
 msgstr ""
 
 #: extension.js:784
-msgid "Humidity:"
+msgid "Temperature:"
 msgstr ""
 
 #: extension.js:786
-msgid "Pressure:"
+msgid "Feels like:"
 msgstr ""
 
 #: extension.js:788
-msgid "Visibility:"
+msgid "Humidity:"
 msgstr ""
 
 #: extension.js:790
-msgid "Wind:"
+msgid "Pressure:"
 msgstr ""
 
 #: extension.js:792
-msgid "Sunrise:"
+msgid "Visibility:"
 msgstr ""
 
 #: extension.js:794
+msgid "Wind:"
+msgstr ""
+
+#: extension.js:796
+msgid "Sunrise:"
+msgstr ""
+
+#: extension.js:798
 msgid "Sunset:"
 msgstr ""
