@@ -53,7 +53,7 @@ const WEATHER_USE_24H_TIME_FORMAT_KEY = 'use-24h-time-format';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
-const WEATHER_SHOW_SUNRISE_SUNSET_KEY = 'show-sunrise-sunset';
+//const WEATHER_SHOW_SUNRISE_SUNSET_KEY = 'show-sunrise-sunset';
 const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
@@ -108,7 +108,7 @@ WeatherMenuButton.prototype = {
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-        this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
+//        this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
         this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
         this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
         this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
@@ -123,7 +123,7 @@ WeatherMenuButton.prototype = {
             this._city  = this._settings.get_string(WEATHER_CITY_KEY);
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-            this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
+//            this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
             this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
             this.refreshWeather(false);
@@ -134,7 +134,7 @@ WeatherMenuButton.prototype = {
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_SHOW_SUNRISE_SUNSET_KEY, load_settings_and_refresh_weather);
+//        this._settings.connect('changed::' + WEATHER_SHOW_SUNRISE_SUNSET_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
@@ -567,12 +567,15 @@ WeatherMenuButton.prototype = {
             let pressure_unit = weather.get_object_member('units').get_string_member('pressure');
             let pressure_state = weather.get_object_member('atmosphere').get_string_member('rising');
             let chill = weather.get_object_member('wind').get_string_member('chill');
+            let visibility = weather.get_object_member('atmosphere').get_string_member('visibility');
+            let distance_unit = weather.get_object_member('units').get_string_member('distance');
             let wind_direction = this.get_compass_direction(weather.get_object_member('wind').get_string_member('direction'));
             let wind = weather.get_object_member('wind').get_string_member('speed');
             let wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
-            let sunrise = (this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunrise') : '');
-            let sunset = (this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunset') : '');
+            let sunrise = weather.get_object_member('astronomy').get_string_member('sunrise');
+            let sunset = weather.get_object_member('astronomy').get_string_member('sunset');
+            let last_build_date = weather_c.get_string_member('date');
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
             if (this._comment_in_panel)
@@ -585,6 +588,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherWindChill.text = chill + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ', ' + this.get_pressure_state(pressure_state);
+            this._currentWeatherVisibility.text = visibility + ' ' + distance_unit;
 
             if (wind) {
                 // Override wind units with our preference
@@ -627,17 +631,19 @@ WeatherMenuButton.prototype = {
             } else
                 this._currentWeatherWind.text = '\u2013';
          
-            this._currentWeatherLocation.label = location + '...';
+            this._currentWeatherLocation.label = location;
             // make the location act like a button
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
             this._currentWeatherLocation.url = weather.get_string_member('link');
-            if (this._show_sunrise && this._use_24h_time_format) {
+            this._currentWeatherSunrise.text = this._use_24h_time_format ? this.time_to_24h_format(sunrise) : sunrise.toUpperCase();
+        	this._currentWeatherSunset.text = this._use_24h_time_format ? this.time_to_24h_format(sunset) : sunset.toUpperCase();
+            /*if (this._show_sunrise && this._use_24h_time_format) {
             	this._currentWeatherSunrise.text = this.time_to_24h_format(sunrise);
             	this._currentWeatherSunset.text = this.time_to_24h_format(sunset);
             } else if (this._show_sunrise) {
             	this._currentWeatherSunrise.text = sunrise.toUpperCase();
             	this._currentWeatherSunset.text = sunset.toUpperCase();
-            }
+            }*/
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
             for (let i = 0; i <= 1; i++) {
@@ -725,7 +731,7 @@ WeatherMenuButton.prototype = {
         bb.add_actor(this._currentWeatherLocation);
         bb.add_actor(this._currentWeatherSummary);
 
-	if (this._show_sunrise) {
+	/*if (this._show_sunrise) {
             this._currentWeatherSunrise = new St.Label({ text: '\u2013' });
             this._currentWeatherSunset = new St.Label({ text: '\u2013' });
 
@@ -746,13 +752,16 @@ WeatherMenuButton.prototype = {
             let bb_spacerlabel = new St.Label({ text: '   ' });
             bb.add_actor(bb_spacerlabel);
             bb.add_actor(ab);
-        }
+        }*/
         // Other labels
         this._currentWeatherTemperature = new St.Label({ text: '...' });
         this._currentWeatherWindChill = new St.Label({ text: '...' });
         this._currentWeatherHumidity = new St.Label({ text:  '...' });
         this._currentWeatherPressure = new St.Label({ text: '...' });
+        this._currentWeatherVisibility = new St.Label({ text: '...' });
         this._currentWeatherWind = new St.Label({ text: '...' });
+        this._currentWeatherSunrise = new St.Label({ text: '...' });
+        this._currentWeatherSunset = new St.Label({ text: '...' });
 
         let rb = new St.BoxLayout({
             style_class: 'weather-current-databox'
@@ -776,8 +785,14 @@ WeatherMenuButton.prototype = {
         rb_values.add_actor(this._currentWeatherHumidity);
         rb_captions.add_actor(new St.Label({text: _('Pressure:')}));
         rb_values.add_actor(this._currentWeatherPressure);
+        rb_captions.add_actor(new St.Label({text: _('Visibility:')}));
+        rb_values.add_actor(this._currentWeatherVisibility);
         rb_captions.add_actor(new St.Label({text: _('Wind:')}));
         rb_values.add_actor(this._currentWeatherWind);
+        rb_captions.add_actor(new St.Label({text: _('Sunrise:')}));
+        rb_values.add_actor(this._currentWeatherSunrise);
+        rb_captions.add_actor(new St.Label({text: _('Sunset:')}));
+        rb_values.add_actor(this._currentWeatherSunset);
 
         let xb = new St.BoxLayout();
         xb.add_actor(bb);
