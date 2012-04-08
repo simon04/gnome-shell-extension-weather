@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-08 10:18+0200\n"
+"POT-Creation-Date: 2012-04-08 08:41+0200\n"
 "PO-Revision-Date: 2012-03-29 13:43+0100\n"
 "Last-Translator: David Štancl <dstancl@dstancl.cz>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
@@ -265,68 +265,68 @@ msgstr ""
 msgid "falling"
 msgstr ""
 
-#: extension.js:639 extension.js:716 extension.js:749
-msgid "Sunrise"
-msgstr "Východ"
-
-#: extension.js:639 extension.js:716 extension.js:751
-msgid "Sunset"
-msgstr "Západ"
-
-#: extension.js:642
+#: extension.js:648
 msgid "Today"
 msgstr "Dnes"
 
-#: extension.js:642
+#: extension.js:648
 msgid "Tomorrow"
 msgstr "Zítra"
 
-#: extension.js:688
+#: extension.js:694
 msgid "Loading current weather ..."
 msgstr "Načítá se aktuální počasí ..."
 
-#: extension.js:689
+#: extension.js:695
 msgid "Loading future weather ..."
 msgstr "Načítá se předpověď ..."
 
-#: extension.js:705
+#: extension.js:711
 msgid "Loading ..."
 msgstr "Načítá se ..."
 
-#: extension.js:723
+#: extension.js:717
 msgid "Please wait"
 msgstr "Čekejte"
 
-#: extension.js:784
+#: extension.js:742
+msgid "Sunrise"
+msgstr "Východ"
+
+#: extension.js:744
+msgid "Sunset"
+msgstr "Západ"
+
+#: extension.js:780
 msgid "Temperature:"
 msgstr "Teplota:"
 
-#: extension.js:786
+#: extension.js:782
 msgid "Feels like:"
 msgstr ""
 
-#: extension.js:788
+#: extension.js:784
 msgid "Humidity:"
 msgstr "Vlhkost:"
 
-#: extension.js:790
+#: extension.js:786
 msgid "Pressure:"
 msgstr "Tlak:"
 
-#: extension.js:792
+#: extension.js:788
 msgid "Visibility:"
 msgstr ""
 
-#: extension.js:794
+#: extension.js:790
 msgid "Wind:"
 msgstr "Vítr:"
 
-#: extension.js:796
+#: extension.js:792
 #, fuzzy
 msgid "Sunrise:"
 msgstr "Východ"
 
-#: extension.js:798
+#: extension.js:794
 #, fuzzy
 msgid "Sunset:"
 msgstr "Západ"

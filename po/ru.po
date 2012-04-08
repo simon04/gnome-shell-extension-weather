@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-08 10:18+0200\n"
+"POT-Creation-Date: 2012-04-08 08:41+0200\n"
 "PO-Revision-Date: 2012-04-04 11:53+0500\n"
 "Last-Translator: Timon <timosha@gmail.com>\n"
 "Language-Team: openSUSE <opensuse-translation-ru@opensuse.org>\n"
@@ -265,68 +265,68 @@ msgstr ""
 msgid "falling"
 msgstr ""
 
-#: extension.js:639 extension.js:716 extension.js:749
-msgid "Sunrise"
-msgstr "Восход"
-
-#: extension.js:639 extension.js:716 extension.js:751
-msgid "Sunset"
-msgstr "Закат"
-
-#: extension.js:642
+#: extension.js:648
 msgid "Today"
 msgstr "Сегодня"
 
-#: extension.js:642
+#: extension.js:648
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: extension.js:688
+#: extension.js:694
 msgid "Loading current weather ..."
 msgstr "Загрузка текущей погоды ..."
 
-#: extension.js:689
+#: extension.js:695
 msgid "Loading future weather ..."
 msgstr "Загрузка прогноза погоды ..."
 
-#: extension.js:705
+#: extension.js:711
 msgid "Loading ..."
 msgstr "Загрузка ..."
 
-#: extension.js:723
+#: extension.js:717
 msgid "Please wait"
 msgstr "Подождите"
 
-#: extension.js:784
+#: extension.js:742
+msgid "Sunrise"
+msgstr "Восход"
+
+#: extension.js:744
+msgid "Sunset"
+msgstr "Закат"
+
+#: extension.js:780
 msgid "Temperature:"
 msgstr "Температура:"
 
-#: extension.js:786
+#: extension.js:782
 msgid "Feels like:"
 msgstr ""
 
-#: extension.js:788
+#: extension.js:784
 msgid "Humidity:"
 msgstr "Влажность:"
 
-#: extension.js:790
+#: extension.js:786
 msgid "Pressure:"
 msgstr "Давление:"
 
-#: extension.js:792
+#: extension.js:788
 msgid "Visibility:"
 msgstr ""
 
-#: extension.js:794
+#: extension.js:790
 msgid "Wind:"
 msgstr "Ветер:"
 
-#: extension.js:796
+#: extension.js:792
 #, fuzzy
 msgid "Sunrise:"
 msgstr "Восход"
 
-#: extension.js:798
+#: extension.js:794
 #, fuzzy
 msgid "Sunset:"
 msgstr "Закат"

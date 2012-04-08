@@ -17,7 +17,7 @@
 
 .weather-current-temperature {
     text-align: center;
-    font-size: 28px;
+    font-size: 35px;
 }
 
 .weather-current-databox {
@@ -47,10 +47,9 @@
     color: #999999;
 }
 
-.weather-current-astronomy {
-    text-align: center;
+/* .weather-current-astronomy {
     color: #AAAAAA;
-}
+} */
 
 .weather-forecast-icon {
   padding: 0 15px 0 30px;
