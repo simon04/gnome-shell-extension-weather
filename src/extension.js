@@ -494,11 +494,11 @@ WeatherMenuButton.prototype = {
     get_pressure_state: function(state) {
     	switch (parseInt(state, 3)) {
     	case 0:
-    		return _('steady');
+    		return '\u2192'; // Rightwards Arrow
     	case 1:
-    		return _('rising');
+    		return '\u2197'; // North East Arrow
     	case 2:
-    		return _('falling');
+    		return '\u2198'; // South East Arrow
     	}
     },
     
@@ -506,8 +506,9 @@ WeatherMenuButton.prototype = {
     time_to_24h_format: function(timeAmPm) {
     	let hourLength = timeAmPm.length < 8 ? 1 : 2; // Length of the string representing the hour
         let hour24h = (timeAmPm.substr(0, hourLength) * 1) + ((timeAmPm.substr((hourLength + 4), 2).toUpperCase() === 'PM') ? 12 : 0);
-        let minute = timeAmPm.substr((hourLength + 1), 2);
-        return hour24h.toString().concat(':').concat(minute);               
+        let hour24hString = hour24h.toString();
+        let minuteString = timeAmPm.substr((hourLength + 1), 2);
+        return (hour24hString.length < 2 ? '0' : '').concat(hour24hString)concat(':').concat(minuteString);               
     },
 
     load_json_async: function(url, fun) {
@@ -587,7 +588,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherWindChill.text = chill + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
-            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ', ' + this.get_pressure_state(pressure_state);
+            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ' ' + this.get_pressure_state(pressure_state);
             this._currentWeatherVisibility.text = visibility + ' ' + distance_unit;
 
             if (wind) {
@@ -635,8 +636,8 @@ WeatherMenuButton.prototype = {
             // make the location act like a button
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
             this._currentWeatherLocation.url = weather.get_string_member('link');
-            this._currentWeatherSunrise.text = this._use_24h_time_format ? this.time_to_24h_format(sunrise) : sunrise.toUpperCase();
-        	this._currentWeatherSunset.text = this._use_24h_time_format ? this.time_to_24h_format(sunset) : sunset.toUpperCase();
+            this._currentWeatherSunrise.text = this._use_24h_time_format ? this.time_to_24h_format(sunrise) : ((sunrise.length < 8 ? '0' : '').concat(sunrise.toUpperCase()));
+        	this._currentWeatherSunset.text = this._use_24h_time_format ? this.time_to_24h_format(sunset) : ((sunset.length < 8 ? '0' : '').concat(sunset.toUpperCase()));
             /*if (this._show_sunrise && this._use_24h_time_format) {
             	this._currentWeatherSunrise.text = this.time_to_24h_format(sunrise);
             	this._currentWeatherSunset.text = this.time_to_24h_format(sunset);
