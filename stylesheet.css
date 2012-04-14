@@ -1,3 +1,11 @@
+/* taken from gnome-shell.css, .dash-search-button */
+.weather-current-location-link:selected,
+.weather-current-location-link:hover {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255, 255, 255, 0.4);
+    background-gradient-end: rgba(255, 255, 255, 0.2);
+}
+
 .weather-current-summarybox {
     padding-top: 15px;
 }
@@ -31,6 +39,10 @@
     text-align: right;
     padding-right: 5px;
     color: #999999;
+}
+
+.weather-current-astronomy {
+    color: #AAAAAA;
 }
 
 .weather-forecast-icon {

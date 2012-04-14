@@ -7,9 +7,13 @@ OLD_SCHEMA="${OLD_UUID}.gschema.xml"
 SCHEMA="org.cinnamon.applets.${UUID}.gschema.xml"
 INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${UUID}"
 OLD_INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${OLD_UUID}"
-LOCALES="ca cs de es fi fr he it lv nb nl pl pt ro ru sk sv uk zh_CN"
+LOCALES="ca cs da de es fi fr he it lv nb nl pl pt ro ru sk sv uk zh_CN"
 LOCALE_DIR="${HOME}/.local/share/locale"
 
+compile_schemas() {
+	glib-compile-schemas --dry-run ${SCHEMA_DIR} &&
+		sudo glib-compile-schemas ${SCHEMA_DIR}
+}
 
 do_install() {
 	cat << EOF
@@ -18,8 +22,7 @@ do_install() {
 EOF
 	
 	sudo cp -f ${SCHEMA} ${SCHEMA_DIR} &&
-		glib-compile-schemas --dry-run ${SCHEMA_DIR} &&
-		sudo glib-compile-schemas ${SCHEMA_DIR}
+		compile_schemas
 
 	mkdir -p ${INSTALL_DIR}
 
@@ -47,9 +50,7 @@ EOF
 		dconf reset -f /org/cinnamon/applets/weather@mockturtl/
 	fi
 
-	sudo rm -f ${SCHEMA_DIR}/${SCHEMA} &&
-		glib-compile-schemas --dry-run ${SCHEMA_DIR} &&
-		sudo glib-compile-schemas ${SCHEMA_DIR}
+	compile_schemas
 
 	rm -rf ${INSTALL_DIR}
 	sudo rm -f /usr/local/bin/cinnamon-weather-settings
@@ -62,6 +63,7 @@ EOF
 	done
 }
 
+# housekeeping for poor namespace convention < v1.3.2
 do_cleanup() {
 	cat << EOF
 
@@ -69,11 +71,11 @@ do_cleanup() {
 EOF
 	if [ -f "${SCHEMA_DIR}/${OLD_SCHEMA}" ]; then
 		sudo rm -f ${SCHEMA_DIR}/${OLD_SCHEMA}
+		# this location may contain other data
 		dconf reset -f /org/cinnamon/weather/
 	fi
 	
-	glib-compile-schemas --dry-run ${SCHEMA_DIR} &&
-		sudo glib-compile-schemas ${SCHEMA_DIR}
+	compile_schemas
 	
 	rm -rf ${OLD_INSTALL_DIR}
 		
@@ -82,6 +84,22 @@ EOF
 EOF
 	for LOCALE in ${LOCALES}; do
 		rm -f ${LOCALE_DIR}/${LOCALE}/LC_MESSAGES/${OLD_UUID}.mo
+	done
+}
+
+# maintainer script for gettext
+do_translate() {
+	cat << EOF
+
+	Updating template...
+EOF
+	xgettext -d ${UUID} -o po/${UUID}.pot -L python -j --keyword=_ applet.js
+
+	cat << EOF
+	Merging existing translation files with new template...
+EOF
+	for LOCALE in ${LOCALES}; do
+		msgmerge -U po/${LOCALE}.po po/${UUID}.pot
 	done
 }
 
@@ -94,6 +112,9 @@ case `basename $0` in
 		;;
 	"cleanup.sh")
 		do_cleanup
+		;;
+	"translate.sh")
+		do_translate
 		;;
 esac
 

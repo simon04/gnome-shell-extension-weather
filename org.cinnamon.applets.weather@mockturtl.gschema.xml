@@ -4,13 +4,6 @@
     <value value="0" nick="celsius"/>
     <value value="1" nick="fahrenheit"/>
   </enum>
-<!--
-  <enum id="weather.position">
-    <value value="0" nick="center"/>
-    <value value="1" nick="right"/>
-    <value value="2" nick="left"/>
-  </enum>
--->
   <enum id="weather.wind-speed-unit">
     <value nick="kph" value="0" />
     <value nick="mph" value="1" />
@@ -43,6 +36,11 @@
       <summary>Whether to translate the weather condition</summary>
       <description>Whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.</description>
     </key>
+    <key name="show-sunrise-sunset" type="b">
+      <default>true</default>
+      <summary>Whether to display sunrise / sunset times</summary>
+      <description>Whether to display sunrise and sunset times for today in current weather.</description>
+    </key>
     <key type="b" name="use-symbolic-icons">
       <default>false</default>
       <summary>Whether to use symbolic icons</summary>
@@ -58,13 +56,6 @@
       <summary>Whether to show the comment in the panel.</summary>
       <description>Whether to show the comment (aka. weather condition text, e.g. "Windy", "Clear") in the panel. Note that the temperature is still shown (if undesired, consider show-text-in-panel option).</description>
     </key>
-<!--
-    <key name="position-in-panel" enum="weather.position">
-      <default>'center'</default>
-      <summary>Position in panel</summary>
-      <description>Set the position of this Cinnamon extension in the panel to either 'center', 'left' or 'right' (requires restart).</description>
-    </key>
--->
     <key type="i" name="refresh-interval">
       <default>240</default>
       <summary>Refresh interval in seconds</summary>
