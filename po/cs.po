@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-10 08:30+0200\n"
+"POT-Creation-Date: 2012-04-14 10:01+0200\n"
 "PO-Revision-Date: 2012-03-29 13:43+0100\n"
 "Last-Translator: David Štancl <dstancl@dstancl.cz>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Schema \"%s\" not found."
 msgstr "Schéma \"%s\" nebylo nalezeno."
 
-#: extension.js:159 extension.js:718
+#: extension.js:159 extension.js:714
 msgid "..."
 msgstr "..."
 
@@ -253,67 +253,69 @@ msgstr "Z"
 msgid "NW"
 msgstr "SZ"
 
-#: extension.js:649
+#: extension.js:591 extension.js:720
+msgid "Latest update"
+msgstr ""
+
+#: extension.js:645
 msgid "Today"
 msgstr "Dnes"
 
-#: extension.js:649
+#: extension.js:645
 msgid "Tomorrow"
 msgstr "Zítra"
 
-#: extension.js:695
+#: extension.js:691
 msgid "Loading current weather ..."
 msgstr "Načítá se aktuální počasí ..."
 
-#: extension.js:696
+#: extension.js:692
 msgid "Loading future weather ..."
 msgstr "Načítá se předpověď ..."
 
-#: extension.js:712
+#: extension.js:708
 msgid "Loading ..."
 msgstr "Načítá se ..."
 
-#: extension.js:724
+#: extension.js:726
 msgid "Please wait"
 msgstr "Čekejte"
 
-#: extension.js:750
-msgid "Sunrise"
-msgstr "Východ"
-
-#: extension.js:752
-msgid "Sunset"
-msgstr "Západ"
-
-#: extension.js:787
+#: extension.js:769
 msgid "Feels like:"
 msgstr ""
 
-#: extension.js:789
+#: extension.js:771
 msgid "Humidity:"
 msgstr "Vlhkost:"
 
-#: extension.js:791
+#: extension.js:773
 msgid "Pressure:"
 msgstr "Tlak:"
 
-#: extension.js:793
-msgid "Visibility:"
-msgstr ""
-
-#: extension.js:795
+#: extension.js:775
 msgid "Wind:"
 msgstr "Vítr:"
 
-#: extension.js:797
+#: extension.js:777
+msgid "Visibility:"
+msgstr ""
+
+#: extension.js:779
 #, fuzzy
 msgid "Sunrise:"
 msgstr "Východ"
 
-#: extension.js:799
+#: extension.js:781
 #, fuzzy
 msgid "Sunset:"
 msgstr "Západ"
+
+#~ msgid "Sunrise"
+#~ msgstr "Východ"
+
+#~ msgid "Sunset"
+#~ msgstr "Západ"
 
 #~ msgid "Temperature:"
 #~ msgstr "Teplota:"

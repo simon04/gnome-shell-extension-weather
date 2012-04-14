@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-10 08:30+0200\n"
-"PO-Revision-Date: 2012-04-10 08:30+0100\n"
+"POT-Creation-Date: 2012-04-14 10:01+0200\n"
+"PO-Revision-Date: 2012-04-14 10:02+0100\n"
 "Last-Translator: Mattia Meneguzzo <hal8600@hotmail.it>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgid "Schema \"%s\" not found."
 msgstr "Schema \"%s\" non trovato."
 
 #: extension.js:159
-#: extension.js:718
+#: extension.js:714
 msgid "..."
 msgstr "..."
 
@@ -258,65 +258,68 @@ msgstr "O"
 msgid "NW"
 msgstr "NO"
 
-#: extension.js:649
+#: extension.js:591
+#: extension.js:720
+msgid "Latest update"
+msgstr "Ultimo aggiornamento"
+
+#: extension.js:645
 msgid "Today"
 msgstr "Oggi"
 
-#: extension.js:649
+#: extension.js:645
 msgid "Tomorrow"
 msgstr "Domani"
 
-#: extension.js:695
+#: extension.js:691
 msgid "Loading current weather ..."
 msgstr "Caricamento condizioni meteo attuali ..."
 
-#: extension.js:696
+#: extension.js:692
 msgid "Loading future weather ..."
 msgstr "Caricamento previsioni meteo ..."
 
-#: extension.js:712
+#: extension.js:708
 msgid "Loading ..."
 msgstr "Caricamento ..."
 
-#: extension.js:724
+#: extension.js:726
 msgid "Please wait"
 msgstr "Attendere, prego"
 
-#: extension.js:750
-msgid "Sunrise"
-msgstr "Alba"
-
-#: extension.js:752
-msgid "Sunset"
-msgstr "Tramonto"
-
-#: extension.js:787
+#: extension.js:769
 msgid "Feels like:"
 msgstr "Percepiti:"
 
-#: extension.js:789
+#: extension.js:771
 msgid "Humidity:"
 msgstr "Umidità:"
 
-#: extension.js:791
+#: extension.js:773
 msgid "Pressure:"
 msgstr "Pressione:"
 
-#: extension.js:793
-msgid "Visibility:"
-msgstr "Visibilità:"
-
-#: extension.js:795
+#: extension.js:775
 msgid "Wind:"
 msgstr "Vento:"
 
-#: extension.js:797
+#: extension.js:777
+msgid "Visibility:"
+msgstr "Visibilità:"
+
+#: extension.js:779
 msgid "Sunrise:"
 msgstr "Alba:"
 
-#: extension.js:799
+#: extension.js:781
 msgid "Sunset:"
 msgstr "Tramonto:"
+
+#~ msgid "Sunrise"
+#~ msgstr "Alba"
+
+#~ msgid "Sunset"
+#~ msgstr "Tramonto"
 
 #~ msgid "steady"
 #~ msgstr "costante"

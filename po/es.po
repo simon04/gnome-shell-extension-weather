@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-10 08:30+0200\n"
+"POT-Creation-Date: 2012-04-14 10:01+0200\n"
 "PO-Revision-Date: 2011-06-07 18:21+0100\n"
 "Last-Translator: Fitoschido <fitoschido@gmail.com>\n"
 "Language-Team: Español; Castellano <zodiac_es@yahoo.es>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: extension.js:159 extension.js:718
+#: extension.js:159 extension.js:714
 msgid "..."
 msgstr "..."
 
@@ -254,63 +254,59 @@ msgstr ""
 msgid "NW"
 msgstr ""
 
-#: extension.js:649
+#: extension.js:591 extension.js:720
+msgid "Latest update"
+msgstr ""
+
+#: extension.js:645
 msgid "Today"
 msgstr "Hoy"
 
-#: extension.js:649
+#: extension.js:645
 msgid "Tomorrow"
 msgstr "Mañana"
 
-#: extension.js:695
+#: extension.js:691
 msgid "Loading current weather ..."
 msgstr "Cargando la meteorología actual..."
 
-#: extension.js:696
+#: extension.js:692
 msgid "Loading future weather ..."
 msgstr "Cargando la meteorología futura..."
 
-#: extension.js:712
+#: extension.js:708
 msgid "Loading ..."
 msgstr "Cargando..."
 
-#: extension.js:724
+#: extension.js:726
 msgid "Please wait"
 msgstr "Espere un momento"
 
-#: extension.js:750
-msgid "Sunrise"
-msgstr ""
-
-#: extension.js:752
-msgid "Sunset"
-msgstr ""
-
-#: extension.js:787
+#: extension.js:769
 msgid "Feels like:"
 msgstr ""
 
-#: extension.js:789
+#: extension.js:771
 msgid "Humidity:"
 msgstr "Humedad"
 
-#: extension.js:791
+#: extension.js:773
 msgid "Pressure:"
 msgstr "Presión:"
 
-#: extension.js:793
-msgid "Visibility:"
-msgstr ""
-
-#: extension.js:795
+#: extension.js:775
 msgid "Wind:"
 msgstr "Viento:"
 
-#: extension.js:797
+#: extension.js:777
+msgid "Visibility:"
+msgstr ""
+
+#: extension.js:779
 msgid "Sunrise:"
 msgstr ""
 
-#: extension.js:799
+#: extension.js:781
 msgid "Sunset:"
 msgstr ""
 
