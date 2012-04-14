@@ -20,6 +20,12 @@
     font-size: 35px;
 }
 
+.weather-last-build-time {
+	color: #999999;
+    text-align: center;
+    font-size: 75%;
+}
+
 .weather-current-databox {
     padding-top: 15px;
     padding-left: 30px;

@@ -70,5 +70,10 @@
       <_summary>Refresh interval in seconds</_summary>
       <_description>The interval in seconds to refresh the weather information.</_description>
     </key>
+    <key name="display-last-build-time" type="b">
+      <default>false</default>
+      <_summary>Whether to show the latest update time.</_summary>
+      <_description>Whether to show the latest update time in the panel. Note that here we are referring to the last time Yahoo! Weather updated the weather information, not to the last time the extension fetched it.</_description>
+    </key>
   </schema>
 </schemalist>

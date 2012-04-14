@@ -58,6 +58,7 @@ const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
 const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
 const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
+const WEATHER_DISPLAY_LAST_BUILD_TIME_KEY = 'display-last-build-time';
 
 // Keep enums in sync with GSettings schemas
 const WeatherUnits = {
@@ -112,6 +113,7 @@ WeatherMenuButton.prototype = {
         this._position_in_panel = this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
         this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
         this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
+        this._display_last_build_time = this._settings.get_boolean(WEATHER_DISPLAY_LAST_BUILD_TIME_KEY);
 
         // Watch settings for changes
         let load_settings_and_refresh_weather = Lang.bind(this, function() {
@@ -123,6 +125,7 @@ WeatherMenuButton.prototype = {
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
             this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
+            this._display_last_build_time = this._settings.get_boolean(WEATHER_DISPLAY_LAST_BUILD_TIME_KEY);
             this.refreshWeather(false);
         });
         this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
@@ -143,6 +146,7 @@ WeatherMenuButton.prototype = {
         this._settings.connect('changed::' + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
             this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
         }));
+        this._settings.connect('changed::' + WEATHER_DISPLAY_LAST_BUILD_TIME_KEY, load_settings_and_refresh_weather);
 
         // Panel icon
         this._weatherIcon = new St.Icon({
@@ -576,12 +580,15 @@ WeatherMenuButton.prototype = {
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
             if (this._comment_in_panel)
-                this._weatherInfo.text = (comment + ' ' + temperature + ' ' + this.unit_to_unicode());
+                this._weatherInfo.text = (comment + ', ' + temperature + ' ' + this.unit_to_unicode());
             else
                 this._weatherInfo.text = (temperature + ' ' + this.unit_to_unicode());
 
             this._currentWeatherSummary.text = comment;
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
+            let last_build_time_length = (last_build_date.charAt(18) == ':') ? 7 : 8;
+            let last_build_time_string = last_build_date.substr(17, last_build_time_length);
+            this._lastBuildTime.text = _('Latest update') + ': ' + (this._use_24h_time_format ? this.time_to_24h_format(last_build_time_string) : ((last_build_time_length < 8 ? '0' : '').concat(last_build_time_string.toUpperCase())));
             this._currentWeatherWindChill.text = chill + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ' ' + this.get_pressure_state(pressure_state);
@@ -707,6 +714,12 @@ WeatherMenuButton.prototype = {
             text: _('...'),
             style_class: 'weather-current-temperature'
         });
+        
+        // Last build time
+        this._lastBuildTime = new St.Label({
+        	text: _('Latest update') + ': ...',
+        	style_class: 'weather-last-build-time'
+        });
 
         // The location name and link to the details page
         this._currentWeatherLocation = new St.Button({ reactive: true,
@@ -727,6 +740,8 @@ WeatherMenuButton.prototype = {
         bb.add_actor(this._currentWeatherLocation);
         bb.add_actor(this._currentWeatherSummary);
         bb.add_actor(this._currentWeatherTemperature);
+        if (this._display_last_build_time)
+        	bb.add_actor(this._lastBuildTime);
 
         // Other labels
         this._currentWeatherWindChill = new St.Label({ text: '...' });

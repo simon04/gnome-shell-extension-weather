@@ -98,6 +98,13 @@ You may display today's sunrise and sunset times as retrieved from Yahoo! Weathe
     gsettings set org.gnome.shell.extensions.weather show-sunrise-sunset true
     gsettings set org.gnome.shell.extensions.weather show-sunrise-sunset false
 
+#### Show latest update time (optional, false by default)
+
+If desired, you can display the latest weather data update time. Note that here we are referring to the last time Yahoo! Weather updated the weather information, not to the last time the extension fetched it.
+
+    gsettings set org.gnome.shell.extensions.weather display-last-build-time false
+    gsettings set org.gnome.shell.extensions.weather display-last-build-time true
+
 #### Use symbolic icons (optional, false by default)
 
 If desired, you can enable the usage of symbolic icons to display the weather condition (instead of full-colored icons).
