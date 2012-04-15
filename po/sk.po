@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-14 10:01+0200\n"
 "PO-Revision-Date: 2011-12-11 14:59+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: \n"
@@ -16,287 +16,302 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:93
+#: extension.js:95
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: extension.js:154
+#: extension.js:159 extension.js:714
 msgid "..."
 msgstr "..."
 
-#: extension.js:372
+#: extension.js:377
 msgid "Tornado"
 msgstr "Tornádo"
 
-#: extension.js:374
+#: extension.js:379
 msgid "Tropical storm"
 msgstr "Tropická búrka"
 
-#: extension.js:376
+#: extension.js:381
 msgid "Hurricane"
 msgstr "Hurikán"
 
-#: extension.js:378
+#: extension.js:383
 msgid "Severe thunderstorms"
 msgstr "Výrazné búrky"
 
-#: extension.js:380
+#: extension.js:385
 msgid "Thunderstorms"
 msgstr "Búrky"
 
-#: extension.js:382
+#: extension.js:387
 msgid "Mixed rain and snow"
 msgstr "Dážď so snehom"
 
-#: extension.js:384
+#: extension.js:389
 msgid "Mixed rain and sleet"
 msgstr "Dážď a poľadovica"
 
-#: extension.js:386
+#: extension.js:391
 msgid "Mixed snow and sleet"
 msgstr "Sneh a poľadovica"
 
-#: extension.js:388
+#: extension.js:393
 msgid "Freezing drizzle"
 msgstr "Mráz a mrholenie"
 
-#: extension.js:390
+#: extension.js:395
 msgid "Drizzle"
 msgstr "Mrholenie"
 
-#: extension.js:392
+#: extension.js:397
 msgid "Freezing rain"
 msgstr "Mrznúci dážď"
 
-#: extension.js:394 extension.js:396
+#: extension.js:399 extension.js:401
 msgid "Showers"
 msgstr "Prehánky"
 
-#: extension.js:398
+#: extension.js:403
 msgid "Snow flurries"
 msgstr "Snehové záveje"
 
-#: extension.js:400
+#: extension.js:405
 msgid "Light snow showers"
 msgstr "Mierne snehové prehánky"
 
-#: extension.js:402
+#: extension.js:407
 msgid "Blowing snow"
 msgstr "Husté sneženie"
 
-#: extension.js:404
+#: extension.js:409
 msgid "Snow"
 msgstr "Sneženie"
 
-#: extension.js:406
+#: extension.js:411
 msgid "Hail"
 msgstr "Krúpy"
 
-#: extension.js:408
+#: extension.js:413
 msgid "Sleet"
 msgstr "Poľadovica"
 
-#: extension.js:410
+#: extension.js:415
 msgid "Dust"
 msgstr "Prašno"
 
-#: extension.js:412
+#: extension.js:417
 msgid "Foggy"
 msgstr "Hmlisto"
 
-#: extension.js:414
+#: extension.js:419
 msgid "Haze"
 msgstr "Hmla"
 
-#: extension.js:416
+#: extension.js:421
 msgid "Smoky"
 msgstr "Dym"
 
-#: extension.js:418
+#: extension.js:423
 msgid "Blustery"
 msgstr "Búrlivo"
 
-#: extension.js:420
+#: extension.js:425
 msgid "Windy"
 msgstr "Veterno"
 
-#: extension.js:422
+#: extension.js:427
 msgid "Cold"
 msgstr "Chladno"
 
-#: extension.js:424
+#: extension.js:429
 msgid "Cloudy"
 msgstr "Oblačno"
 
-#: extension.js:427
+#: extension.js:432
 msgid "Mostly cloudy"
 msgstr "Zamračené"
 
-#: extension.js:430 extension.js:456
+#: extension.js:435 extension.js:461
 msgid "Partly cloudy"
 msgstr "Polojasno"
 
-#: extension.js:432
+#: extension.js:437
 msgid "Clear"
 msgstr "Jasno"
 
-#: extension.js:434
+#: extension.js:439
 msgid "Sunny"
 msgstr "Slnečno"
 
-#: extension.js:437
+#: extension.js:442
 msgid "Fair"
 msgstr "Pekne"
 
-#: extension.js:439
+#: extension.js:444
 msgid "Mixed rain and hail"
 msgstr "Dážď s krúpami"
 
-#: extension.js:441
+#: extension.js:446
 msgid "Hot"
 msgstr "Horúco"
 
-#: extension.js:443
+#: extension.js:448
 msgid "Isolated thunderstorms"
 msgstr "Ojedinelé búrky"
 
-#: extension.js:446
+#: extension.js:451
 msgid "Scattered thunderstorms"
 msgstr "Občasné búrky"
 
-#: extension.js:448
+#: extension.js:453
 msgid "Scattered showers"
 msgstr "Občasné prehánky"
 
-#: extension.js:450 extension.js:454
+#: extension.js:455 extension.js:459
 msgid "Heavy snow"
 msgstr "Husté sneženie"
 
-#: extension.js:452
+#: extension.js:457
 msgid "Scattered snow showers"
 msgstr "Občasné snehové prehánky"
 
-#: extension.js:458
+#: extension.js:463
 msgid "Thundershowers"
 msgstr "Búrky s prehánkami"
 
-#: extension.js:460
+#: extension.js:465
 msgid "Snow showers"
 msgstr "Snehové prehánky"
 
-#: extension.js:462
+#: extension.js:467
 msgid "Isolated thundershowers"
 msgstr "Ojedinelé búrky s prehánkami"
 
-#: extension.js:465
+#: extension.js:470
 msgid "Not available"
 msgstr "Nedostupný"
 
-#: extension.js:480
+#: extension.js:485
 msgid "Monday"
 msgstr "Pondelok"
 
-#: extension.js:480
+#: extension.js:485
 msgid "Tuesday"
 msgstr "Utorok"
 
-#: extension.js:480
+#: extension.js:485
 msgid "Wednesday"
 msgstr "Streda"
 
-#: extension.js:480
+#: extension.js:485
 msgid "Thursday"
 msgstr "Štvrtok"
 
-#: extension.js:480
+#: extension.js:485
 msgid "Friday"
 msgstr "Piatok"
 
-#: extension.js:480
+#: extension.js:485
 msgid "Saturday"
 msgstr "Sobota"
 
-#: extension.js:480
+#: extension.js:485
 msgid "Sunday"
 msgstr "Nedeľa"
 
-#: extension.js:485
+#: extension.js:490
 msgid "N"
 msgstr ""
 
-#: extension.js:485
+#: extension.js:490
 msgid "NE"
 msgstr ""
 
-#: extension.js:485
+#: extension.js:490
 msgid "E"
 msgstr ""
 
-#: extension.js:485
+#: extension.js:490
 msgid "SE"
 msgstr ""
 
-#: extension.js:485
+#: extension.js:490
 msgid "S"
 msgstr ""
 
-#: extension.js:485
+#: extension.js:490
 msgid "SW"
 msgstr ""
 
-#: extension.js:485
+#: extension.js:490
 msgid "W"
 msgstr ""
 
-#: extension.js:485
+#: extension.js:490
 msgid "NW"
 msgstr ""
 
-#: extension.js:612
+#: extension.js:591 extension.js:720
+msgid "Latest update"
+msgstr ""
+
+#: extension.js:645
 msgid "Today"
 msgstr "Dnes"
 
-#: extension.js:612
+#: extension.js:645
 msgid "Tomorrow"
 msgstr "Zajtra"
 
-#: extension.js:658
+#: extension.js:691
 msgid "Loading current weather ..."
 msgstr "Načítava sa aktuálne počasie ..."
 
-#: extension.js:659
+#: extension.js:692
 msgid "Loading future weather ..."
 msgstr "Načítava sa predpoveď počasia ..."
 
-#: extension.js:675
+#: extension.js:708
 msgid "Loading ..."
 msgstr "Načítava sa ..."
 
-#: extension.js:681
+#: extension.js:726
 msgid "Please wait"
 msgstr "Prosím, čakajte"
 
-#: extension.js:706
-msgid "Sunrise"
+#: extension.js:769
+msgid "Feels like:"
 msgstr ""
 
-#: extension.js:708
-msgid "Sunset"
-msgstr ""
-
-#: extension.js:740
-msgid "Temperature:"
-msgstr "Teplota:"
-
-#: extension.js:742
+#: extension.js:771
 msgid "Humidity:"
 msgstr "Vlhkosť:"
 
-#: extension.js:744
+#: extension.js:773
 msgid "Pressure:"
 msgstr "Tlak:"
 
-#: extension.js:746
+#: extension.js:775
 msgid "Wind:"
 msgstr "Vietor:"
+
+#: extension.js:777
+msgid "Visibility:"
+msgstr ""
+
+#: extension.js:779
+msgid "Sunrise:"
+msgstr ""
+
+#: extension.js:781
+msgid "Sunset:"
+msgstr ""
+
+#~ msgid "Temperature:"
+#~ msgstr "Teplota:"
+
+#, fuzzy
+#~ msgid "Wind chill:"
+#~ msgstr "Vietor:"
