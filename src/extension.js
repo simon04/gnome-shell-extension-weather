@@ -505,10 +505,10 @@ WeatherMenuButton.prototype = {
 	// Convert a string representing time in AM/PM format (i.e. "7:45 pm") to 24h format ("19:45")
     time_to_24h_format: function(timeAmPm) {
     	let hourLength = timeAmPm.length < 8 ? 1 : 2; // Length of the string representing the hour
-        let hour24h = (timeAmPm.substr(0, hourLength) * 1) + ((timeAmPm.substr((hourLength + 4), 2).toUpperCase() === 'PM') ? 12 : 0);
-        let hour24hString = hour24h.toString();
-        let minuteString = timeAmPm.substr((hourLength + 1), 2);
-        return (hour24hString.length < 2 ? '0' : '').concat(hour24hString).concat(':').concat(minuteString);               
+    	let amPmSuffix = timeAmPm.substr((hourLength + 4), 2).toUpperCase(); // Either "AM" or "PM"
+        let hour24h = (timeAmPm.substr(0, hourLength) % 12 + ((amPmSuffix == 'AM') ? 0 : 12)).toString();
+        let minute = timeAmPm.substr((hourLength + 1), 2);
+        return (hour24h.length < 2 ? '0' : '').concat(hour24h.toString()).concat(':').concat(minute);               
     },
 
     load_json_async: function(url, fun) {
