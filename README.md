@@ -8,7 +8,7 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 ### Screenshots
 
-![Screenshot](https://github.com/simon04/gnome-shell-extension-weather/raw/master/data/screenshot.png)
+![Screenshot](https://github.com/Odysseus86/gnome-shell-extension-weather/raw/master/data/screenshot.png)
 
 ----
 
@@ -25,12 +25,9 @@ Currently, the weather report including forecast for today and tomorrow is fetch
 
 That's it!
 
-### Versions
+### Compatibility
 
-Due to incompatible changes between GNOME 3.0 and 3.2, separate versions of this extension are provided:
-
-* For GNOME Shell 3.2, use the `master` branch.
-* For GNOME Shell 3.0, use the `gnome3.0` branch.
+This extension works under GNOME 3.2 only.
 
 ----
 
