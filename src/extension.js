@@ -244,7 +244,8 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+    	return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        // return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
