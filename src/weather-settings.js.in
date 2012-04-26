@@ -199,7 +199,6 @@ WeatherSetting.prototype =
 		if(!this.Settings)
 		this.loadConfig();
 	var a = this.Settings.get_int(WEATHER_ACTUAL_CITY_KEY);
-	var b = a;
 	var citys = this.city.split(" && ");
 
 		if(citys && typeof citys == "string")
@@ -216,8 +215,6 @@ WeatherSetting.prototype =
 		if(a > l)
 		a = l;
 
-		if(a != b)
-		this.actual_city = a;
 	return a;
 	},
 
@@ -333,27 +330,32 @@ WeatherSetting.prototype =
 	{
 	this.Window.get_object("tree-toolbutton-remove").sensitive = Boolean(this.city.length);
 
-		if(typeof this.liststore != "undefined")
-		this.liststore.clear();
-
-		if(this.city.length > 0)
+		if(this.mCities != this.city)
 		{
-		var city = String(this.city).split(" && ");
+			if(typeof this.liststore != "undefined")
+			this.liststore.clear();
 
-			if(city && typeof city == "string")
-			city = [city];
-
-		var iter = this.iter;
-
-			for(var i in city)
+			if(this.city.length > 0)
 			{
-			var a = this.liststore.append(iter);
-			var current = a.iter;
-			this.liststore.set_value(current,0,city[i]);
+			var city = String(this.city).split(" && ");
+
+				if(city && typeof city == "string")
+				city = [city];
+
+			var iter = this.iter;
+
+				for(var i in city)
+				{
+				var a = this.liststore.append(iter);
+				var current = a.iter;
+				this.liststore.set_value(current,0,city[i]);
+				}
 			}
 
-		this.changeSelection();
+		this.mCities = this.city;
 		}
+
+	this.changeSelection();
 
 	var config = this.configWidgets;
 		for(var i in config)
