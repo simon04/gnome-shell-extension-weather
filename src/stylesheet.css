@@ -3,7 +3,7 @@
 }
 
 .weather-current-summary {
-    font-size: 40px;
+    font-size: 31px;
 }
 
 .weather-current-databox {
@@ -43,4 +43,13 @@
 .weather-forecast-day {
   color: #999999;
   font-size: 90%;
+}
+
+.weather-sunrise-icon {
+    padding-right: 5px;
+}
+
+.weather-sunset-icon {
+    padding-left: 15px;
+    padding-right: 5px;
 }

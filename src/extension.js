@@ -118,6 +118,26 @@ WeatherMenuButton.prototype = {
 		PanelMenu.Button.prototype._init.call(this, menuAlignment);
 	}
 
+	this._sunriseIcon = new St.Icon({
+            icon_type: this._icon_type,
+            icon_size: 15,
+            icon_name: 'weather-clear'+(this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''),
+            style_class: 'weather-sunrise-icon'
+        });
+
+	this._sunsetIcon = new St.Icon({
+            icon_type: this._icon_type,
+            icon_size: 15,
+            icon_name: 'weather-clear-night'+(this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''),
+            style_class: 'weather-sunset-icon'
+        });
+
+	var schemaInterface = "org.gnome.desktop.interface";
+	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
+		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
+   	var settingsInterface = new Gio.Settings({ schema: schemaInterface });
+	this._clockFormat = settingsInterface.get_string("clock-format");
+
 	// Putting the panel item together
 	let topBox = new St.BoxLayout();
 	topBox.add_actor(this._weatherIcon);
@@ -390,7 +410,7 @@ global.log(a);
     },
 
     get_weather_url: function() {
-        return encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast from weather.forecast where location in (select id from xml where url="http://xoap.weather.com/search/search?where='+ encodeURI( this._city ) +'" and itemPath="search.loc") and u="' + this.unit_to_url() + '"');
+        return encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location in (select id from xml where url="http://xoap.weather.com/search/search?where='+ encodeURI( this._city ) +'" and itemPath="search.loc") and u="' + this.unit_to_url() + '"');
     /* see http://jonathantrevor.net/?p=40 */
     },
 
@@ -696,6 +716,16 @@ global.log(a);
             let wind = weather.wind.speed;
             let wind_unit = weather.units.speed;
             let iconname = this.get_weather_icon_safely(weather_c.code);
+            let sunrise = weather.astronomy.sunrise;
+            let sunset = weather.astronomy.sunset;
+
+		if(this._clockFormat == "24h")
+		{
+		sunrise = new Date("3 Mar 1999 "+sunrise);
+		sunrise = sunrise.getHours()+":"+sunrise.getMinutes();
+		sunset = new Date("3 Mar 1999 "+sunset);
+		sunset = sunset.getHours()+":"+sunset.getMinutes();
+		}
 
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
@@ -710,6 +740,8 @@ global.log(a);
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
             this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+	    this._currentWeatherSunrise.text = sunrise;
+	    this._currentWeatherSunset.text = sunset;
 
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
@@ -782,6 +814,19 @@ global.log(a);
         });
         bb.add_actor(this._currentWeatherLocation);
         bb.add_actor(this._currentWeatherSummary);
+
+	this._currentWeatherSunrise = new St.Label({ text: '-' });
+	this._currentWeatherSunset = new St.Label({ text: '-' });
+
+	let ab = new St.BoxLayout({	
+	style_class: 'weather-current-astronomy'	
+	});
+
+	ab.add_actor(this._sunriseIcon);
+	ab.add_actor(this._currentWeatherSunrise);
+	ab.add_actor(this._sunsetIcon);	
+	ab.add_actor(this._currentWeatherSunset);
+	bb.add_actor(ab);
 
         // Other labels
         this._currentWeatherTemperature = new St.Label({ text: '...' });
