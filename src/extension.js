@@ -664,6 +664,17 @@ WeatherMenuButton.prototype = {
         return directions[Math.round(deg / 45) % directions.length];
     },
 
+    get_pressure_state: function(state) {
+      switch (parseInt(state, 3)) {
+      case 0:
+        return '\u2192';
+      case 1:
+        return '\u2197';
+      case 2:
+        return '\u2198';
+      }
+    },
+
     load_json_async: function(url, fun) {
         let here = this;
 
@@ -731,6 +742,7 @@ WeatherMenuButton.prototype = {
             let humidity = weather.atmosphere.humidity + ' %';
             let pressure = weather.atmosphere.pressure;
             let pressure_unit = weather.units.pressure;
+	    let pressure_state = weather.atmosphere.rising;
             let wind_direction = this.get_compass_direction(weather.wind.direction);
             let wind = weather.wind.speed;
             let wind_unit = weather.units.speed;
@@ -763,7 +775,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherLocation.text = location;
             this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
-            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
+            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ' ' + this.get_pressure_state(pressure_state);
 	    this._currentWeatherSunrise.text = sunrise;
 	    this._currentWeatherSunset.text = sunset;
 
