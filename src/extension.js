@@ -660,18 +660,18 @@ WeatherMenuButton.prototype = {
     },
 
     get_compass_direction: function(deg) {
-        let directions = [_('N'), _('NE'), _('E'), _('SE'), _('S'), _('SW'), _('W'), _('NW')];
+        let directions = ["\u2191", "\u2197", "\u2192", "\u2198", "\u2193", "\u2199", "\u2190", "\u2196"];
         return directions[Math.round(deg / 45) % directions.length];
     },
 
     get_pressure_state: function(state) {
       switch (parseInt(state, 3)) {
       case 0:
-        return '\u2192';
+        return '';
       case 1:
-        return '\u2197';
+        return '\u2934';
       case 2:
-        return '\u2198';
+        return '\u2935';
       }
     },
 
@@ -776,7 +776,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherLocation.text = location;
             this._currentWeatherTemperature.text = chill + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
-            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ' ' + this.get_pressure_state(pressure_state);
+            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ((pressure_state)?" ":"") + this.get_pressure_state(pressure_state);
 	    this._currentWeatherSunrise.text = sunrise;
 	    this._currentWeatherSunset.text = sunset;
 
