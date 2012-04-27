@@ -9,7 +9,8 @@
  *     Timur Kristof <venemo@msn.com>,
  *     Elad Alfassa <elad@fedoraproject.org>,
  *     Simon Legner <Simon.Legner@gmail.com>,
- *     Christian METZLER <neroth@xeked.com>
+ *     Christian METZLER <neroth@xeked.com>,
+ *     Mark Benjamin weather.gnome.Markie1@dfgh.net
  *
  *
  * This file is part of gnome-shell-extension-weather.
@@ -131,20 +132,6 @@ WeatherMenuButton.prototype = {
 		PanelMenu.Button.prototype._init.call(this, menuAlignment);
 	}
 
-	this._sunriseIcon = new St.Icon({
-            icon_type: this._icon_type,
-            icon_size: 15,
-            icon_name: 'weather-clear'+(this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''),
-            style_class: 'weather-sunrise-icon'
-        });
-
-	this._sunsetIcon = new St.Icon({
-            icon_type: this._icon_type,
-            icon_size: 15,
-            icon_name: 'weather-clear-night'+(this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''),
-            style_class: 'weather-sunset-icon'
-        });
-
 	var schemaInterface = "org.gnome.desktop.interface";
 	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
 		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
@@ -154,8 +141,7 @@ WeatherMenuButton.prototype = {
 	// Putting the panel item together
 	let topBox = new St.BoxLayout();
 	topBox.add_actor(this._weatherIcon);
-	if (this._text_in_panel)
-	    topBox.add_actor(this._weatherInfo);
+	topBox.add_actor(this._weatherInfo);
 	this.actor.add_actor(topBox);
 
 	let children = null;
@@ -297,8 +283,6 @@ WeatherMenuButton.prototype = {
 		cities = [cities];
 
 	var l = cities.length-1;
-global.log(a < 0);
-global.log(a);
 
 		if(a < 0)
 		a = 0;
@@ -719,6 +703,14 @@ global.log(a);
                 many = 1;
                 }
             let weather_c = weather.item.condition;
+
+		this._weatherIcon.icon_type = this._icon_type;
+		this._currentWeatherIcon.icon_type = this._icon_type;
+		this._forecast[0].Icon.icon_type = this._icon_type;
+		this._forecast[1].Icon.icon_type = this._icon_type;
+		this._sunriseIcon.icon_type = this._icon_type;
+		this._sunsetIcon.icon_type = this._icon_type;
+
             let forecast = weather.item.forecast;
             let location = this._city;
                 if (weather.location.city)
@@ -756,10 +748,16 @@ global.log(a);
 
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
-            if (this._comment_in_panel)
-                this._weatherInfo.text = (comment + ' ' + temperature + ' ' + this.unit_to_unicode());
-            else
-                this._weatherInfo.text = (temperature + ' ' + this.unit_to_unicode());
+	    let weatherInfoC = "";
+	    let weatherInfoT = "";
+
+		if (this._comment_in_panel)
+		weatherInfoC = comment;
+
+		if (this._text_in_panel)
+		weatherInfoT = temperature + ' ' + this.unit_to_unicode();
+
+	    this._weatherInfo.text = weatherInfoC + ((weatherInfoC)?" ":"") + weatherInfoT;
 
             this._currentWeatherSummary.text = comment;
             this._currentWeatherLocation.text = location;
@@ -863,6 +861,20 @@ global.log(a);
             icon_size: 72,
             icon_name: 'view-refresh-symbolic',
             style_class: 'weather-current-icon'
+        });
+
+	this._sunriseIcon = new St.Icon({
+            icon_type: this._icon_type,
+            icon_size: 15,
+            icon_name: 'weather-clear'+(this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''),
+            style_class: 'weather-sunrise-icon'
+        });
+
+	this._sunsetIcon = new St.Icon({
+            icon_type: this._icon_type,
+            icon_size: 15,
+            icon_name: 'weather-clear-night'+(this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''),
+            style_class: 'weather-sunset-icon'
         });
 
         // The summary of the current weather
