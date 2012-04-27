@@ -866,14 +866,14 @@ WeatherMenuButton.prototype = {
 	this._sunriseIcon = new St.Icon({
             icon_type: this._icon_type,
             icon_size: 15,
-            icon_name: 'weather-clear'+(this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''),
+            icon_name: 'weather-clear',
             style_class: 'weather-sunrise-icon'
         });
 
 	this._sunsetIcon = new St.Icon({
             icon_type: this._icon_type,
             icon_size: 15,
-            icon_name: 'weather-clear-night'+(this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''),
+            icon_name: 'weather-clear-night',
             style_class: 'weather-sunset-icon'
         });
 
