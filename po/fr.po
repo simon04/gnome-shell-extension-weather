@@ -256,8 +256,8 @@ msgid "NW"
 msgstr "NO"
 
 #: extension.js:467
-msgid "Temperature:"
-msgstr "Température :"
+msgid "Feel like:"
+msgstr "Ressentie :"
 
 #: extension.js:469
 msgid "Humidity:"

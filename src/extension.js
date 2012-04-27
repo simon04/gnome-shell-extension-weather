@@ -734,11 +734,12 @@ WeatherMenuButton.prototype = {
                     location = location +", "+ weather.location.country;
 
             // Refresh current weather
-            let comment = weather_c.text;
+            let comment = weather_c.text + ", " + weather_c.temp + ' ' + this.unit_to_unicode();
             if (this._translate_condition)
-                comment = this.get_weather_condition(weather_c.code);
+                comment = this.get_weather_condition(weather_c.code) + ", " + weather_c.temp + ' ' + this.unit_to_unicode();
 
             let temperature = weather_c.temp;
+            let chill = weather.wind.chill;
             let humidity = weather.atmosphere.humidity + ' %';
             let pressure = weather.atmosphere.pressure;
             let pressure_unit = weather.units.pressure;
@@ -773,7 +774,7 @@ WeatherMenuButton.prototype = {
 
             this._currentWeatherSummary.text = comment;
             this._currentWeatherLocation.text = location;
-            this._currentWeatherTemperature.text = temperature + ' ' + this.unit_to_unicode();
+            this._currentWeatherTemperature.text = chill + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ' ' + this.get_pressure_state(pressure_state);
 	    this._currentWeatherSunrise.text = sunrise;
@@ -936,7 +937,7 @@ WeatherMenuButton.prototype = {
         rb.add_actor(rb_captions);
         rb.add_actor(rb_values);
 
-        rb_captions.add_actor(new St.Label({text: _('Temperature:')}));
+        rb_captions.add_actor(new St.Label({text: _('Feel like:')}));
         rb_values.add_actor(this._currentWeatherTemperature);
         rb_captions.add_actor(new St.Label({text: _('Humidity:')}));
         rb_values.add_actor(this._currentWeatherHumidity);
