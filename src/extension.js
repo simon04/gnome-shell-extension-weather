@@ -749,9 +749,9 @@ global.log(a);
 		if(this._clockFormat == "24h")
 		{
 		sunrise = new Date("3 Mar 1999 "+sunrise);
-		sunrise = sunrise.getHours()+":"+sunrise.getMinutes();
+		sunrise = sunrise.getHours()+":"+((sunrise.getMinutes()<10)?"0":"")+sunrise.getMinutes();
 		sunset = new Date("3 Mar 1999 "+sunset);
-		sunset = sunset.getHours()+":"+sunset.getMinutes();
+		sunset = sunset.getHours()+":"+((sunset.getMinutes()<10)?"0":"")+sunset.getMinutes();
 		}
 
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
