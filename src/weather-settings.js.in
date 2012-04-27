@@ -33,6 +33,7 @@ const _ = Gettext.gettext;
 
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
+const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_ACTUAL_CITY_KEY = 'actual-city';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
@@ -178,6 +179,20 @@ WeatherSetting.prototype =
 		if(!this.Settings)
 		this.loadConfig();
 	this.Settings.set_enum(WEATHER_UNIT_KEY,arguments[0]);
+	},
+
+	get wind_speed_unit()
+	{
+		if(!this.Settings)
+		this.loadConfig();
+	return this.Settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
+	},
+
+	set wind_speed_unit(v)
+	{
+		if(!this.Settings)
+		this.loadConfig();
+	this.Settings.set_enum(WEATHER_WIND_SPEED_UNIT_KEY,v);
 	},
 
 	get city()
@@ -471,6 +486,8 @@ WeatherSetting.prototype =
 	this.initConfigWidget();
 	this.addLabel(_("Temperature Unit"));
 	this.addComboBox(["°C","°F"],"units");
+	this.addLabel(_("Wind Speed Unit"));
+	this.addComboBox(["km/h","mph","m/s","knots"],"wind_speed_unit");
 	this.addLabel(_("Position in Panel"));
 	this.addComboBox([_("Center"),_("Right"),_("Left")],"position_in_panel");
 	this.addLabel(_("Translate Conditions"));

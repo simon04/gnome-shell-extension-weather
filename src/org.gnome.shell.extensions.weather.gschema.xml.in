@@ -3,6 +3,12 @@
     <value nick="celsius" value="0" />
     <value nick="fahrenheit" value="1" />
   </enum>
+  <enum id="org.gnome.shell.extensions.weather.wind-speed-unit">
+    <value nick="kph" value="0" />
+    <value nick="mph" value="1" />
+    <value nick="m/s" value="2" />
+    <value nick="knots" value="3" />
+  </enum>
   <enum id="org.gnome.shell.extensions.weather.position">
     <value nick="center" value="0" />
     <value nick="right" value="1" />
@@ -10,8 +16,13 @@
   </enum>
   <schema id="org.gnome.shell.extensions.weather" path="/org/gnome/shell/extensions/weather/">
     <key name="unit" enum="org.gnome.shell.extensions.weather.unit">
-      <default>'celsius'</default>
+      <default>'fahrenheit'</default>
       <_summary>Temperature Unit</_summary>
+    </key>
+    <key name="wind-speed-unit" enum="org.gnome.shell.extensions.weather.wind-speed-unit">
+      <default>'mph'</default>
+      <_summary>Wind Speed Units</_summary>
+      <_description>Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s' or 'knots'.</_description>
     </key>
     <key name="city" type="s">
       <default>'Cambridge, MA'</default>

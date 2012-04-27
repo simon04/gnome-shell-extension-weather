@@ -292,6 +292,10 @@ msgid "Temperature Unit"
 msgstr "Unité de température"
 
 #: weather-settings.js
+msgid "Wind Speed Unit"
+msgstr "Unité de vitesse du vent"
+
+#: weather-settings.js
 msgid "Position in Panel"
 msgstr "Position sur le panel"
 
