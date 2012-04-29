@@ -734,9 +734,9 @@ WeatherMenuButton.prototype = {
                     location = location +", "+ weather.location.country;
 
             // Refresh current weather
-            let comment = weather_c.text + ", " + weather_c.temp + ' ' + this.unit_to_unicode();
+            let comment = weather_c.text;
             if (this._translate_condition)
-                comment = this.get_weather_condition(weather_c.code) + ", " + weather_c.temp + ' ' + this.unit_to_unicode();
+                comment = this.get_weather_condition(weather_c.code);
 
             let temperature = weather_c.temp;
             let chill = weather.wind.chill;
@@ -772,7 +772,7 @@ WeatherMenuButton.prototype = {
 
 	    this._weatherInfo.text = weatherInfoC + ((weatherInfoC)?" ":"") + weatherInfoT;
 
-            this._currentWeatherSummary.text = comment;
+            this._currentWeatherSummary.text = comment + ", " + weather_c.temp + ' ' + this.unit_to_unicode();
             this._currentWeatherLocation.text = location;
             this._currentWeatherTemperature.text = chill + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
