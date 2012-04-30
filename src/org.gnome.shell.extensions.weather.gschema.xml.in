@@ -41,7 +41,7 @@
       <_description>Whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.</_description>
     </key>
     <key name="show-sunrise-sunset" type="b">
-      <default>true</default>
+      <default>false</default>
       <_summary>Whether to display sunrise / sunset times</_summary>
       <_description>Whether to display sunrise and sunset times for today in current weather</_description>
     </key>

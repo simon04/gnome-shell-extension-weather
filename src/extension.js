@@ -129,7 +129,6 @@ WeatherMenuButton.prototype = {
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_SHOW_SUNRISE_SUNSET_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
@@ -545,8 +544,8 @@ WeatherMenuButton.prototype = {
             let wind = weather.get_object_member('wind').get_string_member('speed');
             let wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
-            let sunrise = (this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunrise') : '');
-            let sunset = (this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunset') : '');
+            let sunrise = this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunrise') : '';
+            let sunset = this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunset') : '';
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
             if (this._comment_in_panel)
