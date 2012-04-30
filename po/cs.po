@@ -1,5 +1,5 @@
 # Czech translation for gnome-shell-extension-weather
-# Copyright (C) 2012
+# Copyright (C) 2011-2012
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # David Štancl <dstancl@dstancl.cz>, 2011.
 # Lukáš Maňas <lukas.manas@gmail.com>, 2012.
@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-29 22:49+0200\n"
-"PO-Revision-Date: 2012-04-27 11:43+0200\n"
+"PO-Revision-Date: 2012-04-30 09:33+0200\n"
 "Last-Translator: Lukáš Maňas <lukas.manas@gmail.com>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
-"Language: \n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -176,30 +176,6 @@ msgstr "Sobota"
 msgid "Sunday"
 msgstr "Neděle"
 
-msgid "N"
-msgstr "S"
-
-msgid "NE"
-msgstr "SV"
-
-msgid "E"
-msgstr "V"
-
-msgid "SE"
-msgstr "JV"
-
-msgid "S"
-msgstr "J"
-
-msgid "SW"
-msgstr "JZ"
-
-msgid "W"
-msgstr "Z"
-
-msgid "NW"
-msgstr "SZ"
-
 msgid "Today"
 msgstr "Dnes"
 
@@ -207,19 +183,19 @@ msgid "Tomorrow"
 msgstr "Zítra"
 
 msgid "Loading current weather ..."
-msgstr "Načítá se aktuální počasí ..."
+msgstr "Načítá se aktuální počasí…"
 
 msgid "Loading future weather ..."
-msgstr "Načítá se předpověď ..."
+msgstr "Načítá se předpověď…"
 
 msgid "Loading ..."
-msgstr "Načítá se ..."
+msgstr "Načítá se…"
 
 msgid "Please wait"
 msgstr "Čekejte"
 
-msgid "Temperature:"
-msgstr "Teplota:"
+msgid "Feel like:"
+msgstr "Pocitově:"
 
 msgid "Humidity:"
 msgstr "Vlhkost:"
