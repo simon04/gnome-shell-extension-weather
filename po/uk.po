@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-30 16:08+0200\n"
 "PO-Revision-Date: 2011-12-24 19:55+0200\n"
 "Last-Translator: Kyrylo Mikos <kiril.mik.os@gmail.com>\n"
 "Language: uk\n"
@@ -15,287 +15,216 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extension.js:93
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: extension.js:154
 msgid "..."
 msgstr "..."
 
-#: extension.js:372
 msgid "Tornado"
 msgstr "Торнадо"
 
-#: extension.js:374
 msgid "Tropical storm"
 msgstr "Тропічний шторм"
 
-#: extension.js:376
 msgid "Hurricane"
 msgstr "Ураган"
 
-#: extension.js:378
 msgid "Severe thunderstorms"
 msgstr "Сильні грози"
 
-#: extension.js:380
 msgid "Thunderstorms"
 msgstr "Грози"
 
-#: extension.js:382
 msgid "Mixed rain and snow"
 msgstr "Дощ та сніг"
 
-#: extension.js:384
 msgid "Mixed rain and sleet"
 msgstr "Дощ та мокрий сніг"
 
-#: extension.js:386
 msgid "Mixed snow and sleet"
 msgstr "Мокрий сніг"
 
-#: extension.js:388
 msgid "Freezing drizzle"
 msgstr "Паморозь"
 
-#: extension.js:390
 msgid "Drizzle"
 msgstr "Мжичка"
 
-#: extension.js:392
 msgid "Freezing rain"
 msgstr "Льодяний дощ"
 
-#: extension.js:394 extension.js:396
 msgid "Showers"
 msgstr "Зливи"
 
-#: extension.js:398
 msgid "Snow flurries"
 msgstr "Шквалистий сніг"
 
-#: extension.js:400
 msgid "Light snow showers"
 msgstr "Невеликий снігопад"
 
-#: extension.js:402
 msgid "Blowing snow"
 msgstr "Низова завірюха"
 
-#: extension.js:404
 msgid "Snow"
 msgstr "Сніг"
 
-#: extension.js:406
 msgid "Hail"
 msgstr "Град"
 
-#: extension.js:408
 msgid "Sleet"
 msgstr "Мокрий сніг"
 
-#: extension.js:410
 msgid "Dust"
 msgstr "Пилюка"
 
-#: extension.js:412
 msgid "Foggy"
 msgstr "Туман"
 
-#: extension.js:414
 msgid "Haze"
 msgstr "Легкий туман"
 
-#: extension.js:416
 msgid "Smoky"
 msgstr "Димка"
 
-#: extension.js:418
 msgid "Blustery"
 msgstr "Пориви вітру"
 
-#: extension.js:420
 msgid "Windy"
 msgstr "Вітряно"
 
-#: extension.js:422
 msgid "Cold"
 msgstr "Холодно"
 
-#: extension.js:424
 msgid "Cloudy"
 msgstr "Хмарно"
 
-#: extension.js:427
 msgid "Mostly cloudy"
 msgstr "Переважно хмарно"
 
-#: extension.js:430 extension.js:456
 msgid "Partly cloudy"
 msgstr "Невелика хмарність"
 
-#: extension.js:432
 msgid "Clear"
 msgstr "Безхмарно"
 
-#: extension.js:434
 msgid "Sunny"
 msgstr "Сонячно"
 
-#: extension.js:437
 msgid "Fair"
 msgstr "Ясно"
 
-#: extension.js:439
 msgid "Mixed rain and hail"
 msgstr "Дощ і град"
 
-#: extension.js:441
 msgid "Hot"
 msgstr "Жарко"
 
-#: extension.js:443
 msgid "Isolated thunderstorms"
 msgstr "Поодинокі грози"
 
-#: extension.js:446
 msgid "Scattered thunderstorms"
 msgstr "Місцями грози"
 
-#: extension.js:448
 msgid "Scattered showers"
 msgstr "Місцями зливи"
 
-#: extension.js:450 extension.js:454
 msgid "Heavy snow"
 msgstr "Сильний снігопад"
 
-#: extension.js:452
 msgid "Scattered snow showers"
 msgstr "Местами снегопад"
 
-#: extension.js:458
 msgid "Thundershowers"
 msgstr "Грозові зливи"
 
-#: extension.js:460
 msgid "Snow showers"
 msgstr "Снігопад"
 
-#: extension.js:462
 msgid "Isolated thundershowers"
 msgstr "Поодинокі грозові зливи"
 
-#: extension.js:465
 msgid "Not available"
 msgstr "Недоступно"
 
-#: extension.js:480
 msgid "Monday"
 msgstr "Понеділок"
 
-#: extension.js:480
 msgid "Tuesday"
 msgstr "Вівторок"
 
-#: extension.js:480
 msgid "Wednesday"
 msgstr "Середа"
 
-#: extension.js:480
 msgid "Thursday"
 msgstr "Четвер"
 
-#: extension.js:480
 msgid "Friday"
 msgstr "П’ятниця"
 
-#: extension.js:480
 msgid "Saturday"
 msgstr "Субота"
 
-#: extension.js:480
 msgid "Sunday"
 msgstr "Неділя"
 
-#: extension.js:485
 msgid "N"
 msgstr ""
 
-#: extension.js:485
 msgid "NE"
 msgstr ""
 
-#: extension.js:485
 msgid "E"
 msgstr ""
 
-#: extension.js:485
 msgid "SE"
 msgstr ""
 
-#: extension.js:485
 msgid "S"
 msgstr ""
 
-#: extension.js:485
 msgid "SW"
 msgstr ""
 
-#: extension.js:485
 msgid "W"
 msgstr ""
 
-#: extension.js:485
 msgid "NW"
 msgstr ""
 
-#: extension.js:612
 msgid "Today"
 msgstr "Сьогодні"
 
-#: extension.js:612
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: extension.js:658
 msgid "Loading current weather ..."
 msgstr "Завантаження поточної погоди ..."
 
-#: extension.js:659
 msgid "Loading future weather ..."
 msgstr "Завантаження прогнозу погоди ..."
 
-#: extension.js:675
 msgid "Loading ..."
 msgstr "Завантаження ..."
 
-#: extension.js:681
 msgid "Please wait"
 msgstr "Зачекайте"
 
-#: extension.js:706
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:708
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:740
 msgid "Temperature:"
 msgstr "Температура:"
 
-#: extension.js:742
 msgid "Humidity:"
 msgstr "Вологість:"
 
-#: extension.js:744
 msgid "Pressure:"
 msgstr "Тиск:"
 
-#: extension.js:746
 msgid "Wind:"
 msgstr "Вітер:"

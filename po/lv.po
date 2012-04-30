@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-30 16:08+0200\n"
 "PO-Revision-Date: 2012-04-04 14:18+0300\n"
 "Last-Translator: Reinis Danne <rei4dan@gmail.com>\n"
 "Language-Team: \n"
@@ -15,296 +15,222 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2)\n"
 "X-Poedit-Language: lv\n"
 "X-Poedit-Country: Latvia\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: extension.js:93
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Shēma \"%s\" nav atrasta."
 
-#: extension.js:154
 msgid "..."
 msgstr "..."
 
-#: extension.js:372
 msgid "Tornado"
 msgstr "Tornado"
 
-#: extension.js:374
 msgid "Tropical storm"
 msgstr "Tropiskā vētra"
 
-#: extension.js:376
 msgid "Hurricane"
 msgstr "Viesuļvētra"
 
-#: extension.js:378
 msgid "Severe thunderstorms"
 msgstr "Spēcīgs pērkona negaiss"
 
-#: extension.js:380
 msgid "Thunderstorms"
 msgstr "Pērkona negaiss"
 
-#: extension.js:382
 msgid "Mixed rain and snow"
 msgstr "Lietus un sniegs"
 
-#: extension.js:384
 msgid "Mixed rain and sleet"
 msgstr "Slapjdraņķis"
 
-#: extension.js:386
 msgid "Mixed snow and sleet"
 msgstr "Sniegs un slapjš sniegs"
 
-#: extension.js:388
 msgid "Freezing drizzle"
 msgstr "Sasalstoša smidzināšana"
 
-#: extension.js:390
 msgid "Drizzle"
 msgstr "Smidzina"
 
-#: extension.js:392
 msgid "Freezing rain"
 msgstr "Sasalstošs lietus"
 
-#: extension.js:394
-#: extension.js:396
 msgid "Showers"
 msgstr "Lietusgāzes"
 
-#: extension.js:398
 msgid "Snow flurries"
 msgstr "Sniegputenis"
 
-#: extension.js:400
 msgid "Light snow showers"
 msgstr "Viegla snigšana"
 
-#: extension.js:402
 msgid "Blowing snow"
 msgstr "Sniega putenis"
 
-#: extension.js:404
 msgid "Snow"
 msgstr "Sniegs"
 
-#: extension.js:406
 msgid "Hail"
 msgstr "Krusa"
 
-#: extension.js:408
 msgid "Sleet"
 msgstr "Slapjš sniegs"
 
-#: extension.js:410
 msgid "Dust"
 msgstr "Putekļi"
 
-#: extension.js:412
 msgid "Foggy"
 msgstr "Miglains"
 
-#: extension.js:414
 msgid "Haze"
 msgstr "Dūmaka"
 
-#: extension.js:416
 msgid "Smoky"
 msgstr "Dūmaka"
 
-#: extension.js:418
 msgid "Blustery"
 msgstr "Brāzmains"
 
-#: extension.js:420
 msgid "Windy"
 msgstr "Vējains"
 
-#: extension.js:422
 msgid "Cold"
 msgstr "Auksts"
 
-#: extension.js:424
 msgid "Cloudy"
 msgstr "Apmācies"
 
-#: extension.js:427
 msgid "Mostly cloudy"
 msgstr "Pārsvarā apmācies"
 
-#: extension.js:430
-#: extension.js:456
 msgid "Partly cloudy"
 msgstr "Daļēji apmācies"
 
-#: extension.js:432
 msgid "Clear"
 msgstr "Skaidrs"
 
-#: extension.js:434
 msgid "Sunny"
 msgstr "Saulains"
 
-#: extension.js:437
 msgid "Fair"
 msgstr "Skaidrs"
 
-#: extension.js:439
 msgid "Mixed rain and hail"
 msgstr "Lietus un krusa"
 
-#: extension.js:441
 msgid "Hot"
 msgstr "Karsts"
 
-#: extension.js:443
 msgid "Isolated thunderstorms"
 msgstr "Atsevišķi pērkona negaisi"
 
-#: extension.js:446
 msgid "Scattered thunderstorms"
 msgstr "Vietām pērkona negaiss"
 
-#: extension.js:448
 msgid "Scattered showers"
 msgstr "Vietām lietusgāzes"
 
-#: extension.js:450
-#: extension.js:454
 msgid "Heavy snow"
 msgstr "Spēcīgs sniegs"
 
-#: extension.js:452
 msgid "Scattered snow showers"
 msgstr "Vietām sniega putenis"
 
-#: extension.js:458
 msgid "Thundershowers"
 msgstr "Pērkona negaiss"
 
-#: extension.js:460
 msgid "Snow showers"
 msgstr "Sniegs"
 
-#: extension.js:462
 msgid "Isolated thundershowers"
 msgstr "Atsevišķi pērkona negaisi"
 
-#: extension.js:465
 msgid "Not available"
 msgstr "Nav pieejams"
 
-#: extension.js:480
 msgid "Monday"
 msgstr "Pirmdiena"
 
-#: extension.js:480
 msgid "Tuesday"
 msgstr "Otrdiena"
 
-#: extension.js:480
 msgid "Wednesday"
 msgstr "Trešdiena"
 
-#: extension.js:480
 msgid "Thursday"
 msgstr "Ceturtdiena"
 
-#: extension.js:480
 msgid "Friday"
 msgstr "Piektdiena"
 
-#: extension.js:480
 msgid "Saturday"
 msgstr "Sestdiena"
 
-#: extension.js:480
 msgid "Sunday"
 msgstr "Svētdiena"
 
-#: extension.js:485
 msgid "N"
 msgstr "Z"
 
-#: extension.js:485
 msgid "NE"
 msgstr "ZA"
 
-#: extension.js:485
 msgid "E"
 msgstr "A"
 
-#: extension.js:485
 msgid "SE"
 msgstr "DA"
 
-#: extension.js:485
 msgid "S"
 msgstr "D"
 
-#: extension.js:485
 msgid "SW"
 msgstr "DR"
 
-#: extension.js:485
 msgid "W"
 msgstr "R"
 
-#: extension.js:485
 msgid "NW"
 msgstr "ZR"
 
-#: extension.js:612
 msgid "Today"
 msgstr "Šodien"
 
-#: extension.js:612
 msgid "Tomorrow"
 msgstr "Rīt"
 
-#: extension.js:658
 msgid "Loading current weather ..."
 msgstr "Ielādē pašreizējos laikapstākļus ..."
 
-#: extension.js:659
 msgid "Loading future weather ..."
 msgstr "Ielādē gaidāmos laikapstākļus ..."
 
-#: extension.js:675
 msgid "Loading ..."
 msgstr "Ielādē ..."
 
-#: extension.js:681
 msgid "Please wait"
 msgstr "Lūdzu uzgaidiet"
 
-#: extension.js:706
 msgid "Sunrise"
 msgstr "Saullēkts"
 
-#: extension.js:708
 msgid "Sunset"
 msgstr "Saulriets"
 
-#: extension.js:740
 msgid "Temperature:"
 msgstr "Temperatūra:"
 
-#: extension.js:742
 msgid "Humidity:"
 msgstr "Mitrums:"
 
-#: extension.js:744
 msgid "Pressure:"
 msgstr "Spiediens:"
 
-#: extension.js:746
 msgid "Wind:"
 msgstr "Vējš:"
-
