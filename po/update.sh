@@ -7,7 +7,7 @@ TMP2=messages2.po
 # update pot
 echo '' > $TMP
 pushd ../src
-xgettext -o ../po/$TMP -L python -j --keyword=_ extension.js
+xgettext --no-location -o ../po/$TMP -L python -j --keyword=_ extension.js
 popd
 msgmerge -N $POT $TMP > $TMP2
 mv $TMP2 $POT

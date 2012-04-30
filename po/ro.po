@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon04-gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-30 16:08+0200\n"
 "PO-Revision-Date: 2011-06-25 19:05+0200\n"
 "Last-Translator: Marian Vasile <marianvasile@upcmail.ro>\n"
 "Language-Team: \n"
@@ -21,287 +21,216 @@ msgstr ""
 "X-Poedit-Country: ROMANIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: extension.js:93
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: extension.js:154
 msgid "..."
 msgstr "..."
 
-#: extension.js:372
 msgid "Tornado"
 msgstr "Tornadă"
 
-#: extension.js:374
 msgid "Tropical storm"
 msgstr "Furtună tropicală"
 
-#: extension.js:376
 msgid "Hurricane"
 msgstr "Uragan"
 
-#: extension.js:378
 msgid "Severe thunderstorms"
 msgstr "Furtuni severe"
 
-#: extension.js:380
 msgid "Thunderstorms"
 msgstr "Furtuni"
 
-#: extension.js:382
 msgid "Mixed rain and snow"
 msgstr "Lapoviță"
 
-#: extension.js:384
 msgid "Mixed rain and sleet"
 msgstr "Măzăriche"
 
-#: extension.js:386
 msgid "Mixed snow and sleet"
 msgstr "Măzăriche"
 
-#: extension.js:388
 msgid "Freezing drizzle"
 msgstr "Burniță rece"
 
-#: extension.js:390
 msgid "Drizzle"
 msgstr "Burniță"
 
-#: extension.js:392
 msgid "Freezing rain"
 msgstr "Ploaie rece"
 
-#: extension.js:394 extension.js:396
 msgid "Showers"
 msgstr "Averse"
 
-#: extension.js:398
 msgid "Snow flurries"
 msgstr "Ninsoare ușoară"
 
-#: extension.js:400
 msgid "Light snow showers"
 msgstr "Ninsoare ușoară în averse"
 
-#: extension.js:402
 msgid "Blowing snow"
 msgstr "Ninsoare viscolită"
 
-#: extension.js:404
 msgid "Snow"
 msgstr "Ninsoare"
 
-#: extension.js:406
 msgid "Hail"
 msgstr "Grindină"
 
-#: extension.js:408
 msgid "Sleet"
 msgstr "Lapoviță"
 
-#: extension.js:410
 msgid "Dust"
 msgstr "Praf"
 
-#: extension.js:412
 msgid "Foggy"
 msgstr "Ceață"
 
-#: extension.js:414
 msgid "Haze"
 msgstr "Ceață ușoară"
 
-#: extension.js:416
 msgid "Smoky"
 msgstr "Întunecat"
 
-#: extension.js:418
 msgid "Blustery"
 msgstr "Zgomotos"
 
-#: extension.js:420
 msgid "Windy"
 msgstr "Rafale de vânt"
 
-#: extension.js:422
 msgid "Cold"
 msgstr "Rece"
 
-#: extension.js:424
 msgid "Cloudy"
 msgstr "Înnorat"
 
-#: extension.js:427
 msgid "Mostly cloudy"
 msgstr "Majoritar înnorat "
 
-#: extension.js:430 extension.js:456
 msgid "Partly cloudy"
 msgstr "Parțial înnorat"
 
-#: extension.js:432
 msgid "Clear"
 msgstr "Senin"
 
-#: extension.js:434
 msgid "Sunny"
 msgstr "Însorit"
 
-#: extension.js:437
 msgid "Fair"
 msgstr "Vreme bună"
 
-#: extension.js:439
 msgid "Mixed rain and hail"
 msgstr "Ploaie cu grindină"
 
-#: extension.js:441
 msgid "Hot"
 msgstr "Foarte cald"
 
-#: extension.js:443
 msgid "Isolated thunderstorms"
 msgstr "Furtuni izolate"
 
-#: extension.js:446
 msgid "Scattered thunderstorms"
 msgstr "Furtuni răzlețe"
 
-#: extension.js:448
 msgid "Scattered showers"
 msgstr "Averse răzlețe"
 
-#: extension.js:450 extension.js:454
 msgid "Heavy snow"
 msgstr "Ninsoare abundentă"
 
-#: extension.js:452
 msgid "Scattered snow showers"
 msgstr "Ninsori răzlețe"
 
-#: extension.js:458
 msgid "Thundershowers"
 msgstr "Ploi abundente în averse"
 
-#: extension.js:460
 msgid "Snow showers"
 msgstr "Ninsori în averse"
 
-#: extension.js:462
 msgid "Isolated thundershowers"
 msgstr "Ploi izolate"
 
-#: extension.js:465
 msgid "Not available"
 msgstr "Indisponibil"
 
-#: extension.js:480
 msgid "Monday"
 msgstr "Luni"
 
-#: extension.js:480
 msgid "Tuesday"
 msgstr "Marți"
 
-#: extension.js:480
 msgid "Wednesday"
 msgstr "Miercuri"
 
-#: extension.js:480
 msgid "Thursday"
 msgstr "Joi"
 
-#: extension.js:480
 msgid "Friday"
 msgstr "Vineri"
 
-#: extension.js:480
 msgid "Saturday"
 msgstr "Sâmbătă"
 
-#: extension.js:480
 msgid "Sunday"
 msgstr "Duminică"
 
-#: extension.js:485
 msgid "N"
 msgstr ""
 
-#: extension.js:485
 msgid "NE"
 msgstr ""
 
-#: extension.js:485
 msgid "E"
 msgstr ""
 
-#: extension.js:485
 msgid "SE"
 msgstr ""
 
-#: extension.js:485
 msgid "S"
 msgstr ""
 
-#: extension.js:485
 msgid "SW"
 msgstr ""
 
-#: extension.js:485
 msgid "W"
 msgstr ""
 
-#: extension.js:485
 msgid "NW"
 msgstr ""
 
-#: extension.js:612
 msgid "Today"
 msgstr "Azi"
 
-#: extension.js:612
 msgid "Tomorrow"
 msgstr "Mâine"
 
-#: extension.js:658
 msgid "Loading current weather ..."
 msgstr "Se încarcă vremea curentă..."
 
-#: extension.js:659
 msgid "Loading future weather ..."
 msgstr "Se încarcă prognoza..."
 
-#: extension.js:675
 msgid "Loading ..."
 msgstr "Se încarcă"
 
-#: extension.js:681
 msgid "Please wait"
 msgstr "Așteptați"
 
-#: extension.js:706
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:708
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:740
 msgid "Temperature:"
 msgstr "Temperatură:"
 
-#: extension.js:742
 msgid "Humidity:"
 msgstr "Umiditate:"
 
-#: extension.js:744
 msgid "Pressure:"
 msgstr "Presiune:"
 
-#: extension.js:746
 msgid "Wind:"
 msgstr "Vânt:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-29 22:49+0200\n"
+"POT-Creation-Date: 2012-04-30 16:08+0200\n"
 "PO-Revision-Date: 2011-06-07 18:21+0100\n"
 "Last-Translator: Fitoschido <fitoschido@gmail.com>\n"
 "Language-Team: Español; Castellano <zodiac_es@yahoo.es>\n"
@@ -17,287 +17,216 @@ msgstr ""
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: extension.js:93
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: extension.js:154
 msgid "..."
 msgstr "..."
 
-#: extension.js:372
 msgid "Tornado"
 msgstr "Tornado"
 
-#: extension.js:374
 msgid "Tropical storm"
 msgstr "Tormenta tropical"
 
-#: extension.js:376
 msgid "Hurricane"
 msgstr "Huracán"
 
-#: extension.js:378
 msgid "Severe thunderstorms"
 msgstr "Tormentas severas"
 
-#: extension.js:380
 msgid "Thunderstorms"
 msgstr "Tormentas"
 
-#: extension.js:382
 msgid "Mixed rain and snow"
 msgstr "Lluvia y nieve"
 
-#: extension.js:384
 msgid "Mixed rain and sleet"
 msgstr "Granizo y lluvia"
 
-#: extension.js:386
 msgid "Mixed snow and sleet"
 msgstr "Granizo y nieve"
 
-#: extension.js:388
 msgid "Freezing drizzle"
 msgstr "Lluvia con heladas"
 
-#: extension.js:390
 msgid "Drizzle"
 msgstr "Llovizna"
 
-#: extension.js:392
 msgid "Freezing rain"
 msgstr "Lluvia con heladas"
 
-#: extension.js:394 extension.js:396
 msgid "Showers"
 msgstr "Lluvias"
 
-#: extension.js:398
 msgid "Snow flurries"
 msgstr "Nieve"
 
-#: extension.js:400
 msgid "Light snow showers"
 msgstr "Nieve"
 
-#: extension.js:402
 msgid "Blowing snow"
 msgstr "Nieve"
 
-#: extension.js:404
 msgid "Snow"
 msgstr "Nieve"
 
-#: extension.js:406
 msgid "Hail"
 msgstr "Granizo"
 
-#: extension.js:408
 msgid "Sleet"
 msgstr "Granizo"
 
-#: extension.js:410
 msgid "Dust"
 msgstr "Niebla"
 
-#: extension.js:412
 msgid "Foggy"
 msgstr "Bruma"
 
-#: extension.js:414
 msgid "Haze"
 msgstr "Neblina"
 
-#: extension.js:416
 msgid "Smoky"
 msgstr "Niebla"
 
-#: extension.js:418
 msgid "Blustery"
 msgstr "Ráfagas de viento"
 
-#: extension.js:420
 msgid "Windy"
 msgstr "Ventoso"
 
-#: extension.js:422
 msgid "Cold"
 msgstr "Fría"
 
-#: extension.js:424
 msgid "Cloudy"
 msgstr "Nublado"
 
-#: extension.js:427
 msgid "Mostly cloudy"
 msgstr "Muy nublado"
 
-#: extension.js:430 extension.js:456
 msgid "Partly cloudy"
 msgstr "Parcialmente nublado"
 
-#: extension.js:432
 msgid "Clear"
 msgstr "Despejado"
 
-#: extension.js:434
 msgid "Sunny"
 msgstr "Soleado"
 
-#: extension.js:437
 msgid "Fair"
 msgstr "Despejado"
 
-#: extension.js:439
 msgid "Mixed rain and hail"
 msgstr "Lluvia y granizo"
 
-#: extension.js:441
 msgid "Hot"
 msgstr "Caluroso"
 
-#: extension.js:443
 msgid "Isolated thunderstorms"
 msgstr "Tormentas locales"
 
-#: extension.js:446
 msgid "Scattered thunderstorms"
 msgstr "Tormentas aisladas"
 
-#: extension.js:448
 msgid "Scattered showers"
 msgstr "Lluvias aisladas"
 
-#: extension.js:450 extension.js:454
 msgid "Heavy snow"
 msgstr "Fuerte nevada"
 
-#: extension.js:452
 msgid "Scattered snow showers"
 msgstr "Nevadas aisladas"
 
-#: extension.js:458
 msgid "Thundershowers"
 msgstr "Tormentas"
 
-#: extension.js:460
 msgid "Snow showers"
 msgstr "Nevadas"
 
-#: extension.js:462
 msgid "Isolated thundershowers"
 msgstr "Tormentas aisladas"
 
-#: extension.js:465
 msgid "Not available"
 msgstr "No disponible"
 
-#: extension.js:480
 msgid "Monday"
 msgstr "Lunes"
 
-#: extension.js:480
 msgid "Tuesday"
 msgstr "Martes"
 
-#: extension.js:480
 msgid "Wednesday"
 msgstr "Miércoles"
 
-#: extension.js:480
 msgid "Thursday"
 msgstr "Jueves"
 
-#: extension.js:480
 msgid "Friday"
 msgstr "Viernes"
 
-#: extension.js:480
 msgid "Saturday"
 msgstr "Sábado"
 
-#: extension.js:480
 msgid "Sunday"
 msgstr "Domingo"
 
-#: extension.js:485
 msgid "N"
 msgstr ""
 
-#: extension.js:485
 msgid "NE"
 msgstr ""
 
-#: extension.js:485
 msgid "E"
 msgstr ""
 
-#: extension.js:485
 msgid "SE"
 msgstr ""
 
-#: extension.js:485
 msgid "S"
 msgstr ""
 
-#: extension.js:485
 msgid "SW"
 msgstr ""
 
-#: extension.js:485
 msgid "W"
 msgstr ""
 
-#: extension.js:485
 msgid "NW"
 msgstr ""
 
-#: extension.js:612
 msgid "Today"
 msgstr "Hoy"
 
-#: extension.js:612
 msgid "Tomorrow"
 msgstr "Mañana"
 
-#: extension.js:658
 msgid "Loading current weather ..."
 msgstr "Cargando la meteorología actual..."
 
-#: extension.js:659
 msgid "Loading future weather ..."
 msgstr "Cargando la meteorología futura..."
 
-#: extension.js:675
 msgid "Loading ..."
 msgstr "Cargando..."
 
-#: extension.js:681
 msgid "Please wait"
 msgstr "Espere un momento"
 
-#: extension.js:706
 msgid "Sunrise"
 msgstr ""
 
-#: extension.js:708
 msgid "Sunset"
 msgstr ""
 
-#: extension.js:740
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: extension.js:742
 msgid "Humidity:"
 msgstr "Humedad"
 
-#: extension.js:744
 msgid "Pressure:"
 msgstr "Presión:"
 
-#: extension.js:746
 msgid "Wind:"
 msgstr "Viento:"
