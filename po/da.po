@@ -1,306 +1,306 @@
-# Russian translation for gnome-shell-extension-weather
-# Copyright (C) 2011
+# Danish language file for gnome-shell-extension-weather.
+# Copyright (C) 2112
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
-# Gankov Andrey <gav@qsolution.ru>, 2011.
+# Michael Rasmussen <mir@datanom.net>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.4\n"
+"Project-Id-Version: 1.4.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-29 22:49+0200\n"
-"PO-Revision-Date: 2012-04-04 11:53+0500\n"
-"Last-Translator: Timon <timosha@gmail.com>\n"
-"Language-Team: openSUSE <opensuse-translation-ru@opensuse.org>\n"
-"Language: ru\n"
+"PO-Revision-Date: 2012-04-07 03:07+0200\n"
+"Last-Translator: Michael Rasmussen <mir@datanom.net>\n"
+"Language-Team: Danish <>\n"
+"Language: Danish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: extension.js:93
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr "Схема \"%s\" не найдена."
+msgstr "Schema \"%s\" blev ikke fundet."
 
 #: extension.js:154
 msgid "..."
-msgstr "..."
+msgstr ""
 
 #: extension.js:372
 msgid "Tornado"
-msgstr "Торнадо"
+msgstr "Tornado"
 
 #: extension.js:374
 msgid "Tropical storm"
-msgstr "Тропический шторм"
+msgstr "Tropisk storm"
 
 #: extension.js:376
 msgid "Hurricane"
-msgstr "Ураган"
+msgstr "Tyfon"
 
 #: extension.js:378
 msgid "Severe thunderstorms"
-msgstr "Сильные грозы"
+msgstr "Kraftigt tordenvejr"
 
 #: extension.js:380
 msgid "Thunderstorms"
-msgstr "Грозы"
+msgstr "Tordenvejr"
 
 #: extension.js:382
 msgid "Mixed rain and snow"
-msgstr "Дождь и снег"
+msgstr "Regn og slud"
 
 #: extension.js:384
 msgid "Mixed rain and sleet"
-msgstr "Дождь и мокрый снег"
+msgstr "Regn og slud"
 
 #: extension.js:386
 msgid "Mixed snow and sleet"
-msgstr "Снег и мокрый снег"
+msgstr "Sne og slud"
 
 #: extension.js:388
 msgid "Freezing drizzle"
-msgstr "Изморось"
+msgstr "Frysende dugregn"
 
 #: extension.js:390
 msgid "Drizzle"
-msgstr "Морось"
+msgstr "Dugregn"
 
 #: extension.js:392
 msgid "Freezing rain"
-msgstr "Ледяной дождь"
+msgstr "Isslag"
 
-#: extension.js:394
-#: extension.js:396
+#: extension.js:394 extension.js:396
 msgid "Showers"
-msgstr "Ливни"
+msgstr "Byger"
 
 #: extension.js:398
 msgid "Snow flurries"
-msgstr "Шквалистый снег"
+msgstr "Let sne"
 
 #: extension.js:400
 msgid "Light snow showers"
-msgstr "Небольшой снегопад"
+msgstr "Lette snebyger"
 
 #: extension.js:402
 msgid "Blowing snow"
-msgstr "Низовая метель"
+msgstr "Snestorm"
 
 #: extension.js:404
 msgid "Snow"
-msgstr "Снег"
+msgstr "Sne"
 
 #: extension.js:406
 msgid "Hail"
-msgstr "Град"
+msgstr "Hagl"
 
 #: extension.js:408
 msgid "Sleet"
-msgstr "Мокрый снег"
+msgstr "Slud"
 
 #: extension.js:410
 msgid "Dust"
-msgstr "Пыль"
+msgstr "Støvet"
 
 #: extension.js:412
 msgid "Foggy"
-msgstr "Туман"
+msgstr "Tåge"
 
 #: extension.js:414
 msgid "Haze"
-msgstr "Легкий туман"
+msgstr "Diset"
 
 #: extension.js:416
 msgid "Smoky"
-msgstr "Дымка"
+msgstr "Røgfyldt"
 
 #: extension.js:418
 msgid "Blustery"
-msgstr "Порывы ветра"
+msgstr "Vindbyger"
 
 #: extension.js:420
 msgid "Windy"
-msgstr "Ветрено"
+msgstr "Blæsende"
 
 #: extension.js:422
 msgid "Cold"
-msgstr "Холодно"
+msgstr "Kulde"
 
 #: extension.js:424
 msgid "Cloudy"
-msgstr "Облачно"
+msgstr "Overskyet"
 
 #: extension.js:427
 msgid "Mostly cloudy"
-msgstr "Преимущественно облачно"
+msgstr "Næsten overskyet"
 
-#: extension.js:430
-#: extension.js:456
+#: extension.js:430 extension.js:456
 msgid "Partly cloudy"
-msgstr "Переменная облачность"
+msgstr "Let overskyet"
 
 #: extension.js:432
 msgid "Clear"
-msgstr "Безоблачно"
+msgstr "Klart"
 
 #: extension.js:434
 msgid "Sunny"
-msgstr "Солнечно"
+msgstr "Solrigt"
 
 #: extension.js:437
 msgid "Fair"
-msgstr "Ясно"
+msgstr "Opholdsvejr"
 
 #: extension.js:439
 msgid "Mixed rain and hail"
-msgstr "Дождь и град"
+msgstr "Regn og hagl"
 
 #: extension.js:441
 msgid "Hot"
-msgstr "Жара"
+msgstr "Varmt"
 
 #: extension.js:443
 msgid "Isolated thunderstorms"
-msgstr "Единичные грозы"
+msgstr "Lokale tordenbyger"
 
 #: extension.js:446
 msgid "Scattered thunderstorms"
-msgstr "Местами грозы"
+msgstr "Spredte tordenbyger"
 
 #: extension.js:448
 msgid "Scattered showers"
-msgstr "Местами ливни"
+msgstr "Spredte regnbyger"
 
-#: extension.js:450
-#: extension.js:454
+#: extension.js:450 extension.js:454
 msgid "Heavy snow"
-msgstr "Сильный снегопад"
+msgstr "Kraftig sne"
 
 #: extension.js:452
 msgid "Scattered snow showers"
-msgstr "Местами снегопад"
+msgstr "Spredte snebyger"
 
 #: extension.js:458
 msgid "Thundershowers"
-msgstr "Грозовые ливни"
+msgstr "Tordenbyger"
 
 #: extension.js:460
 msgid "Snow showers"
-msgstr "Снегопад"
+msgstr "Snebyger"
 
 #: extension.js:462
 msgid "Isolated thundershowers"
-msgstr "Единичные грозовые ливни"
+msgstr "Lokale tordenskyld"
 
 #: extension.js:465
 msgid "Not available"
-msgstr "Недоступно"
+msgstr "Ikke tilgængelig"
 
 #: extension.js:480
 msgid "Monday"
-msgstr "Понедельник"
+msgstr "Mandag"
 
 #: extension.js:480
 msgid "Tuesday"
-msgstr "Вторник"
+msgstr "Tirsdag"
 
 #: extension.js:480
 msgid "Wednesday"
-msgstr "Среда"
+msgstr "Onsdag"
 
 #: extension.js:480
 msgid "Thursday"
-msgstr "Четверг"
+msgstr "Torsdag"
 
 #: extension.js:480
 msgid "Friday"
-msgstr "Пятница"
+msgstr "Fredag"
 
 #: extension.js:480
 msgid "Saturday"
-msgstr "Суббота"
+msgstr "Lørdag"
 
 #: extension.js:480
 msgid "Sunday"
-msgstr "Воскресенье"
+msgstr "Søndag"
 
 #: extension.js:485
 msgid "N"
-msgstr "С"
+msgstr "N"
 
 #: extension.js:485
 msgid "NE"
-msgstr "СВ"
+msgstr "NØ"
 
 #: extension.js:485
 msgid "E"
-msgstr "В"
+msgstr "Ø"
 
 #: extension.js:485
 msgid "SE"
-msgstr "ЮВ"
+msgstr "SØ"
 
 #: extension.js:485
 msgid "S"
-msgstr "Ю"
+msgstr "S"
 
 #: extension.js:485
 msgid "SW"
-msgstr "ЮЗ"
+msgstr "SV"
 
 #: extension.js:485
 msgid "W"
-msgstr "З"
+msgstr "V"
 
 #: extension.js:485
 msgid "NW"
-msgstr "СЗ"
+msgstr "NV"
 
 #: extension.js:612
 msgid "Today"
-msgstr "Сегодня"
+msgstr "I dag"
 
 #: extension.js:612
 msgid "Tomorrow"
-msgstr "Завтра"
+msgstr "I morgen"
 
 #: extension.js:658
 msgid "Loading current weather ..."
-msgstr "Загрузка текущей погоды ..."
+msgstr "Henter nuværende vejrdata"
 
 #: extension.js:659
 msgid "Loading future weather ..."
-msgstr "Загрузка прогноза погоды ..."
+msgstr "Henter fremtidige vejrdata"
 
 #: extension.js:675
 msgid "Loading ..."
-msgstr "Загрузка ..."
+msgstr "Henter ..."
 
 #: extension.js:681
 msgid "Please wait"
-msgstr "Подождите"
+msgstr "Vent venligst"
 
 #: extension.js:706
 msgid "Sunrise"
-msgstr "Восход"
+msgstr "Sol stÃ¥r op"
 
 #: extension.js:708
 msgid "Sunset"
-msgstr "Закат"
+msgstr "Sol gÃ¥r ned"
 
 #: extension.js:740
 msgid "Temperature:"
-msgstr "Температура:"
+msgstr "Temperatur"
 
 #: extension.js:742
 msgid "Humidity:"
-msgstr "Влажность:"
+msgstr "Fugtighed:"
 
 #: extension.js:744
 msgid "Pressure:"
-msgstr "Давление:"
+msgstr "Tryk:"
 
 #: extension.js:746
 msgid "Wind:"
-msgstr "Ветер:"
+msgstr "Vind:"
 
+#~ msgid "Click to open"
+#~ msgstr "Klik for at åbne"

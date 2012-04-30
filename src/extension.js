@@ -130,7 +130,6 @@ WeatherMenuButton.prototype = {
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
-        this._settings.connect('changed::' + WEATHER_SHOW_SUNRISE_SUNSET_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
             this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
@@ -245,7 +244,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+        return 'http://query.yahooapis.com/v1/public/yql?format=json&q=select link,location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
     },
 
     get_weather_icon: function(code) {
@@ -546,10 +545,8 @@ WeatherMenuButton.prototype = {
             let wind = weather.get_object_member('wind').get_string_member('speed');
             let wind_unit = weather.get_object_member('units').get_string_member('speed');
             let iconname = this.get_weather_icon_safely(weather_c.get_string_member('code'));
-            if (this._show_sunrise) {
-                let sunrise = weather.get_object_member('astronomy').get_string_member('sunrise');
-                let sunset = weather.get_object_member('astronomy').get_string_member('sunset');
-	    }
+            let sunrise = this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunrise') : '';
+            let sunset = this._show_sunrise ? weather.get_object_member('astronomy').get_string_member('sunset') : '';
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
 
             if (this._comment_in_panel)
@@ -562,44 +559,46 @@ WeatherMenuButton.prototype = {
             this._currentWeatherHumidity.text = humidity;
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit;
 
-            // Override wind units with our preference
-            // Need to consider what units the Yahoo API has returned it in
-            switch (this._wind_speed_units) {
-                case WeatherWindSpeedUnits.KPH:
-                    // Round to whole units
-                    if (this._units == WeatherUnits.FAHRENHEIT) {
-                        wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KPH_IN_MPS);
-                        wind_unit = 'km/h';
-                    }
-                    // Otherwise no conversion needed - already in correct units
-                    break;
-                case WeatherWindSpeedUnits.MPH:
-                    // Round to whole units
-                    if (this._units == WeatherUnits.CELSIUS) {
-                        wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_MPH_IN_MPS);
-                        wind_unit = 'mph';
-                    }
-                    // Otherwise no conversion needed - already in correct units
-                    break;
-                case WeatherWindSpeedUnits.MPS:
-                    // Precision to one decimal place as 1 m/s is quite a large unit
-                    if (this._units == WeatherUnits.CELSIUS)
-                        wind = Math.round ((wind / WEATHER_CONV_KPH_IN_MPS) * 10)/ 10;
-                    else
-                        wind = Math.round ((wind / WEATHER_CONV_MPH_IN_MPS) * 10)/ 10;
-                    wind_unit = 'm/s';
-                    break;
-                case WeatherWindSpeedUnits.KNOTS:
-                    // Round to whole units
-                    if (this._units == WeatherUnits.CELSIUS)
-                        wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
-                    else
-                        wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
-                    wind_unit = 'knots';
-                    break;
-            }
-            this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
-            this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+            if (wind) {
+                // Override wind units with our preference
+                // Need to consider what units the Yahoo API has returned it in
+                switch (this._wind_speed_units) {
+                    case WeatherWindSpeedUnits.KPH:
+                        // Round to whole units
+                        if (this._units == WeatherUnits.FAHRENHEIT) {
+                            wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KPH_IN_MPS);
+                            wind_unit = 'km/h';
+                        }
+                        // Otherwise no conversion needed - already in correct units
+                        break;
+                    case WeatherWindSpeedUnits.MPH:
+                        // Round to whole units
+                        if (this._units == WeatherUnits.CELSIUS) {
+                            wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_MPH_IN_MPS);
+                            wind_unit = 'mph';
+                        }
+                        // Otherwise no conversion needed - already in correct units
+                        break;
+                    case WeatherWindSpeedUnits.MPS:
+                        // Precision to one decimal place as 1 m/s is quite a large unit
+                        if (this._units == WeatherUnits.CELSIUS)
+                            wind = Math.round ((wind / WEATHER_CONV_KPH_IN_MPS) * 10)/ 10;
+                        else
+                            wind = Math.round ((wind / WEATHER_CONV_MPH_IN_MPS) * 10)/ 10;
+                        wind_unit = 'm/s';
+                        break;
+                    case WeatherWindSpeedUnits.KNOTS:
+                        // Round to whole units
+                        if (this._units == WeatherUnits.CELSIUS)
+                            wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
+                        else
+                            wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
+                        wind_unit = 'knots';
+                        break;
+                }
+                this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+            } else
+                this._currentWeatherWind.text = '\u2013';
 
             this._currentWeatherLocation.label = location + '...';
             // make the location act like a button

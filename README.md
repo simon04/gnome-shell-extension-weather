@@ -76,7 +76,7 @@ You may want to configure whether to translate the weather condition. If enabled
     gsettings set org.gnome.shell.extensions.weather translate-condition true
     gsettings set org.gnome.shell.extensions.weather translate-condition false
 
-#### Show Sunrise / Sunset times (optional, true by default)
+#### Show Sunrise / Sunset times (optional, false by default)
 
 You may display today's Sunrise / Sunset times as retrieved from Yahoo! Weather in the current weather panel
 
