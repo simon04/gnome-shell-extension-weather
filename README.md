@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.png)
+![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.jpg)
 
 **gnome-shell-extension-weather** is a simple extension for displaying weather informations from several cities in GNOME Shell.
 
@@ -83,12 +83,21 @@ You can specify the actual location using the following command.
     gsettings set org.gnome.shell.extensions.weather actual-city 1 (your_city && [another_city] && ...)
     gsettings set org.gnome.shell.extensions.weather actual-city n (your_city && another_city && [...])
 
-#### Temperature Units (optional, `celsius` by default)
+#### Temperature Units (optional, `fahrenheit` by default)
 
 You can modify the temperature unit using one of the following commands.
 
     gsettings set org.gnome.shell.extensions.weather unit celsius
     gsettings set org.gnome.shell.extensions.weather unit fahrenheit
+
+#### Wind Speed Units (optional, `mph` by default)
+
+You can modify the wind speed unit using one of the following commands.
+
+    gsettings set org.gnome.shell.extensions.weather wind-speed-unit kph
+    gsettings set org.gnome.shell.extensions.weather wind-speed-unit mph
+    gsettings set org.gnome.shell.extensions.weather wind-speed-unit m/s
+    gsettings set org.gnome.shell.extensions.weather wind-speed-unit knots
 
 #### Position in Panel (optional, `center` by default)
 
@@ -142,12 +151,12 @@ Don't forget to restart GNOME Shell (`[Alt]+[F2]`, `r`)
 
 Copyright (C) 2011 - 2012
 
-* Christian METZLER <neroth@xeked.com>,
 * Ecyrbe <ecyrbe+spam@gmail.com>,
 * Timur Kristóf <venemo@msn.com>,
 * Elad Alfassa <elad@fedoraproject.org>,
 * Simon Legner <Simon.Legner@gmail.com>,
 * Simon Claessens <gagalago@gmail.com>,
+* Christian METZLER <neroth@xeked.com>,
 * Mark Benjamin <weather.gnome.Markie1@dfgh.net>
 
 This file is part of gnome-shell-extension-weather.
