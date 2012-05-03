@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-03 21:02+0200\n"
-"PO-Revision-Date: 2012-05-03 21:08+0100\n"
+"PO-Revision-Date: 2012-05-03 22:55+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: Français <ecyrbe@gmail.com>\n"
 "Language: fr\n"
@@ -65,19 +65,19 @@ msgstr "Neige et pluie"
 
 #: ../src/extension.js:562
 msgid "Mixed rain and sleet"
-msgstr "Grêle et pluie"
+msgstr "Grésil et pluie"
 
 #: ../src/extension.js:564
 msgid "Mixed snow and sleet"
-msgstr "Neige et Grêle"
+msgstr "Neige et grésil"
 
 #: ../src/extension.js:566
 msgid "Freezing drizzle"
-msgstr "Pluie verglaçante"
+msgstr "Bruine verglaçante"
 
 #: ../src/extension.js:568
 msgid "Drizzle"
-msgstr "Pluie fine"
+msgstr "Bruine"
 
 #: ../src/extension.js:570
 msgid "Freezing rain"
@@ -90,15 +90,15 @@ msgstr "Averses"
 
 #: ../src/extension.js:576
 msgid "Snow flurries"
-msgstr "Neige"
+msgstr "Averses de neige"
 
 #: ../src/extension.js:578
 msgid "Light snow showers"
-msgstr "Neige"
+msgstr "Faible averses de neige"
 
 #: ../src/extension.js:580
 msgid "Blowing snow"
-msgstr "Neige"
+msgstr "Blizzard"
 
 #: ../src/extension.js:582
 msgid "Snow"
@@ -110,11 +110,11 @@ msgstr "Grêle"
 
 #: ../src/extension.js:586
 msgid "Sleet"
-msgstr "Grêlons"
+msgstr "Grésil"
 
 #: ../src/extension.js:588
 msgid "Dust"
-msgstr "Brouillard"
+msgstr "Tempête de sable"
 
 #: ../src/extension.js:590
 msgid "Foggy"
@@ -146,16 +146,16 @@ msgstr "Nuageux"
 
 #: ../src/extension.js:605
 msgid "Mostly cloudy"
-msgstr "Nuageux"
+msgstr "Rares éclaircies"
 
 #: ../src/extension.js:608
 #: ../src/extension.js:634
 msgid "Partly cloudy"
-msgstr "Éclaircies"
+msgstr "Passages nuageux"
 
 #: ../src/extension.js:610
 msgid "Clear"
-msgstr "Beau"
+msgstr "Dégagé"
 
 #: ../src/extension.js:612
 msgid "Sunny"
@@ -175,24 +175,24 @@ msgstr "Chaud"
 
 #: ../src/extension.js:621
 msgid "Isolated thunderstorms"
-msgstr "Orageux"
+msgstr "Orages isolés"
 
 #: ../src/extension.js:624
 msgid "Scattered thunderstorms"
-msgstr "Orageux"
+msgstr "Orages éparses"
 
 #: ../src/extension.js:626
 msgid "Scattered showers"
-msgstr "Grosses averses"
+msgstr "Averses éparses"
 
 #: ../src/extension.js:628
 #: ../src/extension.js:632
 msgid "Heavy snow"
-msgstr "Tempête de neige"
+msgstr "Fortes chutes de neige"
 
 #: ../src/extension.js:630
 msgid "Scattered snow showers"
-msgstr "Tempête de neige"
+msgstr "Averses de neige éparses"
 
 #: ../src/extension.js:636
 msgid "Thundershowers"
@@ -200,11 +200,11 @@ msgstr "Orages"
 
 #: ../src/extension.js:638
 msgid "Snow showers"
-msgstr "Tempête de neige"
+msgstr "Averses de neige"
 
 #: ../src/extension.js:640
 msgid "Isolated thundershowers"
-msgstr "Orageux"
+msgstr "Orages isolés"
 
 #: ../src/extension.js:643
 msgid "Not available"
@@ -297,7 +297,7 @@ msgstr "Unité de vitesse du vent"
 
 #: ../src/weather-settings.js.in:491
 msgid "Position in Panel"
-msgstr "Position sur le panel"
+msgstr "Position sur le tableau de bord"
 
 #: ../src/weather-settings.js.in:492
 msgid "Center"
@@ -321,11 +321,11 @@ msgstr "Icones symboliques"
 
 #: ../src/weather-settings.js.in:497
 msgid "Temperature in Panel"
-msgstr "Température sur le panel"
+msgstr "Température sur le tableau de bord"
 
 #: ../src/weather-settings.js.in:499
 msgid "Conditions in Panel"
-msgstr "Conditions sur le panel"
+msgstr "Conditions sur le tableau de bord"
 
 #~ msgid "City"
 #~ msgstr "Ville"
