@@ -9,12 +9,12 @@ msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-03 21:02+0200\n"
-"PO-Revision-Date: 2012-04-30 09:33+0200\n"
+"PO-Revision-Date: 2012-05-04 17:07+0200\n"
 "Last-Translator: Lukáš Maňas <lukas.manas@gmail.com>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/extension.js:102
@@ -25,7 +25,7 @@ msgstr "…"
 #: ../src/weather-settings.js.in:165
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr "Schéma \"%s\" nebylo nalezeno."
+msgstr "Schéma \"%s\" nenalezeno."
 
 #: ../src/extension.js:180
 msgid "Reload Weather Informations"
@@ -57,15 +57,15 @@ msgstr "Bouřky"
 
 #: ../src/extension.js:560
 msgid "Mixed rain and snow"
-msgstr "Sníh s deštěm"
+msgstr "Déšť se sněhem"
 
 #: ../src/extension.js:562
 msgid "Mixed rain and sleet"
-msgstr "Déšť a plískanice"
+msgstr "Déšť se sněhem"
 
 #: ../src/extension.js:564
 msgid "Mixed snow and sleet"
-msgstr "Sníh a plískanice"
+msgstr "Déšť se sněhem"
 
 #: ../src/extension.js:566
 msgid "Freezing drizzle"
@@ -85,7 +85,7 @@ msgstr "Přeháňky"
 
 #: ../src/extension.js:576
 msgid "Snow flurries"
-msgstr "Sněhové přívaly"
+msgstr "Sněhové přeháňky"
 
 #: ../src/extension.js:578
 msgid "Light snow showers"
@@ -105,7 +105,7 @@ msgstr "Kroupy"
 
 #: ../src/extension.js:586
 msgid "Sleet"
-msgstr "Plískanice"
+msgstr "Déšť se sněhem"
 
 #: ../src/extension.js:588
 msgid "Dust"
@@ -125,7 +125,7 @@ msgstr "Kouřmo"
 
 #: ../src/extension.js:596
 msgid "Blustery"
-msgstr "Bouřlivě"
+msgstr "Bouřlivo"
 
 #: ../src/extension.js:598
 msgid "Windy"
@@ -169,7 +169,7 @@ msgstr "Horko"
 
 #: ../src/extension.js:621
 msgid "Isolated thunderstorms"
-msgstr "Osamocené bouřky"
+msgstr "Ojedinělé bouřky"
 
 #: ../src/extension.js:624
 msgid "Scattered thunderstorms"
@@ -189,7 +189,7 @@ msgstr "Občasné sněžení"
 
 #: ../src/extension.js:636
 msgid "Thundershowers"
-msgstr "Bouřky s přeháňkami"
+msgstr "Bouřky"
 
 #: ../src/extension.js:638
 msgid "Snow showers"
@@ -197,7 +197,7 @@ msgstr "Sněhové přeháňky"
 
 #: ../src/extension.js:640
 msgid "Isolated thundershowers"
-msgstr "Osamocené bouřky s deštěm"
+msgstr "Ojedinělé bouřky"
 
 #: ../src/extension.js:643
 msgid "Not available"
@@ -241,15 +241,15 @@ msgstr "Zítra"
 
 #: ../src/extension.js:864
 msgid "Loading current weather ..."
-msgstr "Načítá se aktuální počasí…"
+msgstr "Načítání aktuálního počasí…"
 
 #: ../src/extension.js:865
 msgid "Loading future weather ..."
-msgstr "Načítá se předpověď…"
+msgstr "Načítání předpovědi…"
 
 #: ../src/extension.js:895
 msgid "Loading ..."
-msgstr "Načítá se…"
+msgstr "Načítání…"
 
 #: ../src/extension.js:898
 msgid "Please wait"
@@ -273,49 +273,49 @@ msgstr "Vítr:"
 
 #: ../src/weather-settings.js.in:66
 msgid "Name of the city"
-msgstr ""
+msgstr "Název města"
 
 #: ../src/weather-settings.js.in:107
 #, python-format
 msgid "Remove %s ?"
-msgstr ""
+msgstr "Odstranit %s?"
 
 #: ../src/weather-settings.js.in:487
 msgid "Temperature Unit"
-msgstr ""
+msgstr "Jednotka teploty"
 
 #: ../src/weather-settings.js.in:489
 msgid "Wind Speed Unit"
-msgstr ""
+msgstr "Jednotka rychlosti větru"
 
 #: ../src/weather-settings.js.in:491
 msgid "Position in Panel"
-msgstr ""
+msgstr "Pozice na panelu"
 
 #: ../src/weather-settings.js.in:492
 msgid "Center"
-msgstr ""
+msgstr "uprostřed"
 
 #: ../src/weather-settings.js.in:492
 msgid "Right"
-msgstr ""
+msgstr "vpravo"
 
 #: ../src/weather-settings.js.in:492
 msgid "Left"
-msgstr ""
+msgstr "vlevo"
 
 #: ../src/weather-settings.js.in:493
 msgid "Translate Conditions"
-msgstr ""
+msgstr "Překládat podmínky"
 
 #: ../src/weather-settings.js.in:495
 msgid "Symbolic Icons"
-msgstr ""
+msgstr "Použít symbolické ikony"
 
 #: ../src/weather-settings.js.in:497
 msgid "Temperature in Panel"
-msgstr ""
+msgstr "Zobrazit na panelu teplotu"
 
 #: ../src/weather-settings.js.in:499
 msgid "Conditions in Panel"
-msgstr ""
+msgstr "Zobrazit na panelu podmínky"
