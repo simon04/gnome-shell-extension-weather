@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-13 14:29+0200\n"
-"PO-Revision-Date: 2012-05-13 08:34+0100\n"
-"Last-Translator: Mattia Meneguzzo <hal8600@hotmail.it>\n"
+"POT-Creation-Date: 2012-05-13 22:34+0200\n"
+"PO-Revision-Date: 2012-05-13 22:37+0100\n"
+"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -21,18 +21,19 @@ msgstr ""
 msgid "..."
 msgstr "..."
 
-#: ../src/extension.js:137 ../src/extension.js:204
+#: ../src/extension.js:137
+#: ../src/extension.js:204
 #: ../src/weather-settings.js.in:165
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Schema \"%s\" non trovato."
 
 #: ../src/extension.js:180
-#, fuzzy
 msgid "Reload Weather Information"
 msgstr "Ricarica le informazioni meteo"
 
-#: ../src/extension.js:184 ../src/weather-settings.js.in:449
+#: ../src/extension.js:184
+#: ../src/weather-settings.js.in:449
 msgid "Weather Settings"
 msgstr "Impostazioni meteo"
 
@@ -80,7 +81,8 @@ msgstr "Pioggia leggera"
 msgid "Freezing rain"
 msgstr "Pioggia gelata"
 
-#: ../src/extension.js:572 ../src/extension.js:574
+#: ../src/extension.js:572
+#: ../src/extension.js:574
 msgid "Showers"
 msgstr "Rovesci piovosi"
 
@@ -144,7 +146,8 @@ msgstr "Nuvoloso"
 msgid "Mostly cloudy"
 msgstr "Molto nuvoloso"
 
-#: ../src/extension.js:608 ../src/extension.js:634
+#: ../src/extension.js:608
+#: ../src/extension.js:634
 msgid "Partly cloudy"
 msgstr "Parzialmente nuvoloso"
 
@@ -180,7 +183,8 @@ msgstr "Temporali sparsi"
 msgid "Scattered showers"
 msgstr "Rovesci piovosi sparsi"
 
-#: ../src/extension.js:628 ../src/extension.js:632
+#: ../src/extension.js:628
+#: ../src/extension.js:632
 msgid "Heavy snow"
 msgstr "Neve abbondante"
 
@@ -232,43 +236,43 @@ msgstr "Sabato"
 msgid "Sunday"
 msgstr "Domenica"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:827
 msgid "Today"
 msgstr "Oggi"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:827
 msgid "Tomorrow"
 msgstr "Domani"
 
-#: ../src/extension.js:864
+#: ../src/extension.js:869
 msgid "Loading current weather ..."
 msgstr "Caricamento condizioni meteo attuali..."
 
-#: ../src/extension.js:865
+#: ../src/extension.js:870
 msgid "Loading future weather ..."
 msgstr "Caricamento previsioni meteo..."
 
-#: ../src/extension.js:895
+#: ../src/extension.js:900
 msgid "Loading ..."
 msgstr "Caricamento..."
 
-#: ../src/extension.js:898
+#: ../src/extension.js:903
 msgid "Please wait"
 msgstr "Attendere, prego"
 
-#: ../src/extension.js:940
+#: ../src/extension.js:945
 msgid "Feel like:"
 msgstr "Percepiti:"
 
-#: ../src/extension.js:942
+#: ../src/extension.js:947
 msgid "Humidity:"
 msgstr "Umidità:"
 
-#: ../src/extension.js:944
+#: ../src/extension.js:949
 msgid "Pressure:"
 msgstr "Pressione:"
 
-#: ../src/extension.js:946
+#: ../src/extension.js:951
 msgid "Wind:"
 msgstr "Vento:"
 
@@ -282,7 +286,6 @@ msgid "Remove %s ?"
 msgstr "Rimuovere %s?"
 
 #: ../src/weather-settings.js.in:487
-#, fuzzy
 msgid "Temperature Unit"
 msgstr "Unità di misura della temperatura"
 
@@ -315,7 +318,6 @@ msgid "Symbolic Icons"
 msgstr "Icone simboliche"
 
 #: ../src/weather-settings.js.in:497
-#, fuzzy
 msgid "Temperature in Panel"
 msgstr "Mostra la temperatura sul pannello"
 

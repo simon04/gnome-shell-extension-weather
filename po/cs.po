@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-13 14:29+0200\n"
-"PO-Revision-Date: 2012-05-04 17:07+0200\n"
-"Last-Translator: Lukáš Maňas <lukas.manas@gmail.com>\n"
+"POT-Creation-Date: 2012-05-13 22:34+0200\n"
+"PO-Revision-Date: 2012-05-13 22:37+0100\n"
+"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -21,18 +21,19 @@ msgstr ""
 msgid "..."
 msgstr "…"
 
-#: ../src/extension.js:137 ../src/extension.js:204
+#: ../src/extension.js:137
+#: ../src/extension.js:204
 #: ../src/weather-settings.js.in:165
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Schéma \"%s\" nenalezeno."
 
 #: ../src/extension.js:180
-#, fuzzy
 msgid "Reload Weather Information"
 msgstr "Obnovit informace o počasí"
 
-#: ../src/extension.js:184 ../src/weather-settings.js.in:449
+#: ../src/extension.js:184
+#: ../src/weather-settings.js.in:449
 msgid "Weather Settings"
 msgstr "Nastavení"
 
@@ -80,7 +81,8 @@ msgstr "Mrholení"
 msgid "Freezing rain"
 msgstr "Namrzající déšť"
 
-#: ../src/extension.js:572 ../src/extension.js:574
+#: ../src/extension.js:572
+#: ../src/extension.js:574
 msgid "Showers"
 msgstr "Přeháňky"
 
@@ -144,7 +146,8 @@ msgstr "Zataženo"
 msgid "Mostly cloudy"
 msgstr "Oblačno"
 
-#: ../src/extension.js:608 ../src/extension.js:634
+#: ../src/extension.js:608
+#: ../src/extension.js:634
 msgid "Partly cloudy"
 msgstr "Polojasno"
 
@@ -180,7 +183,8 @@ msgstr "Občasné bouřky"
 msgid "Scattered showers"
 msgstr "Občasné přeháňky"
 
-#: ../src/extension.js:628 ../src/extension.js:632
+#: ../src/extension.js:628
+#: ../src/extension.js:632
 msgid "Heavy snow"
 msgstr "Husté sněžení"
 
@@ -232,43 +236,43 @@ msgstr "Sobota"
 msgid "Sunday"
 msgstr "Neděle"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:827
 msgid "Today"
 msgstr "Dnes"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:827
 msgid "Tomorrow"
 msgstr "Zítra"
 
-#: ../src/extension.js:864
+#: ../src/extension.js:869
 msgid "Loading current weather ..."
 msgstr "Načítání aktuálního počasí…"
 
-#: ../src/extension.js:865
+#: ../src/extension.js:870
 msgid "Loading future weather ..."
 msgstr "Načítání předpovědi…"
 
-#: ../src/extension.js:895
+#: ../src/extension.js:900
 msgid "Loading ..."
 msgstr "Načítání…"
 
-#: ../src/extension.js:898
+#: ../src/extension.js:903
 msgid "Please wait"
 msgstr "Čekejte"
 
-#: ../src/extension.js:940
+#: ../src/extension.js:945
 msgid "Feel like:"
 msgstr "Pocitově:"
 
-#: ../src/extension.js:942
+#: ../src/extension.js:947
 msgid "Humidity:"
 msgstr "Vlhkost:"
 
-#: ../src/extension.js:944
+#: ../src/extension.js:949
 msgid "Pressure:"
 msgstr "Tlak:"
 
-#: ../src/extension.js:946
+#: ../src/extension.js:951
 msgid "Wind:"
 msgstr "Vítr:"
 

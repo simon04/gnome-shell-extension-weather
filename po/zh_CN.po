@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-13 14:29+0200\n"
-"PO-Revision-Date: 2011-12-02 14:44+0800\n"
-"Last-Translator: Tao Zhu <bill_zt@sina.com>\n"
+"POT-Creation-Date: 2012-05-13 22:34+0200\n"
+"PO-Revision-Date: 2012-05-13 22:41+0100\n"
+"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: Chinese (simplified)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,8 @@ msgstr ""
 msgid "..."
 msgstr "..."
 
-#: ../src/extension.js:137 ../src/extension.js:204
+#: ../src/extension.js:137
+#: ../src/extension.js:204
 #: ../src/weather-settings.js.in:165
 #, python-format
 msgid "Schema \"%s\" not found."
@@ -31,7 +32,8 @@ msgstr ""
 msgid "Reload Weather Information"
 msgstr ""
 
-#: ../src/extension.js:184 ../src/weather-settings.js.in:449
+#: ../src/extension.js:184
+#: ../src/weather-settings.js.in:449
 msgid "Weather Settings"
 msgstr ""
 
@@ -79,7 +81,8 @@ msgstr "小雨"
 msgid "Freezing rain"
 msgstr "冻雨"
 
-#: ../src/extension.js:572 ../src/extension.js:574
+#: ../src/extension.js:572
+#: ../src/extension.js:574
 msgid "Showers"
 msgstr "阵雨"
 
@@ -143,7 +146,8 @@ msgstr "多云"
 msgid "Mostly cloudy"
 msgstr "多云"
 
-#: ../src/extension.js:608 ../src/extension.js:634
+#: ../src/extension.js:608
+#: ../src/extension.js:634
 msgid "Partly cloudy"
 msgstr "晴转多云 "
 
@@ -179,7 +183,8 @@ msgstr "零星雷阵雨"
 msgid "Scattered showers"
 msgstr "零星小雪"
 
-#: ../src/extension.js:628 ../src/extension.js:632
+#: ../src/extension.js:628
+#: ../src/extension.js:632
 msgid "Heavy snow"
 msgstr "大雪"
 
@@ -231,43 +236,43 @@ msgstr "星期六"
 msgid "Sunday"
 msgstr "星期日"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:827
 msgid "Today"
 msgstr "今天"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:827
 msgid "Tomorrow"
 msgstr "明天"
 
-#: ../src/extension.js:864
+#: ../src/extension.js:869
 msgid "Loading current weather ..."
 msgstr "正在加载当前天气 ..."
 
-#: ../src/extension.js:865
+#: ../src/extension.js:870
 msgid "Loading future weather ..."
 msgstr "正在加载预报天气 ..."
 
-#: ../src/extension.js:895
+#: ../src/extension.js:900
 msgid "Loading ..."
 msgstr "正在加载 ..."
 
-#: ../src/extension.js:898
+#: ../src/extension.js:903
 msgid "Please wait"
 msgstr "请等待"
 
-#: ../src/extension.js:940
+#: ../src/extension.js:945
 msgid "Feel like:"
 msgstr ""
 
-#: ../src/extension.js:942
+#: ../src/extension.js:947
 msgid "Humidity:"
 msgstr "湿度："
 
-#: ../src/extension.js:944
+#: ../src/extension.js:949
 msgid "Pressure:"
 msgstr "气压："
 
-#: ../src/extension.js:946
+#: ../src/extension.js:951
 msgid "Wind:"
 msgstr "风力："
 
@@ -281,7 +286,6 @@ msgid "Remove %s ?"
 msgstr ""
 
 #: ../src/weather-settings.js.in:487
-#, fuzzy
 msgid "Temperature Unit"
 msgstr "温度："
 
@@ -314,10 +318,10 @@ msgid "Symbolic Icons"
 msgstr ""
 
 #: ../src/weather-settings.js.in:497
-#, fuzzy
 msgid "Temperature in Panel"
 msgstr "温度："
 
 #: ../src/weather-settings.js.in:499
 msgid "Conditions in Panel"
 msgstr ""
+

@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-13 14:29+0200\n"
-"PO-Revision-Date: 2011-06-15 00:41+0200\n"
-"Last-Translator: Pau Iranzo <paugnu@gmail.com>\n"
+"POT-Creation-Date: 2012-05-13 22:34+0200\n"
+"PO-Revision-Date: 2012-05-13 22:37+0100\n"
+"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: Softcatalà\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,8 @@ msgstr ""
 msgid "..."
 msgstr "..."
 
-#: ../src/extension.js:137 ../src/extension.js:204
+#: ../src/extension.js:137
+#: ../src/extension.js:204
 #: ../src/weather-settings.js.in:165
 #, python-format
 msgid "Schema \"%s\" not found."
@@ -32,7 +33,8 @@ msgstr ""
 msgid "Reload Weather Information"
 msgstr ""
 
-#: ../src/extension.js:184 ../src/weather-settings.js.in:449
+#: ../src/extension.js:184
+#: ../src/weather-settings.js.in:449
 msgid "Weather Settings"
 msgstr ""
 
@@ -80,7 +82,8 @@ msgstr "Plugim"
 msgid "Freezing rain"
 msgstr "Pluja glaçada"
 
-#: ../src/extension.js:572 ../src/extension.js:574
+#: ../src/extension.js:572
+#: ../src/extension.js:574
 msgid "Showers"
 msgstr "Ruixats"
 
@@ -144,7 +147,8 @@ msgstr "Ennuvolat"
 msgid "Mostly cloudy"
 msgstr "Majoritàriament ennuvolat"
 
-#: ../src/extension.js:608 ../src/extension.js:634
+#: ../src/extension.js:608
+#: ../src/extension.js:634
 msgid "Partly cloudy"
 msgstr "Parcialment ennuvolat"
 
@@ -180,7 +184,8 @@ msgstr "Tempestes elèctriques aïllades"
 msgid "Scattered showers"
 msgstr "Pluges aïllades"
 
-#: ../src/extension.js:628 ../src/extension.js:632
+#: ../src/extension.js:628
+#: ../src/extension.js:632
 msgid "Heavy snow"
 msgstr "Nevada forta"
 
@@ -232,43 +237,43 @@ msgstr "Dissabte"
 msgid "Sunday"
 msgstr "Diumenge"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:827
 msgid "Today"
 msgstr "Avui"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:827
 msgid "Tomorrow"
 msgstr "Demà"
 
-#: ../src/extension.js:864
+#: ../src/extension.js:869
 msgid "Loading current weather ..."
 msgstr "S'està carregant el temps actual..."
 
-#: ../src/extension.js:865
+#: ../src/extension.js:870
 msgid "Loading future weather ..."
 msgstr "S'està carregant el temps futur..."
 
-#: ../src/extension.js:895
+#: ../src/extension.js:900
 msgid "Loading ..."
 msgstr "S'està carregant..."
 
-#: ../src/extension.js:898
+#: ../src/extension.js:903
 msgid "Please wait"
 msgstr "Espereu"
 
-#: ../src/extension.js:940
+#: ../src/extension.js:945
 msgid "Feel like:"
 msgstr ""
 
-#: ../src/extension.js:942
+#: ../src/extension.js:947
 msgid "Humidity:"
 msgstr "Humitat:"
 
-#: ../src/extension.js:944
+#: ../src/extension.js:949
 msgid "Pressure:"
 msgstr "Pressió:"
 
-#: ../src/extension.js:946
+#: ../src/extension.js:951
 msgid "Wind:"
 msgstr "Vent:"
 
@@ -282,7 +287,6 @@ msgid "Remove %s ?"
 msgstr ""
 
 #: ../src/weather-settings.js.in:487
-#, fuzzy
 msgid "Temperature Unit"
 msgstr "Temperatura:"
 
@@ -315,10 +319,10 @@ msgid "Symbolic Icons"
 msgstr ""
 
 #: ../src/weather-settings.js.in:497
-#, fuzzy
 msgid "Temperature in Panel"
 msgstr "Temperatura:"
 
 #: ../src/weather-settings.js.in:499
 msgid "Conditions in Panel"
 msgstr ""
+
