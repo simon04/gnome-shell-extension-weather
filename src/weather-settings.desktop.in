@@ -11,3 +11,5 @@ OnlyShowIn=GNOME;
 StartupNotify=true
 Name[fr]=Paramètres de la météo
 Comment[fr]=Panel de préférences météo
+Name[it]=Impostazioni meteo
+Comment[it]=Pannello delle impostazioni meteo
