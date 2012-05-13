@@ -40,7 +40,7 @@ Install **gnome-shell-extension-weather** with apt-rpm from Sisyphus.
 
 ### [Fedora](https://bugzilla.rpmfusion.org/show_bug.cgi?id=2017#c25)
 
-Download the [rpm file](http://db.tt/agAOcAdE) and execute it.
+Download the [rpm file](http://db.tt/Dnqth2Rt) and execute it.
 
 ## Generic
 
