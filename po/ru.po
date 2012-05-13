@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-03 21:02+0200\n"
+"POT-Creation-Date: 2012-05-13 14:29+0200\n"
 "PO-Revision-Date: 2011-06-05 23:00+0400\n"
 "Last-Translator: Gankov Andrey <gav@qsolution.ru>\n"
 "Language-Team: openSUSE <opensuse-translation-ru@opensuse.org>\n"
@@ -27,7 +27,7 @@ msgid "Schema \"%s\" not found."
 msgstr ""
 
 #: ../src/extension.js:180
-msgid "Reload Weather Informations"
+msgid "Reload Weather Information"
 msgstr ""
 
 #: ../src/extension.js:184 ../src/weather-settings.js.in:449

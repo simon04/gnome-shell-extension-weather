@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-03 21:02+0200\n"
+"POT-Creation-Date: 2012-05-13 14:29+0200\n"
 "PO-Revision-Date: 2011-12-02 14:44+0800\n"
 "Last-Translator: Tao Zhu <bill_zt@sina.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -28,7 +28,7 @@ msgid "Schema \"%s\" not found."
 msgstr ""
 
 #: ../src/extension.js:180
-msgid "Reload Weather Informations"
+msgid "Reload Weather Information"
 msgstr ""
 
 #: ../src/extension.js:184 ../src/weather-settings.js.in:449

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-03 21:02+0200\n"
+"POT-Creation-Date: 2012-05-13 14:29+0200\n"
 "PO-Revision-Date: 2011-07-25 18:39+0300\n"
 "Last-Translator: Jesse Jaara <jesse.jaara@gmail.com>\n"
 "Language-Team: suomi <>\n"
@@ -30,7 +30,7 @@ msgid "Schema \"%s\" not found."
 msgstr ""
 
 #: ../src/extension.js:180
-msgid "Reload Weather Informations"
+msgid "Reload Weather Information"
 msgstr ""
 
 #: ../src/extension.js:184 ../src/weather-settings.js.in:449

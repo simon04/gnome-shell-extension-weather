@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-03 21:02+0200\n"
+"POT-Creation-Date: 2012-05-13 14:29+0200\n"
 "PO-Revision-Date: 2012-05-04 17:07+0200\n"
 "Last-Translator: Lukáš Maňas <lukas.manas@gmail.com>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
@@ -28,7 +28,8 @@ msgid "Schema \"%s\" not found."
 msgstr "Schéma \"%s\" nenalezeno."
 
 #: ../src/extension.js:180
-msgid "Reload Weather Informations"
+#, fuzzy
+msgid "Reload Weather Information"
 msgstr "Obnovit informace o počasí"
 
 #: ../src/extension.js:184 ../src/weather-settings.js.in:449
@@ -319,3 +320,6 @@ msgstr "Zobrazit na panelu teplotu"
 #: ../src/weather-settings.js.in:499
 msgid "Conditions in Panel"
 msgstr "Zobrazit na panelu podmínky"
+
+#~ msgid "Reload Weather Informations"
+#~ msgstr "Obnovit informace o počasí"

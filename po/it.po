@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-03 21:02+0200\n"
+"POT-Creation-Date: 2012-05-13 14:29+0200\n"
 "PO-Revision-Date: 2012-05-13 08:34+0100\n"
 "Last-Translator: Mattia Meneguzzo <hal8600@hotmail.it>\n"
 "Language-Team: \n"
@@ -28,7 +28,8 @@ msgid "Schema \"%s\" not found."
 msgstr "Schema \"%s\" non trovato."
 
 #: ../src/extension.js:180
-msgid "Reload Weather Informations"
+#, fuzzy
+msgid "Reload Weather Information"
 msgstr "Ricarica le informazioni meteo"
 
 #: ../src/extension.js:184 ../src/weather-settings.js.in:449
@@ -321,3 +322,6 @@ msgstr "Mostra la temperatura sul pannello"
 #: ../src/weather-settings.js.in:499
 msgid "Conditions in Panel"
 msgstr "Mostra le condizioni meteo sul pannello"
+
+#~ msgid "Reload Weather Informations"
+#~ msgstr "Ricarica le informazioni meteo"

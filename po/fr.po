@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-03 21:02+0200\n"
+"POT-Creation-Date: 2012-05-13 14:29+0200\n"
 "PO-Revision-Date: 2012-05-03 22:55+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: Français <ecyrbe@gmail.com>\n"
@@ -23,19 +23,18 @@ msgstr ""
 msgid "..."
 msgstr "..."
 
-#: ../src/extension.js:137
-#: ../src/extension.js:204
+#: ../src/extension.js:137 ../src/extension.js:204
 #: ../src/weather-settings.js.in:165
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Schéma \"%s\" manquant."
 
 #: ../src/extension.js:180
-msgid "Reload Weather Informations"
+#
+msgid "Reload Weather Information"
 msgstr "Recharger les informations météo"
 
-#: ../src/extension.js:184
-#: ../src/weather-settings.js.in:449
+#: ../src/extension.js:184 ../src/weather-settings.js.in:449
 msgid "Weather Settings"
 msgstr "Paramètres de la météo"
 
@@ -83,8 +82,7 @@ msgstr "Bruine"
 msgid "Freezing rain"
 msgstr "Pluie verglaçante"
 
-#: ../src/extension.js:572
-#: ../src/extension.js:574
+#: ../src/extension.js:572 ../src/extension.js:574
 msgid "Showers"
 msgstr "Averses"
 
@@ -148,8 +146,7 @@ msgstr "Nuageux"
 msgid "Mostly cloudy"
 msgstr "Rares éclaircies"
 
-#: ../src/extension.js:608
-#: ../src/extension.js:634
+#: ../src/extension.js:608 ../src/extension.js:634
 msgid "Partly cloudy"
 msgstr "Passages nuageux"
 
@@ -185,8 +182,7 @@ msgstr "Orages éparses"
 msgid "Scattered showers"
 msgstr "Averses éparses"
 
-#: ../src/extension.js:628
-#: ../src/extension.js:632
+#: ../src/extension.js:628 ../src/extension.js:632
 msgid "Heavy snow"
 msgstr "Fortes chutes de neige"
 
@@ -327,20 +323,5 @@ msgstr "Température sur le tableau de bord"
 msgid "Conditions in Panel"
 msgstr "Conditions sur le tableau de bord"
 
-#~ msgid "City"
-#~ msgstr "Ville"
-
-#~ msgid "Translate Condition"
-#~ msgstr "Traduire les conditions"
-
-#~ msgid "Add..."
-#~ msgstr "Ajouter"
-
-#~ msgid "SW"
-#~ msgstr "SO"
-
-#~ msgid "W"
-#~ msgstr "O"
-
-#~ msgid "NW"
-#~ msgstr "NO"
+#~ msgid "Reload Weather Informations"
+#~ msgstr "Recharger les informations météo"

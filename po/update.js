@@ -27,11 +27,21 @@
 
 Gio = imports.gi.Gio;
 
-var xgettext = Seed.spawn("xgettext -o gnome-shell-extension-weather.pot -L python -j --keyword=_ -f POTFILES.in");
+print("Generate gnome-shell-extension-weather.pot");
+var xgettext = Seed.spawn("xgettext -o gnome-shell-extension-weather.pot -L python --from-code=utf-8 --keyword=_ -f POTFILES.in");
+	if(xgettext.stderr)
+	{
+	print(xgettext.stderr);
+	}
+	else
+	{
+	var file = Gio.file_new_for_path(".");
+	var enumerator = file.enumerate_children("standard::name,standard::size");
 
-var file = Gio.file_new_for_path(".");
-var enumerator = file.enumerate_children("standard::name,standard::size");
-
-	while(child = enumerator.next_file())
-		if(child.get_name().search(/.po$/) != -1)
-    		Seed.spawn("msgmerge -U "+child.get_name()+" gnome-shell-extension-weather.pot");
+		while(child = enumerator.next_file())
+			if(child.get_name().search(/.po$/) != -1)
+			{
+			print("Generate "+child.get_name());
+	    		Seed.spawn("msgmerge -U "+child.get_name()+" gnome-shell-extension-weather.pot");
+			}
+	}
