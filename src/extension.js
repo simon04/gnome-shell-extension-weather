@@ -816,7 +816,12 @@ WeatherMenuButton.prototype = {
                     wind_unit = 'knots';
                     break;
             }
-            this._currentWeatherWind.text = (wind_direction && wind > 0 ? wind_direction + ' ' : '') + wind + ' ' + wind_unit;
+            if (!wind)
+            	this._currentWeatherWind.text = '\u2013';
+            else if (wind == 0 || !wind_direction)
+            	 this._currentWeatherWind.text = wind + ' ' + wind_unit;
+            else // i.e. wind > 0 && wind_direction
+            	this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
 
             // Refresh forecast
             let date_string = [_('Today'), _('Tomorrow')];
