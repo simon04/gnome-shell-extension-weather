@@ -177,7 +177,7 @@ WeatherMenuButton.prototype = {
 	let item = new PopupMenu.PopupSeparatorMenuItem();
 	this.menu.addMenuItem(item);
 
-	let item = new PopupMenu.PopupMenuItem(_("Reload Weather Informations"));
+	let item = new PopupMenu.PopupMenuItem(_("Reload Weather Information"));
 	item.connect('activate', Lang.bind(this, function(){this.refreshWeather(false);}));
 	this.menu.addMenuItem(item);
 
