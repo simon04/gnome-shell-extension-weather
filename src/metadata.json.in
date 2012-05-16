@@ -1,8 +1,8 @@
 {
 "uuid": "@uuid@",
-"name": "Weather indicator",
-"description": "Adds weather information menu",
-"shell-version": [ "3.1.90", "3.1.91", "3.1.92", "3.2", "3.3", "3.4" ],
+"name": "Gnome Shell Extension Weather by Neroth",
+"description": "A simple extension for displaying weather informations from several cities in GNOME Shell",
+"shell-version": [ "3.2", "3.3", "3.4" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }

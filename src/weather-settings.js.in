@@ -571,7 +571,7 @@ print(location);
 	var that = this;
 	this.Window = new Gtk.Builder();
 
-	this.Window.add_from_file("/usr/share/gnome-shell/extensions/weather@gnome-shell-extensions.gnome.org/weather-settings.ui");
+	this.Window.add_from_file("@EXTENSIONDIR@/weather-settings.ui");
 
 	this.Window.get_object("main-window").title = _("Weather Settings");
 
