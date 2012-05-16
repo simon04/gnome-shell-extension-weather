@@ -103,25 +103,19 @@ WeatherSetting.prototype =
 
 		var testLocation = function(location)
 		{
-			that.loadJsonAsync(encodeURI("http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid from geo.places where text = '"+location+"' limit 2"),function()
+			that.loadJsonAsync(encodeURI("http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid from geo.places where text = '"+location+"' limit 1"),function()
 			{
 			d.sensitive = 0;
 			var city = arguments[0].query;
-				if(typeof city == "object" && typeof city.results == "object")
-				city = city.results.place;
-				else
+				if(typeof city == "object" && city.results == null)
 				return 0;
-				if(typeof city.woeid == "undefined")
-				return 0;
-				else
-				d.sensitive = 1;
+			d.sensitive = 1;
 			});
 		};
 
 		entry.signal.changed.connect(function()
 		{
 		var location = entry.get_text();
-print(location);
 		testLocation(location);
 
 			that.loadJsonAsync(encodeURI("http://query.yahooapis.com/v1/public/yql?q=select woeid,name,admin1,country from geo.places where text = '*"+location+"*' or text = '"+location+"' limit 10&format=json"),function()
@@ -166,7 +160,7 @@ print(location);
 		dialog.signal.response.connect(function(w, response_id) {
 		   	if(response_id)
 			{
-				that.loadJsonAsync(encodeURI("http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where text = '"+entry.get_text()+"'"),function()
+				that.loadJsonAsync(encodeURI("http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where text = '"+entry.get_text()+"' limit 1"),function()
 				{
 				var city = arguments[0].query;
 					if(typeof city == "object" && typeof city.results == "object")
