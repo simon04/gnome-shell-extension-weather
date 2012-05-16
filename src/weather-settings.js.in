@@ -30,6 +30,7 @@ const GtkBuilder = imports.gtkbuilder;
 const Gio = imports.gi.Gio;
 const Gettext = imports.gettext;
 const _ = Gettext.gettext;
+const Soup = imports.gi.Soup;
 
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
@@ -42,6 +43,10 @@ const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
 const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
 const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
+
+// Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64) (Simon Legner)
+const _httpSession = new Soup.SessionAsync();
+Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
 
 var WeatherSetting = function()
 {
@@ -66,6 +71,18 @@ WeatherSetting.prototype =
 	var textDialog = _("Name of the city");
 	var dialog = new Gtk.Dialog({title : ""});
 	var entry = new Gtk.Entry();
+	var completion = new Gtk.EntryCompletion();
+	entry.set_completion(completion);
+	var completionModel = new Gtk.ListStore.c_new(1,[GObject.TYPE_STRING]);
+	completion.set_model(completionModel);
+	completion.set_text_column(0);
+	completion.set_match_func(function(completion,key,iter)
+	{
+		if(iter)
+			if(completionModel.get_value(iter,0).value.get_string())
+			return true;
+	return false;
+	});
 	entry.margin_top = 12;
 	entry.margin_bottom = 12;
 	var label = new Gtk.Label({label : textDialog});
@@ -79,18 +96,90 @@ WeatherSetting.prototype =
 	var d = dialog.add_button(Gtk.STOCK_OK, 1);
 
 	d.set_can_default(true);
+	d.sensitive = 0;
+
 	dialog.set_default(d);
 	entry.activates_default = true;
+
+		var testLocation = function(location)
+		{
+			that.loadJsonAsync(encodeURI("http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid from geo.places where text = '"+location+"' limit 2"),function()
+			{
+			d.sensitive = 0;
+			var city = arguments[0].query;
+				if(typeof city == "object" && typeof city.results == "object")
+				city = city.results.place;
+				else
+				return 0;
+				if(typeof city.woeid == "undefined")
+				return 0;
+				else
+				d.sensitive = 1;
+			});
+		};
+
+		entry.signal.changed.connect(function()
+		{
+		var location = entry.get_text();
+print(location);
+		testLocation(location);
+
+			that.loadJsonAsync(encodeURI("http://query.yahooapis.com/v1/public/yql?q=select woeid,name,admin1,country from geo.places where text = '*"+location+"*' or text = '"+location+"' limit 10&format=json"),function()
+			{
+			var city = arguments[0].query;
+				if(typeof city == "object" && typeof city.results == "object")
+				city = city.results.place;
+				else
+				return 0;
+			var iter = that.iter;
+			completionModel.clear();
+				if(typeof city.woeid == "undefined")
+				{
+					for(var i in city)
+					{
+						if(typeof m == "undefined")
+						var m = {};
+					var current = completionModel.append(iter).iter;
+					var cityText = city[i].name+", "+city[i].admin1.content+", "+city[i].country.code;
+						if(m[cityText])
+						continue;
+						else
+						m[cityText] = 1;
+					completionModel.set_value(current,0,cityText);
+					completion.complete();
+					}
+				}
+				else
+				{
+				var current = completionModel.append(iter).iter;
+				var cityText = city.name+", "+city.admin1.content+", "+city.country.code;
+				completionModel.set_value(current,0,cityText);
+				}
+			testLocation(location);
+			});
+		return 0;
+		});
 
 	var dialog_area = dialog.get_content_area();
 	dialog_area.pack_start(label);
 	dialog_area.pack_start(entry);
 		dialog.signal.response.connect(function(w, response_id) {
 		   	if(response_id)
-				if(that.city)
-				that.city = that.city+" && "+entry.get_text();
-				else
-				that.city = entry.get_text();
+			{
+				that.loadJsonAsync(encodeURI("http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where text = '"+entry.get_text()+"'"),function()
+				{
+				var city = arguments[0].query;
+					if(typeof city == "object" && typeof city.results == "object")
+					city = city.results.place;
+					else
+					return 0;
+
+					if(that.city)
+					that.city = that.city+" && "+city.woeid+">"+city.name+", "+city.admin1.content+", "+city.country.code;
+					else
+					that.city = city.woeid+">"+city.name+", "+city.admin1.content+", "+city.country.code;
+				});
+			}
 		dialog.hide();
 		});
 
@@ -104,7 +193,7 @@ WeatherSetting.prototype =
 		if(!city.length)
 		return 0;
 	var ac = this.actual_city;
-	var textDialog = _("Remove %s ?").replace("%s",city[ac]);
+	var textDialog = _("Remove %s ?").replace("%s",this.extractLocation(city[ac]));
 	var dialog = new Gtk.Dialog({title : ""});
 	var label = new Gtk.Label({label : textDialog});
 	label.margin_bottom = 12;
@@ -155,6 +244,30 @@ WeatherSetting.prototype =
 		path = arguments[0];
 	path = new Gtk.TreePath.from_string(path);
 	this.treeview.get_selection().select_path(path);
+	},
+
+	loadJsonAsync : function(url, fun)
+	{
+        var here = this;
+        var message = new Soup.Message.c_new('GET', url);
+		_httpSession.queue_message(message, function(_httpSession, message) {
+			if(!message.response_body.data)
+			{
+			fun.call(here,0);
+			return 0;
+			}
+
+			try
+			{
+			var jp = JSON.parse(message.response_body.data);
+			fun.call(here, jp);
+			}
+			catch(e)
+			{
+			fun.call(here,0);
+			return 0;
+			}
+		});
 	},
 
 	loadConfig : function()
@@ -341,6 +454,20 @@ WeatherSetting.prototype =
 	this.Settings.set_int(WEATHER_REFRESH_INTERVAL,arguments[0]);
 	},
 
+	extractLocation : function()
+	{
+		if(arguments[0].search(">") == -1)
+		return _("Invalid city");
+	return arguments[0].split(">")[1];
+	},
+
+	extractWoeid : function()
+	{
+		if(arguments[0].search(">") == -1)
+		return 0;
+	return arguments[0].split(">")[0];
+	},
+
 	refreshUI : function()
 	{
 	this.Window.get_object("tree-toolbutton-remove").sensitive = Boolean(this.city.length);
@@ -363,7 +490,7 @@ WeatherSetting.prototype =
 				{
 				var a = this.liststore.append(iter);
 				var current = a.iter;
-				this.liststore.set_value(current,0,city[i]);
+				this.liststore.set_value(current,0,this.extractLocation(city[i]));
 				}
 			}
 
@@ -444,7 +571,7 @@ WeatherSetting.prototype =
 	var that = this;
 	this.Window = new Gtk.Builder();
 
-	this.Window.add_from_file("@EXTENSIONDIR@/weather-settings.ui");
+	this.Window.add_from_file("/usr/share/gnome-shell/extensions/weather@gnome-shell-extensions.gnome.org/weather-settings.ui");
 
 	this.Window.get_object("main-window").title = _("Weather Settings");
 

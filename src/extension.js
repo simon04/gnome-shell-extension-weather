@@ -407,6 +407,57 @@ WeatherMenuButton.prototype = {
 	this._settings.set_int(WEATHER_REFRESH_INTERVAL,v);
 	},
 
+	extractLocation : function()
+	{
+		if(arguments[0].search(">") == -1)
+		return _("Invalid city");
+	return arguments[0].split(">")[1];
+	},
+
+	extractWoeid : function()
+	{
+		if(arguments[0].search(">") == -1)
+		return 0;
+	return arguments[0].split(">")[0];
+	},
+
+	updateCities : function()
+	{
+	let that = this;
+	let cities = this._cities;
+	cities = cities.split(" && ");
+		if(cities && typeof cities == "string")
+		cities = [cities];
+		if(!cities[0])
+		cities = [];
+
+		for(let a in cities)
+		{
+			if(!this.extractWoeid(cities[a]))
+			{
+				this.load_json_async(encodeURI("http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where text = '"+cities[a]+"' limit 1"),function()
+				{
+				let city = arguments[0].query;
+					if(typeof city == "object" && typeof city.results == "object")
+					city = city.results.place;
+					else
+					return 0;
+				let cityText = city.woeid+">"+city.name+", "+city.admin1.content+", "+city.country.code;
+				cities.splice(a,1,cityText);
+				cities = cities.join(" && ");
+					if(typeof cities != "string")
+					cities = cities[0];
+				that._cities = cities;
+				that.updateCities();
+				});
+			return 0;
+			}
+			else
+			continue;
+		}
+	this.refreshWeather();
+	},
+
     _onPreferencesActivate : function() {
     let app = Shell.AppSystem.get_default().lookup_app('weather-settings.desktop');
     app.activate();
@@ -421,8 +472,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select location,wind,atmosphere,units,item.condition,item.forecast,astronomy from weather.forecast where location in (select id from xml where url="http://xoap.weather.com/search/search?where='+ encodeURI( this._city ) +'" and itemPath="search.loc") and u="' + this.unit_to_url() + '"');
-    /* see http://jonathantrevor.net/?p=40 */
+        return encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid = '+this.extractWoeid(this._city)+' and u="' + this.unit_to_url() + '"');
     },
 
     get_weather_icon: function(code) {
@@ -701,8 +751,11 @@ WeatherMenuButton.prototype = {
     },
 
     refreshWeather: function(recurse) {
-        if(!this._city)
+        if(!this.extractWoeid(this._city))
+	{
+	this.updateCities();
         return 0;
+	}
         this.load_json_async(this.get_weather_url(), function(json) {
                 if(!json)
                 return 0;
@@ -723,15 +776,7 @@ WeatherMenuButton.prototype = {
 		this._sunsetIcon.icon_type = this._icon_type;
 
             let forecast = weather.item.forecast;
-            let location = this._city;
-                if (weather.location.city)
-                location = weather.location.city;
-
-                if (many && weather.location.region)
-                location = location +", "+ weather.location.region;
-                else
-                    if (many && weather.location.country)
-                    location = location +", "+ weather.location.country;
+            let location = this.extractLocation(this._city);
 
             // Refresh current weather
             let comment = weather_c.text;
@@ -819,7 +864,7 @@ WeatherMenuButton.prototype = {
             if (!wind)
             	this._currentWeatherWind.text = '\u2013';
             else if (wind == 0 || !wind_direction)
-            	 this._currentWeatherWind.text = wind + ' ' + wind_unit;
+            	this._currentWeatherWind.text = wind + ' ' + wind_unit;
             else // i.e. wind > 0 && wind_direction
             	this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
 
