@@ -40,16 +40,21 @@ Install **gnome-shell-extension-weather** with apt-rpm from Sisyphus.
 
 ### [Fedora](https://bugzilla.rpmfusion.org/show_bug.cgi?id=2017#c25)
 
-Download the [rpm file](http://db.tt/Dnqth2Rt) and execute it.
+Download the [rpm file](http://db.tt/x8r5Gdph) and execute it.
 
 ## Generic
 
 Make sure you have these dependencies :
-
-* `git`.
+* `dconf`.
+* `gettext`.
+* `pkg-config`.
 * `seed`.
-* `libglib2.0-dev` : Without you'll get an error about `GLIB_GSETTINGS`.
+* `git`.
+* `glib2`.
 * `gnome-common`.
+* `autoconf`.
+* `automake`.
+* `intltool`.
 * `gnome-tweak-tool`.
 
 Run the following commands :
@@ -64,90 +69,9 @@ Run the following commands :
 
 Use the `Weather Settings` button to edit the configuration.
 
-**Always use this format when you add a city : "My City, My Country".**
-
-Example : "New york, USA", "Paris, France", "Tokyo, Japan" ...
-
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/weather-settings.gif)
 
-You can also use `dconf-editor` or `gsettings` to modify some parameters from the command line :
-
-#### City (`Cambridge, MA` (GNOME Foundation) by default)
-
-You can specify your location using the following command. Perhaps you need quotation marks as in the second command.
-
-    gsettings set org.gnome.shell.extensions.weather city your_city (for more : your_city && another_city && ...)
-    gsettings set org.gnome.shell.extensions.weather city "your_city" (for more : your_city && another_city && ...)
-
-#### Actual City (`0` by default)
-
-You can specify the actual location using the following command.
-
-    gsettings set org.gnome.shell.extensions.weather actual-city 0 ([your_city] && another_city && ...)
-    gsettings set org.gnome.shell.extensions.weather actual-city 1 (your_city && [another_city] && ...)
-    gsettings set org.gnome.shell.extensions.weather actual-city n (your_city && another_city && [...])
-
-#### Temperature Units (optional, `fahrenheit` by default)
-
-You can modify the temperature unit using one of the following commands.
-
-    gsettings set org.gnome.shell.extensions.weather unit celsius
-    gsettings set org.gnome.shell.extensions.weather unit fahrenheit
-
-#### Wind Speed Units (optional, `mph` by default)
-
-You can modify the wind speed unit using one of the following commands.
-
-    gsettings set org.gnome.shell.extensions.weather wind-speed-unit kph
-    gsettings set org.gnome.shell.extensions.weather wind-speed-unit mph
-    gsettings set org.gnome.shell.extensions.weather wind-speed-unit m/s
-    gsettings set org.gnome.shell.extensions.weather wind-speed-unit knots
-
-#### Position in Panel (optional, `center` by default)
-
-The position of this GNOME Shell extension in the panel can be configured to either 'left', 'center' or 'right' (requires restart of GNOME Shell).
-
-    gsettings set org.gnome.shell.extensions.weather position-in-panel center
-    gsettings set org.gnome.shell.extensions.weather position-in-panel left
-    gsettings set org.gnome.shell.extensions.weather position-in-panel right
-
-#### Translate Conditions (optional, `true` by default)
-
-You may want to configure whether to translate the weather condition. If enabled, the condition is translated based on the weather code. If disabled, the condition string from Yahoo is taken. Note: Enabling the translation sometimes results in loss of accuracy, e.g., the condition string "PM Thunderstorms" cannot be expressed in terms of weather codes.
-
-    gsettings set org.gnome.shell.extensions.weather translate-condition true
-    gsettings set org.gnome.shell.extensions.weather translate-condition false
-
-#### Symbolic Icons (optional, `true` by default)
-
-If desired, you can enable the usage of full-colored icons to display the weather condition (instead of symbolic icons).
-
-    gsettings set org.gnome.shell.extensions.weather use-symbolic-icons true
-    gsettings set org.gnome.shell.extensions.weather use-symbolic-icons false
-
-#### Temperature in Panel (optional, `true` by default)
-
-You can configure whether to show the weather condition text (aka. comment) together with the temperature in the panel (requires restart). If only weather condition text is undesired, consider `Condition in Panel` option.
-
-    gsettings set org.gnome.shell.extensions.weather show-text-in-panel true
-    gsettings set org.gnome.shell.extensions.weather show-text-in-panel false
-
-#### Condition in Panel (optional, `false` by default)
-
-Configures whether to show the comment (aka. weather condition text, e.g. "Windy", "Clear") in the panel. Note that the temperature is still shown (if undesired, consider `Temperature in Panel` option).
-
-    gsettings set org.gnome.shell.extensions.weather show-comment-in-panel false
-    gsettings set org.gnome.shell.extensions.weather show-comment-in-panel true
-
-#### Refresh Interval (optional, `300` by default)
-
-The interval to refresh the weather information may be set arbitrarily and is specified in seconds.
-
-    gsettings set org.gnome.shell.extensions.weather refresh-interval 300
-
-#### Restart GNOME Shell
-
-Don't forget to restart GNOME Shell (`[Alt]+[F2]`, `r`)
+You can also use `dconf-editor` or `gsettings` to modify some parameters from the command line.
 
 ----
 
