@@ -1,7 +1,7 @@
 {
 "uuid": "@uuid@",
 "name": "Gnome Shell Extension Weather by Neroth",
-"description": "A simple extension for displaying weather informations from several cities in GNOME Shell",
+"description": "A simple extension for displaying weather information from several cities in GNOME Shell",
 "shell-version": [ "3.2", "3.3", "3.4" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
