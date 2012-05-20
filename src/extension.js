@@ -498,7 +498,7 @@ WeatherMenuButton.prototype = {
             case 8:/* freezing drizzle */
                 return ['weather-freezing-rain', 'weather-showers'];
             case 9:/* drizzle */
-                return ['weather-fog'];
+                return ['weather-showers'];
             case 10:/* freezing rain */
                 return ['weather-freezing-rain', 'weather-showers'];
             case 11:/* showers */
