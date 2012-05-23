@@ -47,7 +47,7 @@ do_uninstall() {
 EOF
 	if [ -f "${SCHEMA_DIR}/${SCHEMA}" ]; then
 		sudo rm -f ${SCHEMA_DIR}/${SCHEMA}
-		dconf reset -f /org/cinnamon/applets/weather@mockturtl/
+		dconf reset -f /org/cinnamon/applets/${UUID}/
 	fi
 
 	compile_schemas
