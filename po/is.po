@@ -1,0 +1,304 @@
+# translation of weather@mockturtl.po to Icelandic
+# Copyright (C) 2012 Free Software Foundation
+# This file is distributed under the same license as the Cinnamon package.
+#
+# Sveinn Ã­ Felli <sveinki@nett.is>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: weather@mockturtl\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-05 20:50-0400\n"
+"PO-Revision-Date: 2012-05-23 09:07+0000\n"
+"Last-Translator: Sveinn Ã­ Felli <sveinki@nett.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: applet.js:124
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr "SkemaÃ° \"%s\" fannst ekki."
+
+#: applet.js:196
+msgid "Click to open"
+msgstr "Smelltu til aÃ° opna"
+
+#: applet.js:466
+msgid "Sunrise"
+msgstr "SÃ³larupprÃ¡s"
+
+#: applet.js:467
+msgid "Sunset"
+msgstr "SÃ³lsetur"
+
+#: applet.js:472
+msgid "Today"
+msgstr "Ã dag"
+
+#: applet.js:472
+msgid "Tomorrow"
+msgstr "Ã morgun"
+
+#: applet.js:527
+msgid "Loading current weather ..."
+msgstr "HleÃ° inn veÃ°urlÃ½singu ..."
+
+#: applet.js:528
+msgid "Loading future weather ..."
+msgstr "HleÃ° inn veÃ°urspÃ¡ ..."
+
+#: applet.js:548
+msgid "Loading ..."
+msgstr "HleÃ° inn ..."
+
+#: applet.js:554
+msgid "Please wait"
+msgstr "HinkraÃ°u aÃ°eins"
+
+#: applet.js:611
+msgid "Temperature:"
+msgstr "Hiti:"
+
+#: applet.js:613
+msgid "Humidity:"
+msgstr "Raki:"
+
+#: applet.js:615
+msgid "Pressure:"
+msgstr "ÃžrÃ½stingur:"
+
+#: applet.js:617
+msgid "Wind:"
+msgstr "Vindur:"
+
+#: applet.js:868
+msgid "Tornado"
+msgstr "Hvirfilbylur"
+
+#: applet.js:870
+msgid "Tropical storm"
+msgstr "Hitabeltisstormur"
+
+#: applet.js:872
+msgid "Hurricane"
+msgstr "Fellibylur"
+
+#: applet.js:874
+msgid "Severe thunderstorms"
+msgstr "Hvasst Ã¾rumuveÃ°ur"
+
+#: applet.js:876
+msgid "Thunderstorms"
+msgstr "ÃžrumuveÃ°ur"
+
+#: applet.js:878
+msgid "Mixed rain and snow"
+msgstr "BlÃ¶nduÃ° rigning og snjÃ³koma"
+
+#: applet.js:880
+msgid "Mixed rain and sleet"
+msgstr "BlÃ¶nduÃ° rigning og slydda"
+
+#: applet.js:882
+msgid "Mixed snow and sleet"
+msgstr "BlÃ¶nduÃ° snjÃ³koma og slydda"
+
+#: applet.js:884
+msgid "Freezing drizzle"
+msgstr "FrostsÃºld"
+
+#: applet.js:886
+msgid "Drizzle"
+msgstr "SÃºld"
+
+#: applet.js:888
+msgid "Freezing rain"
+msgstr "Frostrigning"
+
+#: applet.js:890 applet.js:892
+msgid "Showers"
+msgstr "SkÃºrir"
+
+#: applet.js:894
+msgid "Snow flurries"
+msgstr "SnjÃ³hryÃ°jur"
+
+#: applet.js:896
+msgid "Light snow showers"
+msgstr "DÃ¡lÃ­til snjÃ³Ã©l"
+
+#: applet.js:898
+msgid "Blowing snow"
+msgstr "SnjÃ³bylur"
+
+#: applet.js:900
+msgid "Snow"
+msgstr "SnjÃ³koma"
+
+#: applet.js:902
+msgid "Hail"
+msgstr "HaglÃ©l"
+
+#: applet.js:904
+msgid "Sleet"
+msgstr "Slydda"
+
+#: applet.js:906
+msgid "Dust"
+msgstr "Ryk"
+
+#: applet.js:908
+msgid "Foggy"
+msgstr "ÃžokuveÃ°ur"
+
+#: applet.js:910
+msgid "Haze"
+msgstr "Mistur"
+
+#: applet.js:912
+msgid "Smoky"
+msgstr "ReykjarkÃ³f"
+
+#: applet.js:914
+msgid "Blustery"
+msgstr "VindhviÃ°ur"
+
+#: applet.js:916
+msgid "Windy"
+msgstr "Vindasamt"
+
+#: applet.js:918
+msgid "Cold"
+msgstr "Kalt"
+
+#: applet.js:920
+msgid "Cloudy"
+msgstr "SkÃ½jaÃ°"
+
+#: applet.js:923
+msgid "Mostly cloudy"
+msgstr "AlskÃ½jaÃ°"
+
+#: applet.js:926 applet.js:952
+msgid "Partly cloudy"
+msgstr "HÃ¡lfskÃ½jaÃ°"
+
+#: applet.js:928
+msgid "Clear"
+msgstr "HeiÃ°skÃ­rt"
+
+#: applet.js:930
+msgid "Sunny"
+msgstr "SÃ³lskin"
+
+#: applet.js:933
+msgid "Fair"
+msgstr "BjartviÃ°ri"
+
+#: applet.js:935
+msgid "Mixed rain and hail"
+msgstr "BlÃ¶nduÃ° rigning og haglÃ©l"
+
+#: applet.js:937
+msgid "Hot"
+msgstr "Heitt"
+
+#: applet.js:939
+msgid "Isolated thunderstorms"
+msgstr "ÃžrumuveÃ°ur Ã¡ kÃ¶flum"
+
+#: applet.js:942
+msgid "Scattered thunderstorms"
+msgstr "ÃžrumuveÃ°ur Ã¡ dreif"
+
+#: applet.js:944
+msgid "Scattered showers"
+msgstr "SkÃºrir Ã¡ dreif"
+
+#: applet.js:946 applet.js:950
+msgid "Heavy snow"
+msgstr "Mikil snjÃ³koma"
+
+#: applet.js:948
+msgid "Scattered snow showers"
+msgstr "SnjÃ³Ã©l Ã¡ dreif"
+
+#: applet.js:954
+msgid "Thundershowers"
+msgstr "ÃžrumuskÃºrir"
+
+#: applet.js:956
+msgid "Snow showers"
+msgstr "SnjÃ³Ã©l"
+
+#: applet.js:958
+msgid "Isolated thundershowers"
+msgstr "ÃžrumuskÃºrir Ã¡ kÃ¶flum"
+
+#: applet.js:961
+msgid "Not available"
+msgstr "Ekki tiltÃ¦kt"
+
+#: applet.js:969
+msgid "Monday"
+msgstr "MÃ¡nudagur"
+
+#: applet.js:969
+msgid "Tuesday"
+msgstr "ÃžriÃ°judagur"
+
+#: applet.js:969
+msgid "Wednesday"
+msgstr "MiÃ°vikudagur"
+
+#: applet.js:969
+msgid "Thursday"
+msgstr "Fimmtudagur"
+
+#: applet.js:969
+msgid "Friday"
+msgstr "FÃ¶studagur"
+
+#: applet.js:969
+msgid "Saturday"
+msgstr "Laugardagur"
+
+#: applet.js:969
+msgid "Sunday"
+msgstr "Sunnudagur"
+
+#: applet.js:977
+msgid "N"
+msgstr "N"
+
+#: applet.js:977
+msgid "NE"
+msgstr "NA"
+
+#: applet.js:977
+msgid "E"
+msgstr "A"
+
+#: applet.js:977
+msgid "SE"
+msgstr "SA"
+
+#: applet.js:977
+msgid "S"
+msgstr "S"
+
+#: applet.js:977
+msgid "SW"
+msgstr "SV"
+
+#: applet.js:977
+msgid "W"
+msgstr "V"
+
+#: applet.js:977
+msgid "NW"
+msgstr "NV"
+
