@@ -1,6 +1,6 @@
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.jpg)
 
-**gnome-shell-extension-weather** is a simple extension for displaying weather informations from several cities in GNOME Shell.
+**gnome-shell-extension-weather** is a simple extension for displaying weather information from several cities in GNOME Shell.
 
 Compared to the original version, this fork brings you : multiple city, no WOEID, a symmetric style, and a settings panel in JavaScript (Seed).
 
@@ -38,9 +38,9 @@ Install **gnome-shell-extension-weather** with apt-rpm from Sisyphus.
 	sudo apt-get update
 	sudo apt-get install gnome-shell-extension-weather
 
-### [Fedora](https://bugzilla.rpmfusion.org/show_bug.cgi?id=2017#c25)
+### [Fedora](https://bugzilla.rpmfusion.org/show_bug.cgi?id=2017#c40)
 
-Download the [rpm file](http://db.tt/x8r5Gdph) and execute it.
+Download the [rpm file](http://db.tt/p5ByBdyZ) and execute it.
 
 ## Generic
 
