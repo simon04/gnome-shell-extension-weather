@@ -38,10 +38,14 @@ Install **gnome-shell-extension-weather** with apt-rpm from Sisyphus.
 	sudo apt-get update
 	sudo apt-get install gnome-shell-extension-weather
 
-### [Fedora](https://bugzilla.rpmfusion.org/show_bug.cgi?id=2017#c40)
+### [Fedora](http://download1.rpmfusion.org/free/fedora/updates/testing/17/i386/repoview/gnome-shell-extension-weather.html)
 
-Download the [rpm file](http://db.tt/p5ByBdyZ) and execute it.
+Packages for Fedora 16 and 17 are available in the [RPM Fusion](http://rpmfusion.org/RPM%20Fusion) repositories.
 
+If they are not enabled on your system, please follow [these instructions](http://rpmfusion.org/Configuration); then run the following command with root privileges: 
+	
+	yum --enablerepo=rpmfusion-free-updates-testing install gnome-shell-extension-weather
+	
 ## Generic
 
 Make sure you have these dependencies :
