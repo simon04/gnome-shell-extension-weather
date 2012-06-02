@@ -1,0 +1,12 @@
+Source: https://github.com/neroth/gnome-shell-extension-weather
+
+Files: *
+Copyright: 2011-2012 Ecyrbe ecyrbe+spam@gmail.com, Timur Kristóf venemo@msn.com, Elad Alfassa elad@fedoraproject.org, Simon Legner Simon.Legner@gmail.com, Simon Claessens gagalago@gmail.com, Christian METZLER neroth@xeked.com
+License: GPL-3.0+
+
+Files: debian/*
+Copyright: Christian METZLER <neroth@xeked.com>
+License: GPL-3.0+
+
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-3".
