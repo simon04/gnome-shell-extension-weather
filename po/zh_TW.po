@@ -1,0 +1,306 @@
+# Chinese translation for gnome-shell-extension-weather
+# simon 軟體包的正體中文翻譯.
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# bill <bill_zt@sina.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-03 14:40-0400\n"
+"PO-Revision-Date: 2011-12-02 14:44+0800\n"
+"Last-Translator: Wenjie Huang\n"
+"Language-Team: Chinese (Traditional)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: applet.js:124
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: applet.js:196
+msgid "Click to open"
+msgstr "開啟"
+
+#: applet.js:466
+msgid "Sunrise"
+msgstr "日出"
+
+#: applet.js:467
+msgid "Sunset"
+msgstr "日落"
+
+#: applet.js:472
+msgid "Today"
+msgstr "今天"
+
+#: applet.js:472
+msgid "Tomorrow"
+msgstr "明天"
+
+#: applet.js:527
+msgid "Loading current weather ..."
+msgstr "正在載入目前天氣 ..."
+
+#: applet.js:528
+msgid "Loading future weather ..."
+msgstr "正在載入天氣預報 ..."
+
+#: applet.js:548
+msgid "Loading ..."
+msgstr "正在載入 ..."
+
+#: applet.js:554
+msgid "Please wait"
+msgstr "請稍候"
+
+#: applet.js:611
+msgid "Temperature:"
+msgstr "溫度："
+
+#: applet.js:613
+msgid "Humidity:"
+msgstr "濕度："
+
+#: applet.js:615
+msgid "Pressure:"
+msgstr "氣壓："
+
+#: applet.js:617
+msgid "Wind:"
+msgstr "風力："
+
+#: applet.js:868
+msgid "Tornado"
+msgstr "龍捲風"
+
+#: applet.js:870
+msgid "Tropical storm"
+msgstr "熱帶風暴"
+
+#: applet.js:872
+msgid "Hurricane"
+msgstr "颶風"
+
+#: applet.js:874
+msgid "Severe thunderstorms"
+msgstr "強雷暴雨"
+
+#: applet.js:876
+msgid "Thunderstorms"
+msgstr "雷雨"
+
+#: applet.js:878
+msgid "Mixed rain and snow"
+msgstr "雨雪交加"
+
+#: applet.js:880
+msgid "Mixed rain and sleet"
+msgstr "雨霰交加"
+
+#: applet.js:882
+msgid "Mixed snow and sleet"
+msgstr "雪霰交加"
+
+#: applet.js:884
+msgid "Freezing drizzle"
+msgstr "凍毛毛雨"
+
+#: applet.js:886
+msgid "Drizzle"
+msgstr "小雨"
+
+#: applet.js:888
+msgid "Freezing rain"
+msgstr "凍雨"
+
+#: applet.js:890 applet.js:892
+msgid "Showers"
+msgstr "陣雨"
+
+#: applet.js:894
+msgid "Snow flurries"
+msgstr "飄雪"
+
+#: applet.js:896
+msgid "Light snow showers"
+msgstr "小雪"
+
+#: applet.js:898
+msgid "Blowing snow"
+msgstr "暴雪"
+
+#: applet.js:900
+msgid "Snow"
+msgstr "雪"
+
+#: applet.js:902
+msgid "Hail"
+msgstr "冰雹"
+
+#: applet.js:904
+msgid "Sleet"
+msgstr "霰"
+
+#: applet.js:906
+msgid "Dust"
+msgstr "灰塵"
+
+#: applet.js:908
+msgid "Foggy"
+msgstr "霧"
+
+#: applet.js:910
+msgid "Haze"
+msgstr "陰霾"
+
+#: applet.js:912
+msgid "Smoky"
+msgstr "煙霧"
+
+#: applet.js:914
+msgid "Blustery"
+msgstr "大風"
+
+#: applet.js:916
+msgid "Windy"
+msgstr "有風"
+
+#: applet.js:918
+msgid "Cold"
+msgstr "冷"
+
+#: applet.js:920
+msgid "Cloudy"
+msgstr "有雲"
+
+#: applet.js:923
+msgid "Mostly cloudy"
+msgstr "多雲"
+
+#: applet.js:926 applet.js:952
+msgid "Partly cloudy"
+msgstr "晴時多雲"
+
+#: applet.js:928
+msgid "Clear"
+msgstr "明朗"
+
+#: applet.js:930
+msgid "Sunny"
+msgstr "晴"
+
+#: applet.js:933
+msgid "Fair"
+msgstr "晴"
+
+#: applet.js:935
+msgid "Mixed rain and hail"
+msgstr "冰雹"
+
+#: applet.js:937
+msgid "Hot"
+msgstr "炎熱"
+
+#: applet.js:939
+msgid "Isolated thunderstorms"
+msgstr "局部地區有雷暴"
+
+#: applet.js:942
+msgid "Scattered thunderstorms"
+msgstr "零星雷暴"
+
+#: applet.js:944
+msgid "Scattered showers"
+msgstr "零星陣雨"
+
+#: applet.js:946 applet.js:950
+msgid "Heavy snow"
+msgstr "大雪"
+
+#: applet.js:948
+msgid "Scattered snow showers"
+msgstr "零星陣雪"
+
+#: applet.js:954
+msgid "Thundershowers"
+msgstr "雷陣雨"
+
+#: applet.js:956
+msgid "Snow showers"
+msgstr "陣雪"
+
+#: applet.js:958
+msgid "Isolated thundershowers"
+msgstr "局部地區有雷陣雨"
+
+#: applet.js:961
+msgid "Not available"
+msgstr "不可用"
+
+#: applet.js:969
+msgid "Monday"
+msgstr "星期一"
+
+#: applet.js:969
+msgid "Tuesday"
+msgstr "星期二"
+
+#: applet.js:969
+msgid "Wednesday"
+msgstr "星期三"
+
+#: applet.js:969
+msgid "Thursday"
+msgstr "星期四"
+
+#: applet.js:969
+msgid "Friday"
+msgstr "星期五"
+
+#: applet.js:969
+msgid "Saturday"
+msgstr "星期六"
+
+#: applet.js:969
+msgid "Sunday"
+msgstr "星期日"
+
+#: applet.js:977
+msgid "N"
+msgstr ""
+
+#: applet.js:977
+msgid "NE"
+msgstr ""
+
+#: applet.js:977
+msgid "E"
+msgstr ""
+
+#: applet.js:977
+msgid "SE"
+msgstr ""
+
+#: applet.js:977
+msgid "S"
+msgstr ""
+
+#: applet.js:977
+msgid "SW"
+msgstr ""
+
+#: applet.js:977
+msgid "W"
+msgstr ""
+
+#: applet.js:977
+msgid "NW"
+msgstr ""
+
+#~ msgid "..."
+#~ msgstr "..."
