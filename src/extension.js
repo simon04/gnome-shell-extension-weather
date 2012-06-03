@@ -132,12 +132,6 @@ WeatherMenuButton.prototype = {
 		PanelMenu.Button.prototype._init.call(this, menuAlignment);
 	}
 
-	var schemaInterface = "org.gnome.desktop.interface";
-	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
-		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
-   	var settingsInterface = new Gio.Settings({ schema: schemaInterface });
-	this._clockFormat = settingsInterface.get_string("clock-format");
-
 	// Putting the panel item together
 	let topBox = new St.BoxLayout();
 	topBox.add_actor(this._weatherIcon);
@@ -204,6 +198,22 @@ WeatherMenuButton.prototype = {
 		throw _("Schema \"%s\" not found.").replace("%s",schema);
    	this._settings = new Gio.Settings({ schema: schema });
 	this._settings.connect("changed",function(){that.refreshWeather(false);});
+	},
+
+	loadConfigInterface : function()
+	{
+	var schemaInterface = "org.gnome.desktop.interface";
+	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
+		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
+   	this._settingsInterface = new Gio.Settings({ schema: schemaInterface });
+	this._settingsInterface.connect("changed",function(){that.refreshWeather(false);});
+	},
+
+	get _clockFormat()
+	{
+		if(!this._settingsInterface)
+		this.loadConfigInterface();
+	return this._settingsInterface.get_string("clock-format");
 	},
 
 	get _units()
@@ -774,6 +784,8 @@ WeatherMenuButton.prototype = {
 		this._forecast[1].Icon.icon_type = this._icon_type;
 		this._sunriseIcon.icon_type = this._icon_type;
 		this._sunsetIcon.icon_type = this._icon_type;
+		this._buildIcon.icon_type = this._icon_type;
+
 
             let forecast = weather.item.forecast;
             let location = this.extractLocation(this._city);
@@ -795,6 +807,11 @@ WeatherMenuButton.prototype = {
             let iconname = this.get_weather_icon_safely(weather_c.code);
             let sunrise = weather.astronomy.sunrise;
             let sunset = weather.astronomy.sunset;
+            let lastBuildDate = new Date(weather_c.date.split(" ").splice(0,6).join(" "));
+	    let lastBuild = weather_c.date.split(" ").splice(4,2).join(" ");
+	    let actualDate = new Date();
+	    let d = Math.floor((actualDate.getTime()-lastBuildDate.getTime())/86400000);
+            let date_string = [_('Today'), _('Tomorrow')];
 
 		if(this._clockFormat == "24h")
 		{
@@ -802,6 +819,28 @@ WeatherMenuButton.prototype = {
 		sunrise = sunrise.getHours()+":"+((sunrise.getMinutes()<10)?"0":"")+sunrise.getMinutes();
 		sunset = new Date("3 Mar 1999 "+sunset);
 		sunset = sunset.getHours()+":"+((sunset.getMinutes()<10)?"0":"")+sunset.getMinutes();
+		lastBuild = lastBuildDate.getHours()+":"+((lastBuildDate.getMinutes()<10)?"0":"")+lastBuildDate.getMinutes();
+		}
+
+		if(d > 0 || actualDate.getHours() < lastBuildDate.getHours())
+		{
+		lastBuild = _("Yesterday");
+		date_string[1] = date_string[0];
+		date_string[0] = lastBuild;
+			if(d > 1)
+			{
+			lastBuild = d+" "+_("days ago");
+				if(d == 2)
+				{
+				date_string[1] = date_string[0];
+				date_string[0] = lastBuild;
+				}
+				else
+				{
+				date_string[1] = (d-1)+" "+_("days ago");
+				date_string[0] = lastBuild;
+				}
+			}
 		}
 
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
@@ -824,6 +863,7 @@ WeatherMenuButton.prototype = {
             this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ((pressure_state)?" ":"") + this.get_pressure_state(pressure_state);
 	    this._currentWeatherSunrise.text = sunrise;
 	    this._currentWeatherSunset.text = sunset;
+	    this._currentWeatherBuild.text = lastBuild;
 
             // Override wind units with our preference
             // Need to consider what units the Yahoo API has returned it in
@@ -869,7 +909,6 @@ WeatherMenuButton.prototype = {
             	this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
 
             // Refresh forecast
-            let date_string = [_('Today'), _('Tomorrow')];
             for (let i = 0; i <= 1; i++) {
                 let forecastUi = this._forecast[i];
                 let forecastData = forecast[i];
@@ -940,6 +979,13 @@ WeatherMenuButton.prototype = {
             style_class: 'weather-sunset-icon'
         });
 
+	this._buildIcon = new St.Icon({
+            icon_type: this._icon_type,
+            icon_size: 15,
+            icon_name: 'view-refresh',
+            style_class: 'weather-build-icon'
+        });
+
         // The summary of the current weather
         this._currentWeatherSummary = new St.Label({
             text: _('Loading ...'),
@@ -956,15 +1002,18 @@ WeatherMenuButton.prototype = {
 
 	this._currentWeatherSunrise = new St.Label({ text: '-' });
 	this._currentWeatherSunset = new St.Label({ text: '-' });
+	this._currentWeatherBuild = new St.Label({ text: '-' });
 
 	let ab = new St.BoxLayout({	
-	style_class: 'weather-current-astronomy'	
+	style_class: 'weather-current-infobox'	
 	});
 
 	ab.add_actor(this._sunriseIcon);
 	ab.add_actor(this._currentWeatherSunrise);
 	ab.add_actor(this._sunsetIcon);	
 	ab.add_actor(this._currentWeatherSunset);
+	ab.add_actor(this._buildIcon);	
+	ab.add_actor(this._currentWeatherBuild);
 	bb.add_actor(ab);
 
         // Other labels
