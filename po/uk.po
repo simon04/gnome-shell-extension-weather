@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 03:37+0200\n"
+"POT-Creation-Date: 2012-06-03 14:09+0200\n"
 "PO-Revision-Date: 2012-05-13 22:41+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -20,257 +20,265 @@ msgstr ""
 msgid "..."
 msgstr "..."
 
-#: ../src/extension.js:137 ../src/extension.js:204
-#: ../src/weather-settings.js.in:278
+#: ../src/extension.js:174
+msgid "Reload Weather Information"
+msgstr ""
+
+#: ../src/extension.js:178 ../src/weather-settings.js.in:570
+msgid "Weather Settings"
+msgstr ""
+
+#: ../src/extension.js:198 ../src/extension.js:207
+#: ../src/weather-settings.js.in:272
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: ../src/extension.js:180
-msgid "Reload Weather Information"
-msgstr ""
-
-#: ../src/extension.js:184 ../src/weather-settings.js.in:576
-msgid "Weather Settings"
-msgstr ""
-
-#: ../src/extension.js:413 ../src/weather-settings.js.in:460
+#: ../src/extension.js:423 ../src/weather-settings.js.in:454
 msgid "Invalid city"
 msgstr ""
 
-#: ../src/extension.js:600
+#: ../src/extension.js:610
 msgid "Tornado"
 msgstr "Торнадо"
 
-#: ../src/extension.js:602
+#: ../src/extension.js:612
 msgid "Tropical storm"
 msgstr "Тропічний шторм"
 
-#: ../src/extension.js:604
+#: ../src/extension.js:614
 msgid "Hurricane"
 msgstr "Ураган"
 
-#: ../src/extension.js:606
+#: ../src/extension.js:616
 msgid "Severe thunderstorms"
 msgstr "Сильні грози"
 
-#: ../src/extension.js:608
+#: ../src/extension.js:618
 msgid "Thunderstorms"
 msgstr "Грози"
 
-#: ../src/extension.js:610
+#: ../src/extension.js:620
 msgid "Mixed rain and snow"
 msgstr "Дощ та сніг"
 
-#: ../src/extension.js:612
+#: ../src/extension.js:622
 msgid "Mixed rain and sleet"
 msgstr "Дощ та мокрий сніг"
 
-#: ../src/extension.js:614
+#: ../src/extension.js:624
 msgid "Mixed snow and sleet"
 msgstr "Мокрий сніг"
 
-#: ../src/extension.js:616
+#: ../src/extension.js:626
 msgid "Freezing drizzle"
 msgstr "Паморозь"
 
-#: ../src/extension.js:618
+#: ../src/extension.js:628
 msgid "Drizzle"
 msgstr "Мжичка"
 
-#: ../src/extension.js:620
+#: ../src/extension.js:630
 msgid "Freezing rain"
 msgstr "Льодяний дощ"
 
-#: ../src/extension.js:622 ../src/extension.js:624
+#: ../src/extension.js:632 ../src/extension.js:634
 msgid "Showers"
 msgstr "Зливи"
 
-#: ../src/extension.js:626
+#: ../src/extension.js:636
 msgid "Snow flurries"
 msgstr "Шквалистий сніг"
 
-#: ../src/extension.js:628
+#: ../src/extension.js:638
 msgid "Light snow showers"
 msgstr "Невеликий снігопад"
 
-#: ../src/extension.js:630
+#: ../src/extension.js:640
 msgid "Blowing snow"
 msgstr "Низова завірюха"
 
-#: ../src/extension.js:632
+#: ../src/extension.js:642
 msgid "Snow"
 msgstr "Сніг"
 
-#: ../src/extension.js:634
+#: ../src/extension.js:644
 msgid "Hail"
 msgstr "Град"
 
-#: ../src/extension.js:636
+#: ../src/extension.js:646
 msgid "Sleet"
 msgstr "Мокрий сніг"
 
-#: ../src/extension.js:638
+#: ../src/extension.js:648
 msgid "Dust"
 msgstr "Пилюка"
 
-#: ../src/extension.js:640
+#: ../src/extension.js:650
 msgid "Foggy"
 msgstr "Туман"
 
-#: ../src/extension.js:642
+#: ../src/extension.js:652
 msgid "Haze"
 msgstr "Легкий туман"
 
-#: ../src/extension.js:644
+#: ../src/extension.js:654
 msgid "Smoky"
 msgstr "Димка"
 
-#: ../src/extension.js:646
+#: ../src/extension.js:656
 msgid "Blustery"
 msgstr "Пориви вітру"
 
-#: ../src/extension.js:648
+#: ../src/extension.js:658
 msgid "Windy"
 msgstr "Вітряно"
 
-#: ../src/extension.js:650
+#: ../src/extension.js:660
 msgid "Cold"
 msgstr "Холодно"
 
-#: ../src/extension.js:652
+#: ../src/extension.js:662
 msgid "Cloudy"
 msgstr "Хмарно"
 
-#: ../src/extension.js:655
+#: ../src/extension.js:665
 msgid "Mostly cloudy"
 msgstr "Переважно хмарно"
 
-#: ../src/extension.js:658 ../src/extension.js:684
+#: ../src/extension.js:668 ../src/extension.js:694
 msgid "Partly cloudy"
 msgstr "Невелика хмарність"
 
-#: ../src/extension.js:660
+#: ../src/extension.js:670
 msgid "Clear"
 msgstr "Безхмарно"
 
-#: ../src/extension.js:662
+#: ../src/extension.js:672
 msgid "Sunny"
 msgstr "Сонячно"
 
-#: ../src/extension.js:665
+#: ../src/extension.js:675
 msgid "Fair"
 msgstr "Ясно"
 
-#: ../src/extension.js:667
+#: ../src/extension.js:677
 msgid "Mixed rain and hail"
 msgstr "Дощ і град"
 
-#: ../src/extension.js:669
+#: ../src/extension.js:679
 msgid "Hot"
 msgstr "Жарко"
 
-#: ../src/extension.js:671
+#: ../src/extension.js:681
 msgid "Isolated thunderstorms"
 msgstr "Поодинокі грози"
 
-#: ../src/extension.js:674
+#: ../src/extension.js:684
 msgid "Scattered thunderstorms"
 msgstr "Місцями грози"
 
-#: ../src/extension.js:676
+#: ../src/extension.js:686
 msgid "Scattered showers"
 msgstr "Місцями зливи"
 
-#: ../src/extension.js:678 ../src/extension.js:682
+#: ../src/extension.js:688 ../src/extension.js:692
 msgid "Heavy snow"
 msgstr "Сильний снігопад"
 
-#: ../src/extension.js:680
+#: ../src/extension.js:690
 msgid "Scattered snow showers"
 msgstr "Местами снегопад"
 
-#: ../src/extension.js:686
+#: ../src/extension.js:696
 msgid "Thundershowers"
 msgstr "Грозові зливи"
 
-#: ../src/extension.js:688
+#: ../src/extension.js:698
 msgid "Snow showers"
 msgstr "Снігопад"
 
-#: ../src/extension.js:690
+#: ../src/extension.js:700
 msgid "Isolated thundershowers"
 msgstr "Поодинокі грозові зливи"
 
-#: ../src/extension.js:693
+#: ../src/extension.js:703
 msgid "Not available"
 msgstr "Недоступно"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Monday"
 msgstr "Понеділок"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Tuesday"
 msgstr "Вівторок"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Wednesday"
 msgstr "Середа"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Thursday"
 msgstr "Четвер"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Friday"
 msgstr "П’ятниця"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Saturday"
 msgstr "Субота"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Sunday"
 msgstr "Неділя"
 
-#: ../src/extension.js:872
+#: ../src/extension.js:814
 msgid "Today"
 msgstr "Сьогодні"
 
-#: ../src/extension.js:872
+#: ../src/extension.js:814
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: ../src/extension.js:914
+#: ../src/extension.js:827
+msgid "Yesterday"
+msgstr ""
+
+#: ../src/extension.js:832 ../src/extension.js:840
+msgid "days ago"
+msgstr ""
+
+#: ../src/extension.js:953
 msgid "Loading current weather ..."
 msgstr "Завантаження поточної погоди ..."
 
-#: ../src/extension.js:915
+#: ../src/extension.js:954
 msgid "Loading future weather ..."
 msgstr "Завантаження прогнозу погоди ..."
 
-#: ../src/extension.js:945
+#: ../src/extension.js:991
 msgid "Loading ..."
 msgstr "Завантаження ..."
 
-#: ../src/extension.js:948
+#: ../src/extension.js:994
 msgid "Please wait"
 msgstr "Зачекайте"
 
-#: ../src/extension.js:990
+#: ../src/extension.js:1039
 msgid "Feel like:"
 msgstr ""
 
-#: ../src/extension.js:992
+#: ../src/extension.js:1041
 msgid "Humidity:"
 msgstr "Вологість:"
 
-#: ../src/extension.js:994
+#: ../src/extension.js:1043
 msgid "Pressure:"
 msgstr "Тиск:"
 
-#: ../src/extension.js:996
+#: ../src/extension.js:1045
 msgid "Wind:"
 msgstr "Вітер:"
 
@@ -278,47 +286,47 @@ msgstr "Вітер:"
 msgid "Name of the city"
 msgstr ""
 
-#: ../src/weather-settings.js.in:196
+#: ../src/weather-settings.js.in:190
 #, python-format
 msgid "Remove %s ?"
 msgstr ""
 
-#: ../src/weather-settings.js.in:614
+#: ../src/weather-settings.js.in:608
 msgid "Temperature Unit"
 msgstr "Температура:"
 
-#: ../src/weather-settings.js.in:616
+#: ../src/weather-settings.js.in:610
 msgid "Wind Speed Unit"
 msgstr ""
 
-#: ../src/weather-settings.js.in:618
+#: ../src/weather-settings.js.in:612
 msgid "Position in Panel"
 msgstr ""
 
-#: ../src/weather-settings.js.in:619
+#: ../src/weather-settings.js.in:613
 msgid "Center"
 msgstr ""
 
-#: ../src/weather-settings.js.in:619
+#: ../src/weather-settings.js.in:613
 msgid "Right"
 msgstr ""
 
-#: ../src/weather-settings.js.in:619
+#: ../src/weather-settings.js.in:613
 msgid "Left"
 msgstr ""
 
-#: ../src/weather-settings.js.in:620
+#: ../src/weather-settings.js.in:614
 msgid "Translate Conditions"
 msgstr ""
 
-#: ../src/weather-settings.js.in:622
+#: ../src/weather-settings.js.in:616
 msgid "Symbolic Icons"
 msgstr ""
 
-#: ../src/weather-settings.js.in:624
+#: ../src/weather-settings.js.in:618
 msgid "Temperature in Panel"
 msgstr "Температура:"
 
-#: ../src/weather-settings.js.in:626
+#: ../src/weather-settings.js.in:620
 msgid "Conditions in Panel"
 msgstr ""

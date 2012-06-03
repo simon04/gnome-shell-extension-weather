@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-16 03:37+0200\n"
+"POT-Creation-Date: 2012-06-03 14:09+0200\n"
 "PO-Revision-Date: 2012-05-13 22:38+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: Español; Castellano <zodiac_es@yahoo.es>\n"
@@ -21,257 +21,265 @@ msgstr ""
 msgid "..."
 msgstr "..."
 
-#: ../src/extension.js:137 ../src/extension.js:204
-#: ../src/weather-settings.js.in:278
+#: ../src/extension.js:174
+msgid "Reload Weather Information"
+msgstr ""
+
+#: ../src/extension.js:178 ../src/weather-settings.js.in:570
+msgid "Weather Settings"
+msgstr ""
+
+#: ../src/extension.js:198 ../src/extension.js:207
+#: ../src/weather-settings.js.in:272
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: ../src/extension.js:180
-msgid "Reload Weather Information"
-msgstr ""
-
-#: ../src/extension.js:184 ../src/weather-settings.js.in:576
-msgid "Weather Settings"
-msgstr ""
-
-#: ../src/extension.js:413 ../src/weather-settings.js.in:460
+#: ../src/extension.js:423 ../src/weather-settings.js.in:454
 msgid "Invalid city"
 msgstr ""
 
-#: ../src/extension.js:600
+#: ../src/extension.js:610
 msgid "Tornado"
 msgstr "Tornado"
 
-#: ../src/extension.js:602
+#: ../src/extension.js:612
 msgid "Tropical storm"
 msgstr "Tormenta tropical"
 
-#: ../src/extension.js:604
+#: ../src/extension.js:614
 msgid "Hurricane"
 msgstr "Huracán"
 
-#: ../src/extension.js:606
+#: ../src/extension.js:616
 msgid "Severe thunderstorms"
 msgstr "Tormentas severas"
 
-#: ../src/extension.js:608
+#: ../src/extension.js:618
 msgid "Thunderstorms"
 msgstr "Tormentas"
 
-#: ../src/extension.js:610
+#: ../src/extension.js:620
 msgid "Mixed rain and snow"
 msgstr "Lluvia y nieve"
 
-#: ../src/extension.js:612
+#: ../src/extension.js:622
 msgid "Mixed rain and sleet"
 msgstr "Granizo y lluvia"
 
-#: ../src/extension.js:614
+#: ../src/extension.js:624
 msgid "Mixed snow and sleet"
 msgstr "Granizo y nieve"
 
-#: ../src/extension.js:616
+#: ../src/extension.js:626
 msgid "Freezing drizzle"
 msgstr "Lluvia con heladas"
 
-#: ../src/extension.js:618
+#: ../src/extension.js:628
 msgid "Drizzle"
 msgstr "Llovizna"
 
-#: ../src/extension.js:620
+#: ../src/extension.js:630
 msgid "Freezing rain"
 msgstr "Lluvia con heladas"
 
-#: ../src/extension.js:622 ../src/extension.js:624
+#: ../src/extension.js:632 ../src/extension.js:634
 msgid "Showers"
 msgstr "Lluvias"
 
-#: ../src/extension.js:626
+#: ../src/extension.js:636
 msgid "Snow flurries"
 msgstr "Nieve"
 
-#: ../src/extension.js:628
+#: ../src/extension.js:638
 msgid "Light snow showers"
 msgstr "Nieve"
 
-#: ../src/extension.js:630
+#: ../src/extension.js:640
 msgid "Blowing snow"
 msgstr "Nieve"
 
-#: ../src/extension.js:632
+#: ../src/extension.js:642
 msgid "Snow"
 msgstr "Nieve"
 
-#: ../src/extension.js:634
+#: ../src/extension.js:644
 msgid "Hail"
 msgstr "Granizo"
 
-#: ../src/extension.js:636
+#: ../src/extension.js:646
 msgid "Sleet"
 msgstr "Granizo"
 
-#: ../src/extension.js:638
+#: ../src/extension.js:648
 msgid "Dust"
 msgstr "Niebla"
 
-#: ../src/extension.js:640
+#: ../src/extension.js:650
 msgid "Foggy"
 msgstr "Bruma"
 
-#: ../src/extension.js:642
+#: ../src/extension.js:652
 msgid "Haze"
 msgstr "Neblina"
 
-#: ../src/extension.js:644
+#: ../src/extension.js:654
 msgid "Smoky"
 msgstr "Niebla"
 
-#: ../src/extension.js:646
+#: ../src/extension.js:656
 msgid "Blustery"
 msgstr "Ráfagas de viento"
 
-#: ../src/extension.js:648
+#: ../src/extension.js:658
 msgid "Windy"
 msgstr "Ventoso"
 
-#: ../src/extension.js:650
+#: ../src/extension.js:660
 msgid "Cold"
 msgstr "Fría"
 
-#: ../src/extension.js:652
+#: ../src/extension.js:662
 msgid "Cloudy"
 msgstr "Nublado"
 
-#: ../src/extension.js:655
+#: ../src/extension.js:665
 msgid "Mostly cloudy"
 msgstr "Muy nublado"
 
-#: ../src/extension.js:658 ../src/extension.js:684
+#: ../src/extension.js:668 ../src/extension.js:694
 msgid "Partly cloudy"
 msgstr "Parcialmente nublado"
 
-#: ../src/extension.js:660
+#: ../src/extension.js:670
 msgid "Clear"
 msgstr "Despejado"
 
-#: ../src/extension.js:662
+#: ../src/extension.js:672
 msgid "Sunny"
 msgstr "Soleado"
 
-#: ../src/extension.js:665
+#: ../src/extension.js:675
 msgid "Fair"
 msgstr "Despejado"
 
-#: ../src/extension.js:667
+#: ../src/extension.js:677
 msgid "Mixed rain and hail"
 msgstr "Lluvia y granizo"
 
-#: ../src/extension.js:669
+#: ../src/extension.js:679
 msgid "Hot"
 msgstr "Caluroso"
 
-#: ../src/extension.js:671
+#: ../src/extension.js:681
 msgid "Isolated thunderstorms"
 msgstr "Tormentas locales"
 
-#: ../src/extension.js:674
+#: ../src/extension.js:684
 msgid "Scattered thunderstorms"
 msgstr "Tormentas aisladas"
 
-#: ../src/extension.js:676
+#: ../src/extension.js:686
 msgid "Scattered showers"
 msgstr "Lluvias aisladas"
 
-#: ../src/extension.js:678 ../src/extension.js:682
+#: ../src/extension.js:688 ../src/extension.js:692
 msgid "Heavy snow"
 msgstr "Fuerte nevada"
 
-#: ../src/extension.js:680
+#: ../src/extension.js:690
 msgid "Scattered snow showers"
 msgstr "Nevadas aisladas"
 
-#: ../src/extension.js:686
+#: ../src/extension.js:696
 msgid "Thundershowers"
 msgstr "Tormentas"
 
-#: ../src/extension.js:688
+#: ../src/extension.js:698
 msgid "Snow showers"
 msgstr "Nevadas"
 
-#: ../src/extension.js:690
+#: ../src/extension.js:700
 msgid "Isolated thundershowers"
 msgstr "Tormentas aisladas"
 
-#: ../src/extension.js:693
+#: ../src/extension.js:703
 msgid "Not available"
 msgstr "No disponible"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Monday"
 msgstr "Lunes"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Tuesday"
 msgstr "Martes"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Wednesday"
 msgstr "Miércoles"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Thursday"
 msgstr "Jueves"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Friday"
 msgstr "Viernes"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Saturday"
 msgstr "Sábado"
 
-#: ../src/extension.js:708
+#: ../src/extension.js:718
 msgid "Sunday"
 msgstr "Domingo"
 
-#: ../src/extension.js:872
+#: ../src/extension.js:814
 msgid "Today"
 msgstr "Hoy"
 
-#: ../src/extension.js:872
+#: ../src/extension.js:814
 msgid "Tomorrow"
 msgstr "Mañana"
 
-#: ../src/extension.js:914
+#: ../src/extension.js:827
+msgid "Yesterday"
+msgstr ""
+
+#: ../src/extension.js:832 ../src/extension.js:840
+msgid "days ago"
+msgstr ""
+
+#: ../src/extension.js:953
 msgid "Loading current weather ..."
 msgstr "Cargando la meteorología actual..."
 
-#: ../src/extension.js:915
+#: ../src/extension.js:954
 msgid "Loading future weather ..."
 msgstr "Cargando la meteorología futura..."
 
-#: ../src/extension.js:945
+#: ../src/extension.js:991
 msgid "Loading ..."
 msgstr "Cargando..."
 
-#: ../src/extension.js:948
+#: ../src/extension.js:994
 msgid "Please wait"
 msgstr "Espere un momento"
 
-#: ../src/extension.js:990
+#: ../src/extension.js:1039
 msgid "Feel like:"
 msgstr ""
 
-#: ../src/extension.js:992
+#: ../src/extension.js:1041
 msgid "Humidity:"
 msgstr "Humedad"
 
-#: ../src/extension.js:994
+#: ../src/extension.js:1043
 msgid "Pressure:"
 msgstr "Presión:"
 
-#: ../src/extension.js:996
+#: ../src/extension.js:1045
 msgid "Wind:"
 msgstr "Viento:"
 
@@ -279,47 +287,47 @@ msgstr "Viento:"
 msgid "Name of the city"
 msgstr ""
 
-#: ../src/weather-settings.js.in:196
+#: ../src/weather-settings.js.in:190
 #, python-format
 msgid "Remove %s ?"
 msgstr ""
 
-#: ../src/weather-settings.js.in:614
+#: ../src/weather-settings.js.in:608
 msgid "Temperature Unit"
 msgstr "Temperatura:"
 
-#: ../src/weather-settings.js.in:616
+#: ../src/weather-settings.js.in:610
 msgid "Wind Speed Unit"
 msgstr ""
 
-#: ../src/weather-settings.js.in:618
+#: ../src/weather-settings.js.in:612
 msgid "Position in Panel"
 msgstr ""
 
-#: ../src/weather-settings.js.in:619
+#: ../src/weather-settings.js.in:613
 msgid "Center"
 msgstr ""
 
-#: ../src/weather-settings.js.in:619
+#: ../src/weather-settings.js.in:613
 msgid "Right"
 msgstr ""
 
-#: ../src/weather-settings.js.in:619
+#: ../src/weather-settings.js.in:613
 msgid "Left"
 msgstr ""
 
-#: ../src/weather-settings.js.in:620
+#: ../src/weather-settings.js.in:614
 msgid "Translate Conditions"
 msgstr ""
 
-#: ../src/weather-settings.js.in:622
+#: ../src/weather-settings.js.in:616
 msgid "Symbolic Icons"
 msgstr ""
 
-#: ../src/weather-settings.js.in:624
+#: ../src/weather-settings.js.in:618
 msgid "Temperature in Panel"
 msgstr "Temperatura:"
 
-#: ../src/weather-settings.js.in:626
+#: ../src/weather-settings.js.in:620
 msgid "Conditions in Panel"
 msgstr ""
