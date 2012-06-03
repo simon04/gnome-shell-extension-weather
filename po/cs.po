@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-03 14:09+0200\n"
-"PO-Revision-Date: 2012-05-13 22:37+0100\n"
-"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
+"PO-Revision-Date: 2012-06-03 16:14+0200\n"
+"Last-Translator: Lukáš Maňas <lukas.manas@gmail.com>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "Schéma \"%s\" nenalezeno."
 
 #: ../src/extension.js:423 ../src/weather-settings.js.in:454
 msgid "Invalid city"
-msgstr ""
+msgstr "Neplatné město"
 
 #: ../src/extension.js:610
 msgid "Tornado"
@@ -65,11 +65,11 @@ msgstr "Déšť se sněhem"
 
 #: ../src/extension.js:622
 msgid "Mixed rain and sleet"
-msgstr "Déšť se sněhem"
+msgstr "Déšť s plískanicí"
 
 #: ../src/extension.js:624
 msgid "Mixed snow and sleet"
-msgstr "Déšť se sněhem"
+msgstr "Sníh s plískanicí"
 
 #: ../src/extension.js:626
 msgid "Freezing drizzle"
@@ -109,7 +109,7 @@ msgstr "Kroupy"
 
 #: ../src/extension.js:646
 msgid "Sleet"
-msgstr "Déšť se sněhem"
+msgstr "Plískanice"
 
 #: ../src/extension.js:648
 msgid "Dust"
@@ -145,7 +145,7 @@ msgstr "Zataženo"
 
 #: ../src/extension.js:665
 msgid "Mostly cloudy"
-msgstr "Oblačno"
+msgstr "Převážně zataženo"
 
 #: ../src/extension.js:668 ../src/extension.js:694
 msgid "Partly cloudy"
@@ -245,11 +245,11 @@ msgstr "Zítra"
 
 #: ../src/extension.js:827
 msgid "Yesterday"
-msgstr ""
+msgstr "Včera"
 
 #: ../src/extension.js:832 ../src/extension.js:840
 msgid "days ago"
-msgstr ""
+msgstr "dní zpátky"
 
 #: ../src/extension.js:953
 msgid "Loading current weather ..."
@@ -331,6 +331,3 @@ msgstr "Zobrazit na panelu teplotu"
 #: ../src/weather-settings.js.in:620
 msgid "Conditions in Panel"
 msgstr "Zobrazit na panelu podmínky"
-
-#~ msgid "Reload Weather Informations"
-#~ msgstr "Obnovit informace o počasí"
