@@ -829,7 +829,7 @@ WeatherMenuButton.prototype = {
 		date_string[0] = lastBuild;
 			if(d > 1)
 			{
-			lastBuild = d+" "+_("days ago");
+			lastBuild = _("%s days ago").replace("%s",d);
 				if(d == 2)
 				{
 				date_string[1] = date_string[0];
@@ -837,7 +837,7 @@ WeatherMenuButton.prototype = {
 				}
 				else
 				{
-				date_string[1] = (d-1)+" "+_("days ago");
+				date_string[1] = _("%s days ago").replace("%s",d-1);
 				date_string[0] = lastBuild;
 				}
 			}

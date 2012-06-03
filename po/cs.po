@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-03 14:09+0200\n"
-"PO-Revision-Date: 2012-06-03 16:14+0200\n"
-"Last-Translator: Lukáš Maňas <lukas.manas@gmail.com>\n"
+"POT-Creation-Date: 2012-06-03 23:01+0200\n"
+"PO-Revision-Date: 2012-06-03 23:07+0100\n"
+"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -25,17 +25,20 @@ msgstr "…"
 msgid "Reload Weather Information"
 msgstr "Obnovit informace o počasí"
 
-#: ../src/extension.js:178 ../src/weather-settings.js.in:570
+#: ../src/extension.js:178
+#: ../src/weather-settings.js.in:570
 msgid "Weather Settings"
 msgstr "Nastavení"
 
-#: ../src/extension.js:198 ../src/extension.js:207
+#: ../src/extension.js:198
+#: ../src/extension.js:207
 #: ../src/weather-settings.js.in:272
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Schéma \"%s\" nenalezeno."
 
-#: ../src/extension.js:423 ../src/weather-settings.js.in:454
+#: ../src/extension.js:423
+#: ../src/weather-settings.js.in:454
 msgid "Invalid city"
 msgstr "Neplatné město"
 
@@ -83,7 +86,8 @@ msgstr "Mrholení"
 msgid "Freezing rain"
 msgstr "Namrzající déšť"
 
-#: ../src/extension.js:632 ../src/extension.js:634
+#: ../src/extension.js:632
+#: ../src/extension.js:634
 msgid "Showers"
 msgstr "Přeháňky"
 
@@ -147,7 +151,8 @@ msgstr "Zataženo"
 msgid "Mostly cloudy"
 msgstr "Převážně zataženo"
 
-#: ../src/extension.js:668 ../src/extension.js:694
+#: ../src/extension.js:668
+#: ../src/extension.js:694
 msgid "Partly cloudy"
 msgstr "Polojasno"
 
@@ -183,7 +188,8 @@ msgstr "Občasné bouřky"
 msgid "Scattered showers"
 msgstr "Občasné přeháňky"
 
-#: ../src/extension.js:688 ../src/extension.js:692
+#: ../src/extension.js:688
+#: ../src/extension.js:692
 msgid "Heavy snow"
 msgstr "Husté sněžení"
 
@@ -247,9 +253,11 @@ msgstr "Zítra"
 msgid "Yesterday"
 msgstr "Včera"
 
-#: ../src/extension.js:832 ../src/extension.js:840
-msgid "days ago"
-msgstr "dní zpátky"
+#: ../src/extension.js:832
+#: ../src/extension.js:840
+#, python-format
+msgid "%s days ago"
+msgstr "%s dní zpátky"
 
 #: ../src/extension.js:953
 msgid "Loading current weather ..."
@@ -331,3 +339,4 @@ msgstr "Zobrazit na panelu teplotu"
 #: ../src/weather-settings.js.in:620
 msgid "Conditions in Panel"
 msgstr "Zobrazit na panelu podmínky"
+

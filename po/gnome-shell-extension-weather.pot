@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-03 14:09+0200\n"
+"POT-Creation-Date: 2012-06-03 23:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -248,7 +248,8 @@ msgid "Yesterday"
 msgstr ""
 
 #: ../src/extension.js:832 ../src/extension.js:840
-msgid "days ago"
+#, python-format
+msgid "%s days ago"
 msgstr ""
 
 #: ../src/extension.js:953

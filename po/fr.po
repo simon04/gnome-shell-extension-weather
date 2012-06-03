@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-03 14:09+0200\n"
-"PO-Revision-Date: 2012-06-03 14:10+0100\n"
+"POT-Creation-Date: 2012-06-03 23:01+0200\n"
+"PO-Revision-Date: 2012-06-03 23:02+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: Français <ecyrbe@gmail.com>\n"
 "Language: fr\n"
@@ -257,8 +257,9 @@ msgstr "Hier"
 
 #: ../src/extension.js:832
 #: ../src/extension.js:840
-msgid "days ago"
-msgstr "jours"
+#, python-format
+msgid "%s days ago"
+msgstr "Il y a %s jours"
 
 #: ../src/extension.js:953
 msgid "Loading current weather ..."
