@@ -872,7 +872,7 @@ WeatherMenuButton.prototype = {
 
 	    this._weatherInfo.text = weatherInfoC + ((weatherInfoC)?" ":"") + weatherInfoT;
 
-            this._currentWeatherSummary.text = comment + ", " + weather_c.temp + ' ' + this.unit_to_unicode();
+            this._currentWeatherSummary.text = comment + ", " + temperature + ' ' + this.unit_to_unicode();
             this._currentWeatherLocation.text = location;
             this._currentWeatherTemperature.text = chill + ' ' + this.unit_to_unicode();
             this._currentWeatherHumidity.text = humidity;
