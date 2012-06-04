@@ -606,7 +606,7 @@ WeatherSetting.prototype =
 
 	this.initConfigWidget();
 	this.addLabel(_("Temperature Unit"));
-	this.addComboBox(["°C","°F"],"units");
+	this.addComboBox(["°C","°F","K"],"units");
 	this.addLabel(_("Wind Speed Unit"));
 	this.addComboBox(["km/h","mph","m/s","knots"],"wind_speed_unit");
 	this.addLabel(_("Position in Panel"));

@@ -2,6 +2,7 @@
   <enum id="org.gnome.shell.extensions.weather.unit">
     <value nick="celsius" value="0" />
     <value nick="fahrenheit" value="1" />
+    <value nick="kelvin" value="2" />
   </enum>
   <enum id="org.gnome.shell.extensions.weather.wind-speed-unit">
     <value nick="kph" value="0" />

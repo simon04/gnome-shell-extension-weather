@@ -63,7 +63,8 @@ const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
 // Keep enums in sync with GSettings schemas
 const WeatherUnits = {
     CELSIUS: 0,
-    FAHRENHEIT: 1
+    FAHRENHEIT: 1,
+    KELVIN: 2
 }
 
 const WeatherWindSpeedUnits = {
@@ -478,7 +479,12 @@ WeatherMenuButton.prototype = {
     },
 
     unit_to_unicode: function() {
-        return this._units == WeatherUnits.FAHRENHEIT ? '\u2109' : '\u2103';
+	if(this._units == WeatherUnits.FAHRENHEIT)
+	return '\u2109';
+	else if(this._units == WeatherUnits.KELVIN)
+	return 'K';
+	else
+	return '\u2103';
     },
 
     get_weather_url: function() {
@@ -704,6 +710,10 @@ WeatherMenuButton.prototype = {
         }
     },
 
+    toKelvin: function(c) {
+    return String(Math.round(Number(c)+273.15));
+    },
+
     parse_day: function(abr) {
         let yahoo_days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
         for (var i = 0; i < yahoo_days.length; i++) {
@@ -813,6 +823,12 @@ WeatherMenuButton.prototype = {
 	    let d = Math.floor((actualDate.getTime()-lastBuildDate.getTime())/86400000);
             let date_string = [_('Today'), _('Tomorrow')];
 
+		if(this._units == WeatherUnits.KELVIN)
+		{
+		temperature = this.toKelvin(temperature);
+		chill = this.toKelvin(chill);
+		}
+
 		if(this._clockFormat == "24h")
 		{
 		sunrise = new Date("3 Mar 1999 "+sunrise);
@@ -916,6 +932,12 @@ WeatherMenuButton.prototype = {
                 let code = forecastData.code;
                 let t_low = forecastData.low;
                 let t_high = forecastData.high;
+
+		if(this._units == WeatherUnits.KELVIN)
+		{
+		t_low = this.toKelvin(t_low);
+		t_high = this.toKelvin(t_high);
+		}
 
                 let comment = forecastData.text;
                 if (this._translate_condition)
