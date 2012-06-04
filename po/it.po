@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-06-03 23:01+0200\n"
-"PO-Revision-Date: 2012-05-13 22:37+0100\n"
-"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
+"PO-Revision-Date: 2012-06-04 08:02+0200\n"
+"Last-Translator: Mattia Meneguzzo <odysseus@fedoraproject.org>\n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "Schema \"%s\" non trovato."
 
 #: ../src/extension.js:423 ../src/weather-settings.js.in:454
 msgid "Invalid city"
-msgstr ""
+msgstr "Località non valida"
 
 #: ../src/extension.js:610
 msgid "Tornado"
@@ -245,12 +245,12 @@ msgstr "Domani"
 
 #: ../src/extension.js:827
 msgid "Yesterday"
-msgstr ""
+msgstr "Ieri"
 
 #: ../src/extension.js:832 ../src/extension.js:840
 #, python-format
 msgid "%s days ago"
-msgstr ""
+msgstr "%s giorni fa"
 
 #: ../src/extension.js:953
 msgid "Loading current weather ..."
@@ -286,7 +286,7 @@ msgstr "Vento:"
 
 #: ../src/weather-settings.js.in:71
 msgid "Name of the city"
-msgstr "Nome della città"
+msgstr "Nome della località"
 
 #: ../src/weather-settings.js.in:190
 #, python-format
@@ -332,6 +332,3 @@ msgstr "Mostra la temperatura sul pannello"
 #: ../src/weather-settings.js.in:620
 msgid "Conditions in Panel"
 msgstr "Mostra le condizioni meteo sul pannello"
-
-#~ msgid "Reload Weather Informations"
-#~ msgstr "Ricarica le informazioni meteo"
