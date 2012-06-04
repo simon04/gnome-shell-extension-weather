@@ -40,7 +40,7 @@ Install **gnome-shell-extension-weather** with apt-rpm from Sisyphus.
 
 ### [Fedora](http://download1.rpmfusion.org/free/fedora/updates/testing/17/i386/repoview/gnome-shell-extension-weather.html)
 
-Packages for Fedora 16 and 17 are available in the [RPM Fusion](http://rpmfusion.org/RPM%20Fusion) repositories.
+Packages for Fedora 16 and 17 are available in the [RPM Fusion](http://rpmfusion.org/) repositories.
 
 If they are not enabled on your system, please follow [these instructions](http://rpmfusion.org/Configuration); then run the following command with root privileges: 
 	
