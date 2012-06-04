@@ -1,0 +1,334 @@
+# Lithuanian translation for gnome-shell-extension-weather
+# Copyright (c) Mantas Kriaučiūnas <mantas@akl.lt> 2012
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Mantas Kriaučiūnas <mantas@akl.lt>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extension-weather\n"
+"Report-Msgid-Bugs-To: Christian Louis Gabriel METZLER <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-06-03 23:01+0200\n"
+"PO-Revision-Date: 2012-06-04 15:57+0000\n"
+"Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-06-04 18:20+0000\n"
+"X-Generator: Launchpad (build 15353)\n"
+
+#: ../src/extension.js:102
+msgid "..."
+msgstr ""
+
+#: ../src/extension.js:174
+msgid "Reload Weather Information"
+msgstr "Atnaujinti orų informaciją"
+
+#: ../src/extension.js:178 ../src/weather-settings.js.in:570
+msgid "Weather Settings"
+msgstr "Nustatymai (vietovė ir kt.)"
+
+#: ../src/extension.js:198 ../src/extension.js:207
+#: ../src/weather-settings.js.in:272
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: ../src/extension.js:423 ../src/weather-settings.js.in:454
+msgid "Invalid city"
+msgstr "Netinkama vietovė"
+
+#: ../src/extension.js:610
+msgid "Tornado"
+msgstr "Viesulas (tornadas)"
+
+#: ../src/extension.js:612
+msgid "Tropical storm"
+msgstr "Tropinė audra"
+
+#: ../src/extension.js:614
+msgid "Hurricane"
+msgstr "Uraganas"
+
+#: ../src/extension.js:616
+msgid "Severe thunderstorms"
+msgstr "Smarki audra su perkūnija"
+
+#: ../src/extension.js:618
+msgid "Thunderstorms"
+msgstr "Perkūnija (audringa)"
+
+#: ../src/extension.js:620
+msgid "Mixed rain and snow"
+msgstr "Šlapdriba (lietus ir sniegas)"
+
+#: ../src/extension.js:622
+msgid "Mixed rain and sleet"
+msgstr "Lietus bei šlapdriba"
+
+#: ../src/extension.js:624
+msgid "Mixed snow and sleet"
+msgstr "Sniegas bei šlapdriba"
+
+#: ../src/extension.js:626
+msgid "Freezing drizzle"
+msgstr "Šąlanti dulksna"
+
+#: ../src/extension.js:628
+msgid "Drizzle"
+msgstr "Dulksna"
+
+#: ../src/extension.js:630
+msgid "Freezing rain"
+msgstr "Lijundra"
+
+#: ../src/extension.js:632 ../src/extension.js:634
+msgid "Showers"
+msgstr "Liūtys"
+
+#: ../src/extension.js:636
+msgid "Snow flurries"
+msgstr "Sniego šuorai"
+
+#: ../src/extension.js:638
+msgid "Light snow showers"
+msgstr "Nedidelės pūgos"
+
+#: ../src/extension.js:640
+msgid "Blowing snow"
+msgstr "Pustomas sniegas"
+
+#: ../src/extension.js:642
+msgid "Snow"
+msgstr "Sniegas"
+
+#: ../src/extension.js:644
+msgid "Hail"
+msgstr "Kruša"
+
+#: ../src/extension.js:646
+msgid "Sleet"
+msgstr "Šlapdriba"
+
+#: ../src/extension.js:648
+msgid "Dust"
+msgstr ""
+
+#: ../src/extension.js:650
+msgid "Foggy"
+msgstr ""
+
+#: ../src/extension.js:652
+msgid "Haze"
+msgstr ""
+
+#: ../src/extension.js:654
+msgid "Smoky"
+msgstr ""
+
+#: ../src/extension.js:656
+msgid "Blustery"
+msgstr "Audringa"
+
+#: ../src/extension.js:658
+msgid "Windy"
+msgstr "Vėjuota"
+
+#: ../src/extension.js:660
+msgid "Cold"
+msgstr ""
+
+#: ../src/extension.js:662
+msgid "Cloudy"
+msgstr "Debesuota"
+
+#: ../src/extension.js:665
+msgid "Mostly cloudy"
+msgstr "Daugiausiai debesuota"
+
+#: ../src/extension.js:668 ../src/extension.js:694
+msgid "Partly cloudy"
+msgstr "Debesuota su pragiedruliais"
+
+#: ../src/extension.js:670
+msgid "Clear"
+msgstr "Giedra"
+
+#: ../src/extension.js:672
+msgid "Sunny"
+msgstr "Saulėta"
+
+#: ../src/extension.js:675
+msgid "Fair"
+msgstr "Gražus oras"
+
+#: ../src/extension.js:677
+msgid "Mixed rain and hail"
+msgstr "Lietus su kruša"
+
+#: ../src/extension.js:679
+msgid "Hot"
+msgstr "Karšta"
+
+#: ../src/extension.js:681
+msgid "Isolated thunderstorms"
+msgstr "Vietomis perkūnija"
+
+#: ../src/extension.js:684
+msgid "Scattered thunderstorms"
+msgstr "Vietomis perkūnija"
+
+#: ../src/extension.js:686
+msgid "Scattered showers"
+msgstr "Vietomis liūtys"
+
+#: ../src/extension.js:688 ../src/extension.js:692
+msgid "Heavy snow"
+msgstr "Stipriai sninga"
+
+#: ../src/extension.js:690
+msgid "Scattered snow showers"
+msgstr "Vietomis pūgos"
+
+#: ../src/extension.js:696
+msgid "Thundershowers"
+msgstr "Liūtys su perkūnija"
+
+#: ../src/extension.js:698
+msgid "Snow showers"
+msgstr ""
+
+#: ../src/extension.js:700
+msgid "Isolated thundershowers"
+msgstr "Pavienės liūtys su perkūnija"
+
+#: ../src/extension.js:703
+msgid "Not available"
+msgstr "Neprieinama"
+
+#: ../src/extension.js:718
+msgid "Monday"
+msgstr "Pirmadienis"
+
+#: ../src/extension.js:718
+msgid "Tuesday"
+msgstr "Antradienis"
+
+#: ../src/extension.js:718
+msgid "Wednesday"
+msgstr "Trečiadienis"
+
+#: ../src/extension.js:718
+msgid "Thursday"
+msgstr "Ketvirtadienis"
+
+#: ../src/extension.js:718
+msgid "Friday"
+msgstr "Penktadienis"
+
+#: ../src/extension.js:718
+msgid "Saturday"
+msgstr "Šeštadienis"
+
+#: ../src/extension.js:718
+msgid "Sunday"
+msgstr "Sekmadienis"
+
+#: ../src/extension.js:814
+msgid "Today"
+msgstr "Šiandien"
+
+#: ../src/extension.js:814
+msgid "Tomorrow"
+msgstr "Rytoj"
+
+#: ../src/extension.js:827
+msgid "Yesterday"
+msgstr "Vakar"
+
+#: ../src/extension.js:832 ../src/extension.js:840
+#, python-format
+msgid "%s days ago"
+msgstr "Prieš %s dienas"
+
+#: ../src/extension.js:953
+msgid "Loading current weather ..."
+msgstr ""
+
+#: ../src/extension.js:954
+msgid "Loading future weather ..."
+msgstr ""
+
+#: ../src/extension.js:991
+msgid "Loading ..."
+msgstr "Įkeliama..."
+
+#: ../src/extension.js:994
+msgid "Please wait"
+msgstr "Palaukite"
+
+#: ../src/extension.js:1039
+msgid "Feel like:"
+msgstr "Jaučiama kaip:"
+
+#: ../src/extension.js:1041
+msgid "Humidity:"
+msgstr "Drėgnumas:"
+
+#: ../src/extension.js:1043
+msgid "Pressure:"
+msgstr "Slėgis:"
+
+#: ../src/extension.js:1045
+msgid "Wind:"
+msgstr "Vėjas:"
+
+#: ../src/weather-settings.js.in:71
+msgid "Name of the city"
+msgstr "Vietovės pavadinimas"
+
+#: ../src/weather-settings.js.in:190
+#, python-format
+msgid "Remove %s ?"
+msgstr "Pašalinti %s ?"
+
+#: ../src/weather-settings.js.in:608
+msgid "Temperature Unit"
+msgstr "Temperatūros vienetai"
+
+#: ../src/weather-settings.js.in:610
+msgid "Wind Speed Unit"
+msgstr "Vėjo greičio vienetai"
+
+#: ../src/weather-settings.js.in:612
+msgid "Position in Panel"
+msgstr "Padėtis skydelyje"
+
+#: ../src/weather-settings.js.in:613
+msgid "Center"
+msgstr "Centre"
+
+#: ../src/weather-settings.js.in:613
+msgid "Right"
+msgstr "Dešinėje"
+
+#: ../src/weather-settings.js.in:613
+msgid "Left"
+msgstr "Kairėje"
+
+#: ../src/weather-settings.js.in:614
+msgid "Translate Conditions"
+msgstr "Versti oro sąlygas"
+
+#: ../src/weather-settings.js.in:616
+msgid "Symbolic Icons"
+msgstr ""
+
+#: ../src/weather-settings.js.in:618
+msgid "Temperature in Panel"
+msgstr "Rodyti temperatūrą skydelyje"
+
+#: ../src/weather-settings.js.in:620
+msgid "Conditions in Panel"
+msgstr "Rodyti oro sąlygas skydelyje"
