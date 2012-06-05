@@ -14,12 +14,11 @@ Currently, the weather report, including forecasts for today and tomorrow, is fe
 
 ## Through a package manager
 
-### [Ubuntu](https://launchpad.net/~xeked/+archive/gnome/+packages)
+### [Ubuntu, Mint, Debian and derivatives](https://launchpad.net/~gnome-shell-extensions/+archive/ppa/+packages)
 
-Add the PPA **ppa:xeked/gnome** to your source list, import the key **0B5C004838624188** from `keyserver.ubuntu.com`, update the package list and install **gnome-shell-extension-weather**:
+Add the PPA **ppa:gnome-shell-extensions** to your source list, update the package list and install **gnome-shell-extension-weather**:
 
-	sudo add-apt-repository ppa:xeked/gnome
-	sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0B5C004838624188
+	sudo add-apt-repository ppa:gnome-shell-extensions
 	sudo apt-get update
 	sudo apt-get install gnome-shell-extension-weather
 	
