@@ -18,7 +18,7 @@ msgstr ""
 
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Schéma \"%s\" nenájdená."
 
 msgid "..."
 msgstr "..."
@@ -171,28 +171,28 @@ msgid "Sunday"
 msgstr "Nedeľa"
 
 msgid "N"
-msgstr ""
+msgstr "S"
 
 msgid "NE"
-msgstr ""
+msgstr "SV"
 
 msgid "E"
-msgstr ""
+msgstr "V"
 
 msgid "SE"
-msgstr ""
+msgstr "JV"
 
 msgid "S"
-msgstr ""
+msgstr "J"
 
 msgid "SW"
-msgstr ""
+msgstr "JZ"
 
 msgid "W"
-msgstr ""
+msgstr "Z"
 
 msgid "NW"
-msgstr ""
+msgstr "SZ"
 
 msgid "Today"
 msgstr "Dnes"
@@ -213,10 +213,10 @@ msgid "Please wait"
 msgstr "Prosím, čakajte"
 
 msgid "Sunrise"
-msgstr ""
+msgstr "Východ slnka"
 
 msgid "Sunset"
-msgstr ""
+msgstr "Západ slnka"
 
 msgid "Temperature:"
 msgstr "Teplota:"
