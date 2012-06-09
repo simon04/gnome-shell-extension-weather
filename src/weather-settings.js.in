@@ -119,14 +119,18 @@ WeatherSetting.prototype =
 		testLocation(location);
 			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?q=select woeid,name,admin1,country from geo.places where text = "*'+location+'*" or text = "'+location+'" limit 10&format=json'),function()
 			{
+				if(!arguments[0])
+				return 0;
 			var city = arguments[0].query;
-				if(Number(city.count) > 0)
+			var n = Number(city.count);
+				if(n > 0)
 				city = city.results.place;
 				else
 				return 0;
 			var iter = that.iter;
 			completionModel.clear();
-				if(typeof city.woeid == "undefined")
+
+				if(n > 1)
 				{
 					for(var i in city)
 					{
@@ -151,8 +155,14 @@ WeatherSetting.prototype =
 				else
 				{
 				var current = completionModel.append(iter).iter;
-				var cityText = city.name+", "+city.admin1.content+", "+city.country.code;
+				var cityText = city.name;
+					if(city.admin1)
+					cityText += ", "+city.admin1.content;
+
+					if(city.country)
+					cityText += ", "+city.country.code;
 				completionModel.set_value(current,0,cityText);
+				completion.complete();
 				}
 			testLocation(location);
 			});
@@ -168,15 +178,22 @@ WeatherSetting.prototype =
 				that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where text = "'+entry.get_text()+'" limit 1'),function()
 				{
 				var city = arguments[0].query;
-					if(typeof city == "object" && typeof city.results == "object")
+					if(Number(city.count) > 0)
 					city = city.results.place;
 					else
 					return 0;
 
+				var cityText = city.name;
+					if(city.admin1)
+					cityText += ", "+city.admin1.content;
+
+					if(city.country)
+					cityText += ", "+city.country.code;
+
 					if(that.city)
-					that.city = that.city+" && "+city.woeid+">"+city.name+", "+city.admin1.content+", "+city.country.code;
+					that.city = that.city+" && "+city.woeid+">"+cityText;
 					else
-					that.city = city.woeid+">"+city.name+", "+city.admin1.content+", "+city.country.code;
+					that.city = city.woeid+">"+cityText;
 				});
 			}
 		dialog.hide();

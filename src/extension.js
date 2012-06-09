@@ -453,7 +453,13 @@ WeatherMenuButton.prototype = {
 					city = city.results.place;
 					else
 					return 0;
-				let cityText = city.woeid+">"+city.name+", "+city.admin1.content+", "+city.country.code;
+				let cityText = city.woeid+">"+city.name;
+					if(city.admin1)
+					cityText += ", "+city.admin1.content;
+
+					if(city.country)
+					cityText += ", "+city.country.code;
+
 				cities.splice(a,1,cityText);
 				cities = cities.join(" && ");
 					if(typeof cities != "string")
