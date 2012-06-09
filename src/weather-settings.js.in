@@ -107,7 +107,7 @@ WeatherSetting.prototype =
 			{
 			d.sensitive = 0;
 			var city = arguments[0].query;
-				if(typeof city == "object" && city.results == null)
+				if(Number(city.count) == 0)
 				return 0;
 			d.sensitive = 1;
 			});
@@ -117,11 +117,10 @@ WeatherSetting.prototype =
 		{
 		var location = entry.get_text();
 		testLocation(location);
-
 			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?q=select woeid,name,admin1,country from geo.places where text = "*'+location+'*" or text = "'+location+'" limit 10&format=json'),function()
 			{
 			var city = arguments[0].query;
-				if(typeof city == "object" && typeof city.results == "object")
+				if(Number(city.count) > 0)
 				city = city.results.place;
 				else
 				return 0;
@@ -134,7 +133,13 @@ WeatherSetting.prototype =
 						if(typeof m == "undefined")
 						var m = {};
 					var current = completionModel.append(iter).iter;
-					var cityText = city[i].name+", "+city[i].admin1.content+", "+city[i].country.code;
+					var cityText = city[i].name;
+						if(city[i].admin1)
+						cityText += ", "+city[i].admin1.content;
+
+						if(city[i].country)
+						cityText += ", "+city[i].country.code;
+
 						if(m[cityText])
 						continue;
 						else
