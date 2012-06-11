@@ -24,9 +24,12 @@ Add the PPA **ppa:gnome-shell-extensions** to your source list, update the packa
 	
 ### [Fedora](http://download1.rpmfusion.org/free/fedora/updates/testing/17/i386/repoview/gnome-shell-extension-weather.html)
 
-Packages for Fedora 16 and 17 are available in the [RPM Fusion](http://rpmfusion.org/) repositories. If these are not enabled on your system, please follow [these instructions](http://rpmfusion.org/Configuration); then run the following command (with root privileges): 
-	
-	yum --enablerepo=rpmfusion-free-updates-testing install gnome-shell-extension-weather
+Packages for **Fedora 16** (*Verne*) and **Fedora 17** (*Beefy Miracle*) are available in the [RPM Fusion](http://rpmfusion.org/) repositories. If these are not enabled on your system, please install them through the following command (root password required):
+
+	su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
+Then, install *gnome-shell-extension-weather* (root password required):
+
+	su -c 'yum --enablerepo=rpmfusion-free-updates-testing install gnome-shell-extension-weather'
 
 ### [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
 
