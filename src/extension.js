@@ -203,6 +203,7 @@ WeatherMenuButton.prototype = {
 
 	loadConfigInterface : function()
 	{
+	var that = this;
 	var schemaInterface = "org.gnome.desktop.interface";
 	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
 		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
