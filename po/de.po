@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-03 23:01+0200\n"
-"PO-Revision-Date: 2012-05-13 22:38+0100\n"
-"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
+"POT-Creation-Date: 2012-06-20 15:01+0100\n"
+"PO-Revision-Date: 2012-05-20 15:01+0100\n"
+"Last-Translator: Stefan Jensen <sjensen@versanet.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -22,21 +22,21 @@ msgstr "..."
 
 #: ../src/extension.js:174
 msgid "Reload Weather Information"
-msgstr ""
+msgstr "Aktualisiere Wetterdaten"
 
 #: ../src/extension.js:178 ../src/weather-settings.js.in:570
 msgid "Weather Settings"
-msgstr ""
+msgstr "Programmeinstellungen ändern"
 
 #: ../src/extension.js:198 ../src/extension.js:207
 #: ../src/weather-settings.js.in:272
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Schema \"%s\" nicht gefunden."
 
 #: ../src/extension.js:423 ../src/weather-settings.js.in:454
 msgid "Invalid city"
-msgstr ""
+msgstr "Ungültige Ortschaft"
 
 #: ../src/extension.js:610
 msgid "Tornado"
@@ -244,12 +244,12 @@ msgstr "Morgen"
 
 #: ../src/extension.js:827
 msgid "Yesterday"
-msgstr ""
+msgstr "Gestern"
 
 #: ../src/extension.js:832 ../src/extension.js:840
 #, python-format
 msgid "%s days ago"
-msgstr ""
+msgstr "Vor %s Tag(en)"
 
 #: ../src/extension.js:953
 msgid "Loading current weather ..."
@@ -257,7 +257,7 @@ msgstr "Lade aktuelles Wetter ..."
 
 #: ../src/extension.js:954
 msgid "Loading future weather ..."
-msgstr "Lade zukünftiges Wetter ..."
+msgstr "Lade Wettervorhersage ..."
 
 #: ../src/extension.js:991
 msgid "Loading ..."
@@ -269,7 +269,7 @@ msgstr "Bitte warten"
 
 #: ../src/extension.js:1039
 msgid "Feel like:"
-msgstr ""
+msgstr "Gefühlte Temperatur:"
 
 #: ../src/extension.js:1041
 msgid "Humidity:"
@@ -285,49 +285,49 @@ msgstr "Windgeschwindigkeit:"
 
 #: ../src/weather-settings.js.in:71
 msgid "Name of the city"
-msgstr ""
+msgstr "Name der Ortschaft"
 
 #: ../src/weather-settings.js.in:190
 #, python-format
 msgid "Remove %s ?"
-msgstr ""
+msgstr "Enferne %s ?"
 
 #: ../src/weather-settings.js.in:608
 msgid "Temperature Unit"
-msgstr "Temperatur:"
+msgstr "Temperatureinheit"
 
 #: ../src/weather-settings.js.in:610
 msgid "Wind Speed Unit"
-msgstr ""
+msgstr "Windgeschwindigkeit"
 
 #: ../src/weather-settings.js.in:612
 msgid "Position in Panel"
-msgstr ""
+msgstr "Position im Panel"
 
 #: ../src/weather-settings.js.in:613
 msgid "Center"
-msgstr ""
+msgstr "Mitte"
 
 #: ../src/weather-settings.js.in:613
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: ../src/weather-settings.js.in:613
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: ../src/weather-settings.js.in:614
 msgid "Translate Conditions"
-msgstr ""
+msgstr "Wetterdaten übersetzen"
 
 #: ../src/weather-settings.js.in:616
 msgid "Symbolic Icons"
-msgstr ""
+msgstr "Eigene Wettersymbole"
 
 #: ../src/weather-settings.js.in:618
 msgid "Temperature in Panel"
-msgstr "Temperatur:"
+msgstr "Temperaturanzeige"
 
 #: ../src/weather-settings.js.in:620
 msgid "Conditions in Panel"
-msgstr ""
+msgstr "Textanzeige im Panel"
