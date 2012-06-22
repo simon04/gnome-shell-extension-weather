@@ -216,10 +216,10 @@ msgid "Please wait"
 msgstr "Patientez s'il vous plaît"
 
 msgid "Sunrise"
-msgstr ""
+msgstr "Lever du soleil "
 
 msgid "Sunset"
-msgstr ""
+msgstr "Coucher du soleil "
 
 msgid "Temperature:"
 msgstr "Température :"
