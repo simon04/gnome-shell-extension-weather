@@ -212,10 +212,10 @@ msgid "Please wait"
 msgstr "Bitte warten"
 
 msgid "Sunrise"
-msgstr ""
+msgstr "Sonnenaufgang"
 
 msgid "Sunset"
-msgstr ""
+msgstr "Sonnenuntergang"
 
 msgid "Temperature:"
 msgstr "Temperatur:"
