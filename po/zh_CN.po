@@ -8,21 +8,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-30 16:08+0200\n"
-"PO-Revision-Date: 2011-12-02 14:44+0800\n"
-"Last-Translator: Tao Zhu <bill_zt@sina.com>\n"
+"POT-Creation-Date: 2012-06-03 23:01+0200\n"
+"PO-Revision-Date: 2012-06-26 12:35+0800\n"
+"Last-Translator: dongfengweixiao <dongfengweixiao@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#, python-format
-msgid "Schema \"%s\" not found."
-msgstr ""
-
 msgid "..."
 msgstr "..."
+
+msgid "Reload Weather Information"
+msgstr "刷新天气信息"
+
+msgid "Weather Settings"
+msgstr "天气设置"
+
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr "Schema \"%s\" 没有找到."
+
+msgid "Invalid city"
+msgstr "没有找到这个城市"
 
 msgid "Tornado"
 msgstr "龙卷风"
@@ -171,35 +180,18 @@ msgstr "星期六"
 msgid "Sunday"
 msgstr "星期日"
 
-msgid "N"
-msgstr ""
-
-msgid "NE"
-msgstr ""
-
-msgid "E"
-msgstr ""
-
-msgid "SE"
-msgstr ""
-
-msgid "S"
-msgstr ""
-
-msgid "SW"
-msgstr ""
-
-msgid "W"
-msgstr ""
-
-msgid "NW"
-msgstr ""
-
 msgid "Today"
 msgstr "今天"
 
 msgid "Tomorrow"
 msgstr "明天"
+
+msgid "Yesterday"
+msgstr "昨天"
+
+#, python-format
+msgid "%s days ago"
+msgstr "%s 天以前"
 
 msgid "Loading current weather ..."
 msgstr "正在加载当前天气 ..."
@@ -213,14 +205,8 @@ msgstr "正在加载 ..."
 msgid "Please wait"
 msgstr "请等待"
 
-msgid "Sunrise"
-msgstr ""
-
-msgid "Sunset"
-msgstr ""
-
-msgid "Temperature:"
-msgstr "温度："
+msgid "Feel like:"
+msgstr "体感温度："
 
 msgid "Humidity:"
 msgstr "湿度："
@@ -230,3 +216,40 @@ msgstr "气压："
 
 msgid "Wind:"
 msgstr "风力："
+
+msgid "Name of the city"
+msgstr "城市名称"
+
+#, python-format
+msgid "Remove %s ?"
+msgstr "删除 %s ?"
+
+msgid "Temperature Unit"
+msgstr "温度："
+
+msgid "Wind Speed Unit"
+msgstr "风速单位"
+
+msgid "Position in Panel"
+msgstr "面板上的位置"
+
+msgid "Center"
+msgstr "居中"
+
+msgid "Right"
+msgstr "最右边"
+
+msgid "Left"
+msgstr "最左边"
+
+msgid "Translate Conditions"
+msgstr "启用本地语言"
+
+msgid "Symbolic Icons"
+msgstr "使用图标符号"
+
+msgid "Temperature in Panel"
+msgstr "温度："
+
+msgid "Conditions in Panel"
+msgstr "面板上显示详情"
