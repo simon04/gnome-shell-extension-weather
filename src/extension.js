@@ -737,7 +737,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_compass_direction: function(deg) {
-        let directions = ["\u2191", "\u2197", "\u2192", "\u2198", "\u2193", "\u2199", "\u2190", "\u2196"];
+        let directions = ["\u2193", "\u2199", "\u2190", "\u2196", "\u2191", "\u2197", "\u2192", "\u2198"];
         return directions[Math.round(deg / 45) % directions.length];
     },
 
