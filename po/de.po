@@ -19,19 +19,19 @@ msgstr ""
 #: applet.js:124
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Schema \"%s\" nicht gefunden."
 
 #: applet.js:196
 msgid "Click to open"
-msgstr ""
+msgstr "Zum Öffnen klicken"
 
 #: applet.js:466
 msgid "Sunrise"
-msgstr ""
+msgstr "Sonnenaufgang"
 
 #: applet.js:467
 msgid "Sunset"
-msgstr ""
+msgstr "Sonnenuntergang"
 
 #: applet.js:472
 msgid "Today"
@@ -151,7 +151,7 @@ msgstr "Staubig"
 
 #: applet.js:908
 msgid "Foggy"
-msgstr "Nebelig"
+msgstr "Neblig"
 
 #: applet.js:910
 msgid "Haze"
@@ -159,7 +159,7 @@ msgstr "Dunstig"
 
 #: applet.js:912
 msgid "Smoky"
-msgstr "Nebelig"
+msgstr "Neblig"
 
 #: applet.js:914
 msgid "Blustery"
@@ -271,35 +271,35 @@ msgstr "Sonntag"
 
 #: applet.js:977
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: applet.js:977
 msgid "NE"
-msgstr ""
+msgstr "NO"
 
 #: applet.js:977
 msgid "E"
-msgstr ""
+msgstr "O"
 
 #: applet.js:977
 msgid "SE"
-msgstr ""
+msgstr "SO"
 
 #: applet.js:977
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: applet.js:977
 msgid "SW"
-msgstr ""
+msgstr "SW"
 
 #: applet.js:977
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: applet.js:977
 msgid "NW"
-msgstr ""
+msgstr "NW"
 
 #~ msgid "..."
 #~ msgstr "..."
