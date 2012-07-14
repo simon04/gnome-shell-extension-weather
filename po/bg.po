@@ -1,0 +1,309 @@
+# Russian translation for gnome-shell-extension-weather
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Gankov Andrey <gav@qsolution.ru>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-05 20:50-0400\n"
+"PO-Revision-Date: 2012-07-07 18:09+0200\n"
+"Last-Translator: Vasil Kashilski <batvase@gmail.com>\n"
+"Language-Team: \n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: applet.js:124
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr "Схемата \"%s\" не е намерена"
+
+#: applet.js:196
+msgid "Click to open"
+msgstr "Натиснете за да се отвори"
+
+#: applet.js:466
+msgid "Sunrise"
+msgstr "Изгрев"
+
+#: applet.js:467
+msgid "Sunset"
+msgstr "Залез"
+
+#: applet.js:472
+msgid "Today"
+msgstr "Днес"
+
+#: applet.js:472
+msgid "Tomorrow"
+msgstr "Утре"
+
+#: applet.js:527
+msgid "Loading current weather ..."
+msgstr "Зареждане на текущата прогноза..."
+
+#: applet.js:528
+msgid "Loading future weather ..."
+msgstr "Зареждане на прогноза..."
+
+#: applet.js:548
+msgid "Loading ..."
+msgstr "Зареждане"
+
+#: applet.js:554
+msgid "Please wait"
+msgstr "Моля изчакайте"
+
+#: applet.js:611
+msgid "Temperature:"
+msgstr "Температура:"
+
+#: applet.js:613
+msgid "Humidity:"
+msgstr "Влажност:"
+
+#: applet.js:615
+msgid "Pressure:"
+msgstr "Налягане:"
+
+#: applet.js:617
+msgid "Wind:"
+msgstr "Вятър:"
+
+#: applet.js:868
+msgid "Tornado"
+msgstr "Торнадо"
+
+#: applet.js:870
+msgid "Tropical storm"
+msgstr "Тропическа буря"
+
+#: applet.js:872
+msgid "Hurricane"
+msgstr "Ураган"
+
+#: applet.js:874
+msgid "Severe thunderstorms"
+msgstr "Силна гръморевична буря"
+
+#: applet.js:876
+msgid "Thunderstorms"
+msgstr "Гръмотевици"
+
+#: applet.js:878
+msgid "Mixed rain and snow"
+msgstr "Дъжд и сняг"
+
+#: applet.js:880
+msgid "Mixed rain and sleet"
+msgstr "Дъжд и мокър сняг"
+
+#: applet.js:882
+msgid "Mixed snow and sleet"
+msgstr "Сняг и мокър сняг"
+
+#: applet.js:884
+msgid "Freezing drizzle"
+msgstr "Леден ситен дъжд"
+
+#: applet.js:886
+msgid "Drizzle"
+msgstr "Ръмене"
+
+#: applet.js:888
+msgid "Freezing rain"
+msgstr "Леден дъжд"
+
+#: applet.js:890
+#: applet.js:892
+msgid "Showers"
+msgstr "Дъжд"
+
+#: applet.js:894
+msgid "Snow flurries"
+msgstr "Силен сняг"
+
+#: applet.js:896
+msgid "Light snow showers"
+msgstr "Слаб сняг"
+
+#: applet.js:898
+msgid "Blowing snow"
+msgstr "Виелица"
+
+#: applet.js:900
+msgid "Snow"
+msgstr "Сняг"
+
+#: applet.js:902
+msgid "Hail"
+msgstr "Градушка"
+
+#: applet.js:904
+msgid "Sleet"
+msgstr "Киша"
+
+#: applet.js:906
+msgid "Dust"
+msgstr "Прашно"
+
+#: applet.js:908
+msgid "Foggy"
+msgstr "Мъгла"
+
+#: applet.js:910
+msgid "Haze"
+msgstr "Мъгливо, мараня"
+
+#: applet.js:912
+msgid "Smoky"
+msgstr "Задимено"
+
+#: applet.js:914
+msgid "Blustery"
+msgstr "Силен вятър"
+
+#: applet.js:916
+msgid "Windy"
+msgstr "Ветровито"
+
+#: applet.js:918
+msgid "Cold"
+msgstr "Студено"
+
+#: applet.js:920
+msgid "Cloudy"
+msgstr "Облачно"
+
+#: applet.js:923
+msgid "Mostly cloudy"
+msgstr "Предимно облачно"
+
+#: applet.js:926
+#: applet.js:952
+msgid "Partly cloudy"
+msgstr "Разкъсана облачност"
+
+#: applet.js:928
+msgid "Clear"
+msgstr "Безоблачно"
+
+#: applet.js:930
+msgid "Sunny"
+msgstr "Слънчево"
+
+#: applet.js:933
+msgid "Fair"
+msgstr "Ясно"
+
+#: applet.js:935
+msgid "Mixed rain and hail"
+msgstr "Дъжд и градушка"
+
+#: applet.js:937
+msgid "Hot"
+msgstr "Горещо"
+
+#: applet.js:939
+msgid "Isolated thunderstorms"
+msgstr "Изолирани гръмотевици"
+
+#: applet.js:942
+msgid "Scattered thunderstorms"
+msgstr "На места гръмотевици"
+
+#: applet.js:944
+msgid "Scattered showers"
+msgstr "Превалявания"
+
+#: applet.js:946
+#: applet.js:950
+msgid "Heavy snow"
+msgstr "Силен сняг"
+
+#: applet.js:948
+msgid "Scattered snow showers"
+msgstr "Превалявания от сняг"
+
+#: applet.js:954
+msgid "Thundershowers"
+msgstr "Гръмотевична буря"
+
+#: applet.js:956
+msgid "Snow showers"
+msgstr "Снеговалеж"
+
+#: applet.js:958
+msgid "Isolated thundershowers"
+msgstr "На места градушки"
+
+#: applet.js:961
+msgid "Not available"
+msgstr "Няма данни"
+
+#: applet.js:969
+msgid "Monday"
+msgstr "Понеделник"
+
+#: applet.js:969
+msgid "Tuesday"
+msgstr "Вторник"
+
+#: applet.js:969
+msgid "Wednesday"
+msgstr "Сряда"
+
+#: applet.js:969
+msgid "Thursday"
+msgstr "Четвъртък"
+
+#: applet.js:969
+msgid "Friday"
+msgstr "Петък"
+
+#: applet.js:969
+msgid "Saturday"
+msgstr "Събота"
+
+#: applet.js:969
+msgid "Sunday"
+msgstr "Неделя"
+
+#: applet.js:977
+msgid "N"
+msgstr "C"
+
+#: applet.js:977
+msgid "NE"
+msgstr "CИ"
+
+#: applet.js:977
+msgid "E"
+msgstr "И"
+
+#: applet.js:977
+msgid "SE"
+msgstr "ЮИ"
+
+#: applet.js:977
+msgid "S"
+msgstr "Ю"
+
+#: applet.js:977
+msgid "SW"
+msgstr "ЮЗ"
+
+#: applet.js:977
+msgid "W"
+msgstr "З"
+
+#: applet.js:977
+msgid "NW"
+msgstr "CЗ"
+
+#~ msgid "..."
+#~ msgstr "..."
+
