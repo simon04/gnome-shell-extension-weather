@@ -17,7 +17,7 @@ msgstr ""
 
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Schema \"%s\" nicht gefunden."
 
 msgid "..."
 msgstr "..."
@@ -170,28 +170,28 @@ msgid "Sunday"
 msgstr "Sonntag"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "NE"
-msgstr ""
+msgstr "NO"
 
 msgid "E"
-msgstr ""
+msgstr "O"
 
 msgid "SE"
-msgstr ""
+msgstr "SO"
 
 msgid "S"
-msgstr ""
+msgstr "S"
 
 msgid "SW"
-msgstr ""
+msgstr "SW"
 
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgid "NW"
-msgstr ""
+msgstr "NW"
 
 msgid "Today"
 msgstr "Heute"
@@ -212,10 +212,10 @@ msgid "Please wait"
 msgstr "Bitte warten"
 
 msgid "Sunrise"
-msgstr ""
+msgstr "Sonnenaufgang"
 
 msgid "Sunset"
-msgstr ""
+msgstr "Sonnenuntergang"
 
 msgid "Temperature:"
 msgstr "Temperatur:"
