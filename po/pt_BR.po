@@ -11,7 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2011-06-07 18:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: Português ; Daniel Miranda <dmiranda@gmail.com>, Luiz Rodrigo "
-"<contact@lurodrigo.com>\n"
+"<contact@lurodrigo.com>, Zé Bento <bento2000@gmail.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +29,11 @@ msgstr ""
 
 #: applet.js:466
 msgid "Sunrise"
-msgstr ""
+msgstr "Nascer do sol"
 
 #: applet.js:467
 msgid "Sunset"
-msgstr ""
+msgstr "Pôr do sol"
 
 #: applet.js:472
 msgid "Today"
