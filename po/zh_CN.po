@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-05 20:50-0400\n"
 "PO-Revision-Date: 2011-12-02 14:44+0800\n"
-"Last-Translator: Tao Zhu <bill_zt@sina.com>\n"
+"Last-Translator: Tao Zhu <bill_zt@sina.com>, tuhaihe <1132321739qq@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: applet.js:124
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "未找到方案“%s”。"
 
 #: applet.js:196
 msgid "Click to open"
@@ -28,11 +28,11 @@ msgstr ""
 
 #: applet.js:466
 msgid "Sunrise"
-msgstr ""
+msgstr "日出"
 
 #: applet.js:467
 msgid "Sunset"
-msgstr ""
+msgstr "日落"
 
 #: applet.js:472
 msgid "Today"
@@ -272,35 +272,35 @@ msgstr "星期日"
 
 #: applet.js:977
 msgid "N"
-msgstr ""
+msgstr "北"
 
 #: applet.js:977
 msgid "NE"
-msgstr ""
+msgstr "东北"
 
 #: applet.js:977
 msgid "E"
-msgstr ""
+msgstr "东"
 
 #: applet.js:977
 msgid "SE"
-msgstr ""
+msgstr "东南"
 
 #: applet.js:977
 msgid "S"
-msgstr ""
+msgstr "南"
 
 #: applet.js:977
 msgid "SW"
-msgstr ""
+msgstr "西南"
 
 #: applet.js:977
 msgid "W"
-msgstr ""
+msgstr "西"
 
 #: applet.js:977
 msgid "NW"
-msgstr ""
+msgstr "西北"
 
 #~ msgid "..."
 #~ msgstr "..."
