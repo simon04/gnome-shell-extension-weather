@@ -19,7 +19,7 @@ msgstr ""
 #: applet.js:124
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Schéma \"%s\" nenájdená."
 
 #: applet.js:196
 msgid "Click to open"
@@ -27,11 +27,11 @@ msgstr ""
 
 #: applet.js:466
 msgid "Sunrise"
-msgstr ""
+msgstr "Východ slnka"
 
 #: applet.js:467
 msgid "Sunset"
-msgstr ""
+msgstr "Západ slnka"
 
 #: applet.js:472
 msgid "Today"
@@ -271,35 +271,35 @@ msgstr "Nedeľa"
 
 #: applet.js:977
 msgid "N"
-msgstr ""
+msgstr "S"
 
 #: applet.js:977
 msgid "NE"
-msgstr ""
+msgstr "SV"
 
 #: applet.js:977
 msgid "E"
-msgstr ""
+msgstr "V"
 
 #: applet.js:977
 msgid "SE"
-msgstr ""
+msgstr "JV"
 
 #: applet.js:977
 msgid "S"
-msgstr ""
+msgstr "J"
 
 #: applet.js:977
 msgid "SW"
-msgstr ""
+msgstr "JZ"
 
 #: applet.js:977
 msgid "W"
-msgstr ""
+msgstr "Z"
 
 #: applet.js:977
 msgid "NW"
-msgstr ""
+msgstr "SZ"
 
 #~ msgid "..."
 #~ msgstr "..."
