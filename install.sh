@@ -7,7 +7,7 @@ OLD_SCHEMA="${OLD_UUID}.gschema.xml"
 SCHEMA="org.cinnamon.applets.${UUID}.gschema.xml"
 INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${UUID}"
 OLD_INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${OLD_UUID}"
-LOCALES="bg ca cs da de es fi fr he is it lv nb nl pl pt_BR pt_PT ro ru sk sv uk zh_CN zh_TW"
+LOCALES="bg ca cs da de es fi fr he is it ja lv nb nl pl pt_BR pt_PT ro ru sk sv uk zh_CN zh_TW"
 LOCALE_DIR="${HOME}/.local/share/locale"
 
 compile_schemas() {
