@@ -1,7 +1,7 @@
 # Polish translation for gnome-shell-extension-weather
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
-# Piotr Sokół <psokol@jabster.pl>, 2011.
+# Piotr Sokół <psokol@jabster.pl>, 2011, 2012.
 #
 msgid ""
 msgstr ""
@@ -21,7 +21,7 @@ msgstr ""
 #: applet.js:124
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Nie odnaleziono schematu „%s”."
 
 #: applet.js:196
 msgid "Click to open"
