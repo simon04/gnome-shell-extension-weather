@@ -70,5 +70,10 @@
       <_summary>Refresh interval in seconds</_summary>
       <_description>The interval in seconds to refresh the weather information.</_description>
     </key>
+    <key name="details-url" type="s">
+      <default>''</default>
+      <_summary>URL to load when clicking on location name</_summary>
+      <_description>Optionally, define the weather details URL to load when the city name is clicked. If not set, the default URL from Yahoo Weather is used.</_description>
+    </key>
   </schema>
 </schemalist>

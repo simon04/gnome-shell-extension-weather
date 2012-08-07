@@ -50,6 +50,7 @@ const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
 const WEATHER_CITY_KEY = 'city';
+const WEATHER_URL_KEY = 'details-url';
 const WEATHER_WOEID_KEY = 'woeid';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 const WEATHER_SHOW_SUNRISE_SUNSET_KEY = 'show-sunrise-sunset';
@@ -104,6 +105,7 @@ WeatherMenuButton.prototype = {
         this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
         this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
         this._city  = this._settings.get_string(WEATHER_CITY_KEY);
+        this._url = this._settings.get_string(WEATHER_URL_KEY);
         this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
         this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
         this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
@@ -118,6 +120,7 @@ WeatherMenuButton.prototype = {
             this._units = this._settings.get_enum(WEATHER_UNIT_KEY);
             this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
             this._city  = this._settings.get_string(WEATHER_CITY_KEY);
+            this._url = this._settings.get_string(WEATHER_URL_KEY);
             this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
             this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
             this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
@@ -128,6 +131,7 @@ WeatherMenuButton.prototype = {
         this._settings.connect('changed::' + WEATHER_UNIT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WIND_SPEED_UNIT_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_CITY_KEY, load_settings_and_refresh_weather);
+        this._settings.connect('changed::' + WEATHER_URL_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_WOEID_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_TRANSLATE_CONDITION_KEY, load_settings_and_refresh_weather);
         this._settings.connect('changed::' + WEATHER_SHOW_COMMENT_IN_PANEL_KEY, load_settings_and_refresh_weather);
@@ -601,9 +605,15 @@ WeatherMenuButton.prototype = {
                 this._currentWeatherWind.text = '\u2013';
 
             this._currentWeatherLocation.label = location + '...';
+
             // make the location act like a button
             this._currentWeatherLocation.style_class = 'weather-current-location-link';
-            this._currentWeatherLocation.url = weather.get_string_member('link');
+            // Link button to weather-details url
+            let link = weather.get_string_member('link');
+            if (this._url != null && this._url.length > 0)
+                link = this._url;
+            this._currentWeatherLocation.url = link;
+
             if (this._show_sunrise) {
                 this._currentWeatherSunrise.text = sunrise;
                 this._currentWeatherSunset.text = sunset;

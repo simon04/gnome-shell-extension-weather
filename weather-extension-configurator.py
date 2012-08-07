@@ -118,6 +118,8 @@ class WeatherConfigurator:
                 [(0, 'kph'), (1, 'mph'), (2, 'm/s'), (3, 'knots')])
         self.add_text('city', 'Override Location Label',
                 "Sometimes your WOEID location isn’t quite right (it’s the next major city around). This label is used to override the location displayed.")
+        self.add_text('details-url', 'Override details URL',
+                "If you wish to define a different weather service to load when clicking on the Location name, provide the URL here. If not set, the default provided by Yahoo will be used.")
         self.add_radio('position-in-panel', 'Position in Panel',
                 [(2, 'left'), (0, 'center'), (1, 'right')],
                 "The position of this GNOME Shell extension in the panel. (Requires restart of GNOME Shell.)")
