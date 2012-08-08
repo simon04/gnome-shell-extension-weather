@@ -10,6 +10,10 @@
     <value nick="m/s" value="2" />
     <value nick="knots" value="3" />
   </enum>
+  <enum id="org.gnome.shell.extensions.weather.wind-dir-indicators">
+    <value nick="arrows" value="0" />
+    <value nick="letters" value="1" />
+  </enum>
   <enum id="org.gnome.shell.extensions.weather.position">
     <value nick="center" value="0" />
     <value nick="right" value="1" />
@@ -24,6 +28,11 @@
       <default>'mph'</default>
       <_summary>Wind Speed Units</_summary>
       <_description>Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s' or 'knots'.</_description>
+    </key>
+    <key name="wind-direction" type="b">
+      <default>true</default>
+      <_summary>Wind Direction by Arrows</_summary>
+      <_description>Choose whether to display wind direction through arrows or letters.</_description>
     </key>
     <key name="city" type="s">
       <default>'Cambridge, MA'</default>

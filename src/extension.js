@@ -10,7 +10,8 @@
  *     Elad Alfassa <elad@fedoraproject.org>,
  *     Simon Legner <Simon.Legner@gmail.com>,
  *     Christian METZLER <neroth@xeked.com>,
- *     Mark Benjamin weather.gnome.Markie1@dfgh.net
+ *     Mark Benjamin weather.gnome.Markie1@dfgh.net,
+ *     Mattia Meneguzzo odysseus@fedoraproject.org
  *
  *
  * This file is part of gnome-shell-extension-weather.
@@ -51,6 +52,7 @@ const PopupMenu = imports.ui.popupMenu;
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
+const WEATHER_WIND_DIRECTION_KEY = 'wind-direction';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_ACTUAL_CITY_KEY = 'actual-city';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
@@ -244,6 +246,20 @@ WeatherMenuButton.prototype = {
 		if(!this._settings)
 		this.loadConfig();
 	this._settings.set_enum(WEATHER_WIND_SPEED_UNIT_KEY,v);
+	},
+
+	get _wind_direction()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_boolean(WEATHER_WIND_DIRECTION_KEY);
+	},
+
+	set _wind_direction(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.set_boolean(WEATHER_WIND_DIRECTION_KEY,v);
 	},
 
 	get _cities()
@@ -736,21 +752,31 @@ WeatherMenuButton.prototype = {
         return days[this.parse_day(abr)];
     },
 
-    get_compass_direction: function(deg) {
-        let directions = ["\u2193", "\u2199", "\u2190", "\u2196", "\u2191", "\u2197", "\u2192", "\u2198"];
-        return directions[Math.round(deg / 45) % directions.length];
-    },
+	get_wind_direction : function(deg)
+	{
+	let arrows = ["\u2193", "\u2199", "\u2190", "\u2196", "\u2191", "\u2197", "\u2192", "\u2198"];
+	let letters = [_('N'), _('NE'), _('E'), _('SE'), _('S'), _('SW'), _('W'), _('NW')];
+	let idx = Math.round(deg / 45) % arrows.length;
+	return (this._wind_direction)?arrows[idx]:letters[idx];
+	},
 
-    get_pressure_state: function(state) {
-      switch (parseInt(state, 3)) {
-      case 0:
-        return '';
-      case 1:
-        return '\u2934';
-      case 2:
-        return '\u2935';
-      }
-    },
+	get_pressure_state : function(state)
+	{
+		switch(parseInt(state, 3))
+		{
+			case 0:
+			return '';
+			break;
+
+			case 1:
+			return '\u2934';
+			break;
+
+			case 2:
+			return '\u2935';
+			break;
+		}
+	},
 
     load_json_async: function(url, fun) {
         let here = this;
@@ -818,7 +844,7 @@ WeatherMenuButton.prototype = {
             let pressure = weather.atmosphere.pressure;
             let pressure_unit = weather.units.pressure;
 	    let pressure_state = weather.atmosphere.rising;
-            let wind_direction = this.get_compass_direction(weather.wind.direction);
+            let wind_direction = this.get_wind_direction(weather.wind.direction);
             let wind = weather.wind.speed;
             let wind_unit = weather.units.speed;
             let iconname = this.get_weather_icon_safely(weather_c.code);
