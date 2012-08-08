@@ -67,19 +67,25 @@ const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
 const WeatherUnits = {
     CELSIUS: 0,
     FAHRENHEIT: 1,
-    KELVIN: 2
+    KELVIN: 2,
+    RANKINE: 3,
+    REAUMUR: 4,
+    ROEMER: 5,
+    DELISLE: 6,
+    NEWTON: 7
 }
 
 const WeatherWindSpeedUnits = {
 	KPH: 0,
 	MPH: 1,
 	MPS: 2,
-	KNOTS: 3
+	KNOTS: 3,
+	FPS: 4
 }
 
 const WeatherPressureUnits = {
-	inHg: 0,
-	hPa: 1,
+	hPa: 0,
+	inHg: 1,
 	bar: 2,
 	Pa: 3,
 	atm: 4,
@@ -97,6 +103,7 @@ const WeatherPosition = {
 const WEATHER_CONV_MPH_IN_MPS = 2.23693629;
 const WEATHER_CONV_KPH_IN_MPS = 3.6;
 const WEATHER_CONV_KNOTS_IN_MPS = 1.94384449;
+const WEATHER_CONV_FPS_IN_MPS = 3.2808399;
 
 // Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64) (Simon Legner)
 const _httpSession = new Soup.SessionAsync();
@@ -525,11 +532,21 @@ WeatherMenuButton.prototype = {
 
     unit_to_unicode: function() {
 	if(this._units == WeatherUnits.FAHRENHEIT)
-	return '\u2109';
+	return '\u00B0\F';
 	else if(this._units == WeatherUnits.KELVIN)
 	return 'K';
+	else if(this._units == WeatherUnits.RANKINE)
+	return 'R';
+	else if(this._units == WeatherUnits.REAUMUR)
+	return '\u00B0\R\u00E9';
+	else if(this._units == WeatherUnits.ROEMER)
+	return '\u00B0\R\u00F8';
+	else if(this._units == WeatherUnits.DELISLE)
+	return '\u00B0\De';
+	else if(this._units == WeatherUnits.NEWTON)
+	return '\u00B0\N';
 	else
-	return '\u2103';
+	return '\u00B0\C';
     },
 
     get_weather_url: function() {
@@ -762,7 +779,32 @@ WeatherMenuButton.prototype = {
 
 	toKelvin: function(t)
 	{
-	return String(Math.round(Number(this.toCelsius(t))+273.15));
+	return String(Math.round(((Number(t)+459.67)/1.8)*100)/100);
+	},
+
+	toRankine: function(t)
+	{
+	return String(Math.round((Number(t)+459.67)*100)/100);
+	},
+
+	toReaumur: function(t)
+	{
+	return String(Math.round((Number(t)-32)/2.25));
+	},
+
+	toRoemer: function(t)
+	{
+	return String(Math.round((((Number(t)-32)*7)/24)+7.5));
+	},
+
+	toDelisle: function(t)
+	{
+	return String(Math.round(((212-Number(t))*5)/6));
+	},
+
+	toNewton: function(t)
+	{
+	return String(Math.round((((Number(t)-32)*11)/60)*10)/10);
 	},
 
 	toPascal: function(p,t)
@@ -945,6 +987,31 @@ WeatherMenuButton.prototype = {
 			temperature = this.toKelvin(temperature);
 			chill = this.toKelvin(chill);
 			break;
+
+			case WeatherUnits.RANKINE:
+			temperature = this.toRankine(temperature);
+			chill = this.toRankine(chill);
+			break;
+
+			case WeatherUnits.REAUMUR:
+			temperature = this.toReaumur(temperature);
+			chill = this.toReaumur(chill);
+			break;
+
+			case WeatherUnits.ROEMER:
+			temperature = this.toRoemer(temperature);
+			chill = this.toRoemer(chill);
+			break;
+
+			case WeatherUnits.DELISLE:
+			temperature = this.toDelisle(temperature);
+			chill = this.toDelisle(chill);
+			break;
+
+			case WeatherUnits.NEWTON:
+			temperature = this.toNewton(temperature);
+			chill = this.toNewton(chill);
+			break;
 		}
 
 		if(this._clockFormat == "24h")
@@ -1018,7 +1085,12 @@ WeatherMenuButton.prototype = {
 
 		        case WeatherWindSpeedUnits.KNOTS:
 			wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
-			wind_unit = 'knots';
+			wind_unit = 'kn';
+			break;
+
+		        case WeatherWindSpeedUnits.FPS:
+			wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_FPS_IN_MPS);
+			wind_unit = 'ft/s';
 			break;
 		    }
 
@@ -1051,6 +1123,31 @@ WeatherMenuButton.prototype = {
 			case WeatherUnits.KELVIN:
 			t_low = this.toKelvin(t_low);
 			t_high = this.toKelvin(t_high);
+			break;
+
+			case WeatherUnits.RANKINE:
+			t_low = this.toRankine(t_low);
+			t_high = this.toRankine(t_high);
+			break;
+
+			case WeatherUnits.REAUMUR:
+			t_low = this.toReaumur(t_low);
+			t_high = this.toReaumur(t_high);
+			break;
+
+			case WeatherUnits.ROEMER:
+			t_low = this.toRoemer(t_low);
+			t_high = this.toRoemer(t_high);
+			break;
+
+			case WeatherUnits.DELISLE:
+			t_low = this.toDelisle(t_low);
+			t_high = this.toDelisle(t_high);
+			break;
+
+			case WeatherUnits.NEWTON:
+			t_low = this.toNewton(t_low);
+			t_high = this.toNewton(t_high);
 			break;
 		}
 
