@@ -4,6 +4,16 @@
     <value nick="fahrenheit" value="1" />
     <value nick="kelvin" value="2" />
   </enum>
+  <enum id="org.gnome.shell.extensions.weather.pressure-unit">
+    <value nick="inHg" value="0" />
+    <value nick="hPa" value="1" />
+    <value nick="bar" value="2" />
+    <value nick="Pa" value="3" />
+    <value nick="atm" value="4" />
+    <value nick="at" value="5" />
+    <value nick="Torr" value="6" />
+    <value nick="psi" value="7" />
+  </enum>
   <enum id="org.gnome.shell.extensions.weather.wind-speed-unit">
     <value nick="kph" value="0" />
     <value nick="mph" value="1" />
@@ -23,6 +33,10 @@
     <key name="unit" enum="org.gnome.shell.extensions.weather.unit">
       <default>'fahrenheit'</default>
       <_summary>Temperature Unit</_summary>
+    </key>
+    <key name="pressure-unit" enum="org.gnome.shell.extensions.weather.pressure-unit">
+      <default>'inHg'</default>
+      <_summary>Pressure Unit</_summary>
     </key>
     <key name="wind-speed-unit" enum="org.gnome.shell.extensions.weather.wind-speed-unit">
       <default>'mph'</default>

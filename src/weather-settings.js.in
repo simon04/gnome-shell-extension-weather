@@ -34,6 +34,7 @@ const Soup = imports.gi.Soup;
 
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
+const WEATHER_PRESSURE_UNIT_KEY = 'pressure-unit';
 const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
 const WEATHER_WIND_DIRECTION_KEY = 'wind-direction';
 const WEATHER_CITY_KEY = 'city';
@@ -309,6 +310,20 @@ WeatherSetting.prototype =
 		if(!this.Settings)
 		this.loadConfig();
 	this.Settings.set_enum(WEATHER_UNIT_KEY,arguments[0]);
+	},
+
+	get pressure_unit()
+	{
+		if(!this.Settings)
+		this.loadConfig();
+	return this.Settings.get_enum(WEATHER_PRESSURE_UNIT_KEY);
+	},
+
+	set pressure_unit()
+	{
+		if(!this.Settings)
+		this.loadConfig();
+	this.Settings.set_enum(WEATHER_PRESSURE_UNIT_KEY,arguments[0]);
 	},
 
 	get wind_speed_unit()
@@ -646,6 +661,8 @@ WeatherSetting.prototype =
 	this.addComboBox(["°C","°F","K"],"units");
 	this.addLabel(_("Wind Speed Unit"));
 	this.addComboBox(["km/h","mph","m/s","knots"],"wind_speed_unit");
+	this.addLabel(_("Pressure Unit"));
+	this.addComboBox(["inHg","hPa","bar","Pa","atm","at","Torr","psi"],"pressure_unit");
 	this.addLabel(_("Position in Panel"));
 	this.addComboBox([_("Center"),_("Right"),_("Left")],"position_in_panel");
 	this.addLabel(_("Wind Direction by Arrows"));

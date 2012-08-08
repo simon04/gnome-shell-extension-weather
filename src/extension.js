@@ -53,6 +53,7 @@ const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_UNIT_KEY = 'unit';
 const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
 const WEATHER_WIND_DIRECTION_KEY = 'wind-direction';
+const WEATHER_PRESSURE_UNIT_KEY = 'pressure-unit';
 const WEATHER_CITY_KEY = 'city';
 const WEATHER_ACTUAL_CITY_KEY = 'actual-city';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
@@ -74,6 +75,17 @@ const WeatherWindSpeedUnits = {
 	MPH: 1,
 	MPS: 2,
 	KNOTS: 3
+}
+
+const WeatherPressureUnits = {
+	inHg: 0,
+	hPa: 1,
+	bar: 2,
+	Pa: 3,
+	atm: 4,
+	at: 5,
+	Torr: 6,
+	psi: 7
 }
 
 const WeatherPosition = {
@@ -260,6 +272,20 @@ WeatherMenuButton.prototype = {
 		if(!this._settings)
 		this.loadConfig();
 	return this._settings.set_boolean(WEATHER_WIND_DIRECTION_KEY,v);
+	},
+
+	get _pressure_units()
+	{
+		if(!this._settings)
+		this.loadConfig();
+	return this._settings.get_enum(WEATHER_PRESSURE_UNIT_KEY);
+	},
+
+	set _pressure_units(v)
+	{
+		if(!this._settings)
+		this.loadConfig();
+	this._settings.set_enum(WEATHER_PRESSURE_UNIT_KEY,v);
 	},
 
 	get _cities()
@@ -497,10 +523,6 @@ WeatherMenuButton.prototype = {
     app.activate();
     },
 
-    unit_to_url: function() {
-        return this._units == WeatherUnits.FAHRENHEIT ? 'f' : 'c';
-    },
-
     unit_to_unicode: function() {
 	if(this._units == WeatherUnits.FAHRENHEIT)
 	return '\u2109';
@@ -511,7 +533,7 @@ WeatherMenuButton.prototype = {
     },
 
     get_weather_url: function() {
-        return encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid = '+this.extractWoeid(this._city)+' and u="' + this.unit_to_url() + '"');
+        return encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid = '+this.extractWoeid(this._city)+' and u="f"');
     },
 
     get_weather_icon: function(code) {
@@ -733,9 +755,20 @@ WeatherMenuButton.prototype = {
         }
     },
 
-    toKelvin: function(c) {
-    return String(Math.round(Number(c)+273.15));
-    },
+	toCelsius: function(t)
+	{
+	return String(Math.round((Number(t)-32)*0.555556));
+	},
+
+	toKelvin: function(t)
+	{
+	return String(Math.round(Number(this.toCelsius(t))+273.15));
+	},
+
+	toPascal: function(p,t)
+	{
+	return Math.round((p * (3386.39-((t-32)*0.003407143))));
+	},
 
     parse_day: function(abr) {
         let yahoo_days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
@@ -856,10 +889,62 @@ WeatherMenuButton.prototype = {
 	    let d = Math.floor((actualDate.getTime()-lastBuildDate.getTime())/86400000);
             let date_string = [_('Today'), _('Tomorrow')];
 
-		if(this._units == WeatherUnits.KELVIN)
+		switch(this._pressure_units)
 		{
-		temperature = this.toKelvin(temperature);
-		chill = this.toKelvin(chill);
+			case WeatherPressureUnits.inHg:
+			pressure_unit = "inHg";
+			break;
+
+			case WeatherPressureUnits.hPa:
+			pressure = Math.round(this.toPascal(pressure,temperature)/100);
+			pressure_unit = "hPa";
+			break;
+
+			case WeatherPressureUnits.bar:
+			pressure = this.toPascal(pressure,temperature)/100000;
+			pressure_unit = "bar";
+			break;
+
+			case WeatherPressureUnits.Pa:
+			pressure = this.toPascal(pressure,temperature);
+			pressure_unit = "Pa";
+			break;
+
+			case WeatherPressureUnits.atm:
+			pressure = Math.round((this.toPascal(pressure,temperature)*0.00000986923267)*100000)/100000;
+			pressure_unit = "atm";
+			break;
+
+			case WeatherPressureUnits.at:
+			pressure = Math.round((this.toPascal(pressure,temperature)*0.0000101971621298)*100000)/100000;
+			pressure_unit = "at";
+			break;
+
+			case WeatherPressureUnits.Torr:
+			pressure = Math.round((this.toPascal(pressure,temperature)*0.00750061683)*100)/100;
+			pressure_unit = "Torr";
+			break;
+
+			case WeatherPressureUnits.psi:
+			pressure = Math.round((this.toPascal(pressure,temperature)*0.000145037738)*100)/100;
+			pressure_unit = "psi";
+			break;
+		}
+
+		switch(this._units)
+		{
+			case WeatherUnits.FAHRENHEIT:
+			break;
+
+			case WeatherUnits.CELSIUS:
+			temperature = this.toCelsius(temperature);
+			chill = this.toCelsius(chill);
+			break;
+
+			case WeatherUnits.KELVIN:
+			temperature = this.toKelvin(temperature);
+			chill = this.toKelvin(chill);
+			break;
 		}
 
 		if(this._clockFormat == "24h")
@@ -914,47 +999,34 @@ WeatherMenuButton.prototype = {
 	    this._currentWeatherSunset.text = sunset;
 	    this._currentWeatherBuild.text = lastBuild;
 
-            // Override wind units with our preference
-            // Need to consider what units the Yahoo API has returned it in
-            switch (this._wind_speed_units) {
-                case WeatherWindSpeedUnits.KPH:
-                    // Round to whole units
-                    if (this._units == WeatherUnits.FAHRENHEIT) {
-                        wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KPH_IN_MPS);
-                        wind_unit = 'km/h';
-                    }
-                    // Otherwise no conversion needed - already in correct units
-                    break;
-                case WeatherWindSpeedUnits.MPH:
-                    // Round to whole units
-                    if (this._units == WeatherUnits.CELSIUS) {
-                        wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_MPH_IN_MPS);
-                        wind_unit = 'mph';
-                    }
-                    // Otherwise no conversion needed - already in correct units
-                    break;
-                case WeatherWindSpeedUnits.MPS:
-                    // Precision to one decimal place as 1 m/s is quite a large unit
-                    if (this._units == WeatherUnits.CELSIUS)
-                        wind = Math.round ((wind / WEATHER_CONV_KPH_IN_MPS) * 10)/ 10;
-                    else
-                        wind = Math.round ((wind / WEATHER_CONV_MPH_IN_MPS) * 10)/ 10;
-                    wind_unit = 'm/s';
-                    break;
-                case WeatherWindSpeedUnits.KNOTS:
-                    // Round to whole units
-                    if (this._units == WeatherUnits.CELSIUS)
-                        wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
-                    else
-                        wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
-                    wind_unit = 'knots';
-                    break;
-            }
-            if (!wind)
+		    // Override wind units with our preference
+		    // Need to consider what units the Yahoo API has returned it in
+		    switch (this._wind_speed_units)
+		    {
+		        case WeatherWindSpeedUnits.MPH:
+		        break;
+
+		        case WeatherWindSpeedUnits.KPH:
+			wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KPH_IN_MPS);
+			wind_unit = 'km/h';
+			break;
+
+		        case WeatherWindSpeedUnits.MPS:
+			wind = Math.round ((wind / WEATHER_CONV_MPH_IN_MPS) * 10)/ 10;
+			wind_unit = 'm/s';
+			break;
+
+		        case WeatherWindSpeedUnits.KNOTS:
+			wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
+			wind_unit = 'knots';
+			break;
+		    }
+
+            	if (!wind)
             	this._currentWeatherWind.text = '\u2013';
-            else if (wind == 0 || !wind_direction)
+            	else if (wind == 0 || !wind_direction)
             	this._currentWeatherWind.text = wind + ' ' + wind_unit;
-            else // i.e. wind > 0 && wind_direction
+            	else // i.e. wind > 0 && wind_direction
             	this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
 
             // Refresh forecast
@@ -966,10 +1038,20 @@ WeatherMenuButton.prototype = {
                 let t_low = forecastData.low;
                 let t_high = forecastData.high;
 
-		if(this._units == WeatherUnits.KELVIN)
+		switch(this._units)
 		{
-		t_low = this.toKelvin(t_low);
-		t_high = this.toKelvin(t_high);
+			case WeatherUnits.FAHRENHEIT:
+			break;
+
+			case WeatherUnits.CELSIUS:
+			t_low = this.toCelsius(t_low);
+			t_high = this.toCelsius(t_high);
+			break;
+
+			case WeatherUnits.KELVIN:
+			t_low = this.toKelvin(t_low);
+			t_high = this.toKelvin(t_high);
+			break;
 		}
 
                 let comment = forecastData.text;
