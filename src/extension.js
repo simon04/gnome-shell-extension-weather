@@ -1146,7 +1146,7 @@ WeatherMenuButton.prototype = {
                     comment = this.get_weather_condition(code);
 
 		let forecastDate = new Date(forecastData.date);
-		let dayLeft = Math.round((actualDate.getTime()-forecastDate.getTime())/1000/60/60/24);
+		let dayLeft = Math.floor((actualDate.getTime()-forecastDate.getTime())/1000/60/60/24);
 
 		let date_string = _("Today");
 			if(dayLeft == -1)
