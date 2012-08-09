@@ -108,11 +108,13 @@ WeatherSetting.prototype =
 			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid from geo.places where text = "'+location+'" limit 1'),function()
 			{
 			d.sensitive = 0;
+				if(typeof arguments[0].query == "undefined")
+				return 0;
 			var city = arguments[0].query;
 				if(Number(city.count) == 0)
 				return 0;
 			d.sensitive = 1;
-			});
+			},"test");
 		};
 
 		entry.signal.changed.connect(function()
@@ -167,7 +169,7 @@ WeatherSetting.prototype =
 				completion.complete();
 				}
 			testLocation(location);
-			});
+			},"getInfo");
 		return 0;
 		});
 
@@ -196,7 +198,7 @@ WeatherSetting.prototype =
 					that.city = that.city+" && "+city.woeid+">"+cityText;
 					else
 					that.city = city.woeid+">"+cityText;
-				});
+				},"lastTest");
 			}
 		dialog.hide();
 		});
@@ -264,11 +266,23 @@ WeatherSetting.prototype =
 	this.treeview.get_selection().select_path(path);
 	},
 
-	loadJsonAsync : function(url, fun)
+	loadJsonAsync : function(url, fun, id)
 	{
         var here = this;
         var message = new Soup.Message.c_new('GET', url);
-		_httpSession.queue_message(message, function(_httpSession, message) {
+
+		if(typeof this.asyncSession == "undefined")
+		this.asyncSession = {};
+
+		if(typeof this.asyncSession[id] && this.asyncSession[id])
+		{
+		_httpSession.abort();
+		this.asyncSession[id] = 0;
+		}
+
+		this.asyncSession[id] = 1;
+		_httpSession.queue_message(message, function(_httpSession, message)
+		{
 			if(!message.response_body.data)
 			{
 			fun.call(here,0);

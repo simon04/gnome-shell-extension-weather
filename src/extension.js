@@ -812,20 +812,12 @@ WeatherMenuButton.prototype = {
 	return Math.round((p * (3386.39-((t-32)*0.003407143))));
 	},
 
-    parse_day: function(abr) {
-        let yahoo_days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-        for (var i = 0; i < yahoo_days.length; i++) {
-            if (yahoo_days[i].substr(0, abr.length) == abr.toLowerCase()) {
-                return i;
-            }
-        }
-        return 0;
-    },
-
-    get_locale_day: function(abr) {
-        let days = [_('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday'), _('Sunday')];
-        return days[this.parse_day(abr)];
-    },
+	get_locale_day: function(abr)
+	{
+	abr = abr-1;
+	let days = [_('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday'), _('Sunday')];
+	return days[abr];
+	},
 
 	get_wind_direction : function(deg)
 	{
@@ -925,11 +917,21 @@ WeatherMenuButton.prototype = {
             let iconname = this.get_weather_icon_safely(weather_c.code);
             let sunrise = weather.astronomy.sunrise;
             let sunset = weather.astronomy.sunset;
-            let lastBuildDate = new Date(weather_c.date.split(" ").splice(0,6).join(" "));
-	    let lastBuild = weather_c.date.split(" ").splice(4,2).join(" ");
+
+		if(typeof this.lastBuildId == "undefined")
+		this.lastBuildId = 0;
+
+		if(typeof this.lastBuildDate == "undefined")
+		this.lastBuildDate = 0;
+
+		if(this.lastBuildId != weather_c.date || !this.lastBuildDate)
+		{
+		this.lastBuildId = weather_c.date;
+		this.lastBuildDate = new Date();
+		}
+
 	    let actualDate = new Date();
-	    let d = Math.floor((actualDate.getTime()-lastBuildDate.getTime())/86400000);
-            let date_string = [_('Today'), _('Tomorrow')];
+	    let d = Math.floor((actualDate.getTime()-this.lastBuildDate.getTime())/86400000);
 
 		switch(this._pressure_units)
 		{
@@ -1014,34 +1016,22 @@ WeatherMenuButton.prototype = {
 			break;
 		}
 
+	    let lastBuild = (this.lastBuildDate.getHours()%12)+":"+((this.lastBuildDate.getMinutes()<10)?"0":"")+this.lastBuildDate.getMinutes()+" "+((this.lastBuildDate.getHours() >= 12)?"pm":"am");
+
 		if(this._clockFormat == "24h")
 		{
 		sunrise = new Date("3 Mar 1999 "+sunrise);
 		sunrise = sunrise.getHours()+":"+((sunrise.getMinutes()<10)?"0":"")+sunrise.getMinutes();
 		sunset = new Date("3 Mar 1999 "+sunset);
 		sunset = sunset.getHours()+":"+((sunset.getMinutes()<10)?"0":"")+sunset.getMinutes();
-		lastBuild = lastBuildDate.getHours()+":"+((lastBuildDate.getMinutes()<10)?"0":"")+lastBuildDate.getMinutes();
+		lastBuild = this.lastBuildDate.getHours()+":"+((this.lastBuildDate.getMinutes()<10)?"0":"")+this.lastBuildDate.getMinutes();
 		}
 
-		if(d > 0 || actualDate.getHours() < lastBuildDate.getHours())
+		if(d >= 1)
 		{
 		lastBuild = _("Yesterday");
-		date_string[1] = date_string[0];
-		date_string[0] = lastBuild;
 			if(d > 1)
-			{
 			lastBuild = _("%s days ago").replace("%s",d);
-				if(d == 2)
-				{
-				date_string[1] = date_string[0];
-				date_string[0] = lastBuild;
-				}
-				else
-				{
-				date_string[1] = _("%s days ago").replace("%s",d-1);
-				date_string[0] = lastBuild;
-				}
-			}
 		}
 
             this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
@@ -1155,7 +1145,20 @@ WeatherMenuButton.prototype = {
                 if (this._translate_condition)
                     comment = this.get_weather_condition(code);
 
-                forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.day) + ')';
+		let forecastDate = new Date(forecastData.date);
+		let dayLeft = Math.round((actualDate.getTime()-forecastDate.getTime())/1000/60/60/24);
+
+		let date_string = _("Today");
+			if(dayLeft == -1)
+			date_string = _("Tomorrow");
+			else if(dayLeft < -1)
+			date_string = _("In %s days").replace("%s",-1*dayLeft);
+			else if(dayLeft == 1)
+			date_string = _("Yesterday");
+			else if(dayLeft > 1)
+			date_string = _("%s days ago").replace("%s",dayLeft);
+
+                forecastUi.Day.text = date_string + ' (' + this.get_locale_day(forecastDate.getDay()) + ')';
                 forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + this.unit_to_unicode();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);

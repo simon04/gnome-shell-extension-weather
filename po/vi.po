@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-08 22:22+0200\n"
+"POT-Creation-Date: 2012-08-09 02:00+0200\n"
 "PO-Revision-Date: 2012-06-17 17:04+0700\n"
 "Last-Translator: Ngô Trung <ndtrung4419@gmail.com>\n"
 "Language-Team: \n"
@@ -25,17 +25,17 @@ msgstr "..."
 msgid "Reload Weather Information"
 msgstr "Tải lại dữ liệu thời tiết"
 
-#: ../src/extension.js:200 ../src/weather-settings.js.in:622
+#: ../src/extension.js:200 ../src/weather-settings.js.in:636
 msgid "Weather Settings"
 msgstr "Thiết lập thời tiết"
 
 #: ../src/extension.js:220 ../src/extension.js:230
-#: ../src/weather-settings.js.in:296
+#: ../src/weather-settings.js.in:310
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Không tìm thấy schema \"%s\"."
 
-#: ../src/extension.js:474 ../src/weather-settings.js.in:506
+#: ../src/extension.js:474 ../src/weather-settings.js.in:520
 msgid "Invalid city"
 msgstr "Không có thành phố này"
 
@@ -207,112 +207,117 @@ msgstr "Mưa rào rải rác"
 msgid "Not available"
 msgstr "Không có dữ liệu"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Monday"
 msgstr "Thứ hai"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Tuesday"
 msgstr "Thứ ba"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Wednesday"
 msgstr "Thứ tư"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Thursday"
 msgstr "Thứ năm"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Friday"
 msgstr "Thứ sáu"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Saturday"
 msgstr "Thứ bảy"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Sunday"
 msgstr "Chủ Nhật"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "N"
 msgstr "B"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "NE"
 msgstr "ĐB"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "E"
 msgstr "Đ"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "SE"
 msgstr "ĐN"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "S"
 msgstr "N"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "SW"
 msgstr "TN"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "W"
 msgstr "T"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "NW"
 msgstr "TB"
 
-#: ../src/extension.js:932
-msgid "Today"
-msgstr "Hôm nay"
-
-#: ../src/extension.js:932
-msgid "Tomorrow"
-msgstr "Ngày mai"
-
-#: ../src/extension.js:1028
+#: ../src/extension.js:1032 ../src/extension.js:1157
 msgid "Yesterday"
 msgstr "Hôm qua"
 
-#: ../src/extension.js:1033 ../src/extension.js:1041
+#: ../src/extension.js:1034 ../src/extension.js:1159
 #, python-format
 msgid "%s days ago"
 msgstr "%s ngày trước"
 
-#: ../src/extension.js:1187
+#: ../src/extension.js:1151
+msgid "Today"
+msgstr "Hôm nay"
+
+#: ../src/extension.js:1153
+msgid "Tomorrow"
+msgstr "Ngày mai"
+
+#: ../src/extension.js:1155
+#, fuzzy, python-format
+msgid "In %s days"
+msgstr "%s ngày trước"
+
+#: ../src/extension.js:1190
 msgid "Loading current weather ..."
 msgstr "Đang tải dữ liệu thời tiết hiện tại..."
 
-#: ../src/extension.js:1188
+#: ../src/extension.js:1191
 msgid "Loading future weather ..."
 msgstr "Đang tải dữ liệu dự báo thời tiết..."
 
-#: ../src/extension.js:1225
+#: ../src/extension.js:1228
 msgid "Loading ..."
 msgstr "Đang tải..."
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1231
 msgid "Please wait"
 msgstr "Xin đợi một lát"
 
-#: ../src/extension.js:1273
+#: ../src/extension.js:1276
 msgid "Feel like:"
 msgstr "Cảm giác ngoài trời:"
 
-#: ../src/extension.js:1275
+#: ../src/extension.js:1278
 msgid "Humidity:"
 msgstr "Độ ẩm:"
 
-#: ../src/extension.js:1277
+#: ../src/extension.js:1280
 msgid "Pressure:"
 msgstr "Áp suất:"
 
-#: ../src/extension.js:1279
+#: ../src/extension.js:1282
 msgid "Wind:"
 msgstr "Gió:"
 
@@ -320,57 +325,57 @@ msgstr "Gió:"
 msgid "Name of the city"
 msgstr "Tên thành phố"
 
-#: ../src/weather-settings.js.in:214
+#: ../src/weather-settings.js.in:216
 #, python-format
 msgid "Remove %s ?"
 msgstr "Bạn có muốn xóa %s?"
 
-#: ../src/weather-settings.js.in:660
+#: ../src/weather-settings.js.in:674
 msgid "Temperature Unit"
 msgstr "Đơn vị đo nhiệt độ"
 
-#: ../src/weather-settings.js.in:662
+#: ../src/weather-settings.js.in:676
 msgid "Wind Speed Unit"
 msgstr "Đơn vị tốc độ gió"
 
-#: ../src/weather-settings.js.in:664
+#: ../src/weather-settings.js.in:678
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Áp suất:"
 
-#: ../src/weather-settings.js.in:666
+#: ../src/weather-settings.js.in:680
 msgid "Position in Panel"
 msgstr "Vị trí trên thanh pa-nen"
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Center"
 msgstr "Ở giữa"
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Right"
 msgstr "Bên phải"
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Left"
 msgstr "Bên trái"
 
-#: ../src/weather-settings.js.in:668
+#: ../src/weather-settings.js.in:682
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/weather-settings.js.in:670
+#: ../src/weather-settings.js.in:684
 msgid "Translate Conditions"
 msgstr "Dịch tình hình thời tiết"
 
-#: ../src/weather-settings.js.in:672
+#: ../src/weather-settings.js.in:686
 msgid "Symbolic Icons"
 msgstr "Biểu tượng đơn giản"
 
-#: ../src/weather-settings.js.in:674
+#: ../src/weather-settings.js.in:688
 msgid "Temperature in Panel"
 msgstr "Hiện nhiệt độ trên pa-nen"
 
-#: ../src/weather-settings.js.in:676
+#: ../src/weather-settings.js.in:690
 msgid "Conditions in Panel"
 msgstr "Hiện thời tiết trên pa-nen"
 

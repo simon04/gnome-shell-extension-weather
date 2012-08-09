@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-08 22:22+0200\n"
+"POT-Creation-Date: 2012-08-09 02:00+0200\n"
 "PO-Revision-Date: 2012-05-13 22:39+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -24,17 +24,17 @@ msgstr "…"
 msgid "Reload Weather Information"
 msgstr ""
 
-#: ../src/extension.js:200 ../src/weather-settings.js.in:622
+#: ../src/extension.js:200 ../src/weather-settings.js.in:636
 msgid "Weather Settings"
 msgstr ""
 
 #: ../src/extension.js:220 ../src/extension.js:230
-#: ../src/weather-settings.js.in:296
+#: ../src/weather-settings.js.in:310
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: ../src/extension.js:474 ../src/weather-settings.js.in:506
+#: ../src/extension.js:474 ../src/weather-settings.js.in:520
 msgid "Invalid city"
 msgstr ""
 
@@ -206,112 +206,117 @@ msgstr "Lokale tordenbyger"
 msgid "Not available"
 msgstr "Ikke tilgjengelig"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Monday"
 msgstr "mandag"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Tuesday"
 msgstr "tirsdag"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Wednesday"
 msgstr "onsdag"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Thursday"
 msgstr "torsdag"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Friday"
 msgstr "fredag"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Saturday"
 msgstr "lørdag"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Sunday"
 msgstr "søndag"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:932
-msgid "Today"
-msgstr "I dag"
-
-#: ../src/extension.js:932
-msgid "Tomorrow"
-msgstr "I morgen"
-
-#: ../src/extension.js:1028
+#: ../src/extension.js:1032 ../src/extension.js:1157
 msgid "Yesterday"
 msgstr ""
 
-#: ../src/extension.js:1033 ../src/extension.js:1041
+#: ../src/extension.js:1034 ../src/extension.js:1159
 #, python-format
 msgid "%s days ago"
 msgstr ""
 
-#: ../src/extension.js:1187
+#: ../src/extension.js:1151
+msgid "Today"
+msgstr "I dag"
+
+#: ../src/extension.js:1153
+msgid "Tomorrow"
+msgstr "I morgen"
+
+#: ../src/extension.js:1155
+#, python-format
+msgid "In %s days"
+msgstr ""
+
+#: ../src/extension.js:1190
 msgid "Loading current weather ..."
 msgstr "Laster værobservasjon …"
 
-#: ../src/extension.js:1188
+#: ../src/extension.js:1191
 msgid "Loading future weather ..."
 msgstr "Laster værvarsel …"
 
-#: ../src/extension.js:1225
+#: ../src/extension.js:1228
 msgid "Loading ..."
 msgstr "Laster …"
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1231
 msgid "Please wait"
 msgstr "Vent litt"
 
-#: ../src/extension.js:1273
+#: ../src/extension.js:1276
 msgid "Feel like:"
 msgstr ""
 
-#: ../src/extension.js:1275
+#: ../src/extension.js:1278
 msgid "Humidity:"
 msgstr "Fuktighet:"
 
-#: ../src/extension.js:1277
+#: ../src/extension.js:1280
 msgid "Pressure:"
 msgstr "Lufttrykk:"
 
-#: ../src/extension.js:1279
+#: ../src/extension.js:1282
 msgid "Wind:"
 msgstr "Vind:"
 
@@ -319,56 +324,56 @@ msgstr "Vind:"
 msgid "Name of the city"
 msgstr ""
 
-#: ../src/weather-settings.js.in:214
+#: ../src/weather-settings.js.in:216
 #, python-format
 msgid "Remove %s ?"
 msgstr ""
 
-#: ../src/weather-settings.js.in:660
+#: ../src/weather-settings.js.in:674
 msgid "Temperature Unit"
 msgstr "Temperatur:"
 
-#: ../src/weather-settings.js.in:662
+#: ../src/weather-settings.js.in:676
 msgid "Wind Speed Unit"
 msgstr ""
 
-#: ../src/weather-settings.js.in:664
+#: ../src/weather-settings.js.in:678
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Lufttrykk:"
 
-#: ../src/weather-settings.js.in:666
+#: ../src/weather-settings.js.in:680
 msgid "Position in Panel"
 msgstr ""
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Center"
 msgstr ""
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Right"
 msgstr ""
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Left"
 msgstr ""
 
-#: ../src/weather-settings.js.in:668
+#: ../src/weather-settings.js.in:682
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/weather-settings.js.in:670
+#: ../src/weather-settings.js.in:684
 msgid "Translate Conditions"
 msgstr ""
 
-#: ../src/weather-settings.js.in:672
+#: ../src/weather-settings.js.in:686
 msgid "Symbolic Icons"
 msgstr ""
 
-#: ../src/weather-settings.js.in:674
+#: ../src/weather-settings.js.in:688
 msgid "Temperature in Panel"
 msgstr "Temperatur:"
 
-#: ../src/weather-settings.js.in:676
+#: ../src/weather-settings.js.in:690
 msgid "Conditions in Panel"
 msgstr ""

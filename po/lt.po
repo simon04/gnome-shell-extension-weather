@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-08 22:22+0200\n"
+"POT-Creation-Date: 2012-08-09 02:00+0200\n"
 "PO-Revision-Date: 2012-06-04 15:57+0000\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -26,17 +26,17 @@ msgstr ""
 msgid "Reload Weather Information"
 msgstr "Atnaujinti orų informaciją"
 
-#: ../src/extension.js:200 ../src/weather-settings.js.in:622
+#: ../src/extension.js:200 ../src/weather-settings.js.in:636
 msgid "Weather Settings"
 msgstr "Nustatymai (vietovė ir kt.)"
 
 #: ../src/extension.js:220 ../src/extension.js:230
-#: ../src/weather-settings.js.in:296
+#: ../src/weather-settings.js.in:310
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: ../src/extension.js:474 ../src/weather-settings.js.in:506
+#: ../src/extension.js:474 ../src/weather-settings.js.in:520
 msgid "Invalid city"
 msgstr "Netinkama vietovė"
 
@@ -208,112 +208,117 @@ msgstr "Pavienės liūtys su perkūnija"
 msgid "Not available"
 msgstr "Neprieinama"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Monday"
 msgstr "Pirmadienis"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Tuesday"
 msgstr "Antradienis"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Wednesday"
 msgstr "Trečiadienis"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Thursday"
 msgstr "Ketvirtadienis"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Friday"
 msgstr "Penktadienis"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Saturday"
 msgstr "Šeštadienis"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:818
 msgid "Sunday"
 msgstr "Sekmadienis"
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:833
+#: ../src/extension.js:825
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:932
-msgid "Today"
-msgstr "Šiandien"
-
-#: ../src/extension.js:932
-msgid "Tomorrow"
-msgstr "Rytoj"
-
-#: ../src/extension.js:1028
+#: ../src/extension.js:1032 ../src/extension.js:1157
 msgid "Yesterday"
 msgstr "Vakar"
 
-#: ../src/extension.js:1033 ../src/extension.js:1041
+#: ../src/extension.js:1034 ../src/extension.js:1159
 #, python-format
 msgid "%s days ago"
 msgstr "Prieš %s dienas"
 
-#: ../src/extension.js:1187
+#: ../src/extension.js:1151
+msgid "Today"
+msgstr "Šiandien"
+
+#: ../src/extension.js:1153
+msgid "Tomorrow"
+msgstr "Rytoj"
+
+#: ../src/extension.js:1155
+#, fuzzy, python-format
+msgid "In %s days"
+msgstr "Prieš %s dienas"
+
+#: ../src/extension.js:1190
 msgid "Loading current weather ..."
 msgstr ""
 
-#: ../src/extension.js:1188
+#: ../src/extension.js:1191
 msgid "Loading future weather ..."
 msgstr ""
 
-#: ../src/extension.js:1225
+#: ../src/extension.js:1228
 msgid "Loading ..."
 msgstr "Įkeliama..."
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1231
 msgid "Please wait"
 msgstr "Palaukite"
 
-#: ../src/extension.js:1273
+#: ../src/extension.js:1276
 msgid "Feel like:"
 msgstr "Jaučiama kaip:"
 
-#: ../src/extension.js:1275
+#: ../src/extension.js:1278
 msgid "Humidity:"
 msgstr "Drėgnumas:"
 
-#: ../src/extension.js:1277
+#: ../src/extension.js:1280
 msgid "Pressure:"
 msgstr "Slėgis:"
 
-#: ../src/extension.js:1279
+#: ../src/extension.js:1282
 msgid "Wind:"
 msgstr "Vėjas:"
 
@@ -321,56 +326,56 @@ msgstr "Vėjas:"
 msgid "Name of the city"
 msgstr "Vietovės pavadinimas"
 
-#: ../src/weather-settings.js.in:214
+#: ../src/weather-settings.js.in:216
 #, python-format
 msgid "Remove %s ?"
 msgstr "Pašalinti %s ?"
 
-#: ../src/weather-settings.js.in:660
+#: ../src/weather-settings.js.in:674
 msgid "Temperature Unit"
 msgstr "Temperatūros vienetai"
 
-#: ../src/weather-settings.js.in:662
+#: ../src/weather-settings.js.in:676
 msgid "Wind Speed Unit"
 msgstr "Vėjo greičio vienetai"
 
-#: ../src/weather-settings.js.in:664
+#: ../src/weather-settings.js.in:678
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Slėgis:"
 
-#: ../src/weather-settings.js.in:666
+#: ../src/weather-settings.js.in:680
 msgid "Position in Panel"
 msgstr "Padėtis skydelyje"
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Center"
 msgstr "Centre"
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Right"
 msgstr "Dešinėje"
 
-#: ../src/weather-settings.js.in:667
+#: ../src/weather-settings.js.in:681
 msgid "Left"
 msgstr "Kairėje"
 
-#: ../src/weather-settings.js.in:668
+#: ../src/weather-settings.js.in:682
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/weather-settings.js.in:670
+#: ../src/weather-settings.js.in:684
 msgid "Translate Conditions"
 msgstr "Versti oro sąlygas"
 
-#: ../src/weather-settings.js.in:672
+#: ../src/weather-settings.js.in:686
 msgid "Symbolic Icons"
 msgstr ""
 
-#: ../src/weather-settings.js.in:674
+#: ../src/weather-settings.js.in:688
 msgid "Temperature in Panel"
 msgstr "Rodyti temperatūrą skydelyje"
 
-#: ../src/weather-settings.js.in:676
+#: ../src/weather-settings.js.in:690
 msgid "Conditions in Panel"
 msgstr "Rodyti oro sąlygas skydelyje"
