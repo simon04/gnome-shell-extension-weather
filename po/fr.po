@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-09 02:00+0200\n"
+"POT-Creation-Date: 2012-08-12 14:02+0200\n"
 "PO-Revision-Date: 2012-08-09 02:01+0100\n"
 "Last-Translator: Christian METZLER (Neroth) <neroth@xeked.com>\n"
 "Language-Team: Français <ecyrbe@gmail.com>\n"
@@ -209,117 +209,117 @@ msgstr "Orages isolés"
 msgid "Not available"
 msgstr "Non disponible"
 
-#: ../src/extension.js:818
-msgid "Monday"
-msgstr "Lundi"
-
-#: ../src/extension.js:818
-msgid "Tuesday"
-msgstr "Mardi"
-
-#: ../src/extension.js:818
-msgid "Wednesday"
-msgstr "Mercredi"
-
-#: ../src/extension.js:818
-msgid "Thursday"
-msgstr "Jeudi"
-
-#: ../src/extension.js:818
-msgid "Friday"
-msgstr "Vendredi"
-
-#: ../src/extension.js:818
-msgid "Saturday"
-msgstr "Samedi"
-
-#: ../src/extension.js:818
+#: ../src/extension.js:817
 msgid "Sunday"
 msgstr "Dimanche"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:817
+msgid "Monday"
+msgstr "Lundi"
+
+#: ../src/extension.js:817
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: ../src/extension.js:817
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: ../src/extension.js:817
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: ../src/extension.js:817
+msgid "Friday"
+msgstr "Vendredi"
+
+#: ../src/extension.js:817
+msgid "Saturday"
+msgstr "Samedi"
+
+#: ../src/extension.js:824
 msgid "N"
 msgstr "N"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NE"
 msgstr "NE"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "E"
 msgstr "E"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SE"
 msgstr "SE"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "S"
 msgstr "S"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SW"
 msgstr "SO"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "W"
 msgstr "O"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NW"
 msgstr "NO"
 
-#: ../src/extension.js:1032 ../src/extension.js:1157
+#: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
 msgstr "Hier"
 
-#: ../src/extension.js:1034 ../src/extension.js:1159
+#: ../src/extension.js:1033 ../src/extension.js:1158
 #, python-format
 msgid "%s days ago"
 msgstr "Il y a %s jours"
 
-#: ../src/extension.js:1151
+#: ../src/extension.js:1150
 msgid "Today"
 msgstr "Aujourd'hui"
 
-#: ../src/extension.js:1153
+#: ../src/extension.js:1152
 msgid "Tomorrow"
 msgstr "Demain"
 
-#: ../src/extension.js:1155
+#: ../src/extension.js:1154
 #, python-format
 msgid "In %s days"
 msgstr "Dans %s jours"
 
-#: ../src/extension.js:1190
+#: ../src/extension.js:1189
 msgid "Loading current weather ..."
 msgstr "Chargement de la météo ..."
 
-#: ../src/extension.js:1191
+#: ../src/extension.js:1190
 msgid "Loading future weather ..."
 msgstr "Chargement des prévisions ..."
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1227
 msgid "Loading ..."
 msgstr "Chargement ..."
 
-#: ../src/extension.js:1231
+#: ../src/extension.js:1230
 msgid "Please wait"
 msgstr "Patientez s'il vous plaît"
 
-#: ../src/extension.js:1276
+#: ../src/extension.js:1275
 msgid "Feel like:"
 msgstr "Ressentie :"
 
-#: ../src/extension.js:1278
+#: ../src/extension.js:1277
 msgid "Humidity:"
 msgstr "Humidité :"
 
-#: ../src/extension.js:1280
+#: ../src/extension.js:1279
 msgid "Pressure:"
 msgstr "Pression :"
 
-#: ../src/extension.js:1282
+#: ../src/extension.js:1281
 msgid "Wind:"
 msgstr "Vent :"
 

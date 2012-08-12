@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-09 02:00+0200\n"
+"POT-Creation-Date: 2012-08-12 14:02+0200\n"
 "PO-Revision-Date: 2012-06-03 23:07+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
@@ -207,117 +207,117 @@ msgstr "Ojedinělé bouřky"
 msgid "Not available"
 msgstr "Není k dispozici"
 
-#: ../src/extension.js:818
-msgid "Monday"
-msgstr "Pondělí"
-
-#: ../src/extension.js:818
-msgid "Tuesday"
-msgstr "Úterý"
-
-#: ../src/extension.js:818
-msgid "Wednesday"
-msgstr "Středa"
-
-#: ../src/extension.js:818
-msgid "Thursday"
-msgstr "Čtvrtek"
-
-#: ../src/extension.js:818
-msgid "Friday"
-msgstr "Pátek"
-
-#: ../src/extension.js:818
-msgid "Saturday"
-msgstr "Sobota"
-
-#: ../src/extension.js:818
+#: ../src/extension.js:817
 msgid "Sunday"
 msgstr "Neděle"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:817
+msgid "Monday"
+msgstr "Pondělí"
+
+#: ../src/extension.js:817
+msgid "Tuesday"
+msgstr "Úterý"
+
+#: ../src/extension.js:817
+msgid "Wednesday"
+msgstr "Středa"
+
+#: ../src/extension.js:817
+msgid "Thursday"
+msgstr "Čtvrtek"
+
+#: ../src/extension.js:817
+msgid "Friday"
+msgstr "Pátek"
+
+#: ../src/extension.js:817
+msgid "Saturday"
+msgstr "Sobota"
+
+#: ../src/extension.js:824
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:1032 ../src/extension.js:1157
+#: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
 msgstr "Včera"
 
-#: ../src/extension.js:1034 ../src/extension.js:1159
+#: ../src/extension.js:1033 ../src/extension.js:1158
 #, python-format
 msgid "%s days ago"
 msgstr "%s dní zpátky"
 
-#: ../src/extension.js:1151
+#: ../src/extension.js:1150
 msgid "Today"
 msgstr "Dnes"
 
-#: ../src/extension.js:1153
+#: ../src/extension.js:1152
 msgid "Tomorrow"
 msgstr "Zítra"
 
-#: ../src/extension.js:1155
+#: ../src/extension.js:1154
 #, fuzzy, python-format
 msgid "In %s days"
 msgstr "%s dní zpátky"
 
-#: ../src/extension.js:1190
+#: ../src/extension.js:1189
 msgid "Loading current weather ..."
 msgstr "Načítání aktuálního počasí…"
 
-#: ../src/extension.js:1191
+#: ../src/extension.js:1190
 msgid "Loading future weather ..."
 msgstr "Načítání předpovědi…"
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1227
 msgid "Loading ..."
 msgstr "Načítání…"
 
-#: ../src/extension.js:1231
+#: ../src/extension.js:1230
 msgid "Please wait"
 msgstr "Čekejte"
 
-#: ../src/extension.js:1276
+#: ../src/extension.js:1275
 msgid "Feel like:"
 msgstr "Pocitově:"
 
-#: ../src/extension.js:1278
+#: ../src/extension.js:1277
 msgid "Humidity:"
 msgstr "Vlhkost:"
 
-#: ../src/extension.js:1280
+#: ../src/extension.js:1279
 msgid "Pressure:"
 msgstr "Tlak:"
 
-#: ../src/extension.js:1282
+#: ../src/extension.js:1281
 msgid "Wind:"
 msgstr "Vítr:"
 

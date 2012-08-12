@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-09 02:00+0200\n"
+"POT-Creation-Date: 2012-08-12 14:02+0200\n"
 "PO-Revision-Date: 2012-05-13 22:38+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: Español; Castellano <zodiac_es@yahoo.es>\n"
@@ -207,117 +207,117 @@ msgstr "Tormentas aisladas"
 msgid "Not available"
 msgstr "No disponible"
 
-#: ../src/extension.js:818
-msgid "Monday"
-msgstr "Lunes"
-
-#: ../src/extension.js:818
-msgid "Tuesday"
-msgstr "Martes"
-
-#: ../src/extension.js:818
-msgid "Wednesday"
-msgstr "Miércoles"
-
-#: ../src/extension.js:818
-msgid "Thursday"
-msgstr "Jueves"
-
-#: ../src/extension.js:818
-msgid "Friday"
-msgstr "Viernes"
-
-#: ../src/extension.js:818
-msgid "Saturday"
-msgstr "Sábado"
-
-#: ../src/extension.js:818
+#: ../src/extension.js:817
 msgid "Sunday"
 msgstr "Domingo"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:817
+msgid "Monday"
+msgstr "Lunes"
+
+#: ../src/extension.js:817
+msgid "Tuesday"
+msgstr "Martes"
+
+#: ../src/extension.js:817
+msgid "Wednesday"
+msgstr "Miércoles"
+
+#: ../src/extension.js:817
+msgid "Thursday"
+msgstr "Jueves"
+
+#: ../src/extension.js:817
+msgid "Friday"
+msgstr "Viernes"
+
+#: ../src/extension.js:817
+msgid "Saturday"
+msgstr "Sábado"
+
+#: ../src/extension.js:824
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:1032 ../src/extension.js:1157
+#: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
 msgstr ""
 
-#: ../src/extension.js:1034 ../src/extension.js:1159
+#: ../src/extension.js:1033 ../src/extension.js:1158
 #, python-format
 msgid "%s days ago"
 msgstr ""
 
-#: ../src/extension.js:1151
+#: ../src/extension.js:1150
 msgid "Today"
 msgstr "Hoy"
 
-#: ../src/extension.js:1153
+#: ../src/extension.js:1152
 msgid "Tomorrow"
 msgstr "Mañana"
 
-#: ../src/extension.js:1155
+#: ../src/extension.js:1154
 #, python-format
 msgid "In %s days"
 msgstr ""
 
-#: ../src/extension.js:1190
+#: ../src/extension.js:1189
 msgid "Loading current weather ..."
 msgstr "Cargando la meteorología actual..."
 
-#: ../src/extension.js:1191
+#: ../src/extension.js:1190
 msgid "Loading future weather ..."
 msgstr "Cargando la meteorología futura..."
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1227
 msgid "Loading ..."
 msgstr "Cargando..."
 
-#: ../src/extension.js:1231
+#: ../src/extension.js:1230
 msgid "Please wait"
 msgstr "Espere un momento"
 
-#: ../src/extension.js:1276
+#: ../src/extension.js:1275
 msgid "Feel like:"
 msgstr ""
 
-#: ../src/extension.js:1278
+#: ../src/extension.js:1277
 msgid "Humidity:"
 msgstr "Humedad"
 
-#: ../src/extension.js:1280
+#: ../src/extension.js:1279
 msgid "Pressure:"
 msgstr "Presión:"
 
-#: ../src/extension.js:1282
+#: ../src/extension.js:1281
 msgid "Wind:"
 msgstr "Viento:"
 

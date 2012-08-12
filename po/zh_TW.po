@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-09 02:00+0200\n"
+"POT-Creation-Date: 2012-08-12 14:02+0200\n"
 "PO-Revision-Date: 2012-05-13 22:41+0100\n"
 "Last-Translator: Anton Yu <anton.tw@gmail.com>\n"
 "Language-Team: Chinese (Traditional)\n"
@@ -207,117 +207,117 @@ msgstr "局部雷陣雨"
 msgid "Not available"
 msgstr "無法使用"
 
-#: ../src/extension.js:818
-msgid "Monday"
-msgstr "星期一"
-
-#: ../src/extension.js:818
-msgid "Tuesday"
-msgstr "星期二"
-
-#: ../src/extension.js:818
-msgid "Wednesday"
-msgstr "星期三"
-
-#: ../src/extension.js:818
-msgid "Thursday"
-msgstr "星期四"
-
-#: ../src/extension.js:818
-msgid "Friday"
-msgstr "星期五"
-
-#: ../src/extension.js:818
-msgid "Saturday"
-msgstr "星期六"
-
-#: ../src/extension.js:818
+#: ../src/extension.js:817
 msgid "Sunday"
 msgstr "星期日"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:817
+msgid "Monday"
+msgstr "星期一"
+
+#: ../src/extension.js:817
+msgid "Tuesday"
+msgstr "星期二"
+
+#: ../src/extension.js:817
+msgid "Wednesday"
+msgstr "星期三"
+
+#: ../src/extension.js:817
+msgid "Thursday"
+msgstr "星期四"
+
+#: ../src/extension.js:817
+msgid "Friday"
+msgstr "星期五"
+
+#: ../src/extension.js:817
+msgid "Saturday"
+msgstr "星期六"
+
+#: ../src/extension.js:824
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:1032 ../src/extension.js:1157
+#: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
 msgstr "昨天"
 
-#: ../src/extension.js:1034 ../src/extension.js:1159
+#: ../src/extension.js:1033 ../src/extension.js:1158
 #, python-format
 msgid "%s days ago"
 msgstr "%s 天以前"
 
-#: ../src/extension.js:1151
+#: ../src/extension.js:1150
 msgid "Today"
 msgstr "今天"
 
-#: ../src/extension.js:1153
+#: ../src/extension.js:1152
 msgid "Tomorrow"
 msgstr "明天"
 
-#: ../src/extension.js:1155
+#: ../src/extension.js:1154
 #, fuzzy, python-format
 msgid "In %s days"
 msgstr "%s 天以前"
 
-#: ../src/extension.js:1190
+#: ../src/extension.js:1189
 msgid "Loading current weather ..."
 msgstr "正在載入即時天氣 ..."
 
-#: ../src/extension.js:1191
+#: ../src/extension.js:1190
 msgid "Loading future weather ..."
 msgstr "正在載入天氣預報 ..."
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1227
 msgid "Loading ..."
 msgstr "載入中 ..."
 
-#: ../src/extension.js:1231
+#: ../src/extension.js:1230
 msgid "Please wait"
 msgstr "請稍候"
 
-#: ../src/extension.js:1276
+#: ../src/extension.js:1275
 msgid "Feel like:"
 msgstr "感覺像"
 
-#: ../src/extension.js:1278
+#: ../src/extension.js:1277
 msgid "Humidity:"
 msgstr "濕度："
 
-#: ../src/extension.js:1280
+#: ../src/extension.js:1279
 msgid "Pressure:"
 msgstr "氣壓："
 
-#: ../src/extension.js:1282
+#: ../src/extension.js:1281
 msgid "Wind:"
 msgstr "風力："
 

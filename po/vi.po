@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-09 02:00+0200\n"
+"POT-Creation-Date: 2012-08-12 14:02+0200\n"
 "PO-Revision-Date: 2012-06-17 17:04+0700\n"
 "Last-Translator: Ngô Trung <ndtrung4419@gmail.com>\n"
 "Language-Team: \n"
@@ -207,117 +207,117 @@ msgstr "Mưa rào rải rác"
 msgid "Not available"
 msgstr "Không có dữ liệu"
 
-#: ../src/extension.js:818
-msgid "Monday"
-msgstr "Thứ hai"
-
-#: ../src/extension.js:818
-msgid "Tuesday"
-msgstr "Thứ ba"
-
-#: ../src/extension.js:818
-msgid "Wednesday"
-msgstr "Thứ tư"
-
-#: ../src/extension.js:818
-msgid "Thursday"
-msgstr "Thứ năm"
-
-#: ../src/extension.js:818
-msgid "Friday"
-msgstr "Thứ sáu"
-
-#: ../src/extension.js:818
-msgid "Saturday"
-msgstr "Thứ bảy"
-
-#: ../src/extension.js:818
+#: ../src/extension.js:817
 msgid "Sunday"
 msgstr "Chủ Nhật"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:817
+msgid "Monday"
+msgstr "Thứ hai"
+
+#: ../src/extension.js:817
+msgid "Tuesday"
+msgstr "Thứ ba"
+
+#: ../src/extension.js:817
+msgid "Wednesday"
+msgstr "Thứ tư"
+
+#: ../src/extension.js:817
+msgid "Thursday"
+msgstr "Thứ năm"
+
+#: ../src/extension.js:817
+msgid "Friday"
+msgstr "Thứ sáu"
+
+#: ../src/extension.js:817
+msgid "Saturday"
+msgstr "Thứ bảy"
+
+#: ../src/extension.js:824
 msgid "N"
 msgstr "B"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NE"
 msgstr "ĐB"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "E"
 msgstr "Đ"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SE"
 msgstr "ĐN"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "S"
 msgstr "N"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SW"
 msgstr "TN"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "W"
 msgstr "T"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NW"
 msgstr "TB"
 
-#: ../src/extension.js:1032 ../src/extension.js:1157
+#: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
 msgstr "Hôm qua"
 
-#: ../src/extension.js:1034 ../src/extension.js:1159
+#: ../src/extension.js:1033 ../src/extension.js:1158
 #, python-format
 msgid "%s days ago"
 msgstr "%s ngày trước"
 
-#: ../src/extension.js:1151
+#: ../src/extension.js:1150
 msgid "Today"
 msgstr "Hôm nay"
 
-#: ../src/extension.js:1153
+#: ../src/extension.js:1152
 msgid "Tomorrow"
 msgstr "Ngày mai"
 
-#: ../src/extension.js:1155
+#: ../src/extension.js:1154
 #, fuzzy, python-format
 msgid "In %s days"
 msgstr "%s ngày trước"
 
-#: ../src/extension.js:1190
+#: ../src/extension.js:1189
 msgid "Loading current weather ..."
 msgstr "Đang tải dữ liệu thời tiết hiện tại..."
 
-#: ../src/extension.js:1191
+#: ../src/extension.js:1190
 msgid "Loading future weather ..."
 msgstr "Đang tải dữ liệu dự báo thời tiết..."
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1227
 msgid "Loading ..."
 msgstr "Đang tải..."
 
-#: ../src/extension.js:1231
+#: ../src/extension.js:1230
 msgid "Please wait"
 msgstr "Xin đợi một lát"
 
-#: ../src/extension.js:1276
+#: ../src/extension.js:1275
 msgid "Feel like:"
 msgstr "Cảm giác ngoài trời:"
 
-#: ../src/extension.js:1278
+#: ../src/extension.js:1277
 msgid "Humidity:"
 msgstr "Độ ẩm:"
 
-#: ../src/extension.js:1280
+#: ../src/extension.js:1279
 msgid "Pressure:"
 msgstr "Áp suất:"
 
-#: ../src/extension.js:1282
+#: ../src/extension.js:1281
 msgid "Wind:"
 msgstr "Gió:"
 

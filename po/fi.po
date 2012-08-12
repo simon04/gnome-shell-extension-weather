@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-09 02:00+0200\n"
+"POT-Creation-Date: 2012-08-12 14:02+0200\n"
 "PO-Revision-Date: 2012-06-07 10:45+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: suomi <>\n"
@@ -209,117 +209,117 @@ msgstr "Yksittäisiä ukkosmyrskyjä ja sadetta"
 msgid "Not available"
 msgstr "Ei saatavilla"
 
-#: ../src/extension.js:818
-msgid "Monday"
-msgstr "Maanantai"
-
-#: ../src/extension.js:818
-msgid "Tuesday"
-msgstr "Tiistai"
-
-#: ../src/extension.js:818
-msgid "Wednesday"
-msgstr "Keskiviikko"
-
-#: ../src/extension.js:818
-msgid "Thursday"
-msgstr "Torstai"
-
-#: ../src/extension.js:818
-msgid "Friday"
-msgstr "Perjantai"
-
-#: ../src/extension.js:818
-msgid "Saturday"
-msgstr "Launtai"
-
-#: ../src/extension.js:818
+#: ../src/extension.js:817
 msgid "Sunday"
 msgstr "Sunnuntai"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:817
+msgid "Monday"
+msgstr "Maanantai"
+
+#: ../src/extension.js:817
+msgid "Tuesday"
+msgstr "Tiistai"
+
+#: ../src/extension.js:817
+msgid "Wednesday"
+msgstr "Keskiviikko"
+
+#: ../src/extension.js:817
+msgid "Thursday"
+msgstr "Torstai"
+
+#: ../src/extension.js:817
+msgid "Friday"
+msgstr "Perjantai"
+
+#: ../src/extension.js:817
+msgid "Saturday"
+msgstr "Launtai"
+
+#: ../src/extension.js:824
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:1032 ../src/extension.js:1157
+#: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
 msgstr "Eilen"
 
-#: ../src/extension.js:1034 ../src/extension.js:1159
+#: ../src/extension.js:1033 ../src/extension.js:1158
 #, python-format
 msgid "%s days ago"
 msgstr "%s päivää sitten"
 
-#: ../src/extension.js:1151
+#: ../src/extension.js:1150
 msgid "Today"
 msgstr "Tänään"
 
-#: ../src/extension.js:1153
+#: ../src/extension.js:1152
 msgid "Tomorrow"
 msgstr "Huomenna"
 
-#: ../src/extension.js:1155
+#: ../src/extension.js:1154
 #, fuzzy, python-format
 msgid "In %s days"
 msgstr "%s päivää sitten"
 
-#: ../src/extension.js:1190
+#: ../src/extension.js:1189
 msgid "Loading current weather ..."
 msgstr "Ladataan säätietoja"
 
-#: ../src/extension.js:1191
+#: ../src/extension.js:1190
 msgid "Loading future weather ..."
 msgstr "Ladataan huomisen säätietoja"
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1227
 msgid "Loading ..."
 msgstr "Ladataan..."
 
-#: ../src/extension.js:1231
+#: ../src/extension.js:1230
 msgid "Please wait"
 msgstr "Odota"
 
-#: ../src/extension.js:1276
+#: ../src/extension.js:1275
 msgid "Feel like:"
 msgstr "Tuntuu:"
 
-#: ../src/extension.js:1278
+#: ../src/extension.js:1277
 msgid "Humidity:"
 msgstr "Kosteusprosentti:"
 
-#: ../src/extension.js:1280
+#: ../src/extension.js:1279
 msgid "Pressure:"
 msgstr "Ilmanpaine:"
 
-#: ../src/extension.js:1282
+#: ../src/extension.js:1281
 msgid "Wind:"
 msgstr "Tuulen nopeus:"
 

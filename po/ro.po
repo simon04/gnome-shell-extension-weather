@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon04-gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-09 02:00+0200\n"
+"POT-Creation-Date: 2012-08-12 14:02+0200\n"
 "PO-Revision-Date: 2012-05-13 22:40+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -211,117 +211,117 @@ msgstr "Ploi izolate"
 msgid "Not available"
 msgstr "Indisponibil"
 
-#: ../src/extension.js:818
-msgid "Monday"
-msgstr "Luni"
-
-#: ../src/extension.js:818
-msgid "Tuesday"
-msgstr "Marți"
-
-#: ../src/extension.js:818
-msgid "Wednesday"
-msgstr "Miercuri"
-
-#: ../src/extension.js:818
-msgid "Thursday"
-msgstr "Joi"
-
-#: ../src/extension.js:818
-msgid "Friday"
-msgstr "Vineri"
-
-#: ../src/extension.js:818
-msgid "Saturday"
-msgstr "Sâmbătă"
-
-#: ../src/extension.js:818
+#: ../src/extension.js:817
 msgid "Sunday"
 msgstr "Duminică"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:817
+msgid "Monday"
+msgstr "Luni"
+
+#: ../src/extension.js:817
+msgid "Tuesday"
+msgstr "Marți"
+
+#: ../src/extension.js:817
+msgid "Wednesday"
+msgstr "Miercuri"
+
+#: ../src/extension.js:817
+msgid "Thursday"
+msgstr "Joi"
+
+#: ../src/extension.js:817
+msgid "Friday"
+msgstr "Vineri"
+
+#: ../src/extension.js:817
+msgid "Saturday"
+msgstr "Sâmbătă"
+
+#: ../src/extension.js:824
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:1032 ../src/extension.js:1157
+#: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
 msgstr ""
 
-#: ../src/extension.js:1034 ../src/extension.js:1159
+#: ../src/extension.js:1033 ../src/extension.js:1158
 #, python-format
 msgid "%s days ago"
 msgstr ""
 
-#: ../src/extension.js:1151
+#: ../src/extension.js:1150
 msgid "Today"
 msgstr "Azi"
 
-#: ../src/extension.js:1153
+#: ../src/extension.js:1152
 msgid "Tomorrow"
 msgstr "Mâine"
 
-#: ../src/extension.js:1155
+#: ../src/extension.js:1154
 #, python-format
 msgid "In %s days"
 msgstr ""
 
-#: ../src/extension.js:1190
+#: ../src/extension.js:1189
 msgid "Loading current weather ..."
 msgstr "Se încarcă vremea curentă..."
 
-#: ../src/extension.js:1191
+#: ../src/extension.js:1190
 msgid "Loading future weather ..."
 msgstr "Se încarcă prognoza..."
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1227
 msgid "Loading ..."
 msgstr "Se încarcă"
 
-#: ../src/extension.js:1231
+#: ../src/extension.js:1230
 msgid "Please wait"
 msgstr "Așteptați"
 
-#: ../src/extension.js:1276
+#: ../src/extension.js:1275
 msgid "Feel like:"
 msgstr ""
 
-#: ../src/extension.js:1278
+#: ../src/extension.js:1277
 msgid "Humidity:"
 msgstr "Umiditate:"
 
-#: ../src/extension.js:1280
+#: ../src/extension.js:1279
 msgid "Pressure:"
 msgstr "Presiune:"
 
-#: ../src/extension.js:1282
+#: ../src/extension.js:1281
 msgid "Wind:"
 msgstr "Vânt:"
 

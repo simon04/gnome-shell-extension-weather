@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-09 02:00+0200\n"
+"POT-Creation-Date: 2012-08-12 14:02+0200\n"
 "PO-Revision-Date: 2012-05-13 22:41+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -206,117 +206,117 @@ msgstr "Поодинокі грозові зливи"
 msgid "Not available"
 msgstr "Недоступно"
 
-#: ../src/extension.js:818
-msgid "Monday"
-msgstr "Понеділок"
-
-#: ../src/extension.js:818
-msgid "Tuesday"
-msgstr "Вівторок"
-
-#: ../src/extension.js:818
-msgid "Wednesday"
-msgstr "Середа"
-
-#: ../src/extension.js:818
-msgid "Thursday"
-msgstr "Четвер"
-
-#: ../src/extension.js:818
-msgid "Friday"
-msgstr "П’ятниця"
-
-#: ../src/extension.js:818
-msgid "Saturday"
-msgstr "Субота"
-
-#: ../src/extension.js:818
+#: ../src/extension.js:817
 msgid "Sunday"
 msgstr "Неділя"
 
-#: ../src/extension.js:825
+#: ../src/extension.js:817
+msgid "Monday"
+msgstr "Понеділок"
+
+#: ../src/extension.js:817
+msgid "Tuesday"
+msgstr "Вівторок"
+
+#: ../src/extension.js:817
+msgid "Wednesday"
+msgstr "Середа"
+
+#: ../src/extension.js:817
+msgid "Thursday"
+msgstr "Четвер"
+
+#: ../src/extension.js:817
+msgid "Friday"
+msgstr "П’ятниця"
+
+#: ../src/extension.js:817
+msgid "Saturday"
+msgstr "Субота"
+
+#: ../src/extension.js:824
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:825
+#: ../src/extension.js:824
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:1032 ../src/extension.js:1157
+#: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
 msgstr ""
 
-#: ../src/extension.js:1034 ../src/extension.js:1159
+#: ../src/extension.js:1033 ../src/extension.js:1158
 #, python-format
 msgid "%s days ago"
 msgstr ""
 
-#: ../src/extension.js:1151
+#: ../src/extension.js:1150
 msgid "Today"
 msgstr "Сьогодні"
 
-#: ../src/extension.js:1153
+#: ../src/extension.js:1152
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: ../src/extension.js:1155
+#: ../src/extension.js:1154
 #, python-format
 msgid "In %s days"
 msgstr ""
 
-#: ../src/extension.js:1190
+#: ../src/extension.js:1189
 msgid "Loading current weather ..."
 msgstr "Завантаження поточної погоди ..."
 
-#: ../src/extension.js:1191
+#: ../src/extension.js:1190
 msgid "Loading future weather ..."
 msgstr "Завантаження прогнозу погоди ..."
 
-#: ../src/extension.js:1228
+#: ../src/extension.js:1227
 msgid "Loading ..."
 msgstr "Завантаження ..."
 
-#: ../src/extension.js:1231
+#: ../src/extension.js:1230
 msgid "Please wait"
 msgstr "Зачекайте"
 
-#: ../src/extension.js:1276
+#: ../src/extension.js:1275
 msgid "Feel like:"
 msgstr ""
 
-#: ../src/extension.js:1278
+#: ../src/extension.js:1277
 msgid "Humidity:"
 msgstr "Вологість:"
 
-#: ../src/extension.js:1280
+#: ../src/extension.js:1279
 msgid "Pressure:"
 msgstr "Тиск:"
 
-#: ../src/extension.js:1282
+#: ../src/extension.js:1281
 msgid "Wind:"
 msgstr "Вітер:"
 
