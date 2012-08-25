@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-12 14:02+0200\n"
-"PO-Revision-Date: 2012-06-04 08:02+0200\n"
+"PO-Revision-Date: 2012-08-24 07:26+0200\n"
 "Last-Translator: Mattia Meneguzzo <odysseus@fedoraproject.org>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -237,35 +237,35 @@ msgstr "Sabato"
 
 #: ../src/extension.js:824
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: ../src/extension.js:824
 msgid "NE"
-msgstr ""
+msgstr "NE"
 
 #: ../src/extension.js:824
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #: ../src/extension.js:824
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 #: ../src/extension.js:824
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: ../src/extension.js:824
 msgid "SW"
-msgstr ""
+msgstr "SO"
 
 #: ../src/extension.js:824
 msgid "W"
-msgstr ""
+msgstr "O"
 
 #: ../src/extension.js:824
 msgid "NW"
-msgstr ""
+msgstr "NO"
 
 #: ../src/extension.js:1031 ../src/extension.js:1156
 msgid "Yesterday"
@@ -303,7 +303,7 @@ msgstr "Caricamento..."
 
 #: ../src/extension.js:1230
 msgid "Please wait"
-msgstr "Attendere, prego"
+msgstr "Attendere, prego."
 
 #: ../src/extension.js:1275
 msgid "Feel like:"
@@ -341,7 +341,7 @@ msgstr "Unità di misura dell'intensità del vento"
 #: ../src/weather-settings.js.in:678
 #, fuzzy
 msgid "Pressure Unit"
-msgstr "Pressione:"
+msgstr "Unità di misura della pressione:"
 
 #: ../src/weather-settings.js.in:680
 msgid "Position in Panel"
@@ -361,7 +361,7 @@ msgstr "Sinistra"
 
 #: ../src/weather-settings.js.in:682
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "Direzione del vento tramite frecce"
 
 #: ../src/weather-settings.js.in:684
 msgid "Translate Conditions"
