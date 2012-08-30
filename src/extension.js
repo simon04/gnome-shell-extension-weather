@@ -11,7 +11,8 @@
  *     Simon Legner <Simon.Legner@gmail.com>,
  *     Christian METZLER <neroth@xeked.com>,
  *     Mark Benjamin weather.gnome.Markie1@dfgh.net,
- *     Mattia Meneguzzo odysseus@fedoraproject.org
+ *     Mattia Meneguzzo odysseus@fedoraproject.org,
+ *     Meng Zhuo <mengzhuo1203+spam@gmail.com>
  *
  *
  * This file is part of gnome-shell-extension-weather.
@@ -42,6 +43,7 @@ const Soup = imports.gi.Soup;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Util = imports.misc.util;
+const NMClient = imports.gi.NMClient;
 const _ = Gettext.gettext;
 
 const Main = imports.ui.main;
@@ -119,6 +121,9 @@ WeatherMenuButton.prototype = {
 	_init: function() {
 	// Load settings
 	this.loadConfig();
+	
+	//Load Network status
+	this._nmClient = NMClient.Client.new();
 
 	// Label
 	this._weatherInfo = new St.Label({ text: _('...') });
@@ -486,6 +491,7 @@ WeatherMenuButton.prototype = {
 	{
 	let that = this;
 	let cities = this._cities;
+	
 	cities = cities.split(" && ");
 		if(cities && typeof cities == "string")
 		cities = [cities];
@@ -870,6 +876,14 @@ WeatherMenuButton.prototype = {
     },
 
     refreshWeather: function(recurse) {
+	
+	if (this._nmClient.get_active_connections() == null){
+		this.actor.hide(); 
+	}
+	else{
+		this.actor.show();
+	}
+    
         if(!this.extractWoeid(this._city))
 	{
 	this.updateCities();
