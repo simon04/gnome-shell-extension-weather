@@ -3,7 +3,7 @@
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # bill <bill_zt@sina.com>, 2011.
-#
+# tuhaihe <1132321739qq@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "未找到方案“%s”。"
 
 msgid "..."
 msgstr "..."
@@ -172,28 +172,28 @@ msgid "Sunday"
 msgstr "星期日"
 
 msgid "N"
-msgstr ""
+msgstr "北"
 
 msgid "NE"
-msgstr ""
+msgstr "东北"
 
 msgid "E"
-msgstr ""
+msgstr "东"
 
 msgid "SE"
-msgstr ""
+msgstr "东南"
 
 msgid "S"
-msgstr ""
+msgstr "南"
 
 msgid "SW"
-msgstr ""
+msgstr "西南"
 
 msgid "W"
-msgstr ""
+msgstr "西"
 
 msgid "NW"
-msgstr ""
+msgstr "西北"
 
 msgid "Today"
 msgstr "今天"
@@ -214,10 +214,10 @@ msgid "Please wait"
 msgstr "请等待"
 
 msgid "Sunrise"
-msgstr ""
+msgstr "日出"
 
 msgid "Sunset"
-msgstr ""
+msgstr "日落"
 
 msgid "Temperature:"
 msgstr "温度："
