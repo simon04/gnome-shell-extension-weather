@@ -1,0 +1,232 @@
+# Hebrew translation for gnome-shell-extension-weather
+# Copyright (C) 2012
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Yaron Sheffer <yaronf@gmx.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-30 16:08+0200\n"
+"PO-Revision-Date: 2012-01-31 21:37+0200\n"
+"Last-Translator: Yaron Sheffer <yaronf@gmx.com>\n"
+"Language-Team: Hebrew <none@example.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+msgid "..."
+msgstr "..."
+
+msgid "Tornado"
+msgstr "إعصار"
+
+msgid "Tropical storm"
+msgstr "عاصفة مدارية"
+
+msgid "Hurricane"
+msgstr "إعصار استوائي"
+
+msgid "Severe thunderstorms"
+msgstr "عواصف رعدية شديدة"
+
+msgid "Thunderstorms"
+msgstr "عواصف رعدية"
+
+msgid "Mixed rain and snow"
+msgstr "خليط من المطر والثلج"
+
+msgid "Mixed rain and sleet"
+msgstr "خليط من المطر والمطر الثلجي"
+
+msgid "Mixed snow and sleet"
+msgstr "خليط من الثلج والمطر الثلجي"
+
+msgid "Freezing drizzle"
+msgstr "رذاذ متجمد"
+
+msgid "Drizzle"
+msgstr "رذاذ"
+
+msgid "Freezing rain"
+msgstr "مطر متجمد"
+
+msgid "Showers"
+msgstr "رشات مطر"
+
+msgid "Snow flurries"
+msgstr "تساقط ثلوج"
+
+msgid "Light snow showers"
+msgstr "رشات ثلجية خفيفة"
+
+msgid "Blowing snow"
+msgstr "هبوب ثلوج"
+
+msgid "Snow"
+msgstr "ثلج"
+
+msgid "Hail"
+msgstr "بَرَد"
+
+msgid "Sleet"
+msgstr "مطر ثلجي"
+
+msgid "Dust"
+msgstr "غبار"
+
+msgid "Foggy"
+msgstr "ضبابي"
+
+msgid "Haze"
+msgstr "سديم"
+
+msgid "Smoky"
+msgstr "دخانيّ"
+
+msgid "Blustery"
+msgstr "ريح عاصف"
+
+msgid "Windy"
+msgstr "عاصف"
+
+msgid "Cold"
+msgstr "بارد"
+
+msgid "Cloudy"
+msgstr "غائم"
+
+msgid "Mostly cloudy"
+msgstr "غائم في أغلبه"
+
+msgid "Partly cloudy"
+msgstr "غائم جزئياً"
+
+msgid "Clear"
+msgstr "صافٍ"
+
+msgid "Sunny"
+msgstr "مشمس"
+
+msgid "Fair"
+msgstr "معتدل"
+
+msgid "Mixed rain and hail"
+msgstr "خليط من المطر والبَرَد"
+
+msgid "Hot"
+msgstr "حار"
+
+msgid "Isolated thunderstorms"
+msgstr "عواصف رعدية معزولة"
+
+msgid "Scattered thunderstorms"
+msgstr "סعواصف رعدية متفرقة"
+
+msgid "Scattered showers"
+msgstr "رشات متفرقة"
+
+msgid "Heavy snow"
+msgstr "ثلج كثيف"
+
+msgid "Scattered snow showers"
+msgstr "رشات ثلجية متفرقة"
+
+msgid "Thundershowers"
+msgstr "وابل رعدي"
+
+msgid "Snow showers"
+msgstr "رشات ثلجية متفرقة"
+
+msgid "Isolated thundershowers"
+msgstr "وابل ثلجي معزول"
+
+msgid "Not available"
+msgstr "غير متاح"
+
+msgid "Monday"
+msgstr "الإثنين"
+
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+msgid "Thursday"
+msgstr "الخميس"
+
+msgid "Friday"
+msgstr "الجمعة"
+
+msgid "Saturday"
+msgstr "السبت"
+
+msgid "Sunday"
+msgstr "الأحد"
+
+msgid "N"
+msgstr "ش"
+
+msgid "NE"
+msgstr "ش ق"
+
+msgid "E"
+msgstr "ق"
+
+msgid "SE"
+msgstr "ج ق"
+
+msgid "S"
+msgstr "ج"
+
+msgid "SW"
+msgstr "ج غ"
+
+msgid "W"
+msgstr "غ"
+
+msgid "NW"
+msgstr "ش غ"
+
+msgid "Today"
+msgstr "اليوم"
+
+msgid "Tomorrow"
+msgstr "غداً"
+
+msgid "Loading current weather ..."
+msgstr "يحمل الطقس الحالي..."
+
+msgid "Loading future weather ..."
+msgstr "يحمل طقس المستقبل..."
+
+msgid "Loading ..."
+msgstr "يحمل..."
+
+msgid "Please wait"
+msgstr "انتظر رجاءً"
+
+msgid "Sunrise"
+msgstr "شروق الشمس"
+
+msgid "Sunset"
+msgstr "غروب الشمس"
+
+msgid "Temperature:"
+msgstr "درجة الحرارة:"
+
+msgid "Humidity:"
+msgstr "الرطوبة:"
+
+msgid "Pressure:"
+msgstr "الضغط:"
+
+msgid "Wind:"
+msgstr "الريح:"
