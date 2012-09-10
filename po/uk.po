@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-30 16:08+0200\n"
+"POT-Creation-Date: 2012-08-15 22:28+0200\n"
 "PO-Revision-Date: 2011-12-24 19:55+0200\n"
 "Last-Translator: Kyrylo Mikos <kiril.mik.os@gmail.com>\n"
 "Language: uk\n"
@@ -170,28 +170,28 @@ msgid "Sunday"
 msgstr "Неділя"
 
 msgid "N"
-msgstr ""
+msgstr "Пн"
 
 msgid "NE"
-msgstr ""
+msgstr "Пн-Сх"
 
 msgid "E"
-msgstr ""
+msgstr "Сх"
 
 msgid "SE"
-msgstr ""
+msgstr "Пд-Сх"
 
 msgid "S"
-msgstr ""
+msgstr "Пд"
 
 msgid "SW"
-msgstr ""
+msgstr "Пд-Зх"
 
 msgid "W"
-msgstr ""
+msgstr "Зх"
 
 msgid "NW"
-msgstr ""
+msgstr "Пн-Зх"
 
 msgid "Today"
 msgstr "Сьогодні"
@@ -212,10 +212,10 @@ msgid "Please wait"
 msgstr "Зачекайте"
 
 msgid "Sunrise"
-msgstr ""
+msgstr "Схід сонця"
 
 msgid "Sunset"
-msgstr ""
+msgstr "Захід сонця"
 
 msgid "Temperature:"
 msgstr "Температура:"
