@@ -1,0 +1,303 @@
+# Greek translation for gnome-shell-extension-weather
+# Copyright (C) 2012 
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# George Pantsis <gpantsis@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-05 20:50-0400\n"
+"PO-Revision-Date: 2012-09-21 21:24+0300\n"
+"Last-Translator: George Pantsis <gpantsis@gmail.com>\n"
+"Language-Team: Ελληνικά <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: applet.js:124
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr "Δεν βρέθηκε το σχήμα \"%s\"."
+
+#: applet.js:196
+msgid "Click to open"
+msgstr "Κάντε κλικ για να ανοίξει"
+
+#: applet.js:466
+msgid "Sunrise"
+msgstr "Ανατολή"
+
+#: applet.js:467
+msgid "Sunset"
+msgstr "Δύση"
+
+#: applet.js:472
+msgid "Today"
+msgstr "Σήμερα"
+
+#: applet.js:472
+msgid "Tomorrow"
+msgstr "Αύριο"
+
+#: applet.js:527
+msgid "Loading current weather ..."
+msgstr "Φόρτωση τρέχοντος καιρού ..."
+
+#: applet.js:528
+msgid "Loading future weather ..."
+msgstr "Φόρτωση μελλοντικού καιρού ..."
+
+#: applet.js:548
+msgid "Loading ..."
+msgstr "Φόρτωση ..."
+
+#: applet.js:554
+msgid "Please wait"
+msgstr "Παρακαλώ περιμένετε"
+
+#: applet.js:611
+msgid "Temperature:"
+msgstr "Θερμοκρασία:"
+
+#: applet.js:613
+msgid "Humidity:"
+msgstr "Υγρασία:"
+
+#: applet.js:615
+msgid "Pressure:"
+msgstr "Πίεση:"
+
+#: applet.js:617
+msgid "Wind:"
+msgstr "Άνεμος:"
+
+#: applet.js:868
+msgid "Tornado"
+msgstr "Ανεμοστρόβιλος"
+
+#: applet.js:870
+msgid "Tropical storm"
+msgstr "Τροπική καταιγίδα"
+
+#: applet.js:872
+msgid "Hurricane"
+msgstr "Τυφώνας"
+
+#: applet.js:874
+msgid "Severe thunderstorms"
+msgstr "Σοβαρές καταιγίδες"
+
+#: applet.js:876
+msgid "Thunderstorms"
+msgstr "Καταιγίδες"
+
+#: applet.js:878
+msgid "Mixed rain and snow"
+msgstr "Μικτή βροχή και χιόνι"
+
+#: applet.js:880
+msgid "Mixed rain and sleet"
+msgstr "Μικτή βροχή και χιονόνερο"
+
+#: applet.js:882
+msgid "Mixed snow and sleet"
+msgstr "Μικτό χιόνι και χιονόνερο"
+
+#: applet.js:884
+msgid "Freezing drizzle"
+msgstr "Παγωμένο ψιλόβροχο"
+
+#: applet.js:886
+msgid "Drizzle"
+msgstr "Ψιλόβροχο"
+
+#: applet.js:888
+msgid "Freezing rain"
+msgstr "Παγωμένη βροχή"
+
+#: applet.js:890 applet.js:892
+msgid "Showers"
+msgstr "Βροχοπτώσεις"
+
+#: applet.js:894
+msgid "Snow flurries"
+msgstr "Νυφάδες χιονιού"
+
+#: applet.js:896
+msgid "Light snow showers"
+msgstr "Ελαφριά χιονόπτωση"
+
+#: applet.js:898
+msgid "Blowing snow"
+msgstr "Χιονοθύελλες"
+
+#: applet.js:900
+msgid "Snow"
+msgstr "Χιόνι"
+
+#: applet.js:902
+msgid "Hail"
+msgstr "Χαλάζι"
+
+#: applet.js:904
+msgid "Sleet"
+msgstr "Χιονόνερο"
+
+#: applet.js:906
+msgid "Dust"
+msgstr "Σκόνη"
+
+#: applet.js:908
+msgid "Foggy"
+msgstr "Ομιχλώδης"
+
+#: applet.js:910
+msgid "Haze"
+msgstr "Ομίχλη"
+
+#: applet.js:912
+msgid "Smoky"
+msgstr "Καπνώδης"
+
+#: applet.js:914
+msgid "Blustery"
+msgstr "Θορυβώδης"
+
+#: applet.js:916
+msgid "Windy"
+msgstr "Ανεμώδης"
+
+#: applet.js:918
+msgid "Cold"
+msgstr "Κρύο"
+
+#: applet.js:920
+msgid "Cloudy"
+msgstr "Συννεφιασμένος"
+
+#: applet.js:923
+msgid "Mostly cloudy"
+msgstr "Κυρίως νεφελώδης"
+
+#: applet.js:926 applet.js:952
+msgid "Partly cloudy"
+msgstr "Πυκνή συννεφιά"
+
+#: applet.js:928
+msgid "Clear"
+msgstr "Καθαρός"
+
+#: applet.js:930
+msgid "Sunny"
+msgstr "Ηλιόλουστος"
+
+#: applet.js:933
+msgid "Fair"
+msgstr "Αίθριος"
+
+#: applet.js:935
+msgid "Mixed rain and hail"
+msgstr "Μικτή βροχή και χαλάζι"
+
+#: applet.js:937
+msgid "Hot"
+msgstr "Καυτός"
+
+#: applet.js:939
+msgid "Isolated thunderstorms"
+msgstr "Μεμονωμένες καταιγίδες"
+
+#: applet.js:942
+msgid "Scattered thunderstorms"
+msgstr "Διάσπαρτες καταιγίδες"
+
+#: applet.js:944
+msgid "Scattered showers"
+msgstr "Διάσπαρτες βροχοπτώσεις"
+
+#: applet.js:946 applet.js:950
+msgid "Heavy snow"
+msgstr "Ισχυρή χιονόπτωση"
+
+#: applet.js:948
+msgid "Scattered snow showers"
+msgstr "Διάσπαρτες χιονοπτώσεις"
+
+#: applet.js:954
+msgid "Thundershowers"
+msgstr "Βροχοπτώσεις με κεραυνούς"
+
+#: applet.js:956
+msgid "Snow showers"
+msgstr "Χιονοπτώσεις"
+
+#: applet.js:958
+msgid "Isolated thundershowers"
+msgstr "Μεμονωμένες βροχοπτώσεις με κεραυνούς"
+
+#: applet.js:961
+msgid "Not available"
+msgstr "Μη διαθέσιμο"
+
+#: applet.js:969
+msgid "Monday"
+msgstr "Δευτέρα"
+
+#: applet.js:969
+msgid "Tuesday"
+msgstr "Τρίτη"
+
+#: applet.js:969
+msgid "Wednesday"
+msgstr "Τετάρτη"
+
+#: applet.js:969
+msgid "Thursday"
+msgstr "Πέμπτη"
+
+#: applet.js:969
+msgid "Friday"
+msgstr "Παρασκευή"
+
+#: applet.js:969
+msgid "Saturday"
+msgstr "Σάββατο"
+
+#: applet.js:969
+msgid "Sunday"
+msgstr "Κυριακή"
+
+#: applet.js:977
+msgid "N"
+msgstr "Β"
+
+#: applet.js:977
+msgid "NE"
+msgstr "ΒΑ"
+
+#: applet.js:977
+msgid "E"
+msgstr "Α"
+
+#: applet.js:977
+msgid "SE"
+msgstr "ΝΑ"
+
+#: applet.js:977
+msgid "S"
+msgstr "Ν"
+
+#: applet.js:977
+msgid "SW"
+msgstr "ΝΔ"
+
+#: applet.js:977
+msgid "W"
+msgstr "Δ"
+
+#: applet.js:977
+msgid "NW"
+msgstr "ΒΔ"
