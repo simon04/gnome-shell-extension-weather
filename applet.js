@@ -36,7 +36,6 @@ const Applet = imports.ui.applet;
 const Cairo = imports.cairo;
 const ExtensionSystem = imports.ui.extensionSystem;
 const Gettext = imports.gettext;
-const _ = Gettext.gettext;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
@@ -145,8 +144,11 @@ function getSettings(schema) {
 //
 //----------------------------------------------------------------------
 
-Gettext.textdomain(UUID);
 Gettext.bindtextdomain(UUID, GLib.get_home_dir() +"/.local/share/locale");
+
+function _(str) {
+  return Gettext.dgettext(UUID, str);
+}
 
 //----------------------------------------------------------------------
 //
