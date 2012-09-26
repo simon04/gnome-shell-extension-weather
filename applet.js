@@ -262,7 +262,7 @@ MyApplet.prototype = {
 				WEATHER_SHOW_COMMENT_IN_PANEL_KEY,
 				WEATHER_SHOW_SUNRISE_SUNSET_KEY
 			];
-			context = this;
+			let context = this;
 			refreshableKeys.forEach(function (key) {
 				//global.log("cinnamon-weather::_init: adding CHANGED listener for " + key + "; " + context);
 				context._settings.connect(SIGNAL_CHANGED + key, load_settings_and_refresh_weather);
