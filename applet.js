@@ -484,7 +484,7 @@ MyApplet.prototype = {
 				// location is a button
 				this._currentWeatherLocation.style_class = 'weather-current-location-link';
 				this._currentWeatherLocation.url = weather.get_string_member('link');
-				this._currentWeatherLocation.label = location;
+				this._currentWeatherLocation.label = _(location);
 				
 				// gettext can't see these inline
 				let sunriseText = _('Sunrise');
