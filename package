@@ -1,0 +1,102 @@
+#!/bin/sh -e
+
+VERSION=$1
+BASEDIR="${HOME}/Desktop"
+APPLET="cinnamon-weather"
+PACKAGE="${APPLET}-${VERSION}"
+TARGET="${BASEDIR}/${PACKAGE}"
+
+if [ -z $VERSION ]; then
+	cat << EOF
+ERROR: You must provide a version number, like:
+	$ ./package 1.2.3
+EOF
+	exit 2
+fi
+
+check_pgp() {
+	if [ -z $GH_KEY_ID ]; then
+		cat << EOF
+Define a GH_KEY_ID variable for signing git tags.
+Typically this is the email address associated with your public PGP key.
+EOF
+		exit 11
+	fi
+}
+
+check_version() {
+	grep ${VERSION} metadata.json
+
+	VERSION_MATCH=$?
+
+	if [ $VERSION_MATCH -ne 0 ]; then
+		cat << EOF
+WARNING: $(grep version metadata.json) in metadata.json does not match the package version provided.
+	You may have forgotten to tag this release. (v$VERSION)
+
+EOF
+	fi
+}
+
+do_package() {
+	check_version
+
+	rm -rf ${BASEDIR}/${APPLET}* 2> /dev/null
+	mkdir ${TARGET}/
+	cp -r applet.js cinnamon-weather-settings icon.png install.sh metadata.json org.cinnamon.applets.weather@mockturtl.gschema.xml po/ README.md stylesheet.css ${TARGET}
+	ln -sf ${TARGET}/install.sh ${TARGET}/cleanup.sh
+	ln -sf ${TARGET}/install.sh ${TARGET}/uninstall.sh
+	rm -r ${TARGET}/po/*.po~ 2> /dev/null
+
+	cd ${BASEDIR}
+	zip -q -r ${PACKAGE}.zip ${PACKAGE}
+
+	cat << EOF
+Done.	Release ${VERSION} is ready to publish at:
+	${TARGET}.zip
+EOF
+}
+
+do_tag() {
+	check_pgp
+
+	git checkout staging && \
+	git rebase master && \
+	sed -i "s/[0-9]\+\.[0-9]\+\.[0-9]\+/$VERSION/" metadata.json && \
+	git add metadata.json && git commit -m 'bump version' && \
+	git tag -u ${GH_KEY_ID} v${VERSION} && \
+	git checkout master
+}
+
+do_deploy() {
+	check_version
+
+	if [ $VERSION_MATCH -ne 0 ]; then
+		cat << EOF
+ERROR: Invalid version.  Fix metadata.json to merge staging and push.
+EOF
+		exit 13
+	fi
+	git checkout master && \
+	git merge staging && \
+	git push && \
+	git push --tags
+}
+
+case `basename $0` in
+	"tag")
+		do_tag
+		;;
+	"package")
+		do_package
+		;;
+	"deploy")
+		do_deploy
+		;;
+	*)
+	cat << EOF
+Usage: tag | deploy | package
+EOF
+	exit 2
+	;;
+esac
