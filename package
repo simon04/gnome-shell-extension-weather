@@ -49,6 +49,7 @@ validate_version() {
 	if [ $VERSION_MATCH -ne 0 ]; then
 		cat << EOF
 ERROR: Invalid version.  Fix metadata.json to merge staging and push.
+
 EOF
 		exit 13
 	fi
@@ -70,6 +71,7 @@ do_package() {
 	cat << EOF
 Done.	Release ${VERSION} is ready to publish at:
 	${TARGET}.zip
+
 EOF
 }
 
@@ -94,6 +96,7 @@ EOF
 	git tag -u ${GH_KEY_ID} v${VERSION}
 	cat << EOF
 Done.  Now run './deploy ${VERSION}' to merge into master and push.
+
 EOF
 	git checkout ${DEV_BRANCH}
 }
@@ -106,6 +109,7 @@ do_deploy() {
 	git push --tags
 	cat << EOF
 Your new tag is at https://github.com/${AUTHOR}/${APPLET}/zipball/v${VERSION}.
+
 EOF
 }
 
