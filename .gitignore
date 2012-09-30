@@ -1,3 +1,5 @@
 *~
 *.mo
 translate.sh
+tag
+deploy
