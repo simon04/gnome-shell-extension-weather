@@ -25,13 +25,16 @@ EOF
 }
 
 check_version() {
-	grep ${VERSION} metadata.json
-
+	# exit code 1 means no match; see grep(1)
+	set +e
+	grep ${VERSION} metadata.json > /dev/null
 	VERSION_MATCH=$?
+	set -e
 
+	# { "JSON": "beware of colons!" }
 	if [ $VERSION_MATCH -ne 0 ]; then
 		cat << EOF
-WARNING: $(grep version metadata.json) in metadata.json does not match the package version provided.
+WARNING: { $(grep version metadata.json) } in metadata.json does not match the package version provided.
 	You may have forgotten to tag this release. (v$VERSION)
 
 EOF
