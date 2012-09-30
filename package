@@ -3,8 +3,8 @@
 VERSION=$1
 BASEDIR="${HOME}/Desktop"
 AUTHOR="mockturtl"
-APPLET="cinnamon-weather"
-PACKAGE="${APPLET}-${VERSION}"
+PROJECT="cinnamon-weather"
+PACKAGE="${PROJECT}-${VERSION}"
 TARGET="${BASEDIR}/${PACKAGE}"
 DEV_BRANCH="master"
 
@@ -58,8 +58,8 @@ EOF
 do_package() {
 	check_version
 
-	rm -rf ${BASEDIR}/${APPLET}* 2> /dev/null
-	mkdir ${TARGET}/
+	rm -rf ${BASEDIR}/${PROJECT}* 2> /dev/null
+	mkdir -p ${TARGET}/
 	cp -r applet.js cinnamon-weather-settings icon.png install.sh metadata.json org.cinnamon.applets.weather@mockturtl.gschema.xml po/ README.md stylesheet.css ${TARGET}
 	ln -sf ${TARGET}/install.sh ${TARGET}/cleanup.sh
 	ln -sf ${TARGET}/install.sh ${TARGET}/uninstall.sh
@@ -108,7 +108,7 @@ do_deploy() {
 	git push
 	git push --tags
 	cat << EOF
-Your new tag is at https://github.com/${AUTHOR}/${APPLET}/zipball/v${VERSION}.
+Your new tag is at https://github.com/${AUTHOR}/${PROJECT}/zipball/v${VERSION}.
 
 EOF
 }
