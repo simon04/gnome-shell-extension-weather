@@ -2,9 +2,11 @@
 
 VERSION=$1
 BASEDIR="${HOME}/Desktop"
+AUTHOR="mockturtl"
 APPLET="cinnamon-weather"
 PACKAGE="${APPLET}-${VERSION}"
 TARGET="${BASEDIR}/${PACKAGE}"
+DEV_BRANCH="master"
 
 if [ -z $VERSION ]; then
 	cat << EOF
@@ -41,6 +43,17 @@ EOF
 	fi
 }
 
+validate_version() {
+	check_version
+
+	if [ $VERSION_MATCH -ne 0 ]; then
+		cat << EOF
+ERROR: Invalid version.  Fix metadata.json to merge staging and push.
+EOF
+		exit 13
+	fi
+}
+
 do_package() {
 	check_version
 
@@ -63,27 +76,37 @@ EOF
 do_tag() {
 	check_pgp
 
-	git checkout staging && \
-	git rebase master && \
-	sed -i "s/[0-9]\+\.[0-9]\+\.[0-9]\+/$VERSION/" metadata.json && \
-	git add metadata.json && git commit -m 'bump version' && \
-	git tag -u ${GH_KEY_ID} v${VERSION} && \
-	git checkout master
+	cat << EOF
+Rebasing staging onto ${DEV_BRANCH}...
+EOF
+	git checkout staging
+	git rebase ${DEV_BRANCH}
+	cat << EOF
+Bumping version (${VERSION}) in metadata.json...
+EOF
+	sed -i "s/[0-9]\+\.[0-9]\+\.[0-9]\+[0-9A-Za-z.+~-]*/$VERSION/" metadata.json
+	cat << EOF
+Creating tag...
+EOF
+	git add metadata.json
+	# allow manual version-bump commits; see git-diff(1)
+	git diff --quiet --staged || git commit -m 'bump version'
+	git tag -u ${GH_KEY_ID} v${VERSION}
+	cat << EOF
+Done.  Now run './deploy ${VERSION}' to merge into master and push.
+EOF
+	git checkout ${DEV_BRANCH}
 }
 
 do_deploy() {
-	check_version
-
-	if [ $VERSION_MATCH -ne 0 ]; then
-		cat << EOF
-ERROR: Invalid version.  Fix metadata.json to merge staging and push.
-EOF
-		exit 13
-	fi
-	git checkout master && \
-	git merge staging && \
-	git push && \
+	validate_version
+	git checkout master
+	git merge staging
+	git push
 	git push --tags
+	cat << EOF
+Your new tag is at https://github.com/${AUTHOR}/${APPLET}/zipball/v${VERSION}.
+EOF
 }
 
 case `basename $0` in
