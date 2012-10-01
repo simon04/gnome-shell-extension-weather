@@ -1,14 +1,17 @@
 #!/bin/sh
 
 UUID="weather@mockturtl"
-OLD_UUID="cinnamon-weather@mockturtl"
-SCHEMA_DIR="/usr/share/glib-2.0/schemas/"
-OLD_SCHEMA="${OLD_UUID}.gschema.xml"
-SCHEMA="org.cinnamon.applets.${UUID}.gschema.xml"
 INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${UUID}"
-OLD_INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${OLD_UUID}"
-LOCALES="ar bg ca cs da de el es fi fr he is it ja lv nb nl pl pt_BR pt_PT ro ru sk sv uk zh_CN zh_TW"
+LOCALES="$(cat po/LINGUAS)"
 LOCALE_DIR="${HOME}/.local/share/locale"
+SCHEMA="org.cinnamon.applets.${UUID}.gschema.xml"
+SCHEMA_DIR="/usr/share/glib-2.0/schemas/"
+OLD_UUID="cinnamon-weather@mockturtl"
+OLD_SCHEMA="${OLD_UUID}.gschema.xml"
+OLD_INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${OLD_UUID}"
+
+# don't copy these files to $INSTALL_DIR
+EXCLUDES='.md|.sh|.xml|po/'
 
 compile_schemas() {
 	glib-compile-schemas --dry-run ${SCHEMA_DIR} &&
@@ -27,7 +30,7 @@ EOF
 	mkdir -p ${INSTALL_DIR}
 
 	sudo ln -sf ${INSTALL_DIR}/cinnamon-weather-settings /usr/local/bin
-	cp -f metadata.json applet.js cinnamon-weather-settings icon.png stylesheet.css ${INSTALL_DIR}
+	cat manifest | sed -r '\ .*('${EXCLUDES}')$ d' | xargs -i cp -f '{}' ${INSTALL_DIR}
 
 	cat << EOF
 	Installing applet locales in ${LOCALE_DIR}...

@@ -1,0 +1,10 @@
+applet.js
+cinnamon-weather-settings
+icon.png
+install.sh
+metadata.json
+manifest
+org.cinnamon.applets.weather@mockturtl.gschema.xml
+po/
+README.md
+stylesheet.css

@@ -7,6 +7,8 @@ PROJECT="cinnamon-weather"
 PACKAGE="${PROJECT}-${VERSION}"
 TARGET="${BASEDIR}/${PACKAGE}"
 DEV_BRANCH="master"
+MANIFEST="manifest"
+VERSION_FILE="metadata.json"
 
 if [ -z $VERSION ]; then
 	cat << EOF
@@ -29,14 +31,14 @@ EOF
 check_version() {
 	# exit code 1 means no match; see grep(1)
 	set +e
-	grep ${VERSION} metadata.json > /dev/null
+	grep ${VERSION} ${VERSION_FILE} > /dev/null
 	VERSION_MATCH=$?
 	set -e
 
 	# { "JSON": "beware of colons!" }
 	if [ $VERSION_MATCH -ne 0 ]; then
 		cat << EOF
-WARNING: { $(grep version metadata.json) } in metadata.json does not match the package version provided.
+WARNING: { $(grep version ${VERSION_FILE}) } in ${VERSION_FILE} does not match the package version provided.
 	You may have forgotten to tag this release. (v$VERSION)
 
 EOF
@@ -48,7 +50,7 @@ validate_version() {
 
 	if [ $VERSION_MATCH -ne 0 ]; then
 		cat << EOF
-ERROR: Invalid version.  Fix metadata.json to merge staging and push.
+ERROR: Invalid version.  Fix ${VERSION_FILE} to merge staging and push.
 
 EOF
 		exit 13
@@ -60,7 +62,7 @@ do_package() {
 
 	rm -rf ${BASEDIR}/${PROJECT}* 2> /dev/null
 	mkdir -p ${TARGET}/
-	cp -r applet.js cinnamon-weather-settings icon.png install.sh metadata.json org.cinnamon.applets.weather@mockturtl.gschema.xml po/ README.md stylesheet.css ${TARGET}
+	cat ${MANIFEST} | xargs -i cp -r '{}' ${TARGET}
 	ln -sf ${TARGET}/install.sh ${TARGET}/cleanup.sh
 	ln -sf ${TARGET}/install.sh ${TARGET}/uninstall.sh
 	rm -r ${TARGET}/po/*.po~ 2> /dev/null
@@ -84,13 +86,13 @@ EOF
 	git checkout staging
 	git rebase ${DEV_BRANCH}
 	cat << EOF
-Bumping version (${VERSION}) in metadata.json...
+Bumping version (${VERSION}) in ${VERSION_FILE}...
 EOF
-	sed -i "s/[0-9]\+\.[0-9]\+\.[0-9]\+[0-9A-Za-z.+~-]*/$VERSION/" metadata.json
+	sed -i "s/[0-9]\+\.[0-9]\+\.[0-9]\+[0-9A-Za-z.+~-]*/$VERSION/" ${VERSION_FILE}
 	cat << EOF
 Creating tag...
 EOF
-	git add metadata.json
+	git add ${VERSION_FILE}
 	# allow manual version-bump commits; see git-diff(1)
 	git diff --quiet --staged || git commit -m 'bump version'
 	git tag -u ${GH_KEY_ID} v${VERSION}
