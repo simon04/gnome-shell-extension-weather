@@ -12,6 +12,7 @@ OLD_INSTALL_DIR="${HOME}/.local/share/cinnamon/applets/${OLD_UUID}"
 
 # don't copy these files to $INSTALL_DIR
 EXCLUDES='.md|.sh|.xml|po/'
+COMMENTS='/^\s*#/'
 
 compile_schemas() {
 	glib-compile-schemas --dry-run ${SCHEMA_DIR} &&
@@ -30,7 +31,8 @@ EOF
 	mkdir -p ${INSTALL_DIR}
 
 	sudo ln -sf ${INSTALL_DIR}/cinnamon-weather-settings /usr/local/bin
-	cat manifest | sed -r '\ .*('${EXCLUDES}')$ d' | xargs -i cp -f '{}' ${INSTALL_DIR}
+	# strip comment lines
+	cat manifest | sed -r ${COMMENTS}d | sed -r '\ .*('${EXCLUDES}')$ d' | xargs -i cp -f '{}' ${INSTALL_DIR}
 
 	cat << EOF
 	Installing applet locales in ${LOCALE_DIR}...
@@ -90,22 +92,6 @@ EOF
 	done
 }
 
-# maintainer script for gettext
-do_translate() {
-	cat << EOF
-
-	Updating template...
-EOF
-	xgettext -d ${UUID} -o po/${UUID}.pot -L python -j --keyword=_ applet.js
-
-	cat << EOF
-	Merging existing translation files with new template...
-EOF
-	for LOCALE in ${LOCALES}; do
-		msgmerge -U po/${LOCALE}.po po/${UUID}.pot
-	done
-}
-
 case `basename $0` in
 	"install.sh")
 		do_install
@@ -115,9 +101,6 @@ case `basename $0` in
 		;;
 	"cleanup.sh")
 		do_cleanup
-		;;
-	"translate.sh")
-		do_translate
 		;;
 esac
 

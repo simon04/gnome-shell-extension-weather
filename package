@@ -9,6 +9,8 @@ TARGET="${BASEDIR}/${PACKAGE}"
 DEV_BRANCH="master"
 MANIFEST="manifest"
 VERSION_FILE="metadata.json"
+GIT_HOST="https://github.com"
+DEPLOY_URL="${GIT_HOST}/${AUTHOR}/${PROJECT}/zipball/v${VERSION}"
 
 if [ -z $VERSION ]; then
 	cat << EOF
@@ -62,10 +64,11 @@ do_package() {
 
 	rm -rf ${BASEDIR}/${PROJECT}* 2> /dev/null
 	mkdir -p ${TARGET}/
-	cat ${MANIFEST} | xargs -i cp -r '{}' ${TARGET}
+	# strip comment lines
+	cat ${MANIFEST} | sed -r ${COMMENTS}d | xargs -i cp -r '{}' ${TARGET}
 	ln -sf ${TARGET}/install.sh ${TARGET}/cleanup.sh
 	ln -sf ${TARGET}/install.sh ${TARGET}/uninstall.sh
-	rm -r ${TARGET}/po/*.po~ 2> /dev/null
+	rm -rf ${TARGET}/po/*.po~
 
 	cd ${BASEDIR}
 	zip -q -r ${PACKAGE}.zip ${PACKAGE}
@@ -110,8 +113,29 @@ do_deploy() {
 	git push
 	git push --tags
 	cat << EOF
-Your new tag is at https://github.com/${AUTHOR}/${PROJECT}/zipball/v${VERSION}.
+Your new tag is at ${DEPLOY_URL}.
 
+EOF
+}
+
+do_translate() {
+	LOCALES="$(cat po/LINGUAS)"
+	UUID="$(find po/ -name *.pot | xargs -i basename {} .pot)"
+
+	cat << EOF
+Updating template for ${UUID}...
+EOF
+	# python mode is OK for javascript
+	xgettext -d ${UUID} -o po/${UUID}.pot -L python -j --keyword=_ applet.js
+
+	cat << EOF
+Merging existing translation files with new template...
+EOF
+	for LOCALE in ${LOCALES}; do
+	  msgmerge -U po/${LOCALE}.po po/${UUID}.pot
+	done
+	cat << EOF
+Done.
 EOF
 }
 
@@ -125,9 +149,12 @@ case `basename $0` in
 	"deploy")
 		do_deploy
 		;;
+	"translate")
+	  do_translate
+	  ;;
 	*)
 	cat << EOF
-Usage: tag | deploy | package
+Usage: tag | deploy | package | translate
 EOF
 	exit 2
 	;;
