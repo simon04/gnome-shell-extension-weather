@@ -91,6 +91,7 @@ EOF
 	cat << EOF
 Bumping version (${VERSION}) in ${VERSION_FILE}...
 EOF
+	# major.minor.patch with optional suffix
 	sed -i "s/[0-9]\+\.[0-9]\+\.[0-9]\+[0-9A-Za-z.+~-]*/$VERSION/" ${VERSION_FILE}
 	cat << EOF
 Creating tag...
@@ -132,7 +133,7 @@ EOF
 Merging existing translation files with new template...
 EOF
 	for LOCALE in ${LOCALES}; do
-	  msgmerge -U po/${LOCALE}.po po/${UUID}.pot
+		msgmerge -U po/${LOCALE}.po po/${UUID}.pot
 	done
 	cat << EOF
 Done.
@@ -150,12 +151,12 @@ case `basename $0` in
 		do_deploy
 		;;
 	"translate")
-	  do_translate
-	  ;;
+		do_translate
+		;;
 	*)
-	cat << EOF
+		cat << EOF
 Usage: tag | deploy | package | translate
 EOF
-	exit 2
-	;;
+		exit 2
+		;;
 esac
