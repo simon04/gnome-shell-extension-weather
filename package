@@ -127,7 +127,7 @@ do_translate() {
 Updating template for ${UUID}...
 EOF
 	# python mode is OK for javascript
-	xgettext -d ${UUID} -o po/${UUID}.pot -L python -j --keyword=_ applet.js
+	xgettext -d ${UUID} -o po/${UUID}.pot -L python --keyword=_ applet.js
 
 	cat << EOF
 Merging existing translation files with new template...

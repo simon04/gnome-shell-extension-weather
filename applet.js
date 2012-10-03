@@ -32,20 +32,37 @@
 //  imports
 //----------------------------------
 
-const Applet = imports.ui.applet;
+/**
+ *	/usr/share/gjs-1.0/
+ *	/usr/share/gnome-js/
+ */
 const Cairo = imports.cairo;
-const ExtensionSystem = imports.ui.extensionSystem;
 const Gettext = imports.gettext;
+const Lang = imports.lang;
+// http://developer.gnome.org/glib/unstable/glib-The-Main-Event-Loop.html
+const Mainloop = imports.mainloop;
+
+/**
+ *	/usr/share/gjs-1.0/overrides/
+ *	/usr/share/gir-1.0/
+ *	/usr/lib/cinnamon/
+ */
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
+const Gtk = imports.gi.Gtk;
 const Json = imports.gi.Json;
-const Lang = imports.lang;
-const Main = imports.ui.main;
-const Mainloop = imports.mainloop;
-const PopupMenu = imports.ui.popupMenu;
+// http://developer.gnome.org/libsoup/stable/libsoup-client-howto.html
 const Soup = imports.gi.Soup;
+// http://developer.gnome.org/st/stable/
 const St = imports.gi.St;
+
+/**
+ * /usr/share/cinnamon/js/
+ */
+const Applet = imports.ui.applet;
+const Main = imports.ui.main;
+const PopupMenu = imports.ui.popupMenu;
 const Util = imports.misc.util;
 
 //----------------------------------------------------------------------
@@ -116,6 +133,7 @@ const WeatherWindSpeedUnits = {
 	KNOTS: 3
 }
 
+
 //----------------------------------------------------------------------
 //
 //  Soup
@@ -125,6 +143,7 @@ const WeatherWindSpeedUnits = {
 // Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64)
 const _httpSession = new Soup.SessionAsync();
 Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
+
 
 //----------------------------------------------------------------------
 //
@@ -138,6 +157,7 @@ function getSettings(schema) {
 	return new Gio.Settings({ schema: schema });
 }
 
+
 //----------------------------------------------------------------------
 //
 //  l10n
@@ -149,6 +169,7 @@ Gettext.bindtextdomain(UUID, GLib.get_home_dir() +"/.local/share/locale");
 function _(str) {
   return Gettext.dgettext(UUID, str);
 }
+
 
 //----------------------------------------------------------------------
 //
@@ -178,12 +199,12 @@ MyMenu.prototype = {
 	}
 }
 
+
 //----------------------------------------------------------------------
 //
 //  Factory: MyApplet
 //
 //----------------------------------------------------------------------
-
 
 /**
  * MyApplet constructor.
@@ -323,7 +344,6 @@ MyApplet.prototype = {
 	//  Event Handlers: MyApplet
 	//----------------------------------
 
-
 	/**
 	 * Called when the panel icon is clicked.
 	 */
@@ -343,10 +363,10 @@ MyApplet.prototype = {
 		let gradientHeight = themeNode.get_length('-gradient-height');
 		let startColor = themeNode.get_color('-gradient-start');
 		let endColor = themeNode.get_color('-gradient-end');
-
 		let gradientWidth = (width - margin * 2);
 		let gradientOffset = (height - gradientHeight) / 2;
 		let pattern = new Cairo.LinearGradient(margin, gradientOffset, width - margin, gradientOffset + gradientHeight);
+
 		pattern.addColorStopRGBA(0, startColor.red / 255, startColor.green / 255, startColor.blue / 255, startColor.alpha / 255);
 		pattern.addColorStopRGBA(0.5, endColor.red / 255, endColor.green / 255, endColor.blue / 255, endColor.alpha / 255);
 		pattern.addColorStopRGBA(1, startColor.red / 255, startColor.green / 255, startColor.blue / 255, startColor.alpha / 255);
@@ -879,7 +899,6 @@ MyApplet.prototype = {
 	 *
 	 */
 	has_icon: function(icon) {
-		//TODO correct symbolic name? (cf. symbolic_names_for_icon)
 		return Gtk.IconTheme.get_default().has_icon(icon + (this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''));
 	},
 

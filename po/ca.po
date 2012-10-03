@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-05 20:50-0400\n"
+"POT-Creation-Date: 2012-10-04 13:54-0400\n"
 "PO-Revision-Date: 2011-06-15 00:41+0200\n"
 "Last-Translator: Pau Iranzo <paugnu@gmail.com>\n"
 "Language-Team: Softcatalà\n"
@@ -18,288 +18,284 @@ msgstr ""
 "X-Generator: Virtaal 0.7.0-rc1\n"
 "X-Project-Style: default\n"
 
-#: applet.js:124
+#: applet.js:156
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: applet.js:196
-msgid "Click to open"
-msgstr ""
-
-#: applet.js:466
+#: applet.js:510
 msgid "Sunrise"
 msgstr ""
 
-#: applet.js:467
+#: applet.js:511
 msgid "Sunset"
 msgstr ""
 
-#: applet.js:472
+#: applet.js:516
 msgid "Today"
 msgstr "Avui"
 
-#: applet.js:472
+#: applet.js:516
 msgid "Tomorrow"
 msgstr "Demà"
 
-#: applet.js:527
+#: applet.js:571
 msgid "Loading current weather ..."
 msgstr "S'està carregant el temps actual..."
 
-#: applet.js:528
+#: applet.js:572
 msgid "Loading future weather ..."
 msgstr "S'està carregant el temps futur..."
 
-#: applet.js:548
+#: applet.js:592
 msgid "Loading ..."
 msgstr "S'està carregant..."
 
-#: applet.js:554
+#: applet.js:598
 msgid "Please wait"
 msgstr "Espereu"
 
-#: applet.js:611
+#: applet.js:655
 msgid "Temperature:"
 msgstr "Temperatura:"
 
-#: applet.js:613
+#: applet.js:657
 msgid "Humidity:"
 msgstr "Humitat:"
 
-#: applet.js:615
+#: applet.js:659
 msgid "Pressure:"
 msgstr "Pressió:"
 
-#: applet.js:617
+#: applet.js:661
 msgid "Wind:"
 msgstr "Vent:"
 
-#: applet.js:868
+#: applet.js:911
 msgid "Tornado"
 msgstr "Tornado"
 
-#: applet.js:870
+#: applet.js:913
 msgid "Tropical storm"
 msgstr "Tempesta tropical"
 
-#: applet.js:872
+#: applet.js:915
 msgid "Hurricane"
 msgstr "Huracà"
 
-#: applet.js:874
+#: applet.js:917
 msgid "Severe thunderstorms"
 msgstr "Tempestes elèctriques severes"
 
-#: applet.js:876
+#: applet.js:919
 msgid "Thunderstorms"
 msgstr "Tempestes"
 
-#: applet.js:878
+#: applet.js:921
 msgid "Mixed rain and snow"
 msgstr "Barreja de pluja i neu"
 
-#: applet.js:880
+#: applet.js:923
 msgid "Mixed rain and sleet"
 msgstr "Barreja de pluja i calamarsa"
 
-#: applet.js:882
+#: applet.js:925
 msgid "Mixed snow and sleet"
 msgstr "Barreja de neu i calamarsa"
 
-#: applet.js:884
+#: applet.js:927
 msgid "Freezing drizzle"
 msgstr "Plugims gelats"
 
-#: applet.js:886
+#: applet.js:929
 msgid "Drizzle"
 msgstr "Plugim"
 
-#: applet.js:888
+#: applet.js:931
 msgid "Freezing rain"
 msgstr "Pluja glaçada"
 
-#: applet.js:890 applet.js:892
+#: applet.js:933 applet.js:935
 msgid "Showers"
 msgstr "Ruixats"
 
-#: applet.js:894
+#: applet.js:937
 msgid "Snow flurries"
 msgstr "Ràfegues de neu"
 
-#: applet.js:896
+#: applet.js:939
 msgid "Light snow showers"
 msgstr "Precipitacions lleugeres de neu"
 
-#: applet.js:898
+#: applet.js:941
 msgid "Blowing snow"
 msgstr "Neu aixecada pel vent"
 
-#: applet.js:900
+#: applet.js:943
 msgid "Snow"
 msgstr "Neu"
 
-#: applet.js:902
+#: applet.js:945
 msgid "Hail"
 msgstr "Calamarsa"
 
-#: applet.js:904
+#: applet.js:947
 msgid "Sleet"
 msgstr "Aiguaneu"
 
-#: applet.js:906
+#: applet.js:949
 msgid "Dust"
 msgstr "Pols"
 
-#: applet.js:908
+#: applet.js:951
 msgid "Foggy"
 msgstr "Boirós"
 
-#: applet.js:910
+#: applet.js:953
 msgid "Haze"
 msgstr "Boirina"
 
-#: applet.js:912
+#: applet.js:955
 msgid "Smoky"
 msgstr "Fumat"
 
-#: applet.js:914
+#: applet.js:957
 msgid "Blustery"
 msgstr "Tempestuós"
 
-#: applet.js:916
+#: applet.js:959
 msgid "Windy"
 msgstr "Ventades"
 
-#: applet.js:918
+#: applet.js:961
 msgid "Cold"
 msgstr "Fred"
 
-#: applet.js:920
+#: applet.js:963
 msgid "Cloudy"
 msgstr "Ennuvolat"
 
-#: applet.js:923
+#: applet.js:966
 msgid "Mostly cloudy"
 msgstr "Majoritàriament ennuvolat"
 
-#: applet.js:926 applet.js:952
+#: applet.js:969 applet.js:995
 msgid "Partly cloudy"
 msgstr "Parcialment ennuvolat"
 
-#: applet.js:928
+#: applet.js:971
 msgid "Clear"
 msgstr "Clar"
 
-#: applet.js:930
+#: applet.js:973
 msgid "Sunny"
 msgstr "Assolellat"
 
-#: applet.js:933
+#: applet.js:976
 msgid "Fair"
 msgstr "Bon temps"
 
-#: applet.js:935
+#: applet.js:978
 msgid "Mixed rain and hail"
 msgstr "Barreja de pluja i calamarsa"
 
-#: applet.js:937
+#: applet.js:980
 msgid "Hot"
 msgstr "Calor"
 
-#: applet.js:939
+#: applet.js:982
 msgid "Isolated thunderstorms"
 msgstr "Tempestes aïllades"
 
-#: applet.js:942
+#: applet.js:985
 msgid "Scattered thunderstorms"
 msgstr "Tempestes elèctriques aïllades"
 
-#: applet.js:944
+#: applet.js:987
 msgid "Scattered showers"
 msgstr "Pluges aïllades"
 
-#: applet.js:946 applet.js:950
+#: applet.js:989 applet.js:993
 msgid "Heavy snow"
 msgstr "Nevada forta"
 
-#: applet.js:948
+#: applet.js:991
 msgid "Scattered snow showers"
 msgstr "Xàfecs de neu dispersos"
 
-#: applet.js:954
+#: applet.js:997
 msgid "Thundershowers"
 msgstr "Tempestes"
 
-#: applet.js:956
+#: applet.js:999
 msgid "Snow showers"
 msgstr "Cobert"
 
-#: applet.js:958
+#: applet.js:1001
 msgid "Isolated thundershowers"
 msgstr "Tempestes aïllades"
 
-#: applet.js:961
+#: applet.js:1004
 msgid "Not available"
 msgstr "No disponible"
 
-#: applet.js:969
+#: applet.js:1012
 msgid "Monday"
 msgstr "Dilluns"
 
-#: applet.js:969
+#: applet.js:1012
 msgid "Tuesday"
 msgstr "Dimarts"
 
-#: applet.js:969
+#: applet.js:1012
 msgid "Wednesday"
 msgstr "Dimecres"
 
-#: applet.js:969
+#: applet.js:1012
 msgid "Thursday"
 msgstr "Dijous"
 
-#: applet.js:969
+#: applet.js:1012
 msgid "Friday"
 msgstr "Divendres"
 
-#: applet.js:969
+#: applet.js:1012
 msgid "Saturday"
 msgstr "Dissabte"
 
-#: applet.js:969
+#: applet.js:1012
 msgid "Sunday"
 msgstr "Diumenge"
 
-#: applet.js:977
+#: applet.js:1020
 msgid "N"
 msgstr ""
 
-#: applet.js:977
+#: applet.js:1020
 msgid "NE"
 msgstr ""
 
-#: applet.js:977
+#: applet.js:1020
 msgid "E"
 msgstr ""
 
-#: applet.js:977
+#: applet.js:1020
 msgid "SE"
 msgstr ""
 
-#: applet.js:977
+#: applet.js:1020
 msgid "S"
 msgstr ""
 
-#: applet.js:977
+#: applet.js:1020
 msgid "SW"
 msgstr ""
 
-#: applet.js:977
+#: applet.js:1020
 msgid "W"
 msgstr ""
 
-#: applet.js:977
+#: applet.js:1020
 msgid "NW"
 msgstr ""
 
