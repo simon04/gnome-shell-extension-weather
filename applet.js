@@ -50,7 +50,6 @@ const Mainloop = imports.mainloop;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
-const Gtk = imports.gi.Gtk;
 const Json = imports.gi.Json;
 // http://developer.gnome.org/libsoup/stable/libsoup-client-howto.html
 const Soup = imports.gi.Soup;
@@ -174,6 +173,21 @@ function _(str) {
 
 //----------------------------------------------------------------------
 //
+// Logging
+//
+//----------------------------------------------------------------------
+
+function log(message) {
+	global.log(UUID + "::" + log.caller.name + ": " + message);
+}
+
+function logError(error) {
+	global.logError(UUID + "::" + logError.caller.name + ": " + error);
+}
+
+
+//----------------------------------------------------------------------
+//
 // Factory: MyMenu
 //
 //----------------------------------------------------------------------
@@ -243,7 +257,7 @@ MyApplet.prototype = {
 			// Event Handlers
 			//----------------------------------
 			let load_settings_and_refresh_weather = Lang.bind(this, function() {
-				//global.log("cinnamon-weather::load_settings_and_refresh_weather");
+				//log("callback");
 				this._units = this._settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
 				this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
 				this._city = this._settings.get_string(WEATHER_CITY_KEY);
@@ -286,7 +300,7 @@ MyApplet.prototype = {
 			];
 			let context = this;
 			refreshableKeys.forEach(function (key) {
-				//global.log("cinnamon-weather::_init: adding CHANGED listener for " + key + "; " + context);
+				//log("adding CHANGED listener for " + key + "; " + context);
 				context._settings.connect(SIGNAL_CHANGED + key, load_settings_and_refresh_weather);
 			});
 			
@@ -337,7 +351,7 @@ MyApplet.prototype = {
 			}));
 
 		} catch (e) {
-			global.logError("cinnamon-weather::_init: " + e);
+			logError(e);
 		}
 	 },
 
@@ -349,7 +363,7 @@ MyApplet.prototype = {
 	 * Called when the panel icon is clicked.
 	 */
 	on_applet_clicked: function(event) {
-		//global.log("cinnamon-weather::applet click " + event);
+		//log(event);
 		this.menu.toggle();
 	},
 
@@ -413,7 +427,7 @@ MyApplet.prototype = {
 	 *
 	 */
 	refreshWeather: function(recurse) {
-		//global.log("cinnamon-weather::refreshWeather: recurse=" + recurse);
+		//log("recurse=" + recurse);
 		this.load_json_async(this.get_weather_url(), function(json) {
 			try {
 				let weather = json.get_object_member('query').get_object_member('results').get_object_member('channel');
@@ -448,7 +462,7 @@ MyApplet.prototype = {
 				this._icon_type == St.IconType.SYMBOLIC ?
 					this.set_applet_icon_symbolic_name(iconname) :
 					this.set_applet_icon_name(iconname);
-
+				
 				if (this._text_in_panel) {
 					if (this._comment_in_panel) {
 						this.set_applet_label(comment + ' ' + temperature + ' ' + this.unit_to_unicode());
@@ -518,25 +532,25 @@ MyApplet.prototype = {
 				for (let i = 0; i <= 1; i++) {
 					let forecastUi = this._forecast[i];
 					let forecastData = forecast[i].get_object();
-
+					
 					let code = forecastData.get_string_member('code');
 					let t_low = forecastData.get_string_member('low');
 					let t_high = forecastData.get_string_member('high');
-
+					
 					let comment = forecastData.get_string_member('text');
 					if (this._translate_condition)
 						comment = this.get_weather_condition(code);
-
+					
 					forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
 					forecastUi.Temperature.text = t_low + ' ' + '\u002F' + ' ' + t_high + ' ' + this.unit_to_unicode();
 					forecastUi.Summary.text = comment;
 					forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
 				}
 			} catch(error) {
-				global.logError("cinnamon-weather::refreshWeather: " + e);
+				logError(e);
 			}
 		});
-
+		
 		if (recurse) {
 			Mainloop.timeout_add_seconds(this._refresh_interval, Lang.bind(this, function() {
 				this.refreshWeather(true);
@@ -548,7 +562,7 @@ MyApplet.prototype = {
 	 *
 	 */
 	destroyCurrentWeather: function() {
-		//global.log("cinnamon-weather::destroyCurrentWeather");
+		//log("");
 		if (this._currentWeather.get_child() != null)
 			this._currentWeather.get_child().destroy();
 	},
@@ -557,7 +571,7 @@ MyApplet.prototype = {
 	 *
 	 */
 	destroyFutureWeather: function() {
-		//global.log("cinnamon-weather::destroyFutureWeather");
+		//log("");
 		if (this._futureWeather.get_child() != null)
 			this._futureWeather.get_child().destroy();
 	},
@@ -566,7 +580,7 @@ MyApplet.prototype = {
 	 *
 	 */
 	showLoadingUi: function() {
-		//global.log("cinnamon-weather::showLoadingUi");
+		//log("");
 		this.destroyCurrentWeather();
 		this.destroyFutureWeather();
 		this._currentWeather.set_child(new St.Label({ text: _('Loading current weather ...') }));
@@ -577,9 +591,9 @@ MyApplet.prototype = {
 	 * Assemble today's forecast in the menu.
 	 */
 	rebuildCurrentWeatherUi: function() {
-		//global.log("cinnamon-weather::rebuildCurrentWeatherUi");
+		//log("");
 		this.destroyCurrentWeather();
-
+		
 		// This will hold the icon for the current weather
 		this._currentWeatherIcon = new St.Icon({
 			icon_type: this._icon_type,
@@ -587,7 +601,7 @@ MyApplet.prototype = {
 			icon_name: APPLET_ICON,
 			style_class: 'weather-current-icon'
 		});
-
+		
 		// The summary of the current weather
 		this._currentWeatherSummary = new St.Label({
 			text: _('Loading ...'),
@@ -598,6 +612,7 @@ MyApplet.prototype = {
 			reactive: true,
 			label: _('Please wait') 
 		});
+		
 		// link to the details page
 		this._currentWeatherLocation.connect(SIGNAL_CLICKED, Lang.bind(this, function() {
 			if (this._currentWeatherLocation.url == null)
@@ -638,7 +653,7 @@ MyApplet.prototype = {
 		this._currentWeatherHumidity = new St.Label(textOb);
 		this._currentWeatherPressure = new St.Label(textOb);
 		this._currentWeatherWind = new St.Label(textOb);
-
+		
 		let rb = new St.BoxLayout({
 			style_class: 'weather-current-databox'
 		});
@@ -679,16 +694,16 @@ MyApplet.prototype = {
 	 * Assemble tomorrow's forecast in the menu.
 	 */
 	rebuildFutureWeatherUi: function() {
-		//global.log("cinnamon-weather::rebuildFutureWeatherUi");
+		//log("");
 		this.destroyFutureWeather();
-
+		
 		this._forecast = [];
 		this._forecastBox = new St.BoxLayout();
 		this._futureWeather.set_child(this._forecastBox);
-
+		
 		for (let i = 0; i <= 1; i++) {
 			let forecastWeather = {};
-
+			
 			forecastWeather.Icon = new St.Icon({
 				icon_type: this._icon_type,
 				icon_size: 48,
@@ -704,7 +719,7 @@ MyApplet.prototype = {
 			forecastWeather.Temperature = new St.Label({
 				style_class: 'weather-forecast-temperature'
 			});
-
+			
 			let by = new St.BoxLayout({
 				vertical: true,
 				style_class: 'weather-forecast-databox'
@@ -712,13 +727,13 @@ MyApplet.prototype = {
 			by.add_actor(forecastWeather.Day);
 			by.add_actor(forecastWeather.Summary);
 			by.add_actor(forecastWeather.Temperature);
-
+			
 			let bb = new St.BoxLayout({
 				style_class: 'weather-forecast-box'
 			});
 			bb.add_actor(forecastWeather.Icon);
 			bb.add_actor(by);
-
+			
 			this._forecast[i] = forecastWeather;
 			this._forecastBox.add_actor(bb);
 		}
@@ -744,7 +759,7 @@ MyApplet.prototype = {
 		});
 		prefButton.connect(SIGNAL_CLICKED, function() {
 			Util.spawn([COMMAND_CONFIGURE]);
-			//global.log("cinnamon-weather::Click: preferences");
+			//log("callback: preferences " + SIGNAL_CLICKED);
 		});
 		let prefBox = new St.BoxLayout({
 			style_class: 'weather-config',
@@ -1031,6 +1046,7 @@ MyApplet.prototype = {
 //----------------------------------------------------------------------
 
 function main(metadata, orientation) {
+	//log("v" + metadata.version);
 	let myApplet = new MyApplet(orientation);
 	return myApplet;
 }

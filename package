@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh -ex
 
 VERSION=$1
 BASEDIR="${HOME}/Desktop"
@@ -11,6 +11,7 @@ MANIFEST="manifest"
 VERSION_FILE="metadata.json"
 GIT_HOST="https://github.com"
 DEPLOY_URL="${GIT_HOST}/${AUTHOR}/${PROJECT}/zipball/v${VERSION}"
+COMMENTS='/^\s*#/'
 
 if [ -z $VERSION ]; then
 	cat << EOF
