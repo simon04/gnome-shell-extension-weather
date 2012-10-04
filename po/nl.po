@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-04 13:54-0400\n"
+"POT-Creation-Date: 2012-10-04 15:26-0400\n"
 "PO-Revision-Date: 2012-01-05 10:00+0200\n"
 "Last-Translator: Peter van Ieperen <p.v.ieperen77@gmail.com>\n"
 "Language-Team: \n"
@@ -21,279 +21,279 @@ msgstr ""
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: applet.js:510
+#: applet.js:525
 msgid "Sunrise"
 msgstr ""
 
-#: applet.js:511
+#: applet.js:526
 msgid "Sunset"
 msgstr ""
 
-#: applet.js:516
+#: applet.js:531
 msgid "Today"
 msgstr "Vandaag"
 
-#: applet.js:516
+#: applet.js:531
 msgid "Tomorrow"
 msgstr "Morgen"
 
-#: applet.js:571
+#: applet.js:586
 msgid "Loading current weather ..."
 msgstr "Laden aktueel weer ..."
 
-#: applet.js:572
+#: applet.js:587
 msgid "Loading future weather ..."
 msgstr "Laden weersverwachting ..."
 
-#: applet.js:592
+#: applet.js:607
 msgid "Loading ..."
 msgstr "Laden ..."
 
-#: applet.js:598
+#: applet.js:613
 msgid "Please wait"
 msgstr "Wachten alstublieft"
 
-#: applet.js:655
+#: applet.js:671
 msgid "Temperature:"
 msgstr "Temperatuur:"
 
-#: applet.js:657
+#: applet.js:673
 msgid "Humidity:"
 msgstr "Luchtvochtigheid:"
 
-#: applet.js:659
+#: applet.js:675
 msgid "Pressure:"
 msgstr "Luchtdruk:"
 
-#: applet.js:661
+#: applet.js:677
 msgid "Wind:"
 msgstr "Wind:"
 
-#: applet.js:911
+#: applet.js:927
 msgid "Tornado"
 msgstr "Tornado"
 
-#: applet.js:913
+#: applet.js:929
 msgid "Tropical storm"
 msgstr "Tropische storm"
 
-#: applet.js:915
+#: applet.js:931
 msgid "Hurricane"
 msgstr "Orkaan"
 
-#: applet.js:917
+#: applet.js:933
 msgid "Severe thunderstorms"
 msgstr "Zware onweer"
 
-#: applet.js:919
+#: applet.js:935
 msgid "Thunderstorms"
 msgstr "Onweer"
 
-#: applet.js:921
+#: applet.js:937
 msgid "Mixed rain and snow"
 msgstr "Regen en sneeuw"
 
-#: applet.js:923
+#: applet.js:939
 msgid "Mixed rain and sleet"
 msgstr "Regen en hagel"
 
-#: applet.js:925
+#: applet.js:941
 msgid "Mixed snow and sleet"
 msgstr "Sneeuw en hagel"
 
-#: applet.js:927
+#: applet.js:943
 msgid "Freezing drizzle"
 msgstr "Motijzel"
 
-#: applet.js:929
+#: applet.js:945
 msgid "Drizzle"
 msgstr "Motregen"
 
-#: applet.js:931
+#: applet.js:947
 msgid "Freezing rain"
 msgstr "IJzel"
 
-#: applet.js:933 applet.js:935
+#: applet.js:949 applet.js:951
 msgid "Showers"
 msgstr "Regenbuien"
 
-#: applet.js:937
+#: applet.js:953
 msgid "Snow flurries"
 msgstr "Lichte sneeuwval"
 
-#: applet.js:939
+#: applet.js:955
 msgid "Light snow showers"
 msgstr "Lichte sneeuwbuien"
 
-#: applet.js:941
+#: applet.js:957
 msgid "Blowing snow"
 msgstr "Sneeuwstorm"
 
-#: applet.js:943
+#: applet.js:959
 msgid "Snow"
 msgstr "Sneeuw"
 
-#: applet.js:945
+#: applet.js:961
 msgid "Hail"
 msgstr "Hagel"
 
-#: applet.js:947
+#: applet.js:963
 msgid "Sleet"
 msgstr "Stofhagel"
 
-#: applet.js:949
+#: applet.js:965
 msgid "Dust"
 msgstr "Stof"
 
-#: applet.js:951
+#: applet.js:967
 msgid "Foggy"
 msgstr "Nevelig"
 
-#: applet.js:953
+#: applet.js:969
 msgid "Haze"
 msgstr "Mistig"
 
-#: applet.js:955
+#: applet.js:971
 msgid "Smoky"
 msgstr "Smok"
 
-#: applet.js:957
+#: applet.js:973
 msgid "Blustery"
 msgstr "Windvlagen"
 
-#: applet.js:959
+#: applet.js:975
 msgid "Windy"
 msgstr "Winderig"
 
-#: applet.js:961
+#: applet.js:977
 msgid "Cold"
 msgstr "IJzig"
 
-#: applet.js:963
+#: applet.js:979
 msgid "Cloudy"
 msgstr "Bewolkt"
 
-#: applet.js:966
+#: applet.js:982
 msgid "Mostly cloudy"
 msgstr "Zwaar bewolkt"
 
-#: applet.js:969 applet.js:995
+#: applet.js:985 applet.js:1011
 msgid "Partly cloudy"
 msgstr "Deels bewolkt"
 
-#: applet.js:971
+#: applet.js:987
 msgid "Clear"
 msgstr "Helder"
 
-#: applet.js:973
+#: applet.js:989
 msgid "Sunny"
 msgstr "Zonnig"
 
-#: applet.js:976
+#: applet.js:992
 msgid "Fair"
 msgstr "Helder"
 
-#: applet.js:978
+#: applet.js:994
 msgid "Mixed rain and hail"
 msgstr "Regen en hagel"
 
-#: applet.js:980
+#: applet.js:996
 msgid "Hot"
 msgstr "Heet"
 
-#: applet.js:982
+#: applet.js:998
 msgid "Isolated thunderstorms"
 msgstr "Geïsoleerde onweer"
 
-#: applet.js:985
+#: applet.js:1001
 msgid "Scattered thunderstorms"
 msgstr "Verspreide onweer"
 
-#: applet.js:987
+#: applet.js:1003
 msgid "Scattered showers"
 msgstr "Verspreide buien"
 
-#: applet.js:989 applet.js:993
+#: applet.js:1005 applet.js:1009
 msgid "Heavy snow"
 msgstr "Zware sneeuwval"
 
-#: applet.js:991
+#: applet.js:1007
 msgid "Scattered snow showers"
 msgstr "Verspreide sneeuwbuien"
 
-#: applet.js:997
+#: applet.js:1013
 msgid "Thundershowers"
 msgstr "Onweersbuien"
 
-#: applet.js:999
+#: applet.js:1015
 msgid "Snow showers"
 msgstr "Sneeuwbuien"
 
-#: applet.js:1001
+#: applet.js:1017
 msgid "Isolated thundershowers"
 msgstr "Geïsoleerde onweersbuien"
 
-#: applet.js:1004
+#: applet.js:1020
 msgid "Not available"
 msgstr "Niet beschikbaar"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Monday"
 msgstr "Maandag"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Tuesday"
 msgstr "Dinsdag"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Wednesday"
 msgstr "Woensdag"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Thursday"
 msgstr "Donderdag"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Friday"
 msgstr "Vrijdag"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Saturday"
 msgstr "Zaterdag"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Sunday"
 msgstr "Zondag"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "N"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "NE"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "E"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "SE"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "S"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "SW"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "W"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "NW"
 msgstr ""
 

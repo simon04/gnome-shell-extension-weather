@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-04 13:54-0400\n"
+"POT-Creation-Date: 2012-10-04 15:26-0400\n"
 "PO-Revision-Date: 2012-04-04 14:18+0300\n"
 "Last-Translator: Reinis Danne <rei4dan@gmail.com>\n"
 "Language-Team: \n"
@@ -26,279 +26,279 @@ msgstr ""
 msgid "Schema \"%s\" not found."
 msgstr "Shēma \"%s\" nav atrasta."
 
-#: applet.js:510
+#: applet.js:525
 msgid "Sunrise"
 msgstr "Saullēkts"
 
-#: applet.js:511
+#: applet.js:526
 msgid "Sunset"
 msgstr "Saulriets"
 
-#: applet.js:516
+#: applet.js:531
 msgid "Today"
 msgstr "Šodien"
 
-#: applet.js:516
+#: applet.js:531
 msgid "Tomorrow"
 msgstr "Rīt"
 
-#: applet.js:571
+#: applet.js:586
 msgid "Loading current weather ..."
 msgstr "Ielādē pašreizējos laikapstākļus ..."
 
-#: applet.js:572
+#: applet.js:587
 msgid "Loading future weather ..."
 msgstr "Ielādē gaidāmos laikapstākļus ..."
 
-#: applet.js:592
+#: applet.js:607
 msgid "Loading ..."
 msgstr "Ielādē ..."
 
-#: applet.js:598
+#: applet.js:613
 msgid "Please wait"
 msgstr "Lūdzu uzgaidiet"
 
-#: applet.js:655
+#: applet.js:671
 msgid "Temperature:"
 msgstr "Temperatūra:"
 
-#: applet.js:657
+#: applet.js:673
 msgid "Humidity:"
 msgstr "Mitrums:"
 
-#: applet.js:659
+#: applet.js:675
 msgid "Pressure:"
 msgstr "Spiediens:"
 
-#: applet.js:661
+#: applet.js:677
 msgid "Wind:"
 msgstr "Vējš:"
 
-#: applet.js:911
+#: applet.js:927
 msgid "Tornado"
 msgstr "Tornado"
 
-#: applet.js:913
+#: applet.js:929
 msgid "Tropical storm"
 msgstr "Tropiskā vētra"
 
-#: applet.js:915
+#: applet.js:931
 msgid "Hurricane"
 msgstr "Viesuļvētra"
 
-#: applet.js:917
+#: applet.js:933
 msgid "Severe thunderstorms"
 msgstr "Spēcīgs pērkona negaiss"
 
-#: applet.js:919
+#: applet.js:935
 msgid "Thunderstorms"
 msgstr "Pērkona negaiss"
 
-#: applet.js:921
+#: applet.js:937
 msgid "Mixed rain and snow"
 msgstr "Lietus un sniegs"
 
-#: applet.js:923
+#: applet.js:939
 msgid "Mixed rain and sleet"
 msgstr "Slapjdraņķis"
 
-#: applet.js:925
+#: applet.js:941
 msgid "Mixed snow and sleet"
 msgstr "Sniegs un slapjš sniegs"
 
-#: applet.js:927
+#: applet.js:943
 msgid "Freezing drizzle"
 msgstr "Sasalstoša smidzināšana"
 
-#: applet.js:929
+#: applet.js:945
 msgid "Drizzle"
 msgstr "Smidzina"
 
-#: applet.js:931
+#: applet.js:947
 msgid "Freezing rain"
 msgstr "Sasalstošs lietus"
 
-#: applet.js:933 applet.js:935
+#: applet.js:949 applet.js:951
 msgid "Showers"
 msgstr "Lietusgāzes"
 
-#: applet.js:937
+#: applet.js:953
 msgid "Snow flurries"
 msgstr "Sniegputenis"
 
-#: applet.js:939
+#: applet.js:955
 msgid "Light snow showers"
 msgstr "Viegla snigšana"
 
-#: applet.js:941
+#: applet.js:957
 msgid "Blowing snow"
 msgstr "Sniega putenis"
 
-#: applet.js:943
+#: applet.js:959
 msgid "Snow"
 msgstr "Sniegs"
 
-#: applet.js:945
+#: applet.js:961
 msgid "Hail"
 msgstr "Krusa"
 
-#: applet.js:947
+#: applet.js:963
 msgid "Sleet"
 msgstr "Slapjš sniegs"
 
-#: applet.js:949
+#: applet.js:965
 msgid "Dust"
 msgstr "Putekļi"
 
-#: applet.js:951
+#: applet.js:967
 msgid "Foggy"
 msgstr "Miglains"
 
-#: applet.js:953
+#: applet.js:969
 msgid "Haze"
 msgstr "Dūmaka"
 
-#: applet.js:955
+#: applet.js:971
 msgid "Smoky"
 msgstr "Dūmaka"
 
-#: applet.js:957
+#: applet.js:973
 msgid "Blustery"
 msgstr "Brāzmains"
 
-#: applet.js:959
+#: applet.js:975
 msgid "Windy"
 msgstr "Vējains"
 
-#: applet.js:961
+#: applet.js:977
 msgid "Cold"
 msgstr "Auksts"
 
-#: applet.js:963
+#: applet.js:979
 msgid "Cloudy"
 msgstr "Apmācies"
 
-#: applet.js:966
+#: applet.js:982
 msgid "Mostly cloudy"
 msgstr "Pārsvarā apmācies"
 
-#: applet.js:969 applet.js:995
+#: applet.js:985 applet.js:1011
 msgid "Partly cloudy"
 msgstr "Daļēji apmācies"
 
-#: applet.js:971
+#: applet.js:987
 msgid "Clear"
 msgstr "Skaidrs"
 
-#: applet.js:973
+#: applet.js:989
 msgid "Sunny"
 msgstr "Saulains"
 
-#: applet.js:976
+#: applet.js:992
 msgid "Fair"
 msgstr "Skaidrs"
 
-#: applet.js:978
+#: applet.js:994
 msgid "Mixed rain and hail"
 msgstr "Lietus un krusa"
 
-#: applet.js:980
+#: applet.js:996
 msgid "Hot"
 msgstr "Karsts"
 
-#: applet.js:982
+#: applet.js:998
 msgid "Isolated thunderstorms"
 msgstr "Atsevišķi pērkona negaisi"
 
-#: applet.js:985
+#: applet.js:1001
 msgid "Scattered thunderstorms"
 msgstr "Vietām pērkona negaiss"
 
-#: applet.js:987
+#: applet.js:1003
 msgid "Scattered showers"
 msgstr "Vietām lietusgāzes"
 
-#: applet.js:989 applet.js:993
+#: applet.js:1005 applet.js:1009
 msgid "Heavy snow"
 msgstr "Spēcīgs sniegs"
 
-#: applet.js:991
+#: applet.js:1007
 msgid "Scattered snow showers"
 msgstr "Vietām sniega putenis"
 
-#: applet.js:997
+#: applet.js:1013
 msgid "Thundershowers"
 msgstr "Pērkona negaiss"
 
-#: applet.js:999
+#: applet.js:1015
 msgid "Snow showers"
 msgstr "Sniegs"
 
-#: applet.js:1001
+#: applet.js:1017
 msgid "Isolated thundershowers"
 msgstr "Atsevišķi pērkona negaisi"
 
-#: applet.js:1004
+#: applet.js:1020
 msgid "Not available"
 msgstr "Nav pieejams"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Monday"
 msgstr "Pirmdiena"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Tuesday"
 msgstr "Otrdiena"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Wednesday"
 msgstr "Trešdiena"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Thursday"
 msgstr "Ceturtdiena"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Friday"
 msgstr "Piektdiena"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Saturday"
 msgstr "Sestdiena"
 
-#: applet.js:1012
+#: applet.js:1028
 msgid "Sunday"
 msgstr "Svētdiena"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "N"
 msgstr "Z"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "NE"
 msgstr "ZA"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "E"
 msgstr "A"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "SE"
 msgstr "DA"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "S"
 msgstr "D"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "SW"
 msgstr "DR"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "W"
 msgstr "R"
 
-#: applet.js:1020
+#: applet.js:1036
 msgid "NW"
 msgstr "ZR"
 
