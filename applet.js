@@ -29,12 +29,12 @@
  */
 
 //----------------------------------
-//  imports
+// imports
 //----------------------------------
 
 /**
- *	/usr/share/gjs-1.0/
- *	/usr/share/gnome-js/
+ * /usr/share/gjs-1.0/
+ * /usr/share/gnome-js/
  */
 const Cairo = imports.cairo;
 const Gettext = imports.gettext;
@@ -43,9 +43,9 @@ const Lang = imports.lang;
 const Mainloop = imports.mainloop;
 
 /**
- *	/usr/share/gjs-1.0/overrides/
- *	/usr/share/gir-1.0/
- *	/usr/lib/cinnamon/
+ * /usr/share/gjs-1.0/overrides/
+ * /usr/share/gir-1.0/
+ * /usr/lib/cinnamon/
  */
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
@@ -67,7 +67,7 @@ const Util = imports.misc.util;
 
 //----------------------------------------------------------------------
 //
-//  Constants
+// Constants
 //
 //----------------------------------------------------------------------
 
@@ -89,6 +89,7 @@ const WEATHER_CONV_KPH_IN_MPS = 3.6;
 const WEATHER_CONV_KNOTS_IN_MPS = 1.94384449;
 
 // Magic strings
+const BLANK = '   ';
 const ELLIPSIS = '...';
 const EN_DASH = '\u2013';
 
@@ -118,7 +119,7 @@ const SIGNAL_REPAINT = 'repaint';
 
 //----------------------------------------------------------------------
 //
-//  Enumerations: org.cinnamon.applets.weather@mockturtl.gschema.xml
+// Enumerations: org.cinnamon.applets.weather@mockturtl.gschema.xml
 //
 //----------------------------------------------------------------------
 
@@ -136,7 +137,7 @@ const WeatherWindSpeedUnits = {
 
 //----------------------------------------------------------------------
 //
-//  Soup
+// Soup
 //
 //----------------------------------------------------------------------
 
@@ -147,7 +148,7 @@ Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefa
 
 //----------------------------------------------------------------------
 //
-//  Gschema
+// Gschema
 //
 //----------------------------------------------------------------------
 
@@ -160,20 +161,20 @@ function getSettings(schema) {
 
 //----------------------------------------------------------------------
 //
-//  l10n
+// l10n
 //
 //----------------------------------------------------------------------
 
 Gettext.bindtextdomain(UUID, GLib.get_home_dir() +"/.local/share/locale");
 
 function _(str) {
-  return Gettext.dgettext(UUID, str);
+	return Gettext.dgettext(UUID, str);
 }
 
 
 //----------------------------------------------------------------------
 //
-//  Factory: MyMenu
+// Factory: MyMenu
 //
 //----------------------------------------------------------------------
 
@@ -188,7 +189,7 @@ MyMenu.prototype = {
 	__proto__: PopupMenu.PopupMenu.prototype,
 
 	//----------------------------------
-	//  Override Methods: PopupMenu
+	// Override Methods: PopupMenu
 	//----------------------------------
 
 	_init: function(launcher, orientation) {
@@ -202,7 +203,7 @@ MyMenu.prototype = {
 
 //----------------------------------------------------------------------
 //
-//  Factory: MyApplet
+// Factory: MyApplet
 //
 //----------------------------------------------------------------------
 
@@ -217,7 +218,7 @@ MyApplet.prototype = {
 	__proto__: Applet.TextIconApplet.prototype,
 
 	//----------------------------------
-	//  Override Methods: TextIconApplet
+	// Override Methods: TextIconApplet
 	//----------------------------------
 
 	_init: function(orientation) {
@@ -225,27 +226,27 @@ MyApplet.prototype = {
 
 		try {
 			//----------------------------------
-			//  Interface Methods: TextIconApplet
+			// Interface Methods: TextIconApplet
 			//----------------------------------
 			this.set_applet_icon_name(APPLET_ICON);
 			this.set_applet_label(APPLET_LABEL);
 			this.set_applet_tooltip(_(APPLET_TOOLTIP));
 
 			//----------------------------------
-			//  PopupMenu
+			// PopupMenu
 			//----------------------------------
 			this.menuManager = new PopupMenu.PopupMenuManager(this);
 			this.menu = new MyMenu(this, orientation);
 			this.menuManager.addMenu(this.menu);
 
 			//----------------------------------
-			//  Event Handlers
+			// Event Handlers
 			//----------------------------------
 			let load_settings_and_refresh_weather = Lang.bind(this, function() {
 				//global.log("cinnamon-weather::load_settings_and_refresh_weather");
 				this._units = this._settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
 				this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
-				this._city  = this._settings.get_string(WEATHER_CITY_KEY);
+				this._city = this._settings.get_string(WEATHER_CITY_KEY);
 				this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
 				this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
 				this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
@@ -256,12 +257,12 @@ MyApplet.prototype = {
 			});
 
 			//----------------------------------
-			//  initialize settings
+			// initialize settings
 			//----------------------------------
 			this._settings = getSettings(GSETTINGS_SCHEMA);
 			this._units = this._settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
 			this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
-			this._city  = this._settings.get_string(WEATHER_CITY_KEY);
+			this._city = this._settings.get_string(WEATHER_CITY_KEY);
 			this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
 			this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
 			this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
@@ -271,7 +272,7 @@ MyApplet.prototype = {
 			this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
 
 			//----------------------------------
-			//  bind settings
+			// bind settings
 			//----------------------------------
 			let refreshableKeys = [
 				WEATHER_TEMPERATURE_UNIT_KEY, 
@@ -303,7 +304,7 @@ MyApplet.prototype = {
 			}));
 
 			//------------------------------
-			//  render graphics container
+			// render graphics container
 			//------------------------------
 
 			// build menu
@@ -329,7 +330,7 @@ MyApplet.prototype = {
 			this.rebuildFutureWeatherUi();
 
 			//------------------------------
-			//  run
+			// run
 			//------------------------------
 			Mainloop.timeout_add_seconds(3, Lang.bind(this, function() {
 				this.refreshWeather(true);
@@ -341,7 +342,7 @@ MyApplet.prototype = {
 	 },
 
 	//----------------------------------
-	//  Event Handlers: MyApplet
+	// Event Handlers: MyApplet
 	//----------------------------------
 
 	/**
@@ -377,7 +378,7 @@ MyApplet.prototype = {
 
 	//----------------------------------------------------------------------
 	//
-	//  Methods
+	// Methods
 	//
 	//----------------------------------------------------------------------
 
@@ -624,11 +625,11 @@ MyApplet.prototype = {
 		});
 		
 		ab.add_actor(this._currentWeatherSunrise);
-		let ab_spacerlabel = new St.Label({ text: '   ' });
+		let ab_spacerlabel = new St.Label({ text: BLANK });
 		ab.add_actor(ab_spacerlabel);
 		ab.add_actor(this._currentWeatherSunset);
 		
-		let bb_spacerlabel = new St.Label({ text: '   ' });
+		let bb_spacerlabel = new St.Label({ text: BLANK });
 		bb.add_actor(bb_spacerlabel);
 		bb.add_actor(ab);
 		
@@ -725,7 +726,7 @@ MyApplet.prototype = {
 
 	//----------------------------------------------------------------------
 	//
-	//  Properties
+	// Properties
 	//
 	//----------------------------------------------------------------------
 
@@ -1025,7 +1026,7 @@ MyApplet.prototype = {
 
 //----------------------------------------------------------------------
 //
-//  Entry point
+// Entry point
 //
 //----------------------------------------------------------------------
 
