@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/sh -e
 
 VERSION=$1
 BASEDIR="${HOME}/Desktop"
