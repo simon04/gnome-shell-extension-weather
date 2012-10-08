@@ -94,15 +94,17 @@ const EN_DASH = '\u2013';
 
 // Query
 const QUERY_PARAMS = '?format=json&q=select ';
-const QUERY_TABLE = 'weather.forecast';
-const QUERY_VIEW = 'link,location,wind,atmosphere,units,item.condition,item.forecast,astronomy';
+const QUERY_TABLE = 'feednormalizer where url="http://xml.weather.yahoo.com/forecastrss/';
+const QUERY_VIEW = '*';
 const QUERY_URL = 'http://query.yahooapis.com/v1/public/yql' + QUERY_PARAMS + QUERY_VIEW + ' from ' + QUERY_TABLE;
+
 
 // Schema keys
 const WEATHER_CITY_KEY = 'location-label-override';
 const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
 const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
 const WEATHER_SHOW_SUNRISE_SUNSET_KEY = 'show-sunrise-sunset';
+const WEATHER_SHOW_FIVEDAY_FORECAST_KEY = 'show-fiveday-forecast';
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
 const WEATHER_TEMPERATURE_UNIT_KEY = 'temperature-unit';
@@ -264,6 +266,7 @@ MyApplet.prototype = {
 				this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
 				this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
 				this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
+				this._show_fiveday_forecast = this._settings.get_boolean(WEATHER_SHOW_FIVEDAY_FORECAST_KEY);
 				this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 				this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
 				this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
@@ -280,6 +283,7 @@ MyApplet.prototype = {
 			this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
 			this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
 			this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
+			this._show_fiveday_forecast = this._settings.get_boolean(WEATHER_SHOW_FIVEDAY_FORECAST_KEY);
 			this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 			this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
 			this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
@@ -296,7 +300,8 @@ MyApplet.prototype = {
 				WEATHER_TRANSLATE_CONDITION_KEY,
 				WEATHER_SHOW_TEXT_IN_PANEL_KEY,
 				WEATHER_SHOW_COMMENT_IN_PANEL_KEY,
-				WEATHER_SHOW_SUNRISE_SUNSET_KEY
+				WEATHER_SHOW_SUNRISE_SUNSET_KEY,
+				WEATHER_SHOW_FIVEDAY_FORECAST_KEY
 			];
 			let context = this;
 			refreshableKeys.forEach(function (key) {
@@ -308,8 +313,10 @@ MyApplet.prototype = {
 				this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 				this._applet_icon.icon_type = this._icon_type;
 				this._currentWeatherIcon.icon_type = this._icon_type;
-				this._forecast[0].Icon.icon_type = this._icon_type;
-				this._forecast[1].Icon.icon_type = this._icon_type;
+				let daysToShow = this._show_fiveday_forecast ? 5 : 2;
+				for (let i = 0; i < daysToShow; i++) {
+					this._forecast[i].Icon.icon_type = this._icon_type;
+				}
 				this.refreshWeather(false);
 			}));
 			
@@ -430,7 +437,7 @@ MyApplet.prototype = {
 		//log("recurse=" + recurse);
 		this.load_json_async(this.get_weather_url(), function(json) {
 			try {
-				let weather = json.get_object_member('query').get_object_member('results').get_object_member('channel');
+				let weather = json.get_object_member('query').get_object_member('results').get_object_member('rss').get_object_member('channel');
 				let weather_c = weather.get_object_member('item').get_object_member('condition');
 				let forecast = weather.get_object_member('item').get_array_member('forecast').get_elements();
 				
@@ -528,8 +535,9 @@ MyApplet.prototype = {
 				this._currentWeatherSunset.text = this._show_sunrise ? (sunsetText + ': ' + sunset) : '';
 				
 				// Refresh forecast
-				let date_string = [_('Today'), _('Tomorrow')];
-				for (let i = 0; i <= 1; i++) {
+				// let date_string = [_('Today'), _('Tomorrow')];
+				let daysToShow = this._show_fiveday_forecast ? 5 : 2;
+				for (let i = 0; i < daysToShow; i++) {
 					let forecastUi = this._forecast[i];
 					let forecastData = forecast[i].get_object();
 					
@@ -540,8 +548,8 @@ MyApplet.prototype = {
 					let comment = forecastData.get_string_member('text');
 					if (this._translate_condition)
 						comment = this.get_weather_condition(code);
-					
-					forecastUi.Day.text = date_string[i] + ' (' + this.get_locale_day(forecastData.get_string_member('day')) + ')';
+
+					forecastUi.Day.text = this.get_locale_day(forecastData.get_string_member('day'));
 					forecastUi.Temperature.text = t_low + ' ' + '\u002F' + ' ' + t_high + ' ' + this.unit_to_unicode();
 					forecastUi.Summary.text = comment;
 					forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
@@ -701,7 +709,8 @@ MyApplet.prototype = {
 		this._forecastBox = new St.BoxLayout();
 		this._futureWeather.set_child(this._forecastBox);
 		
-		for (let i = 0; i <= 1; i++) {
+		let daysToShow = this._show_fiveday_forecast ? 5 : 2;
+		for (let i = 0; i < daysToShow; i++) {
 			let forecastWeather = {};
 			
 			forecastWeather.Icon = new St.Icon({
@@ -788,7 +797,8 @@ MyApplet.prototype = {
 	 *
 	 */
 	get_weather_url: function() {
-		return QUERY_URL + ' where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+		//return QUERY_URL + ' where location="' + this._woeid + '" and u="' + this.unit_to_url() + '"';
+		return QUERY_URL + this._woeid + '_' + this.unit_to_url() + '.xml"' ;
 	},
 
 	/**
