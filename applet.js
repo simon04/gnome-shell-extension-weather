@@ -259,7 +259,7 @@ MyApplet.prototype = {
 	// Override Methods: TextIconApplet
 	//----------------------------------
 
-	_init: function(orientation) {
+	_init: function _init(orientation) {
 		Applet.TextIconApplet.prototype._init.call(this, orientation);
 
 		try {
@@ -280,8 +280,8 @@ MyApplet.prototype = {
 			//----------------------------------
 			// Event Handlers
 			//----------------------------------
-			let load_settings_and_refresh_weather = Lang.bind(this, function() {
-				//log("callback");
+			let load_settings_and_refresh_weather = Lang.bind(this, function callback() {
+				//log(SIGNAL_CHANGED + "; refreshing...");
 				this._units = this._settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
 				this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
 				this._city = this._settings.get_string(WEATHER_CITY_KEY);
@@ -327,7 +327,7 @@ MyApplet.prototype = {
 				WEATHER_SHOW_FIVEDAY_FORECAST_KEY
 			];
 			let context = this;
-			refreshableKeys.forEach(function (key) {
+			refreshableKeys.forEach(function callback(key) {
 				//log("adding CHANGED listener for " + key + "; " + context);
 				context._settings.connect(SIGNAL_CHANGED + key, load_settings_and_refresh_weather);
 			});
@@ -390,7 +390,7 @@ MyApplet.prototype = {
 	/**
 	 * Called when the panel icon is clicked.
 	 */
-	on_applet_clicked: function(event) {
+	on_applet_clicked: function on_applet_clicked(event) {
 		//log(event);
 		this.menu.toggle();
 	},
@@ -454,7 +454,7 @@ MyApplet.prototype = {
 	/**
 	 *
 	 */
-	refreshWeather: function(recurse) {
+	refreshWeather: function refreshWeather(recurse) {
 		//log("recurse=" + recurse);
 		this.load_json_async(this.get_weather_url(), function(json) {
 			try {
@@ -590,7 +590,7 @@ MyApplet.prototype = {
 	/**
 	 *
 	 */
-	destroyCurrentWeather: function() {
+	destroyCurrentWeather: function destroyCurrentWeather() {
 		//log("");
 		if (this._currentWeather.get_child() != null)
 			this._currentWeather.get_child().destroy();
@@ -599,7 +599,7 @@ MyApplet.prototype = {
 	/**
 	 *
 	 */
-	destroyFutureWeather: function() {
+	destroyFutureWeather: function destroyFutureWeather() {
 		//log("");
 		if (this._futureWeather.get_child() != null)
 			this._futureWeather.get_child().destroy();
@@ -608,7 +608,7 @@ MyApplet.prototype = {
 	/**
 	 *
 	 */
-	showLoadingUi: function() {
+	showLoadingUi: function showLoadingUi() {
 		//log("");
 		this.destroyCurrentWeather();
 		this.destroyFutureWeather();
@@ -619,7 +619,7 @@ MyApplet.prototype = {
 	/**
 	 * Redraw the popup.
 	 */
-	rebuild: function() {
+	rebuild: function rebuild() {
 		//log("");
 		this.showLoadingUi();
 		this.rebuildCurrentWeatherUi();
@@ -629,7 +629,7 @@ MyApplet.prototype = {
 	/**
 	 * Assemble today's forecast in the menu.
 	 */
-	rebuildCurrentWeatherUi: function() {
+	rebuildCurrentWeatherUi: function rebuildCurrentWeatherUi() {
 		//log("");
 		this.destroyCurrentWeather();
 
@@ -732,7 +732,7 @@ MyApplet.prototype = {
 	/**
 	 * Assemble tomorrow's forecast in the menu.
 	 */
-	rebuildFutureWeatherUi: function() {
+	rebuildFutureWeatherUi: function rebuildFutureWeatherUi() {
 		//log("");
 		this.destroyFutureWeather();
 
@@ -788,7 +788,7 @@ MyApplet.prototype = {
 	/**
 	 * Gear icon to launch the glade/py menu.
 	 */
-	getPreferencesIcon: function() {
+	getPreferencesIcon: function getPreferencesIcon() {
 		let prefIcon = new St.Icon ({
 			icon_type: this._icon_type,
 			icon_size: 16,
@@ -797,9 +797,9 @@ MyApplet.prototype = {
 		let prefButton = new St.Button({
 			style_class: STYLE_PANEL_BUTTON
 		});
-		prefButton.connect(SIGNAL_CLICKED, function() {
+		prefButton.connect(SIGNAL_CLICKED, function callback() {
 			Util.spawn([COMMAND_CONFIGURE]);
-			//log("callback: preferences " + SIGNAL_CLICKED);
+			//log(SIGNAL_CLICKED);
 		});
 		let prefBox = new St.BoxLayout({
 			style_class: STYLE_CONFIG,
