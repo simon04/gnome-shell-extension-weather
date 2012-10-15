@@ -53,7 +53,7 @@ validate_version() {
 
 	if [ $VERSION_MATCH -ne 0 ]; then
 		cat << EOF
-ERROR: Invalid version.  Fix ${VERSION_FILE} to merge staging and push.
+ERROR: Invalid version.  Fix ${VERSION_FILE} to push.  You may wish to revert the last commit.
 
 EOF
 		exit 13
@@ -109,9 +109,9 @@ EOF
 }
 
 do_deploy() {
-	validate_version
 	git checkout master
 	git merge staging
+	validate_version
 	git push
 	git push --tags
 	cat << EOF
