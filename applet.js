@@ -293,6 +293,7 @@ MyApplet.prototype = {
 				this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
 				this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
 				this.refreshWeather(false);
+				this.rebuild();
 			});
 
 			//----------------------------------
@@ -368,9 +369,7 @@ MyApplet.prototype = {
 			this._futureWeather = new St.Bin({ style_class: STYLE_FORECAST });
 			mainBox.add_actor(this._futureWeather);
 
-			this.showLoadingUi();
-			this.rebuildCurrentWeatherUi();
-			this.rebuildFutureWeatherUi();
+			this.rebuild();
 
 			//------------------------------
 			// run
@@ -615,6 +614,16 @@ MyApplet.prototype = {
 		this.destroyFutureWeather();
 		this._currentWeather.set_child(new St.Label({ text: _('Loading current weather ...') }));
 		this._futureWeather.set_child(new St.Label({ text: _('Loading future weather ...') }));
+	},
+
+	/**
+	 * Redraw the popup.
+	 */
+	rebuild: function() {
+		//log("");
+		this.showLoadingUi();
+		this.rebuildCurrentWeatherUi();
+		this.rebuildFutureWeatherUi();
 	},
 
 	/**
