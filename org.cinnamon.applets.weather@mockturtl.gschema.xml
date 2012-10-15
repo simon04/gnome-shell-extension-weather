@@ -41,6 +41,11 @@
       <summary>Whether to display sunrise / sunset times</summary>
       <description>Whether to display sunrise and sunset times for today in current weather.</description>
     </key>
+    <key name="show-fiveday-forecast" type="b">
+      <default>false</default>
+      <summary>Whether to show 5-day forecast</summary>
+      <description>Show 5-day instead of 2-day forecast?</description>
+    </key>
     <key type="b" name="use-symbolic-icons">
       <default>false</default>
       <summary>Whether to use symbolic icons</summary>
