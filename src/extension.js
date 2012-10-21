@@ -111,12 +111,10 @@ const WEATHER_CONV_FPS_IN_MPS = 3.2808399;
 const _httpSession = new Soup.SessionAsync();
 Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
 
-function WeatherMenuButton() {
-    this._init();
-}
+const WeatherMenuButton = new Lang.Class({
+	Name: 'WeatherMenuButton',
 
-WeatherMenuButton.prototype = {
-	__proto__: PanelMenu.Button.prototype,
+	Extends: PanelMenu.Button,
 
 	_init: function() {
 	// Load settings
@@ -133,7 +131,7 @@ WeatherMenuButton.prototype = {
 		// Panel icon
 		this._weatherIcon = new St.Icon({
 		    icon_type: this._icon_type,
-		    icon_name: 'view-refresh-symbolic',
+		    icon_name: 'view-refresh',
 		    style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_text_direction() == Clutter.TextDirection.RTL ? '-rtl' : '')
 		});
 
@@ -141,14 +139,14 @@ WeatherMenuButton.prototype = {
 		let menuAlignment = 0.25;
 		if (Clutter.get_default_text_direction() == Clutter.TextDirection.RTL)
 		    menuAlignment = 1.0 - menuAlignment;
-		PanelMenu.Button.prototype._init.call(this, menuAlignment);
+		this.parent(menuAlignment);
 	}
 	else
 	{
 		// Panel icon
 		this._weatherIcon = new St.Icon({
 		    icon_type: this._icon_type,
-		    icon_name: 'view-refresh-symbolic',
+		    icon_name: 'view-refresh',
 		    style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
 		});
 
@@ -169,10 +167,11 @@ WeatherMenuButton.prototype = {
 	switch (this._position_in_panel) {
 	    case WeatherPosition.LEFT:
 		children = Main.panel._leftBox.get_children();
-		Main.panel._leftBox.add(this.actor, children.length-1);
+		Main.panel._leftBox.insert_child_at_index(this.actor, children.length);
 		break;
 	    case WeatherPosition.CENTER:
-		Main.panel._centerBox.add(this.actor, { y_fill: true });
+		children = Main.panel._centerBox.get_children();
+		Main.panel._centerBox.insert_child_at_index(this.actor, children.length);
 		break;
 	    case WeatherPosition.RIGHT:
 		children = Main.panel._rightBox.get_children();
@@ -675,7 +674,7 @@ WeatherMenuButton.prototype = {
 
     has_icon: function(icon) {
         //TODO correct symbolic name? (cf. symbolic_names_for_icon)
-        return Gtk.IconTheme.get_default().has_icon(icon + (this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''));
+        return Gtk.IconTheme.get_default().has_icon(icon + (this._icon_type == 1 ? '-symbolic' : ''));
     },
 
     get_weather_condition: function(code) {
@@ -1211,7 +1210,7 @@ WeatherMenuButton.prototype = {
         this._currentWeatherIcon = new St.Icon({
             icon_type: this._icon_type,
             icon_size: 72,
-            icon_name: 'view-refresh-symbolic',
+            icon_name: 'view-refresh',
             style_class: 'weather-current-icon'
         });
 
@@ -1354,7 +1353,7 @@ WeatherMenuButton.prototype = {
         }
 
     }
-};
+});
 
 let weatherMenu;
 
