@@ -78,6 +78,8 @@ WeatherSetting.prototype =
 	var completionModel = new Gtk.ListStore.c_new(1,[GObject.TYPE_STRING]);
 	completion.set_model(completionModel);
 	completion.set_text_column(0);
+	completion.set_popup_single_match(true);
+	completion.set_minimum_key_length(1);
 	completion.set_match_func(function(completion,key,iter)
 	{
 		if(iter)
@@ -105,14 +107,23 @@ WeatherSetting.prototype =
 
 		var testLocation = function(location)
 		{
-			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid from geo.places where text = "'+location+'" limit 1'),function()
+			if(location.search(/\[/) == -1 || location.search(/\]/) == -1)
+			return 0;
+
+		var woeid = location.split(/\[/)[1].split(/\]/)[0];
+			if(!woeid)
+			return 0;
+
+			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid from geo.places where woeid = "'+woeid+'" limit 1'),function()
 			{
 			d.sensitive = 0;
 				if(typeof arguments[0].query == "undefined")
 				return 0;
+
 			var city = arguments[0].query;
 				if(Number(city.count) == 0)
 				return 0;
+
 			d.sensitive = 1;
 			},"test");
 		};
@@ -120,8 +131,8 @@ WeatherSetting.prototype =
 		entry.signal.changed.connect(function()
 		{
 		var location = entry.get_text();
-		testLocation(location);
-			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?q=select woeid,name,admin1,country from geo.places where text = "*'+location+'*" or text = "'+location+'" limit 10&format=json'),function()
+			if(testLocation(location) == 0)
+			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?q=select woeid,name,admin1,country from geo.places where text = "*'+location+'*" or text = "'+location+'"&format=json'),function()
 			{
 				if(!arguments[0])
 				return 0;
@@ -131,7 +142,7 @@ WeatherSetting.prototype =
 				city = city.results.place;
 				else
 				return 0;
-			var iter = that.iter;
+			var iter = new Gtk.TreeIter();
 			completionModel.clear();
 
 				if(n > 1)
@@ -146,14 +157,15 @@ WeatherSetting.prototype =
 						cityText += ", "+city[i].admin1.content;
 
 						if(city[i].country)
-						cityText += ", "+city[i].country.code;
+						cityText += " ("+city[i].country.code+")";
+
+					cityText += " ["+city[i].woeid+"]";
 
 						if(m[cityText])
 						continue;
 						else
 						m[cityText] = 1;
 					completionModel.set_value(current,0,cityText);
-					completion.complete();
 					}
 				}
 				else
@@ -164,11 +176,11 @@ WeatherSetting.prototype =
 					cityText += ", "+city.admin1.content;
 
 					if(city.country)
-					cityText += ", "+city.country.code;
+					cityText += " ("+city.country.code+")";
+
+				cityText += " ["+city.woeid+"]";
 				completionModel.set_value(current,0,cityText);
-				completion.complete();
 				}
-			testLocation(location);
 			},"getInfo");
 		return 0;
 		});
@@ -179,7 +191,14 @@ WeatherSetting.prototype =
 		dialog.signal.response.connect(function(w, response_id) {
 		   	if(response_id)
 			{
-				that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where text = "'+entry.get_text()+'" limit 1'),function()
+				if(entry.get_text().search(/\[/) == -1 || entry.get_text().search(/\]/) == -1)
+				return 0;
+
+			var woeid = entry.get_text().split(/\[/)[1].split(/\]/)[0];
+				if(!woeid)
+				return 0;
+
+				that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where woeid = "'+woeid+'" limit 1'),function()
 				{
 				var city = arguments[0].query;
 					if(Number(city.count) > 0)
@@ -192,7 +211,7 @@ WeatherSetting.prototype =
 					cityText += ", "+city.admin1.content;
 
 					if(city.country)
-					cityText += ", "+city.country.code;
+					cityText += " ("+city.country.code+")";
 
 					if(that.city)
 					that.city = that.city+" && "+city.woeid+">"+cityText;
