@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-12 14:02+0200\n"
-"PO-Revision-Date: 2012-06-04 15:57+0000\n"
+"PO-Revision-Date: 2012-10-23 18:45+0000\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
-"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-06-04 18:20+0000\n"
-"X-Generator: Launchpad (build 15353)\n"
+"X-Launchpad-Export-Date: 2012-10-23 18:56+0000\n"
+"X-Generator: Launchpad (build 16179)\n"
+"Language: lt\n"
 
 #: ../src/extension.js:124
 msgid "..."
@@ -86,7 +86,7 @@ msgstr "Lijundra"
 
 #: ../src/extension.js:700 ../src/extension.js:702
 msgid "Showers"
-msgstr "Liūtys"
+msgstr "Trumpi lietūs"
 
 #: ../src/extension.js:704
 msgid "Snow flurries"
@@ -114,19 +114,19 @@ msgstr "Šlapdriba"
 
 #: ../src/extension.js:716
 msgid "Dust"
-msgstr ""
+msgstr "Dulkės"
 
 #: ../src/extension.js:718
 msgid "Foggy"
-msgstr ""
+msgstr "Ūkanota"
 
 #: ../src/extension.js:720
 msgid "Haze"
-msgstr ""
+msgstr "Miglelė"
 
 #: ../src/extension.js:722
 msgid "Smoky"
-msgstr ""
+msgstr "Dūmuotas oras"
 
 #: ../src/extension.js:724
 msgid "Blustery"
@@ -146,7 +146,7 @@ msgstr "Debesuota"
 
 #: ../src/extension.js:733
 msgid "Mostly cloudy"
-msgstr "Daugiausiai debesuota"
+msgstr "Daugiau debesuota"
 
 #: ../src/extension.js:736 ../src/extension.js:762
 msgid "Partly cloudy"
@@ -286,9 +286,9 @@ msgid "Tomorrow"
 msgstr "Rytoj"
 
 #: ../src/extension.js:1154
-#, fuzzy, python-format
+#, python-format
 msgid "In %s days"
-msgstr "Prieš %s dienas"
+msgstr ""
 
 #: ../src/extension.js:1189
 msgid "Loading current weather ..."
@@ -340,9 +340,8 @@ msgid "Wind Speed Unit"
 msgstr "Vėjo greičio vienetai"
 
 #: ../src/weather-settings.js.in:678
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Slėgis:"
+msgstr "Slėgio vienetai"
 
 #: ../src/weather-settings.js.in:680
 msgid "Position in Panel"
@@ -362,7 +361,7 @@ msgstr "Kairėje"
 
 #: ../src/weather-settings.js.in:682
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "Vėjo krypčiai naudoti rodykles"
 
 #: ../src/weather-settings.js.in:684
 msgid "Translate Conditions"
