@@ -1229,7 +1229,7 @@ const WeatherMenuButton = new Lang.Class({
 			date_string = _("%s days ago").replace("%s",dayLeft);
 
                 forecastUi.Day.text = date_string + ' (' + this.get_locale_day(forecastDate.getDay()) + ')';
-                forecastUi.Temperature.text = parseFloat(t_low).toLocaleString() + '\u2013' + parseFloat(t_high).toLocaleString() + ' ' + this.unit_to_unicode();
+                forecastUi.Temperature.text = '\u2193 ' + parseFloat(t_low).toLocaleString() + ' ' + this.unit_to_unicode() + '    \u2191 ' + parseFloat(t_high).toLocaleString() + ' ' + this.unit_to_unicode();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
             }
