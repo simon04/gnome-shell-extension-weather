@@ -43,7 +43,6 @@ const Soup = imports.gi.Soup;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Util = imports.misc.util;
-const NMClient = imports.gi.NMClient;
 const _ = Gettext.gettext;
 
 const Main = imports.ui.main;
@@ -119,9 +118,6 @@ const WeatherMenuButton = new Lang.Class({
 	_init: function() {
 	// Load settings
 	this.loadConfig();
-	
-	//Load Network status
-	this._nmClient = NMClient.Client.new();
 
 	// Label
 	this._weatherInfo = new St.Label({ text: _('...') });
@@ -130,8 +126,7 @@ const WeatherMenuButton = new Lang.Class({
 	{
 		// Panel icon
 		this._weatherIcon = new St.Icon({
-		    icon_type: this._icon_type,
-		    icon_name: 'view-refresh',
+		    icon_name: 'view-refresh'+this.icon_type(),
 		    style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_text_direction() == Clutter.TextDirection.RTL ? '-rtl' : '')
 		});
 
@@ -145,8 +140,7 @@ const WeatherMenuButton = new Lang.Class({
 	{
 		// Panel icon
 		this._weatherIcon = new St.Icon({
-		    icon_type: this._icon_type,
-		    icon_name: 'view-refresh',
+		    icon_name: 'view-refresh'+this.icon_type(),
 		    style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
 		});
 
@@ -163,6 +157,11 @@ const WeatherMenuButton = new Lang.Class({
 	topBox.add_actor(this._weatherInfo);
 	this.actor.add_actor(topBox);
 
+	let dummyBox = new St.BoxLayout();
+	this.actor.reparent(dummyBox);
+	dummyBox.remove_actor(this.actor);
+	dummyBox.destroy();
+
 	let children = null;
 	switch (this._position_in_panel) {
 	    case WeatherPosition.LEFT:
@@ -178,8 +177,12 @@ const WeatherMenuButton = new Lang.Class({
 		Main.panel._rightBox.insert_child_at_index(this.actor, 0);
 		break;
 	}
+		if(typeof Main.panel._menus == "undefined")
+		Main.panel.menuManager.addMenu(this.menu);
+		else
+		Main.panel._menus.addMenu(this.menu);
 
-	Main.panel._menus.addMenu(this.menu);
+	this._old_position_in_panel = this._position_in_panel;
 
 	// Current weather
 	this._currentWeather = new St.Bin({ style_class: 'current' });
@@ -406,14 +409,14 @@ const WeatherMenuButton = new Lang.Class({
 	{
 		if(!this._settings)
 		this.loadConfig();
-	return this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+	return this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? 1 : 0;
 	},
 
 	set _icon_type(v)
 	{
 		if(!this._settings)
 		this.loadConfig();
-	this._settings.set_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY,v == St.IconType.SYMBOLIC ? 1 : 0);
+	this._settings.set_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY,v);
 	},
 
 	get _text_in_panel()
@@ -667,14 +670,13 @@ const WeatherMenuButton = new Lang.Class({
         let iconname = this.get_weather_icon(code);
         for (let i = 0; i < iconname.length; i++) {
             if (this.has_icon(iconname[i]))
-                return iconname[i];
+                return iconname[i]+this.icon_type();
         }
-        return 'weather-severe-alert';
+        return 'weather-severe-alert'+this.icon_type();
      },
 
     has_icon: function(icon) {
-        //TODO correct symbolic name? (cf. symbolic_names_for_icon)
-        return Gtk.IconTheme.get_default().has_icon(icon + (this._icon_type == 1 ? '-symbolic' : ''));
+        return Gtk.IconTheme.get_default().has_icon(icon+this.icon_type());
     },
 
     get_weather_condition: function(code) {
@@ -849,6 +851,26 @@ const WeatherMenuButton = new Lang.Class({
 		}
 	},
 
+	icon_type : function(icon_name)
+	{
+		if(!icon_name)
+			if(this._icon_type)
+			return "-symbolic";
+			else
+			return "";
+
+		if(this._icon_type)
+			if(String(icon_name).search("-symbolic") != -1)
+			return icon_name;
+			else
+			return icon_name+"-symbolic";
+		else
+			if(String(icon_name).search("-symbolic") != -1)
+			return String(icon_name).replace("-symbolic","");
+			else
+			return icon_name;
+	},
+
     load_json_async: function(url, fun) {
         let here = this;
 
@@ -874,40 +896,76 @@ const WeatherMenuButton = new Lang.Class({
         });
     },
 
-    refreshWeather: function(recurse) {
-	
-	if (this._nmClient.get_active_connections() == null){
-		this.actor.hide(); 
-	}
-	else{
-		this.actor.show();
-	}
-    
-        if(!this.extractWoeid(this._city))
-	{
-	this.updateCities();
-        return 0;
-	}
-        this.load_json_async(this.get_weather_url(), function(json) {
-                if(!json)
-                return 0;
-            let weather = json.query.results.channel;
-            let many = 0;
-                if(typeof weather[0] != "undefined")
-                {
-                weather = weather[0];
-                many = 1;
-                }
-            let weather_c = weather.item.condition;
+	refreshWeather: function(recurse)
+	{    
+		if(!this.extractWoeid(this._city))
+		{
+		this.updateCities();
+		return 0;
+		}
+		this.load_json_async(this.get_weather_url(), function(json)
+		{
+			if(!json)
+			return 0;
+		let weather = json.query.results.channel;
+		let many = 0;
+			if(typeof weather[0] != "undefined")
+			{
+			weather = weather[0];
+			many = 1;
+			}
+		let weather_c = weather.item.condition;
 
-		this._weatherIcon.icon_type = this._icon_type;
-		this._currentWeatherIcon.icon_type = this._icon_type;
-		this._forecast[0].Icon.icon_type = this._icon_type;
-		this._forecast[1].Icon.icon_type = this._icon_type;
-		this._sunriseIcon.icon_type = this._icon_type;
-		this._sunsetIcon.icon_type = this._icon_type;
-		this._buildIcon.icon_type = this._icon_type;
+		this._weatherIcon.icon_name = this.icon_type(this._weatherIcon.icon_name);
+		this._currentWeatherIcon.icon_name = this.icon_type(this._currentWeatherIcon.icon_name);
+		this._forecast[0].Icon.icon_name = this.icon_type(this._forecast[0].Icon.icon_name);
+		this._forecast[1].Icon.icon_name = this.icon_type(this._forecast[1].Icon.icon_name);
+		this._sunriseIcon.icon_name = this.icon_type(this._sunriseIcon.icon_name);
+		this._sunsetIcon.icon_name = this.icon_type(this._sunsetIcon.icon_name);
+		this._buildIcon.icon_name = this.icon_type(this._buildIcon.icon_name);
 
+			if(typeof St.IconType != "undefined")
+			{
+			this._weatherIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+			this._currentWeatherIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+			this._forecast[0].Icon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+			this._forecast[1].Icon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+			this._sunriseIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+			this._sunsetIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+			this._buildIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+			}
+
+			if(this._old_position_in_panel != this._position_in_panel)
+			{
+				switch (this._old_position_in_panel) {
+					case WeatherPosition.LEFT:
+						Main.panel._leftBox.remove_actor(this.actor);
+						break;
+					case WeatherPosition.CENTER:
+						Main.panel._centerBox.remove_actor(this.actor);
+						break;
+					case WeatherPosition.RIGHT:
+						Main.panel._rightBox.remove_actor(this.actor);
+						break;
+				}
+
+				let children = null;
+				switch (this._position_in_panel) {
+					case WeatherPosition.LEFT:
+						children = Main.panel._leftBox.get_children();
+						Main.panel._leftBox.insert_child_at_index(this.actor, children.length);
+						break;
+					case WeatherPosition.CENTER:
+						children = Main.panel._centerBox.get_children();
+						Main.panel._centerBox.insert_child_at_index(this.actor, children.length);
+						break;
+					case WeatherPosition.RIGHT:
+						children = Main.panel._rightBox.get_children();
+						Main.panel._rightBox.insert_child_at_index(this.actor, 0);
+						break;
+				}
+			this._old_position_in_panel = this._position_in_panel;
+			}
 
             let forecast = weather.item.forecast;
             let location = this.extractLocation(this._city);
@@ -1208,30 +1266,26 @@ const WeatherMenuButton = new Lang.Class({
 
         // This will hold the icon for the current weather
         this._currentWeatherIcon = new St.Icon({
-            icon_type: this._icon_type,
             icon_size: 72,
-            icon_name: 'view-refresh',
+            icon_name: 'view-refresh'+this.icon_type(),
             style_class: 'weather-current-icon'
         });
 
 	this._sunriseIcon = new St.Icon({
-            icon_type: this._icon_type,
             icon_size: 15,
-            icon_name: 'weather-clear',
+            icon_name: 'weather-clear'+this.icon_type(),
             style_class: 'weather-sunrise-icon'
         });
 
 	this._sunsetIcon = new St.Icon({
-            icon_type: this._icon_type,
             icon_size: 15,
-            icon_name: 'weather-clear-night',
+            icon_name: 'weather-clear-night'+this.icon_type(),
             style_class: 'weather-sunset-icon'
         });
 
 	this._buildIcon = new St.Icon({
-            icon_type: this._icon_type,
             icon_size: 15,
-            icon_name: 'view-refresh',
+            icon_name: 'view-refresh'+this.icon_type(),
             style_class: 'weather-build-icon'
         });
 
@@ -1318,9 +1372,8 @@ const WeatherMenuButton = new Lang.Class({
             let forecastWeather = {};
 
             forecastWeather.Icon = new St.Icon({
-                icon_type: this._icon_type,
                 icon_size: 48,
-                icon_name: 'view-refresh-symbolic',
+                icon_name: 'view-refresh'+this.icon_type(),
                 style_class: 'weather-forecast-icon'
             });
             forecastWeather.Day = new St.Label({
