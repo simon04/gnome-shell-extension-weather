@@ -1113,15 +1113,15 @@ const WeatherMenuButton = new Lang.Class({
 		weatherInfoC = comment;
 
 		if (this._text_in_panel)
-		weatherInfoT = temperature + ' ' + this.unit_to_unicode();
+		weatherInfoT = parseFloat(temperature).toLocaleString() + ' ' + this.unit_to_unicode();
 
 	    this._weatherInfo.text = weatherInfoC + ((weatherInfoC)?", ":"") + weatherInfoT;
 
-            this._currentWeatherSummary.text = comment + ", " + temperature + ' ' + this.unit_to_unicode();
+            this._currentWeatherSummary.text = comment + ", " + parseFloat(temperature).toLocaleString() + ' ' + this.unit_to_unicode();
             this._currentWeatherLocation.text = location;
-            this._currentWeatherTemperature.text = chill + ' ' + this.unit_to_unicode();
-            this._currentWeatherHumidity.text = humidity;
-            this._currentWeatherPressure.text = pressure + ' ' + pressure_unit + ((pressure_state)?" ":"") + this.get_pressure_state(pressure_state);
+            this._currentWeatherTemperature.text = parseFloat(chill).toLocaleString() + ' ' + this.unit_to_unicode();
+            this._currentWeatherHumidity.text = parseFloat(humidity).toLocaleString() + ' %';
+            this._currentWeatherPressure.text = parseFloat(pressure).toLocaleString() + ' ' + pressure_unit + ((pressure_state)?" ":"") + this.get_pressure_state(pressure_state);
 	    this._currentWeatherSunrise.text = sunrise;
 	    this._currentWeatherSunset.text = sunset;
 	    this._currentWeatherBuild.text = lastBuild;
@@ -1157,9 +1157,9 @@ const WeatherMenuButton = new Lang.Class({
             	if (!wind)
             	this._currentWeatherWind.text = '\u2013';
             	else if (wind == 0 || !wind_direction)
-            	this._currentWeatherWind.text = wind + ' ' + wind_unit;
+            	this._currentWeatherWind.text = parseFloat(wind).toLocaleString() + ' ' + wind_unit;
             	else // i.e. wind > 0 && wind_direction
-            	this._currentWeatherWind.text = wind_direction + ' ' + wind + ' ' + wind_unit;
+            	this._currentWeatherWind.text = wind_direction + ' ' + parseFloat(wind).toLocaleString() + ' ' + wind_unit;
 
             // Refresh forecast
             for (let i = 0; i <= 1; i++) {
@@ -1229,7 +1229,7 @@ const WeatherMenuButton = new Lang.Class({
 			date_string = _("%s days ago").replace("%s",dayLeft);
 
                 forecastUi.Day.text = date_string + ' (' + this.get_locale_day(forecastDate.getDay()) + ')';
-                forecastUi.Temperature.text = t_low + '\u2013' + t_high + ' ' + this.unit_to_unicode();
+                forecastUi.Temperature.text = parseFloat(t_low).toLocaleString() + '\u2013' + parseFloat(t_high).toLocaleString() + ' ' + this.unit_to_unicode();
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
             }
