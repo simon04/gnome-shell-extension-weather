@@ -516,7 +516,7 @@ const WeatherMenuButton = new Lang.Class({
 					cityText += ", "+city.admin1.content;
 
 					if(city.country)
-					cityText += ", "+city.country.code;
+					cityText += " ("+city.country.code+")";
 
 				cities.splice(a,1,cityText);
 				cities = cities.join(" && ");

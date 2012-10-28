@@ -55,7 +55,7 @@
       <_description>Choose whether to display wind direction through arrows or letters.</_description>
     </key>
     <key name="city" type="s">
-      <default>'Cambridge, MA'</default>
+      <default>'2373572>Cambridge, Massachusetts (US)'</default>
       <_summary>City to be displayed</_summary>
     </key>
     <key name="actual-city" type="i">
