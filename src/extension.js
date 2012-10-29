@@ -81,7 +81,8 @@ const WeatherWindSpeedUnits = {
 	MPH: 1,
 	MPS: 2,
 	KNOTS: 3,
-	FPS: 4
+	FPS: 4,
+	BEAUFORT: 5
 }
 
 const WeatherPressureUnits = {
@@ -861,6 +862,36 @@ const WeatherMenuButton = new Lang.Class({
 	return Math.round((p * (3386.39-((t-32)*0.003407143))));
 	},
 
+	toBeaufort: function(w,t)
+	{
+		if(w < 1)
+		return (!t)?"0":_("Calm");
+		else if(w >= 1 && w <= 3)
+		return (!t)?"1":_("Light air");
+		else if(w >= 4 && w <= 7)
+		return (!t)?"2":_("Light breeze");
+		else if(w >= 8 && w <= 12)
+		return (!t)?"3":_("Gentle breeze");
+		else if(w >= 13 && w <= 17)
+		return (!t)?"4":_("Moderate breeze");
+		else if(w >= 18 && w <= 24)
+		return (!t)?"5":_("Fresh breeze");
+		else if(w >= 25 && w <= 30)
+		return (!t)?"6":_("Strong breeze");
+		else if(w >= 31 && w <= 38)
+		return (!t)?"7":_("Moderate gale");
+		else if(w >= 39 && w <= 46)
+		return (!t)?"8":_("Fresh gale");
+		else if(w >= 47 && w <= 54)
+		return (!t)?"9":_("Strong gale");
+		else if(w >= 55 && w <= 63)
+		return (!t)?"10":_("Whole gale");
+		else if(w >= 64 && w <= 73)
+		return (!t)?"11":_("Storm");
+		else
+		return (!t)?"12":_("Hurricane");
+	},
+
 	get_locale_day: function(abr)
 	{
 	let days = [_('Sunday'),_('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday')];
@@ -1196,6 +1227,10 @@ const WeatherMenuButton = new Lang.Class({
 			wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_FPS_IN_MPS);
 			wind_unit = 'ft/s';
 			break;
+
+			case WeatherWindSpeedUnits.BEAUFORT:
+			wind = this.toBeaufort(wind);
+			wind_unit = this.toBeaufort(wind,true);
 		    }
 
             	if (!wind)

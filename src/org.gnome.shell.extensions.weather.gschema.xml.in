@@ -25,6 +25,7 @@
     <value nick="m/s" value="2" />
     <value nick="knots" value="3" />
     <value nick="ft/s" value="4" />
+    <value nick="Beaufort" value="5" />
   </enum>
   <enum id="org.gnome.shell.extensions.weather.wind-dir-indicators">
     <value nick="arrows" value="0" />
@@ -47,7 +48,7 @@
     <key name="wind-speed-unit" enum="org.gnome.shell.extensions.weather.wind-speed-unit">
       <default>'mph'</default>
       <_summary>Wind Speed Units</_summary>
-      <_description>Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s', 'knots' or 'ft/s'.</_description>
+      <_description>Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s', 'knots', 'ft/s' or 'Beaufort'.</_description>
     </key>
     <key name="wind-direction" type="b">
       <default>true</default>

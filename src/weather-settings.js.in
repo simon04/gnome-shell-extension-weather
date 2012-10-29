@@ -624,7 +624,7 @@ WeatherSetting.prototype =
 	this.configWidgets.push([cf,b]);
 	cf.visible = 1;
 	cf.can_focus = 0;
-	cf.width_request = 75;
+	cf.width_request = 100;
 		for(var i in a)
 		cf.append_text(a[i]);
 	cf.active = this[b];
@@ -693,7 +693,7 @@ WeatherSetting.prototype =
 	this.addLabel(_("Temperature Unit"));
 	this.addComboBox(["°C","°F","K","R","°Ré","°Rø","°De","°N"],"units");
 	this.addLabel(_("Wind Speed Unit"));
-	this.addComboBox(["km/h","mph","m/s","kn","ft/s"],"wind_speed_unit");
+	this.addComboBox(["km/h","mph","m/s","kn","ft/s","Beaufort"],"wind_speed_unit");
 	this.addLabel(_("Pressure Unit"));
 	this.addComboBox(["hPa","inHg","bar","Pa","atm","at","Torr","psi"],"pressure_unit");
 	this.addLabel(_("Position in Panel"));
