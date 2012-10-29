@@ -865,31 +865,31 @@ const WeatherMenuButton = new Lang.Class({
 	toBeaufort: function(w,t)
 	{
 		if(w < 1)
-		return (!t)?"0":_("Calm");
+		return (!t)?"0":"("+_("Calm")+")";
 		else if(w >= 1 && w <= 3)
-		return (!t)?"1":_("Light air");
+		return (!t)?"1":"("+_("Light air")+")";
 		else if(w >= 4 && w <= 7)
-		return (!t)?"2":_("Light breeze");
+		return (!t)?"2":"("+_("Light breeze")+")";
 		else if(w >= 8 && w <= 12)
-		return (!t)?"3":_("Gentle breeze");
+		return (!t)?"3":"("+_("Gentle breeze")+")";
 		else if(w >= 13 && w <= 17)
-		return (!t)?"4":_("Moderate breeze");
+		return (!t)?"4":"("+_("Moderate breeze")+")";
 		else if(w >= 18 && w <= 24)
-		return (!t)?"5":_("Fresh breeze");
+		return (!t)?"5":"("+_("Fresh breeze")+")";
 		else if(w >= 25 && w <= 30)
-		return (!t)?"6":_("Strong breeze");
+		return (!t)?"6":"("+_("Strong breeze")+")";
 		else if(w >= 31 && w <= 38)
-		return (!t)?"7":_("Moderate gale");
+		return (!t)?"7":"("+_("Moderate gale")+")";
 		else if(w >= 39 && w <= 46)
-		return (!t)?"8":_("Fresh gale");
+		return (!t)?"8":"("+_("Fresh gale")+")";
 		else if(w >= 47 && w <= 54)
-		return (!t)?"9":_("Strong gale");
+		return (!t)?"9":"("+_("Strong gale")+")";
 		else if(w >= 55 && w <= 63)
-		return (!t)?"10":_("Whole gale");
+		return (!t)?"10":"("+_("Whole gale")+")";
 		else if(w >= 64 && w <= 73)
-		return (!t)?"11":_("Storm");
+		return (!t)?"11":"("+_("Storm")+")";
 		else
-		return (!t)?"12":_("Hurricane");
+		return (!t)?"12":"("+_("Hurricane")+")";
 	},
 
 	get_locale_day: function(abr)
