@@ -1101,7 +1101,7 @@ const WeatherMenuButton = new Lang.Class({
 			break;
 
 			case WeatherPressureUnits.kPa:
-			pressure = Math.round(this.toPascal(pressure,temperature)/1000);
+			pressure = Math.round(this.toPascal(pressure,temperature)/100)/10;
 			pressure_unit = "kPa";
 			break;
 
