@@ -14,10 +14,11 @@
     <value nick="inHg" value="1" />
     <value nick="bar" value="2" />
     <value nick="Pa" value="3" />
-    <value nick="atm" value="4" />
-    <value nick="at" value="5" />
-    <value nick="Torr" value="6" />
-    <value nick="psi" value="7" />
+    <value nick="kPa" value="4" />
+    <value nick="atm" value="5" />
+    <value nick="at" value="6" />
+    <value nick="Torr" value="7" />
+    <value nick="psi" value="8" />
   </enum>
   <enum id="org.gnome.shell.extensions.weather.wind-speed-unit">
     <value nick="kph" value="0" />

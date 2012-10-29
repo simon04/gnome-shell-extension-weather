@@ -695,7 +695,7 @@ WeatherSetting.prototype =
 	this.addLabel(_("Wind Speed Unit"));
 	this.addComboBox(["km/h","mph","m/s","kn","ft/s","Beaufort"],"wind_speed_unit");
 	this.addLabel(_("Pressure Unit"));
-	this.addComboBox(["hPa","inHg","bar","Pa","atm","at","Torr","psi"],"pressure_unit");
+	this.addComboBox(["hPa","inHg","bar","Pa","kPa","atm","at","Torr","psi"],"pressure_unit");
 	this.addLabel(_("Position in Panel"));
 	this.addComboBox([_("Center"),_("Right"),_("Left")],"position_in_panel");
 	this.addLabel(_("Wind Direction by Arrows"));

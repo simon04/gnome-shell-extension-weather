@@ -90,10 +90,11 @@ const WeatherPressureUnits = {
 	inHg: 1,
 	bar: 2,
 	Pa: 3,
-	atm: 4,
-	at: 5,
-	Torr: 6,
-	psi: 7
+	kPa: 4,
+	atm: 5,
+	at: 6,
+	Torr: 7,
+	psi: 8
 }
 
 const WeatherPosition = {
@@ -1097,6 +1098,11 @@ const WeatherMenuButton = new Lang.Class({
 			case WeatherPressureUnits.Pa:
 			pressure = this.toPascal(pressure,temperature);
 			pressure_unit = "Pa";
+			break;
+
+			case WeatherPressureUnits.kPa:
+			pressure = Math.round(this.toPascal(pressure,temperature)/1000);
+			pressure_unit = "kPa";
 			break;
 
 			case WeatherPressureUnits.atm:
