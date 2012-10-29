@@ -691,7 +691,7 @@ WeatherSetting.prototype =
 
 	this.initConfigWidget();
 	this.addLabel(_("Temperature Unit"));
-	this.addComboBox(["°C","°F","K","R","°Ré","°Rø","°De","°N"],"units");
+	this.addComboBox(["°C","°F","K","°Ra","°Ré","°Rø","°De","°N"],"units");
 	this.addLabel(_("Wind Speed Unit"));
 	this.addComboBox(["km/h","mph","m/s","kn","ft/s","Beaufort"],"wind_speed_unit");
 	this.addLabel(_("Pressure Unit"));

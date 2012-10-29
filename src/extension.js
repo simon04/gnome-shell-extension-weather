@@ -588,7 +588,7 @@ const WeatherMenuButton = new Lang.Class({
 	else if(this._units == WeatherUnits.KELVIN)
 	return 'K';
 	else if(this._units == WeatherUnits.RANKINE)
-	return 'R';
+	return '\u00B0\Ra';
 	else if(this._units == WeatherUnits.REAUMUR)
 	return '\u00B0\R\u00E9';
 	else if(this._units == WeatherUnits.ROEMER)
