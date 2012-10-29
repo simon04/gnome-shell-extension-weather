@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-29 03:46+0100\n"
-"PO-Revision-Date: 2012-08-24 07:26+0200\n"
+"PO-Revision-Date: 2012-10-29 11:01+0100\n"
 "Last-Translator: Mattia Meneguzzo <odysseus@fedoraproject.org>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr "..."
 
 #: ../src/extension.js:203
 msgid "Locations"
-msgstr ""
+msgstr "Località"
 
 #: ../src/extension.js:207
 msgid "Reload Weather Information"
@@ -289,9 +289,9 @@ msgid "Tomorrow"
 msgstr "Domani"
 
 #: ../src/extension.js:1269
-#, fuzzy, python-format
+#, python-format
 msgid "In %s days"
-msgstr "%s giorni fa"
+msgstr "Tra %s giorni"
 
 #: ../src/extension.js:1304
 msgid "Loading current weather ..."
@@ -343,9 +343,8 @@ msgid "Wind Speed Unit"
 msgstr "Unità di misura dell'intensità del vento"
 
 #: ../src/weather-settings.js.in:697
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Unità di misura della pressione:"
+msgstr "Unità di misura della pressione"
 
 #: ../src/weather-settings.js.in:699
 msgid "Position in Panel"
