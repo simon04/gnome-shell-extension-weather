@@ -200,6 +200,10 @@ const WeatherMenuButton = new Lang.Class({
 	let item = new PopupMenu.PopupSeparatorMenuItem();
 	this.menu.addMenuItem(item);
 
+	this._selectCity = new PopupMenu.PopupSubMenuMenuItem(_("Locations"));
+	this.menu.addMenuItem(this._selectCity);
+	this.rebuildSelectCityItem();
+
 	let item = new PopupMenu.PopupMenuItem(_("Reload Weather Information"));
 	item.connect('activate', Lang.bind(this, function(){this.refreshWeather(false);}));
 	this.menu.addMenuItem(item);
@@ -475,8 +479,43 @@ const WeatherMenuButton = new Lang.Class({
 	this._settings.set_int(WEATHER_REFRESH_INTERVAL,v);
 	},
 
+	rebuildSelectCityItem : function()
+	{
+	let that = this;
+	this._selectCity.menu.removeAll();
+	let item = null;
+
+	let cities = this._cities;
+	cities = cities.split(" && ");
+		if(cities && typeof cities == "string")
+		cities = [cities];
+		if(!cities[0])
+		return 0;
+
+		for(let i = 0; cities.length > i; i++)
+		{
+		item = new PopupMenu.PopupMenuItem(this.extractLocation(cities[i]));
+		item.location = i;
+			if(i == this._actual_city)
+			item.setShowDot(true);
+		this._selectCity.menu.addMenuItem(item);
+			item.connect('activate', function(actor,event)
+			{
+			that._actual_city = actor.location;
+			});
+		}
+
+	if (cities.length == 1)
+	this._selectCity.actor.hide();
+	else
+	this._selectCity.actor.show();
+	},
+
 	extractLocation : function()
 	{
+		if(!arguments[0])
+		return "";
+
 		if(arguments[0].search(">") == -1)
 		return _("Invalid city");
 	return arguments[0].split(">")[1];
@@ -484,6 +523,9 @@ const WeatherMenuButton = new Lang.Class({
 
 	extractWoeid : function()
 	{
+		if(!arguments[0])
+		return 0;
+
 		if(arguments[0].search(">") == -1)
 		return 0;
 	return arguments[0].split(">")[0];
@@ -915,6 +957,8 @@ const WeatherMenuButton = new Lang.Class({
 			many = 1;
 			}
 		let weather_c = weather.item.condition;
+
+		this.rebuildSelectCityItem();
 
 		this._weatherIcon.icon_name = this.icon_type(this._weatherIcon.icon_name);
 		this._currentWeatherIcon.icon_name = this.icon_type(this._currentWeatherIcon.icon_name);

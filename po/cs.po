@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-25 03:08+0200\n"
+"POT-Creation-Date: 2012-10-29 03:46+0100\n"
 "PO-Revision-Date: 2012-06-03 23:07+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: cs_CZ <czech@li.org>\n"
@@ -17,307 +17,311 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/extension.js:129
+#: ../src/extension.js:123
 msgid "..."
 msgstr "…"
 
-#: ../src/extension.js:201
+#: ../src/extension.js:203
+msgid "Locations"
+msgstr ""
+
+#: ../src/extension.js:207
 msgid "Reload Weather Information"
 msgstr "Obnovit informace o počasí"
 
-#: ../src/extension.js:205 ../src/weather-settings.js.in:655
+#: ../src/extension.js:211 ../src/weather-settings.js.in:655
 msgid "Weather Settings"
 msgstr "Nastavení"
 
-#: ../src/extension.js:225 ../src/extension.js:235
+#: ../src/extension.js:231 ../src/extension.js:241
 #: ../src/weather-settings.js.in:329
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Schéma \"%s\" nenalezeno."
 
-#: ../src/extension.js:479 ../src/weather-settings.js.in:539
+#: ../src/extension.js:520 ../src/weather-settings.js.in:539
 msgid "Invalid city"
 msgstr "Neplatné město"
 
-#: ../src/extension.js:684
+#: ../src/extension.js:727
 msgid "Tornado"
 msgstr "Tornádo"
 
-#: ../src/extension.js:686
+#: ../src/extension.js:729
 msgid "Tropical storm"
 msgstr "Tropická bouře"
 
-#: ../src/extension.js:688
+#: ../src/extension.js:731
 msgid "Hurricane"
 msgstr "Hurikán"
 
-#: ../src/extension.js:690
+#: ../src/extension.js:733
 msgid "Severe thunderstorms"
 msgstr "Četné bouřky"
 
-#: ../src/extension.js:692
+#: ../src/extension.js:735
 msgid "Thunderstorms"
 msgstr "Bouřky"
 
-#: ../src/extension.js:694
+#: ../src/extension.js:737
 msgid "Mixed rain and snow"
 msgstr "Déšť se sněhem"
 
-#: ../src/extension.js:696
+#: ../src/extension.js:739
 msgid "Mixed rain and sleet"
 msgstr "Déšť s plískanicí"
 
-#: ../src/extension.js:698
+#: ../src/extension.js:741
 msgid "Mixed snow and sleet"
 msgstr "Sníh s plískanicí"
 
-#: ../src/extension.js:700
+#: ../src/extension.js:743
 msgid "Freezing drizzle"
 msgstr "Namrzající mrholení"
 
-#: ../src/extension.js:702
+#: ../src/extension.js:745
 msgid "Drizzle"
 msgstr "Mrholení"
 
-#: ../src/extension.js:704
+#: ../src/extension.js:747
 msgid "Freezing rain"
 msgstr "Namrzající déšť"
 
-#: ../src/extension.js:706 ../src/extension.js:708
+#: ../src/extension.js:749 ../src/extension.js:751
 msgid "Showers"
 msgstr "Přeháňky"
 
-#: ../src/extension.js:710
+#: ../src/extension.js:753
 msgid "Snow flurries"
 msgstr "Sněhové přeháňky"
 
-#: ../src/extension.js:712
+#: ../src/extension.js:755
 msgid "Light snow showers"
 msgstr "Mírné sněžení"
 
-#: ../src/extension.js:714
+#: ../src/extension.js:757
 msgid "Blowing snow"
 msgstr "Husté sněžení"
 
-#: ../src/extension.js:716
+#: ../src/extension.js:759
 msgid "Snow"
 msgstr "Sněžení"
 
-#: ../src/extension.js:718
+#: ../src/extension.js:761
 msgid "Hail"
 msgstr "Kroupy"
 
-#: ../src/extension.js:720
+#: ../src/extension.js:763
 msgid "Sleet"
 msgstr "Plískanice"
 
-#: ../src/extension.js:722
+#: ../src/extension.js:765
 msgid "Dust"
 msgstr "Prašno"
 
-#: ../src/extension.js:724
+#: ../src/extension.js:767
 msgid "Foggy"
 msgstr "Mlha"
 
-#: ../src/extension.js:726
+#: ../src/extension.js:769
 msgid "Haze"
 msgstr "Opar"
 
-#: ../src/extension.js:728
+#: ../src/extension.js:771
 msgid "Smoky"
 msgstr "Kouřmo"
 
-#: ../src/extension.js:730
+#: ../src/extension.js:773
 msgid "Blustery"
 msgstr "Bouřlivo"
 
-#: ../src/extension.js:732
+#: ../src/extension.js:775
 msgid "Windy"
 msgstr "Větrno"
 
-#: ../src/extension.js:734
+#: ../src/extension.js:777
 msgid "Cold"
 msgstr "Chladno"
 
-#: ../src/extension.js:736
+#: ../src/extension.js:779
 msgid "Cloudy"
 msgstr "Zataženo"
 
-#: ../src/extension.js:739
+#: ../src/extension.js:782
 msgid "Mostly cloudy"
 msgstr "Převážně zataženo"
 
-#: ../src/extension.js:742 ../src/extension.js:768
+#: ../src/extension.js:785 ../src/extension.js:811
 msgid "Partly cloudy"
 msgstr "Polojasno"
 
-#: ../src/extension.js:744
+#: ../src/extension.js:787
 msgid "Clear"
 msgstr "Jasno"
 
-#: ../src/extension.js:746
+#: ../src/extension.js:789
 msgid "Sunny"
 msgstr "Slunečno"
 
-#: ../src/extension.js:749
+#: ../src/extension.js:792
 msgid "Fair"
 msgstr "Pěkně"
 
-#: ../src/extension.js:751
+#: ../src/extension.js:794
 msgid "Mixed rain and hail"
 msgstr "Déšť s kroupami"
 
-#: ../src/extension.js:753
+#: ../src/extension.js:796
 msgid "Hot"
 msgstr "Horko"
 
-#: ../src/extension.js:755
+#: ../src/extension.js:798
 msgid "Isolated thunderstorms"
 msgstr "Ojedinělé bouřky"
 
-#: ../src/extension.js:758
+#: ../src/extension.js:801
 msgid "Scattered thunderstorms"
 msgstr "Občasné bouřky"
 
-#: ../src/extension.js:760
+#: ../src/extension.js:803
 msgid "Scattered showers"
 msgstr "Občasné přeháňky"
 
-#: ../src/extension.js:762 ../src/extension.js:766
+#: ../src/extension.js:805 ../src/extension.js:809
 msgid "Heavy snow"
 msgstr "Husté sněžení"
 
-#: ../src/extension.js:764
+#: ../src/extension.js:807
 msgid "Scattered snow showers"
 msgstr "Občasné sněžení"
 
-#: ../src/extension.js:770
+#: ../src/extension.js:813
 msgid "Thundershowers"
 msgstr "Bouřky"
 
-#: ../src/extension.js:772
+#: ../src/extension.js:815
 msgid "Snow showers"
 msgstr "Sněhové přeháňky"
 
-#: ../src/extension.js:774
+#: ../src/extension.js:817
 msgid "Isolated thundershowers"
 msgstr "Ojedinělé bouřky"
 
-#: ../src/extension.js:777
+#: ../src/extension.js:820
 msgid "Not available"
 msgstr "Není k dispozici"
 
-#: ../src/extension.js:823
+#: ../src/extension.js:866
 msgid "Sunday"
 msgstr "Neděle"
 
-#: ../src/extension.js:823
+#: ../src/extension.js:866
 msgid "Monday"
 msgstr "Pondělí"
 
-#: ../src/extension.js:823
+#: ../src/extension.js:866
 msgid "Tuesday"
 msgstr "Úterý"
 
-#: ../src/extension.js:823
+#: ../src/extension.js:866
 msgid "Wednesday"
 msgstr "Středa"
 
-#: ../src/extension.js:823
+#: ../src/extension.js:866
 msgid "Thursday"
 msgstr "Čtvrtek"
 
-#: ../src/extension.js:823
+#: ../src/extension.js:866
 msgid "Friday"
 msgstr "Pátek"
 
-#: ../src/extension.js:823
+#: ../src/extension.js:866
 msgid "Saturday"
 msgstr "Sobota"
 
-#: ../src/extension.js:830
+#: ../src/extension.js:873
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:830
+#: ../src/extension.js:873
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:830
+#: ../src/extension.js:873
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:830
+#: ../src/extension.js:873
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:830
+#: ../src/extension.js:873
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:830
+#: ../src/extension.js:873
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:830
+#: ../src/extension.js:873
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:830
+#: ../src/extension.js:873
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:1045 ../src/extension.js:1170
+#: ../src/extension.js:1146 ../src/extension.js:1271
 msgid "Yesterday"
 msgstr "Včera"
 
-#: ../src/extension.js:1047 ../src/extension.js:1172
+#: ../src/extension.js:1148 ../src/extension.js:1273
 #, python-format
 msgid "%s days ago"
 msgstr "%s dní zpátky"
 
-#: ../src/extension.js:1164
+#: ../src/extension.js:1265
 msgid "Today"
 msgstr "Dnes"
 
-#: ../src/extension.js:1166
+#: ../src/extension.js:1267
 msgid "Tomorrow"
 msgstr "Zítra"
 
-#: ../src/extension.js:1168
+#: ../src/extension.js:1269
 #, fuzzy, python-format
 msgid "In %s days"
 msgstr "%s dní zpátky"
 
-#: ../src/extension.js:1203
+#: ../src/extension.js:1304
 msgid "Loading current weather ..."
 msgstr "Načítání aktuálního počasí…"
 
-#: ../src/extension.js:1204
+#: ../src/extension.js:1305
 msgid "Loading future weather ..."
 msgstr "Načítání předpovědi…"
 
-#: ../src/extension.js:1241
+#: ../src/extension.js:1338
 msgid "Loading ..."
 msgstr "Načítání…"
 
-#: ../src/extension.js:1244
+#: ../src/extension.js:1341
 msgid "Please wait"
 msgstr "Čekejte"
 
-#: ../src/extension.js:1289
+#: ../src/extension.js:1386
 msgid "Feel like:"
 msgstr "Pocitově:"
 
-#: ../src/extension.js:1291
+#: ../src/extension.js:1388
 msgid "Humidity:"
 msgstr "Vlhkost:"
 
-#: ../src/extension.js:1293
+#: ../src/extension.js:1390
 msgid "Pressure:"
 msgstr "Tlak:"
 
-#: ../src/extension.js:1295
+#: ../src/extension.js:1392
 msgid "Wind:"
 msgstr "Vítr:"
 
