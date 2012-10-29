@@ -22,9 +22,9 @@ Add the PPA *ppa:gnome-shell-extensions* to your source list, update the package
 	sudo apt-get update
 	sudo apt-get install gnome-shell-extension-weather
 	
-### [Fedora](http://download1.rpmfusion.org/free/fedora/updates/17/i386/repoview/gnome-shell-extension-weather.html)
+### [Fedora](http://rpmfusion.org/)
 
-Packages for Fedora 16 (*Verne*) and Fedora 17 (*Beefy Miracle*) are available in the [RPM Fusion](http://rpmfusion.org/) repositories. If these are not enabled on your system, please install them through the following command (root password required):
+Packages for Fedora are available in the [RPM Fusion](http://rpmfusion.org/) repositories. If these are not enabled on your system, please install them through the following command (root password required):
 
 	su -c 'yum localinstall --nogpgcheck http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
 Then, install *gnome-shell-extension-weather* (root password required):
@@ -83,13 +83,14 @@ You can also use *dconf-editor* or *gsettings* to configure the extension throug
 
 Copyright (C) 2011 - 2012
 
+* Elad Alfassa <elad@fedoraproject.org>,
+* Mark Benjamin <weather.gnome.Markie1@dfgh.net>,
+* Simon Claessens <gagalago@gmail.com>,
 * Ecyrbe <ecyrbe+spam@gmail.com>,
 * Timur Kristóf <venemo@msn.com>,
-* Elad Alfassa <elad@fedoraproject.org>,
 * Simon Legner <Simon.Legner@gmail.com>,
-* Simon Claessens <gagalago@gmail.com>,
-* Christian Metzler <neroth@xeked.com>,
-* Mark Benjamin <weather.gnome.Markie1@dfgh.net>
+* Mattia Meneguzzo <odysseus@fedoraproject.org>,
+* Christian Metzler <neroth@xeked.com>.
 
 This file is part of *gnome-shell-extension-weather*.
 
