@@ -1229,8 +1229,8 @@ const WeatherMenuButton = new Lang.Class({
 			break;
 
 			case WeatherWindSpeedUnits.BEAUFORT:
-			wind = this.toBeaufort(wind);
 			wind_unit = this.toBeaufort(wind,true);
+			wind = this.toBeaufort(wind);
 		    }
 
             	if (!wind)
