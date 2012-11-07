@@ -1196,7 +1196,7 @@ const WeatherMenuButton = new Lang.Class({
 		if (this._text_in_panel)
 		weatherInfoT = parseFloat(temperature).toLocaleString() + ' ' + this.unit_to_unicode();
 
-	    this._weatherInfo.text = weatherInfoC + ((weatherInfoC)?", ":"") + weatherInfoT;
+	    this._weatherInfo.text = weatherInfoC + ((weatherInfoC && weatherInfoT) ? ", " : "") + weatherInfoT;
 
             this._currentWeatherSummary.text = comment + ", " + parseFloat(temperature).toLocaleString() + ' ' + this.unit_to_unicode();
             this._currentWeatherLocation.text = location;
