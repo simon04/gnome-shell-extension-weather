@@ -544,6 +544,13 @@ const WeatherMenuButton = new Lang.Class({
 		if(!cities[0])
 		cities = [];
 
+		if(cities.length == 0)
+		{
+		this._cities = "2373572>Cambridge, Massachusetts (US)";
+		this.updateCities();
+		return 0;
+		}
+
 		for(let a in cities)
 		{
 			if(!this.extractWoeid(cities[a]))
