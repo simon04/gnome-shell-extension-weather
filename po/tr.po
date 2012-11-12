@@ -1,299 +1,307 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Turkish translation for gnome-shell-extension-weather
+# Traductions françaises du paquet gnome-shell-extension-weather.
+# Copyright (C) 2011
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Simon Claessens <gagalago@gmail.com>, 2011.
+# ecyrbe <ecyrbe@gmail.com>, 2011.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-12 14:17-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2012-10-14 21:12-0400\n"
+"PO-Revision-Date: 2012-11-12 01:51+0200\n"
+"Last-Translator: f <fatihmete@live.com>\n"
+"Language-Team: Turkish <fatihmete@live.com>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: applet.js:180
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "\"%s\" şeması bulunamadı."
 
 #: applet.js:553
 msgid "Sunrise"
-msgstr ""
+msgstr "Gün Doğumu"
 
 #: applet.js:554
 msgid "Sunset"
-msgstr ""
+msgstr "Gün Batımı"
 
 #: applet.js:559
 msgid "Today"
-msgstr ""
+msgstr "Bugün"
 
 #: applet.js:559
 msgid "Tomorrow"
-msgstr ""
+msgstr "Yarın"
 
 #: applet.js:615
 msgid "Loading current weather ..."
-msgstr ""
+msgstr "Geçerli hava durumu yükleniyor..."
 
 #: applet.js:616
 msgid "Loading future weather ..."
-msgstr ""
+msgstr "Gelecek hava durumu bilgisi yükleniyor..."
 
 #: applet.js:646
 msgid "Loading ..."
-msgstr ""
+msgstr "Yükleniyor ..."
 
 #: applet.js:652
 msgid "Please wait"
-msgstr ""
+msgstr "Lütfen bekleyiniz"
 
 #: applet.js:710
 msgid "Temperature:"
-msgstr ""
+msgstr "Sıcaklık :"
 
 #: applet.js:712
 msgid "Humidity:"
-msgstr ""
+msgstr "Nem :"
 
 #: applet.js:714
 msgid "Pressure:"
-msgstr ""
+msgstr "Basınç :"
 
 #: applet.js:716
 msgid "Wind:"
-msgstr ""
+msgstr "Rüzgar :"
 
 #: applet.js:968
 msgid "Tornado"
-msgstr ""
+msgstr "Hortum"
 
 #: applet.js:970
 msgid "Tropical storm"
-msgstr ""
+msgstr "Tropik Fırtına"
 
 #: applet.js:972
 msgid "Hurricane"
-msgstr ""
+msgstr "Kasırga"
 
 #: applet.js:974
 msgid "Severe thunderstorms"
-msgstr ""
+msgstr "Şiddetli Gökgürültülü"
 
 #: applet.js:976
 msgid "Thunderstorms"
-msgstr ""
+msgstr "Gök Gürültülü"
 
 #: applet.js:978
 msgid "Mixed rain and snow"
-msgstr ""
+msgstr "Karla karışık yağmur"
 
 #: applet.js:980
 msgid "Mixed rain and sleet"
-msgstr ""
+msgstr "Sulusepken Yağmur"
 
 #: applet.js:982
 msgid "Mixed snow and sleet"
-msgstr ""
+msgstr "Suluspken kar"
 
 #: applet.js:984
 msgid "Freezing drizzle"
-msgstr ""
+msgstr "Donduran çiseleme"
 
 #: applet.js:986
 msgid "Drizzle"
-msgstr ""
+msgstr "Çişeleme"
 
 #: applet.js:988
 msgid "Freezing rain"
-msgstr ""
+msgstr "Donduran Yağmur"
 
-#: applet.js:990 applet.js:992
+#: applet.js:990
+#: applet.js:992
 msgid "Showers"
-msgstr ""
+msgstr "Kısa süreli yağmur"
 
 #: applet.js:994
 msgid "Snow flurries"
-msgstr ""
+msgstr "Neige"
 
 #: applet.js:996
 msgid "Light snow showers"
-msgstr ""
+msgstr "Neige"
 
 #: applet.js:998
 msgid "Blowing snow"
-msgstr ""
+msgstr "Kar Tipisi"
 
 #: applet.js:1000
 msgid "Snow"
-msgstr ""
+msgstr "Kar"
 
 #: applet.js:1002
 msgid "Hail"
-msgstr ""
+msgstr "Dolu"
 
 #: applet.js:1004
 msgid "Sleet"
-msgstr ""
+msgstr "Sulusepken"
 
 #: applet.js:1006
 msgid "Dust"
-msgstr ""
+msgstr "Tozlu"
 
 #: applet.js:1008
 msgid "Foggy"
-msgstr ""
+msgstr "Sisli"
 
 #: applet.js:1010
 msgid "Haze"
-msgstr ""
+msgstr "Puslu"
 
 #: applet.js:1012
 msgid "Smoky"
-msgstr ""
+msgstr "Dumanlı"
 
 #: applet.js:1014
 msgid "Blustery"
-msgstr ""
+msgstr "Fırtınalı"
 
 #: applet.js:1016
 msgid "Windy"
-msgstr ""
+msgstr "Rüzgarlı"
 
 #: applet.js:1018
 msgid "Cold"
-msgstr ""
+msgstr "Soğuk"
 
 #: applet.js:1020
 msgid "Cloudy"
-msgstr ""
+msgstr "Bulutlu"
 
 #: applet.js:1023
 msgid "Mostly cloudy"
-msgstr ""
+msgstr "Tamamen bulutlu"
 
-#: applet.js:1026 applet.js:1052
+#: applet.js:1026
+#: applet.js:1052
 msgid "Partly cloudy"
-msgstr ""
+msgstr "Parçalı bulutlu"
 
 #: applet.js:1028
 msgid "Clear"
-msgstr ""
+msgstr "Temiz"
 
 #: applet.js:1030
 msgid "Sunny"
-msgstr ""
+msgstr "Güneşli"
 
 #: applet.js:1033
 msgid "Fair"
-msgstr ""
+msgstr "Açık"
 
 #: applet.js:1035
 msgid "Mixed rain and hail"
-msgstr ""
+msgstr "Yağmurla karışık dolu"
 
 #: applet.js:1037
 msgid "Hot"
-msgstr ""
+msgstr "Sıcak"
 
 #: applet.js:1039
 msgid "Isolated thunderstorms"
-msgstr ""
+msgstr "Orageux"
 
 #: applet.js:1042
 msgid "Scattered thunderstorms"
-msgstr ""
+msgstr "Seyrek Gökgürültüsü"
 
 #: applet.js:1044
 msgid "Scattered showers"
-msgstr ""
+msgstr "Seyrek yağış"
 
-#: applet.js:1046 applet.js:1050
+#: applet.js:1046
+#: applet.js:1050
 msgid "Heavy snow"
-msgstr ""
+msgstr "Ağır kar"
 
 #: applet.js:1048
 msgid "Scattered snow showers"
-msgstr ""
+msgstr "Seyrek kar sağanağı"
 
 #: applet.js:1054
 msgid "Thundershowers"
-msgstr ""
+msgstr "Şimşekli ve yağmurlu fırtına"
 
 #: applet.js:1056
 msgid "Snow showers"
-msgstr ""
+msgstr "Sağanak kar"
 
 #: applet.js:1058
 msgid "Isolated thundershowers"
-msgstr ""
+msgstr "Orageux"
 
 #: applet.js:1061
 msgid "Not available"
-msgstr ""
+msgstr "Mevcut değil"
 
 #: applet.js:1069
 msgid "Monday"
-msgstr ""
+msgstr "Pazartesi"
 
 #: applet.js:1069
 msgid "Tuesday"
-msgstr ""
+msgstr "Salı"
 
 #: applet.js:1069
 msgid "Wednesday"
-msgstr ""
+msgstr "Çarşamba"
 
 #: applet.js:1069
 msgid "Thursday"
-msgstr ""
+msgstr "Perşembe"
 
 #: applet.js:1069
 msgid "Friday"
-msgstr ""
+msgstr "Cuma"
 
 #: applet.js:1069
 msgid "Saturday"
-msgstr ""
+msgstr "Cumartesi"
 
 #: applet.js:1069
 msgid "Sunday"
-msgstr ""
+msgstr "Pazar"
 
 #: applet.js:1077
 msgid "N"
-msgstr ""
+msgstr "K"
 
 #: applet.js:1077
 msgid "NE"
-msgstr ""
+msgstr "KD"
 
 #: applet.js:1077
 msgid "E"
-msgstr ""
+msgstr "D"
 
 #: applet.js:1077
 msgid "SE"
-msgstr ""
+msgstr "GD"
 
 #: applet.js:1077
 msgid "S"
-msgstr ""
+msgstr "G"
 
 #: applet.js:1077
 msgid "SW"
-msgstr ""
+msgstr "GB"
 
 #: applet.js:1077
 msgid "W"
-msgstr ""
+msgstr "B"
 
 #: applet.js:1077
 msgid "NW"
-msgstr ""
+msgstr "KB"
+
+#~ msgid "..."
+#~ msgstr "..."
