@@ -893,9 +893,9 @@ const WeatherMenuButton = new Lang.Class({
 		else if(w >= 47 && w <= 54)
 		return (!t)?"9":"("+_("Strong gale")+")";
 		else if(w >= 55 && w <= 63)
-		return (!t)?"10":"("+_("Whole gale")+")";
+		return (!t)?"10":"("+_("Storm")+")";
 		else if(w >= 64 && w <= 73)
-		return (!t)?"11":"("+_("Storm")+")";
+		return (!t)?"11":"("+_("Violent storm")+")";
 		else
 		return (!t)?"12":"("+_("Hurricane")+")";
 	},
