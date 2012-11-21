@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-29 19:17+0100\n"
-"PO-Revision-Date: 2012-10-29 11:01+0100\n"
+"PO-Revision-Date: 2012-11-21 11:35+0200\n"
 "Last-Translator: Mattia Meneguzzo <odysseus@fedoraproject.org>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -213,51 +213,51 @@ msgstr "Non disponibile"
 
 #: ../src/extension.js:868
 msgid "Calm"
-msgstr ""
+msgstr "Calma"
 
 #: ../src/extension.js:870
 msgid "Light air"
-msgstr ""
+msgstr "Bava di vento"
 
 #: ../src/extension.js:872
 msgid "Light breeze"
-msgstr ""
+msgstr "Brezza leggera"
 
 #: ../src/extension.js:874
 msgid "Gentle breeze"
-msgstr ""
+msgstr "Brezza tesa"
 
 #: ../src/extension.js:876
 msgid "Moderate breeze"
-msgstr ""
+msgstr "Vento moderato"
 
 #: ../src/extension.js:878
 msgid "Fresh breeze"
-msgstr ""
+msgstr "Vento teso"
 
 #: ../src/extension.js:880
 msgid "Strong breeze"
-msgstr ""
+msgstr "Vento fresco"
 
 #: ../src/extension.js:882
 msgid "Moderate gale"
-msgstr ""
+msgstr "Vento forte"
 
 #: ../src/extension.js:884
 msgid "Fresh gale"
-msgstr ""
+msgstr "Burrasca"
 
 #: ../src/extension.js:886
 msgid "Strong gale"
-msgstr ""
+msgstr "Burrasca forte"
 
 #: ../src/extension.js:888
 msgid "Whole gale"
-msgstr ""
+msgstr "Tempesta"
 
 #: ../src/extension.js:890
 msgid "Storm"
-msgstr ""
+msgstr "Tempesta violenta"
 
 #: ../src/extension.js:897
 msgid "Sunday"
