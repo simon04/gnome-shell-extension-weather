@@ -24,25 +24,25 @@ msgstr "..."
 
 #: ../src/extension.js:205
 msgid "Locations"
-msgstr ""
+msgstr "Ubicacions"
 
 #: ../src/extension.js:209
 msgid "Reload Weather Information"
-msgstr ""
+msgstr "Actualitza la informació de l'oratge"
 
 #: ../src/extension.js:213 ../src/weather-settings.js.in:655
 msgid "Weather Settings"
-msgstr ""
+msgstr "Paràmetres"
 
 #: ../src/extension.js:233 ../src/extension.js:243
 #: ../src/weather-settings.js.in:329
 #, python-format
-msgid "Schema \"%s\" not found."
-msgstr ""
+msgid "Schema not found."
+msgstr "No s'ha trobat l'esquema \"%s\"."
 
 #: ../src/extension.js:522 ../src/weather-settings.js.in:539
 msgid "Invalid city"
-msgstr ""
+msgstr "Ciutat no vàlida"
 
 #: ../src/extension.js:736
 msgid "Tornado"
@@ -214,19 +214,19 @@ msgstr "No disponible"
 
 #: ../src/extension.js:876
 msgid "Calm"
-msgstr ""
+msgstr "Calma"
 
 #: ../src/extension.js:878
 msgid "Light air"
-msgstr ""
+msgstr "Brisa"
 
 #: ../src/extension.js:880
 msgid "Light breeze"
-msgstr ""
+msgstr "Brisa molt lleugera"
 
 #: ../src/extension.js:882
 msgid "Gentle breeze"
-msgstr ""
+msgstr "Fluix"
 
 #: ../src/extension.js:884
 msgid "Moderate breeze"
@@ -234,31 +234,31 @@ msgstr ""
 
 #: ../src/extension.js:886
 msgid "Fresh breeze"
-msgstr ""
+msgstr "Brisa moderada"
 
 #: ../src/extension.js:888
 msgid "Strong breeze"
-msgstr ""
+msgstr "Brisa forta"
 
 #: ../src/extension.js:890
 msgid "Moderate gale"
-msgstr ""
+msgstr "Vendaval moderat"
 
 #: ../src/extension.js:892
 msgid "Fresh gale"
-msgstr ""
+msgstr "Vendaval fred"
 
 #: ../src/extension.js:894
 msgid "Strong gale"
-msgstr ""
+msgstr "Vendaval fort"
 
 #: ../src/extension.js:896
 msgid "Storm"
-msgstr ""
+msgstr "Tormenta"
 
 #: ../src/extension.js:898
 msgid "Violent storm"
-msgstr ""
+msgstr "Tormenta violenta"
 
 #: ../src/extension.js:905
 msgid "Sunday"
@@ -290,44 +290,44 @@ msgstr "Dissabte"
 
 #: ../src/extension.js:912
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: ../src/extension.js:912
 msgid "NE"
-msgstr ""
+msgstr "NE"
 
 #: ../src/extension.js:912
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #: ../src/extension.js:912
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 #: ../src/extension.js:912
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: ../src/extension.js:912
 msgid "SW"
-msgstr ""
+msgstr "SO"
 
 #: ../src/extension.js:912
 msgid "W"
-msgstr ""
+msgstr "O"
 
 #: ../src/extension.js:912
 msgid "NW"
-msgstr ""
+msgstr "NO"
 
 #: ../src/extension.js:1190 ../src/extension.js:1319
 msgid "Yesterday"
-msgstr ""
+msgstr "Ahir"
 
 #: ../src/extension.js:1192 ../src/extension.js:1321
 #, python-format
 msgid "%s days ago"
-msgstr ""
+msgstr "fa %s dies"
 
 #: ../src/extension.js:1313
 msgid "Today"
@@ -340,7 +340,7 @@ msgstr "Demà"
 #: ../src/extension.js:1317
 #, python-format
 msgid "In %s days"
-msgstr ""
+msgstr "En %s dies"
 
 #: ../src/extension.js:1352
 msgid "Loading current weather ..."
@@ -360,7 +360,7 @@ msgstr "Espereu"
 
 #: ../src/extension.js:1434
 msgid "Feel like:"
-msgstr ""
+msgstr "Se sent com:"
 
 #: ../src/extension.js:1436
 msgid "Humidity:"
@@ -376,12 +376,12 @@ msgstr "Vent:"
 
 #: ../src/weather-settings.js.in:73
 msgid "Name of the city"
-msgstr ""
+msgstr "Nom de la ciutat"
 
 #: ../src/weather-settings.js.in:235
 #, python-format
 msgid "Remove %s ?"
-msgstr ""
+msgstr "Voleu eliminar %s?"
 
 #: ../src/weather-settings.js.in:693
 msgid "Temperature Unit"
@@ -389,7 +389,7 @@ msgstr "Temperatura:"
 
 #: ../src/weather-settings.js.in:695
 msgid "Wind Speed Unit"
-msgstr ""
+msgstr "Unitats de la velocitat del vent"
 
 #: ../src/weather-settings.js.in:697
 #, fuzzy
@@ -398,31 +398,31 @@ msgstr "Pressió:"
 
 #: ../src/weather-settings.js.in:699
 msgid "Position in Panel"
-msgstr ""
+msgstr "Posició al tauler"
 
 #: ../src/weather-settings.js.in:700
 msgid "Center"
-msgstr ""
+msgstr "Centre"
 
 #: ../src/weather-settings.js.in:700
 msgid "Right"
-msgstr ""
+msgstr "Dreta"
 
 #: ../src/weather-settings.js.in:700
 msgid "Left"
-msgstr ""
+msgstr "Esquerra"
 
 #: ../src/weather-settings.js.in:701
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "Direcció del vent amb fletxes"
 
 #: ../src/weather-settings.js.in:703
 msgid "Translate Conditions"
-msgstr ""
+msgstr "Tradueix les condicions"
 
 #: ../src/weather-settings.js.in:705
 msgid "Symbolic Icons"
-msgstr ""
+msgstr "Icones simbòliques"
 
 #: ../src/weather-settings.js.in:707
 msgid "Temperature in Panel"
@@ -430,4 +430,4 @@ msgstr "Temperatura:"
 
 #: ../src/weather-settings.js.in:709
 msgid "Conditions in Panel"
-msgstr ""
+msgstr "Condicions al tauler"
