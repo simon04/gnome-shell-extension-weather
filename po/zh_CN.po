@@ -3,7 +3,7 @@
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # bill <bill_zt@sina.com>, 2011.
-#
+# tuhaihe, <1132321739qq@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
@@ -23,7 +23,7 @@ msgstr "..."
 
 #: ../src/extension.js:205
 msgid "Locations"
-msgstr ""
+msgstr "位置"
 
 #: ../src/extension.js:209
 msgid "Reload Weather Information"
@@ -31,13 +31,13 @@ msgstr "重载天气信息"
 
 #: ../src/extension.js:213 ../src/weather-settings.js.in:655
 msgid "Weather Settings"
-msgstr "天气设定"
+msgstr "天气设置"
 
 #: ../src/extension.js:233 ../src/extension.js:243
 #: ../src/weather-settings.js.in:329
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr "没有找到设定（Schema） \"%s\" "
+msgstr "没有找到设定（Schema） \"%s\"。"
 
 #: ../src/extension.js:522 ../src/weather-settings.js.in:539
 msgid "Invalid city"
@@ -213,51 +213,51 @@ msgstr "不可用"
 
 #: ../src/extension.js:876
 msgid "Calm"
-msgstr ""
+msgstr "无风"
 
 #: ../src/extension.js:878
 msgid "Light air"
-msgstr ""
+msgstr "一级风"
 
 #: ../src/extension.js:880
 msgid "Light breeze"
-msgstr ""
+msgstr "二级风"
 
 #: ../src/extension.js:882
 msgid "Gentle breeze"
-msgstr ""
+msgstr "三级风"
 
 #: ../src/extension.js:884
 msgid "Moderate breeze"
-msgstr ""
+msgstr "四级风"
 
 #: ../src/extension.js:886
 msgid "Fresh breeze"
-msgstr ""
+msgstr "五级风"
 
 #: ../src/extension.js:888
 msgid "Strong breeze"
-msgstr ""
+msgstr "六级风"
 
 #: ../src/extension.js:890
 msgid "Moderate gale"
-msgstr ""
+msgstr "七级风"
 
 #: ../src/extension.js:892
 msgid "Fresh gale"
-msgstr ""
+msgstr "八级风"
 
 #: ../src/extension.js:894
 msgid "Strong gale"
-msgstr ""
+msgstr "九级风"
 
 #: ../src/extension.js:896
 msgid "Storm"
-msgstr ""
+msgstr "狂风"
 
 #: ../src/extension.js:898
 msgid "Violent storm"
-msgstr ""
+msgstr "暴风"
 
 #: ../src/extension.js:905
 msgid "Sunday"
@@ -343,15 +343,15 @@ msgstr "未来%s天"
 
 #: ../src/extension.js:1352
 msgid "Loading current weather ..."
-msgstr "正在加载当前天气 ..."
+msgstr "正在加载当前天气..."
 
 #: ../src/extension.js:1353
 msgid "Loading future weather ..."
-msgstr "正在加载预报天气 ..."
+msgstr "正在加载预报天气..."
 
 #: ../src/extension.js:1386
 msgid "Loading ..."
-msgstr "正在加载 ..."
+msgstr "正在加载..."
 
 #: ../src/extension.js:1389
 msgid "Please wait"
