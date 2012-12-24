@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-26 04:15+0100\n"
-"PO-Revision-Date: 2012-10-23 18:45+0000\n"
+"POT-Creation-Date: 2012-12-24 05:07+0100\n"
+"PO-Revision-Date: 2012-12-21 12:43+0000\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-23 18:56+0000\n"
-"X-Generator: Launchpad (build 16179)\n"
+"X-Launchpad-Export-Date: 2012-12-24 04:00+0000\n"
+"X-Generator: Launchpad (build 16378)\n"
 
 #: ../src/extension.js:125
 msgid "..."
@@ -24,7 +24,7 @@ msgstr ""
 
 #: ../src/extension.js:205
 msgid "Locations"
-msgstr ""
+msgstr "Vietovės"
 
 #: ../src/extension.js:209
 msgid "Reload Weather Information"
@@ -98,7 +98,7 @@ msgstr "Sniego šuorai"
 
 #: ../src/extension.js:764
 msgid "Light snow showers"
-msgstr "Nedidelės pūgos"
+msgstr "Protarpiais pasnigs"
 
 #: ../src/extension.js:766
 msgid "Blowing snow"
@@ -186,7 +186,7 @@ msgstr "Vietomis perkūnija"
 
 #: ../src/extension.js:812
 msgid "Scattered showers"
-msgstr "Vietomis liūtys"
+msgstr "Vietomis trumpi lietūs"
 
 #: ../src/extension.js:814 ../src/extension.js:818
 msgid "Heavy snow"
@@ -194,11 +194,11 @@ msgstr "Stipriai sninga"
 
 #: ../src/extension.js:816
 msgid "Scattered snow showers"
-msgstr "Vietomis pūgos"
+msgstr "Vietomis pasnigs"
 
 #: ../src/extension.js:822
 msgid "Thundershowers"
-msgstr "Liūtys su perkūnija"
+msgstr "Trumpi lietūs su perkūnija"
 
 #: ../src/extension.js:824
 msgid "Snow showers"
@@ -214,7 +214,7 @@ msgstr "Neprieinama"
 
 #: ../src/extension.js:876
 msgid "Calm"
-msgstr ""
+msgstr "Ramu"
 
 #: ../src/extension.js:878
 msgid "Light air"
@@ -222,19 +222,19 @@ msgstr ""
 
 #: ../src/extension.js:880
 msgid "Light breeze"
-msgstr ""
+msgstr "Lengvas vėjelis"
 
 #: ../src/extension.js:882
 msgid "Gentle breeze"
-msgstr ""
+msgstr "Švelnus vėjelis"
 
 #: ../src/extension.js:884
 msgid "Moderate breeze"
-msgstr ""
+msgstr "Vidutinis vėjelis"
 
 #: ../src/extension.js:886
 msgid "Fresh breeze"
-msgstr ""
+msgstr "Stiprėjantis vėjelis"
 
 #: ../src/extension.js:888
 msgid "Strong breeze"
@@ -242,23 +242,23 @@ msgstr ""
 
 #: ../src/extension.js:890
 msgid "Moderate gale"
-msgstr ""
+msgstr "Vidutinis štormas"
 
 #: ../src/extension.js:892
 msgid "Fresh gale"
-msgstr ""
+msgstr "Stiprėjantis štormas"
 
 #: ../src/extension.js:894
 msgid "Strong gale"
-msgstr ""
+msgstr "Smarkus štormas"
 
 #: ../src/extension.js:896
 msgid "Storm"
-msgstr ""
+msgstr "Audra"
 
 #: ../src/extension.js:898
 msgid "Violent storm"
-msgstr ""
+msgstr "Smarki audra"
 
 #: ../src/extension.js:905
 msgid "Sunday"
@@ -290,35 +290,35 @@ msgstr "Šeštadienis"
 
 #: ../src/extension.js:912
 msgid "N"
-msgstr ""
+msgstr "Š"
 
 #: ../src/extension.js:912
 msgid "NE"
-msgstr ""
+msgstr "ŠR"
 
 #: ../src/extension.js:912
 msgid "E"
-msgstr ""
+msgstr "R"
 
 #: ../src/extension.js:912
 msgid "SE"
-msgstr ""
+msgstr "PR"
 
 #: ../src/extension.js:912
 msgid "S"
-msgstr ""
+msgstr "P"
 
 #: ../src/extension.js:912
 msgid "SW"
-msgstr ""
+msgstr "PV"
 
 #: ../src/extension.js:912
 msgid "W"
-msgstr ""
+msgstr "V"
 
 #: ../src/extension.js:912
 msgid "NW"
-msgstr ""
+msgstr "ŠV"
 
 #: ../src/extension.js:1190 ../src/extension.js:1319
 msgid "Yesterday"
@@ -344,11 +344,11 @@ msgstr ""
 
 #: ../src/extension.js:1352
 msgid "Loading current weather ..."
-msgstr ""
+msgstr "Įkeliami dabartiniai orai..."
 
 #: ../src/extension.js:1353
 msgid "Loading future weather ..."
-msgstr ""
+msgstr "Įkeliama orų prognozė..."
 
 #: ../src/extension.js:1386
 msgid "Loading ..."
