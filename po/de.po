@@ -22,7 +22,7 @@ msgstr "..."
 
 #: ../src/extension.js:205
 msgid "Locations"
-msgstr ""
+msgstr "Standorte"
 
 #: ../src/extension.js:209
 msgid "Reload Weather Information"
@@ -30,7 +30,7 @@ msgstr "Aktualisiere Wetterdaten"
 
 #: ../src/extension.js:213 ../src/weather-settings.js.in:655
 msgid "Weather Settings"
-msgstr "Programmeinstellungen ändern"
+msgstr "Einstellungen für Wetter"
 
 #: ../src/extension.js:233 ../src/extension.js:243
 #: ../src/weather-settings.js.in:329
@@ -212,51 +212,51 @@ msgstr "Nicht verfügbar"
 
 #: ../src/extension.js:876
 msgid "Calm"
-msgstr ""
+msgstr "Still"
 
 #: ../src/extension.js:878
 msgid "Light air"
-msgstr ""
+msgstr "Leichter Windzug"
 
 #: ../src/extension.js:880
 msgid "Light breeze"
-msgstr ""
+msgstr "Leichte Brise"
 
 #: ../src/extension.js:882
 msgid "Gentle breeze"
-msgstr ""
+msgstr "Schwache Brise"
 
 #: ../src/extension.js:884
 msgid "Moderate breeze"
-msgstr ""
+msgstr "Mäßige Brise"
 
 #: ../src/extension.js:886
 msgid "Fresh breeze"
-msgstr ""
+msgstr "Frische Brise"
 
 #: ../src/extension.js:888
 msgid "Strong breeze"
-msgstr ""
+msgstr "Starker Wind"
 
 #: ../src/extension.js:890
 msgid "Moderate gale"
-msgstr ""
+msgstr "Steifer Wind"
 
 #: ../src/extension.js:892
 msgid "Fresh gale"
-msgstr ""
+msgstr "Stürmischer Wind"
 
 #: ../src/extension.js:894
 msgid "Strong gale"
-msgstr ""
+msgstr "Sturm"
 
 #: ../src/extension.js:896
 msgid "Storm"
-msgstr ""
+msgstr "Schwerer Sturm"
 
 #: ../src/extension.js:898
 msgid "Violent storm"
-msgstr ""
+msgstr "Orkanartiger Sturm"
 
 #: ../src/extension.js:905
 msgid "Sunday"
@@ -288,35 +288,35 @@ msgstr "Samstag"
 
 #: ../src/extension.js:912
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: ../src/extension.js:912
 msgid "NE"
-msgstr ""
+msgstr "NO"
 
 #: ../src/extension.js:912
 msgid "E"
-msgstr ""
+msgstr "O"
 
 #: ../src/extension.js:912
 msgid "SE"
-msgstr ""
+msgstr "SO"
 
 #: ../src/extension.js:912
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: ../src/extension.js:912
 msgid "SW"
-msgstr ""
+msgstr "SW"
 
 #: ../src/extension.js:912
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: ../src/extension.js:912
 msgid "NW"
-msgstr ""
+msgstr "NW"
 
 #: ../src/extension.js:1190 ../src/extension.js:1319
 msgid "Yesterday"
@@ -336,9 +336,8 @@ msgid "Tomorrow"
 msgstr "Morgen"
 
 #: ../src/extension.js:1317
-#, fuzzy, python-format
 msgid "In %s days"
-msgstr "Vor %s Tag(en)"
+msgstr "In %s Tag(en)"
 
 #: ../src/extension.js:1352
 msgid "Loading current weather ..."
@@ -390,9 +389,8 @@ msgid "Wind Speed Unit"
 msgstr "Windgeschwindigkeit"
 
 #: ../src/weather-settings.js.in:697
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Luftdruck:"
+msgstr "Druckeinheit:"
 
 #: ../src/weather-settings.js.in:699
 msgid "Position in Panel"
@@ -412,7 +410,7 @@ msgstr "Links"
 
 #: ../src/weather-settings.js.in:701
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "Windrichtung durch Pfeile angeben"
 
 #: ../src/weather-settings.js.in:703
 msgid "Translate Conditions"
