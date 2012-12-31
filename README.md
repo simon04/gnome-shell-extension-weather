@@ -1,3 +1,9 @@
+### Discontinued
+
+As I moved away from GNOME, this repository is no longer actively maintained. Please take a look at [Neroth's fork](https://github.com/Neroth/gnome-shell-extension-weather).
+
+----
+
 ## gnome-shell-extension-weather
 
 gnome-shell-extension-weather is a simple extension for displaying weather notifications in GNOME Shell.
