@@ -73,8 +73,6 @@ const Util = imports.misc.util;
 const UUID = 'weather@mockturtl';
 
 const APPLET_ICON = "view-refresh-symbolic";
-const APPLET_LABEL = "...";
-const APPLET_TOOLTIP = "Click to open";
 
 const ICON_PREFERENCES = 'system-run';
 
@@ -267,8 +265,8 @@ MyApplet.prototype = {
 			// Interface Methods: TextIconApplet
 			//----------------------------------
 			this.set_applet_icon_name(APPLET_ICON);
-			this.set_applet_label(APPLET_LABEL);
-			this.set_applet_tooltip(_(APPLET_TOOLTIP));
+			this.set_applet_label(_("..."));
+			this.set_applet_tooltip(_("Click to open"));
 
 			//----------------------------------
 			// PopupMenu

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-14 21:12-0400\n"
+"POT-Creation-Date: 2013-01-08 13:01-0500\n"
 "PO-Revision-Date: 2011-06-09 17:43+0200\n"
 "Last-Translator: Mauricio Barraza <mauricio@barraza.se>\n"
 "Language-Team: \n"
@@ -16,286 +16,291 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: applet.js:180
+#: applet.js:178
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: applet.js:553
+#: applet.js:268
+msgid "..."
+msgstr "..."
+
+#: applet.js:269
+msgid "Click to open"
+msgstr ""
+
+#: applet.js:551
 msgid "Sunrise"
 msgstr ""
 
-#: applet.js:554
+#: applet.js:552
 msgid "Sunset"
 msgstr ""
 
-#: applet.js:559
+#: applet.js:557
 msgid "Today"
 msgstr "Idag"
 
-#: applet.js:559
+#: applet.js:557
 msgid "Tomorrow"
 msgstr "Imorgon"
 
-#: applet.js:615
+#: applet.js:613
 msgid "Loading current weather ..."
 msgstr "Laddar nuvarande väder..."
 
-#: applet.js:616
+#: applet.js:614
 msgid "Loading future weather ..."
 msgstr "Laddar kommande väder..."
 
-#: applet.js:646
+#: applet.js:644
 msgid "Loading ..."
 msgstr "Laddar..."
 
-#: applet.js:652
+#: applet.js:650
 msgid "Please wait"
 msgstr "Vänligen vänta"
 
-#: applet.js:710
+#: applet.js:708
 msgid "Temperature:"
 msgstr "Temperatur:"
 
-#: applet.js:712
+#: applet.js:710
 msgid "Humidity:"
 msgstr "Fuktighet:"
 
-#: applet.js:714
+#: applet.js:712
 msgid "Pressure:"
 msgstr "Lufttryck:"
 
-#: applet.js:716
+#: applet.js:714
 msgid "Wind:"
 msgstr "Vind:"
 
-#: applet.js:968
+#: applet.js:966
 msgid "Tornado"
 msgstr "Tornado"
 
-#: applet.js:970
+#: applet.js:968
 msgid "Tropical storm"
 msgstr "Tropisk storm"
 
-#: applet.js:972
+#: applet.js:970
 msgid "Hurricane"
 msgstr "Orkan"
 
-#: applet.js:974
+#: applet.js:972
 msgid "Severe thunderstorms"
 msgstr "Kraftig åska"
 
-#: applet.js:976
+#: applet.js:974
 msgid "Thunderstorms"
 msgstr "Åska"
 
-#: applet.js:978
+#: applet.js:976
 msgid "Mixed rain and snow"
 msgstr "Snöblandat regn"
 
-#: applet.js:980
+#: applet.js:978
 msgid "Mixed rain and sleet"
 msgstr "Regn och slask"
 
-#: applet.js:982
+#: applet.js:980
 msgid "Mixed snow and sleet"
 msgstr "Snö och slask"
 
-#: applet.js:984
+#: applet.js:982
 msgid "Freezing drizzle"
 msgstr "Underkylt duggregn"
 
-#: applet.js:986
+#: applet.js:984
 msgid "Drizzle"
 msgstr "Duggregn"
 
-#: applet.js:988
+#: applet.js:986
 msgid "Freezing rain"
 msgstr "Underkylt regn"
 
-#: applet.js:990 applet.js:992
+#: applet.js:988 applet.js:990
 msgid "Showers"
 msgstr "Regnskurar"
 
-#: applet.js:994
+#: applet.js:992
 msgid "Snow flurries"
 msgstr "Lätt snöfall"
 
-#: applet.js:996
+#: applet.js:994
 msgid "Light snow showers"
 msgstr "Lätta snöbyar"
 
-#: applet.js:998
+#: applet.js:996
 msgid "Blowing snow"
 msgstr "Snöstorm"
 
-#: applet.js:1000
+#: applet.js:998
 msgid "Snow"
 msgstr "Snö"
 
-#: applet.js:1002
+#: applet.js:1000
 msgid "Hail"
 msgstr "Hagel"
 
-#: applet.js:1004
+#: applet.js:1002
 msgid "Sleet"
 msgstr "Slask"
 
-#: applet.js:1006
+#: applet.js:1004
 msgid "Dust"
 msgstr "Damm"
 
-#: applet.js:1008
+#: applet.js:1006
 msgid "Foggy"
 msgstr "Dimma"
 
-#: applet.js:1010
+#: applet.js:1008
 msgid "Haze"
 msgstr "Dis"
 
-#: applet.js:1012
+#: applet.js:1010
 msgid "Smoky"
 msgstr "Rök"
 
-#: applet.js:1014
+#: applet.js:1012
 msgid "Blustery"
 msgstr "Vindbyar"
 
-#: applet.js:1016
+#: applet.js:1014
 msgid "Windy"
 msgstr "Blåsigt"
 
-#: applet.js:1018
+#: applet.js:1016
 msgid "Cold"
 msgstr "Kallt"
 
-#: applet.js:1020
+#: applet.js:1018
 msgid "Cloudy"
 msgstr "Molnigt"
 
-#: applet.js:1023
+#: applet.js:1021
 msgid "Mostly cloudy"
 msgstr "Mestadels molnigt"
 
-#: applet.js:1026 applet.js:1052
+#: applet.js:1024 applet.js:1050
 msgid "Partly cloudy"
 msgstr "Delvis molnigt"
 
-#: applet.js:1028
+#: applet.js:1026
 msgid "Clear"
 msgstr "Klart"
 
-#: applet.js:1030
+#: applet.js:1028
 msgid "Sunny"
 msgstr "Soligt"
 
-#: applet.js:1033
+#: applet.js:1031
 msgid "Fair"
 msgstr "Uppehåll"
 
-#: applet.js:1035
+#: applet.js:1033
 msgid "Mixed rain and hail"
 msgstr "Regn och hagel"
 
-#: applet.js:1037
+#: applet.js:1035
 msgid "Hot"
 msgstr "Varmt"
 
-#: applet.js:1039
+#: applet.js:1037
 msgid "Isolated thunderstorms"
 msgstr "Lokal åska"
 
-#: applet.js:1042
+#: applet.js:1040
 msgid "Scattered thunderstorms"
 msgstr "Utspridd åska"
 
-#: applet.js:1044
+#: applet.js:1042
 msgid "Scattered showers"
 msgstr "Utspridda regnskurar"
 
-#: applet.js:1046 applet.js:1050
+#: applet.js:1044 applet.js:1048
 msgid "Heavy snow"
 msgstr "Häftigt snöfall"
 
-#: applet.js:1048
+#: applet.js:1046
 msgid "Scattered snow showers"
 msgstr "Utspridda snöbyar"
 
-#: applet.js:1054
+#: applet.js:1052
 msgid "Thundershowers"
 msgstr "Åskbyar"
 
-#: applet.js:1056
+#: applet.js:1054
 msgid "Snow showers"
 msgstr "Snöbyar"
 
-#: applet.js:1058
+#: applet.js:1056
 msgid "Isolated thundershowers"
 msgstr "Lokala åskbyar"
 
-#: applet.js:1061
+#: applet.js:1059
 msgid "Not available"
 msgstr "Inte tillgänglig"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Monday"
 msgstr "Måndag"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Tuesday"
 msgstr "Tisdag"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Wednesday"
 msgstr "Onsdag"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Thursday"
 msgstr "Torsdag"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Friday"
 msgstr "Fredag"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Saturday"
 msgstr "Lördag"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Sunday"
 msgstr "Söndag"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "N"
 msgstr ""
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "NE"
 msgstr ""
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "E"
 msgstr ""
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "SE"
 msgstr ""
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "S"
 msgstr ""
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "SW"
 msgstr ""
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "W"
 msgstr ""
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "NW"
 msgstr ""
-
-#~ msgid "..."
-#~ msgstr "..."

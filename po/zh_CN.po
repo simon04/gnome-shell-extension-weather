@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-14 21:12-0400\n"
+"POT-Creation-Date: 2013-01-08 13:01-0500\n"
 "PO-Revision-Date: 2011-12-02 14:44+0800\n"
 "Last-Translator: Tao Zhu <bill_zt@sina.com>, tuhaihe <1132321739qq@gmail."
 "com>\n"
@@ -18,286 +18,291 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: applet.js:180
+#: applet.js:178
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "未找到方案“%s”。"
 
-#: applet.js:553
+#: applet.js:268
+msgid "..."
+msgstr "..."
+
+#: applet.js:269
+msgid "Click to open"
+msgstr ""
+
+#: applet.js:551
 msgid "Sunrise"
 msgstr "日出"
 
-#: applet.js:554
+#: applet.js:552
 msgid "Sunset"
 msgstr "日落"
 
-#: applet.js:559
+#: applet.js:557
 msgid "Today"
 msgstr "今天"
 
-#: applet.js:559
+#: applet.js:557
 msgid "Tomorrow"
 msgstr "明天"
 
-#: applet.js:615
+#: applet.js:613
 msgid "Loading current weather ..."
 msgstr "正在加载当前天气 ..."
 
-#: applet.js:616
+#: applet.js:614
 msgid "Loading future weather ..."
 msgstr "正在加载预报天气 ..."
 
-#: applet.js:646
+#: applet.js:644
 msgid "Loading ..."
 msgstr "正在加载 ..."
 
-#: applet.js:652
+#: applet.js:650
 msgid "Please wait"
 msgstr "请等待"
 
-#: applet.js:710
+#: applet.js:708
 msgid "Temperature:"
 msgstr "温度："
 
-#: applet.js:712
+#: applet.js:710
 msgid "Humidity:"
 msgstr "湿度："
 
-#: applet.js:714
+#: applet.js:712
 msgid "Pressure:"
 msgstr "气压："
 
-#: applet.js:716
+#: applet.js:714
 msgid "Wind:"
 msgstr "风力："
 
-#: applet.js:968
+#: applet.js:966
 msgid "Tornado"
 msgstr "龙卷风"
 
-#: applet.js:970
+#: applet.js:968
 msgid "Tropical storm"
 msgstr "热带风暴"
 
-#: applet.js:972
+#: applet.js:970
 msgid "Hurricane"
 msgstr "飓风"
 
-#: applet.js:974
+#: applet.js:972
 msgid "Severe thunderstorms"
 msgstr "雷暴"
 
-#: applet.js:976
+#: applet.js:974
 msgid "Thunderstorms"
 msgstr "雷阵雨"
 
-#: applet.js:978
+#: applet.js:976
 msgid "Mixed rain and snow"
 msgstr "雨夹雪"
 
-#: applet.js:980
+#: applet.js:978
 msgid "Mixed rain and sleet"
 msgstr "雨夹雪"
 
-#: applet.js:982
+#: applet.js:980
 msgid "Mixed snow and sleet"
 msgstr "雨夹雪"
 
-#: applet.js:984
+#: applet.js:982
 msgid "Freezing drizzle"
 msgstr "冻雨"
 
-#: applet.js:986
+#: applet.js:984
 msgid "Drizzle"
 msgstr "小雨"
 
-#: applet.js:988
+#: applet.js:986
 msgid "Freezing rain"
 msgstr "冻雨"
 
-#: applet.js:990 applet.js:992
+#: applet.js:988 applet.js:990
 msgid "Showers"
 msgstr "阵雨"
 
-#: applet.js:994
+#: applet.js:992
 msgid "Snow flurries"
 msgstr "阵雪"
 
-#: applet.js:996
+#: applet.js:994
 msgid "Light snow showers"
 msgstr "小雪"
 
-#: applet.js:998
+#: applet.js:996
 msgid "Blowing snow"
 msgstr "暴雪"
 
-#: applet.js:1000
+#: applet.js:998
 msgid "Snow"
 msgstr "雪"
 
-#: applet.js:1002
+#: applet.js:1000
 msgid "Hail"
 msgstr "冰雹"
 
-#: applet.js:1004
+#: applet.js:1002
 msgid "Sleet"
 msgstr "雨夹雪"
 
-#: applet.js:1006
+#: applet.js:1004
 msgid "Dust"
 msgstr "扬沙"
 
-#: applet.js:1008
+#: applet.js:1006
 msgid "Foggy"
 msgstr "雾"
 
-#: applet.js:1010
+#: applet.js:1008
 msgid "Haze"
 msgstr "霾"
 
-#: applet.js:1012
+#: applet.js:1010
 msgid "Smoky"
 msgstr "烟雾"
 
-#: applet.js:1014
+#: applet.js:1012
 msgid "Blustery"
 msgstr "大风"
 
-#: applet.js:1016
+#: applet.js:1014
 msgid "Windy"
 msgstr "刮风"
 
-#: applet.js:1018
+#: applet.js:1016
 msgid "Cold"
 msgstr "冷"
 
-#: applet.js:1020
+#: applet.js:1018
 msgid "Cloudy"
 msgstr "多云"
 
-#: applet.js:1023
+#: applet.js:1021
 msgid "Mostly cloudy"
 msgstr "多云"
 
-#: applet.js:1026 applet.js:1052
+#: applet.js:1024 applet.js:1050
 msgid "Partly cloudy"
 msgstr "晴转多云 "
 
-#: applet.js:1028
+#: applet.js:1026
 msgid "Clear"
 msgstr "晴"
 
-#: applet.js:1030
+#: applet.js:1028
 msgid "Sunny"
 msgstr "晴"
 
-#: applet.js:1033
+#: applet.js:1031
 msgid "Fair"
 msgstr "晴"
 
-#: applet.js:1035
+#: applet.js:1033
 msgid "Mixed rain and hail"
 msgstr "冰雹"
 
-#: applet.js:1037
+#: applet.js:1035
 msgid "Hot"
 msgstr "炎热"
 
-#: applet.js:1039
+#: applet.js:1037
 msgid "Isolated thunderstorms"
 msgstr "局地雷阵雨"
 
-#: applet.js:1042
+#: applet.js:1040
 msgid "Scattered thunderstorms"
 msgstr "零星雷阵雨"
 
-#: applet.js:1044
+#: applet.js:1042
 msgid "Scattered showers"
 msgstr "零星小雪"
 
-#: applet.js:1046 applet.js:1050
+#: applet.js:1044 applet.js:1048
 msgid "Heavy snow"
 msgstr "大雪"
 
-#: applet.js:1048
+#: applet.js:1046
 msgid "Scattered snow showers"
 msgstr "零星阵雪"
 
-#: applet.js:1054
+#: applet.js:1052
 msgid "Thundershowers"
 msgstr "雷阵雨"
 
-#: applet.js:1056
+#: applet.js:1054
 msgid "Snow showers"
 msgstr "阵雪"
 
-#: applet.js:1058
+#: applet.js:1056
 msgid "Isolated thundershowers"
 msgstr "局地雷阵雨"
 
-#: applet.js:1061
+#: applet.js:1059
 msgid "Not available"
 msgstr "不可用"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Monday"
 msgstr "星期一"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Tuesday"
 msgstr "星期二"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Wednesday"
 msgstr "星期三"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Thursday"
 msgstr "星期四"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Friday"
 msgstr "星期五"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Saturday"
 msgstr "星期六"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Sunday"
 msgstr "星期日"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "N"
 msgstr "北"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "NE"
 msgstr "东北"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "E"
 msgstr "东"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "SE"
 msgstr "东南"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "S"
 msgstr "南"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "SW"
 msgstr "西南"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "W"
 msgstr "西"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "NW"
 msgstr "西北"
-
-#~ msgid "..."
-#~ msgstr "..."

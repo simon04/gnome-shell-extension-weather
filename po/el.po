@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-14 21:12-0400\n"
+"POT-Creation-Date: 2013-01-08 13:01-0500\n"
 "PO-Revision-Date: 2012-09-21 21:24+0300\n"
 "Last-Translator: George Pantsis <gpantsis@gmail.com>\n"
 "Language-Team: Ελληνικά <>\n"
@@ -17,286 +17,291 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: applet.js:180
+#: applet.js:178
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Δεν βρέθηκε το σχήμα \"%s\"."
 
-#: applet.js:553
+#: applet.js:268
+msgid "..."
+msgstr ""
+
+#: applet.js:269
+msgid "Click to open"
+msgstr "Κάντε κλικ για να ανοίξει"
+
+#: applet.js:551
 msgid "Sunrise"
 msgstr "Ανατολή"
 
-#: applet.js:554
+#: applet.js:552
 msgid "Sunset"
 msgstr "Δύση"
 
-#: applet.js:559
+#: applet.js:557
 msgid "Today"
 msgstr "Σήμερα"
 
-#: applet.js:559
+#: applet.js:557
 msgid "Tomorrow"
 msgstr "Αύριο"
 
-#: applet.js:615
+#: applet.js:613
 msgid "Loading current weather ..."
 msgstr "Φόρτωση τρέχοντος καιρού ..."
 
-#: applet.js:616
+#: applet.js:614
 msgid "Loading future weather ..."
 msgstr "Φόρτωση μελλοντικού καιρού ..."
 
-#: applet.js:646
+#: applet.js:644
 msgid "Loading ..."
 msgstr "Φόρτωση ..."
 
-#: applet.js:652
+#: applet.js:650
 msgid "Please wait"
 msgstr "Παρακαλώ περιμένετε"
 
-#: applet.js:710
+#: applet.js:708
 msgid "Temperature:"
 msgstr "Θερμοκρασία:"
 
-#: applet.js:712
+#: applet.js:710
 msgid "Humidity:"
 msgstr "Υγρασία:"
 
-#: applet.js:714
+#: applet.js:712
 msgid "Pressure:"
 msgstr "Πίεση:"
 
-#: applet.js:716
+#: applet.js:714
 msgid "Wind:"
 msgstr "Άνεμος:"
 
-#: applet.js:968
+#: applet.js:966
 msgid "Tornado"
 msgstr "Ανεμοστρόβιλος"
 
-#: applet.js:970
+#: applet.js:968
 msgid "Tropical storm"
 msgstr "Τροπική καταιγίδα"
 
-#: applet.js:972
+#: applet.js:970
 msgid "Hurricane"
 msgstr "Τυφώνας"
 
-#: applet.js:974
+#: applet.js:972
 msgid "Severe thunderstorms"
 msgstr "Σοβαρές καταιγίδες"
 
-#: applet.js:976
+#: applet.js:974
 msgid "Thunderstorms"
 msgstr "Καταιγίδες"
 
-#: applet.js:978
+#: applet.js:976
 msgid "Mixed rain and snow"
 msgstr "Μικτή βροχή και χιόνι"
 
-#: applet.js:980
+#: applet.js:978
 msgid "Mixed rain and sleet"
 msgstr "Μικτή βροχή και χιονόνερο"
 
-#: applet.js:982
+#: applet.js:980
 msgid "Mixed snow and sleet"
 msgstr "Μικτό χιόνι και χιονόνερο"
 
-#: applet.js:984
+#: applet.js:982
 msgid "Freezing drizzle"
 msgstr "Παγωμένο ψιλόβροχο"
 
-#: applet.js:986
+#: applet.js:984
 msgid "Drizzle"
 msgstr "Ψιλόβροχο"
 
-#: applet.js:988
+#: applet.js:986
 msgid "Freezing rain"
 msgstr "Παγωμένη βροχή"
 
-#: applet.js:990 applet.js:992
+#: applet.js:988 applet.js:990
 msgid "Showers"
 msgstr "Βροχοπτώσεις"
 
-#: applet.js:994
+#: applet.js:992
 msgid "Snow flurries"
 msgstr "Νυφάδες χιονιού"
 
-#: applet.js:996
+#: applet.js:994
 msgid "Light snow showers"
 msgstr "Ελαφριά χιονόπτωση"
 
-#: applet.js:998
+#: applet.js:996
 msgid "Blowing snow"
 msgstr "Χιονοθύελλες"
 
-#: applet.js:1000
+#: applet.js:998
 msgid "Snow"
 msgstr "Χιόνι"
 
-#: applet.js:1002
+#: applet.js:1000
 msgid "Hail"
 msgstr "Χαλάζι"
 
-#: applet.js:1004
+#: applet.js:1002
 msgid "Sleet"
 msgstr "Χιονόνερο"
 
-#: applet.js:1006
+#: applet.js:1004
 msgid "Dust"
 msgstr "Σκόνη"
 
-#: applet.js:1008
+#: applet.js:1006
 msgid "Foggy"
 msgstr "Ομιχλώδης"
 
-#: applet.js:1010
+#: applet.js:1008
 msgid "Haze"
 msgstr "Ομίχλη"
 
-#: applet.js:1012
+#: applet.js:1010
 msgid "Smoky"
 msgstr "Καπνώδης"
 
-#: applet.js:1014
+#: applet.js:1012
 msgid "Blustery"
 msgstr "Θορυβώδης"
 
-#: applet.js:1016
+#: applet.js:1014
 msgid "Windy"
 msgstr "Ανεμώδης"
 
-#: applet.js:1018
+#: applet.js:1016
 msgid "Cold"
 msgstr "Κρύο"
 
-#: applet.js:1020
+#: applet.js:1018
 msgid "Cloudy"
 msgstr "Συννεφιασμένος"
 
-#: applet.js:1023
+#: applet.js:1021
 msgid "Mostly cloudy"
 msgstr "Κυρίως νεφελώδης"
 
-#: applet.js:1026 applet.js:1052
+#: applet.js:1024 applet.js:1050
 msgid "Partly cloudy"
 msgstr "Πυκνή συννεφιά"
 
-#: applet.js:1028
+#: applet.js:1026
 msgid "Clear"
 msgstr "Καθαρός"
 
-#: applet.js:1030
+#: applet.js:1028
 msgid "Sunny"
 msgstr "Ηλιόλουστος"
 
-#: applet.js:1033
+#: applet.js:1031
 msgid "Fair"
 msgstr "Αίθριος"
 
-#: applet.js:1035
+#: applet.js:1033
 msgid "Mixed rain and hail"
 msgstr "Μικτή βροχή και χαλάζι"
 
-#: applet.js:1037
+#: applet.js:1035
 msgid "Hot"
 msgstr "Καυτός"
 
-#: applet.js:1039
+#: applet.js:1037
 msgid "Isolated thunderstorms"
 msgstr "Μεμονωμένες καταιγίδες"
 
-#: applet.js:1042
+#: applet.js:1040
 msgid "Scattered thunderstorms"
 msgstr "Διάσπαρτες καταιγίδες"
 
-#: applet.js:1044
+#: applet.js:1042
 msgid "Scattered showers"
 msgstr "Διάσπαρτες βροχοπτώσεις"
 
-#: applet.js:1046 applet.js:1050
+#: applet.js:1044 applet.js:1048
 msgid "Heavy snow"
 msgstr "Ισχυρή χιονόπτωση"
 
-#: applet.js:1048
+#: applet.js:1046
 msgid "Scattered snow showers"
 msgstr "Διάσπαρτες χιονοπτώσεις"
 
-#: applet.js:1054
+#: applet.js:1052
 msgid "Thundershowers"
 msgstr "Βροχοπτώσεις με κεραυνούς"
 
-#: applet.js:1056
+#: applet.js:1054
 msgid "Snow showers"
 msgstr "Χιονοπτώσεις"
 
-#: applet.js:1058
+#: applet.js:1056
 msgid "Isolated thundershowers"
 msgstr "Μεμονωμένες βροχοπτώσεις με κεραυνούς"
 
-#: applet.js:1061
+#: applet.js:1059
 msgid "Not available"
 msgstr "Μη διαθέσιμο"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Monday"
 msgstr "Δευτέρα"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Tuesday"
 msgstr "Τρίτη"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Wednesday"
 msgstr "Τετάρτη"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Thursday"
 msgstr "Πέμπτη"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Friday"
 msgstr "Παρασκευή"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Saturday"
 msgstr "Σάββατο"
 
-#: applet.js:1069
+#: applet.js:1067
 msgid "Sunday"
 msgstr "Κυριακή"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "N"
 msgstr "Β"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "NE"
 msgstr "ΒΑ"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "E"
 msgstr "Α"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "SE"
 msgstr "ΝΑ"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "S"
 msgstr "Ν"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "SW"
 msgstr "ΝΔ"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "W"
 msgstr "Δ"
 
-#: applet.js:1077
+#: applet.js:1075
 msgid "NW"
 msgstr "ΒΔ"
-
-#~ msgid "Click to open"
-#~ msgstr "Κάντε κλικ για να ανοίξει"
