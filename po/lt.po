@@ -1,0 +1,396 @@
+# Lithuanian translation for gnome-shell-extension-weather
+# Copyright (c) Mantas Kriaučiūnas <mantas@akl.lt> 2012
+# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Mantas Kriaučiūnas <mantas@akl.lt>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-shell-extension-weather\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-08 13:19-0500\n"
+"PO-Revision-Date: 2012-12-21 12:43+0000\n"
+"Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
+"Language-Team: Lithuanian <lt@li.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-12-24 04:00+0000\n"
+"X-Generator: Launchpad (build 16378)\n"
+
+#: applet.js:178
+#, python-format
+msgid "Schema \"%s\" not found."
+msgstr ""
+
+#: applet.js:268
+msgid "..."
+msgstr ""
+
+#: applet.js:269
+msgid "Click to open"
+msgstr ""
+
+#: applet.js:551
+msgid "Sunrise"
+msgstr ""
+
+#: applet.js:552
+msgid "Sunset"
+msgstr ""
+
+#: applet.js:557
+msgid "Today"
+msgstr "Šiandien"
+
+#: applet.js:557
+msgid "Tomorrow"
+msgstr "Rytoj"
+
+#: applet.js:613
+msgid "Loading current weather ..."
+msgstr "Įkeliami dabartiniai orai..."
+
+#: applet.js:614
+msgid "Loading future weather ..."
+msgstr "Įkeliama orų prognozė..."
+
+#: applet.js:644
+msgid "Loading ..."
+msgstr "Įkeliama..."
+
+#: applet.js:650
+msgid "Please wait"
+msgstr "Palaukite"
+
+#: applet.js:708
+#, fuzzy
+msgid "Temperature:"
+msgstr "Temperatūros vienetai:"
+
+#: applet.js:710
+msgid "Humidity:"
+msgstr "Drėgnumas:"
+
+#: applet.js:712
+msgid "Pressure:"
+msgstr "Slėgis:"
+
+#: applet.js:714
+msgid "Wind:"
+msgstr "Vėjas:"
+
+#: applet.js:966
+msgid "Tornado"
+msgstr "Viesulas (tornadas)"
+
+#: applet.js:968
+msgid "Tropical storm"
+msgstr "Tropinė audra"
+
+#: applet.js:970
+msgid "Hurricane"
+msgstr "Uraganas"
+
+#: applet.js:972
+msgid "Severe thunderstorms"
+msgstr "Smarki audra su perkūnija"
+
+#: applet.js:974
+msgid "Thunderstorms"
+msgstr "Perkūnija (audringa)"
+
+#: applet.js:976
+msgid "Mixed rain and snow"
+msgstr "Šlapdriba (lietus ir sniegas)"
+
+#: applet.js:978
+msgid "Mixed rain and sleet"
+msgstr "Lietus bei šlapdriba"
+
+#: applet.js:980
+msgid "Mixed snow and sleet"
+msgstr "Sniegas bei šlapdriba"
+
+#: applet.js:982
+msgid "Freezing drizzle"
+msgstr "Šąlanti dulksna"
+
+#: applet.js:984
+msgid "Drizzle"
+msgstr "Dulksna"
+
+#: applet.js:986
+msgid "Freezing rain"
+msgstr "Lijundra"
+
+#: applet.js:988 applet.js:990
+msgid "Showers"
+msgstr "Trumpi lietūs"
+
+#: applet.js:992
+msgid "Snow flurries"
+msgstr "Sniego šuorai"
+
+#: applet.js:994
+msgid "Light snow showers"
+msgstr "Protarpiais pasnigs"
+
+#: applet.js:996
+msgid "Blowing snow"
+msgstr "Pustomas sniegas"
+
+#: applet.js:998
+msgid "Snow"
+msgstr "Sniegas"
+
+#: applet.js:1000
+msgid "Hail"
+msgstr "Kruša"
+
+#: applet.js:1002
+msgid "Sleet"
+msgstr "Šlapdriba"
+
+#: applet.js:1004
+msgid "Dust"
+msgstr "Dulkės"
+
+#: applet.js:1006
+msgid "Foggy"
+msgstr "Ūkanota"
+
+#: applet.js:1008
+msgid "Haze"
+msgstr "Miglelė"
+
+#: applet.js:1010
+msgid "Smoky"
+msgstr "Dūmuotas oras"
+
+#: applet.js:1012
+msgid "Blustery"
+msgstr "Audringa"
+
+#: applet.js:1014
+msgid "Windy"
+msgstr "Vėjuota"
+
+#: applet.js:1016
+msgid "Cold"
+msgstr ""
+
+#: applet.js:1018
+msgid "Cloudy"
+msgstr "Debesuota"
+
+#: applet.js:1021
+msgid "Mostly cloudy"
+msgstr "Daugiau debesuota"
+
+#: applet.js:1024 applet.js:1050
+msgid "Partly cloudy"
+msgstr "Debesuota su pragiedruliais"
+
+#: applet.js:1026
+msgid "Clear"
+msgstr "Giedra"
+
+#: applet.js:1028
+msgid "Sunny"
+msgstr "Saulėta"
+
+#: applet.js:1031
+msgid "Fair"
+msgstr "Gražus oras"
+
+#: applet.js:1033
+msgid "Mixed rain and hail"
+msgstr "Lietus su kruša"
+
+#: applet.js:1035
+msgid "Hot"
+msgstr "Karšta"
+
+#: applet.js:1037
+msgid "Isolated thunderstorms"
+msgstr "Vietomis perkūnija"
+
+#: applet.js:1040
+msgid "Scattered thunderstorms"
+msgstr "Vietomis perkūnija"
+
+#: applet.js:1042
+msgid "Scattered showers"
+msgstr "Vietomis trumpi lietūs"
+
+#: applet.js:1044 applet.js:1048
+msgid "Heavy snow"
+msgstr "Stipriai sninga"
+
+#: applet.js:1046
+msgid "Scattered snow showers"
+msgstr "Vietomis pasnigs"
+
+#: applet.js:1052
+msgid "Thundershowers"
+msgstr "Trumpi lietūs su perkūnija"
+
+#: applet.js:1054
+msgid "Snow showers"
+msgstr ""
+
+#: applet.js:1056
+msgid "Isolated thundershowers"
+msgstr "Pavienės liūtys su perkūnija"
+
+#: applet.js:1059
+msgid "Not available"
+msgstr "Neprieinama"
+
+#: applet.js:1067
+msgid "Monday"
+msgstr "Pirmadienis"
+
+#: applet.js:1067
+msgid "Tuesday"
+msgstr "Antradienis"
+
+#: applet.js:1067
+msgid "Wednesday"
+msgstr "Trečiadienis"
+
+#: applet.js:1067
+msgid "Thursday"
+msgstr "Ketvirtadienis"
+
+#: applet.js:1067
+msgid "Friday"
+msgstr "Penktadienis"
+
+#: applet.js:1067
+msgid "Saturday"
+msgstr "Šeštadienis"
+
+#: applet.js:1067
+msgid "Sunday"
+msgstr "Sekmadienis"
+
+#: applet.js:1075
+msgid "N"
+msgstr "Š"
+
+#: applet.js:1075
+msgid "NE"
+msgstr "ŠR"
+
+#: applet.js:1075
+msgid "E"
+msgstr "R"
+
+#: applet.js:1075
+msgid "SE"
+msgstr "PR"
+
+#: applet.js:1075
+msgid "S"
+msgstr "P"
+
+#: applet.js:1075
+msgid "SW"
+msgstr "PV"
+
+#: applet.js:1075
+msgid "W"
+msgstr "V"
+
+#: applet.js:1075
+msgid "NW"
+msgstr "ŠV"
+
+#~ msgid "Locations"
+#~ msgstr "Vietovės"
+
+#~ msgid "Reload Weather Information"
+#~ msgstr "Atnaujinti orų informaciją"
+
+#~ msgid "Weather Settings"
+#~ msgstr "Nustatymai (vietovė ir kt.)"
+
+#~ msgid "Invalid city"
+#~ msgstr "Netinkama vietovė"
+
+#~ msgid "Calm"
+#~ msgstr "Ramu"
+
+#~ msgid "Light breeze"
+#~ msgstr "Lengvas vėjelis"
+
+#~ msgid "Gentle breeze"
+#~ msgstr "Švelnus vėjelis"
+
+#~ msgid "Moderate breeze"
+#~ msgstr "Vidutinis vėjelis"
+
+#~ msgid "Fresh breeze"
+#~ msgstr "Stiprėjantis vėjelis"
+
+#~ msgid "Moderate gale"
+#~ msgstr "Vidutinis štormas"
+
+#~ msgid "Fresh gale"
+#~ msgstr "Stiprėjantis štormas"
+
+#~ msgid "Strong gale"
+#~ msgstr "Smarkus štormas"
+
+#~ msgid "Storm"
+#~ msgstr "Audra"
+
+#~ msgid "Violent storm"
+#~ msgstr "Smarki audra"
+
+#~ msgid "Yesterday"
+#~ msgstr "Vakar"
+
+#~ msgid "%s days ago"
+#~ msgstr "Prieš %s dienas"
+
+#~ msgid "Feel like:"
+#~ msgstr "Jaučiama kaip:"
+
+#~ msgid "Name of the city"
+#~ msgstr "Vietovės pavadinimas"
+
+#~ msgid "Remove %s ?"
+#~ msgstr "Pašalinti %s ?"
+
+#~ msgid "Wind Speed Unit"
+#~ msgstr "Vėjo greičio vienetai"
+
+#~ msgid "Pressure Unit"
+#~ msgstr "Slėgio vienetai"
+
+#~ msgid "Position in Panel"
+#~ msgstr "Padėtis skydelyje"
+
+#~ msgid "Center"
+#~ msgstr "Centre"
+
+#~ msgid "Right"
+#~ msgstr "Dešinėje"
+
+#~ msgid "Left"
+#~ msgstr "Kairėje"
+
+#~ msgid "Wind Direction by Arrows"
+#~ msgstr "Vėjo krypčiai naudoti rodykles"
+
+#~ msgid "Translate Conditions"
+#~ msgstr "Versti oro sąlygas"
+
+#~ msgid "Temperature in Panel"
+#~ msgstr "Rodyti temperatūrą skydelyje"
+
+#~ msgid "Conditions in Panel"
+#~ msgstr "Rodyti oro sąlygas skydelyje"
