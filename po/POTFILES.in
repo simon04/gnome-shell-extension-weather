@@ -1,2 +1,2 @@
 ../src/extension.js
-../src/weather-settings.js.in
+../src/prefs.js

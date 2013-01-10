@@ -6,6 +6,8 @@ test -z "$srcdir" && srcdir=.
 
 PKG_NAME="gnome-shell-extension-weather"
 
+touch ChangeLog
+
 test -f $srcdir/configure.ac || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
     echo " top-level gnome-shell-extensions directory"
