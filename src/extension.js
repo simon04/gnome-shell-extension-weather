@@ -507,10 +507,12 @@ const WeatherMenuButton = new Lang.Class({
 			});
 		}
 
-	if (cities.length == 1)
-	this._selectCity.actor.hide();
-	else
-	this._selectCity.actor.show();
+		if (cities.length == 1)
+		this._selectCity.actor.hide();
+		else
+		this._selectCity.actor.show();
+
+	return 0;
 	},
 
 	extractLocation : function()
@@ -582,11 +584,13 @@ const WeatherMenuButton = new Lang.Class({
 			continue;
 		}
 	this.refreshWeather();
+	return 0;
 	},
 
     _onPreferencesActivate : function() {
     let app = Shell.AppSystem.get_default().lookup_app('weather-settings.desktop');
     app.activate();
+    return 0;
     },
 
     unit_to_unicode: function() {
@@ -930,6 +934,7 @@ const WeatherMenuButton = new Lang.Class({
 			return '\u2935';
 			break;
 		}
+	return 0;
 	},
 
 	icon_type : function(icon_name)
@@ -975,6 +980,7 @@ const WeatherMenuButton = new Lang.Class({
             return 0;
             }
         });
+    return 0;
     },
 
 	refreshWeather: function(recurse)
@@ -1325,6 +1331,7 @@ const WeatherMenuButton = new Lang.Class({
                 forecastUi.Summary.text = comment;
                 forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
             }
+	return 0;
         });
 
         // Repeatedly refresh weather if recurse is set
@@ -1333,7 +1340,7 @@ const WeatherMenuButton = new Lang.Class({
                 this.refreshWeather(true);
             }));
         }
-
+    return 0;
     },
 
     destroyCurrentWeather: function() {
