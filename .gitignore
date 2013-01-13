@@ -5,9 +5,12 @@ configure
 config.log
 config.status
 aclocal.m4
+ChangeLog
+INSTALL
 autom4te.cache/
 po/POTFILES
 po/stamp-it
+data/weather-settings.desktop
 staging/
 
 *~

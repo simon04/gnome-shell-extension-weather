@@ -5,7 +5,7 @@ AC_INIT([gnome-shell-extension-weather],[1.1],[https://github.com/Neroth/gnome-s
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([config])
 
-AM_INIT_AUTOMAKE([1.10 dist-xz])
+AM_INIT_AUTOMAKE([1.10 dist-xz foreign])
 
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
@@ -18,8 +18,6 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE",
 IT_PROG_INTLTOOL(0.26)
 
 PKG_PROG_PKG_CONFIG([0.22])
-
-GLIB_GSETTINGS
 
 AC_ARG_WITH(desktop-dir, [  --with-desktop-dir=PATH where to install desktop files (default=PREFIX/share)])
 

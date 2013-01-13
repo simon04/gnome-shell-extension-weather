@@ -34,9 +34,7 @@ gschemas_in = org.gnome.shell.extensions.weather.gschema.xml.in
 
 @INTLTOOL_XML_NOMERGE_RULE@
 
-gsettings_SCHEMAS = $(gschemas_in:.xml.in=.xml)
-
-@GSETTINGS_RULES@
+gsettings_SCHEMAS = $(gschemas_in:.xml.in=.xml) @GSETTINGS_RULES@
 
 EXTRA_DIST += $(gschemas_in)
 CLEANFILES += $(gschemas_in:.xml.in=.valid) $(gsettings_SCHEMAS)
