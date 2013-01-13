@@ -1,4 +1,5 @@
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.jpg)
+![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot2.jpg)
 
 *gnome-shell-extension-weather* is a simple extension for displaying weather conditions and forecasts in GNOME Shell, featuring support for multiple locations, no requirement for WOEID, a symmetrical layout and a settings panel through *gnome-shell-extension-prefs*.
 
