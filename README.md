@@ -1,7 +1,6 @@
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot.jpg)
-![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/Screenshot2.jpg)
 
-*gnome-shell-extension-weather* is a simple extension for displaying weather conditions and forecasts in GNOME Shell, featuring support for multiple locations, no requirement for WOEID, a symmetrical layout and a settings panel through *gnome-shell-extension-prefs*.
+*gnome-shell-extension-weather* is a simple extension for displaying weather conditions and forecasts in GNOME Shell, featuring support for multiple locations, no need for WOEID, a symmetrical layout and a settings panel through *gnome-shell-extension-prefs*.
 
 Currently, the weather report, including forecasts for today and tomorrow, is fetched from [Yahoo! Weather](http://weather.yahoo.com/).
 
@@ -69,7 +68,7 @@ Run the following commands:
 
 # Configuration
 
-Launch *gnome-shell-extension-prefs* (reachable also through the *Weather settings* button on the extension popup) and select *Gnome Shell Extension Weather by Neroth* from the drop-down menu to edit the configuration.
+Launch *gnome-shell-extension-prefs* (reachable also through the *Weather Settings* button on the extension popup) and select *Gnome Shell Extension Weather by Neroth* from the drop-down menu to edit the configuration.
 
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/weather-settings.gif)
 
