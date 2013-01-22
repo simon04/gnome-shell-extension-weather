@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-11-26 04:15+0100\n"
-"PO-Revision-Date: 2012-08-21 19:12+0800\n"
+"PO-Revision-Date: 2013-01-18 10:25+0800\n"
 "Last-Translator: Meng Zhuo <mengzhuo1203@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
 "Language: zh_CN\n"
@@ -23,23 +23,26 @@ msgstr "..."
 
 #: ../src/extension.js:205
 msgid "Locations"
-msgstr ""
+msgstr "地点"
 
 #: ../src/extension.js:209
 msgid "Reload Weather Information"
 msgstr "重载天气信息"
 
-#: ../src/extension.js:213 ../src/weather-settings.js.in:655
+#: ../src/extension.js:213
+#: ../src/weather-settings.js.in:655
 msgid "Weather Settings"
 msgstr "天气设定"
 
-#: ../src/extension.js:233 ../src/extension.js:243
+#: ../src/extension.js:233
+#: ../src/extension.js:243
 #: ../src/weather-settings.js.in:329
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "没有找到设定（Schema） \"%s\" "
 
-#: ../src/extension.js:522 ../src/weather-settings.js.in:539
+#: ../src/extension.js:522
+#: ../src/weather-settings.js.in:539
 msgid "Invalid city"
 msgstr "无效的城市"
 
@@ -51,7 +54,8 @@ msgstr "龙卷风"
 msgid "Tropical storm"
 msgstr "热带风暴"
 
-#: ../src/extension.js:740 ../src/extension.js:900
+#: ../src/extension.js:740
+#: ../src/extension.js:900
 msgid "Hurricane"
 msgstr "飓风"
 
@@ -87,7 +91,8 @@ msgstr "小雨"
 msgid "Freezing rain"
 msgstr "冻雨"
 
-#: ../src/extension.js:758 ../src/extension.js:760
+#: ../src/extension.js:758
+#: ../src/extension.js:760
 msgid "Showers"
 msgstr "阵雨"
 
@@ -151,7 +156,8 @@ msgstr "多云"
 msgid "Mostly cloudy"
 msgstr "多云"
 
-#: ../src/extension.js:794 ../src/extension.js:820
+#: ../src/extension.js:794
+#: ../src/extension.js:820
 msgid "Partly cloudy"
 msgstr "晴转多云 "
 
@@ -187,7 +193,8 @@ msgstr "零星雷阵雨"
 msgid "Scattered showers"
 msgstr "零星小雪"
 
-#: ../src/extension.js:814 ../src/extension.js:818
+#: ../src/extension.js:814
+#: ../src/extension.js:818
 msgid "Heavy snow"
 msgstr "大雪"
 
@@ -213,51 +220,52 @@ msgstr "不可用"
 
 #: ../src/extension.js:876
 msgid "Calm"
-msgstr ""
+msgstr "平静"
 
 #: ../src/extension.js:878
+#, fuzzy
 msgid "Light air"
-msgstr ""
+msgstr "轻空气"
 
 #: ../src/extension.js:880
 msgid "Light breeze"
-msgstr ""
+msgstr "轻微风"
 
 #: ../src/extension.js:882
 msgid "Gentle breeze"
-msgstr ""
+msgstr "温和微风"
 
 #: ../src/extension.js:884
 msgid "Moderate breeze"
-msgstr ""
+msgstr "中微风"
 
 #: ../src/extension.js:886
 msgid "Fresh breeze"
-msgstr ""
+msgstr "清新微风"
 
 #: ../src/extension.js:888
 msgid "Strong breeze"
-msgstr ""
+msgstr "强微风"
 
 #: ../src/extension.js:890
 msgid "Moderate gale"
-msgstr ""
+msgstr "中度风"
 
 #: ../src/extension.js:892
 msgid "Fresh gale"
-msgstr ""
+msgstr "清新"
 
 #: ../src/extension.js:894
 msgid "Strong gale"
-msgstr ""
+msgstr "强风"
 
 #: ../src/extension.js:896
 msgid "Storm"
-msgstr ""
+msgstr "风暴"
 
 #: ../src/extension.js:898
 msgid "Violent storm"
-msgstr ""
+msgstr "强风暴"
 
 #: ../src/extension.js:905
 msgid "Sunday"
@@ -319,11 +327,13 @@ msgstr "西"
 msgid "NW"
 msgstr "西北"
 
-#: ../src/extension.js:1190 ../src/extension.js:1319
+#: ../src/extension.js:1190
+#: ../src/extension.js:1319
 msgid "Yesterday"
 msgstr "昨天"
 
-#: ../src/extension.js:1192 ../src/extension.js:1321
+#: ../src/extension.js:1192
+#: ../src/extension.js:1321
 #, python-format
 msgid "%s days ago"
 msgstr "%s 天之前"
@@ -429,3 +439,4 @@ msgstr "温度："
 #: ../src/weather-settings.js.in:709
 msgid "Conditions in Panel"
 msgstr "在面板中显示天气条件"
+
