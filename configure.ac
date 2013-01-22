@@ -19,6 +19,8 @@ IT_PROG_INTLTOOL(0.26)
 
 PKG_PROG_PKG_CONFIG([0.22])
 
+GLIB_GSETTINGS
+
 AC_ARG_WITH(desktop-dir, [  --with-desktop-dir=PATH where to install desktop files (default=PREFIX/share)])
 
 if test "x$with_desktop_dir" != x; then
