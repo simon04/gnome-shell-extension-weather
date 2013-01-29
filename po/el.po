@@ -1,4 +1,4 @@
-#greek translation for gnome-shell-extension-weather
+# greek translation for gnome-shell-extension-weather
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 #
@@ -28,8 +28,8 @@ msgid "Reload Weather Information"
 msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
 
 #: ../src/extension.js:213 ../src/weather-settings.js.in:655
-msgid "Ρυθμίσεις Καιρού"
-msgstr ""
+msgid "Weather Settings"
+msgstr "Ρυθμίσεις Καιρού"
 
 #: ../src/extension.js:233 ../src/extension.js:243
 #: ../src/weather-settings.js.in:329
@@ -215,39 +215,39 @@ msgstr "Ήρεμος"
 
 #: ../src/extension.js:878
 msgid "Light air"
-msgstr "Ελαφρύ αεράκι"
+msgstr "Ελαφριά αύρα"
 
 #: ../src/extension.js:880
 msgid "Light breeze"
-msgstr "Ελαφριά αύρα"
+msgstr "Ελαφρύ αεράκι"
 
 #: ../src/extension.js:882
 msgid "Gentle breeze"
-msgstr "Ήρεμη αύρα"
+msgstr "Ήρεμο αεράκι"
 
 #: ../src/extension.js:884
 msgid "Moderate breeze"
-msgstr ""
+msgstr "Μέτριο αεράκι"
 
 #: ../src/extension.js:886
 msgid "Fresh breeze"
-msgstr "Μέτρια αύρα"
+msgstr "Δροσερό αεράκι"
 
 #: ../src/extension.js:888
 msgid "Strong breeze"
-msgstr "Δυνατή αύρα"
+msgstr "Δυνατό αεράκι"
 
 #: ../src/extension.js:890
 msgid "Moderate gale"
-msgstr "Μέτρια ανεμοθύελλα"
+msgstr "Μέτρια ανεμοθύελα"
 
 #: ../src/extension.js:892
 msgid "Fresh gale"
-msgstr "Δροσερή ανεμοθύελλα"
+msgstr "Δροσερή ανεμοθύελα"
 
 #: ../src/extension.js:894
 msgid "Strong gale"
-msgstr "Δυνατή ανεμοθύελλα"
+msgstr "Δυνατή ανεμοθύελα"
 
 #: ../src/extension.js:896
 msgid "Storm"
@@ -357,11 +357,11 @@ msgstr "Παρακαλώ περιμένετε"
 
 #: ../src/extension.js:1434
 msgid "Feel like:"
-msgstr "Μοιάζει σαν"
+msgstr "Μοιάζει σαν:"
 
 #: ../src/extension.js:1436
 msgid "Humidity:"
-msgstr "Υγρασία"
+msgstr "Υγρασία:"
 
 #: ../src/extension.js:1438
 msgid "Pressure:"
@@ -382,7 +382,7 @@ msgstr "Αφαίρεση %s ;"
 
 #: ../src/weather-settings.js.in:693
 msgid "Temperature Unit"
-msgstr "Θερμοκρασία:"
+msgstr "Θερμοκρασία"
 
 #: ../src/weather-settings.js.in:695
 msgid "Wind Speed Unit"
@@ -391,7 +391,7 @@ msgstr "Ταχύτητα ανέμου"
 #: ../src/weather-settings.js.in:697
 #, fuzzy
 msgid "Pressure Unit"
-msgstr "Πίεση:"
+msgstr "Πίεση"
 
 #: ../src/weather-settings.js.in:699
 msgid "Position in Panel"
@@ -423,7 +423,7 @@ msgstr "Συμβολικά εικονίδια"
 
 #: ../src/weather-settings.js.in:707
 msgid "Temperature in Panel"
-msgstr "Θερμοκρασία στον πίνακα:"
+msgstr "Θερμοκρασία στον πίνακα"
 
 #: ../src/weather-settings.js.in:709
 msgid "Conditions in Panel"
