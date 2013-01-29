@@ -382,7 +382,7 @@ msgstr "Αφαίρεση %s ;"
 
 #: ../src/weather-settings.js.in:693
 msgid "Temperature Unit"
-msgstr "Θερμοκρασία"
+msgstr "Μονάδα Θερμοκρασίας"
 
 #: ../src/weather-settings.js.in:695
 msgid "Wind Speed Unit"
@@ -391,7 +391,7 @@ msgstr "Ταχύτητα ανέμου"
 #: ../src/weather-settings.js.in:697
 #, fuzzy
 msgid "Pressure Unit"
-msgstr "Πίεση"
+msgstr "Μονάδα πίεσης"
 
 #: ../src/weather-settings.js.in:699
 msgid "Position in Panel"
