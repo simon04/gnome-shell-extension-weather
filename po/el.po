@@ -239,11 +239,11 @@ msgstr "Δυνατό αεράκι"
 
 #: ../src/extension.js:890
 msgid "Moderate gale"
-msgstr "Μέτρια ανεμοθύελα"
+msgstr "Μέτρια ανεμοθύελλα"
 
 #: ../src/extension.js:892
 msgid "Fresh gale"
-msgstr "Δροσερή ανεμοθύελα"
+msgstr "Δροσερή ανεμοθύελλα"
 
 #: ../src/extension.js:894
 msgid "Strong gale"
@@ -386,16 +386,16 @@ msgstr "Μονάδα Θερμοκρασίας"
 
 #: ../src/weather-settings.js.in:695
 msgid "Wind Speed Unit"
-msgstr "Ταχύτητα ανέμου"
+msgstr "Ταχύτητα Ανέμου"
 
 #: ../src/weather-settings.js.in:697
 #, fuzzy
 msgid "Pressure Unit"
-msgstr "Μονάδα πίεσης"
+msgstr "Μονάδα Πίεσης"
 
 #: ../src/weather-settings.js.in:699
 msgid "Position in Panel"
-msgstr "Θέση στον πίνακα"
+msgstr "Θέση στον Πίνακα"
 
 #: ../src/weather-settings.js.in:700
 msgid "Center"
@@ -411,19 +411,19 @@ msgstr "Αριστερά"
 
 #: ../src/weather-settings.js.in:701
 msgid "Wind Direction by Arrows"
-msgstr "Κατεύθυνση ανέμου με βέλη"
+msgstr "Κατεύθυνση Ανέμου με Βέλη"
 
 #: ../src/weather-settings.js.in:703
 msgid "Translate Conditions"
-msgstr "Μετάφραση καιρικών συνθηκών"
+msgstr "Μετάφραση Καιρικών Συνθηκών"
 
 #: ../src/weather-settings.js.in:705
 msgid "Symbolic Icons"
-msgstr "Συμβολικά εικονίδια"
+msgstr "Εικονίδια Συμβόλων"
 
 #: ../src/weather-settings.js.in:707
 msgid "Temperature in Panel"
-msgstr "Θερμοκρασία στον πίνακα"
+msgstr "Θερμοκρασία στον Πίνακα"
 
 #: ../src/weather-settings.js.in:709
 msgid "Conditions in Panel"
