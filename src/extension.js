@@ -215,6 +215,7 @@ WeatherMenuButton.prototype = {
     },
 
     getPreferencesIcon: function() {
+        var menu = this.menu;
         let prefIcon = new St.Icon ({
             icon_type: this._icon_type,
             icon_size: 16,
@@ -224,6 +225,7 @@ WeatherMenuButton.prototype = {
             style_class: 'panel-button'
         });
         prefButton.connect('clicked', function() {
+            menu.close(true);
             Util.spawn(["weather-extension-configurator"]);
         });
         let prefBox = new St.BoxLayout({
@@ -685,6 +687,7 @@ WeatherMenuButton.prototype = {
             Gio.app_info_launch_default_for_uri(
                     this._currentWeatherLocation.url,
                     global.create_app_launch_context());
+            this.menu.close(true);
         }));
 
         let bb = new St.BoxLayout({
