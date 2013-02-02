@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-26 04:15+0100\n"
+"POT-Creation-Date: 2013-02-02 18:13+0100\n"
 "PO-Revision-Date: 2012-06-07 10:45+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: suomi <>\n"
@@ -31,404 +31,404 @@ msgstr ""
 msgid "Reload Weather Information"
 msgstr "Päivitä säätiedot"
 
-#: ../src/extension.js:213 ../src/weather-settings.js.in:655
+#: ../src/extension.js:213
 msgid "Weather Settings"
 msgstr "Sääasetukset"
 
-#: ../src/extension.js:233 ../src/extension.js:243
-#: ../src/weather-settings.js.in:329
+#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:529
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Skeemaa \"%s\" ei löytynyt."
 
-#: ../src/extension.js:522 ../src/weather-settings.js.in:539
+#: ../src/extension.js:524 ../src/prefs.js:738
 msgid "Invalid city"
 msgstr "Virheellinen kaupunki"
 
-#: ../src/extension.js:736
+#: ../src/extension.js:740
 msgid "Tornado"
 msgstr "Tornado"
 
-#: ../src/extension.js:738
+#: ../src/extension.js:742
 msgid "Tropical storm"
 msgstr "Trooppinen myrsky"
 
-#: ../src/extension.js:740 ../src/extension.js:900
+#: ../src/extension.js:744 ../src/extension.js:904
 msgid "Hurricane"
 msgstr "Hurrikaani"
 
-#: ../src/extension.js:742
+#: ../src/extension.js:746
 msgid "Severe thunderstorms"
 msgstr "Voimakkaita ukkosmyrskyjä"
 
-#: ../src/extension.js:744
+#: ../src/extension.js:748
 msgid "Thunderstorms"
 msgstr "Ukkosmyrskyjä"
 
-#: ../src/extension.js:746
+#: ../src/extension.js:750
 msgid "Mixed rain and snow"
 msgstr "Räntäsade"
 
-#: ../src/extension.js:748
+#: ../src/extension.js:752
 msgid "Mixed rain and sleet"
 msgstr "Räntäsadetta ja loskaa"
 
-#: ../src/extension.js:750
+#: ../src/extension.js:754
 msgid "Mixed snow and sleet"
 msgstr "Lumisadetta ja loskaa"
 
-#: ../src/extension.js:752
+#: ../src/extension.js:756
 msgid "Freezing drizzle"
 msgstr "Kylmä tihkusade"
 
-#: ../src/extension.js:754
+#: ../src/extension.js:758
 msgid "Drizzle"
 msgstr "Tihkusadetta"
 
-#: ../src/extension.js:756
+#: ../src/extension.js:760
 msgid "Freezing rain"
 msgstr "Jäätävää sadetta"
 
-#: ../src/extension.js:758 ../src/extension.js:760
+#: ../src/extension.js:762 ../src/extension.js:764
 msgid "Showers"
 msgstr "Sadekuuroja"
 
-#: ../src/extension.js:762
+#: ../src/extension.js:766
 msgid "Snow flurries"
 msgstr "Lumikuuroja"
 
-#: ../src/extension.js:764
+#: ../src/extension.js:768
 msgid "Light snow showers"
 msgstr "Kevyttä lumisadetta"
 
-#: ../src/extension.js:766
+#: ../src/extension.js:770
 msgid "Blowing snow"
 msgstr "Lumipyry"
 
-#: ../src/extension.js:768
+#: ../src/extension.js:772
 msgid "Snow"
 msgstr "Lumisadetta"
 
-#: ../src/extension.js:770
+#: ../src/extension.js:774
 msgid "Hail"
 msgstr "Viima"
 
-#: ../src/extension.js:772
+#: ../src/extension.js:776
 msgid "Sleet"
 msgstr "Loskaa"
 
-#: ../src/extension.js:774
+#: ../src/extension.js:778
 msgid "Dust"
 msgstr "Pölyä"
 
-#: ../src/extension.js:776
+#: ../src/extension.js:780
 msgid "Foggy"
 msgstr "Sumua"
 
-#: ../src/extension.js:778
+#: ../src/extension.js:782
 msgid "Haze"
 msgstr "Usvaa"
 
-#: ../src/extension.js:780
+#: ../src/extension.js:784
 msgid "Smoky"
 msgstr "Savuinen sää"
 
-#: ../src/extension.js:782
+#: ../src/extension.js:786
 msgid "Blustery"
 msgstr "Myrskyisä"
 
-#: ../src/extension.js:784
+#: ../src/extension.js:788
 msgid "Windy"
 msgstr "Tuulinen"
 
-#: ../src/extension.js:786
+#: ../src/extension.js:790
 msgid "Cold"
 msgstr "Kylmä"
 
-#: ../src/extension.js:788
+#: ../src/extension.js:792
 msgid "Cloudy"
 msgstr "Pilvinen"
 
-#: ../src/extension.js:791
+#: ../src/extension.js:795
 msgid "Mostly cloudy"
 msgstr "Pilvipeite rakoilee"
 
-#: ../src/extension.js:794 ../src/extension.js:820
+#: ../src/extension.js:798 ../src/extension.js:824
 msgid "Partly cloudy"
 msgstr "Puolipilvistä"
 
-#: ../src/extension.js:796
+#: ../src/extension.js:800
 msgid "Clear"
 msgstr "Selkeää"
 
-#: ../src/extension.js:798
+#: ../src/extension.js:802
 msgid "Sunny"
 msgstr "Aurinko paistaa"
 
-#: ../src/extension.js:801
+#: ../src/extension.js:805
 msgid "Fair"
 msgstr "Lämmintä"
 
-#: ../src/extension.js:803
+#: ../src/extension.js:807
 msgid "Mixed rain and hail"
 msgstr "Puhreja ja viimaa"
 
-#: ../src/extension.js:805
+#: ../src/extension.js:809
 msgid "Hot"
 msgstr "Kuuma"
 
-#: ../src/extension.js:807
+#: ../src/extension.js:811
 msgid "Isolated thunderstorms"
 msgstr "Yksittäisiä ukkosmyrskyjä"
 
-#: ../src/extension.js:810
+#: ../src/extension.js:814
 msgid "Scattered thunderstorms"
 msgstr "Hajanaisia ukkosmyrskyjä"
 
-#: ../src/extension.js:812
+#: ../src/extension.js:816
 msgid "Scattered showers"
 msgstr "Hajanaisia sateita"
 
-#: ../src/extension.js:814 ../src/extension.js:818
+#: ../src/extension.js:818 ../src/extension.js:822
 msgid "Heavy snow"
 msgstr "Märkää lunta"
 
-#: ../src/extension.js:816
+#: ../src/extension.js:820
 msgid "Scattered snow showers"
 msgstr "Hajanaisia lumisateita"
 
-#: ../src/extension.js:822
+#: ../src/extension.js:826
 msgid "Thundershowers"
 msgstr "Ukkosta ja sadetta"
 
-#: ../src/extension.js:824
+#: ../src/extension.js:828
 msgid "Snow showers"
 msgstr "Lumikuuroja"
 
-#: ../src/extension.js:826
+#: ../src/extension.js:830
 msgid "Isolated thundershowers"
 msgstr "Yksittäisiä ukkosmyrskyjä ja sadetta"
 
-#: ../src/extension.js:829
+#: ../src/extension.js:833
 msgid "Not available"
 msgstr "Ei saatavilla"
 
-#: ../src/extension.js:876
+#: ../src/extension.js:880
 msgid "Calm"
 msgstr ""
 
-#: ../src/extension.js:878
+#: ../src/extension.js:882
 msgid "Light air"
 msgstr ""
 
-#: ../src/extension.js:880
+#: ../src/extension.js:884
 msgid "Light breeze"
 msgstr ""
 
-#: ../src/extension.js:882
+#: ../src/extension.js:886
 msgid "Gentle breeze"
 msgstr ""
 
-#: ../src/extension.js:884
+#: ../src/extension.js:888
 msgid "Moderate breeze"
 msgstr ""
 
-#: ../src/extension.js:886
+#: ../src/extension.js:890
 msgid "Fresh breeze"
 msgstr ""
 
-#: ../src/extension.js:888
+#: ../src/extension.js:892
 msgid "Strong breeze"
 msgstr ""
 
-#: ../src/extension.js:890
+#: ../src/extension.js:894
 msgid "Moderate gale"
 msgstr ""
 
-#: ../src/extension.js:892
+#: ../src/extension.js:896
 msgid "Fresh gale"
 msgstr ""
 
-#: ../src/extension.js:894
+#: ../src/extension.js:898
 msgid "Strong gale"
 msgstr ""
 
-#: ../src/extension.js:896
+#: ../src/extension.js:900
 msgid "Storm"
 msgstr ""
 
-#: ../src/extension.js:898
+#: ../src/extension.js:902
 msgid "Violent storm"
 msgstr ""
 
-#: ../src/extension.js:905
+#: ../src/extension.js:909
 msgid "Sunday"
 msgstr "Sunnuntai"
 
-#: ../src/extension.js:905
+#: ../src/extension.js:909
 msgid "Monday"
 msgstr "Maanantai"
 
-#: ../src/extension.js:905
+#: ../src/extension.js:909
 msgid "Tuesday"
 msgstr "Tiistai"
 
-#: ../src/extension.js:905
+#: ../src/extension.js:909
 msgid "Wednesday"
 msgstr "Keskiviikko"
 
-#: ../src/extension.js:905
+#: ../src/extension.js:909
 msgid "Thursday"
 msgstr "Torstai"
 
-#: ../src/extension.js:905
+#: ../src/extension.js:909
 msgid "Friday"
 msgstr "Perjantai"
 
-#: ../src/extension.js:905
+#: ../src/extension.js:909
 msgid "Saturday"
 msgstr "Launtai"
 
-#: ../src/extension.js:912
+#: ../src/extension.js:916
 msgid "N"
 msgstr ""
 
-#: ../src/extension.js:912
+#: ../src/extension.js:916
 msgid "NE"
 msgstr ""
 
-#: ../src/extension.js:912
+#: ../src/extension.js:916
 msgid "E"
 msgstr ""
 
-#: ../src/extension.js:912
+#: ../src/extension.js:916
 msgid "SE"
 msgstr ""
 
-#: ../src/extension.js:912
+#: ../src/extension.js:916
 msgid "S"
 msgstr ""
 
-#: ../src/extension.js:912
+#: ../src/extension.js:916
 msgid "SW"
 msgstr ""
 
-#: ../src/extension.js:912
+#: ../src/extension.js:916
 msgid "W"
 msgstr ""
 
-#: ../src/extension.js:912
+#: ../src/extension.js:916
 msgid "NW"
 msgstr ""
 
-#: ../src/extension.js:1190 ../src/extension.js:1319
+#: ../src/extension.js:1196 ../src/extension.js:1325
 msgid "Yesterday"
 msgstr "Eilen"
 
-#: ../src/extension.js:1192 ../src/extension.js:1321
+#: ../src/extension.js:1198 ../src/extension.js:1327
 #, python-format
 msgid "%s days ago"
 msgstr "%s päivää sitten"
 
-#: ../src/extension.js:1313
+#: ../src/extension.js:1319
 msgid "Today"
 msgstr "Tänään"
 
-#: ../src/extension.js:1315
+#: ../src/extension.js:1321
 msgid "Tomorrow"
 msgstr "Huomenna"
 
-#: ../src/extension.js:1317
+#: ../src/extension.js:1323
 #, fuzzy, python-format
 msgid "In %s days"
 msgstr "%s päivää sitten"
 
-#: ../src/extension.js:1352
+#: ../src/extension.js:1359
 msgid "Loading current weather ..."
 msgstr "Ladataan säätietoja"
 
-#: ../src/extension.js:1353
+#: ../src/extension.js:1360
 msgid "Loading future weather ..."
 msgstr "Ladataan huomisen säätietoja"
 
-#: ../src/extension.js:1386
+#: ../src/extension.js:1393
 msgid "Loading ..."
 msgstr "Ladataan..."
 
-#: ../src/extension.js:1389
+#: ../src/extension.js:1396
 msgid "Please wait"
 msgstr "Odota"
 
-#: ../src/extension.js:1434
-msgid "Feel like:"
+#: ../src/extension.js:1441
+#, fuzzy
+msgid "Feels like:"
 msgstr "Tuntuu:"
 
-#: ../src/extension.js:1436
+#: ../src/extension.js:1443
 msgid "Humidity:"
 msgstr "Kosteusprosentti:"
 
-#: ../src/extension.js:1438
+#: ../src/extension.js:1445
 msgid "Pressure:"
 msgstr "Ilmanpaine:"
 
-#: ../src/extension.js:1440
+#: ../src/extension.js:1447
 msgid "Wind:"
 msgstr "Tuulen nopeus:"
 
-#: ../src/weather-settings.js.in:73
-msgid "Name of the city"
-msgstr "Kaupungin nimi"
-
-#: ../src/weather-settings.js.in:235
-#, python-format
-msgid "Remove %s ?"
-msgstr "Poistetaanko %s?"
-
-#: ../src/weather-settings.js.in:693
+#: ../src/prefs.js:120
 msgid "Temperature Unit"
 msgstr "Lämpötila"
 
-#: ../src/weather-settings.js.in:695
+#: ../src/prefs.js:122
 msgid "Wind Speed Unit"
 msgstr "Tuulen nopeuden yksikkö"
 
-#: ../src/weather-settings.js.in:697
+#: ../src/prefs.js:124
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Ilmanpaine:"
 
-#: ../src/weather-settings.js.in:699
+#: ../src/prefs.js:126
 msgid "Position in Panel"
 msgstr "Sijainti paneelissa"
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:127
 msgid "Center"
 msgstr "Keskellä"
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:127
 msgid "Right"
 msgstr "Oikealla"
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:127
 msgid "Left"
 msgstr "Vasemmalla"
 
-#: ../src/weather-settings.js.in:701
+#: ../src/prefs.js:128
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/weather-settings.js.in:703
+#: ../src/prefs.js:130
 msgid "Translate Conditions"
 msgstr "Käännä olosuhteet"
 
-#: ../src/weather-settings.js.in:705
+#: ../src/prefs.js:132
 msgid "Symbolic Icons"
 msgstr "Symboliset kuvakkeet"
 
-#: ../src/weather-settings.js.in:707
+#: ../src/prefs.js:134
 msgid "Temperature in Panel"
 msgstr "Lämpötila"
 
-#: ../src/weather-settings.js.in:709
+#: ../src/prefs.js:136
 msgid "Conditions in Panel"
 msgstr "Olosuhteet paneelissa"
+
+#: ../src/prefs.js:256
+msgid "Name of the city"
+msgstr "Kaupungin nimi"
+
+#: ../src/prefs.js:431
+#, python-format
+msgid "Remove %s ?"
+msgstr "Poistetaanko %s?"
