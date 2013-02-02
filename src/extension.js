@@ -4,7 +4,7 @@
  *  - Displays a small weather information on the top panel.
  *  - On click, gives a popup with details about the weather.
  *
- * Copyright (C) 2011 - 2012
+ * Copyright (C) 2011 - 2013
  *     ecyrbe <ecyrbe+spam@gmail.com>,
  *     Timur Kristof <venemo@msn.com>,
  *     Elad Alfassa <elad@fedoraproject.org>,
@@ -1438,7 +1438,7 @@ const WeatherMenuButton = new Lang.Class({
         rb.add_actor(rb_captions);
         rb.add_actor(rb_values);
 
-        rb_captions.add_actor(new St.Label({text: _('Feel like:')}));
+        rb_captions.add_actor(new St.Label({text: _('Feels like:')}));
         rb_values.add_actor(this._currentWeatherTemperature);
         rb_captions.add_actor(new St.Label({text: _('Humidity:')}));
         rb_values.add_actor(this._currentWeatherHumidity);
