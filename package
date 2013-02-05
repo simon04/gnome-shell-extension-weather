@@ -7,6 +7,9 @@ PROJECT="cinnamon-weather"
 PACKAGE="${PROJECT}-${VERSION}"
 TARGET="${BASEDIR}/${PACKAGE}"
 DEV_BRANCH="master"
+STAGE_BRANCH="staging"
+DEPLOY_BRANCH="master"
+REMOTE="origin"
 MANIFEST="manifest"
 VERSION_FILE="metadata.json"
 GIT_HOST="https://github.com"
@@ -85,9 +88,9 @@ do_tag() {
 	check_pgp
 
 	cat << EOF
-Rebasing staging onto ${DEV_BRANCH}...
+Rebasing ${STAGE_BRANCH} onto ${DEV_BRANCH}...
 EOF
-	git checkout staging
+	git checkout ${STAGE_BRANCH}
 	git rebase ${DEV_BRANCH}
 	cat << EOF
 Bumping version (${VERSION}) in ${VERSION_FILE}...
@@ -102,17 +105,17 @@ EOF
 	git diff --quiet --staged || git commit -m 'bump version'
 	git tag -u ${GH_KEY_ID} v${VERSION}
 	cat << EOF
-Done.  Now run './deploy ${VERSION}' to merge into master and push.
+Done.  Now run './deploy ${VERSION}' to merge into ${DEPLOY_BRANCH} and push.
 
 EOF
 	git checkout ${DEV_BRANCH}
 }
 
 do_deploy() {
-	git checkout master
-	git merge staging
+	git checkout ${DEPLOY_BRANCH}
+	git merge ${STAGE_BRANCH}
 	validate_version
-	git push origin master
+	git push ${REMOTE} ${DEPLOY_BRANCH}
 	git push --tags
 	cat << EOF
 Your new tag is at ${DEPLOY_URL}.
