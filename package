@@ -112,7 +112,7 @@ do_deploy() {
 	git checkout master
 	git merge staging
 	validate_version
-	git push
+	git push origin master
 	git push --tags
 	cat << EOF
 Your new tag is at ${DEPLOY_URL}.
