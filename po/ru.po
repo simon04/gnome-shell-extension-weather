@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-02 18:13+0100\n"
-"PO-Revision-Date: 2013-02-04 14:28+0500\n"
+"PO-Revision-Date: 2013-02-06 14:41+0500\n"
 "Last-Translator: Timon <timosha@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -295,15 +295,15 @@ msgstr "С"
 
 #: ../src/extension.js:916
 msgid "NE"
-msgstr "СЗ"
+msgstr "СВ"
 
 #: ../src/extension.js:916
 msgid "E"
-msgstr "З"
+msgstr "В"
 
 #: ../src/extension.js:916
 msgid "SE"
-msgstr "ЮЗ"
+msgstr "ЮВ"
 
 #: ../src/extension.js:916
 msgid "S"
@@ -311,7 +311,7 @@ msgstr "Ю"
 
 #: ../src/extension.js:916
 msgid "SW"
-msgstr "ЮВ"
+msgstr "ЮЗ"
 
 #: ../src/extension.js:916
 msgid "W"
@@ -319,7 +319,7 @@ msgstr "З"
 
 #: ../src/extension.js:916
 msgid "NW"
-msgstr "СВ"
+msgstr "СЗ"
 
 #: ../src/extension.js:1196 ../src/extension.js:1325
 msgid "Yesterday"
@@ -377,15 +377,15 @@ msgstr "Ветер:"
 
 #: ../src/prefs.js:120
 msgid "Temperature Unit"
-msgstr "Температура"
+msgstr "Единицы измерения температуры"
 
 #: ../src/prefs.js:122
 msgid "Wind Speed Unit"
-msgstr "Скорость ветра"
+msgstr "Единицы измерения скорости ветра"
 
 #: ../src/prefs.js:124
 msgid "Pressure Unit"
-msgstr "Давление"
+msgstr "Единицы измерения давления"
 
 #: ../src/prefs.js:126
 msgid "Position in Panel"
@@ -405,7 +405,7 @@ msgstr "Слева"
 
 #: ../src/prefs.js:128
 msgid "Wind Direction by Arrows"
-msgstr "Направление ветра стрелками"
+msgstr "Отображать направление ветра стрелками"
 
 #: ../src/prefs.js:130
 msgid "Translate Conditions"
@@ -413,15 +413,15 @@ msgstr "Переводить погодные условия"
 
 #: ../src/prefs.js:132
 msgid "Symbolic Icons"
-msgstr "Символические значки"
+msgstr "Использовать символические значки"
 
 #: ../src/prefs.js:134
 msgid "Temperature in Panel"
-msgstr "Показывать температуру на панели"
+msgstr "Отображать температуру на панели"
 
 #: ../src/prefs.js:136
 msgid "Conditions in Panel"
-msgstr "Показывать погодные условия на панели"
+msgstr "Отображать погодные условия на панели"
 
 #: ../src/prefs.js:256
 msgid "Name of the city"
