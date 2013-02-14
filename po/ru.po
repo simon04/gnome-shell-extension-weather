@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-02 18:13+0100\n"
+"POT-Creation-Date: 2013-02-14 03:45+0100\n"
 "PO-Revision-Date: 2013-02-06 14:41+0500\n"
 "Last-Translator: Timon <timosha@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
@@ -36,12 +36,12 @@ msgstr "Обновить информацию о погоде"
 msgid "Weather Settings"
 msgstr "Настройки апплета погоды"
 
-#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:529
+#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:550
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Схема «%s» не найдена"
 
-#: ../src/extension.js:524 ../src/prefs.js:738
+#: ../src/extension.js:524 ../src/prefs.js:759
 msgid "Invalid city"
 msgstr "Неправильный город"
 
@@ -113,7 +113,7 @@ msgstr "Снег"
 msgid "Hail"
 msgstr "Град"
 
-#: ../src/extension.js:776 http://en.wikipedia.org/wiki/Ice_pellets
+#: ../src/extension.js:776
 msgid "Sleet"
 msgstr "Снежная крупа"
 
@@ -375,59 +375,59 @@ msgstr "Давление:"
 msgid "Wind:"
 msgstr "Ветер:"
 
-#: ../src/prefs.js:120
+#: ../src/prefs.js:124
 msgid "Temperature Unit"
 msgstr "Единицы измерения температуры"
 
-#: ../src/prefs.js:122
+#: ../src/prefs.js:126
 msgid "Wind Speed Unit"
 msgstr "Единицы измерения скорости ветра"
 
-#: ../src/prefs.js:124
+#: ../src/prefs.js:128
 msgid "Pressure Unit"
 msgstr "Единицы измерения давления"
 
-#: ../src/prefs.js:126
+#: ../src/prefs.js:130
 msgid "Position in Panel"
 msgstr "Положение на панели"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Center"
 msgstr "По центру"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Right"
 msgstr "Справа"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Left"
 msgstr "Слева"
 
-#: ../src/prefs.js:128
+#: ../src/prefs.js:132
 msgid "Wind Direction by Arrows"
 msgstr "Отображать направление ветра стрелками"
 
-#: ../src/prefs.js:130
+#: ../src/prefs.js:134
 msgid "Translate Conditions"
 msgstr "Переводить погодные условия"
 
-#: ../src/prefs.js:132
+#: ../src/prefs.js:136
 msgid "Symbolic Icons"
 msgstr "Использовать символические значки"
 
-#: ../src/prefs.js:134
+#: ../src/prefs.js:138
 msgid "Temperature in Panel"
 msgstr "Отображать температуру на панели"
 
-#: ../src/prefs.js:136
+#: ../src/prefs.js:140
 msgid "Conditions in Panel"
 msgstr "Отображать погодные условия на панели"
 
-#: ../src/prefs.js:256
+#: ../src/prefs.js:277
 msgid "Name of the city"
 msgstr "Название города"
 
-#: ../src/prefs.js:431
+#: ../src/prefs.js:452
 #, python-format
 msgid "Remove %s ?"
 msgstr "Удалить %s?"

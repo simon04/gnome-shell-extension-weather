@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-02 18:13+0100\n"
+"POT-Creation-Date: 2013-02-14 03:45+0100\n"
 "PO-Revision-Date: 2013-01-18 10:25+0800\n"
 "Last-Translator: Meng Zhuo <mengzhuo1203@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -33,12 +33,12 @@ msgstr "重载天气信息"
 msgid "Weather Settings"
 msgstr "天气设定"
 
-#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:529
+#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:550
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "没有找到设定（Schema） \"%s\" "
 
-#: ../src/extension.js:524 ../src/prefs.js:738
+#: ../src/extension.js:524 ../src/prefs.js:759
 msgid "Invalid city"
 msgstr "无效的城市"
 
@@ -374,59 +374,59 @@ msgstr "气压："
 msgid "Wind:"
 msgstr "风力："
 
-#: ../src/prefs.js:120
+#: ../src/prefs.js:124
 msgid "Temperature Unit"
 msgstr "温度："
 
-#: ../src/prefs.js:122
+#: ../src/prefs.js:126
 msgid "Wind Speed Unit"
 msgstr "风速单位"
 
-#: ../src/prefs.js:124
+#: ../src/prefs.js:128
 msgid "Pressure Unit"
 msgstr "气压"
 
-#: ../src/prefs.js:126
+#: ../src/prefs.js:130
 msgid "Position in Panel"
 msgstr "面板中的位置"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Center"
 msgstr "中部"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Right"
 msgstr "右部"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Left"
 msgstr "左部"
 
-#: ../src/prefs.js:128
+#: ../src/prefs.js:132
 msgid "Wind Direction by Arrows"
 msgstr "使用箭头作为风向标志"
 
-#: ../src/prefs.js:130
+#: ../src/prefs.js:134
 msgid "Translate Conditions"
 msgstr "翻译"
 
-#: ../src/prefs.js:132
+#: ../src/prefs.js:136
 msgid "Symbolic Icons"
 msgstr "象征性图标"
 
-#: ../src/prefs.js:134
+#: ../src/prefs.js:138
 msgid "Temperature in Panel"
 msgstr "温度："
 
-#: ../src/prefs.js:136
+#: ../src/prefs.js:140
 msgid "Conditions in Panel"
 msgstr "在面板中显示天气条件"
 
-#: ../src/prefs.js:256
+#: ../src/prefs.js:277
 msgid "Name of the city"
 msgstr "城市名"
 
-#: ../src/prefs.js:431
+#: ../src/prefs.js:452
 #, python-format
 msgid "Remove %s ?"
 msgstr "删除 %s ?"

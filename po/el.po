@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-02 18:13+0100\n"
+"POT-Creation-Date: 2013-02-14 03:45+0100\n"
 "PO-Revision-Date: 2013-01-28 22:38+0100\n"
 "Last-Translator: Dancer69\n"
 "Language: el\n"
@@ -31,12 +31,12 @@ msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
 msgid "Weather Settings"
 msgstr "Ρυθμίσεις Καιρού"
 
-#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:529
+#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:550
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Το Σχήμα \"%s\" δε βρέθηκε"
 
-#: ../src/extension.js:524 ../src/prefs.js:738
+#: ../src/extension.js:524 ../src/prefs.js:759
 msgid "Invalid city"
 msgstr "Μη έγκυρη πόλη"
 
@@ -371,60 +371,60 @@ msgstr "Πίεση:"
 msgid "Wind:"
 msgstr "Άνεμος:"
 
-#: ../src/prefs.js:120
+#: ../src/prefs.js:124
 msgid "Temperature Unit"
 msgstr "Μονάδα Θερμοκρασίας"
 
-#: ../src/prefs.js:122
+#: ../src/prefs.js:126
 msgid "Wind Speed Unit"
 msgstr "Ταχύτητα Ανέμου"
 
-#: ../src/prefs.js:124
+#: ../src/prefs.js:128
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Μονάδα Πίεσης"
 
-#: ../src/prefs.js:126
+#: ../src/prefs.js:130
 msgid "Position in Panel"
 msgstr "Θέση στον Πίνακα"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Center"
 msgstr "Κέντρο"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Right"
 msgstr "Δεξιά"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Left"
 msgstr "Αριστερά"
 
-#: ../src/prefs.js:128
+#: ../src/prefs.js:132
 msgid "Wind Direction by Arrows"
 msgstr "Κατεύθυνση Ανέμου με Βέλη"
 
-#: ../src/prefs.js:130
+#: ../src/prefs.js:134
 msgid "Translate Conditions"
 msgstr "Μετάφραση Καιρικών Συνθηκών"
 
-#: ../src/prefs.js:132
+#: ../src/prefs.js:136
 msgid "Symbolic Icons"
 msgstr "Εικονίδια Συμβόλων"
 
-#: ../src/prefs.js:134
+#: ../src/prefs.js:138
 msgid "Temperature in Panel"
 msgstr "Θερμοκρασία στον Πίνακα"
 
-#: ../src/prefs.js:136
+#: ../src/prefs.js:140
 msgid "Conditions in Panel"
 msgstr "Συνθήκες στον πίνακα"
 
-#: ../src/prefs.js:256
+#: ../src/prefs.js:277
 msgid "Name of the city"
 msgstr "Όνομα πόλης"
 
-#: ../src/prefs.js:431
+#: ../src/prefs.js:452
 #, python-format
 msgid "Remove %s ?"
 msgstr "Αφαίρεση %s ;"

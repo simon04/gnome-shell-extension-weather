@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-02 18:13+0100\n"
+"POT-Creation-Date: 2013-02-14 03:45+0100\n"
 "PO-Revision-Date: 2012-06-17 17:04+0700\n"
 "Last-Translator: Ngô Trung <ndtrung4419@gmail.com>\n"
 "Language-Team: \n"
@@ -33,12 +33,12 @@ msgstr "Tải lại dữ liệu thời tiết"
 msgid "Weather Settings"
 msgstr "Thiết lập thời tiết"
 
-#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:529
+#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:550
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Không tìm thấy schema \"%s\"."
 
-#: ../src/extension.js:524 ../src/prefs.js:738
+#: ../src/extension.js:524 ../src/prefs.js:759
 msgid "Invalid city"
 msgstr "Không có thành phố này"
 
@@ -373,60 +373,60 @@ msgstr "Áp suất:"
 msgid "Wind:"
 msgstr "Gió:"
 
-#: ../src/prefs.js:120
+#: ../src/prefs.js:124
 msgid "Temperature Unit"
 msgstr "Đơn vị đo nhiệt độ"
 
-#: ../src/prefs.js:122
+#: ../src/prefs.js:126
 msgid "Wind Speed Unit"
 msgstr "Đơn vị tốc độ gió"
 
-#: ../src/prefs.js:124
+#: ../src/prefs.js:128
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Áp suất:"
 
-#: ../src/prefs.js:126
+#: ../src/prefs.js:130
 msgid "Position in Panel"
 msgstr "Vị trí trên thanh pa-nen"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Center"
 msgstr "Ở giữa"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Right"
 msgstr "Bên phải"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Left"
 msgstr "Bên trái"
 
-#: ../src/prefs.js:128
+#: ../src/prefs.js:132
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/prefs.js:130
+#: ../src/prefs.js:134
 msgid "Translate Conditions"
 msgstr "Dịch tình hình thời tiết"
 
-#: ../src/prefs.js:132
+#: ../src/prefs.js:136
 msgid "Symbolic Icons"
 msgstr "Biểu tượng đơn giản"
 
-#: ../src/prefs.js:134
+#: ../src/prefs.js:138
 msgid "Temperature in Panel"
 msgstr "Hiện nhiệt độ trên pa-nen"
 
-#: ../src/prefs.js:136
+#: ../src/prefs.js:140
 msgid "Conditions in Panel"
 msgstr "Hiện thời tiết trên pa-nen"
 
-#: ../src/prefs.js:256
+#: ../src/prefs.js:277
 msgid "Name of the city"
 msgstr "Tên thành phố"
 
-#: ../src/prefs.js:431
+#: ../src/prefs.js:452
 #, python-format
 msgid "Remove %s ?"
 msgstr "Bạn có muốn xóa %s?"

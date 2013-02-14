@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-02 18:13+0100\n"
+"POT-Creation-Date: 2013-02-14 03:45+0100\n"
 "PO-Revision-Date: 2012-05-13 22:40+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -32,12 +32,12 @@ msgstr ""
 msgid "Weather Settings"
 msgstr ""
 
-#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:529
+#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:550
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr ""
 
-#: ../src/extension.js:524 ../src/prefs.js:738
+#: ../src/extension.js:524 ../src/prefs.js:759
 msgid "Invalid city"
 msgstr ""
 
@@ -371,60 +371,60 @@ msgstr "Lufttryck:"
 msgid "Wind:"
 msgstr "Vind:"
 
-#: ../src/prefs.js:120
+#: ../src/prefs.js:124
 msgid "Temperature Unit"
 msgstr "Temperatur:"
 
-#: ../src/prefs.js:122
+#: ../src/prefs.js:126
 msgid "Wind Speed Unit"
 msgstr ""
 
-#: ../src/prefs.js:124
+#: ../src/prefs.js:128
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Lufttryck:"
 
-#: ../src/prefs.js:126
+#: ../src/prefs.js:130
 msgid "Position in Panel"
 msgstr ""
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Center"
 msgstr ""
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Right"
 msgstr ""
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Left"
 msgstr ""
 
-#: ../src/prefs.js:128
+#: ../src/prefs.js:132
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/prefs.js:130
+#: ../src/prefs.js:134
 msgid "Translate Conditions"
 msgstr ""
 
-#: ../src/prefs.js:132
+#: ../src/prefs.js:136
 msgid "Symbolic Icons"
 msgstr ""
 
-#: ../src/prefs.js:134
+#: ../src/prefs.js:138
 msgid "Temperature in Panel"
 msgstr "Temperatur:"
 
-#: ../src/prefs.js:136
+#: ../src/prefs.js:140
 msgid "Conditions in Panel"
 msgstr ""
 
-#: ../src/prefs.js:256
+#: ../src/prefs.js:277
 msgid "Name of the city"
 msgstr ""
 
-#: ../src/prefs.js:431
+#: ../src/prefs.js:452
 #, python-format
 msgid "Remove %s ?"
 msgstr ""

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-02 18:13+0100\n"
-"PO-Revision-Date: 2012-10-29 19:19+0100\n"
+"POT-Creation-Date: 2013-02-14 03:45+0100\n"
+"PO-Revision-Date: 2013-02-14 03:48+0100\n"
 "Last-Translator: Christian METZLER (Neroth) <neroth@xeked.com>\n"
 "Language-Team: Français <ecyrbe@gmail.com>\n"
 "Language: fr\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../src/extension.js:125
 msgid "..."
@@ -35,12 +36,12 @@ msgstr "Recharger les informations météo"
 msgid "Weather Settings"
 msgstr "Paramètres de la météo"
 
-#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:529
+#: ../src/extension.js:233 ../src/extension.js:243 ../src/prefs.js:550
 #, python-format
 msgid "Schema \"%s\" not found."
 msgstr "Schéma \"%s\" manquant."
 
-#: ../src/extension.js:524 ../src/prefs.js:738
+#: ../src/extension.js:524 ../src/prefs.js:759
 msgid "Invalid city"
 msgstr "Ville invalide"
 
@@ -258,7 +259,7 @@ msgstr "Tempête"
 
 #: ../src/extension.js:902
 msgid "Violent storm"
-msgstr ""
+msgstr "Violente tempête"
 
 #: ../src/extension.js:909
 msgid "Sunday"
@@ -359,7 +360,6 @@ msgid "Please wait"
 msgstr "Patientez s'il vous plaît"
 
 #: ../src/extension.js:1441
-#, fuzzy
 msgid "Feels like:"
 msgstr "Ressentie :"
 
@@ -375,59 +375,59 @@ msgstr "Pression :"
 msgid "Wind:"
 msgstr "Vent :"
 
-#: ../src/prefs.js:120
+#: ../src/prefs.js:124
 msgid "Temperature Unit"
 msgstr "Unité de température"
 
-#: ../src/prefs.js:122
+#: ../src/prefs.js:126
 msgid "Wind Speed Unit"
 msgstr "Unité de vitesse du vent"
 
-#: ../src/prefs.js:124
+#: ../src/prefs.js:128
 msgid "Pressure Unit"
 msgstr "Unité de pression"
 
-#: ../src/prefs.js:126
+#: ../src/prefs.js:130
 msgid "Position in Panel"
 msgstr "Position sur le tableau de bord"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Center"
 msgstr "Centre"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Right"
 msgstr "Droite"
 
-#: ../src/prefs.js:127
+#: ../src/prefs.js:131
 msgid "Left"
 msgstr "Gauche"
 
-#: ../src/prefs.js:128
+#: ../src/prefs.js:132
 msgid "Wind Direction by Arrows"
 msgstr "Direction du vent par des flèches"
 
-#: ../src/prefs.js:130
+#: ../src/prefs.js:134
 msgid "Translate Conditions"
 msgstr "Traduction des conditions"
 
-#: ../src/prefs.js:132
+#: ../src/prefs.js:136
 msgid "Symbolic Icons"
 msgstr "Icones symboliques"
 
-#: ../src/prefs.js:134
+#: ../src/prefs.js:138
 msgid "Temperature in Panel"
 msgstr "Température sur le tableau de bord"
 
-#: ../src/prefs.js:136
+#: ../src/prefs.js:140
 msgid "Conditions in Panel"
 msgstr "Conditions sur le tableau de bord"
 
-#: ../src/prefs.js:256
+#: ../src/prefs.js:277
 msgid "Name of the city"
 msgstr "Nom de la ville"
 
-#: ../src/prefs.js:431
+#: ../src/prefs.js:452
 #, python-format
 msgid "Remove %s ?"
 msgstr "Supprimer %s ?"
