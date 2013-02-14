@@ -59,15 +59,9 @@ const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
 const _httpSession = new Soup.SessionAsync();
 Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
 
-const Window = new Gtk.Builder();
-Window.add_from_file(EXTENSIONDIR+"/weather-settings.ui");
-const MainWidget = Window.get_object("main-widget");
-const treeview = Window.get_object("tree-treeview");
-const liststore = Window.get_object("liststore");
-const Iter = liststore.get_iter_first();
 let mCities = null;
 
-const PrefsWidget = new GObject.Class(
+const WeatherPrefsWidget = new GObject.Class(
 {
 Name: 'WeatherExtension.Prefs.Widget',
 GTypeName: 'WeatherExtensionPrefsWidget',
@@ -81,32 +75,42 @@ Extends: Gtk.Box,
 
 	this.refreshUI();
 
-	this.add(MainWidget);
+	this.add(this.MainWidget);
 	},
+
+	Window : new Gtk.Builder(),
 
 	initWindow : function()
 	{
 	let that = this;
+	mCities = null;
 
-		Window.get_object("tree-toolbutton-add").connect("clicked",function()
+	this.Window.add_from_file(EXTENSIONDIR+"/weather-settings.ui");
+
+	this.MainWidget = this.Window.get_object("main-widget");
+	this.treeview = this.Window.get_object("tree-treeview");
+	this.liststore = this.Window.get_object("liststore");
+	this.Iter = this.liststore.get_iter_first();
+
+		this.Window.get_object("tree-toolbutton-add").connect("clicked",function()
 		{
 		that.addCity();
 		});
 
-		Window.get_object("tree-toolbutton-remove").connect("clicked",function()
+		this.Window.get_object("tree-toolbutton-remove").connect("clicked",function()
 		{
 		that.removeCity();
 		});
 
-		Window.get_object("treeview-selection").connect("changed",function(selection)
+		this.Window.get_object("treeview-selection").connect("changed",function(selection)
 		{
 		that.selectionChanged(selection);
 		});
 
-	treeview.set_model(liststore);
+	this.treeview.set_model(this.liststore);
 
 	let column = new Gtk.TreeViewColumn()
-	treeview.append_column(column);
+	this.treeview.append_column(column);
 
 	let renderer = new Gtk.CellRendererText();
 	column.pack_start(renderer,null);
@@ -139,12 +143,17 @@ Extends: Gtk.Box,
 
 	refreshUI : function()
 	{
-	Window.get_object("tree-toolbutton-remove").sensitive = Boolean(this.city.length);
+	this.MainWidget = this.Window.get_object("main-widget");
+	this.treeview = this.Window.get_object("tree-treeview");
+	this.liststore = this.Window.get_object("liststore");
+	this.Iter = this.liststore.get_iter_first();
+
+	this.Window.get_object("tree-toolbutton-remove").sensitive = Boolean(this.city.length);
 
 		if(mCities != this.city)
 		{
-			if(typeof liststore != "undefined")
-			liststore.clear();
+			if(typeof this.liststore != "undefined")
+			this.liststore.clear();
 
 			if(this.city.length > 0)
 			{
@@ -153,12 +162,12 @@ Extends: Gtk.Box,
 				if(city && typeof city == "string")
 				city = [city];
 
-			let current = liststore.get_iter_first();
+			let current = this.liststore.get_iter_first();
 
 				for(let i in city)
 				{
-				current = liststore.append();
-				liststore.set_value(current, 0, this.extractLocation(city[i]));
+				current = this.liststore.append();
+				this.liststore.set_value(current, 0, this.extractLocation(city[i]));
 				}
 			}
 
@@ -175,10 +184,11 @@ Extends: Gtk.Box,
 
 	initConfigWidget : function()
 	{
-	let a = Window.get_object("right-widget-table");
+	this.inc(1);
+	let a = this.Window.get_object("right-widget-table");
 	a.visible = 1;
 	a.can_focus = 0;
-	this.widget = a;
+	this.right_widget = a;
 	},
 
 	x : [0,1],
@@ -189,17 +199,28 @@ Extends: Gtk.Box,
 
 	inc : function()
 	{
+		if(arguments[0])
+		{
+		this.x[0] = 0;
+		this.x[1] = 1;
+		this.y[0] = 0;
+		this.y[1] = 1;
+		return 0;
+		}
+
 		if(this.x[0] == 1)
 		{
 		this.x[0] = 0;
 		this.x[1] = 1;
 		this.y[0] += 1;
 		this.y[1] += 1;
+		return 0;
 		}
 		else
 		{
 		this.x[0] += 1;
 		this.x[1] += 1;
+		return 0;
 		}
 	},
 
@@ -208,7 +229,7 @@ Extends: Gtk.Box,
 	let l = new Gtk.Label({label:text,xalign:0});
 	l.visible = 1;
 	l.can_focus = 0;
-	this.widget.attach(l, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
+	this.right_widget.attach(l, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
 	this.inc();
 	},
 
@@ -224,7 +245,7 @@ Extends: Gtk.Box,
 		cf.append_text(a[i]);
 	cf.active = this[b];
 	cf.connect("changed",function(){that[b] = arguments[0].active;});
-	this.widget.attach(cf, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
+	this.right_widget.attach(cf, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
 	this.inc();
 	},
 
@@ -237,13 +258,13 @@ Extends: Gtk.Box,
 	sw.can_focus = 0;
 	sw.active = this[a];
 	sw.connect("notify::active",function(){that[a] = arguments[0].active;});
-	this.widget.attach(sw, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
+	this.right_widget.attach(sw, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
 	this.inc();
 	},
 
 	selectionChanged : function(select)
 	{
-	let a = select.get_selected_rows(liststore)[0][0];
+	let a = select.get_selected_rows(this.liststore)[0][0];
 
 		if(typeof a != "undefined")
 			if(this.actual_city != parseInt(a.to_string()))
@@ -331,7 +352,7 @@ Extends: Gtk.Box,
 				return 0;
 			completionModel.clear();
 
-			let current = liststore.get_iter_first();
+			let current = this.liststore.get_iter_first();
 
 				if(n > 1)
 				{
@@ -480,7 +501,7 @@ Extends: Gtk.Box,
 		if(arguments[0])
 		path = arguments[0];
 	path = new Gtk.TreePath.new_from_string(String(path));
-	treeview.get_selection().select_path(path);
+	this.treeview.get_selection().select_path(path);
 	},
 
 	loadJsonAsync : function(url, fun, id)
@@ -528,7 +549,7 @@ Extends: Gtk.Box,
 	 	if (Gio.Settings.list_schemas().indexOf(schema) == -1)
 		throw _("Schema \"%s\" not found.").format(schema);
    	this.Settings = Convenience.getSettings(schema);	
-	this.Settings.connect("changed",function(){that.refreshUI();});
+	this.Settings.connect("changed", function(){that.refreshUI();});
 	},
 
 	get units()
@@ -754,7 +775,7 @@ Convenience.initTranslations('gnome-shell-extension-weather');
 
 function buildPrefsWidget()
 {
-let prefs = new PrefsWidget();
-prefs.show_all();
-return prefs;
+let widget = new WeatherPrefsWidget();
+widget.show_all();
+return widget;
 }
