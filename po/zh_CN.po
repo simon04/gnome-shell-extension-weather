@@ -212,12 +212,11 @@ msgstr "不可用"
 
 #: ../src/extension.js:880
 msgid "Calm"
-msgstr "平静"
+msgstr "风平浪静"
 
 #: ../src/extension.js:882
-#, fuzzy
 msgid "Light air"
-msgstr "轻空气"
+msgstr "轻微气流"
 
 #: ../src/extension.js:884
 msgid "Light breeze"
@@ -245,7 +244,7 @@ msgstr "中度风"
 
 #: ../src/extension.js:896
 msgid "Fresh gale"
-msgstr "清新"
+msgstr "清风"
 
 #: ../src/extension.js:898
 msgid "Strong gale"
@@ -326,7 +325,7 @@ msgstr "昨天"
 #: ../src/extension.js:1198 ../src/extension.js:1327
 #, python-format
 msgid "%s days ago"
-msgstr "%s 天之前"
+msgstr "%s天之前"
 
 #: ../src/extension.js:1319
 msgid "Today"
@@ -428,4 +427,4 @@ msgstr "城市名"
 #: ../src/prefs.js:452
 #, python-format
 msgid "Remove %s ?"
-msgstr "删除 %s ?"
+msgstr "删除 %s 吗？"
