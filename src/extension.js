@@ -836,7 +836,7 @@ const WeatherMenuButton = new Lang.Class({
 
 	toCelsius: function(t)
 	{
-	return String(Math.round((Number(t)-32)*0.555556));
+	return String(Math.round((Number(t)-32)/1.8));
 	},
 
 	toKelvin: function(t)
