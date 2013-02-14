@@ -358,9 +358,8 @@ msgid "Please wait"
 msgstr "请等待"
 
 #: ../src/extension.js:1441
-#, fuzzy
 msgid "Feels like:"
-msgstr "体感:"
+msgstr "体感："
 
 #: ../src/extension.js:1443
 msgid "Humidity:"
