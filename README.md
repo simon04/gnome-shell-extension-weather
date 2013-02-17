@@ -29,13 +29,13 @@ Then, install *gnome-shell-extension-weather* (root password required):
 
 	su -c 'yum install gnome-shell-extension-weather'
 
-### [Arch Linux](https://aur.archlinux.org/packages.php?ID=56028)
+### [Arch Linux](https://aur.archlinux.org/packages/gnome-shell-extension-weather-git/)
 
 Download the package from AUR, make and install it:
 
-	wget https://aur.archlinux.org/packages/gn/gnome-shell-extension-weather-neroth-git/gnome-shell-extension-weather-neroth-git.tar.gz
-	tar xvzf gnome-shell-extension-weather-neroth-git.tar.gz
-	cd gnome-shell-extension-weather-neroth-git && makepkg -si
+	wget https://aur.archlinux.org/packages/gn/gnome-shell-extension-weather-git/gnome-shell-extension-weather-git.tar.gz
+	tar xvzf gnome-shell-extension-weather-git.tar.gz
+	cd gnome-shell-extension-weather-git && makepkg -si
 
 ### [ALT Linux](http://packages.altlinux.org/en/Sisyphus/srpms/gnome-shell-extension-weather)
 
