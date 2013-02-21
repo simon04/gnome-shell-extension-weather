@@ -224,6 +224,12 @@ const WeatherMenuButton = new Lang.Class({
 	this.refreshWeather(true);
 	},
 
+	stop : function()
+	{
+	this._settings.disconnect(this._settingsC);
+	this._settingsInterface.disconnect(this._settingsInterfaceC);
+	},
+
 	loadConfig : function()
 	{
 	var that = this;
@@ -231,7 +237,7 @@ const WeatherMenuButton = new Lang.Class({
 	 	if (Gio.Settings.list_schemas().indexOf(schema) == -1)
 		throw _("Schema \"%s\" not found.").replace("%s",schema);
    	this._settings = new Gio.Settings({ schema: schema });
-	this._settings.connect("changed",function(){that.refreshWeather(false);});
+	this._settingsC = this._settings.connect("changed",function(){that.refreshWeather(false);});
 	},
 
 	loadConfigInterface : function()
@@ -241,7 +247,7 @@ const WeatherMenuButton = new Lang.Class({
 	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
 		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
    	this._settingsInterface = new Gio.Settings({ schema: schemaInterface });
-	this._settingsInterface.connect("changed",function(){that.refreshWeather(false);});
+	this._settingsInterfaceC = this._settingsInterface.connect("changed",function(){that.refreshWeather(false);});
 	},
 
 	get _clockFormat()
@@ -587,7 +593,7 @@ const WeatherMenuButton = new Lang.Class({
 	},
 
     _onPreferencesActivate : function() {
-    Util.spawn(["gnome-shell-extension-prefs","weather@gnome-shell-extensions.gnome.org"]);
+    Util.spawn(["gnome-shell-extension-prefs","weather-extension@xeked.com"]);
     return 0;
     },
 
@@ -1469,7 +1475,6 @@ const WeatherMenuButton = new Lang.Class({
         box.add_actor(this._currentWeatherIcon);
         box.add_actor(xb);
         this._currentWeather.set_child(box);
-
     },
 
     rebuildFutureWeatherUi: function() {
@@ -1514,7 +1519,6 @@ const WeatherMenuButton = new Lang.Class({
             this._forecast[i] = forecastWeather;
             this._forecastBox.add_actor(bb);
         }
-
     }
 });
 
@@ -1529,7 +1533,6 @@ function enable() {
 }
 
 function disable() {
-    weatherMenu._settings.disconnect("changed");
-    weatherMenu._settingsInterface.disconnect("changed");
+    weatherMenu.stop();
     weatherMenu.destroy();
 }
