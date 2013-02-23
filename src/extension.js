@@ -224,7 +224,7 @@ const WeatherMenuButton = new Lang.Class({
 	this.refreshWeather(true);
 	},
 
-	stop : function()
+	stopConnect : function()
 	{
 	this._settings.disconnect(this._settingsC);
 	this._settingsInterface.disconnect(this._settingsInterfaceC);
@@ -1533,6 +1533,6 @@ function enable() {
 }
 
 function disable() {
-    weatherMenu.stop();
+    weatherMenu.stopConnect();
     weatherMenu.destroy();
 }
