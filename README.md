@@ -10,6 +10,10 @@ Currently, the weather report, including forecasts for today and tomorrow, is fe
 
 After the installation, restart GNOME Shell (`Alt`+`F2`, `r`, `Enter`) and enable the extension through *gnome-tweak-tool*.
 
+## Through extensions.gnome.org
+
+[Weather](https://extensions.gnome.org/extension/613/weather/)
+
 ## Through a package manager
 
 ### [Ubuntu, Mint, Debian and derivatives](https://launchpad.net/~gnome-shell-extensions/+archive/ppa/+packages)
