@@ -99,7 +99,7 @@ msgstr "Averses de neige"
 
 #: ../src/extension.js:772
 msgid "Light snow showers"
-msgstr "Faible averses de neige"
+msgstr "Faibles averses de neige"
 
 #: ../src/extension.js:774
 msgid "Blowing snow"
@@ -171,7 +171,7 @@ msgstr "Beau"
 
 #: ../src/extension.js:811
 msgid "Mixed rain and hail"
-msgstr "Pluie et Grêle"
+msgstr "Pluie et grêle"
 
 #: ../src/extension.js:813
 msgid "Hot"
@@ -183,7 +183,7 @@ msgstr "Orages isolés"
 
 #: ../src/extension.js:818
 msgid "Scattered thunderstorms"
-msgstr "Orages éparses"
+msgstr "Orages épars"
 
 #: ../src/extension.js:820
 msgid "Scattered showers"
