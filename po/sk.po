@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-21 02:35+0100\n"
-"PO-Revision-Date: 2012-05-13 22:40+0100\n"
-"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
+"POT-Creation-Date: 2013-02-21 03:30+0100\n"
+"PO-Revision-Date: 2013-03-04 16:41+0100\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../src/extension.js:125
 msgid "..."
@@ -22,24 +23,24 @@ msgstr "..."
 
 #: ../src/extension.js:205
 msgid "Locations"
-msgstr ""
+msgstr "Umiestnenia"
 
 #: ../src/extension.js:209
 msgid "Reload Weather Information"
-msgstr ""
+msgstr "Obnoviť informácie o počasí"
 
 #: ../src/extension.js:213
 msgid "Weather Settings"
-msgstr ""
+msgstr "Nastavenia počasia"
 
 #: ../src/extension.js:238 ../src/extension.js:248 ../src/prefs.js:550
 #, python-format
 msgid "Schema \"%s\" not found."
-msgstr ""
+msgstr "Schéma „%s“ nebola nájdená."
 
 #: ../src/extension.js:529 ../src/prefs.js:759
 msgid "Invalid city"
-msgstr ""
+msgstr "Neplatné mesto"
 
 #: ../src/extension.js:744
 msgid "Tornado"
@@ -211,51 +212,51 @@ msgstr "Nedostupný"
 
 #: ../src/extension.js:884
 msgid "Calm"
-msgstr ""
+msgstr "Bezvetrie"
 
 #: ../src/extension.js:887
 msgid "Light air"
-msgstr ""
+msgstr "Ľahký vánok"
 
 #: ../src/extension.js:890
 msgid "Light breeze"
-msgstr ""
+msgstr "Vánok"
 
 #: ../src/extension.js:893
 msgid "Gentle breeze"
-msgstr ""
+msgstr "Slabý vietor"
 
 #: ../src/extension.js:896
 msgid "Moderate breeze"
-msgstr ""
+msgstr "Stredný vietor"
 
 #: ../src/extension.js:899
 msgid "Fresh breeze"
-msgstr ""
+msgstr "Čerstvý vietor"
 
 #: ../src/extension.js:902
 msgid "Strong breeze"
-msgstr ""
+msgstr "Silný vietor"
 
 #: ../src/extension.js:905
 msgid "Moderate gale"
-msgstr ""
+msgstr "Stredný víchrica"
 
 #: ../src/extension.js:908
 msgid "Fresh gale"
-msgstr ""
+msgstr "Čerstvá víchrica"
 
 #: ../src/extension.js:911
 msgid "Strong gale"
-msgstr ""
+msgstr "Silná víchrica"
 
 #: ../src/extension.js:914
 msgid "Storm"
-msgstr ""
+msgstr "Búrka"
 
 #: ../src/extension.js:917
 msgid "Violent storm"
-msgstr ""
+msgstr "Silná búrka"
 
 #: ../src/extension.js:925
 msgid "Sunday"
@@ -287,44 +288,44 @@ msgstr "Sobota"
 
 #: ../src/extension.js:932
 msgid "N"
-msgstr ""
+msgstr "S"
 
 #: ../src/extension.js:932
 msgid "NE"
-msgstr ""
+msgstr "SV"
 
 #: ../src/extension.js:932
 msgid "E"
-msgstr ""
+msgstr "V"
 
 #: ../src/extension.js:932
 msgid "SE"
-msgstr ""
+msgstr "JV"
 
 #: ../src/extension.js:932
 msgid "S"
-msgstr ""
+msgstr "J"
 
 #: ../src/extension.js:932
 msgid "SW"
-msgstr ""
+msgstr "JZ"
 
 #: ../src/extension.js:932
 msgid "W"
-msgstr ""
+msgstr "Z"
 
 #: ../src/extension.js:932
 msgid "NW"
-msgstr ""
+msgstr "SZ"
 
 #: ../src/extension.js:1214 ../src/extension.js:1343
 msgid "Yesterday"
-msgstr ""
+msgstr "Včera"
 
 #: ../src/extension.js:1216 ../src/extension.js:1345
 #, python-format
 msgid "%s days ago"
-msgstr ""
+msgstr "Pred %s dňami"
 
 #: ../src/extension.js:1337
 msgid "Today"
@@ -337,7 +338,7 @@ msgstr "Zajtra"
 #: ../src/extension.js:1341
 #, python-format
 msgid "In %s days"
-msgstr ""
+msgstr "O %s dni/í"
 
 #: ../src/extension.js:1377
 msgid "Loading current weather ..."
@@ -357,7 +358,7 @@ msgstr "Prosím, čakajte"
 
 #: ../src/extension.js:1459
 msgid "Feels like:"
-msgstr ""
+msgstr "Pocitovo:"
 
 #: ../src/extension.js:1461
 msgid "Humidity:"
@@ -377,40 +378,39 @@ msgstr "Teplota:"
 
 #: ../src/prefs.js:126
 msgid "Wind Speed Unit"
-msgstr ""
+msgstr "Jednotka rýchlosti vetra"
 
 #: ../src/prefs.js:128
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Tlak:"
+msgstr "Jednotka tlaku"
 
 #: ../src/prefs.js:130
 msgid "Position in Panel"
-msgstr ""
+msgstr "Umiestnenie na paneli"
 
 #: ../src/prefs.js:131
 msgid "Center"
-msgstr ""
+msgstr "V strede"
 
 #: ../src/prefs.js:131
 msgid "Right"
-msgstr ""
+msgstr "Vpravo"
 
 #: ../src/prefs.js:131
 msgid "Left"
-msgstr ""
+msgstr "Vľavo"
 
 #: ../src/prefs.js:132
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "Smer vetra zobraziť šípkami"
 
 #: ../src/prefs.js:134
 msgid "Translate Conditions"
-msgstr ""
+msgstr "Preložiť podmienky"
 
 #: ../src/prefs.js:136
 msgid "Symbolic Icons"
-msgstr ""
+msgstr "Symbolické ikony"
 
 #: ../src/prefs.js:138
 msgid "Temperature in Panel"
@@ -418,13 +418,13 @@ msgstr "Teplota:"
 
 #: ../src/prefs.js:140
 msgid "Conditions in Panel"
-msgstr ""
+msgstr "Podmienky v paneli"
 
 #: ../src/prefs.js:277
 msgid "Name of the city"
-msgstr ""
+msgstr "Názov mesta"
 
 #: ../src/prefs.js:452
 #, python-format
 msgid "Remove %s ?"
-msgstr ""
+msgstr "Odstrániť %s ?"
