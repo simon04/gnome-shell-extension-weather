@@ -32,6 +32,9 @@
  *
  */
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
 const Cairo = imports.cairo;
 const Clutter = imports.gi.Clutter;
 const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
@@ -224,30 +227,21 @@ const WeatherMenuButton = new Lang.Class({
 	this.refreshWeather(true);
 	},
 
-	stopConnect : function()
-	{
-	this._settings.disconnect(this._settingsC);
-	this._settingsInterface.disconnect(this._settingsInterfaceC);
-	},
-
 	loadConfig : function()
 	{
-	var that = this;
-	var schema = WEATHER_SETTINGS_SCHEMA;
-	 	if (Gio.Settings.list_schemas().indexOf(schema) == -1)
-		throw _("Schema \"%s\" not found.").replace("%s",schema);
-   	this._settings = new Gio.Settings({ schema: schema });
-	this._settingsC = this._settings.connect("changed",function(){that.refreshWeather(false);});
+	let that = this;
+   	this._settings = Convenience.getSettings(WEATHER_SETTINGS_SCHEMA);
+	this._settings.connect("changed",function(){that.refreshWeather(false);});
 	},
 
 	loadConfigInterface : function()
 	{
-	var that = this;
-	var schemaInterface = "org.gnome.desktop.interface";
+	let that = this;
+	let schemaInterface = "org.gnome.desktop.interface";
 	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
 		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
    	this._settingsInterface = new Gio.Settings({ schema: schemaInterface });
-	this._settingsInterfaceC = this._settingsInterface.connect("changed",function(){that.refreshWeather(false);});
+	this._settingsInterface.connect("changed",function(){that.refreshWeather(false);});
 	},
 
 	get _clockFormat()
@@ -1525,6 +1519,7 @@ const WeatherMenuButton = new Lang.Class({
 let weatherMenu;
 
 function init() {
+Convenience.initTranslations('gnome-shell-extension-weather');
 }
 
 function enable() {
@@ -1533,6 +1528,5 @@ function enable() {
 }
 
 function disable() {
-    weatherMenu.stopConnect();
     weatherMenu.destroy();
 }

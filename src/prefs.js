@@ -545,10 +545,7 @@ Extends: Gtk.Box,
 	loadConfig : function()
 	{
 	let that = this;
-	let schema = WEATHER_SETTINGS_SCHEMA;
-	 	if (Gio.Settings.list_schemas().indexOf(schema) == -1)
-		throw _("Schema \"%s\" not found.").format(schema);
-   	this.Settings = Convenience.getSettings(schema);	
+   	this.Settings = Convenience.getSettings(WEATHER_SETTINGS_SCHEMA);	
 	this.Settings.connect("changed", function(){that.refreshUI();});
 	},
 

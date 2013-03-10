@@ -2,28 +2,37 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS = src data po
 
-zip-file: all
-if LOCAL_INSTALL
-	-rm -fR $(builddir)/_build
-	$(MKDIR_P) $(builddir)/_build; \
-	$(MAKE) install DESTDIR="$(abs_builddir)/_build"; \
-	$(GLIB_COMPILE_SCHEMAS) "$(abs_builddir)/_build/$(prefix)/share/gnome-shell/extensions/weather@gnome-shell-extensions.gnome.org/schemas"; \
-	(cd "$(abs_builddir)/_build/$(prefix)/share/gnome-shell/extensions/weather@gnome-shell-extensions.gnome.org" ; \
-	zip -qr "$(abs_builddir)/gnome-shell-extension-weather.zip" .; \
-	); \
-	rm -fR $(builddir)/_build ; \
-	echo "===================================================================" ; \
-	echo "zip-file ready for distribution:" ; \
-	echo "gnome-shell-extension-weather.zip" ; \
-	echo "==================================================================="
-else
-	@echo "*"
-	@echo "* You need to configure the package --with-local-install=yes to create a zip-file."
-	@echo "*"
-endif
+uuid = "weather-extension@xeked.com"
 
-clean-local:
-	rm -f "$(abs_builddir)/gnome-shell-extension-weather.zip"
+localprefix = $(HOME)/.local/share/gnome-shell/extensions
+
+zip-file: all
+	rm -fR $(builddir)/_build
+	rm -fR $(builddir)/zip-file
+	$(MKDIR_P) $(builddir)/_build; \
+	$(MKDIR_P) $(builddir)/zip-file; \
+	$(MAKE) install DESTDIR="$(abs_builddir)/_build"; \
+	cp -r "$(builddir)/_build$(datadir)/gnome-shell/extensions/$(uuid)" "$(builddir)/_build"; \
+	if [ -f "$(builddir)/_build$(datadir)/glib-2.0/schemas/org.gnome.shell.extensions.weather.gschema.xml" ]; then \
+		$(MKDIR_P) "$(builddir)/_build/$(uuid)/schemas"; \
+		mv "$(builddir)/_build$(datadir)/glib-2.0/schemas/org.gnome.shell.extensions.weather.gschema.xml" "$(builddir)/_build/$(uuid)/schemas"; \
+		glib-compile-schemas "$(builddir)/_build/$(uuid)/schemas"; \
+	fi; \
+	cp -r "$(builddir)/_build$(datadir)/locale" "$(builddir)/_build/$(uuid)"; \
+	(cd "$(builddir)/_build/$(uuid)/"; \
+	 zip -qr "$(abs_builddir)/zip-file/weather.shell-extension.zip" .; \
+	); \
+	rm -fR $(builddir)/_build
+
+local-install: zip-file
+	zip_file="$(abs_builddir)/zip-file/weather.shell-extension.zip"; \
+	if [ -d "$(localprefix)/$(uuid)" ]; then \
+	rm -fR "$(localprefix)/$(uuid)"; \
+	fi; \
+	$(MKDIR_P) $(localprefix)/$(uuid); \
+	(cd $(localprefix)/$(uuid); \
+	unzip -q $${zip_file}; \
+	);
 
 dist-hook: dist-changelog
 
