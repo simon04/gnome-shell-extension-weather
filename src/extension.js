@@ -227,11 +227,29 @@ const WeatherMenuButton = new Lang.Class({
 	this.refreshWeather(true);
 	},
 
+	stop : function()
+	{
+		if(this._timeoutS)
+		Mainloop.source_remove(this._timeoutS);
+
+		if(this._settingsC)
+		{
+		this._settings.disconnect(this._settingsC);
+		this._settingsC = 0;
+		}
+
+		if(this._settingsInterfaceC)
+		{
+		this._settingsInterface.disconnect(this._settingsInterfaceC);
+		this._settingsInterfaceC = 0;
+		}
+	},
+
 	loadConfig : function()
 	{
 	let that = this;
    	this._settings = Convenience.getSettings(WEATHER_SETTINGS_SCHEMA);
-	this._settings.connect("changed",function(){that.refreshWeather(false);});
+	this._settingsC = this._settings.connect("changed",function(){that.refreshWeather(false);});
 	},
 
 	loadConfigInterface : function()
@@ -241,7 +259,7 @@ const WeatherMenuButton = new Lang.Class({
 	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
 		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
    	this._settingsInterface = new Gio.Settings({ schema: schemaInterface });
-	this._settingsInterface.connect("changed",function(){that.refreshWeather(false);});
+	this._settingsInterfaceC = this._settingsInterface.connect("changed",function(){that.refreshWeather(false);});
 	},
 
 	get _clockFormat()
@@ -1348,7 +1366,7 @@ const WeatherMenuButton = new Lang.Class({
 
         // Repeatedly refresh weather if recurse is set
         if (recurse) {
-            Mainloop.timeout_add_seconds(this._refresh_interval, Lang.bind(this, function() {
+            this._timeoutS = Mainloop.timeout_add_seconds(this._refresh_interval, Lang.bind(this, function() {
                 this.refreshWeather(true);
             }));
         }
@@ -1528,5 +1546,6 @@ function enable() {
 }
 
 function disable() {
+    weatherMenu.stop();
     weatherMenu.destroy();
 }
