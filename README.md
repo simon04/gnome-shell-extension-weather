@@ -35,6 +35,8 @@ Then, install *gnome-shell-extension-weather* (root password required):
 
 ### [Arch Linux](https://aur.archlinux.org/packages/gnome-shell-extension-weather-git/)
 
+**2013-02-17 : gnome-shell-extension-weather-neroth-git => gnome-shell-extension-weather-git**
+
 Download the package from AUR, make and install it:
 
 	wget https://aur.archlinux.org/packages/gn/gnome-shell-extension-weather-git/gnome-shell-extension-weather-git.tar.gz
@@ -66,13 +68,13 @@ Run the following commands:
 
 	cd ~ && git clone git://github.com/Neroth/gnome-shell-extension-weather.git
 	cd ~/gnome-shell-extension-weather
-	./autogen.sh --prefix=/usr && make && sudo make install
+	./autogen.sh && make local-install
 
 ----
 
 # Configuration
 
-Launch *gnome-shell-extension-prefs* (reachable also through the *Weather Settings* button on the extension popup) and select *Gnome Shell Extension Weather by Neroth* from the drop-down menu to edit the configuration.
+Launch *gnome-shell-extension-prefs* (reachable also through the *Weather Settings* button on the extension popup) and select *Weather* from the drop-down menu to edit the configuration.
 
 ![Screenshot](https://github.com/neroth/gnome-shell-extension-weather/raw/master/data/weather-settings.gif)
 
