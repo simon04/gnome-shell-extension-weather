@@ -74,6 +74,8 @@ Extends: Gtk.Box,
 
 	this.initWindow();
 
+	this.initWeather();
+
 	this.refreshUI();
 
 	this.add(this.MainWidget);
@@ -140,6 +142,11 @@ Extends: Gtk.Box,
 	this.addSwitch("text_in_panel");
 	this.addLabel(_("Conditions in Panel"));
 	this.addSwitch("comment_in_panel");
+	},
+
+	initWeather : function()
+	{
+	this.locationWorld = new GWeather.Location.new_world(false);
 	},
 
 	refreshUI : function()
@@ -277,23 +284,7 @@ Extends: Gtk.Box,
 	let that = this;
 	let textDialog = _("Name of the city");
 	let dialog = new Gtk.Dialog({title : ""});
-	let entry = new Gtk.Entry();
-	let completion = new Gtk.EntryCompletion();
-	entry.set_completion(completion);
-	let completionModel = new Gtk.ListStore.new([GObject.TYPE_STRING]);
-	completion.set_model(completionModel);
-	completion.set_text_column(0);
-	completion.set_popup_single_match(true);
-	completion.set_minimum_key_length(1);
-		completion.set_match_func(function(completion,key,iter)
-		{
-			if(iter)
-			{
-				if(completionModel.get_value(iter,0))
-				return true;
-			}
-		return false;
-		});
+	let entry = new GWeather.LocationEntry.new(this.locationWorld);
 	entry.margin_top = 12;
 	entry.margin_bottom = 12;
 	let label = new Gtk.Label({label : textDialog});
@@ -314,129 +305,28 @@ Extends: Gtk.Box,
 
 		let testLocation = function(location)
 		{
-			if(location.search(/\[/) == -1 || location.search(/\]/) == -1)
-			return 0;
-
-		let woeid = location.split(/\[/)[1].split(/\]/)[0];
-			if(!woeid)
-			return 0;
-
-			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?q=select woeid from geo.places where woeid = "'+woeid+'" limit 1&format=json'),function()
-			{
-			d.sensitive = 0;
-				if(typeof arguments[0].query == "undefined")
-				return 0;
-
-			let city = arguments[0].query;
-				if(Number(city.count) == 0)
-				return 0;
-
+		d.sensitive = 0;
+			if(entry.get_location())
 			d.sensitive = 1;
-			return 0;
-			},"testLocation");
 		return 0;
 		};
 
-		let searchLocation = function()
-		{
-		let location = entry.get_text();
-			if(testLocation(location) == 0)
-			that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?q=select woeid,name,admin1,country from geo.places where text = "*'+location+'*" or text = "'+location+'"&format=json'),function()
-			{
-				if(!arguments[0])
-				return 0;
-			let city = arguments[0].query;
-			let n = Number(city.count);
-				if(n > 0)
-				city = city.results.place;
-				else
-				return 0;
-			completionModel.clear();
-
-			let current = this.liststore.get_iter_first();
-
-				if(n > 1)
-				{
-					for(var i in city)
-					{
-						if(typeof m == "undefined")
-						var m = {};
-
-					current = completionModel.append();
-					let cityText = city[i].name;
-						if(city[i].admin1)
-						cityText += ", "+city[i].admin1.content;
-
-						if(city[i].country)
-						cityText += " ("+city[i].country.code+")";
-
-					cityText += " ["+city[i].woeid+"]";
-
-						if(m[cityText])
-						continue;
-						else
-						m[cityText] = 1;
-
-					completionModel.set_value(current,0,cityText);
-					}
-				}
-				else
-				{
-				current = completionModel.append();
-				let cityText = city.name;
-					if(city.admin1)
-					cityText += ", "+city.admin1.content;
-
-					if(city.country)
-					cityText += " ("+city.country.code+")";
-
-				cityText += " ["+city.woeid+"]";
-				completionModel.set_value(current,0,cityText);
-				}
-			completion.complete();
-			return 0;
-			},"getInfo");
-		return 0;
-		};
-
-		entry.connect("changed",searchLocation);
+	entry.connect("changed",testLocation);
 
 	let dialog_area = dialog.get_content_area();
 	dialog_area.pack_start(label,0,0,0);
 	dialog_area.pack_start(entry,0,0,0);
-		dialog.connect("response",function(w, response_id) {
-		   	if(response_id)
+		dialog.connect("response",function(w, response_id)
+		{
+		let location = entry.get_location();
+		   	if(response_id && location)
 			{
-				if(entry.get_text().search(/\[/) == -1 || entry.get_text().search(/\]/) == -1)
-				return 0;
-
-			let woeid = entry.get_text().split(/\[/)[1].split(/\]/)[0];
-				if(!woeid)
-				return 0;
-
-				that.loadJsonAsync(encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where woeid = "'+woeid+'" limit 1'),function()
-				{
-				let city = arguments[0].query;
-					if(Number(city.count) > 0)
-					city = city.results.place;
-					else
-					return 0;
-
-				let cityText = city.name;
-					if(city.admin1)
-					cityText += ", "+city.admin1.content;
-
-					if(city.country)
-					cityText += " ("+city.country.code+")";
-
-					if(that.city)
-					that.city = that.city+" && "+city.woeid+">"+cityText;
-					else
-					that.city = city.woeid+">"+cityText;
-				return 0;
-				},"lastTest");
+				if(that.city)
+				that.city = that.city+" && "+location.get_code()+">"+location.get_name();
+				else
+				that.city = location.get_code()+">"+location.get_name();
 			}
-		dialog.hide();
+		dialog.destroy();
 		return 0;
 		});
 
@@ -488,7 +378,7 @@ Extends: Gtk.Box,
 				else
 				that.city = "";
 			}
-		dialog.hide();
+		dialog.destroy();
 		return 0;
 		});
 
@@ -758,7 +648,7 @@ Extends: Gtk.Box,
 	return a.split(">")[1];
 	},
 
-	extractWoeid : function(a)
+	extractCode : function(a)
 	{
 		if(a.search(">") == -1)
 		return 0;
