@@ -46,6 +46,7 @@ const Soup = imports.gi.Soup;
 const Shell = imports.gi.Shell;
 const St = imports.gi.St;
 const Util = imports.misc.util;
+const GWeather = imports.gi.GWeather;
 const _ = Gettext.gettext;
 
 const Main = imports.ui.main;
