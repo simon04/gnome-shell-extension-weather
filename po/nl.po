@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-11 00:47+0100\n"
+"POT-Creation-Date: 2013-03-28 02:22+0100\n"
 "PO-Revision-Date: 2012-05-13 22:39+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -16,415 +16,288 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/extension.js:128
-msgid "..."
-msgstr "..."
-
-#: ../src/extension.js:208
-msgid "Locations"
-msgstr ""
-
-#: ../src/extension.js:212
-msgid "Reload Weather Information"
-msgstr ""
-
-#: ../src/extension.js:216
-msgid "Weather Settings"
-msgstr ""
-
-#: ../src/extension.js:242
-#, python-format
-msgid "Schema \"%s\" not found."
-msgstr ""
-
-#: ../src/extension.js:523 ../src/prefs.js:756
-msgid "Invalid city"
-msgstr ""
-
-#: ../src/extension.js:738
-msgid "Tornado"
-msgstr "Tornado"
-
-#: ../src/extension.js:740
-msgid "Tropical storm"
-msgstr "Tropische storm"
-
-#: ../src/extension.js:742 ../src/extension.js:914
-msgid "Hurricane"
-msgstr "Orkaan"
-
-#: ../src/extension.js:744
-msgid "Severe thunderstorms"
-msgstr "Zware onweer"
-
-#: ../src/extension.js:746
-msgid "Thunderstorms"
-msgstr "Onweer"
-
-#: ../src/extension.js:748
-msgid "Mixed rain and snow"
-msgstr "Regen en sneeuw"
-
-#: ../src/extension.js:750
-msgid "Mixed rain and sleet"
-msgstr "Regen en hagel"
-
-#: ../src/extension.js:752
-msgid "Mixed snow and sleet"
-msgstr "Sneeuw en hagel"
-
-#: ../src/extension.js:754
-msgid "Freezing drizzle"
-msgstr "Motijzel"
-
-#: ../src/extension.js:756
-msgid "Drizzle"
-msgstr "Motregen"
-
-#: ../src/extension.js:758
-msgid "Freezing rain"
-msgstr "IJzel"
-
-#: ../src/extension.js:760 ../src/extension.js:762
-msgid "Showers"
-msgstr "Regenbuien"
-
-#: ../src/extension.js:764
-msgid "Snow flurries"
-msgstr "Lichte sneeuwval"
-
-#: ../src/extension.js:766
-msgid "Light snow showers"
-msgstr "Lichte sneeuwbuien"
-
-#: ../src/extension.js:768
-msgid "Blowing snow"
-msgstr "Sneeuwstorm"
-
-#: ../src/extension.js:770
-msgid "Snow"
-msgstr "Sneeuw"
-
-#: ../src/extension.js:772
-msgid "Hail"
-msgstr "Hagel"
-
-#: ../src/extension.js:774
-msgid "Sleet"
-msgstr "Stofhagel"
-
-#: ../src/extension.js:776
-msgid "Dust"
-msgstr "Stof"
-
-#: ../src/extension.js:778
-msgid "Foggy"
-msgstr "Nevelig"
-
-#: ../src/extension.js:780
-msgid "Haze"
-msgstr "Mistig"
-
-#: ../src/extension.js:782
-msgid "Smoky"
-msgstr "Smok"
-
-#: ../src/extension.js:784
-msgid "Blustery"
-msgstr "Windvlagen"
-
-#: ../src/extension.js:786
-msgid "Windy"
-msgstr "Winderig"
-
-#: ../src/extension.js:788
-msgid "Cold"
-msgstr "IJzig"
-
-#: ../src/extension.js:790
-msgid "Cloudy"
-msgstr "Bewolkt"
-
-#: ../src/extension.js:793
-msgid "Mostly cloudy"
-msgstr "Zwaar bewolkt"
-
-#: ../src/extension.js:796 ../src/extension.js:822
-msgid "Partly cloudy"
-msgstr "Deels bewolkt"
-
-#: ../src/extension.js:798
-msgid "Clear"
-msgstr "Helder"
-
-#: ../src/extension.js:800
-msgid "Sunny"
-msgstr "Zonnig"
-
-#: ../src/extension.js:803
-msgid "Fair"
-msgstr "Helder"
-
-#: ../src/extension.js:805
-msgid "Mixed rain and hail"
-msgstr "Regen en hagel"
-
-#: ../src/extension.js:807
-msgid "Hot"
-msgstr "Heet"
-
-#: ../src/extension.js:809
-msgid "Isolated thunderstorms"
-msgstr "Geïsoleerde onweer"
-
-#: ../src/extension.js:812
-msgid "Scattered thunderstorms"
-msgstr "Verspreide onweer"
-
-#: ../src/extension.js:814
-msgid "Scattered showers"
-msgstr "Verspreide buien"
-
-#: ../src/extension.js:816 ../src/extension.js:820
-msgid "Heavy snow"
-msgstr "Zware sneeuwval"
-
-#: ../src/extension.js:818
-msgid "Scattered snow showers"
-msgstr "Verspreide sneeuwbuien"
-
-#: ../src/extension.js:824
-msgid "Thundershowers"
-msgstr "Onweersbuien"
-
-#: ../src/extension.js:826
-msgid "Snow showers"
-msgstr "Sneeuwbuien"
-
-#: ../src/extension.js:828
-msgid "Isolated thundershowers"
-msgstr "Geïsoleerde onweersbuien"
-
-#: ../src/extension.js:831
-msgid "Not available"
-msgstr "Niet beschikbaar"
-
-#: ../src/extension.js:878
-msgid "Calm"
-msgstr ""
-
-#: ../src/extension.js:881
-msgid "Light air"
-msgstr ""
-
-#: ../src/extension.js:884
-msgid "Light breeze"
-msgstr ""
-
-#: ../src/extension.js:887
-msgid "Gentle breeze"
-msgstr ""
-
-#: ../src/extension.js:890
-msgid "Moderate breeze"
-msgstr ""
-
-#: ../src/extension.js:893
-msgid "Fresh breeze"
-msgstr ""
-
-#: ../src/extension.js:896
-msgid "Strong breeze"
-msgstr ""
-
-#: ../src/extension.js:899
-msgid "Moderate gale"
-msgstr ""
-
-#: ../src/extension.js:902
-msgid "Fresh gale"
-msgstr ""
-
-#: ../src/extension.js:905
-msgid "Strong gale"
-msgstr ""
-
-#: ../src/extension.js:908
-msgid "Storm"
-msgstr ""
-
-#: ../src/extension.js:911
-msgid "Violent storm"
-msgstr ""
-
-#: ../src/extension.js:919
-msgid "Sunday"
-msgstr "Zondag"
-
-#: ../src/extension.js:919
-msgid "Monday"
-msgstr "Maandag"
-
-#: ../src/extension.js:919
-msgid "Tuesday"
-msgstr "Dinsdag"
-
-#: ../src/extension.js:919
-msgid "Wednesday"
-msgstr "Woensdag"
-
-#: ../src/extension.js:919
-msgid "Thursday"
-msgstr "Donderdag"
-
-#: ../src/extension.js:919
-msgid "Friday"
-msgstr "Vrijdag"
-
-#: ../src/extension.js:919
-msgid "Saturday"
-msgstr "Zaterdag"
-
-#: ../src/extension.js:926
-msgid "N"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "NE"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "E"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "SE"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "S"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "SW"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "W"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "NW"
-msgstr ""
-
-#: ../src/extension.js:1208 ../src/extension.js:1337
-msgid "Yesterday"
-msgstr ""
-
-#: ../src/extension.js:1210 ../src/extension.js:1339
-#, python-format
-msgid "%s days ago"
-msgstr ""
-
-#: ../src/extension.js:1331
-msgid "Today"
-msgstr "Vandaag"
-
-#: ../src/extension.js:1333
-msgid "Tomorrow"
-msgstr "Morgen"
-
-#: ../src/extension.js:1335
-#, python-format
-msgid "In %s days"
-msgstr ""
-
-#: ../src/extension.js:1371
-msgid "Loading current weather ..."
-msgstr "Laden aktueel weer ..."
-
-#: ../src/extension.js:1372
-msgid "Loading future weather ..."
-msgstr "Laden weersverwachting ..."
-
-#: ../src/extension.js:1405
-msgid "Loading ..."
-msgstr "Laden ..."
-
-#: ../src/extension.js:1408
-msgid "Please wait"
-msgstr "Wachten alstublieft"
-
-#: ../src/extension.js:1453
-msgid "Feels like:"
-msgstr ""
-
-#: ../src/extension.js:1455
-msgid "Humidity:"
-msgstr "Luchtvochtigheid:"
-
-#: ../src/extension.js:1457
-msgid "Pressure:"
-msgstr "Luchtdruk:"
-
-#: ../src/extension.js:1459
+#: ../src/extension.js:281 ../src/extension.js:567
 msgid "Wind:"
 msgstr "Wind:"
 
-#: ../src/prefs.js:124
-msgid "Temperature Unit"
-msgstr "Temperatuur:"
+#: ../src/extension.js:327
+msgid "Weather"
+msgstr ""
 
-#: ../src/prefs.js:126
-msgid "Wind Speed Unit"
+#: ../src/extension.js:383
+msgid "Locations"
+msgstr ""
+
+#: ../src/extension.js:387
+msgid "Weather Settings"
+msgstr ""
+
+#: ../src/extension.js:526
+msgid "No weather information"
+msgstr ""
+
+#: ../src/extension.js:528
+#, python-format
+msgid "No weather information for %s"
+msgstr ""
+
+#: ../src/extension.js:559
+msgid "Please wait"
+msgstr "Wachten alstublieft"
+
+#: ../src/extension.js:563
+msgid "Loading ..."
+msgstr "Laden ..."
+
+#: ../src/extension.js:614
+msgid "Feels like:"
+msgstr ""
+
+#: ../src/extension.js:616
+msgid "Dew:"
+msgstr ""
+
+#: ../src/extension.js:618
+msgid "Visibility:"
+msgstr ""
+
+#: ../src/extension.js:620
+msgid "Humidity:"
+msgstr "Luchtvochtigheid:"
+
+#: ../src/extension.js:622
+msgid "Pressure:"
+msgstr "Luchtdruk:"
+
+#: ../src/extension.js:642
+msgid "No forecast information"
+msgstr ""
+
+#: ../src/extension.js:750 ../src/prefs.js:642
+msgid "Invalid city"
 msgstr ""
 
 #: ../src/prefs.js:128
+msgid "Temperature Unit"
+msgstr "Temperatuur:"
+
+#: ../src/prefs.js:129 ../src/prefs.js:131 ../src/prefs.js:133
+#: ../src/prefs.js:135
+msgid "Default"
+msgstr ""
+
+#: ../src/prefs.js:130
+msgid "Wind Speed Unit"
+msgstr ""
+
+#: ../src/prefs.js:132
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Luchtdruk:"
 
-#: ../src/prefs.js:130
-msgid "Position in Panel"
-msgstr ""
-
-#: ../src/prefs.js:131
-msgid "Center"
-msgstr ""
-
-#: ../src/prefs.js:131
-msgid "Right"
-msgstr ""
-
-#: ../src/prefs.js:131
-msgid "Left"
-msgstr ""
-
-#: ../src/prefs.js:132
-msgid "Wind Direction by Arrows"
-msgstr ""
-
 #: ../src/prefs.js:134
-msgid "Translate Conditions"
+msgid "Distance Unit"
 msgstr ""
 
 #: ../src/prefs.js:136
-msgid "Symbolic Icons"
+msgid "Position in Panel"
+msgstr ""
+
+#: ../src/prefs.js:137
+msgid "Center"
+msgstr ""
+
+#: ../src/prefs.js:137
+msgid "Right"
+msgstr ""
+
+#: ../src/prefs.js:137
+msgid "Left"
 msgstr ""
 
 #: ../src/prefs.js:138
+msgid "Symbolic Icons"
+msgstr ""
+
+#: ../src/prefs.js:140
 msgid "Temperature in Panel"
 msgstr "Temperatuur:"
 
-#: ../src/prefs.js:140
+#: ../src/prefs.js:142
 msgid "Conditions in Panel"
 msgstr ""
 
-#: ../src/prefs.js:277
+#: ../src/prefs.js:144
+msgid "Debug the extension"
+msgstr ""
+
+#: ../src/prefs.js:287
 msgid "Name of the city"
 msgstr ""
 
-#: ../src/prefs.js:452
+#: ../src/prefs.js:345
 #, python-format
 msgid "Remove %s ?"
 msgstr ""
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Tornado"
+#~ msgstr "Tornado"
+
+#~ msgid "Tropical storm"
+#~ msgstr "Tropische storm"
+
+#~ msgid "Hurricane"
+#~ msgstr "Orkaan"
+
+#~ msgid "Severe thunderstorms"
+#~ msgstr "Zware onweer"
+
+#~ msgid "Thunderstorms"
+#~ msgstr "Onweer"
+
+#~ msgid "Mixed rain and snow"
+#~ msgstr "Regen en sneeuw"
+
+#~ msgid "Mixed rain and sleet"
+#~ msgstr "Regen en hagel"
+
+#~ msgid "Mixed snow and sleet"
+#~ msgstr "Sneeuw en hagel"
+
+#~ msgid "Freezing drizzle"
+#~ msgstr "Motijzel"
+
+#~ msgid "Drizzle"
+#~ msgstr "Motregen"
+
+#~ msgid "Freezing rain"
+#~ msgstr "IJzel"
+
+#~ msgid "Showers"
+#~ msgstr "Regenbuien"
+
+#~ msgid "Snow flurries"
+#~ msgstr "Lichte sneeuwval"
+
+#~ msgid "Light snow showers"
+#~ msgstr "Lichte sneeuwbuien"
+
+#~ msgid "Blowing snow"
+#~ msgstr "Sneeuwstorm"
+
+#~ msgid "Snow"
+#~ msgstr "Sneeuw"
+
+#~ msgid "Hail"
+#~ msgstr "Hagel"
+
+#~ msgid "Sleet"
+#~ msgstr "Stofhagel"
+
+#~ msgid "Dust"
+#~ msgstr "Stof"
+
+#~ msgid "Foggy"
+#~ msgstr "Nevelig"
+
+#~ msgid "Haze"
+#~ msgstr "Mistig"
+
+#~ msgid "Smoky"
+#~ msgstr "Smok"
+
+#~ msgid "Blustery"
+#~ msgstr "Windvlagen"
+
+#~ msgid "Windy"
+#~ msgstr "Winderig"
+
+#~ msgid "Cold"
+#~ msgstr "IJzig"
+
+#~ msgid "Cloudy"
+#~ msgstr "Bewolkt"
+
+#~ msgid "Mostly cloudy"
+#~ msgstr "Zwaar bewolkt"
+
+#~ msgid "Partly cloudy"
+#~ msgstr "Deels bewolkt"
+
+#~ msgid "Clear"
+#~ msgstr "Helder"
+
+#~ msgid "Sunny"
+#~ msgstr "Zonnig"
+
+#~ msgid "Fair"
+#~ msgstr "Helder"
+
+#~ msgid "Mixed rain and hail"
+#~ msgstr "Regen en hagel"
+
+#~ msgid "Hot"
+#~ msgstr "Heet"
+
+#~ msgid "Isolated thunderstorms"
+#~ msgstr "Geïsoleerde onweer"
+
+#~ msgid "Scattered thunderstorms"
+#~ msgstr "Verspreide onweer"
+
+#~ msgid "Scattered showers"
+#~ msgstr "Verspreide buien"
+
+#~ msgid "Heavy snow"
+#~ msgstr "Zware sneeuwval"
+
+#~ msgid "Scattered snow showers"
+#~ msgstr "Verspreide sneeuwbuien"
+
+#~ msgid "Thundershowers"
+#~ msgstr "Onweersbuien"
+
+#~ msgid "Snow showers"
+#~ msgstr "Sneeuwbuien"
+
+#~ msgid "Isolated thundershowers"
+#~ msgstr "Geïsoleerde onweersbuien"
+
+#~ msgid "Not available"
+#~ msgstr "Niet beschikbaar"
+
+#~ msgid "Sunday"
+#~ msgstr "Zondag"
+
+#~ msgid "Monday"
+#~ msgstr "Maandag"
+
+#~ msgid "Tuesday"
+#~ msgstr "Dinsdag"
+
+#~ msgid "Wednesday"
+#~ msgstr "Woensdag"
+
+#~ msgid "Thursday"
+#~ msgstr "Donderdag"
+
+#~ msgid "Friday"
+#~ msgstr "Vrijdag"
+
+#~ msgid "Saturday"
+#~ msgstr "Zaterdag"
+
+#~ msgid "Today"
+#~ msgstr "Vandaag"
+
+#~ msgid "Tomorrow"
+#~ msgstr "Morgen"
+
+#~ msgid "Loading current weather ..."
+#~ msgstr "Laden aktueel weer ..."
+
+#~ msgid "Loading future weather ..."
+#~ msgstr "Laden weersverwachting ..."

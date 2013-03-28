@@ -1,13 +1,14 @@
 .weather-current-summarybox {
-    padding-top:5px;
+    padding-top: 0px;
 }
 
 .weather-current-summary {
-    font-size: 31px;
+    font-size: 26px;
+    padding-bottom: 3px;
 }
 
 .weather-current-databox {
-    padding: 5px 15px 0px 30px;
+    padding: 0px 15px 0px 30px;
 }
 
 .weather-current-icon {
@@ -16,6 +17,10 @@
 
 .weather-current-iconbox {
     padding-right: 20px;
+}
+
+.weather-current-infobox {
+    padding-top: 3px;
 }
 
 .weather-icon {
@@ -32,17 +37,33 @@
     color: #999999;
 }
 
-.weather-forecast-icon {
-  padding: 0 15px 0px 25px;
+.weather-forecasts {
+  padding: 0 10px;
 }
 
-.weather-forecast-databox {
-  padding-right: 30px;
+.weather-forecast-box {
+  padding: 0px 15px;
+}
+
+.weather-forecast-box-addTopPadding {
+  padding-top: 15px;
+}
+
+.weather-forecast-iconminmax {
+}
+
+.weather-forecast-icon {
+  padding-right: 20px;
 }
 
 .weather-forecast-day {
   color: #999999;
   font-size: 90%;
+  text-align: center;
+}
+
+.weather-forecast-summary {
+  text-align: center;
 }
 
 .weather-sunrise-icon {

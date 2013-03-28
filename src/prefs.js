@@ -43,18 +43,19 @@ const Convenience = Me.imports.convenience;
 const EXTENSIONDIR = Me.dir.get_path();
 
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
-const WEATHER_UNIT_KEY = 'unit';
-const WEATHER_PRESSURE_UNIT_KEY = 'pressure-unit';
-const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
-const WEATHER_WIND_DIRECTION_KEY = 'wind-direction';
-const WEATHER_CITY_KEY = 'city';
-const WEATHER_ACTUAL_CITY_KEY = 'actual-city';
-const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
-const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
-const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
-const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
-const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
-const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
+const WEATHER_GWEATHER_SETTINGS_SCHEMA = 'org.gnome.GWeather';
+const WEATHER_TEMPERATURE_UNIT_KEY = 'temperature-unit';		// GWeather setting
+const WEATHER_SPEED_UNIT_KEY = 'speed-unit';				// GWeather setting
+const WEATHER_PRESSURE_UNIT_KEY = 'pressure-unit';			// GWeather setting
+const WEATHER_DISTANCE_UNIT_KEY = 'distance-unit';			// GWeather setting
+const WEATHER_CITY_KEY = 'city';					// Weather extension setting
+const WEATHER_ACTUAL_CITY_KEY = 'actual-city';				// Weather extension setting
+const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';		// Weather extension setting
+const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';		// Weather extension setting
+const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';		// Weather extension setting
+const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';	// Weather extension setting
+const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension setting
+
 
 // Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64) (Simon Legner)
 const _httpSession = new Soup.SessionAsync();
@@ -125,28 +126,28 @@ Extends: Gtk.Box,
 
 	this.initConfigWidget();
 	this.addLabel(_("Temperature Unit"));
-	this.addComboBox(["\u00b0C","\u00b0F","K","\u00b0Ra","\u00b0R\u00E9","\u00b0R\u00F8","\u00b0De","\u00b0N"],"units");
+	this.addComboBox(["",_("Default"),"K","\u00b0C","\u00b0F"],"temperature_units");
 	this.addLabel(_("Wind Speed Unit"));
-	this.addComboBox(["km/h","mph","m/s","kn","ft/s","Beaufort"],"wind_speed_unit");
+	this.addComboBox(["",_("Default"),"m/s","km/h","mph","knots","Beaufort"],"speed_units");
 	this.addLabel(_("Pressure Unit"));
-	this.addComboBox(["hPa","inHg","bar","Pa","kPa","atm","at","Torr","psi"],"pressure_unit");
+	this.addComboBox(["",_("Default"),"kPa","hPa","mb","mmHg","inHg","atm"],"pressure_units");
+	this.addLabel(_("Distance Unit"));
+	this.addComboBox(["",_("Default"),"m","km","miles"],"distance_units");
 	this.addLabel(_("Position in Panel"));
 	this.addComboBox([_("Center"),_("Right"),_("Left")],"position_in_panel");
-	this.addLabel(_("Wind Direction by Arrows"));
-	this.addSwitch("wind_direction");
-	this.addLabel(_("Translate Conditions"));
-	this.addSwitch("translate_condition");
 	this.addLabel(_("Symbolic Icons"));
 	this.addSwitch("icon_type");
 	this.addLabel(_("Temperature in Panel"));
 	this.addSwitch("text_in_panel");
 	this.addLabel(_("Conditions in Panel"));
 	this.addSwitch("comment_in_panel");
+	this.addLabel(_("Debug the extension"));
+	this.addSwitch("debug");
 	},
 
 	initWeather : function()
 	{
-	this.locationWorld = new GWeather.Location.new_world(false);
+	this.world = new GWeather.Location.new_world(false);
 	},
 
 	refreshUI : function()
@@ -255,6 +256,7 @@ Extends: Gtk.Box,
 	cf.connect("changed",function(){that[b] = arguments[0].active;});
 	this.right_widget.attach(cf, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
 	this.inc();
+	return 0;
 	},
 
 	addSwitch : function(a)
@@ -284,7 +286,7 @@ Extends: Gtk.Box,
 	let that = this;
 	let textDialog = _("Name of the city");
 	let dialog = new Gtk.Dialog({title : ""});
-	let entry = new GWeather.LocationEntry.new(this.locationWorld);
+	let entry = new GWeather.LocationEntry.new(this.world);
 	entry.margin_top = 12;
 	entry.margin_bottom = 12;
 	let label = new Gtk.Label({label : textDialog});
@@ -322,9 +324,9 @@ Extends: Gtk.Box,
 		   	if(response_id && location)
 			{
 				if(that.city)
-				that.city = that.city+" && "+location.get_code()+">"+location.get_name();
+				that.city = that.city+" && "+location.get_code()+">"+location.get_city_name();
 				else
-				that.city = location.get_code()+">"+location.get_name();
+				that.city = location.get_code()+">"+location.get_city_name();
 			}
 		dialog.destroy();
 		return 0;
@@ -440,60 +442,67 @@ Extends: Gtk.Box,
 	this.Settings.connect("changed", function(){that.refreshUI();});
 	},
 
-	get units()
+	loadGWeatherConfig : function()
 	{
-		if(!this.Settings)
-		this.loadConfig();
-	return this.Settings.get_enum(WEATHER_UNIT_KEY);
+	let that = this;
+	this.GWeatherSettings = Convenience.getSettings(WEATHER_GWEATHER_SETTINGS_SCHEMA);
+	this.GWeatherSettingsC = this.GWeatherSettings.connect("changed",function(){that.refreshUI();});
 	},
 
-	set units(v)
+	get temperature_units()
 	{
-		if(!this.Settings)
-		this.loadConfig();
-	this.Settings.set_enum(WEATHER_UNIT_KEY,v);
+		if(!this.GWeatherSettings)
+		this.loadGWeatherConfig();
+	return this.GWeatherSettings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
 	},
 
-	get pressure_unit()
+	set temperature_units(v)
 	{
-		if(!this.Settings)
-		this.loadConfig();
-	return this.Settings.get_enum(WEATHER_PRESSURE_UNIT_KEY);
+		if(!this.GWeatherSettings)
+		this.loadGWeatherConfig();
+	this.GWeatherSettings.set_enum(WEATHER_TEMPERATURE_UNIT_KEY,v);
 	},
 
-	set pressure_unit(v)
+	get speed_units()
 	{
-		if(!this.Settings)
-		this.loadConfig();
-	this.Settings.set_enum(WEATHER_PRESSURE_UNIT_KEY,v);
+		if(!this.GWeatherSettings)
+		this.loadGWeatherConfig();
+	return this.GWeatherSettings.get_enum(WEATHER_SPEED_UNIT_KEY);
 	},
 
-	get wind_speed_unit()
+	set speed_units(v)
 	{
-		if(!this.Settings)
-		this.loadConfig();
-	return this.Settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
+		if(!this.GWeatherSettings)
+		this.loadGWeatherConfig();
+	this.GWeatherSettings.set_enum(WEATHER_SPEED_UNIT_KEY,v);
 	},
 
-	set wind_speed_unit(v)
+	get distance_units()
 	{
-		if(!this.Settings)
-		this.loadConfig();
-	this.Settings.set_enum(WEATHER_WIND_SPEED_UNIT_KEY,v);
+		if(!this.GWeatherSettings)
+		this.loadGWeatherConfig();
+	return this.GWeatherSettings.get_enum(WEATHER_DISTANCE_UNIT_KEY);
 	},
 
-	get wind_direction()
+	set distance_units(v)
 	{
-		if(!this.Settings)
-		this.loadConfig();
-	return this.Settings.get_boolean(WEATHER_WIND_DIRECTION_KEY);
+		if(!this.GWeatherSettings)
+		this.loadGWeatherConfig();
+	this.GWeatherSettings.set_enum(WEATHER_DISTANCE_UNIT_KEY,v);
 	},
 
-	set wind_direction(v)
+	get pressure_units()
 	{
-		if(!this.Settings)
-		this.loadConfig();
-	return this.Settings.set_boolean(WEATHER_WIND_DIRECTION_KEY,v);
+		if(!this.GWeatherSettings)
+		this.loadGWeatherConfig();
+	return this.GWeatherSettings.get_enum(WEATHER_PRESSURE_UNIT_KEY);
+	},
+
+	set pressure_units(v)
+	{
+		if(!this.GWeatherSettings)
+		this.loadGWeatherConfig();
+	this.GWeatherSettings.set_enum(WEATHER_PRESSURE_UNIT_KEY,v);
 	},
 
 	get city()
@@ -557,20 +566,6 @@ Extends: Gtk.Box,
 	this.Settings.set_int(WEATHER_ACTUAL_CITY_KEY,a);
 	},
 
-	get translate_condition()
-	{
-		if(!this.Settings)
-		this.loadConfig();
-	return this.Settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-	},
-
-	set translate_condition(v)
-	{
-		if(!this.Settings)
-		this.loadConfig();
-	this.Settings.set_boolean(WEATHER_TRANSLATE_CONDITION_KEY,v);
-	},
-
 	get icon_type()
 	{
 		if(!this.Settings)
@@ -627,18 +622,18 @@ Extends: Gtk.Box,
 	this.Settings.set_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY,v);
 	},
 
-	get refresh_interval()
+	get debug()
 	{
 		if(!this.Settings)
 		this.loadConfig();
-	return this.Settings.get_int(WEATHER_REFRESH_INTERVAL);
+	return this.Settings.get_boolean(WEATHER_DEBUG_EXTENSION);
 	},
 
-	set refresh_interval(v)
+	set debug(v)
 	{
 		if(!this.Settings)
 		this.loadConfig();
-	this.Settings.set_int(WEATHER_REFRESH_INTERVAL,v);
+	this.Settings.set_boolean(WEATHER_DEBUG_EXTENSION,v);
 	},
 
 	extractLocation : function(a)

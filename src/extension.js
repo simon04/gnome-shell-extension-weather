@@ -32,1521 +32,1052 @@
  *
  */
 
+// Init const //
+const Lang = imports.lang;
+const PanelMenu = imports.ui.panelMenu;
+const GWeather = imports.gi.GWeather;
+const Main = imports.ui.main;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
-const Cairo = imports.cairo;
-const Clutter = imports.gi.Clutter;
-const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
-const Gio = imports.gi.Gio;
-const Gtk = imports.gi.Gtk;
-const Lang = imports.lang;
-const Mainloop = imports.mainloop;
-const Soup = imports.gi.Soup;
-const Shell = imports.gi.Shell;
 const St = imports.gi.St;
-const Util = imports.misc.util;
-const GWeather = imports.gi.GWeather;
-const _ = Gettext.gettext;
-
-const Main = imports.ui.main;
-const PanelMenu = imports.ui.panelMenu;
+const Clutter = imports.gi.Clutter;
 const PopupMenu = imports.ui.popupMenu;
+const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
+const _ = Gettext.gettext;
+const Util = imports.misc.util;
+const Gio = imports.gi.Gio;
+const EXTENSIONDIR = Me.dir.get_path();
 
 // Settings
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
-const WEATHER_UNIT_KEY = 'unit';
-const WEATHER_WIND_SPEED_UNIT_KEY = 'wind-speed-unit';
-const WEATHER_WIND_DIRECTION_KEY = 'wind-direction';
-const WEATHER_PRESSURE_UNIT_KEY = 'pressure-unit';
-const WEATHER_CITY_KEY = 'city';
-const WEATHER_ACTUAL_CITY_KEY = 'actual-city';
-const WEATHER_TRANSLATE_CONDITION_KEY = 'translate-condition';
-const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';
-const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';
-const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';
-const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';
-const WEATHER_REFRESH_INTERVAL = 'refresh-interval';
+const WEATHER_GWEATHER_SETTINGS_SCHEMA = 'org.gnome.GWeather';
+const WEATHER_TEMPERATURE_UNIT_KEY = 'temperature-unit';		// GWeather setting
+const WEATHER_SPEED_UNIT_KEY = 'speed-unit';				// GWeather setting
+const WEATHER_PRESSURE_UNIT_KEY = 'pressure-unit';			// GWeather setting
+const WEATHER_DISTANCE_UNIT_KEY = 'distance-unit';			// GWeather setting
+const WEATHER_CITY_KEY = 'city';					// Weather extension setting
+const WEATHER_ACTUAL_CITY_KEY = 'actual-city';				// Weather extension setting
+const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';		// Weather extension setting
+const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';		// Weather extension setting
+const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';		// Weather extension setting
+const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';	// Weather extension setting
+const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension setting
 
-// Keep enums in sync with GSettings schemas
-const WeatherUnits = {
-    CELSIUS: 0,
-    FAHRENHEIT: 1,
-    KELVIN: 2,
-    RANKINE: 3,
-    REAUMUR: 4,
-    ROEMER: 5,
-    DELISLE: 6,
-    NEWTON: 7
-}
-
-const WeatherWindSpeedUnits = {
-	KPH: 0,
-	MPH: 1,
-	MPS: 2,
-	KNOTS: 3,
-	FPS: 4,
-	BEAUFORT: 5
-}
-
-const WeatherPressureUnits = {
-	hPa: 0,
-	inHg: 1,
-	bar: 2,
-	Pa: 3,
-	kPa: 4,
-	atm: 5,
-	at: 6,
-	Torr: 7,
-	psi: 8
-}
-
-const WeatherPosition = {
-    CENTER: 0,
-    RIGHT: 1,
-    LEFT: 2
-}
-
-const WEATHER_CONV_MPH_IN_MPS = 2.23693629;
-const WEATHER_CONV_KPH_IN_MPS = 3.6;
-const WEATHER_CONV_KNOTS_IN_MPS = 1.94384449;
-const WEATHER_CONV_FPS_IN_MPS = 3.2808399;
-
-// Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64) (Simon Legner)
-const _httpSession = new Soup.SessionAsync();
-Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
-
-const WeatherMenuButton = new Lang.Class({
-	Name: 'WeatherMenuButton',
+	// Init Weather class //
+	const Weather = new Lang.Class(
+	{
+	Name : "Weather",
 
 	Extends: PanelMenu.Button,
 
-	_init: function() {
-	// Load settings
-	this.loadConfig();
+		_init : function()
+		{
+		this.variation("temperature_units");
+		this.variation("speed_units");
+		this.variation("distance_units");
+		this.variation("pressure_units");
+		this.variation("cities");
+		this.variation("city");
+		this.variation("symbolic_icon");
+		this.variation("text_in_panel");
+		this.variation("position_in_panel");
+		this.variation("comment_in_panel");
+		this.variation("debug");									this.status("Initialized settings variation");
 
-	// Label
-	this._weatherInfo = new St.Label({ text: _('...') });
+		this.initWeather();										this.status("Initialized GWeather");
 
-	if(typeof St.TextDirection == "undefined")
-	{
-		// Panel icon
-		this._weatherIcon = new St.Icon({
-		    icon_name: 'view-refresh'+this.icon_type(),
-		    style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_text_direction() == Clutter.TextDirection.RTL ? '-rtl' : '')
-		});
-
-		// Panel menu item - the current class
 		let menuAlignment = 0.25;
-		if (Clutter.get_default_text_direction() == Clutter.TextDirection.RTL)
-		    menuAlignment = 1.0 - menuAlignment;
-		this.parent(menuAlignment);
-	}
-	else
-	{
-		// Panel icon
-		this._weatherIcon = new St.Icon({
-		    icon_name: 'view-refresh'+this.icon_type(),
-		    style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
-		});
-
-		// Panel menu item - the current class
-		let menuAlignment = 0.25;
-		if (St.Widget.get_default_direction() == St.TextDirection.RTL)
-		    menuAlignment = 1.0 - menuAlignment;
-		PanelMenu.Button.prototype._init.call(this, menuAlignment);
-	}
-
-	// Putting the panel item together
-	let topBox = new St.BoxLayout();
-	topBox.add_actor(this._weatherIcon);
-	topBox.add_actor(this._weatherInfo);
-	this.actor.add_actor(topBox);
-
-	let dummyBox = new St.BoxLayout();
-	this.actor.reparent(dummyBox);
-	dummyBox.remove_actor(this.actor);
-	dummyBox.destroy();
-
-	let children = null;
-	switch (this._position_in_panel) {
-	    case WeatherPosition.LEFT:
-		children = Main.panel._leftBox.get_children();
-		Main.panel._leftBox.insert_child_at_index(this.actor, children.length);
-		break;
-	    case WeatherPosition.CENTER:
-		children = Main.panel._centerBox.get_children();
-		Main.panel._centerBox.insert_child_at_index(this.actor, children.length);
-		break;
-	    case WeatherPosition.RIGHT:
-		children = Main.panel._rightBox.get_children();
-		Main.panel._rightBox.insert_child_at_index(this.actor, 0);
-		break;
-	}
-		if(typeof Main.panel._menus == "undefined")
-		Main.panel.menuManager.addMenu(this.menu);
-		else
-		Main.panel._menus.addMenu(this.menu);
-
-	this._old_position_in_panel = this._position_in_panel;
-
-	// Current weather
-	this._currentWeather = new St.Bin({ style_class: 'current' });
-	// Future weather
-	this._futureWeather = new St.Bin({ style_class: 'forecast'});
-
-	// Putting the popup item together
-	this.menu.addActor(this._currentWeather);
-
-	let item = new PopupMenu.PopupSeparatorMenuItem();
-	this.menu.addMenuItem(item);
-
-	this.menu.addActor(this._futureWeather);
-
-	let item = new PopupMenu.PopupSeparatorMenuItem();
-	this.menu.addMenuItem(item);
-
-	this._selectCity = new PopupMenu.PopupSubMenuMenuItem(_("Locations"));
-	this.menu.addMenuItem(this._selectCity);
-	this.rebuildSelectCityItem();
-
-	let item = new PopupMenu.PopupMenuItem(_("Reload Weather Information"));
-	item.connect('activate', Lang.bind(this, function(){this.refreshWeather(false);}));
-	this.menu.addMenuItem(item);
-
-	let item = new PopupMenu.PopupMenuItem(_("Weather Settings"));
-	item.connect('activate', Lang.bind(this, this._onPreferencesActivate));
-	this.menu.addMenuItem(item);
-
-	// Items
-	this.showLoadingUi();
-
-	this.rebuildCurrentWeatherUi();
-	this.rebuildFutureWeatherUi();
-
-	// Show weather
-	this.refreshWeather(true);
-	},
-
-	stop : function()
-	{
-		if(this._timeoutS)
-		Mainloop.source_remove(this._timeoutS);
-
-		if(this._settingsC)
-		{
-		this._settings.disconnect(this._settingsC);
-		this._settingsC = 0;
-		}
-
-		if(this._settingsInterfaceC)
-		{
-		this._settingsInterface.disconnect(this._settingsInterfaceC);
-		this._settingsInterfaceC = 0;
-		}
-	},
-
-	loadConfig : function()
-	{
-	let that = this;
-   	this._settings = Convenience.getSettings(WEATHER_SETTINGS_SCHEMA);
-	this._settingsC = this._settings.connect("changed",function(){that.refreshWeather(false);});
-	},
-
-	loadConfigInterface : function()
-	{
-	let that = this;
-	let schemaInterface = "org.gnome.desktop.interface";
-	 	if (Gio.Settings.list_schemas().indexOf(schemaInterface) == -1)
-		throw _("Schema \"%s\" not found.").replace("%s",schemaInterface);
-   	this._settingsInterface = new Gio.Settings({ schema: schemaInterface });
-	this._settingsInterfaceC = this._settingsInterface.connect("changed",function(){that.refreshWeather(false);});
-	},
-
-	get _clockFormat()
-	{
-		if(!this._settingsInterface)
-		this.loadConfigInterface();
-	return this._settingsInterface.get_string("clock-format");
-	},
-
-	get _units()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_enum(WEATHER_UNIT_KEY);
-	},
-
-	set _units(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_enum(WEATHER_UNIT_KEY,v);
-	},
-
-	get _wind_speed_units()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
-	},
-
-	set _wind_speed_units(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_enum(WEATHER_WIND_SPEED_UNIT_KEY,v);
-	},
-
-	get _wind_direction()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_boolean(WEATHER_WIND_DIRECTION_KEY);
-	},
-
-	set _wind_direction(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.set_boolean(WEATHER_WIND_DIRECTION_KEY,v);
-	},
-
-	get _pressure_units()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_enum(WEATHER_PRESSURE_UNIT_KEY);
-	},
-
-	set _pressure_units(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_enum(WEATHER_PRESSURE_UNIT_KEY,v);
-	},
-
-	get _cities()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_string(WEATHER_CITY_KEY);
-	},
-
-	set _cities(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_string(WEATHER_CITY_KEY,v);
-	},
-
-	get _actual_city()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	var a = this._settings.get_int(WEATHER_ACTUAL_CITY_KEY);
-	var b = a;
-	var cities = this._cities.split(" && ");
-
-		if(typeof cities != "object")
-		cities = [cities];
-
-	var l = cities.length-1;
-
-		if(a < 0)
-		a = 0;
-
-		if(l < 0)
-		l = 0;
-
-		if(a > l)
-		a = l;
-
-	return a;
-	},
-
-	set _actual_city(a)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	var cities = this._cities.split(" && ");
-
-		if(typeof cities != "object")
-		cities = [cities];
-
-	var l = cities.length-1;
-
-		if(a < 0)
-		a = 0;
-
-		if(l < 0)
-		l = 0;
-
-		if(a > l)
-		a = l;
-
-	this._settings.set_int(WEATHER_ACTUAL_CITY_KEY,a);
-	},
-
-	get _city()
-	{
-	let cities = this._cities;
-	let cities = cities.split(" && ");
-		if(cities && typeof cities == "string")
-		cities = [cities];
-		if(!cities[0])
-		return "";
-	cities = cities[this._actual_city];
-	return cities;
-	},
-
-	set _city(v)
-	{
-	let cities = this._cities;
-	cities = cities.split(" && ");
-		if(cities && typeof cities == "string")
-		cities = [cities];
-		if(!cities[0])
-		cities = [];
-	cities.splice(this.actual_city,1,v);
-	cities = cities.join(" && ");
-		if(typeof cities != "string")
-		cities = cities[0];
-	this._cities = cities;
-	},
-
-	get _translate_condition()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-	},
-
-	set _translate_condition(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_boolean(WEATHER_TRANSLATE_CONDITION_KEY,v);
-	},
-
-	get _icon_type()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? 1 : 0;
-	},
-
-	set _icon_type(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY,v);
-	},
-
-	get _text_in_panel()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
-	},
-
-	set _text_in_panel(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY,v);
-	},
-
-	get _position_in_panel()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
-	},
-
-	set _position_in_panel(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_enum(WEATHER_POSITION_IN_PANEL_KEY,v);
-	},
-
-	get _comment_in_panel()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
-	},
-
-	set _comment_in_panel(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY,v);
-	},
-
-	get _refresh_interval()
-	{
-		if(!this._settings)
-		this.loadConfig();
-	return this._settings.get_int(WEATHER_REFRESH_INTERVAL);
-	},
-
-	set _refresh_interval(v)
-	{
-		if(!this._settings)
-		this.loadConfig();
-	this._settings.set_int(WEATHER_REFRESH_INTERVAL,v);
-	},
-
-	rebuildSelectCityItem : function()
-	{
-	let that = this;
-	this._selectCity.menu.removeAll();
-	let item = null;
-
-	let cities = this._cities;
-	cities = cities.split(" && ");
-		if(cities && typeof cities == "string")
-		cities = [cities];
-		if(!cities[0])
+			if (Clutter.get_default_text_direction() == Clutter.TextDirection.RTL)
+			menuAlignment = 1.0 - menuAlignment;
+														this.status("Menu alignment = "+menuAlignment);
+		this.parent(menuAlignment);									this.status("Weather panel menu button initialized");
+		this.initUI();
+		this.start();
 		return 0;
+		},
 
-		for(let i = 0; cities.length > i; i++)
+		variation : function(variable,keep)
 		{
-		item = new PopupMenu.PopupMenuItem(this.extractLocation(cities[i]));
-		item.location = i;
-			if(i == this._actual_city)
-			item.setShowDot(true);
-		this._selectCity.menu.addMenuItem(item);
-			item.connect('activate', function(actor,event)
+			if(!variable)
+			return 0;
+
+			if(typeof this.past == "undefined")
+			this.past = {};
+
+			if(typeof this.past[variable] == "undefined")
 			{
-			that._actual_city = actor.location;
-			});
-		}
+				if(typeof this[variable] != "undefined")
+				this.past[variable] = this[variable];
+			return 0;
+			}
 
-		if (cities.length == 1)
-		this._selectCity.actor.hide();
-		else
-		this._selectCity.actor.show();
+			if(this.past[variable] === this[variable])
+			return 0;
 
-	return 0;
-	},
+			if(!keep)
+			this.past[variable] = this[variable];
+		return 1;
+		},
 
-	extractLocation : function()
-	{
-		if(!arguments[0])
-		return "";
-
-		if(arguments[0].search(">") == -1)
-		return _("Invalid city");
-	return arguments[0].split(">")[1];
-	},
-
-	extractWoeid : function()
-	{
-		if(!arguments[0])
-		return 0;
-
-		if(arguments[0].search(">") == -1)
-		return 0;
-	return arguments[0].split(">")[0];
-	},
-
-	updateCities : function()
-	{
-	let that = this;
-	let cities = this._cities;
-	
-	cities = cities.split(" && ");
-		if(cities && typeof cities == "string")
-		cities = [cities];
-		if(!cities[0])
-		cities = [];
-
-		if(cities.length == 0)
+		status : function()
 		{
-		this._cities = "2373572>Cambridge, Massachusetts (US)";
-		this.updateCities();
-		return 0;
-		}
-
-		for(let a in cities)
-		{
-			if(!this.extractWoeid(cities[a]))
+			if(typeof this.logfile == "undefined")
 			{
-				this.load_json_async(encodeURI("http://query.yahooapis.com/v1/public/yql?format=json&q=select woeid,name,admin1,country from geo.places where text = '"+cities[a]+"' limit 1"),function()
+			this.logfile = Gio.file_new_for_path(EXTENSIONDIR+"/weather.log");
+				if(this.logfile.query_exists(null))
+				this.logfile.delete(null);
+			}
+
+			if(!this.debug)
+			return 0;
+
+		let fileOutput = this.logfile.append_to(Gio.FileCreateFlags.PRIVATE,null);
+			if(!arguments[0])
+			fileOutput.write("\n",null);
+			else
+			fileOutput.write("["+new Date().toString()+"] "+arguments[0]+"\n",null);
+		fileOutput.close(null);
+
+			if(typeof this.UI != "undefined" && this.UI.menuConditions && arguments[0])
+			{
+	    		this.UI.menuConditions.text = arguments[0];
+				if(arguments[1])
+				this.UI.menuConditions.icon_name = arguments[1];
+			}
+		return 0;
+		},
+
+		start : function()
+		{												this.status("Starting Weather");
+		let that = this;
+		let code = this.extractCode(this.city);
+		this.location = this.world.find_by_station_code(code);						this.status("Location ("+this.location.get_city_name()+") loaded");
+
+		this.info = new GWeather.Info.new(this.location,GWeather.ForecastType.LIST);			this.status("Information loaded");
+		this.infoC = this.info.connect("updated",function(){that.refresh();that.status(0);});		this.status("Information connection started");
+
+		this.loadConfig();
+		this.loadGWeatherConfig();
+		this.refreshUI();										this.status("Weather started"); this.status(0);
+		return 0;
+		},
+
+		stop : function()
+		{												this.status("Stopping Weather");
+			if(this.infoC)
+			{
+			this.info.disconnect(this.infoC);
+			this.infoC = 0;
+			delete this.info;
+			delete this.location;									this.status("Information connection stopped");
+			}
+
+			if(this.settingsC)
+			{
+			this.settings.disconnect(this.settingsC);
+			this.settingsC = 0;
+			delete this.settings;									this.status("Setting connection stopped");
+			}
+
+			if(this.GWeatherSettingsC)
+			{
+			this.GWeatherSettings.disconnect(this.GWeatherSettingsC);
+			this.GWeatherSettingsC = 0;
+			delete this.GWeatherSettings;								this.status("GWeather setting connection stopped");
+			}											this.status("Stopped"); this.status(0);
+		return 0;
+		},
+
+		restart : function()
+		{
+		this.stop();
+		this.start();
+		return 0;
+		},
+
+		refresh : function()
+		{												this.status("Refreshing");
+		let that = this;
+			if(!this.info.is_valid())
+			{
+			this.rebuildCurrentItem(0);
+			this.rebuildForecastItem(0);								this.status("Informations is invalid");
+			return 0;
+			}
+
+			let getConditions = function(info)
+			{
+			let conditions = info.get_conditions();
+				if(conditions == "-")
+				conditions = info.get_sky();
+			return conditions;
+			};
+
+			let getMenuConditions = function(info)
+			{
+			let conditions = "";
+				if(that.comment_in_panel)
+				conditions += getConditions(info);
+
+				if(that.comment_in_panel && that.text_in_panel)
+				conditions += " / ";
+
+				if(that.text_in_panel)
+				conditions += info.get_temp();
+
+			return conditions;
+			};
+
+		let tempUnitVar = this.variation("temperature_units");
+		let speedUnitVar = this.variation("speed_units");
+		let distUnitVar = this.variation("distance_units");
+		let presUnitVar = this.variation("pressure_units");
+		let cityVar = this.variation("city");
+		let textInPanelVar = this.variation("text_in_panel");
+		let commentInPanelVar = this.variation("comment_in_panel");					this.status("Variation readed");
+
+		let first = false;
+			if(typeof this.build == "undefined")
+			{
+			first = true;										this.status("First build");
+			this.build = this.info.get_update();
+			this.variation("build");
+			}
+
+		let update = false;
+			if(this.variation("build"))
+			{
+			update = true;										this.status("Update information");
+			}
+
+		let fuc = (first || update || cityVar);
+		let di_up = (first)?"displayed":"updated";
+
+			if(fuc)
+			{
+			this.forecast = this.info.get_forecast_list();						this.status(this.forecast.length+" forecast");
+			this.rebuildCurrentItem(1);
+			this.rebuildForecastItem(this.forecast.length);
+
+			this.UI.menuIcon.icon_name = this.UI.currentIcon.icon_name = this.icon_type(this.info.get_icon_name());
+			this.UI.currentSunrise.text = this.info.get_sunrise();
+			this.UI.currentSunset.text = this.info.get_sunset();
+			this.UI.currentBuild.text = this.build;
+			this.UI.currentLocation.text = this.location.get_city_name();
+			this.UI.currentHumidity.text = this.info.get_humidity();				this.status("Basics informations "+di_up);
+			}
+
+			if(fuc || tempUnitVar)
+			{
+			this.UI.currentSummary.text = getConditions(this.info)+" / "+this.info.get_temp();
+			this.UI.menuConditions.text = getMenuConditions(this.info);
+			this.UI.currentTemperature.text = this.info.get_apparent();
+			this.UI.currentDew.text = this.info.get_dew();						this.status("Temperatures informations "+di_up);
+			}
+
+			if(fuc || speedUnitVar)
+			{
+			this.UI.currentWind.text = _('Wind:')+' '+this.info.get_wind();				this.status("Wind information "+di_up);
+			}
+
+			if(fuc || distUnitVar)
+			{
+			this.UI.currentVisibility.text = this.info.get_visibility();				this.status("Distance information "+di_up);
+			}
+
+			if(fuc || presUnitVar)
+			{
+			this.UI.currentPressure.text = this.info.get_pressure();				this.status("Pressure information "+di_up);
+			}
+
+			if(textInPanelVar || commentInPanelVar)
+			{
+			this.UI.menuConditions.text = getMenuConditions(this.info);				this.status("Panel information "+di_up);
+			}
+
+			for(let i in this.forecast)
+			{
+				if(fuc)
 				{
-				let city = arguments[0].query;
-					if(typeof city == "object" && typeof city.results == "object")
-					city = city.results.place;
-					else
-					return 0;
-				let cityText = city.woeid+">"+city.name;
-					if(city.admin1)
-					cityText += ", "+city.admin1.content;
+				this.UI.forecastItems[i].icon.icon_name = this.icon_type(this.forecast[i].get_icon_name());
+				this.UI.forecastItems[i].day.text = this.forecast[i].get_update();		this.status("Basics forecast ("+i+") informations "+di_up);
+				}
 
-					if(city.country)
-					cityText += " ("+city.country.code+")";
-
-				cities.splice(a,1,cityText);
-				cities = cities.join(" && ");
-					if(typeof cities != "string")
-					cities = cities[0];
-				that._cities = cities;
-				that.updateCities();
-				});
-			return 0;
-			}
-			else
-			continue;
-		}
-	this.refreshWeather();
-	return 0;
-	},
-
-    _onPreferencesActivate : function() {
-    Util.spawn(["gnome-shell-extension-prefs","weather-extension@xeked.com"]);
-    return 0;
-    },
-
-    unit_to_unicode: function() {
-	if(this._units == WeatherUnits.FAHRENHEIT)
-	return '\u00B0\F';
-	else if(this._units == WeatherUnits.KELVIN)
-	return 'K';
-	else if(this._units == WeatherUnits.RANKINE)
-	return '\u00B0\Ra';
-	else if(this._units == WeatherUnits.REAUMUR)
-	return '\u00B0\R\u00E9';
-	else if(this._units == WeatherUnits.ROEMER)
-	return '\u00B0\R\u00F8';
-	else if(this._units == WeatherUnits.DELISLE)
-	return '\u00B0\De';
-	else if(this._units == WeatherUnits.NEWTON)
-	return '\u00B0\N';
-	else
-	return '\u00B0\C';
-    },
-
-    get_weather_url: function() {
-        return encodeURI('http://query.yahooapis.com/v1/public/yql?format=json&q=select * from weather.forecast where woeid = '+this.extractWoeid(this._city)+' and u="f"');
-    },
-
-    get_weather_icon: function(code) {
-        /* see http://developer.yahoo.com/weather/#codetable */
-        /* fallback icons are: weather-clear-night weather-clear weather-few-clouds-night weather-few-clouds weather-fog weather-overcast weather-severe-alert weather-showers weather-showers-scattered weather-snow weather-storm */
-        switch (parseInt(code, 10)) {
-            case 0:/* tornado */
-                return ['weather-severe-alert'];
-            case 1:/* tropical storm */
-                return ['weather-severe-alert'];
-            case 2:/* hurricane */
-                return ['weather-severe-alert'];
-            case 3:/* severe thunderstorms */
-                return ['weather-severe-alert'];
-            case 4:/* thunderstorms */
-                return ['weather-storm'];
-            case 5:/* mixed rain and snow */
-                return ['weather-snow-rain', 'weather-snow'];
-            case 6:/* mixed rain and sleet */
-                return ['weather-snow-rain', 'weather-snow'];
-            case 7:/* mixed snow and sleet */
-                return ['weather-snow'];
-            case 8:/* freezing drizzle */
-                return ['weather-freezing-rain', 'weather-showers'];
-            case 9:/* drizzle */
-                return ['weather-showers'];
-            case 10:/* freezing rain */
-                return ['weather-freezing-rain', 'weather-showers'];
-            case 11:/* showers */
-                return ['weather-showers'];
-            case 12:/* showers */
-                return ['weather-showers'];
-            case 13:/* snow flurries */
-                return ['weather-snow'];
-            case 14:/* light snow showers */
-                return ['weather-snow'];
-            case 15:/* blowing snow */
-                return ['weather-snow'];
-            case 16:/* snow */
-                return ['weather-snow'];
-            case 17:/* hail */
-                return ['weather-snow'];
-            case 18:/* sleet */
-                return ['weather-snow'];
-            case 19:/* dust */
-                return ['weather-fog'];
-            case 20:/* foggy */
-                return ['weather-fog'];
-            case 21:/* haze */
-                return ['weather-fog'];
-            case 22:/* smoky */
-                return ['weather-fog'];
-            case 23:/* blustery */
-                return ['weather-few-clouds'];
-            case 24:/* windy */
-                return ['weather-few-clouds'];
-            case 25:/* cold */
-                return ['weather-few-clouds'];
-            case 26:/* cloudy */
-                return ['weather-overcast'];
-            case 27:/* mostly cloudy (night) */
-                return ['weather-clouds-night', 'weather-few-clouds-night'];
-            case 28:/* mostly cloudy (day) */
-                return ['weather-clouds', 'weather-overcast'];
-            case 29:/* partly cloudy (night) */
-                return ['weather-few-clouds-night'];
-            case 30:/* partly cloudy (day) */
-                return ['weather-few-clouds'];
-            case 31:/* clear (night) */
-                return ['weather-clear-night'];
-            case 32:/* sunny */
-                return ['weather-clear'];
-            case 33:/* fair (night) */
-                return ['weather-clear-night'];
-            case 34:/* fair (day) */
-                return ['weather-clear'];
-            case 35:/* mixed rain and hail */
-                return ['weather-snow-rain', 'weather-showers'];
-            case 36:/* hot */
-                return ['weather-clear'];
-            case 37:/* isolated thunderstorms */
-                return ['weather-storm'];
-            case 38:/* scattered thunderstorms */
-                return ['weather-storm'];
-            case 39:/* http://developer.yahoo.com/forum/YDN-Documentation/Yahoo-Weather-API-Wrong-Condition-Code/1290534174000-1122fc3d-da6d-34a2-9fb9-d0863e6c5bc6 */
-            case 40:/* scattered showers */
-                return ['weather-showers-scattered', 'weather-showers'];
-            case 41:/* heavy snow */
-                return ['weather-snow'];
-            case 42:/* scattered snow showers */
-                return ['weather-snow'];
-            case 43:/* heavy snow */
-                return ['weather-snow'];
-            case 44:/* partly cloudy */
-                return ['weather-few-clouds'];
-            case 45:/* thundershowers */
-                return ['weather-storm'];
-            case 46:/* snow showers */
-                return ['weather-snow'];
-            case 47:/* isolated thundershowers */
-                return ['weather-storm'];
-            case 3200:/* not available */
-            default:
-                return ['weather-severe-alert'];
-        }
-    },
-
-    get_weather_icon_safely: function(code) {
-        let iconname = this.get_weather_icon(code);
-        for (let i = 0; i < iconname.length; i++) {
-            if (this.has_icon(iconname[i]))
-                return iconname[i]+this.icon_type();
-        }
-        return 'weather-severe-alert'+this.icon_type();
-     },
-
-    has_icon: function(icon) {
-        return Gtk.IconTheme.get_default().has_icon(icon+this.icon_type());
-    },
-
-    get_weather_condition: function(code) {
-        switch (parseInt(code, 10)){
-            case 0:/* tornado */
-                return _('Tornado');
-            case 1:/* tropical storm */
-                return _('Tropical storm');
-            case 2:/* hurricane */
-                return _('Hurricane');
-            case 3:/* severe thunderstorms */
-                return _('Severe thunderstorms');
-            case 4:/* thunderstorms */
-                return _('Thunderstorms');
-            case 5:/* mixed rain and snow */
-                return _('Mixed rain and snow');
-            case 6:/* mixed rain and sleet */
-                return _('Mixed rain and sleet');
-            case 7:/* mixed snow and sleet */
-                return _('Mixed snow and sleet');
-            case 8:/* freezing drizzle */
-                return _('Freezing drizzle');
-            case 9:/* drizzle */
-                return _('Drizzle');
-            case 10:/* freezing rain */
-                return _('Freezing rain');
-            case 11:/* showers */
-                return _('Showers');
-            case 12:/* showers */
-                return _('Showers');
-            case 13:/* snow flurries */
-                return _('Snow flurries');
-            case 14:/* light snow showers */
-                return _('Light snow showers');
-            case 15:/* blowing snow */
-                return _('Blowing snow');
-            case 16:/* snow */
-                return _('Snow');
-            case 17:/* hail */
-                return _('Hail');
-            case 18:/* sleet */
-                return _('Sleet');
-            case 19:/* dust */
-                return _('Dust');
-            case 20:/* foggy */
-                return _('Foggy');
-            case 21:/* haze */
-                return _('Haze');
-            case 22:/* smoky */
-                return _('Smoky');
-            case 23:/* blustery */
-                return _('Blustery');
-            case 24:/* windy */
-                return _('Windy');
-            case 25:/* cold */
-                return _('Cold');
-            case 26:/* cloudy */
-                return _('Cloudy');
-            case 27:/* mostly cloudy (night) */
-            case 28:/* mostly cloudy (day) */
-                return _('Mostly cloudy');
-            case 29:/* partly cloudy (night) */
-            case 30:/* partly cloudy (day) */
-                return _('Partly cloudy');
-            case 31:/* clear (night) */
-                return _('Clear');
-            case 32:/* sunny */
-                return _('Sunny');
-            case 33:/* fair (night) */
-            case 34:/* fair (day) */
-                return _('Fair');
-            case 35:/* mixed rain and hail */
-                return _('Mixed rain and hail');
-            case 36:/* hot */
-                return _('Hot');
-            case 37:/* isolated thunderstorms */
-                return _('Isolated thunderstorms');
-            case 38:/* scattered thunderstorms */
-            case 39:/* scattered thunderstorms */
-                return _('Scattered thunderstorms');
-            case 40:/* scattered showers */
-                return _('Scattered showers');
-            case 41:/* heavy snow */
-                return _('Heavy snow');
-            case 42:/* scattered snow showers */
-                return _('Scattered snow showers');
-            case 43:/* heavy snow */
-                return _('Heavy snow');
-            case 44:/* partly cloudy */
-                return _('Partly cloudy');
-            case 45:/* thundershowers */
-                return _('Thundershowers');
-            case 46:/* snow showers */
-                return _('Snow showers');
-            case 47:/* isolated thundershowers */
-                return _('Isolated thundershowers');
-            case 3200:/* not available */
-            default:
-                return _('Not available');
-        }
-    },
-
-	toCelsius: function(t)
-	{
-	return String(Math.round((Number(t)-32)/1.8));
-	},
-
-	toKelvin: function(t)
-	{
-	return String(Math.round(((Number(t)+459.67)/1.8)*100)/100);
-	},
-
-	toRankine: function(t)
-	{
-	return String(Math.round((Number(t)+459.67)*100)/100);
-	},
-
-	toReaumur: function(t)
-	{
-	return String(Math.round((Number(t)-32)/2.25));
-	},
-
-	toRoemer: function(t)
-	{
-	return String(Math.round((((Number(t)-32)*7)/24)+7.5));
-	},
-
-	toDelisle: function(t)
-	{
-	return String(Math.round(((212-Number(t))*5)/6));
-	},
-
-	toNewton: function(t)
-	{
-	return String(Math.round((((Number(t)-32)*11)/60)*10)/10);
-	},
-
-	toPascal: function(p,t)
-	{
-	return Math.round((p * (3386.39-((t-32)*0.003407143))));
-	},
-
-	toBeaufort: function(w,t)
-	{
-		if(w < 1)
-		return (!t)?"0":"("+_("Calm")+")";
-
-		else if(w >= 1 && w <= 3)
-		return (!t)?"1":"("+_("Light air")+")";
-
-		else if(w >= 4 && w <= 7)
-		return (!t)?"2":"("+_("Light breeze")+")";
-
-		else if(w >= 8 && w <= 12)
-		return (!t)?"3":"("+_("Gentle breeze")+")";
-
-		else if(w >= 13 && w <= 17)
-		return (!t)?"4":"("+_("Moderate breeze")+")";
-
-		else if(w >= 18 && w <= 24)
-		return (!t)?"5":"("+_("Fresh breeze")+")";
-
-		else if(w >= 25 && w <= 30)
-		return (!t)?"6":"("+_("Strong breeze")+")";
-
-		else if(w >= 31 && w <= 38)
-		return (!t)?"7":"("+_("Moderate gale")+")";
-
-		else if(w >= 39 && w <= 46)
-		return (!t)?"8":"("+_("Fresh gale")+")";
-
-		else if(w >= 47 && w <= 54)
-		return (!t)?"9":"("+_("Strong gale")+")";
-
-		else if(w >= 55 && w <= 63)
-		return (!t)?"10":"("+_("Storm")+")";
-
-		else if(w >= 64 && w <= 73)
-		return (!t)?"11":"("+_("Violent storm")+")";
-
-		else
-		return (!t)?"12":"("+_("Hurricane")+")";
-	},
-
-	get_locale_day: function(abr)
-	{
-	let days = [_('Sunday'),_('Monday'), _('Tuesday'), _('Wednesday'), _('Thursday'), _('Friday'), _('Saturday')];
-	return days[abr];
-	},
-
-	get_wind_direction : function(deg)
-	{
-	let arrows = ["\u2193", "\u2199", "\u2190", "\u2196", "\u2191", "\u2197", "\u2192", "\u2198"];
-	let letters = [_('N'), _('NE'), _('E'), _('SE'), _('S'), _('SW'), _('W'), _('NW')];
-	let idx = Math.round(deg / 45) % arrows.length;
-	return (this._wind_direction)?arrows[idx]:letters[idx];
-	},
-
-	get_pressure_state : function(state)
-	{
-		switch(parseInt(state, 3))
-		{
-			case 0:
-			return '';
-			break;
-
-			case 1:
-			return '\u2934';
-			break;
-
-			case 2:
-			return '\u2935';
-			break;
-		}
-	return 0;
-	},
-
-	icon_type : function(icon_name)
-	{
-		if(!icon_name)
-			if(this._icon_type)
-			return "-symbolic";
-			else
-			return "";
-
-		if(this._icon_type)
-			if(String(icon_name).search("-symbolic") != -1)
-			return icon_name;
-			else
-			return icon_name+"-symbolic";
-		else
-			if(String(icon_name).search("-symbolic") != -1)
-			return String(icon_name).replace("-symbolic","");
-			else
-			return icon_name;
-	},
-
-	load_json_async: function(url, fun)
-	{
-	let here = this;
-
-	let message = Soup.Message.new('GET', url);
-
-		_httpSession.queue_message(message, function(_httpSession, message)
-		{
-			if(!message.response_body.data)
-			{
-			fun.call(here,0);
-			return 0;
-			}
-
-			try
-			{
-			let jp = JSON.parse(message.response_body.data);
-			fun.call(here, jp);
-			}
-			catch(e)
-			{
-			fun.call(here,0);
-			return 0;
-			}
-		});
-	return 0;
-	},
-
-	refreshWeather: function(recurse)
-	{    
-		if(!this.extractWoeid(this._city))
-		{
-		this.updateCities();
+				if(fuc || tempUnitVar)
+				{
+				this.UI.forecastItems[i].summary.text = getConditions(this.forecast[i])+" / "+this.forecast[i].get_temp();
+				this.UI.forecastItems[i].temp_min.text = "\u2193 "+this.forecast[i].get_temp_min();
+				this.UI.forecastItems[i].temp_max.text = "\u2191 "+this.forecast[i].get_temp_max(); this.status("Temperatures forecast ("+i+") informations "+di_up);
+				}
+			}											this.status("Refreshed");
 		return 0;
-		}
-		this.load_json_async(this.get_weather_url(), function(json)
+		},
+
+		initWeather : function()
 		{
-			if(!json)
-			return 0;
-		let weather = json.query.results.channel;
-		let many = 0;
-			if(typeof weather[0] != "undefined")
+		this.world = new GWeather.Location.new_world(false);
+		return 0;
+		},
+
+		initUI : function()
+		{
+		this.UI = {};
+
+		this.UI.menuConditions = new St.Label({ text: _('Weather') });					this.status("UI.menuCoditions created");
+
+		// Panel icon
+		this.UI.menuIcon = new St.Icon(
+		{
+		icon_name: 'view-refresh'+this.icon_type(),
+		style_class: 'system-status-icon weather-icon' + 
+		(Main.panel.actor.get_text_direction() == Clutter.TextDirection.RTL ? '-rtl' : '')
+		});												this.status("UI.menuIcon created");
+
+		// Putting the panel item together
+		let topBox = new St.BoxLayout();
+		topBox.add_actor(this.UI.menuIcon);
+		topBox.add_actor(this.UI.menuConditions);
+		this.actor.add_actor(topBox);
+
+		let dummyBox = new St.BoxLayout();
+		this.actor.reparent(dummyBox);
+		dummyBox.remove_actor(this.actor);
+		dummyBox.destroy();
+
+		let children = null;
+			switch (this.position_in_panel)
 			{
-			weather = weather[0];
-			many = 1;
+				case 0:
+				children = Main.panel._centerBox.get_children();
+				Main.panel._centerBox.insert_child_at_index(this.actor, children.length);	this.status("Panel icon inserted in center box");
+				break;
+
+				case 1:
+				children = Main.panel._rightBox.get_children();
+				Main.panel._rightBox.insert_child_at_index(this.actor, 0);			this.status("Panel icon inserted in right box");
+				break;
+
+				case 2:
+				children = Main.panel._leftBox.get_children();
+				Main.panel._leftBox.insert_child_at_index(this.actor, children.length);		this.status("Panel icon inserted in left box");
+				break;
 			}
-		let weather_c = weather.item.condition;
 
-		this.rebuildSelectCityItem();
+		Main.panel.menuManager.addMenu(this.menu);							this.status("menu added to menu manager (panel)");
 
-		this._weatherIcon.icon_name = this.icon_type(this._weatherIcon.icon_name);
-		this._currentWeatherIcon.icon_name = this.icon_type(this._currentWeatherIcon.icon_name);
-		this._forecast[0].Icon.icon_name = this.icon_type(this._forecast[0].Icon.icon_name);
-		this._forecast[1].Icon.icon_name = this.icon_type(this._forecast[1].Icon.icon_name);
-		this._sunriseIcon.icon_name = this.icon_type(this._sunriseIcon.icon_name);
-		this._sunsetIcon.icon_name = this.icon_type(this._sunsetIcon.icon_name);
-		this._buildIcon.icon_name = this.icon_type(this._buildIcon.icon_name);
+		this.UI.current = new St.Bin({ style_class: 'current' });					this.status("UI.current created");
+		this.UI.forecast = new St.Bin({ style_class: 'forecast'});					this.status("UI.forecast created");
+		this.menu.addActor(this.UI.current);								this.status("UI.current added to menu");
 
-			if(typeof St.IconType != "undefined")
+		let item;
+
+		item = new PopupMenu.PopupSeparatorMenuItem();
+		this.menu.addMenuItem(item);									this.status("Added separator");
+
+		this.menu.addActor(this.UI.forecast);								this.status("UI.forecast added to menu");
+
+		item = new PopupMenu.PopupSeparatorMenuItem();
+		this.menu.addMenuItem(item);									this.status("Added separator");
+
+		this.UI.locationSelector = new PopupMenu.PopupSubMenuMenuItem(_("Locations"));			this.status("UI.locationSelector created");
+		this.menu.addMenuItem(this.UI.locationSelector);						this.status("UI.locationSelector added to menu");
+		this.rebuildLocationSelectorItem();								this.status("Location selector builded");
+
+		item = new PopupMenu.PopupMenuItem(_("Weather Settings"));
+		item.connect('activate', Lang.bind(this, this.onPreferencesActivate));
+		this.menu.addMenuItem(item);									this.status("Preference button added to menu");
+
+		this.rebuildCurrentItem(0);
+		this.rebuildForecastItem(0);									this.status("UI initialized");
+		return 0;
+		},
+
+		refreshUI : function()
+		{												this.status("Refresh UI");
+			let oldPosition = this.past.position_in_panel;
+
+			if(this.variation("position_in_panel"))
 			{
-			this._weatherIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-			this._currentWeatherIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-			this._forecast[0].Icon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-			this._forecast[1].Icon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-			this._sunriseIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-			this._sunsetIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-			this._buildIcon.icon_type = (this._icon_type) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-			}
-
-			if(this._old_position_in_panel != this._position_in_panel)
-			{
-				switch (this._old_position_in_panel) {
-					case WeatherPosition.LEFT:
-						Main.panel._leftBox.remove_actor(this.actor);
+				switch (oldPosition) {
+					case 0:
+						Main.panel._centerBox.remove_actor(this.actor);			this.status("Removed panel icon from center box");
 						break;
-					case WeatherPosition.CENTER:
-						Main.panel._centerBox.remove_actor(this.actor);
+					case 1:
+						Main.panel._rightBox.remove_actor(this.actor);			this.status("Removed panel icon from right box");
 						break;
-					case WeatherPosition.RIGHT:
-						Main.panel._rightBox.remove_actor(this.actor);
+					case 2:
+						Main.panel._leftBox.remove_actor(this.actor);			this.status("Removed panel icon from left box");
 						break;
 				}
 
 				let children = null;
-				switch (this._position_in_panel) {
-					case WeatherPosition.LEFT:
-						children = Main.panel._leftBox.get_children();
-						Main.panel._leftBox.insert_child_at_index(this.actor, children.length);
-						break;
-					case WeatherPosition.CENTER:
+				switch (this.position_in_panel) {
+					case 0:
 						children = Main.panel._centerBox.get_children();
-						Main.panel._centerBox.insert_child_at_index(this.actor, children.length);
+						Main.panel._centerBox.insert_child_at_index(this.actor, children.length);	this.status("Panel icon inserted in center box");
 						break;
-					case WeatherPosition.RIGHT:
+					case 1:
 						children = Main.panel._rightBox.get_children();
-						Main.panel._rightBox.insert_child_at_index(this.actor, 0);
+						Main.panel._rightBox.insert_child_at_index(this.actor, 0);			this.status("Panel icon inserted in right box");
+						break;
+					case 2:
+						children = Main.panel._leftBox.get_children();
+						Main.panel._leftBox.insert_child_at_index(this.actor, children.length);		this.status("Panel icon inserted in left box");
 						break;
 				}
-			this._old_position_in_panel = this._position_in_panel;
 			}
 
-            let forecast = weather.item.forecast;
-            let location = this.extractLocation(this._city);
+			if(this.variation("cities") || this.variation("city",true))
+			{
+			this.rebuildLocationSelectorItem();									this.status("Location selector rebuilded");
+			}
 
-            // Refresh current weather
-            let comment = weather_c.text;
-            if (this._translate_condition)
-                comment = this.get_weather_condition(weather_c.code);
+			if(this.variation("symbolic_icon"))
+			{
+			this.UI.menuConditions.icon_name = this.icon_type(this.UI.menuConditions.icon_name);			this.status("Rebuilded menu icon");
 
-            let temperature = weather_c.temp;
-            let chill = weather.wind.chill;
-            let humidity = weather.atmosphere.humidity + ' %';
-            let pressure = weather.atmosphere.pressure;
-            let pressure_unit = weather.units.pressure;
-	    let pressure_state = weather.atmosphere.rising;
-            let wind_direction = this.get_wind_direction(weather.wind.direction);
-            let wind = weather.wind.speed;
-            let wind_unit = weather.units.speed;
-            let iconname = this.get_weather_icon_safely(weather_c.code);
-            let sunrise = weather.astronomy.sunrise;
-            let sunset = weather.astronomy.sunset;
+				if(typeof this.UI.currentIcon != "undefined")
+				{
+				this.UI.currentIcon.icon_name = this.icon_type(this.UI.currentIcon.icon_name);			this.status("Rebuilded current icon");
+				}
 
-		if(typeof this.lastBuildId == "undefined")
-		this.lastBuildId = 0;
+				if(typeof this.UI.sunriseIcon != "undefined")
+				{
+				this.UI.sunriseIcon.icon_name = this.icon_type(this.UI.sunriseIcon.icon_name);			this.status("Rebuilded sunrise icon");
+				}
 
-		if(typeof this.lastBuildDate == "undefined")
-		this.lastBuildDate = 0;
+				if(typeof this.UI.sunsetIcon != "undefined")
+				{
+				this.UI.sunsetIcon.icon_name = this.icon_type(this.UI.sunsetIcon.icon_name);			this.status("Rebuilded sunset icon");
+				}
 
-		if(this.lastBuildId != weather_c.date || !this.lastBuildDate)
+				if(typeof this.UI.buildIcon != "undefined")
+				{
+				this.UI.buildIcon.icon_name = this.icon_type(this.UI.buildIcon.icon_name);			this.status("Rebuilded build icon");
+				}
+
+				if(typeof this.UI.forecastItems != "undefined")
+					for(let i = 0; i < this.UI.forecastItems.length; i++)
+					{
+					let icon = this.icon_type(this.UI.forecastItems[i].icon.icon_name);
+					this.UI.forecastItems[i].icon.icon_name = icon;						this.status("Rebuilded forecast ("+i+") icon");
+					}
+			}													this.status("UI refreshed");
+		return 0;
+		},
+
+		rebuildLocationSelectorItem : function()
 		{
-		this.lastBuildId = weather_c.date;
-		this.lastBuildDate = new Date();
-		}
+		let that = this;
+		this.UI.locationSelector.menu.removeAll();
+		let item = null;
 
-	    let actualDate = new Date();
-	    let d = Math.floor((actualDate.getTime()-this.lastBuildDate.getTime())/86400000);
+		let cities = this.cities;
+		cities = cities.split(" && ");
+			if(cities && typeof cities == "string")
+			cities = [cities];
+			if(!cities[0])
+			return 0;
 
-		switch(this._pressure_units)
+			for(let i = 0; cities.length > i; i++)
+			{
+			item = new PopupMenu.PopupMenuItem(this.extractLocation(cities[i]));
+			item.location = i;
+
+				if(i == this.actual_city)
+				item.setShowDot(true);
+
+			this.UI.locationSelector.menu.addMenuItem(item);
+
+				item.connect('activate', function(actor,event)
+				{
+				that.actual_city = actor.location;
+				});
+			}
+
+			if (cities.length == 1)
+			this.UI.locationSelector.actor.hide();
+			else
+			this.UI.locationSelector.actor.show();
+
+		return 0;
+		},
+
+		destroyCurrent : function()
 		{
-			case WeatherPressureUnits.inHg:
-			pressure_unit = "inHg";
-			break;
+			if (this.UI.current.get_child() != null)
+			this.UI.current.get_child().destroy();
+		return 0;
+		},
 
-			case WeatherPressureUnits.hPa:
-			pressure = Math.round(this.toPascal(pressure,temperature)/100);
-			pressure_unit = "hPa";
-			break;
-
-			case WeatherPressureUnits.bar:
-			pressure = this.toPascal(pressure,temperature)/100000;
-			pressure_unit = "bar";
-			break;
-
-			case WeatherPressureUnits.Pa:
-			pressure = this.toPascal(pressure,temperature);
-			pressure_unit = "Pa";
-			break;
-
-			case WeatherPressureUnits.kPa:
-			pressure = Math.round(this.toPascal(pressure,temperature)/100)/10;
-			pressure_unit = "kPa";
-			break;
-
-			case WeatherPressureUnits.atm:
-			pressure = Math.round((this.toPascal(pressure,temperature)*0.00000986923267)*100000)/100000;
-			pressure_unit = "atm";
-			break;
-
-			case WeatherPressureUnits.at:
-			pressure = Math.round((this.toPascal(pressure,temperature)*0.0000101971621298)*100000)/100000;
-			pressure_unit = "at";
-			break;
-
-			case WeatherPressureUnits.Torr:
-			pressure = Math.round((this.toPascal(pressure,temperature)*0.00750061683)*100)/100;
-			pressure_unit = "Torr";
-			break;
-
-			case WeatherPressureUnits.psi:
-			pressure = Math.round((this.toPascal(pressure,temperature)*0.000145037738)*100)/100;
-			pressure_unit = "psi";
-			break;
-		}
-
-		switch(this._units)
+		destroyForecast : function()
 		{
-			case WeatherUnits.FAHRENHEIT:
-			break;
+			if (this.UI.forecast.get_child() != null)
+			this.UI.forecast.get_child().destroy();
+		return 0;
+		},
 
-			case WeatherUnits.CELSIUS:
-			temperature = this.toCelsius(temperature);
-			chill = this.toCelsius(chill);
-			break;
-
-			case WeatherUnits.KELVIN:
-			temperature = this.toKelvin(temperature);
-			chill = this.toKelvin(chill);
-			break;
-
-			case WeatherUnits.RANKINE:
-			temperature = this.toRankine(temperature);
-			chill = this.toRankine(chill);
-			break;
-
-			case WeatherUnits.REAUMUR:
-			temperature = this.toReaumur(temperature);
-			chill = this.toReaumur(chill);
-			break;
-
-			case WeatherUnits.ROEMER:
-			temperature = this.toRoemer(temperature);
-			chill = this.toRoemer(chill);
-			break;
-
-			case WeatherUnits.DELISLE:
-			temperature = this.toDelisle(temperature);
-			chill = this.toDelisle(chill);
-			break;
-
-			case WeatherUnits.NEWTON:
-			temperature = this.toNewton(temperature);
-			chill = this.toNewton(chill);
-			break;
-		}
-
-	    let lastBuild = (this.lastBuildDate.getHours()%12)+":"+((this.lastBuildDate.getMinutes()<10)?"0":"")+this.lastBuildDate.getMinutes()+" "+((this.lastBuildDate.getHours() >= 12)?"pm":"am");
-
-		if(this._clockFormat == "24h")
+		rebuildCurrentItem : function(n)
 		{
-		sunrise = new Date("3 Mar 1999 "+sunrise);
-		sunrise = sunrise.getHours()+":"+((sunrise.getMinutes()<10)?"0":"")+sunrise.getMinutes();
-		sunset = new Date("3 Mar 1999 "+sunset);
-		sunset = sunset.getHours()+":"+((sunset.getMinutes()<10)?"0":"")+sunset.getMinutes();
-		lastBuild = this.lastBuildDate.getHours()+":"+((this.lastBuildDate.getMinutes()<10)?"0":"")+this.lastBuildDate.getMinutes();
-		}
+			if(!n)
+			{
+				if(typeof this.info == "undefined" || (typeof this.info != "undefined" && !this.info.get_location_name()))
+				this.UI.current.set_child(new St.Label({ text: _('No weather information') }));
+				else
+				this.UI.current.set_child(new St.Label({ text: _('No weather information for %s').replace("%s",this.info.get_location_name()) }));
+			return 0;
+			}
 
-		if(d >= 1)
+		this.destroyCurrent();
+
+		// This will hold the icon for the current weather
+		this.UI.currentIcon = new St.Icon({
+		icon_size: 72,
+		icon_name: 'view-refresh'+this.icon_type(),
+		style_class: 'weather-current-icon'
+		});
+
+		this.UI.sunriseIcon = new St.Icon({
+		icon_size: 15,
+		icon_name: 'weather-clear'+this.icon_type(),
+		style_class: 'weather-sunrise-icon'
+		});
+
+		this.UI.sunsetIcon = new St.Icon({
+		icon_size: 15,
+		icon_name: 'weather-clear-night'+this.icon_type(),
+		style_class: 'weather-sunset-icon'
+		});
+
+		this.UI.buildIcon = new St.Icon({
+		icon_size: 15,
+		icon_name: 'view-refresh'+this.icon_type(),
+		style_class: 'weather-build-icon'
+		});
+
+		this.UI.currentLocation = new St.Label({ text: _('Please wait') });
+
+		// The summary of the current weather
+		this.UI.currentSummary = new St.Label({
+		text: _('Loading ...'),
+		style_class: 'weather-current-summary'
+		});
+
+		this.UI.currentWind = new St.Label({ text: _('Wind:')+' -' });
+
+		let bb = new St.BoxLayout({
+		vertical: true,
+		style_class: 'weather-current-summarybox'
+		});
+		bb.add_actor(this.UI.currentLocation);
+		bb.add_actor(this.UI.currentSummary);
+		bb.add_actor(this.UI.currentWind);
+
+		this.UI.currentSunrise = new St.Label({ text: '-' });
+		this.UI.currentSunset = new St.Label({ text: '-' });
+		this.UI.currentBuild = new St.Label({ text: '-' });
+
+		let ab = new St.BoxLayout({	
+		style_class: 'weather-current-infobox'	
+		});
+
+		ab.add_actor(this.UI.sunriseIcon);
+		ab.add_actor(this.UI.currentSunrise);
+		ab.add_actor(this.UI.sunsetIcon);	
+		ab.add_actor(this.UI.currentSunset);
+		ab.add_actor(this.UI.buildIcon);	
+		ab.add_actor(this.UI.currentBuild);
+		bb.add_actor(ab);
+
+		// Other labels
+		this.UI.currentTemperature = new St.Label({ text: '-' });
+		this.UI.currentDew = new St.Label({ text: '-' });
+		this.UI.currentVisibility = new St.Label({ text: '-' });
+		this.UI.currentHumidity = new St.Label({ text:  '-' });
+		this.UI.currentPressure = new St.Label({ text: '-' });
+
+		let rb = new St.BoxLayout({
+		style_class: 'weather-current-databox'
+		});
+		let rb_captions = new St.BoxLayout({
+		vertical: true,
+		style_class: 'weather-current-databox-captions'
+		});
+		let rb_values = new St.BoxLayout({
+		vertical: true,
+		style_class: 'weather-current-databox-values'
+		});
+		rb.add_actor(rb_captions);
+		rb.add_actor(rb_values);
+
+		rb_captions.add_actor(new St.Label({text: _('Feels like:')}));
+		rb_values.add_actor(this.UI.currentTemperature);
+		rb_captions.add_actor(new St.Label({text: _('Dew:')}));
+		rb_values.add_actor(this.UI.currentDew);
+		rb_captions.add_actor(new St.Label({text: _('Visibility:')}));
+		rb_values.add_actor(this.UI.currentVisibility);
+		rb_captions.add_actor(new St.Label({text: _('Humidity:')}));
+		rb_values.add_actor(this.UI.currentHumidity);
+		rb_captions.add_actor(new St.Label({text: _('Pressure:')}));
+		rb_values.add_actor(this.UI.currentPressure);
+
+		let xb = new St.BoxLayout();
+		xb.add_actor(bb);
+		xb.add_actor(rb);
+
+		let box = new St.BoxLayout({
+		style_class: 'weather-current-iconbox'
+		});
+		box.add_actor(this.UI.currentIcon);
+		box.add_actor(xb);
+		this.UI.current.set_child(box);
+		return 0;
+		},
+
+		rebuildForecastItem : function(n)
 		{
-		lastBuild = _("Yesterday");
-			if(d > 1)
-			lastBuild = _("%s days ago").replace("%s",d);
-		}
+			if(!n)
+			{
+			this.UI.forecast.set_child(new St.Label({ text: _('No forecast information') }));
+			return 0;
+			}
 
-            this._currentWeatherIcon.icon_name = this._weatherIcon.icon_name = iconname;
+		this.destroyForecast();
 
-	    let weatherInfoC = "";
-	    let weatherInfoT = "";
+		this.UI.forecastItems = [];
+		this.UI.forecastBox = new St.BoxLayout({style_class: 'weather-forecasts', vertical: true});
+		this.UI.forecast.set_child(this.UI.forecastBox);
 
-		if (this._comment_in_panel)
-		weatherInfoC = comment;
+			for (let i = 0; i < n; i++)
+			{
+			let forecastWeather = {};
 
-		if (this._text_in_panel)
-		weatherInfoT = parseFloat(temperature).toLocaleString() + ' ' + this.unit_to_unicode();
+			forecastWeather.icon = new St.Icon({
+			icon_size: 32,
+			icon_name: 'view-refresh'+this.icon_type(),
+			style_class: 'weather-forecast-icon'
+			});
 
-	    this._weatherInfo.text = weatherInfoC + ((weatherInfoC && weatherInfoT) ? ", " : "") + weatherInfoT;
+			forecastWeather.temp_min = new St.Label({
+			style_class: 'weather-forecast-temp-min'
+			});
 
-            this._currentWeatherSummary.text = comment + ", " + parseFloat(temperature).toLocaleString() + ' ' + this.unit_to_unicode();
-            this._currentWeatherLocation.text = location;
-            this._currentWeatherTemperature.text = parseFloat(chill).toLocaleString() + ' ' + this.unit_to_unicode();
-            this._currentWeatherHumidity.text = parseFloat(humidity).toLocaleString() + ' %';
-            this._currentWeatherPressure.text = parseFloat(pressure).toLocaleString() + ' ' + pressure_unit + ((pressure_state)?" ":"") + this.get_pressure_state(pressure_state);
-	    this._currentWeatherSunrise.text = sunrise;
-	    this._currentWeatherSunset.text = sunset;
-	    this._currentWeatherBuild.text = lastBuild;
+			forecastWeather.temp_max = new St.Label({
+			style_class: 'weather-forecast-temp-max'
+			});
 
-		    // Override wind units with our preference
-		    // Need to consider what units the Yahoo API has returned it in
-		    switch (this._wind_speed_units)
-		    {
-		        case WeatherWindSpeedUnits.MPH:
-		        break;
+			let minmax = new St.BoxLayout({
+			vertical: true,
+			style_class: 'weather-forecast-minmax'
+			});
+			minmax.add_actor(forecastWeather.temp_max);
+			minmax.add_actor(forecastWeather.temp_min);
 
-		        case WeatherWindSpeedUnits.KPH:
-			wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KPH_IN_MPS);
-			wind_unit = 'km/h';
-			break;
+			let iconminmax = new St.BoxLayout({
+			style_class: 'weather-forecast-iconminmax'
+			});
+			iconminmax.add_actor(forecastWeather.icon);
+			iconminmax.add_actor(minmax);
 
-		        case WeatherWindSpeedUnits.MPS:
-			wind = Math.round ((wind / WEATHER_CONV_MPH_IN_MPS) * 10)/ 10;
-			wind_unit = 'm/s';
-			break;
+			let iconminmaxbox = new St.Bin({
+			style_class: 'weather-forecast-minmax-box'
+			});
+			iconminmaxbox.set_child(iconminmax);
 
-		        case WeatherWindSpeedUnits.KNOTS:
-			wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS);
-			wind_unit = 'kn';
-			break;
+			forecastWeather.day = new St.Label({
+			style_class: 'weather-forecast-day'
+			});
+			forecastWeather.summary = new St.Label({
+			style_class: 'weather-forecast-summary'
+			});
 
-		        case WeatherWindSpeedUnits.FPS:
-			wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_FPS_IN_MPS);
-			wind_unit = 'ft/s';
-			break;
+			let daysum = new St.BoxLayout({
+			vertical: true,
+			style_class: 'weather-forecast-daysum'
+			});
+			daysum.add_actor(forecastWeather.day);
+			daysum.add_actor(forecastWeather.summary);
 
-			case WeatherWindSpeedUnits.BEAUFORT:
-			wind_unit = this.toBeaufort(wind,true);
-			wind = this.toBeaufort(wind);
-		    }
+			let daysumbox = new St.Bin({
+			style_class: 'weather-forecast-daysum-box'
+			});
+			daysumbox.set_child(daysum);
 
-            	if (!wind)
-            	this._currentWeatherWind.text = '\u2013';
-            	else if (wind == 0 || !wind_direction)
-            	this._currentWeatherWind.text = parseFloat(wind).toLocaleString() + ' ' + wind_unit;
-            	else // i.e. wind > 0 && wind_direction
-            	this._currentWeatherWind.text = wind_direction + ' ' + parseFloat(wind).toLocaleString() + ' ' + wind_unit;
+			let bb = new St.BoxLayout({
+			vertical: true,
+			style_class: 'weather-forecast-box'
+			});
+			bb.add_actor(iconminmaxbox);
+			bb.add_actor(daysumbox);
 
-            // Refresh forecast
-            for (let i = 0; i <= 1; i++) {
-                let forecastUi = this._forecast[i];
-                let forecastData = forecast[i];
+			forecastWeather.box = bb;
 
-                let code = forecastData.code;
-                let t_low = forecastData.low;
-                let t_high = forecastData.high;
+			this.UI.forecastItems[i] = forecastWeather;
+			}
 
-		switch(this._units)
+		let column = Math.ceil(n/4);
+		let f = 0;
+		let topPadding = "";
+
+			if(n >= 0)
+				for(let i = 0; i < column; i++)
+				{
+				let box = new St.Bin({style_class: topPadding});
+				let columnBox = new St.BoxLayout();
+				box.set_child(columnBox);
+
+					for(let j = 0; this.UI.forecastItems[f]; j++)
+					{
+						if(j >= 4)
+						break;
+														this.status("Adding forecast to column "+i+", line "+j);
+					columnBox.add_actor(this.UI.forecastItems[f].box);
+					f++;
+					}
+				this.UI.forecastBox.add_actor(box);
+				topPadding = "weather-forecast-box-addTopPadding";
+				}
+		return 0;
+		},
+
+		extractLocation : function()
 		{
-			case WeatherUnits.FAHRENHEIT:
-			break;
+			if(!arguments[0])
+			return "";
 
-			case WeatherUnits.CELSIUS:
-			t_low = this.toCelsius(t_low);
-			t_high = this.toCelsius(t_high);
-			break;
+			if(arguments[0].search(">") == -1)
+			return _("Invalid city");
+		return arguments[0].split(">")[1];
+		},
 
-			case WeatherUnits.KELVIN:
-			t_low = this.toKelvin(t_low);
-			t_high = this.toKelvin(t_high);
-			break;
+		extractCode : function()
+		{
+			if(!arguments[0])
+			return 0;
 
-			case WeatherUnits.RANKINE:
-			t_low = this.toRankine(t_low);
-			t_high = this.toRankine(t_high);
-			break;
+			if(arguments[0].search(">") == -1)
+			return 0;
+		return arguments[0].split(">")[0];
+		},
 
-			case WeatherUnits.REAUMUR:
-			t_low = this.toReaumur(t_low);
-			t_high = this.toReaumur(t_high);
-			break;
+		icon_type : function(icon_name)
+		{
+			if(!icon_name)
+				if(this.symbolic_icon)
+				return "-symbolic";
+				else
+				return "";
 
-			case WeatherUnits.ROEMER:
-			t_low = this.toRoemer(t_low);
-			t_high = this.toRoemer(t_high);
-			break;
+			if(this.symbolic_icon)
+				if(String(icon_name).search("-symbolic") != -1)
+				return icon_name;
+				else
+				return icon_name+"-symbolic";
+			else
+				if(String(icon_name).search("-symbolic") != -1)
+				return String(icon_name).replace("-symbolic","");
+				else
+				return icon_name;
+		},
 
-			case WeatherUnits.DELISLE:
-			t_low = this.toDelisle(t_low);
-			t_high = this.toDelisle(t_high);
-			break;
+		onPreferencesActivate : function()
+		{
+		Util.spawn(["gnome-shell-extension-prefs","weather-extension@xeked.com"]);
+		return 0;
+		},
 
-			case WeatherUnits.NEWTON:
-			t_low = this.toNewton(t_low);
-			t_high = this.toNewton(t_high);
-			break;
+		loadConfig : function()
+		{
+		let that = this;
+		this.settings = Convenience.getSettings(WEATHER_SETTINGS_SCHEMA);
+		this.settingsC = this.settings.connect("changed",function(){that.status("**** SETTING CHANGED ****");that.settingsChanged();});
+		return 0;
+		},
+
+		loadGWeatherConfig : function()
+		{
+		let that = this;
+		this.GWeatherSettings = Convenience.getSettings(WEATHER_GWEATHER_SETTINGS_SCHEMA);
+		this.GWeatherSettingsC = this.GWeatherSettings.connect("changed",function(){that.status("**** GWEATHER SETTING CHANGED ****");that.settingsChanged();});
+		return 0;
+		},
+
+		settingsChanged : function()
+		{
+			if(this.variation("cities",true) || this.variation("symbolic_icon",true) || this.variation("position_in_panel",true))
+			this.refreshUI();
+
+			if(this.variation("temperature_units",true) || this.variation("speed_units",true) || this.variation("distance_units",true) 
+			|| this.variation("pressure_units",true) || this.variation("text_in_panel",true) || this.variation("comment_in_panel",true))
+			this.refresh();
+
+		let oldCode = String(this.location.get_code());
+		let newCode = String(this.extractCode(this.city));
+			if(newCode != oldCode)
+			{										this.status("Location has changed ("+oldCode+" => "+newCode+")");
+			this.restart();									this.status("Location changed to "+this.location.get_city_name());
+			return 0;
+			}
+
+			if(this.variation("debug"))
+			{
+			this.restart();
+			return 0;
+			}
+		return 0;
+		},
+
+		get temperature_units()
+		{
+			if(!this.GWeatherSettings)
+			this.loadGWeatherConfig();
+		return this.GWeatherSettings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
+		},
+
+		set temperature_units(v)
+		{
+			if(!this.GWeatherSettings)
+			this.loadGWeatherConfig();
+		this.GWeatherSettings.set_enum(WEATHER_TEMPERATURE_UNIT_KEY,v);
+		return 0;
+		},
+
+		get speed_units()
+		{
+			if(!this.GWeatherSettings)
+			this.loadGWeatherConfig();
+		return this.GWeatherSettings.get_enum(WEATHER_SPEED_UNIT_KEY);
+		},
+
+		set speed_units(v)
+		{
+			if(!this.GWeatherSettings)
+			this.loadGWeatherConfig();
+		this.GWeatherSettings.set_enum(WEATHER_SPEED_UNIT_KEY,v);
+		return 0;
+		},
+
+		get distance_units()
+		{
+			if(!this.GWeatherSettings)
+			this.loadGWeatherConfig();
+		return this.GWeatherSettings.get_enum(WEATHER_DISTANCE_UNIT_KEY);
+		},
+
+		set distance_units(v)
+		{
+			if(!this.GWeatherSettings)
+			this.loadGWeatherConfig();
+		this.GWeatherSettings.set_enum(WEATHER_SPEED_UNIT_KEY,v);
+		return 0;
+		},
+
+		get pressure_units()
+		{
+			if(!this.GWeatherSettings)
+			this.loadGWeatherConfig();
+		return this.GWeatherSettings.get_enum(WEATHER_PRESSURE_UNIT_KEY);
+		},
+
+		set pressure_units(v)
+		{
+			if(!this.GWeatherSettings)
+			this.loadGWeatherConfig();
+		this.GWeatherSettings.set_enum(WEATHER_PRESSURE_UNIT_KEY,v);
+		return 0;
+		},
+
+		get cities()
+		{
+			if(!this.settings)
+			this.loadConfig();
+		return this.settings.get_string(WEATHER_CITY_KEY);
+		},
+
+		set cities(v)
+		{
+			if(!this.settings)
+			this.loadConfig();
+		this.settings.set_string(WEATHER_CITY_KEY,v);
+		return 0;
+		},
+
+		get actual_city()
+		{
+			if(!this.settings)
+			this.loadConfig();
+		var a = this.settings.get_int(WEATHER_ACTUAL_CITY_KEY);
+		var b = a;
+		var cities = this.cities.split(" && ");
+
+			if(typeof cities != "object")
+			cities = [cities];
+
+		var l = cities.length-1;
+
+			if(a < 0)
+			a = 0;
+
+			if(l < 0)
+			l = 0;
+
+			if(a > l)
+			a = l;
+
+		return a;
+		},
+
+		set actual_city(a)
+		{
+			if(!this.settings)
+			this.loadConfig();
+		var cities = this.cities.split(" && ");
+
+			if(typeof cities != "object")
+			cities = [cities];
+
+		var l = cities.length-1;
+
+			if(a < 0)
+			a = 0;
+
+			if(l < 0)
+			l = 0;
+
+			if(a > l)
+			a = l;
+
+		this.settings.set_int(WEATHER_ACTUAL_CITY_KEY,a);
+		return 0;
+		},
+
+		get city()
+		{
+		let cities = this.cities;
+		let cities = cities.split(" && ");
+			if(cities && typeof cities == "string")
+			cities = [cities];
+			if(!cities[0])
+			return "";
+		cities = cities[this.actual_city];
+		return cities;
+		},
+
+		set city(v)
+		{
+		let cities = this.cities;
+		cities = cities.split(" && ");
+			if(cities && typeof cities == "string")
+			cities = [cities];
+			if(!cities[0])
+			cities = [];
+		cities.splice(this.actual_city,1,v);
+		cities = cities.join(" && ");
+			if(typeof cities != "string")
+			cities = cities[0];
+		this.cities = cities;
+		return 0;
+		},
+
+		get symbolic_icon()
+		{
+			if(!this.settings)
+			this.loadConfig();
+		return this.settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? 1 : 0;
+		},
+
+		set symbolic_icon(v)
+		{
+			if(!this.settings)
+			this.loadConfig();
+		this.settings.set_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY,v);
+		return 0;
+		},
+
+		get text_in_panel()
+		{
+			if(!this.settings)
+			this.loadConfig();
+		return this.settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
+		},
+
+		set text_in_panel(v)
+		{
+			if(!this.settings)
+			this.loadConfig();
+		this.settings.set_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY,v);
+		return 0;
+		},
+
+		get position_in_panel()
+		{
+			if(!this.settings)
+			this.loadConfig();
+		return this.settings.get_enum(WEATHER_POSITION_IN_PANEL_KEY);
+		},
+
+		set position_in_panel(v)
+		{
+			if(!this.settings)
+			this.loadConfig();
+		this.settings.set_enum(WEATHER_POSITION_IN_PANEL_KEY,v);
+		return 0;
+		},
+
+		get comment_in_panel()
+		{
+			if(!this.settings)
+			this.loadConfig();
+		return this.settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
+		},
+
+		set comment_in_panel(v)
+		{
+			if(!this.settings)
+			this.loadConfig();
+		this.settings.set_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY,v);
+		return 0;
+		},
+
+		get debug()
+		{
+			if(!this.settings)
+			this.loadConfig();
+		return this.settings.get_boolean(WEATHER_DEBUG_EXTENSION);
+		},
+
+		set debug(v)
+		{
+			if(!this.settings)
+			this.loadConfig();
+		this.settings.set_boolean(WEATHER_DEBUG_EXTENSION,v);
+		return 0;
 		}
-
-                let comment = forecastData.text;
-                if (this._translate_condition)
-                    comment = this.get_weather_condition(code);
-
-		let forecastDate = new Date(forecastData.date);
-		let dayLeft = Math.floor((actualDate.getTime()-forecastDate.getTime())/1000/60/60/24);
-
-		let date_string = _("Today");
-			if(dayLeft == -1)
-			date_string = _("Tomorrow");
-			else if(dayLeft < -1)
-			date_string = _("In %s days").replace("%s",-1*dayLeft);
-			else if(dayLeft == 1)
-			date_string = _("Yesterday");
-			else if(dayLeft > 1)
-			date_string = _("%s days ago").replace("%s",dayLeft);
-
-                forecastUi.Day.text = date_string + ' (' + this.get_locale_day(forecastDate.getDay()) + ')';
-                forecastUi.Temperature.text = '\u2193 ' + parseFloat(t_low).toLocaleString() + ' ' + this.unit_to_unicode() + '    \u2191 ' + parseFloat(t_high).toLocaleString() + ' ' + this.unit_to_unicode();
-                forecastUi.Summary.text = comment;
-                forecastUi.Icon.icon_name = this.get_weather_icon_safely(code);
-            }
-	return 0;
-        });
-
-        // Repeatedly refresh weather if recurse is set
-        if (recurse) {
-            this._timeoutS = Mainloop.timeout_add_seconds(this._refresh_interval, Lang.bind(this, function() {
-                this.refreshWeather(true);
-            }));
-        }
-    return 0;
-    },
-
-    destroyCurrentWeather: function() {
-        if (this._currentWeather.get_child() != null)
-            this._currentWeather.get_child().destroy();
-    },
-
-    destroyFutureWeather: function() {
-        if (this._futureWeather.get_child() != null)
-            this._futureWeather.get_child().destroy();
-    },
-
-    showLoadingUi: function() {
-        this.destroyCurrentWeather();
-        this.destroyFutureWeather();
-        this._currentWeather.set_child(new St.Label({ text: _('Loading current weather ...') }));
-        this._futureWeather.set_child(new St.Label({ text: _('Loading future weather ...') }));
-    },
-
-    rebuildCurrentWeatherUi: function() {
-        this.destroyCurrentWeather();
-
-        // This will hold the icon for the current weather
-        this._currentWeatherIcon = new St.Icon({
-            icon_size: 72,
-            icon_name: 'view-refresh'+this.icon_type(),
-            style_class: 'weather-current-icon'
-        });
-
-	this._sunriseIcon = new St.Icon({
-            icon_size: 15,
-            icon_name: 'weather-clear'+this.icon_type(),
-            style_class: 'weather-sunrise-icon'
-        });
-
-	this._sunsetIcon = new St.Icon({
-            icon_size: 15,
-            icon_name: 'weather-clear-night'+this.icon_type(),
-            style_class: 'weather-sunset-icon'
-        });
-
-	this._buildIcon = new St.Icon({
-            icon_size: 15,
-            icon_name: 'view-refresh'+this.icon_type(),
-            style_class: 'weather-build-icon'
-        });
-
-        // The summary of the current weather
-        this._currentWeatherSummary = new St.Label({
-            text: _('Loading ...'),
-            style_class: 'weather-current-summary'
-        });
-        this._currentWeatherLocation = new St.Label({ text: _('Please wait') });
-
-        let bb = new St.BoxLayout({
-            vertical: true,
-            style_class: 'weather-current-summarybox'
-        });
-        bb.add_actor(this._currentWeatherLocation);
-        bb.add_actor(this._currentWeatherSummary);
-
-	this._currentWeatherSunrise = new St.Label({ text: '-' });
-	this._currentWeatherSunset = new St.Label({ text: '-' });
-	this._currentWeatherBuild = new St.Label({ text: '-' });
-
-	let ab = new St.BoxLayout({	
-	style_class: 'weather-current-infobox'	
 	});
 
-	ab.add_actor(this._sunriseIcon);
-	ab.add_actor(this._currentWeatherSunrise);
-	ab.add_actor(this._sunsetIcon);	
-	ab.add_actor(this._currentWeatherSunset);
-	ab.add_actor(this._buildIcon);	
-	ab.add_actor(this._currentWeatherBuild);
-	bb.add_actor(ab);
+let weather;
 
-        // Other labels
-        this._currentWeatherTemperature = new St.Label({ text: '...' });
-        this._currentWeatherHumidity = new St.Label({ text:  '...' });
-        this._currentWeatherPressure = new St.Label({ text: '...' });
-        this._currentWeatherWind = new St.Label({ text: '...' });
+	function init()
+	{
+	// Use convenience translations //
+	Convenience.initTranslations('gnome-shell-extension-weather');
+	}
 
-        let rb = new St.BoxLayout({
-            style_class: 'weather-current-databox'
-        });
-        let rb_captions = new St.BoxLayout({
-            vertical: true,
-            style_class: 'weather-current-databox-captions'
-        });
-        let rb_values = new St.BoxLayout({
-            vertical: true,
-            style_class: 'weather-current-databox-values'
-        });
-        rb.add_actor(rb_captions);
-        rb.add_actor(rb_values);
+	function enable()
+	{
+	// Create weather //
+	weather = new Weather();
 
-        rb_captions.add_actor(new St.Label({text: _('Feels like:')}));
-        rb_values.add_actor(this._currentWeatherTemperature);
-        rb_captions.add_actor(new St.Label({text: _('Humidity:')}));
-        rb_values.add_actor(this._currentWeatherHumidity);
-        rb_captions.add_actor(new St.Label({text: _('Pressure:')}));
-        rb_values.add_actor(this._currentWeatherPressure);
-        rb_captions.add_actor(new St.Label({text: _('Wind:')}));
-        rb_values.add_actor(this._currentWeatherWind);
+	// Add weather to status area //
+	Main.panel.addToStatusArea('weather', weather);
+	}
 
-        let xb = new St.BoxLayout();
-        xb.add_actor(bb);
-        xb.add_actor(rb);
+	function disable()
+	{
+	// Stop weather //
+	weather.stop();
 
-        let box = new St.BoxLayout({
-            style_class: 'weather-current-iconbox'
-        });
-        box.add_actor(this._currentWeatherIcon);
-        box.add_actor(xb);
-        this._currentWeather.set_child(box);
-    },
-
-    rebuildFutureWeatherUi: function() {
-        this.destroyFutureWeather();
-
-        this._forecast = [];
-        this._forecastBox = new St.BoxLayout();
-        this._futureWeather.set_child(this._forecastBox);
-
-        for (let i = 0; i <= 1; i++) {
-            let forecastWeather = {};
-
-            forecastWeather.Icon = new St.Icon({
-                icon_size: 48,
-                icon_name: 'view-refresh'+this.icon_type(),
-                style_class: 'weather-forecast-icon'
-            });
-            forecastWeather.Day = new St.Label({
-                style_class: 'weather-forecast-day'
-            });
-            forecastWeather.Summary = new St.Label({
-                style_class: 'weather-forecast-summary'
-            });
-            forecastWeather.Temperature = new St.Label({
-                style_class: 'weather-forecast-temperature'
-            });
-
-            let by = new St.BoxLayout({
-                vertical: true,
-                style_class: 'weather-forecast-databox'
-            });
-            by.add_actor(forecastWeather.Day);
-            by.add_actor(forecastWeather.Summary);
-            by.add_actor(forecastWeather.Temperature);
-
-            let bb = new St.BoxLayout({
-                style_class: 'weather-forecast-box'
-            });
-            bb.add_actor(forecastWeather.Icon);
-            bb.add_actor(by);
-
-            this._forecast[i] = forecastWeather;
-            this._forecastBox.add_actor(bb);
-        }
-    }
-});
-
-let weatherMenu;
-
-function init() {
-Convenience.initTranslations('gnome-shell-extension-weather');
-}
-
-function enable() {
-    weatherMenu = new WeatherMenuButton();
-    Main.panel.addToStatusArea('weatherMenu', weatherMenu);
-}
-
-function disable() {
-    weatherMenu.stop();
-    weatherMenu.destroy();
-}
+	// Remove weather from status area //
+	weather.destroy();
+	}

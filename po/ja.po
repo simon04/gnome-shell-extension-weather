@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extension-weather 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-11 00:47+0100\n"
+"POT-Creation-Date: 2013-03-28 02:22+0100\n"
 "PO-Revision-Date: 2012-06-11 12:26+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
@@ -16,415 +16,145 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/extension.js:128
-msgid "..."
-msgstr ""
-
-#: ../src/extension.js:208
-msgid "Locations"
-msgstr ""
-
-#: ../src/extension.js:212
-msgid "Reload Weather Information"
-msgstr "天気予報を更新する"
-
-#: ../src/extension.js:216
-msgid "Weather Settings"
-msgstr "設定"
-
-#: ../src/extension.js:242
-#, python-format
-msgid "Schema \"%s\" not found."
-msgstr "次のスキーマが見つかりませんでした: \"%s\""
-
-#: ../src/extension.js:523 ../src/prefs.js:756
-msgid "Invalid city"
-msgstr "都市の名前が間違っています"
-
-#: ../src/extension.js:738
-msgid "Tornado"
-msgstr ""
-
-#: ../src/extension.js:740
-msgid "Tropical storm"
-msgstr ""
-
-#: ../src/extension.js:742 ../src/extension.js:914
-msgid "Hurricane"
-msgstr ""
-
-#: ../src/extension.js:744
-msgid "Severe thunderstorms"
-msgstr ""
-
-#: ../src/extension.js:746
-msgid "Thunderstorms"
-msgstr ""
-
-#: ../src/extension.js:748
-msgid "Mixed rain and snow"
-msgstr ""
-
-#: ../src/extension.js:750
-msgid "Mixed rain and sleet"
-msgstr ""
-
-#: ../src/extension.js:752
-msgid "Mixed snow and sleet"
-msgstr ""
-
-#: ../src/extension.js:754
-msgid "Freezing drizzle"
-msgstr ""
-
-#: ../src/extension.js:756
-msgid "Drizzle"
-msgstr ""
-
-#: ../src/extension.js:758
-msgid "Freezing rain"
-msgstr ""
-
-#: ../src/extension.js:760 ../src/extension.js:762
-msgid "Showers"
-msgstr ""
-
-#: ../src/extension.js:764
-msgid "Snow flurries"
-msgstr ""
-
-#: ../src/extension.js:766
-msgid "Light snow showers"
-msgstr ""
-
-#: ../src/extension.js:768
-msgid "Blowing snow"
-msgstr ""
-
-#: ../src/extension.js:770
-msgid "Snow"
-msgstr ""
-
-#: ../src/extension.js:772
-msgid "Hail"
-msgstr ""
-
-#: ../src/extension.js:774
-msgid "Sleet"
-msgstr ""
-
-#: ../src/extension.js:776
-msgid "Dust"
-msgstr ""
-
-#: ../src/extension.js:778
-msgid "Foggy"
-msgstr ""
-
-#: ../src/extension.js:780
-msgid "Haze"
-msgstr ""
-
-#: ../src/extension.js:782
-msgid "Smoky"
-msgstr ""
-
-#: ../src/extension.js:784
-msgid "Blustery"
-msgstr ""
-
-#: ../src/extension.js:786
-msgid "Windy"
-msgstr ""
-
-#: ../src/extension.js:788
-msgid "Cold"
-msgstr ""
-
-#: ../src/extension.js:790
-msgid "Cloudy"
-msgstr ""
-
-#: ../src/extension.js:793
-msgid "Mostly cloudy"
-msgstr ""
-
-#: ../src/extension.js:796 ../src/extension.js:822
-msgid "Partly cloudy"
-msgstr ""
-
-#: ../src/extension.js:798
-msgid "Clear"
-msgstr ""
-
-#: ../src/extension.js:800
-msgid "Sunny"
-msgstr ""
-
-#: ../src/extension.js:803
-msgid "Fair"
-msgstr ""
-
-#: ../src/extension.js:805
-msgid "Mixed rain and hail"
-msgstr ""
-
-#: ../src/extension.js:807
-msgid "Hot"
-msgstr ""
-
-#: ../src/extension.js:809
-msgid "Isolated thunderstorms"
-msgstr ""
-
-#: ../src/extension.js:812
-msgid "Scattered thunderstorms"
-msgstr ""
-
-#: ../src/extension.js:814
-msgid "Scattered showers"
-msgstr ""
-
-#: ../src/extension.js:816 ../src/extension.js:820
-msgid "Heavy snow"
-msgstr ""
-
-#: ../src/extension.js:818
-msgid "Scattered snow showers"
-msgstr ""
-
-#: ../src/extension.js:824
-msgid "Thundershowers"
-msgstr ""
-
-#: ../src/extension.js:826
-msgid "Snow showers"
-msgstr ""
-
-#: ../src/extension.js:828
-msgid "Isolated thundershowers"
-msgstr ""
-
-#: ../src/extension.js:831
-msgid "Not available"
-msgstr ""
-
-#: ../src/extension.js:878
-msgid "Calm"
-msgstr ""
-
-#: ../src/extension.js:881
-msgid "Light air"
-msgstr ""
-
-#: ../src/extension.js:884
-msgid "Light breeze"
-msgstr ""
-
-#: ../src/extension.js:887
-msgid "Gentle breeze"
-msgstr ""
-
-#: ../src/extension.js:890
-msgid "Moderate breeze"
-msgstr ""
-
-#: ../src/extension.js:893
-msgid "Fresh breeze"
-msgstr ""
-
-#: ../src/extension.js:896
-msgid "Strong breeze"
-msgstr ""
-
-#: ../src/extension.js:899
-msgid "Moderate gale"
-msgstr ""
-
-#: ../src/extension.js:902
-msgid "Fresh gale"
-msgstr ""
-
-#: ../src/extension.js:905
-msgid "Strong gale"
-msgstr ""
-
-#: ../src/extension.js:908
-msgid "Storm"
-msgstr ""
-
-#: ../src/extension.js:911
-msgid "Violent storm"
-msgstr ""
-
-#: ../src/extension.js:919
-msgid "Sunday"
-msgstr ""
-
-#: ../src/extension.js:919
-msgid "Monday"
-msgstr ""
-
-#: ../src/extension.js:919
-msgid "Tuesday"
-msgstr ""
-
-#: ../src/extension.js:919
-msgid "Wednesday"
-msgstr ""
-
-#: ../src/extension.js:919
-msgid "Thursday"
-msgstr ""
-
-#: ../src/extension.js:919
-msgid "Friday"
-msgstr ""
-
-#: ../src/extension.js:919
-msgid "Saturday"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "N"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "NE"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "E"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "SE"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "S"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "SW"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "W"
-msgstr ""
-
-#: ../src/extension.js:926
-msgid "NW"
-msgstr ""
-
-#: ../src/extension.js:1208 ../src/extension.js:1337
-msgid "Yesterday"
-msgstr "昨日"
-
-#: ../src/extension.js:1210 ../src/extension.js:1339
-#, python-format
-msgid "%s days ago"
-msgstr "%s日前"
-
-#: ../src/extension.js:1331
-msgid "Today"
-msgstr ""
-
-#: ../src/extension.js:1333
-msgid "Tomorrow"
-msgstr ""
-
-#: ../src/extension.js:1335
-#, fuzzy, python-format
-msgid "In %s days"
-msgstr "%s日前"
-
-#: ../src/extension.js:1371
-msgid "Loading current weather ..."
-msgstr ""
-
-#: ../src/extension.js:1372
-msgid "Loading future weather ..."
-msgstr ""
-
-#: ../src/extension.js:1405
-msgid "Loading ..."
-msgstr ""
-
-#: ../src/extension.js:1408
-msgid "Please wait"
-msgstr ""
-
-#: ../src/extension.js:1453
-msgid "Feels like:"
-msgstr ""
-
-#: ../src/extension.js:1455
-msgid "Humidity:"
-msgstr ""
-
-#: ../src/extension.js:1457
-msgid "Pressure:"
-msgstr ""
-
-#: ../src/extension.js:1459
+#: ../src/extension.js:281 ../src/extension.js:567
 msgid "Wind:"
 msgstr ""
 
-#: ../src/prefs.js:124
+#: ../src/extension.js:327
+#, fuzzy
+msgid "Weather"
+msgstr "設定"
+
+#: ../src/extension.js:383
+msgid "Locations"
+msgstr ""
+
+#: ../src/extension.js:387
+msgid "Weather Settings"
+msgstr "設定"
+
+#: ../src/extension.js:526
+#, fuzzy
+msgid "No weather information"
+msgstr "天気予報を更新する"
+
+#: ../src/extension.js:528
+#, fuzzy, python-format
+msgid "No weather information for %s"
+msgstr "天気予報を更新する"
+
+#: ../src/extension.js:559
+msgid "Please wait"
+msgstr ""
+
+#: ../src/extension.js:563
+msgid "Loading ..."
+msgstr ""
+
+#: ../src/extension.js:614
+msgid "Feels like:"
+msgstr ""
+
+#: ../src/extension.js:616
+msgid "Dew:"
+msgstr ""
+
+#: ../src/extension.js:618
+msgid "Visibility:"
+msgstr ""
+
+#: ../src/extension.js:620
+msgid "Humidity:"
+msgstr ""
+
+#: ../src/extension.js:622
+msgid "Pressure:"
+msgstr ""
+
+#: ../src/extension.js:642
+#, fuzzy
+msgid "No forecast information"
+msgstr "天気予報を更新する"
+
+#: ../src/extension.js:750 ../src/prefs.js:642
+msgid "Invalid city"
+msgstr "都市の名前が間違っています"
+
+#: ../src/prefs.js:128
 msgid "Temperature Unit"
 msgstr "気温の単位"
 
-#: ../src/prefs.js:126
+#: ../src/prefs.js:129 ../src/prefs.js:131 ../src/prefs.js:133
+#: ../src/prefs.js:135
+msgid "Default"
+msgstr ""
+
+#: ../src/prefs.js:130
 msgid "Wind Speed Unit"
 msgstr "風速の単位"
 
-#: ../src/prefs.js:128
+#: ../src/prefs.js:132
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "気温の単位"
 
-#: ../src/prefs.js:130
+#: ../src/prefs.js:134
+msgid "Distance Unit"
+msgstr ""
+
+#: ../src/prefs.js:136
 msgid "Position in Panel"
 msgstr "配置する場所"
 
-#: ../src/prefs.js:131
+#: ../src/prefs.js:137
 msgid "Center"
 msgstr "中央"
 
-#: ../src/prefs.js:131
+#: ../src/prefs.js:137
 msgid "Right"
 msgstr "右側"
 
-#: ../src/prefs.js:131
+#: ../src/prefs.js:137
 msgid "Left"
 msgstr "左側"
 
-#: ../src/prefs.js:132
-msgid "Wind Direction by Arrows"
-msgstr ""
-
-#: ../src/prefs.js:134
-msgid "Translate Conditions"
-msgstr "状態を日本語にする"
-
-#: ../src/prefs.js:136
+#: ../src/prefs.js:138
 msgid "Symbolic Icons"
 msgstr "シンボリック・アイコンにする"
 
-#: ../src/prefs.js:138
+#: ../src/prefs.js:140
 msgid "Temperature in Panel"
 msgstr "パネルに気温を表示する"
 
-#: ../src/prefs.js:140
+#: ../src/prefs.js:142
 msgid "Conditions in Panel"
 msgstr "パネルに状態を表示する"
 
-#: ../src/prefs.js:277
+#: ../src/prefs.js:144
+msgid "Debug the extension"
+msgstr ""
+
+#: ../src/prefs.js:287
 msgid "Name of the city"
 msgstr "都市の名前"
 
-#: ../src/prefs.js:452
+#: ../src/prefs.js:345
 #, python-format
 msgid "Remove %s ?"
 msgstr "\"%s\" を削除しますか？"
+
+#~ msgid "Schema \"%s\" not found."
+#~ msgstr "次のスキーマが見つかりませんでした: \"%s\""
+
+#~ msgid "Yesterday"
+#~ msgstr "昨日"
+
+#~ msgid "%s days ago"
+#~ msgstr "%s日前"
+
+#, fuzzy
+#~ msgid "In %s days"
+#~ msgstr "%s日前"
+
+#~ msgid "Translate Conditions"
+#~ msgstr "状態を日本語にする"
