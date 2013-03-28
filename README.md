@@ -43,6 +43,14 @@ You can also use *dconf-editor* or *gsettings* to configure the extension throug
 
 ----
 
+# Debug
+
+To debug the extension, active the switch `Debug extension` in the settings:
+
+You have now a file "weather.log" in the extension dir (`~/.local/share/gnome-shell/extensions/weather-extension@xeked.com/`).
+
+----
+
 # Licence
 
 Copyright (C) 2011 - 2013
