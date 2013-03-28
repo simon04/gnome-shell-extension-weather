@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-28 02:22+0100\n"
-"PO-Revision-Date: 2013-01-16 11:13+0100\n"
+"PO-Revision-Date: 2013-03-28 08:56+0100\n"
 "Last-Translator: Odysseus86 <hal8600@hotmail.it>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr "Vento:"
 #: ../src/extension.js:327
 #, fuzzy
 msgid "Weather"
-msgstr "Impostazioni meteo"
+msgstr "Condizioni meteo"
 
 #: ../src/extension.js:383
 msgid "Locations"
@@ -36,12 +36,12 @@ msgstr "Impostazioni meteo"
 #: ../src/extension.js:526
 #, fuzzy
 msgid "No weather information"
-msgstr "Ricarica le informazioni meteo"
+msgstr "Nessuna informazione meteo disponibile"
 
 #: ../src/extension.js:528
 #, fuzzy, python-format
 msgid "No weather information for %s"
-msgstr "Ricarica le informazioni meteo"
+msgstr "Nessuna informazione meteo disponibile su %s"
 
 #: ../src/extension.js:559
 msgid "Please wait"
@@ -57,11 +57,11 @@ msgstr "Percepiti:"
 
 #: ../src/extension.js:616
 msgid "Dew:"
-msgstr ""
+msgstr "Punto di rugiada:"
 
 #: ../src/extension.js:618
 msgid "Visibility:"
-msgstr ""
+msgstr "Visibilità:"
 
 #: ../src/extension.js:620
 msgid "Humidity:"
@@ -74,7 +74,7 @@ msgstr "Pressione:"
 #: ../src/extension.js:642
 #, fuzzy
 msgid "No forecast information"
-msgstr "Ricarica le informazioni meteo"
+msgstr "Nessuna previsione meteo disponibile"
 
 #: ../src/extension.js:750 ../src/prefs.js:642
 msgid "Invalid city"
@@ -87,7 +87,7 @@ msgstr "Unità di misura della temperatura"
 #: ../src/prefs.js:129 ../src/prefs.js:131 ../src/prefs.js:133
 #: ../src/prefs.js:135
 msgid "Default"
-msgstr ""
+msgstr "Predefinito"
 
 #: ../src/prefs.js:130
 msgid "Wind Speed Unit"
@@ -99,11 +99,11 @@ msgstr "Unità di misura della pressione"
 
 #: ../src/prefs.js:134
 msgid "Distance Unit"
-msgstr ""
+msgstr "Unità di misura della distanza"
 
 #: ../src/prefs.js:136
 msgid "Position in Panel"
-msgstr "Posizione sul pannello"
+msgstr "Posizione nel pannello"
 
 #: ../src/prefs.js:137
 msgid "Center"
@@ -123,15 +123,15 @@ msgstr "Icone simboliche"
 
 #: ../src/prefs.js:140
 msgid "Temperature in Panel"
-msgstr "Mostra la temperatura sul pannello"
+msgstr "Mostra la temperatura nel pannello"
 
 #: ../src/prefs.js:142
 msgid "Conditions in Panel"
-msgstr "Mostra le condizioni meteo sul pannello"
+msgstr "Mostra le condizioni meteo nel pannello"
 
 #: ../src/prefs.js:144
 msgid "Debug the extension"
-msgstr ""
+msgstr "Esegui il debug dell'estensione"
 
 #: ../src/prefs.js:287
 msgid "Name of the city"
