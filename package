@@ -2,6 +2,7 @@
 
 VERSION=$1
 BASEDIR="${HOME}/Desktop"
+TESTDIR="${HOME}/.local/share/cinnamon/applets"
 AUTHOR="mockturtl"
 PACKAGE="weather@mockturtl"
 TARGET="${BASEDIR}/${PACKAGE}"
@@ -70,8 +71,6 @@ do_package() {
 	mkdir -p ${TARGET}/
 	# strip comment lines
 	cat ${MANIFEST} | sed -r ${COMMENTS}d | xargs -i cp -r '{}' ${TARGET}
-	ln -sf ${TARGET}/install.sh ${TARGET}/cleanup.sh
-	ln -sf ${TARGET}/install.sh ${TARGET}/uninstall.sh
 	rm -rf ${TARGET}/po/*.po~
 
 	cd ${BASEDIR}
@@ -145,12 +144,27 @@ Done.
 EOF
 }
 
+do_test() {
+
+  do_package
+
+cat<<EOF
+  Updating...
+EOF
+
+  rm -rf ${TESTDIR}/${PACKAGE} 2>/dev/null
+  cp -r ${BASEDIR}/${PACKAGE} ${TESTDIR}
+}
+
 case `basename $0` in
 	"tag")
 		do_tag
 		;;
 	"package")
 		do_package
+		;;
+	"test")
+		do_test
 		;;
 	"deploy")
 		do_deploy
@@ -160,7 +174,7 @@ case `basename $0` in
 		;;
 	*)
 		cat << EOF
-Usage: tag | deploy | package | translate
+Usage: tag | deploy | package | translate | test
 EOF
 		exit 2
 		;;
