@@ -246,8 +246,8 @@ MyMenu.prototype = {
 /**
  * MyApplet constructor.
  */
-function MyApplet(orientation) {
-	this._init(orientation);
+function MyApplet(metadata, orientation, panel_height, instanceId) {
+	this._init(orientation, panel_height, instanceId);
 }
 
 MyApplet.prototype = {
@@ -257,8 +257,8 @@ MyApplet.prototype = {
 	// Override Methods: TextIconApplet
 	//----------------------------------
 
-	_init: function _init(orientation) {
-		Applet.TextIconApplet.prototype._init.call(this, orientation);
+	_init: function _init(orientation, panel_height, instanceId) {
+		Applet.TextIconApplet.prototype._init.call(this, orientation, panel_height, instanceId);
 
 		try {
 			//----------------------------------
@@ -1084,8 +1084,8 @@ MyApplet.prototype = {
 //
 //----------------------------------------------------------------------
 
-function main(metadata, orientation) {
+function main(metadata, orientation, panel_height, instanceId) {
 	//log("v" + metadata.version);
-	let myApplet = new MyApplet(orientation);
+	let myApplet = new MyApplet(metadata, orientation, panel_height, instanceId);
 	return myApplet;
 }
