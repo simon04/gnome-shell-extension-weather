@@ -9,4 +9,5 @@ manifest
 org.cinnamon.applets.weather@mockturtl.gschema.xml
 po/
 README.md
+settings-schema.json
 stylesheet.css

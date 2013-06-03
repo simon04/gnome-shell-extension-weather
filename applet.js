@@ -63,6 +63,7 @@ const Applet = imports.ui.applet;
 const Main = imports.ui.main;
 const PopupMenu = imports.ui.popupMenu;
 const Util = imports.misc.util;
+const Settings = imports.ui.settings;
 
 //----------------------------------------------------------------------
 //
@@ -218,6 +219,18 @@ function logError(error) {
  * MyApplet constructor.
  */
 function MyApplet(metadata, orientation, panel_height, instanceId) {
+
+  this.settings = new Settings.AppletSettings(this, UUID, instanceId);
+
+  // dump settings
+  /*
+  var that = this.settings;
+  for (var key in that) {
+    if (that.hasOwnProperty(key))
+      log("\t" + key + "=" + that[key]);
+  }
+  //*/
+
 	this._init(orientation, panel_height, instanceId);
 }
 
@@ -251,16 +264,18 @@ MyApplet.prototype = {
 			//----------------------------------
 			let load_settings_and_refresh_weather = Lang.bind(this, function callback() {
 				//log(SIGNAL_CHANGED + "; refreshing...");
-				this._units = this._settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
-				this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
-				this._city = this._settings.get_string(WEATHER_CITY_KEY);
-				this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
-				this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-				this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
-				this._show_fiveday_forecast = this._settings.get_boolean(WEATHER_SHOW_FIVEDAY_FORECAST_KEY);
-				this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-				this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
-				this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
+        /*
+				this._units = this.settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
+				this._wind_speed_units = this.settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
+				this._city = this.settings.get_string(WEATHER_CITY_KEY);
+				this._woeid = this.settings.get_string(WEATHER_WOEID_KEY);
+				this._translate_condition = this.settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+				this._show_sunrise = this.settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
+				this._show_fiveday_forecast = this.settings.get_boolean(WEATHER_SHOW_FIVEDAY_FORECAST_KEY);
+				this._icon_type = this.settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+				this._text_in_panel = this.settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
+				this._comment_in_panel = this.settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
+        //*/
 				this.refreshWeather(false);
 				this.rebuild();
 			});
@@ -268,22 +283,29 @@ MyApplet.prototype = {
 			//----------------------------------
 			// initialize settings
 			//----------------------------------
-			this._settings = getSettings(GSETTINGS_SCHEMA);
-			this._units = this._settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
-			this._wind_speed_units = this._settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
-			this._city = this._settings.get_string(WEATHER_CITY_KEY);
-			this._woeid = this._settings.get_string(WEATHER_WOEID_KEY);
-			this._translate_condition = this._settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
-			this._show_sunrise = this._settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
-			this._show_fiveday_forecast = this._settings.get_boolean(WEATHER_SHOW_FIVEDAY_FORECAST_KEY);
-			this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
-			this._text_in_panel = this._settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
-			this._comment_in_panel = this._settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
-			this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
+
+      /*/
+			this.settings = getSettings(GSETTINGS_SCHEMA);
+			this._units = this.settings.get_enum(WEATHER_TEMPERATURE_UNIT_KEY);
+			this._wind_speed_units = this.settings.get_enum(WEATHER_WIND_SPEED_UNIT_KEY);
+			this._city = this.settings.get_string(WEATHER_CITY_KEY);
+			this._woeid = this.settings.get_string(WEATHER_WOEID_KEY);
+			this._translate_condition = this.settings.get_boolean(WEATHER_TRANSLATE_CONDITION_KEY);
+			this._show_sunrise = this.settings.get_boolean(WEATHER_SHOW_SUNRISE_SUNSET_KEY);
+			this._show_fiveday_forecast = this.settings.get_boolean(WEATHER_SHOW_FIVEDAY_FORECAST_KEY);
+      //*/
+			this._icon_type = this.settings.getValue(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+      /*/
+			this._text_in_panel = this.settings.get_boolean(WEATHER_SHOW_TEXT_IN_PANEL_KEY);
+			this._comment_in_panel = this.settings.get_boolean(WEATHER_SHOW_COMMENT_IN_PANEL_KEY);
+			this._refresh_interval = this.settings.get_int(WEATHER_REFRESH_INTERVAL);
+      //*/
+
 
 			//----------------------------------
 			// bind settings
 			//----------------------------------
+
 			let refreshableKeys = [
 				WEATHER_TEMPERATURE_UNIT_KEY,
 				WEATHER_WIND_SPEED_UNIT_KEY,
@@ -295,14 +317,26 @@ MyApplet.prototype = {
 				WEATHER_SHOW_SUNRISE_SUNSET_KEY,
 				WEATHER_SHOW_FIVEDAY_FORECAST_KEY
 			];
+
+			let context = this;
+			refreshableKeys.forEach(function callback(key) {
+        context.settings.bindProperty(Settings.BindingDirection.IN,
+          key,
+          "_" + key,
+          load_settings_and_refresh_weather,
+          null);
+      });
+
+      /*/
 			let context = this;
 			refreshableKeys.forEach(function callback(key) {
 				//log("adding CHANGED listener for " + key + "; " + context);
-				context._settings.connect(SIGNAL_CHANGED + key, load_settings_and_refresh_weather);
+				context.settings.connect(SIGNAL_CHANGED + key, load_settings_and_refresh_weather);
 			});
-
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
-				this._icon_type = this._settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
+      //*/
+      
+			this.settings.connect(SIGNAL_CHANGED + WEATHER_USE_SYMBOLIC_ICONS_KEY, Lang.bind(this, function() {
+				this._icon_type = this.settings.get_boolean(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? St.IconType.SYMBOLIC : St.IconType.FULLCOLOR;
 				this._applet_icon.icon_type = this._icon_type;
 				this._currentWeatherIcon.icon_type = this._icon_type;
 				let daysToShow = this._show_fiveday_forecast ? 5 : 2;
@@ -312,9 +346,13 @@ MyApplet.prototype = {
 				this.refreshWeather(false);
 			}));
 
-			this._settings.connect(SIGNAL_CHANGED + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
-				this._refresh_interval = this._settings.get_int(WEATHER_REFRESH_INTERVAL);
+      // TODO
+      /*/
+			this.settings.connect(SIGNAL_CHANGED + WEATHER_REFRESH_INTERVAL, Lang.bind(this, function() {
+				this._refresh_interval = this.settings.get_int(WEATHER_REFRESH_INTERVAL);
 			}));
+      //*/
+ 
 
 			//------------------------------
 			// render graphics container
@@ -590,8 +628,11 @@ MyApplet.prototype = {
 	 */
 	rebuild: function rebuild() {
 		//log("");
+
 		this.showLoadingUi();
+
 		this.rebuildCurrentWeatherUi();
+
 		this.rebuildFutureWeatherUi();
 	},
 
