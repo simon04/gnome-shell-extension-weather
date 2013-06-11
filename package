@@ -2,9 +2,9 @@
 
 VERSION=$1
 BASEDIR="${HOME}/Desktop"
+TESTDIR="${HOME}/.local/share/cinnamon/applets"
 AUTHOR="mockturtl"
-PROJECT="cinnamon-weather"
-PACKAGE="${PROJECT}-${VERSION}"
+PACKAGE="weather@mockturtl"
 TARGET="${BASEDIR}/${PACKAGE}"
 DEV_BRANCH="master"
 STAGE_BRANCH="staging"
@@ -13,6 +13,7 @@ REMOTE="origin"
 MANIFEST="manifest"
 VERSION_FILE="metadata.json"
 GIT_HOST="https://github.com"
+PROJECT="cinnamon-weather"
 DEPLOY_URL="${GIT_HOST}/${AUTHOR}/${PROJECT}/zipball/v${VERSION}"
 COMMENTS='/^\s*#/'
 
@@ -66,20 +67,19 @@ EOF
 do_package() {
 	check_version
 
-	rm -rf ${BASEDIR}/${PROJECT}*
+	rm -rf ${TARGET}*
 	mkdir -p ${TARGET}/
 	# strip comment lines
 	cat ${MANIFEST} | sed -r ${COMMENTS}d | xargs -i cp -r '{}' ${TARGET}
-	ln -sf ${TARGET}/install.sh ${TARGET}/cleanup.sh
-	ln -sf ${TARGET}/install.sh ${TARGET}/uninstall.sh
 	rm -rf ${TARGET}/po/*.po~
 
 	cd ${BASEDIR}
-	zip -q -r ${PACKAGE}.zip ${PACKAGE}
+	local zipfile=${PACKAGE}-${VERSION}
+	zip -q -r ${zipfile}.zip ${PACKAGE}
 
 	cat << EOF
 Done.	Release ${VERSION} is ready to publish at:
-	${TARGET}.zip
+	${zipfile}.zip
 
 EOF
 }
@@ -144,12 +144,27 @@ Done.
 EOF
 }
 
+do_test() {
+
+  do_package
+
+cat<<EOF
+  Updating...
+EOF
+
+  rm -rf ${TESTDIR}/${PACKAGE} 2>/dev/null
+  cp -r ${BASEDIR}/${PACKAGE} ${TESTDIR}
+}
+
 case `basename $0` in
 	"tag")
 		do_tag
 		;;
 	"package")
 		do_package
+		;;
+	"test")
+		do_test
 		;;
 	"deploy")
 		do_deploy
@@ -159,7 +174,7 @@ case `basename $0` in
 		;;
 	*)
 		cat << EOF
-Usage: tag | deploy | package | translate
+Usage: tag | deploy | package | translate | test
 EOF
 		exit 2
 		;;

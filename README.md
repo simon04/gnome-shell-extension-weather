@@ -8,35 +8,12 @@ cinnamon-weather uses [Semantic Versioning](http://semver.org/).  For the curren
 
 ### Requirements
 
-* [msgfmt](http://refspecs.linuxbase.org/LSB_4.1.0/LSB-Core-generic/LSB-Core-generic/msgfmt.html)
-* [glib-compile-schemas](http://developer.gnome.org/gio/2.30/glib-compile-schemas.html) 
+* [Cinnamon](https://github.com/linuxmint/Cinnamon) 1.8+ 
 
-###### _Arch_
-
-`pacman -S gettext glib2`
-
-###### _Debian, Ubuntu_
-
-`apt-get install gettext libglib2.0-bin`
-
-###### _Fedora_
-
-`yum install gettext glib2`
-
-###### _openSUSE_
-
-`zypper install gettext-tools glib2-tools`
-
-### Installation
-
-_If you are upgrading from version 1.3.2 or older, please run `./cleanup`._
-
-Run `./install`.  
-
-Restart Cinnamon (`[Alt]+[F2]`, `r`).  
+For compatibility with Cinnamon 1.7 or earlier, use an [archived](https://github.com/mockturtl/cinnamon-weather/tags) version.
 
 ### Configuration
 
-Click the gear icon in the menu to launch `cinnamon-weather-settings`, or use `gsettings` from the command line, with tab completion.
+Use `cinnamon-settings` -> _Applets -> Configure_.
 
 ### [Mailing list](http://groups.google.com/group/cinnamon-weather)
