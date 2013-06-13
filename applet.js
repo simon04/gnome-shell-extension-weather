@@ -32,6 +32,7 @@ const St = imports.gi.St
 const Applet = imports.ui.applet
 const PopupMenu = imports.ui.popupMenu
 const Settings = imports.ui.settings
+const Util = imports.misc.util;
 
 //----------------------------------------------------------------------
 //
@@ -41,6 +42,7 @@ const Settings = imports.ui.settings
 
 const UUID = 'weather@mockturtl'
 const APPLET_ICON = "view-refresh-symbolic"
+const CMD_SETTINGS = "cinnamon-settings applets " + UUID
 
 // Conversion Factors
 const WEATHER_CONV_MPH_IN_MPS = 2.23693629
@@ -230,6 +232,12 @@ MyApplet.prototype = {
         this.refreshWeather(false)
 			}))
  
+      // context menu
+      let settingsMenuItem = new Applet.MenuItem(_("Settings"), Gtk.STOCK_EDIT, Lang.bind(this, function() {
+          Util.spawnCommandLine(CMD_SETTINGS)
+      }))
+      this._applet_context_menu.addMenuItem(settingsMenuItem)
+
 			//------------------------------
 			// render graphics container
 			//------------------------------
