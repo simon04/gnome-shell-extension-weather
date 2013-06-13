@@ -32,7 +32,7 @@ const St = imports.gi.St
 const Applet = imports.ui.applet
 const PopupMenu = imports.ui.popupMenu
 const Settings = imports.ui.settings
-const Util = imports.misc.util;
+const Util = imports.misc.util
 
 //----------------------------------------------------------------------
 //
@@ -203,9 +203,9 @@ MyApplet.prototype = {
       this.set_applet_tooltip(_("Click to open"))
       
       // PopupMenu
-      this.menuManager = new PopupMenu.PopupMenuManager(this);
-      this.menu = new Applet.AppletPopupMenu(this, orientation);
-      this.menuManager.addMenu(this.menu);
+      this.menuManager = new PopupMenu.PopupMenuManager(this)
+      this.menu = new Applet.AppletPopupMenu(this, orientation)
+      this.menuManager.addMenu(this.menu)
 
       //----------------------------------
       // bind settings
