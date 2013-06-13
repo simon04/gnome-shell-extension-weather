@@ -14,6 +14,6 @@ For compatibility with Cinnamon 1.7 or earlier, use an [archived](https://github
 
 ### Configuration
 
-Use `cinnamon-settings` -> _Applets -> Configure_.
+Right-click to access `cinnamon-settings` -> _Applets -> Configure_.
 
 ### [Mailing list](http://groups.google.com/group/cinnamon-weather)
