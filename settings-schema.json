@@ -1,8 +1,15 @@
 {
-  "woeid":
+  "woeidLookup":
+  { "type": "button"
+  , "description": "Get WOEID"
+  , "callback": "woeidLookup"
+  , "tooltip": "http://edg3.co.uk/snippets/weather-location-codes/"
+  }
+, "woeid":
   { "type": "entry"
   , "default": ""
-  , "description": "WOEID (http://edg3.co.uk/snippets/weather-location-codes/)"
+  , "description": "WOEID"
+  , "tooltip": "Where On Earth ID"
   }
 , "temperatureUnit":
   { "type": "radiogroup"
