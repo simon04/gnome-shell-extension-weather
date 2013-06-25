@@ -40,9 +40,11 @@ const Util = imports.misc.util
 //
 //----------------------------------------------------------------------
 
-const UUID = 'weather@mockturtl'
+const UUID = "weather@mockturtl"
 const APPLET_ICON = "view-refresh-symbolic"
 const CMD_SETTINGS = "cinnamon-settings applets " + UUID
+const WOEID_URL = "http://edg3.co.uk/snippets/weather-location-codes/"
+const CMD_WOEID_LOOKUP = "xdg-open " + WOEID_URL
 
 // Conversion Factors
 const WEATHER_CONV_MPH_IN_MPS = 2.23693629
@@ -191,6 +193,10 @@ MyApplet.prototype = {
       let keyProp = "_" + key
       log(keyProp + "=" + this[keyProp])
     }
+  }
+
+, woeidLookup: function() {
+    Util.spawnCommandLine(CMD_WOEID_LOOKUP)
   }
 
     // Override Methods: TextIconApplet
