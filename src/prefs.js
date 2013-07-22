@@ -319,7 +319,7 @@ Extends: Gtk.Box,
 	let that = this;
 	let textDialog = _("Name of the city");
 	let dialog = new Gtk.Dialog({title : ""});
-	let entry = new GWeather.LocationEntry.new(this.world);
+	let entry = GWeather.LocationEntry.new(this.world);
 	entry.margin_top = 12;
 	entry.margin_bottom = 12;
 	let label = new Gtk.Label({label : textDialog});
