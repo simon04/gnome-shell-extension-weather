@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 05:40+0200\n"
+"POT-Creation-Date: 2013-07-22 16:54+0200\n"
 "PO-Revision-Date: 2013-02-06 14:41+0500\n"
 "Last-Translator: Timon <timosha@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
@@ -20,48 +20,48 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../src/extension.js:224 ../src/extension.js:232 ../src/extension.js:240
-#: ../src/extension.js:248 ../src/extension.js:551
+#: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
+#: ../src/extension.js:247 ../src/extension.js:550
 #, fuzzy
 msgid "Weather"
 msgstr "Настройки апплета погоды"
 
-#: ../src/extension.js:226
+#: ../src/extension.js:225
 msgid "No location configured"
 msgstr ""
 
-#: ../src/extension.js:234
+#: ../src/extension.js:233
 #, fuzzy
 msgid "Loading weather"
 msgstr "Загрузка прогноза погоды…"
 
-#: ../src/extension.js:250
+#: ../src/extension.js:249
 #, fuzzy
 msgid "Weather extension ready"
 msgstr "Настройки апплета погоды"
 
-#: ../src/extension.js:440
+#: ../src/extension.js:439
 msgid "Today"
 msgstr "Сегодня"
 
-#: ../src/extension.js:446
+#: ../src/extension.js:445
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: ../src/extension.js:452
+#: ../src/extension.js:451
 msgid "Yesterday"
 msgstr "Вчера"
 
-#: ../src/extension.js:614
+#: ../src/extension.js:613
 msgid "Locations"
 msgstr "Города"
 
-#: ../src/extension.js:618
+#: ../src/extension.js:617
 #, fuzzy
 msgid "Reload Weather Information"
 msgstr "Обновить информацию о погоде"
 
-#: ../src/extension.js:623
+#: ../src/extension.js:622
 msgid "Weather Settings"
 msgstr "Настройки апплета погоды"
 

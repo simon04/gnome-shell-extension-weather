@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 05:40+0200\n"
+"POT-Creation-Date: 2013-07-22 16:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/extension.js:224 ../src/extension.js:232 ../src/extension.js:240
-#: ../src/extension.js:248 ../src/extension.js:551
+#: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
+#: ../src/extension.js:247 ../src/extension.js:550
 msgid "Weather"
 msgstr ""
 
-#: ../src/extension.js:226
+#: ../src/extension.js:225
 msgid "No location configured"
 msgstr ""
 
-#: ../src/extension.js:234
+#: ../src/extension.js:233
 msgid "Loading weather"
 msgstr ""
 
-#: ../src/extension.js:250
+#: ../src/extension.js:249
 msgid "Weather extension ready"
 msgstr ""
 
-#: ../src/extension.js:440
+#: ../src/extension.js:439
 msgid "Today"
 msgstr ""
 
-#: ../src/extension.js:446
+#: ../src/extension.js:445
 msgid "Tomorrow"
 msgstr ""
 
-#: ../src/extension.js:452
+#: ../src/extension.js:451
 msgid "Yesterday"
 msgstr ""
 
-#: ../src/extension.js:614
+#: ../src/extension.js:613
 msgid "Locations"
 msgstr ""
 
-#: ../src/extension.js:618
+#: ../src/extension.js:617
 msgid "Reload Weather Information"
 msgstr ""
 
-#: ../src/extension.js:623
+#: ../src/extension.js:622
 msgid "Weather Settings"
 msgstr ""
 

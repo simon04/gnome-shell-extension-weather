@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Neroth-gnome-shell-extension-weather 3696468\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 05:40+0200\n"
+"POT-Creation-Date: 2013-07-22 16:54+0200\n"
 "PO-Revision-Date: 2013-01-18 15:07+0100\n"
 "Last-Translator: Bojtos Péter <ptr@ulx.hu>\n"
 "Language-Team: Hungarian\n"
@@ -18,48 +18,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../src/extension.js:224 ../src/extension.js:232 ../src/extension.js:240
-#: ../src/extension.js:248 ../src/extension.js:551
+#: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
+#: ../src/extension.js:247 ../src/extension.js:550
 #, fuzzy
 msgid "Weather"
 msgstr "Meteorológiai beállítások"
 
-#: ../src/extension.js:226
+#: ../src/extension.js:225
 msgid "No location configured"
 msgstr ""
 
-#: ../src/extension.js:234
+#: ../src/extension.js:233
 #, fuzzy
 msgid "Loading weather"
 msgstr "Időjárás előrejelzés betöltése ..."
 
-#: ../src/extension.js:250
+#: ../src/extension.js:249
 #, fuzzy
 msgid "Weather extension ready"
 msgstr "Meteorológiai beállítások"
 
-#: ../src/extension.js:440
+#: ../src/extension.js:439
 msgid "Today"
 msgstr "Ma"
 
-#: ../src/extension.js:446
+#: ../src/extension.js:445
 msgid "Tomorrow"
 msgstr "Holnap"
 
-#: ../src/extension.js:452
+#: ../src/extension.js:451
 msgid "Yesterday"
 msgstr "Tegnap"
 
-#: ../src/extension.js:614
+#: ../src/extension.js:613
 msgid "Locations"
 msgstr "Helyszínek"
 
-#: ../src/extension.js:618
+#: ../src/extension.js:617
 #, fuzzy
 msgid "Reload Weather Information"
 msgstr "Meteorológiai információ újratöltése"
 
-#: ../src/extension.js:623
+#: ../src/extension.js:622
 msgid "Weather Settings"
 msgstr "Meteorológiai beállítások"
 

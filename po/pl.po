@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 05:40+0200\n"
+"POT-Creation-Date: 2013-07-22 16:54+0200\n"
 "PO-Revision-Date: 2012-10-30 18:37+0100\n"
 "Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
 "Language-Team: polski <>\n"
@@ -18,48 +18,48 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-10-30 09:44+0000\n"
 "X-Generator: Launchpad (build 16206)\n"
 
-#: ../src/extension.js:224 ../src/extension.js:232 ../src/extension.js:240
-#: ../src/extension.js:248 ../src/extension.js:551
+#: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
+#: ../src/extension.js:247 ../src/extension.js:550
 #, fuzzy
 msgid "Weather"
 msgstr "Ustawienia pogody"
 
-#: ../src/extension.js:226
+#: ../src/extension.js:225
 msgid "No location configured"
 msgstr ""
 
-#: ../src/extension.js:234
+#: ../src/extension.js:233
 #, fuzzy
 msgid "Loading weather"
 msgstr "Wczytywanie prognozy pogody..."
 
-#: ../src/extension.js:250
+#: ../src/extension.js:249
 #, fuzzy
 msgid "Weather extension ready"
 msgstr "Ustawienia pogody"
 
-#: ../src/extension.js:440
+#: ../src/extension.js:439
 msgid "Today"
 msgstr "Dzisiaj"
 
-#: ../src/extension.js:446
+#: ../src/extension.js:445
 msgid "Tomorrow"
 msgstr "Jutro"
 
-#: ../src/extension.js:452
+#: ../src/extension.js:451
 msgid "Yesterday"
 msgstr "Wczoraj"
 
-#: ../src/extension.js:614
+#: ../src/extension.js:613
 msgid "Locations"
 msgstr "Lokalizacje"
 
-#: ../src/extension.js:618
+#: ../src/extension.js:617
 #, fuzzy
 msgid "Reload Weather Information"
 msgstr "Wczytaj ponownie komunikat pogodowy"
 
-#: ../src/extension.js:623
+#: ../src/extension.js:622
 msgid "Weather Settings"
 msgstr "Ustawienia pogody"
 
