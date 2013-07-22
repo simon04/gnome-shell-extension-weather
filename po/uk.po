@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-28 02:22+0100\n"
+"POT-Creation-Date: 2013-07-22 05:40+0200\n"
 "PO-Revision-Date: 2012-05-13 22:41+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -16,129 +16,258 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/extension.js:281 ../src/extension.js:567
-msgid "Wind:"
-msgstr "Вітер:"
-
-#: ../src/extension.js:327
+#: ../src/extension.js:224 ../src/extension.js:232 ../src/extension.js:240
+#: ../src/extension.js:248 ../src/extension.js:551
 msgid "Weather"
 msgstr ""
 
-#: ../src/extension.js:383
+#: ../src/extension.js:226
+msgid "No location configured"
+msgstr ""
+
+#: ../src/extension.js:234
+#, fuzzy
+msgid "Loading weather"
+msgstr "Завантаження прогнозу погоди ..."
+
+#: ../src/extension.js:250
+msgid "Weather extension ready"
+msgstr ""
+
+#: ../src/extension.js:440
+msgid "Today"
+msgstr "Сьогодні"
+
+#: ../src/extension.js:446
+msgid "Tomorrow"
+msgstr "Завтра"
+
+#: ../src/extension.js:452
+msgid "Yesterday"
+msgstr ""
+
+#: ../src/extension.js:614
 msgid "Locations"
 msgstr ""
 
-#: ../src/extension.js:387
+#: ../src/extension.js:618
+msgid "Reload Weather Information"
+msgstr ""
+
+#: ../src/extension.js:623
 msgid "Weather Settings"
 msgstr ""
 
-#: ../src/extension.js:526
+#: ../src/extension.js:785
 msgid "No weather information"
 msgstr ""
 
-#: ../src/extension.js:528
+#: ../src/extension.js:787
 #, python-format
 msgid "No weather information for %s"
 msgstr ""
 
-#: ../src/extension.js:559
-msgid "Please wait"
-msgstr "Зачекайте"
-
-#: ../src/extension.js:563
-msgid "Loading ..."
-msgstr "Завантаження ..."
-
-#: ../src/extension.js:614
-msgid "Feels like:"
+#: ../src/extension.js:872
+msgid "Feels like"
 msgstr ""
 
-#: ../src/extension.js:616
-msgid "Dew:"
+#: ../src/extension.js:874
+msgid "Visibility"
 msgstr ""
 
-#: ../src/extension.js:618
-msgid "Visibility:"
-msgstr ""
-
-#: ../src/extension.js:620
-msgid "Humidity:"
+#: ../src/extension.js:876
+#, fuzzy
+msgid "Humidity"
 msgstr "Вологість:"
 
-#: ../src/extension.js:622
-msgid "Pressure:"
+#: ../src/extension.js:878
+#, fuzzy
+msgid "Pressure"
 msgstr "Тиск:"
 
-#: ../src/extension.js:642
+#: ../src/extension.js:880
+#, fuzzy
+msgid "Wind"
+msgstr "Вітер:"
+
+#: ../src/extension.js:900
 msgid "No forecast information"
 msgstr ""
 
-#: ../src/extension.js:750 ../src/prefs.js:642
-msgid "Invalid city"
+#: ../src/extension.js:1038
+#, python-format
+msgid "%s °F"
 msgstr ""
 
-#: ../src/prefs.js:128
+#: ../src/extension.js:1042
+#, python-format
+msgid "%s °C"
+msgstr ""
+
+#: ../src/extension.js:1046
+#, python-format
+msgid "%s K"
+msgstr ""
+
+#: ../src/extension.js:1052 ../src/extension.js:1105
+msgid "Unknown"
+msgstr ""
+
+#: ../src/extension.js:1069 ../src/extension.js:1072
+msgid "VAR"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "N"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "NNE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "NE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "ENE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "E"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "ESE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "SE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "SSE"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "S"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "SSW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "SW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "WSW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "W"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "WNW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "NW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "NNW"
+msgstr ""
+
+#: ../src/extension.js:1083
+msgid "$d$s knots"
+msgstr ""
+
+#: ../src/extension.js:1087
+msgid "$d$s mph"
+msgstr ""
+
+#: ../src/extension.js:1091
+msgid "$d$s km/h"
+msgstr ""
+
+#: ../src/extension.js:1095
+msgid "$d$s m/s"
+msgstr ""
+
+#: ../src/extension.js:1099
+msgid "$dBeaufort $s"
+msgstr ""
+
+#: ../src/prefs.js:144
 msgid "Temperature Unit"
 msgstr "Температура:"
 
-#: ../src/prefs.js:129 ../src/prefs.js:131 ../src/prefs.js:133
-#: ../src/prefs.js:135
-msgid "Default"
-msgstr ""
-
-#: ../src/prefs.js:130
+#: ../src/prefs.js:146
 msgid "Wind Speed Unit"
 msgstr ""
 
-#: ../src/prefs.js:132
+#: ../src/prefs.js:148
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Тиск:"
 
-#: ../src/prefs.js:134
+#: ../src/prefs.js:150
 msgid "Distance Unit"
 msgstr ""
 
-#: ../src/prefs.js:136
+#: ../src/prefs.js:152
 msgid "Position in Panel"
 msgstr ""
 
-#: ../src/prefs.js:137
+#: ../src/prefs.js:153
 msgid "Center"
 msgstr ""
 
-#: ../src/prefs.js:137
+#: ../src/prefs.js:153
 msgid "Right"
 msgstr ""
 
-#: ../src/prefs.js:137
+#: ../src/prefs.js:153
 msgid "Left"
 msgstr ""
 
-#: ../src/prefs.js:138
+#: ../src/prefs.js:154
+msgid "Wind Direction by Arrows"
+msgstr ""
+
+#: ../src/prefs.js:156
 msgid "Symbolic Icons"
 msgstr ""
 
-#: ../src/prefs.js:140
+#: ../src/prefs.js:158
 msgid "Temperature in Panel"
 msgstr "Температура:"
 
-#: ../src/prefs.js:142
+#: ../src/prefs.js:160
 msgid "Conditions in Panel"
 msgstr ""
 
-#: ../src/prefs.js:144
+#: ../src/prefs.js:162
 msgid "Debug the extension"
 msgstr ""
 
-#: ../src/prefs.js:287
+#: ../src/prefs.js:320
 msgid "Name of the city"
 msgstr ""
 
-#: ../src/prefs.js:345
+#: ../src/prefs.js:378
 #, python-format
 msgid "Remove %s ?"
 msgstr ""
+
+#~ msgid "Please wait"
+#~ msgstr "Зачекайте"
+
+#~ msgid "Loading ..."
+#~ msgstr "Завантаження ..."
 
 #~ msgid "..."
 #~ msgstr "..."
@@ -290,14 +419,5 @@ msgstr ""
 #~ msgid "Saturday"
 #~ msgstr "Субота"
 
-#~ msgid "Today"
-#~ msgstr "Сьогодні"
-
-#~ msgid "Tomorrow"
-#~ msgstr "Завтра"
-
 #~ msgid "Loading current weather ..."
 #~ msgstr "Завантаження поточної погоди ..."
-
-#~ msgid "Loading future weather ..."
-#~ msgstr "Завантаження прогнозу погоди ..."

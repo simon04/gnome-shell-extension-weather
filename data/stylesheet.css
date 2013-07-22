@@ -3,8 +3,7 @@
 }
 
 .weather-current-summary {
-    font-size: 26px;
-    padding-bottom: 3px;
+    font-size: 44px;
 }
 
 .weather-current-databox {
@@ -33,27 +32,37 @@
 
 .weather-current-databox-captions {
     text-align: right;
-    padding-right: 5px;
+    padding-right: 10px;
+    padding-left: 20px;
     color: #999999;
 }
 
+.forecast {
+  width: 0;
+}
+
 .weather-forecasts {
-  padding: 0 10px;
+  -st-hfade-offset: 60px;
 }
 
 .weather-forecast-box {
-  padding: 0px 15px;
+  padding: 0 20px;
+  min-width: 140px;
 }
 
-.weather-forecast-box-addTopPadding {
-  padding-top: 15px;
+.weather-forecast-box:first-child {
+  padding-left: 50px;
+}
+
+.weather-forecast-box:last-child {
+  padding-right: 50px;
 }
 
 .weather-forecast-iconminmax {
 }
 
 .weather-forecast-icon {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .weather-forecast-day {
@@ -64,6 +73,10 @@
 
 .weather-forecast-summary {
   text-align: center;
+}
+
+.attribution {
+  padding: 0 25px;
 }
 
 .weather-sunrise-icon {

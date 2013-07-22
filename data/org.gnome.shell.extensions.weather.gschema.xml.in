@@ -4,9 +4,13 @@
     <value nick="right" value="1" />
     <value nick="left" value="2"  />
   </enum>
+  <enum id="org.gnome.shell.extensions.weather.wind-dir-indicators">
+    <value nick="arrows" value="0" />
+    <value nick="letters" value="1" />
+  </enum>
   <schema id="org.gnome.shell.extensions.weather" path="/org/gnome/shell/extensions/weather/">
-    <key name="city" type="s">
-      <default>'KBOS>Cambridge'</default>
+    <key name="city" type="av">
+      <default>[]</default>
       <_summary>City to be displayed</_summary>
     </key>
     <key name="actual-city" type="i">
@@ -28,6 +32,11 @@
     <key name="position-in-panel" enum="org.gnome.shell.extensions.weather.position">
       <default>'center'</default>
       <_summary>Position in Panel</_summary>
+    </key>
+    <key name="wind-direction" type="b">
+      <default>true</default>
+      <_summary>Wind Direction by Arrows</_summary>
+      <_description>Choose whether to display wind direction through arrows or letters.</_description>
     </key>
     <key name="debug-extension" type="b">
       <default>false</default>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-28 02:22+0100\n"
+"POT-Creation-Date: 2013-07-22 05:40+0200\n"
 "PO-Revision-Date: 2013-02-14 03:49+0100\n"
 "Last-Translator: Christian METZLER (Neroth) <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -17,131 +17,274 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../src/extension.js:281 ../src/extension.js:567
-msgid "Wind:"
-msgstr "Windgeschwindigkeit:"
-
-#: ../src/extension.js:327
+#: ../src/extension.js:224 ../src/extension.js:232 ../src/extension.js:240
+#: ../src/extension.js:248 ../src/extension.js:551
 #, fuzzy
 msgid "Weather"
 msgstr "Einstellungen für Wetter"
 
-#: ../src/extension.js:383
+#: ../src/extension.js:226
+msgid "No location configured"
+msgstr ""
+
+#: ../src/extension.js:234
+#, fuzzy
+msgid "Loading weather"
+msgstr "Lade Wettervorhersage ..."
+
+#: ../src/extension.js:250
+#, fuzzy
+msgid "Weather extension ready"
+msgstr "Einstellungen für Wetter"
+
+#: ../src/extension.js:440
+msgid "Today"
+msgstr "Heute"
+
+#: ../src/extension.js:446
+msgid "Tomorrow"
+msgstr "Morgen"
+
+#: ../src/extension.js:452
+msgid "Yesterday"
+msgstr "Gestern"
+
+#: ../src/extension.js:614
 msgid "Locations"
 msgstr "Standorte"
 
-#: ../src/extension.js:387
+#: ../src/extension.js:618
+#, fuzzy
+msgid "Reload Weather Information"
+msgstr "Aktualisiere Wetterdaten"
+
+#: ../src/extension.js:623
 msgid "Weather Settings"
 msgstr "Einstellungen für Wetter"
 
-#: ../src/extension.js:526
+#: ../src/extension.js:785
 #, fuzzy
 msgid "No weather information"
 msgstr "Aktualisiere Wetterdaten"
 
-#: ../src/extension.js:528
+#: ../src/extension.js:787
 #, fuzzy, python-format
 msgid "No weather information for %s"
 msgstr "Aktualisiere Wetterdaten"
 
-#: ../src/extension.js:559
-msgid "Please wait"
-msgstr "Bitte warten"
-
-#: ../src/extension.js:563
-msgid "Loading ..."
-msgstr "Lade ..."
-
-#: ../src/extension.js:614
-msgid "Feels like:"
+#: ../src/extension.js:872
+#, fuzzy
+msgid "Feels like"
 msgstr "Gefühlte Temperatur:"
 
-#: ../src/extension.js:616
-msgid "Dew:"
+#: ../src/extension.js:874
+msgid "Visibility"
 msgstr ""
 
-#: ../src/extension.js:618
-msgid "Visibility:"
-msgstr ""
-
-#: ../src/extension.js:620
-msgid "Humidity:"
+#: ../src/extension.js:876
+#, fuzzy
+msgid "Humidity"
 msgstr "Luftfeuchtigkeit:"
 
-#: ../src/extension.js:622
-msgid "Pressure:"
+#: ../src/extension.js:878
+#, fuzzy
+msgid "Pressure"
 msgstr "Luftdruck:"
 
-#: ../src/extension.js:642
+#: ../src/extension.js:880
+#, fuzzy
+msgid "Wind"
+msgstr "Windgeschwindigkeit:"
+
+#: ../src/extension.js:900
 #, fuzzy
 msgid "No forecast information"
 msgstr "Aktualisiere Wetterdaten"
 
-#: ../src/extension.js:750 ../src/prefs.js:642
-msgid "Invalid city"
-msgstr "Ungültige Ortschaft"
+#: ../src/extension.js:1038
+#, python-format
+msgid "%s °F"
+msgstr ""
 
-#: ../src/prefs.js:128
+#: ../src/extension.js:1042
+#, python-format
+msgid "%s °C"
+msgstr ""
+
+#: ../src/extension.js:1046
+#, python-format
+msgid "%s K"
+msgstr ""
+
+#: ../src/extension.js:1052 ../src/extension.js:1105
+msgid "Unknown"
+msgstr ""
+
+#: ../src/extension.js:1069 ../src/extension.js:1072
+msgid "VAR"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "N"
+msgstr "N"
+
+#: ../src/extension.js:1072
+#, fuzzy
+msgid "NNE"
+msgstr "NO"
+
+#: ../src/extension.js:1072
+msgid "NE"
+msgstr "NO"
+
+#: ../src/extension.js:1072
+#, fuzzy
+msgid "ENE"
+msgstr "NO"
+
+#: ../src/extension.js:1072
+msgid "E"
+msgstr "O"
+
+#: ../src/extension.js:1072
+#, fuzzy
+msgid "ESE"
+msgstr "SO"
+
+#: ../src/extension.js:1072
+msgid "SE"
+msgstr "SO"
+
+#: ../src/extension.js:1072
+#, fuzzy
+msgid "SSE"
+msgstr "SO"
+
+#: ../src/extension.js:1073
+msgid "S"
+msgstr "S"
+
+#: ../src/extension.js:1073
+#, fuzzy
+msgid "SSW"
+msgstr "SW"
+
+#: ../src/extension.js:1073
+msgid "SW"
+msgstr "SW"
+
+#: ../src/extension.js:1073
+#, fuzzy
+msgid "WSW"
+msgstr "SW"
+
+#: ../src/extension.js:1073
+msgid "W"
+msgstr "W"
+
+#: ../src/extension.js:1073
+#, fuzzy
+msgid "WNW"
+msgstr "NW"
+
+#: ../src/extension.js:1073
+msgid "NW"
+msgstr "NW"
+
+#: ../src/extension.js:1073
+#, fuzzy
+msgid "NNW"
+msgstr "NW"
+
+#: ../src/extension.js:1083
+msgid "$d$s knots"
+msgstr ""
+
+#: ../src/extension.js:1087
+msgid "$d$s mph"
+msgstr ""
+
+#: ../src/extension.js:1091
+msgid "$d$s km/h"
+msgstr ""
+
+#: ../src/extension.js:1095
+msgid "$d$s m/s"
+msgstr ""
+
+#: ../src/extension.js:1099
+msgid "$dBeaufort $s"
+msgstr ""
+
+#: ../src/prefs.js:144
 msgid "Temperature Unit"
 msgstr "Temperatureinheit"
 
-#: ../src/prefs.js:129 ../src/prefs.js:131 ../src/prefs.js:133
-#: ../src/prefs.js:135
-msgid "Default"
-msgstr ""
-
-#: ../src/prefs.js:130
+#: ../src/prefs.js:146
 msgid "Wind Speed Unit"
 msgstr "Windgeschwindigkeit"
 
-#: ../src/prefs.js:132
+#: ../src/prefs.js:148
 msgid "Pressure Unit"
 msgstr "Druckeinheit:"
 
-#: ../src/prefs.js:134
+#: ../src/prefs.js:150
 msgid "Distance Unit"
 msgstr ""
 
-#: ../src/prefs.js:136
+#: ../src/prefs.js:152
 msgid "Position in Panel"
 msgstr "Position im Panel"
 
-#: ../src/prefs.js:137
+#: ../src/prefs.js:153
 msgid "Center"
 msgstr "Mitte"
 
-#: ../src/prefs.js:137
+#: ../src/prefs.js:153
 msgid "Right"
 msgstr "Rechts"
 
-#: ../src/prefs.js:137
+#: ../src/prefs.js:153
 msgid "Left"
 msgstr "Links"
 
-#: ../src/prefs.js:138
+#: ../src/prefs.js:154
+msgid "Wind Direction by Arrows"
+msgstr "Windrichtung durch Pfeile angeben"
+
+#: ../src/prefs.js:156
 msgid "Symbolic Icons"
 msgstr "Eigene Wettersymbole"
 
-#: ../src/prefs.js:140
+#: ../src/prefs.js:158
 msgid "Temperature in Panel"
 msgstr "Temperaturanzeige"
 
-#: ../src/prefs.js:142
+#: ../src/prefs.js:160
 msgid "Conditions in Panel"
 msgstr "Textanzeige im Panel"
 
-#: ../src/prefs.js:144
+#: ../src/prefs.js:162
 msgid "Debug the extension"
 msgstr ""
 
-#: ../src/prefs.js:287
+#: ../src/prefs.js:320
 msgid "Name of the city"
 msgstr "Name der Ortschaft"
 
-#: ../src/prefs.js:345
+#: ../src/prefs.js:378
 #, python-format
 msgid "Remove %s ?"
 msgstr "Enferne %s ?"
+
+#~ msgid "Please wait"
+#~ msgstr "Bitte warten"
+
+#~ msgid "Loading ..."
+#~ msgstr "Lade ..."
+
+#~ msgid "Invalid city"
+#~ msgstr "Ungültige Ortschaft"
 
 #~ msgid "..."
 #~ msgstr "..."
@@ -332,53 +475,14 @@ msgstr "Enferne %s ?"
 #~ msgid "Saturday"
 #~ msgstr "Samstag"
 
-#~ msgid "N"
-#~ msgstr "N"
-
-#~ msgid "NE"
-#~ msgstr "NO"
-
-#~ msgid "E"
-#~ msgstr "O"
-
-#~ msgid "SE"
-#~ msgstr "SO"
-
-#~ msgid "S"
-#~ msgstr "S"
-
-#~ msgid "SW"
-#~ msgstr "SW"
-
-#~ msgid "W"
-#~ msgstr "W"
-
-#~ msgid "NW"
-#~ msgstr "NW"
-
-#~ msgid "Yesterday"
-#~ msgstr "Gestern"
-
 #~ msgid "%s days ago"
 #~ msgstr "Vor %s Tag(en)"
-
-#~ msgid "Today"
-#~ msgstr "Heute"
-
-#~ msgid "Tomorrow"
-#~ msgstr "Morgen"
 
 #~ msgid "In %s days"
 #~ msgstr "In %s Tag(en)"
 
 #~ msgid "Loading current weather ..."
 #~ msgstr "Lade aktuelles Wetter ..."
-
-#~ msgid "Loading future weather ..."
-#~ msgstr "Lade Wettervorhersage ..."
-
-#~ msgid "Wind Direction by Arrows"
-#~ msgstr "Windrichtung durch Pfeile angeben"
 
 #~ msgid "Translate Conditions"
 #~ msgstr "Wetterdaten übersetzen"

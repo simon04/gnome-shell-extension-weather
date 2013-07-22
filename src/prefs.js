@@ -27,6 +27,7 @@
  */
 
 const Gtk = imports.gi.Gtk;
+const GLib = imports.gi.GLib;
 const GObject = imports.gi.GObject;
 const GtkBuilder = Gtk.Builder;
 const Gio = imports.gi.Gio;
@@ -54,14 +55,8 @@ const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'use-symbolic-icons';		// Weather extensi
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'show-text-in-panel';		// Weather extension setting
 const WEATHER_POSITION_IN_PANEL_KEY = 'position-in-panel';		// Weather extension setting
 const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'show-comment-in-panel';	// Weather extension setting
+const WEATHER_WIND_DIRECTION_KEY = 'wind-direction';			// Weather extension setting
 const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension setting
-
-
-// Soup session (see https://bugzilla.gnome.org/show_bug.cgi?id=661323#c64) (Simon Legner)
-const _httpSession = new Soup.SessionAsync();
-Soup.Session.prototype.add_feature.call(_httpSession, new Soup.ProxyResolverDefault());
-
-let mCities = null;
 
 const WeatherPrefsWidget = new GObject.Class(
 {
@@ -75,66 +70,89 @@ Extends: Gtk.Box,
 
 	this.initWindow();
 
-	this.initWeather();
-
 	this.refreshUI();
 
 	this.add(this.MainWidget);
 	},
 
+	status : function()
+	{
+		if(typeof __logfile__ == "undefined")
+		{
+		__logfile__ = Gio.file_new_for_path(EXTENSIONDIR+"/weather-prefs.log");
+			if(__logfile__.query_exists(null))
+			__logfile__.delete(null);
+		}
+
+		if(!this.debug)
+		return 0;
+
+	let fileOutput = __logfile__.append_to(Gio.FileCreateFlags.PRIVATE,null);
+		if(!arguments[0])
+		fileOutput.write("\n",null);
+		else
+		fileOutput.write("["+new Date().toString()+"] "+arguments[0]+"\n",null);
+	fileOutput.close(null);
+	return 0;
+	},
+
 	Window : new Gtk.Builder(),
 
-	initWindow : function()
-	{
-	let that = this;
-	mCities = null;
+	world : new GWeather.Location.new_world(false),
 
-	this.Window.add_from_file(EXTENSIONDIR+"/weather-settings.ui");
+	initWindow : function()
+	{												this.status("Init window");
+	let that = this;
+	mCities = [];
+
+	this.Window.add_from_file(EXTENSIONDIR+"/weather-settings.ui");					this.status("Weather Settings UI loaded");
 
 	this.MainWidget = this.Window.get_object("main-widget");
 	this.treeview = this.Window.get_object("tree-treeview");
 	this.liststore = this.Window.get_object("liststore");
-	this.Iter = this.liststore.get_iter_first();
+	this.Iter = this.liststore.get_iter_first();							this.status("UI object inited");
 
 		this.Window.get_object("tree-toolbutton-add").connect("clicked",function()
 		{
 		that.addCity();
-		});
+		});											this.status("Add button connected");
 
 		this.Window.get_object("tree-toolbutton-remove").connect("clicked",function()
 		{
 		that.removeCity();
-		});
+		});											this.status("Remove button connected");
 
 		this.Window.get_object("treeview-selection").connect("changed",function(selection)
 		{
 		that.selectionChanged(selection);
-		});
+		});											this.status("Treeview selection connected");
 
-	this.treeview.set_model(this.liststore);
+	this.treeview.set_model(this.liststore);							this.status("Treeview liststore added");
 
 	let column = new Gtk.TreeViewColumn()
-	this.treeview.append_column(column);
+	this.treeview.append_column(column);								this.status("Treeview column added");
 
 	let renderer = new Gtk.CellRendererText();
-	column.pack_start(renderer,null);
+	column.pack_start(renderer,null);								this.status("Column cell renderer text added");
 
 		column.set_cell_data_func(renderer,function()
 		{
 		arguments[1].markup = arguments[2].get_value(arguments[3],0);
 		});
 
-	this.initConfigWidget();
+	this.initConfigWidget();									this.status("Inited config widget");
 	this.addLabel(_("Temperature Unit"));
-	this.addComboBox(["",_("Default"),"K","\u00b0C","\u00b0F"],"temperature_units");
+	this.addComboBox([0,0,"K","\u00b0C","\u00b0F"],"temperature_units");
 	this.addLabel(_("Wind Speed Unit"));
-	this.addComboBox(["",_("Default"),"m/s","km/h","mph","knots","Beaufort"],"speed_units");
+	this.addComboBox([0,0,"m/s","km/h","mph","knots","Beaufort"],"speed_units");
 	this.addLabel(_("Pressure Unit"));
-	this.addComboBox(["",_("Default"),"kPa","hPa","mb","mmHg","inHg","atm"],"pressure_units");
+	this.addComboBox([0,0,"kPa","hPa","mb","mmHg","inHg","atm"],"pressure_units");
 	this.addLabel(_("Distance Unit"));
-	this.addComboBox(["",_("Default"),"m","km","miles"],"distance_units");
+	this.addComboBox([0,0,"m","km","miles"],"distance_units");
 	this.addLabel(_("Position in Panel"));
 	this.addComboBox([_("Center"),_("Right"),_("Left")],"position_in_panel");
+	this.addLabel(_("Wind Direction by Arrows"));
+	this.addSwitch("wind_direction");
 	this.addLabel(_("Symbolic Icons"));
 	this.addSwitch("icon_type");
 	this.addLabel(_("Temperature in Panel"));
@@ -142,53 +160,63 @@ Extends: Gtk.Box,
 	this.addLabel(_("Conditions in Panel"));
 	this.addSwitch("comment_in_panel");
 	this.addLabel(_("Debug the extension"));
-	this.addSwitch("debug");
-	},
-
-	initWeather : function()
-	{
-	this.world = new GWeather.Location.new_world(false);
+	this.addSwitch("debug");									this.status("All widget added");
 	},
 
 	refreshUI : function()
-	{
+	{												this.status("Refresh UI");
 	this.MainWidget = this.Window.get_object("main-widget");
 	this.treeview = this.Window.get_object("tree-treeview");
 	this.liststore = this.Window.get_object("liststore");
 	this.Iter = this.liststore.get_iter_first();
 
-	this.Window.get_object("tree-toolbutton-remove").sensitive = Boolean(this.city.length);
+	let cities = this.city;
 
-		if(mCities != this.city)
-		{
-			if(typeof this.liststore != "undefined")
-			this.liststore.clear();
+	this.Window.get_object("tree-toolbutton-remove").sensitive = Boolean(cities.length);		this.status("Remove button sensitivity added");
 
-			if(this.city.length > 0)
+	let citiesVariation = !!(cities.length - mCities.length);
+
+		if(!citiesVariation)
+			for(let i = 0; i < cities.length; i++)
 			{
-			let city = String(this.city).split(" && ");
+				if(!cities[i].equal(mCities[i]))
+				citiesVariation = true;
+			}
 
-				if(city && typeof city == "string")
-				city = [city];
+		if(citiesVariation)
+		{											this.status("Refresh City list");
+			if(typeof this.liststore != "undefined")
+			{										this.status("Clearing liststore");
+			this.liststore.clear();								this.status("Liststore cleared");
+			}
 
+			if(cities.length > 0)
+			{										this.status(cities.length+" cities to add in the liststore");
 			let current = this.liststore.get_iter_first();
 
-				for(let i in city)
+				for(let i = 0; i < cities.length; i++)
 				{
 				current = this.liststore.append();
-				this.liststore.set_value(current, 0, this.extractLocation(city[i]));
+				let city = cities[i];
+				this.liststore.set_value(current, 0, city.get_city_name());		this.status((i+1)+") "+city.get_city_name()+" added");
 				}
 			}
 
-		mCities = this.city;
+		mCities = cities;									this.status("City list refreshed");
 		}
 
 	this.changeSelection();
 
-	let config = this.configWidgets;
+	let config = this.configWidgets;								this.status("Setting the widget");
 		for(let i in config)
-			if(config[i][0].active != this[config[i][1]])
-			config[i][0].active = this[config[i][1]];
+			if(typeof config[i][0].active_id != "undefined" && config[i][0].active_id != this[config[i][1]])
+			{
+			config[i][0].active_id = String(this[config[i][1]]);				this.status(config[i][1]+" changed from "+config[i][0].active_id+" to "+this[config[i][1]]+" (active_id)");
+			}
+			else if(typeof config[i][0].active_id == "undefined" && config[i][0].active != this[config[i][1]])
+			{
+			config[i][0].active = this[config[i][1]];					this.status(config[i][1]+" changed from "+config[i][0].active+" to "+this[config[i][1]]);
+			}
 	},
 
 	initConfigWidget : function()
@@ -251,9 +279,12 @@ Extends: Gtk.Box,
 	cf.can_focus = 0;
 	cf.width_request = 100;
 		for(let i in a)
-		cf.append_text(a[i]);
-	cf.active = this[b];
-	cf.connect("changed",function(){that[b] = arguments[0].active;});
+		{
+			if(a[i] != 0)
+			cf.append(i, a[i]);
+		}
+	cf.active_id = String(this[b]);
+	cf.connect("changed",function(){try{that[b] = Number(arguments[0].get_active_id());}catch(e){that.status(e);}});
 	this.right_widget.attach(cf, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
 	this.inc();
 	return 0;
@@ -274,11 +305,13 @@ Extends: Gtk.Box,
 
 	selectionChanged : function(select)
 	{
-	let a = select.get_selected_rows(this.liststore)[0][0];
+	let a = select.get_selected_rows(this.liststore)[0][0];					this.status("Selection changed to "+a.to_string());
 
 		if(typeof a != "undefined")
 			if(this.actual_city != parseInt(a.to_string()))
-			this.actual_city = parseInt(a.to_string());
+			{
+			this.actual_city = parseInt(a.to_string());				this.status("Actual city changed to "+this.actual_city);
+			}
 	},
 
 	addCity : function()
@@ -323,10 +356,9 @@ Extends: Gtk.Box,
 		let location = entry.get_location();
 		   	if(response_id && location)
 			{
-				if(that.city)
-				that.city = that.city+" && "+location.get_code()+">"+location.get_city_name();
-				else
-				that.city = location.get_code()+">"+location.get_city_name();
+			let locations = that.city;
+			locations.push(location);
+			that.city = locations;
 			}
 		dialog.destroy();
 		return 0;
@@ -338,11 +370,12 @@ Extends: Gtk.Box,
 	removeCity : function()
 	{
 	let that = this;
-	let city = this.city.split(" && ");
-		if(!city.length)
+	let locations = this.city;
+	let city = locations[this.actual_city];
+		if(!locations.length)
 		return 0;
 	let ac = this.actual_city;
-	let textDialog = _("Remove %s ?").replace("%s",this.extractLocation(city[ac]));
+	let textDialog = _("Remove %s ?").replace("%s",city.get_city_name());
 	let dialog = new Gtk.Dialog({title : ""});
 	let label = new Gtk.Label({label : textDialog});
 	label.margin_bottom = 12;
@@ -364,21 +397,15 @@ Extends: Gtk.Box,
 		{
 		   	if(response_id)
 			{
-				if(city.length == 0)
-				city = [];
-
-				if(city.length > 0 && typeof city != "object")
-				city = [city];
-
-				if(city.length > 0)
-				city.splice(ac,1);
-
-				if(city.length > 1)
-				that.city = city.join(" && ");
-				else if(city[0])
-				that.city = city[0];
-				else
-				that.city = "";
+				for(let i = 0; i < locations.length; i++)
+				{
+					if(locations[i].equal(city))
+					{
+					locations.splice(i, 1);
+					break;
+					}
+				}
+				that.city = locations;
 			}
 		dialog.destroy();
 		return 0;
@@ -391,62 +418,25 @@ Extends: Gtk.Box,
 	changeSelection : function()
 	{
 	let path = this.actual_city;
-		if(arguments[0])
+		if(typeof arguments[0] != "undefined")
 		path = arguments[0];
+										this.status("Change selection to "+path);
 	path = new Gtk.TreePath.new_from_string(String(path));
 	this.treeview.get_selection().select_path(path);
-	},
-
-	loadJsonAsync : function(url, fun, id)
-	{
-        let here = this;
-        let message = new Soup.Message.new('GET', url);
-
-		if(typeof this.asyncSession == "undefined")
-		this.asyncSession = {};
-
-		if(typeof this.asyncSession[id] != "undefined" && this.asyncSession[id])
-		{
-		_httpSession.abort();
-		this.asyncSession[id] = 0;
-		}
-
-		this.asyncSession[id] = 1;
-		_httpSession.queue_message(message, function(_httpSession, message)
-		{
-		here.asyncSession[id] = 0;
-			if(!message.response_body.data)
-			{
-			fun.call(here,0);
-			return 0;
-			}
-
-			try
-			{
-			let jp = JSON.parse(message.response_body.data);
-			fun.call(here, jp);
-			}
-			catch(e)
-			{
-			fun.call(here,0);
-			return 0;
-			}
-		return 0;
-		});
 	},
 
 	loadConfig : function()
 	{
 	let that = this;
    	this.Settings = Convenience.getSettings(WEATHER_SETTINGS_SCHEMA);	
-	this.Settings.connect("changed", function(){that.refreshUI();});
+	this.Settings.connect("changed", function(){that.status(0); that.refreshUI();});
 	},
 
 	loadGWeatherConfig : function()
 	{
 	let that = this;
 	this.GWeatherSettings = Convenience.getSettings(WEATHER_GWEATHER_SETTINGS_SCHEMA);
-	this.GWeatherSettingsC = this.GWeatherSettings.connect("changed",function(){that.refreshUI();});
+	this.GWeatherSettingsC = this.GWeatherSettings.connect("changed",function(){that.status(0); that.refreshUI();});
 	},
 
 	get temperature_units()
@@ -509,14 +499,21 @@ Extends: Gtk.Box,
 	{
 		if(!this.Settings)
 		this.loadConfig();
-	return this.Settings.get_string(WEATHER_CITY_KEY);
+	let cities = this.Settings.get_value(WEATHER_CITY_KEY);
+	cities = cities.deep_unpack();
+		for(let i = 0; i < cities.length; i++)
+		cities[i] = this.world.deserialize(cities[i]);
+	return cities;
 	},
 
 	set city(v)
 	{
 		if(!this.Settings)
 		this.loadConfig();
-	this.Settings.set_string(WEATHER_CITY_KEY,v);
+	let cities = v;
+		for(let i = 0; i < cities.length; i++)
+		cities[i] = cities[i].serialize();
+	this.Settings.set_value(WEATHER_CITY_KEY,new GLib.Variant('av', cities));
 	},
 
 	get actual_city()
@@ -524,12 +521,9 @@ Extends: Gtk.Box,
 		if(!this.Settings)
 		this.loadConfig();
 	let a = this.Settings.get_int(WEATHER_ACTUAL_CITY_KEY);
-	let citys = this.city.split(" && ");
+	let cities = this.city;
 
-		if(citys && typeof citys == "string")
-		citys = [citys];
-
-	let l = citys.length-1;
+	let l = cities.length-1;
 
 		if(a < 0)
 		a = 0;
@@ -547,12 +541,9 @@ Extends: Gtk.Box,
 	{
 		if(!this.Settings)
 		this.loadConfig();
-	let citys = this.city.split(" && ");
+	let cities = this.city;
 
-		if(citys && typeof citys == "string")
-		citys = [citys];
-
-	let l = citys.length-1;
+	let l = cities.length-1;
 
 		if(a < 0)
 		a = 0;
@@ -564,6 +555,20 @@ Extends: Gtk.Box,
 		a = l;
 
 	this.Settings.set_int(WEATHER_ACTUAL_CITY_KEY,a);
+	},
+
+	get wind_direction()
+	{
+		if(!this.Settings)
+		this.loadConfig();
+	return this.Settings.get_boolean(WEATHER_WIND_DIRECTION_KEY);
+	},
+
+	set wind_direction(v)
+	{
+		if(!this.Settings)
+		this.loadConfig();
+	return this.Settings.set_boolean(WEATHER_WIND_DIRECTION_KEY,v);
 	},
 
 	get icon_type()
@@ -634,20 +639,6 @@ Extends: Gtk.Box,
 		if(!this.Settings)
 		this.loadConfig();
 	this.Settings.set_boolean(WEATHER_DEBUG_EXTENSION,v);
-	},
-
-	extractLocation : function(a)
-	{
-		if(a.search(">") == -1)
-		return _("Invalid city");
-	return a.split(">")[1];
-	},
-
-	extractCode : function(a)
-	{
-		if(a.search(">") == -1)
-		return 0;
-	return a.split(">")[0];
 	}
 });
 
