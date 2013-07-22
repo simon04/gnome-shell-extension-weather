@@ -171,12 +171,11 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			else
 			{
 			this.weatherStatus("nolocation");
-			return 0;
 			}
 
 		this.refreshUI();
 
-			if(this.location)
+			if(typeof this.info != "undefined")
 			this.info.update();									this.status("Weather started"); this.status(0);
 		return 0;
 		},
@@ -713,6 +712,12 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		let item = null;
 
 		let cities = this.cities;
+
+			if (cities.length <= 1)
+			this.UI.locationSelector.actor.hide();
+			else
+			this.UI.locationSelector.actor.show();
+
 			if(!cities[0])
 			return 0;
 
@@ -731,11 +736,6 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 				that.actual_city = actor.location;
 				});
 			}
-
-			if (cities.length <= 1)
-			this.UI.locationSelector.actor.hide();
-			else
-			this.UI.locationSelector.actor.show();
 
 		return 0;
 		},
@@ -1140,7 +1140,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			|| this.variation("comment_in_panel",true) || this.variation("wind_direction",true))
 			this.refresh();
 
-			if(typeof this.location == "undefined" || (typeof this.location != "undefined" && !this.location.equal(this.city)))
+			if((typeof this.location != "undefined" && !this.location.equal(this.city)) || !this.info)
 			{										this.status("Location has changed");
 			this.restart();									this.status("Location changed to "+this.location.get_city_name());
 			return 0;
