@@ -1,10 +1,10 @@
-# GWeather version (Beta)
+# Weather Extension V2 (<= GNOME Shell 3.8)
 
-![Screenshot](https://f.cloud.github.com/assets/1255506/779326/e956973e-e9d0-11e2-9c63-d64eac58e99d.png)
+![Screenshot](https://f.cloud.github.com/assets/1255506/833069/0f754966-f28b-11e2-9fb3-3ea413919c69.png)
 
 *gnome-shell-extension-weather* is a simple extension for displaying weather conditions and forecasts in GNOME Shell, featuring support for multiple locations, no need for WOEID, a symmetrical layout and a settings panel through *gnome-shell-extension-prefs*.
 
-The weather report include forecasts for seven days for USA only (for the time being).
+The weather report include forecasts for ~ 10 days.
 
 ----
 
@@ -26,7 +26,6 @@ Run the following commands:
 
 	cd ~ && git clone git://github.com/Neroth/gnome-shell-extension-weather.git
 	cd ~/gnome-shell-extension-weather
-	git checkout GWeather
 	./autogen.sh && make local-install
 
 Restart GNOME Shell (`Alt`+`F2` => `r` => `Enter`) and enable the extension through *gnome-tweak-tool*.
@@ -47,7 +46,7 @@ You can also use *dconf-editor* or *gsettings* to configure the extension throug
 
 To debug the extension, active the switch `Debug extension` in the settings:
 
-You have now a file "weather.log" in the extension dir (`~/.local/share/gnome-shell/extensions/weather-extension@xeked.com/`).
+You have now two new file ("weather.log" and "weather-prefs.log") in the extension dir (`~/.local/share/gnome-shell/extensions/weather-extension@xeked.com/`).
 
 ----
 
