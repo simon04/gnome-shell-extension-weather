@@ -145,7 +145,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		return 0;
 		},
 
-		world : new GWeather.Location.new_world(false),
+		world : GWeather.Location.new_world(false),
 
 		start : function()
 		{												this.status("Starting Weather");
