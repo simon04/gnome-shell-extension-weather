@@ -421,7 +421,7 @@ Extends: Gtk.Box,
 		if(typeof arguments[0] != "undefined")
 		path = arguments[0];
 										this.status("Change selection to "+path);
-	path = new Gtk.TreePath.new_from_string(String(path));
+	path = Gtk.TreePath.new_from_string(String(path));
 	this.treeview.get_selection().select_path(path);
 	},
 
