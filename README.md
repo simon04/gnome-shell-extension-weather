@@ -1,6 +1,6 @@
 # GWeather version (Beta)
 
-![Screenshot](https://f.cloud.github.com/assets/1255506/293902/437bf81e-93bc-11e2-949c-787649688fff.png)
+![Screenshot](https://f.cloud.github.com/assets/1255506/779326/e956973e-e9d0-11e2-9c63-d64eac58e99d.png)
 
 *gnome-shell-extension-weather* is a simple extension for displaying weather conditions and forecasts in GNOME Shell, featuring support for multiple locations, no need for WOEID, a symmetrical layout and a settings panel through *gnome-shell-extension-prefs*.
 
