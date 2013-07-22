@@ -176,7 +176,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		this.refreshUI();
 
-			if(this.info)
+			if(this.location)
 			this.info.update();									this.status("Weather started"); this.status(0);
 		return 0;
 		},
@@ -1140,7 +1140,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			|| this.variation("comment_in_panel",true) || this.variation("wind_direction",true))
 			this.refresh();
 
-			if(this.variation("city",true))
+			if(typeof this.location == "undefined" || (typeof this.location != "undefined" && !this.location.equal(this.city)))
 			{										this.status("Location has changed");
 			this.restart();									this.status("Location changed to "+this.location.get_city_name());
 			return 0;
