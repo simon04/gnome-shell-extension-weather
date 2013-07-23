@@ -82,7 +82,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		this.variation("distance_units");
 		this.variation("pressure_units");
 		this.variation("cities");
-		this.variation("city");
+		this.variation("city_name");
 		this.variation("symbolic_icon");
 		this.variation("text_in_panel");
 		this.variation("position_in_panel");
@@ -304,7 +304,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		let speedUnitVar = this.variation("speed_units");
 		let distUnitVar = this.variation("distance_units");
 		let presUnitVar = this.variation("pressure_units");
-		let cityVar = this.variation("city");
+		let cityVar = this.variation("city_name");
 		let textInPanelVar = this.variation("text_in_panel");
 		let commentInPanelVar = this.variation("comment_in_panel");
 		let windDirectionVar = this.variation("wind_direction");
@@ -666,7 +666,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 				}
 			}
 
-			if(this.variation("cities") || this.variation("city",true))
+			if(this.variation("cities") || this.variation("city_name",true))
 			{
 			this.rebuildLocationSelectorItem();									this.status("Location selector rebuilded");
 			}
@@ -1140,7 +1140,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			|| this.variation("comment_in_panel",true) || this.variation("wind_direction",true))
 			this.refresh();
 
-			if((typeof this.location != "undefined" && !this.location.equal(this.city)) || !this.info)
+			if(this.variation("city_name", true))
 			{										this.status("Location has changed");
 			this.restart();									this.status("Location changed to "+this.location.get_city_name());
 			return 0;
@@ -1312,6 +1312,14 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		cities.splice(this.actual_city,1,v);
 		this.cities = cities;
 		return 0;
+		},
+
+		get city_name()
+		{
+			if(typeof this.city == "undefined")
+			return "";
+			else
+			return this.city.get_city_name();
 		},
 
 		get symbolic_icon()
