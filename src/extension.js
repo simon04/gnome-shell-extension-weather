@@ -81,7 +81,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		this.variation("speed_units");
 		this.variation("distance_units");
 		this.variation("pressure_units");
-		this.variation("cities");
+		this.variation("cities_names");
 		this.variation("city_name");
 		this.variation("symbolic_icon");
 		this.variation("text_in_panel");
@@ -157,8 +157,8 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		this.loadInterfaceConfig();
 
 		this.location = this.city;
-			if(this.location)
-			{											this.status("Location ("+this.location.get_city_name()+") loaded");
+			if(this.city_name)
+			{											this.status("Location ("+this.city_name+") loaded");
 			this.info = new GWeather.Info({ world: this.world,
                                        location: this.location,
                                        forecast_type: GWeather.ForecastType.LIST,
@@ -175,8 +175,10 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		this.refreshUI();
 
-			if(typeof this.info != "undefined")
-			this.info.update();									this.status("Weather started"); this.status(0);
+			if(this.city_name)
+			{
+			this.info.update();
+			}											this.status("Weather started"); this.status(0);
 		return 0;
 		},
 
@@ -203,6 +205,8 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			this.GWeatherSettingsC = 0;
 			delete this.GWeatherSettings;								this.status("GWeather setting connection stopped");
 			}
+
+		this.build = 0;
 
 		this.weatherStatus(0);										this.status("Stopped"); this.status(0);
 		return 0;
@@ -311,7 +315,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		let clockFormatVar = this.variation("clock_format");						this.status("Variation readed");
 
 		let first = false;
-			if(typeof this.build == "undefined")
+			if(!this.build)
 			{
 			first = true;										this.status("First build");
 			this.build = that.info.get_update();
@@ -666,7 +670,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 				}
 			}
 
-			if(this.variation("cities") || this.variation("city_name",true))
+			if(this.variation("cities_names") || this.variation("city_name",true))
 			{
 			this.rebuildLocationSelectorItem();									this.status("Location selector rebuilded");
 			}
@@ -1111,7 +1115,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 		let that = this;
 		this.settings = Convenience.getSettings(WEATHER_SETTINGS_SCHEMA);
-		this.settingsC = this.settings.connect("changed",function(){that.status("**** SETTING CHANGED ****");that.settingsChanged();});
+		this.settingsC = this.settings.connect("changed",function(){that.status("**** SETTING CHANGED ("+arguments[1]+") ****");that.settingsChanged();});
 		return 0;
 		},
 
@@ -1119,7 +1123,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 		let that = this;
 		this.GWeatherSettings = Convenience.getSettings(WEATHER_GWEATHER_SETTINGS_SCHEMA);
-		this.GWeatherSettingsC = this.GWeatherSettings.connect("changed",function(){that.status("**** GWEATHER SETTING CHANGED ****");that.settingsChanged();});
+		this.GWeatherSettingsC = this.GWeatherSettings.connect("changed",function(){that.status("**** GWEATHER SETTING CHANGED ("+arguments[1]+")  ****");that.settingsChanged();});
 		return 0;
 		},
 
@@ -1127,12 +1131,12 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 		let that = this;
 		this.InterfaceSettings = Convenience.getSettings("org.gnome.desktop.interface");
-		this.InterfaceSettingsC = this.InterfaceSettings.connect("changed",function(){that.status("**** INTERFACE SETTING CHANGED ****");that.settingsChanged();});
+		this.InterfaceSettingsC = this.InterfaceSettings.connect("changed",function(){that.status("**** INTERFACE SETTING CHANGED ("+arguments[1]+")  ****");that.settingsChanged();});
 		},
 
 		settingsChanged : function()
 		{
-			if(this.variation("cities",true) || this.variation("symbolic_icon",true) || this.variation("position_in_panel",true))
+			if(this.variation("cities_names",true) || this.variation("symbolic_icon",true) || this.variation("position_in_panel",true))
 			this.refreshUI();
 
 			if(this.variation("clock_format",true) || this.variation("temperature_units",true) || this.variation("speed_units",true)
@@ -1140,9 +1144,9 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			|| this.variation("comment_in_panel",true) || this.variation("wind_direction",true))
 			this.refresh();
 
-			if(this.variation("city_name", true))
+			if(this.variation("city_name"))
 			{										this.status("Location has changed");
-			this.restart();									this.status("Location changed to "+this.location.get_city_name());
+			this.restart();									this.status("Location changed to "+this.city_name);
 			return 0;
 			}
 
@@ -1257,6 +1261,14 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		return 0;
 		},
 
+		get cities_names()
+		{
+			if(!this.cities)
+			return "";
+			else
+			return this.cities.join(", ");
+		},
+
 		get actual_city()
 		{
 			if(!this.settings)
@@ -1316,7 +1328,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		get city_name()
 		{
-			if(typeof this.city == "undefined")
+			if(!this.city)
 			return "";
 			else
 			return this.city.get_city_name();
