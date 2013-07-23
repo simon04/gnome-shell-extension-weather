@@ -210,17 +210,18 @@ Extends: Gtk.Box,
 	let config = this.configWidgets;								this.status("Setting the widget");
 		for(let i in config)
 			if(typeof config[i][0].active_id != "undefined" && config[i][0].active_id != this[config[i][1]])
-			{
-			config[i][0].active_id = String(this[config[i][1]]);				this.status(config[i][1]+" changed from "+config[i][0].active_id+" to "+this[config[i][1]]+" (active_id)");
+			{										this.status("Change "+config[i][1]+" from "+config[i][0].active_id+" to "+this[config[i][1]]+" (active_id)");
+			config[i][0].active_id = String(this[config[i][1]]);				this.status(config[i][1]+" changed to "+this[config[i][1]]+" (active_id)");
 			}
 			else if(typeof config[i][0].active_id == "undefined" && config[i][0].active != this[config[i][1]])
-			{
-			config[i][0].active = this[config[i][1]];					this.status(config[i][1]+" changed from "+config[i][0].active+" to "+this[config[i][1]]);
-			}
+			{										this.status("Change "+config[i][1]+" from "+config[i][0].active+" to "+this[config[i][1]]);
+			config[i][0].active = this[config[i][1]];					this.status(config[i][1]+" changed to "+this[config[i][1]]);
+			}										this.status("UI refreshed");
 	},
 
 	initConfigWidget : function()
 	{
+	this.configWidgets.splice(0, this.configWidgets.length);
 	this.inc(1);
 	let a = this.Window.get_object("right-widget-table");
 	a.visible = 1;
@@ -286,7 +287,7 @@ Extends: Gtk.Box,
 	cf.active_id = String(this[b]);
 	cf.connect("changed",function(){try{that[b] = Number(arguments[0].get_active_id());}catch(e){that.status(e);}});
 	this.right_widget.attach(cf, this.x[0],this.x[1], this.y[0],this.y[1],0,0,0,0);
-	this.inc();
+	this.inc();											this.status("Added comboBox("+(this.configWidgets.length-1)+") "+b+" active_id : "+this[b]);
 	return 0;
 	},
 
