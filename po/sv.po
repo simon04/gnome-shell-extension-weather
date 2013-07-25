@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-26 04:15+0100\n"
+"POT-Creation-Date: 2013-07-22 16:54+0200\n"
 "PO-Revision-Date: 2012-05-13 22:40+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -16,416 +16,408 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/extension.js:125
-msgid "..."
-msgstr "..."
-
-#: ../src/extension.js:205
-msgid "Locations"
+#: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
+#: ../src/extension.js:247 ../src/extension.js:550
+msgid "Weather"
 msgstr ""
 
-#: ../src/extension.js:209
-msgid "Reload Weather Information"
+#: ../src/extension.js:225
+msgid "No location configured"
 msgstr ""
 
-#: ../src/extension.js:213 ../src/weather-settings.js.in:655
-msgid "Weather Settings"
+#: ../src/extension.js:233
+#, fuzzy
+msgid "Loading weather"
+msgstr "Laddar kommande väder..."
+
+#: ../src/extension.js:249
+msgid "Weather extension ready"
 msgstr ""
 
-#: ../src/extension.js:233 ../src/extension.js:243
-#: ../src/weather-settings.js.in:329
-#, python-format
-msgid "Schema \"%s\" not found."
-msgstr ""
-
-#: ../src/extension.js:522 ../src/weather-settings.js.in:539
-msgid "Invalid city"
-msgstr ""
-
-#: ../src/extension.js:736
-msgid "Tornado"
-msgstr "Tornado"
-
-#: ../src/extension.js:738
-msgid "Tropical storm"
-msgstr "Tropisk storm"
-
-#: ../src/extension.js:740 ../src/extension.js:900
-msgid "Hurricane"
-msgstr "Orkan"
-
-#: ../src/extension.js:742
-msgid "Severe thunderstorms"
-msgstr "Kraftig åska"
-
-#: ../src/extension.js:744
-msgid "Thunderstorms"
-msgstr "Åska"
-
-#: ../src/extension.js:746
-msgid "Mixed rain and snow"
-msgstr "Snöblandat regn"
-
-#: ../src/extension.js:748
-msgid "Mixed rain and sleet"
-msgstr "Regn och slask"
-
-#: ../src/extension.js:750
-msgid "Mixed snow and sleet"
-msgstr "Snö och slask"
-
-#: ../src/extension.js:752
-msgid "Freezing drizzle"
-msgstr "Underkylt duggregn"
-
-#: ../src/extension.js:754
-msgid "Drizzle"
-msgstr "Duggregn"
-
-#: ../src/extension.js:756
-msgid "Freezing rain"
-msgstr "Underkylt regn"
-
-#: ../src/extension.js:758 ../src/extension.js:760
-msgid "Showers"
-msgstr "Regnskurar"
-
-#: ../src/extension.js:762
-msgid "Snow flurries"
-msgstr "Lätt snöfall"
-
-#: ../src/extension.js:764
-msgid "Light snow showers"
-msgstr "Lätta snöbyar"
-
-#: ../src/extension.js:766
-msgid "Blowing snow"
-msgstr "Snöstorm"
-
-#: ../src/extension.js:768
-msgid "Snow"
-msgstr "Snö"
-
-#: ../src/extension.js:770
-msgid "Hail"
-msgstr "Hagel"
-
-#: ../src/extension.js:772
-msgid "Sleet"
-msgstr "Slask"
-
-#: ../src/extension.js:774
-msgid "Dust"
-msgstr "Damm"
-
-#: ../src/extension.js:776
-msgid "Foggy"
-msgstr "Dimma"
-
-#: ../src/extension.js:778
-msgid "Haze"
-msgstr "Dis"
-
-#: ../src/extension.js:780
-msgid "Smoky"
-msgstr "Rök"
-
-#: ../src/extension.js:782
-msgid "Blustery"
-msgstr "Vindbyar"
-
-#: ../src/extension.js:784
-msgid "Windy"
-msgstr "Blåsigt"
-
-#: ../src/extension.js:786
-msgid "Cold"
-msgstr "Kallt"
-
-#: ../src/extension.js:788
-msgid "Cloudy"
-msgstr "Molnigt"
-
-#: ../src/extension.js:791
-msgid "Mostly cloudy"
-msgstr "Mestadels molnigt"
-
-#: ../src/extension.js:794 ../src/extension.js:820
-msgid "Partly cloudy"
-msgstr "Delvis molnigt"
-
-#: ../src/extension.js:796
-msgid "Clear"
-msgstr "Klart"
-
-#: ../src/extension.js:798
-msgid "Sunny"
-msgstr "Soligt"
-
-#: ../src/extension.js:801
-msgid "Fair"
-msgstr "Uppehåll"
-
-#: ../src/extension.js:803
-msgid "Mixed rain and hail"
-msgstr "Regn och hagel"
-
-#: ../src/extension.js:805
-msgid "Hot"
-msgstr "Varmt"
-
-#: ../src/extension.js:807
-msgid "Isolated thunderstorms"
-msgstr "Lokal åska"
-
-#: ../src/extension.js:810
-msgid "Scattered thunderstorms"
-msgstr "Utspridd åska"
-
-#: ../src/extension.js:812
-msgid "Scattered showers"
-msgstr "Utspridda regnskurar"
-
-#: ../src/extension.js:814 ../src/extension.js:818
-msgid "Heavy snow"
-msgstr "Häftigt snöfall"
-
-#: ../src/extension.js:816
-msgid "Scattered snow showers"
-msgstr "Utspridda snöbyar"
-
-#: ../src/extension.js:822
-msgid "Thundershowers"
-msgstr "Åskbyar"
-
-#: ../src/extension.js:824
-msgid "Snow showers"
-msgstr "Snöbyar"
-
-#: ../src/extension.js:826
-msgid "Isolated thundershowers"
-msgstr "Lokala åskbyar"
-
-#: ../src/extension.js:829
-msgid "Not available"
-msgstr "Inte tillgänglig"
-
-#: ../src/extension.js:876
-msgid "Calm"
-msgstr ""
-
-#: ../src/extension.js:878
-msgid "Light air"
-msgstr ""
-
-#: ../src/extension.js:880
-msgid "Light breeze"
-msgstr ""
-
-#: ../src/extension.js:882
-msgid "Gentle breeze"
-msgstr ""
-
-#: ../src/extension.js:884
-msgid "Moderate breeze"
-msgstr ""
-
-#: ../src/extension.js:886
-msgid "Fresh breeze"
-msgstr ""
-
-#: ../src/extension.js:888
-msgid "Strong breeze"
-msgstr ""
-
-#: ../src/extension.js:890
-msgid "Moderate gale"
-msgstr ""
-
-#: ../src/extension.js:892
-msgid "Fresh gale"
-msgstr ""
-
-#: ../src/extension.js:894
-msgid "Strong gale"
-msgstr ""
-
-#: ../src/extension.js:896
-msgid "Storm"
-msgstr ""
-
-#: ../src/extension.js:898
-msgid "Violent storm"
-msgstr ""
-
-#: ../src/extension.js:905
-msgid "Sunday"
-msgstr "Söndag"
-
-#: ../src/extension.js:905
-msgid "Monday"
-msgstr "Måndag"
-
-#: ../src/extension.js:905
-msgid "Tuesday"
-msgstr "Tisdag"
-
-#: ../src/extension.js:905
-msgid "Wednesday"
-msgstr "Onsdag"
-
-#: ../src/extension.js:905
-msgid "Thursday"
-msgstr "Torsdag"
-
-#: ../src/extension.js:905
-msgid "Friday"
-msgstr "Fredag"
-
-#: ../src/extension.js:905
-msgid "Saturday"
-msgstr "Lördag"
-
-#: ../src/extension.js:912
-msgid "N"
-msgstr ""
-
-#: ../src/extension.js:912
-msgid "NE"
-msgstr ""
-
-#: ../src/extension.js:912
-msgid "E"
-msgstr ""
-
-#: ../src/extension.js:912
-msgid "SE"
-msgstr ""
-
-#: ../src/extension.js:912
-msgid "S"
-msgstr ""
-
-#: ../src/extension.js:912
-msgid "SW"
-msgstr ""
-
-#: ../src/extension.js:912
-msgid "W"
-msgstr ""
-
-#: ../src/extension.js:912
-msgid "NW"
-msgstr ""
-
-#: ../src/extension.js:1190 ../src/extension.js:1319
-msgid "Yesterday"
-msgstr ""
-
-#: ../src/extension.js:1192 ../src/extension.js:1321
-#, python-format
-msgid "%s days ago"
-msgstr ""
-
-#: ../src/extension.js:1313
+#: ../src/extension.js:439
 msgid "Today"
 msgstr "Idag"
 
-#: ../src/extension.js:1315
+#: ../src/extension.js:445
 msgid "Tomorrow"
 msgstr "Imorgon"
 
-#: ../src/extension.js:1317
+#: ../src/extension.js:451
+msgid "Yesterday"
+msgstr ""
+
+#: ../src/extension.js:613
+msgid "Locations"
+msgstr ""
+
+#: ../src/extension.js:617
+msgid "Reload Weather Information"
+msgstr ""
+
+#: ../src/extension.js:622
+msgid "Weather Settings"
+msgstr ""
+
+#: ../src/extension.js:785
+msgid "No weather information"
+msgstr ""
+
+#: ../src/extension.js:787
 #, python-format
-msgid "In %s days"
+msgid "No weather information for %s"
 msgstr ""
 
-#: ../src/extension.js:1352
-msgid "Loading current weather ..."
-msgstr "Laddar nuvarande väder..."
-
-#: ../src/extension.js:1353
-msgid "Loading future weather ..."
-msgstr "Laddar kommande väder..."
-
-#: ../src/extension.js:1386
-msgid "Loading ..."
-msgstr "Laddar..."
-
-#: ../src/extension.js:1389
-msgid "Please wait"
-msgstr "Vänligen vänta"
-
-#: ../src/extension.js:1434
-msgid "Feel like:"
+#: ../src/extension.js:872
+msgid "Feels like"
 msgstr ""
 
-#: ../src/extension.js:1436
-msgid "Humidity:"
+#: ../src/extension.js:874
+msgid "Visibility"
+msgstr ""
+
+#: ../src/extension.js:876
+#, fuzzy
+msgid "Humidity"
 msgstr "Fuktighet:"
 
-#: ../src/extension.js:1438
-msgid "Pressure:"
+#: ../src/extension.js:878
+#, fuzzy
+msgid "Pressure"
 msgstr "Lufttryck:"
 
-#: ../src/extension.js:1440
-msgid "Wind:"
+#: ../src/extension.js:880
+#, fuzzy
+msgid "Wind"
 msgstr "Vind:"
 
-#: ../src/weather-settings.js.in:73
-msgid "Name of the city"
+#: ../src/extension.js:900
+msgid "No forecast information"
 msgstr ""
 
-#: ../src/weather-settings.js.in:235
+#: ../src/extension.js:1038
 #, python-format
-msgid "Remove %s ?"
+msgid "%s °F"
 msgstr ""
 
-#: ../src/weather-settings.js.in:693
+#: ../src/extension.js:1042
+#, python-format
+msgid "%s °C"
+msgstr ""
+
+#: ../src/extension.js:1046
+#, python-format
+msgid "%s K"
+msgstr ""
+
+#: ../src/extension.js:1052 ../src/extension.js:1105
+msgid "Unknown"
+msgstr ""
+
+#: ../src/extension.js:1069 ../src/extension.js:1072
+msgid "VAR"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "N"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "NNE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "NE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "ENE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "E"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "ESE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "SE"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "SSE"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "S"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "SSW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "SW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "WSW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "W"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "WNW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "NW"
+msgstr ""
+
+#: ../src/extension.js:1073
+msgid "NNW"
+msgstr ""
+
+#: ../src/extension.js:1083
+msgid "$d$s knots"
+msgstr ""
+
+#: ../src/extension.js:1087
+msgid "$d$s mph"
+msgstr ""
+
+#: ../src/extension.js:1091
+msgid "$d$s km/h"
+msgstr ""
+
+#: ../src/extension.js:1095
+msgid "$d$s m/s"
+msgstr ""
+
+#: ../src/extension.js:1099
+msgid "$dBeaufort $s"
+msgstr ""
+
+#: ../src/prefs.js:144
 msgid "Temperature Unit"
 msgstr "Temperatur:"
 
-#: ../src/weather-settings.js.in:695
+#: ../src/prefs.js:146
 msgid "Wind Speed Unit"
 msgstr ""
 
-#: ../src/weather-settings.js.in:697
+#: ../src/prefs.js:148
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Lufttryck:"
 
-#: ../src/weather-settings.js.in:699
+#: ../src/prefs.js:150
+msgid "Distance Unit"
+msgstr ""
+
+#: ../src/prefs.js:152
 msgid "Position in Panel"
 msgstr ""
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:153
 msgid "Center"
 msgstr ""
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:153
 msgid "Right"
 msgstr ""
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:153
 msgid "Left"
 msgstr ""
 
-#: ../src/weather-settings.js.in:701
+#: ../src/prefs.js:154
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/weather-settings.js.in:703
-msgid "Translate Conditions"
-msgstr ""
-
-#: ../src/weather-settings.js.in:705
+#: ../src/prefs.js:156
 msgid "Symbolic Icons"
 msgstr ""
 
-#: ../src/weather-settings.js.in:707
+#: ../src/prefs.js:158
 msgid "Temperature in Panel"
 msgstr "Temperatur:"
 
-#: ../src/weather-settings.js.in:709
+#: ../src/prefs.js:160
 msgid "Conditions in Panel"
 msgstr ""
+
+#: ../src/prefs.js:162
+msgid "Debug the extension"
+msgstr ""
+
+#: ../src/prefs.js:320
+msgid "Name of the city"
+msgstr ""
+
+#: ../src/prefs.js:378
+#, python-format
+msgid "Remove %s ?"
+msgstr ""
+
+#~ msgid "Please wait"
+#~ msgstr "Vänligen vänta"
+
+#~ msgid "Loading ..."
+#~ msgstr "Laddar..."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Tornado"
+#~ msgstr "Tornado"
+
+#~ msgid "Tropical storm"
+#~ msgstr "Tropisk storm"
+
+#~ msgid "Hurricane"
+#~ msgstr "Orkan"
+
+#~ msgid "Severe thunderstorms"
+#~ msgstr "Kraftig åska"
+
+#~ msgid "Thunderstorms"
+#~ msgstr "Åska"
+
+#~ msgid "Mixed rain and snow"
+#~ msgstr "Snöblandat regn"
+
+#~ msgid "Mixed rain and sleet"
+#~ msgstr "Regn och slask"
+
+#~ msgid "Mixed snow and sleet"
+#~ msgstr "Snö och slask"
+
+#~ msgid "Freezing drizzle"
+#~ msgstr "Underkylt duggregn"
+
+#~ msgid "Drizzle"
+#~ msgstr "Duggregn"
+
+#~ msgid "Freezing rain"
+#~ msgstr "Underkylt regn"
+
+#~ msgid "Showers"
+#~ msgstr "Regnskurar"
+
+#~ msgid "Snow flurries"
+#~ msgstr "Lätt snöfall"
+
+#~ msgid "Light snow showers"
+#~ msgstr "Lätta snöbyar"
+
+#~ msgid "Blowing snow"
+#~ msgstr "Snöstorm"
+
+#~ msgid "Snow"
+#~ msgstr "Snö"
+
+#~ msgid "Hail"
+#~ msgstr "Hagel"
+
+#~ msgid "Sleet"
+#~ msgstr "Slask"
+
+#~ msgid "Dust"
+#~ msgstr "Damm"
+
+#~ msgid "Foggy"
+#~ msgstr "Dimma"
+
+#~ msgid "Haze"
+#~ msgstr "Dis"
+
+#~ msgid "Smoky"
+#~ msgstr "Rök"
+
+#~ msgid "Blustery"
+#~ msgstr "Vindbyar"
+
+#~ msgid "Windy"
+#~ msgstr "Blåsigt"
+
+#~ msgid "Cold"
+#~ msgstr "Kallt"
+
+#~ msgid "Cloudy"
+#~ msgstr "Molnigt"
+
+#~ msgid "Mostly cloudy"
+#~ msgstr "Mestadels molnigt"
+
+#~ msgid "Partly cloudy"
+#~ msgstr "Delvis molnigt"
+
+#~ msgid "Clear"
+#~ msgstr "Klart"
+
+#~ msgid "Sunny"
+#~ msgstr "Soligt"
+
+#~ msgid "Fair"
+#~ msgstr "Uppehåll"
+
+#~ msgid "Mixed rain and hail"
+#~ msgstr "Regn och hagel"
+
+#~ msgid "Hot"
+#~ msgstr "Varmt"
+
+#~ msgid "Isolated thunderstorms"
+#~ msgstr "Lokal åska"
+
+#~ msgid "Scattered thunderstorms"
+#~ msgstr "Utspridd åska"
+
+#~ msgid "Scattered showers"
+#~ msgstr "Utspridda regnskurar"
+
+#~ msgid "Heavy snow"
+#~ msgstr "Häftigt snöfall"
+
+#~ msgid "Scattered snow showers"
+#~ msgstr "Utspridda snöbyar"
+
+#~ msgid "Thundershowers"
+#~ msgstr "Åskbyar"
+
+#~ msgid "Snow showers"
+#~ msgstr "Snöbyar"
+
+#~ msgid "Isolated thundershowers"
+#~ msgstr "Lokala åskbyar"
+
+#~ msgid "Not available"
+#~ msgstr "Inte tillgänglig"
+
+#~ msgid "Sunday"
+#~ msgstr "Söndag"
+
+#~ msgid "Monday"
+#~ msgstr "Måndag"
+
+#~ msgid "Tuesday"
+#~ msgstr "Tisdag"
+
+#~ msgid "Wednesday"
+#~ msgstr "Onsdag"
+
+#~ msgid "Thursday"
+#~ msgstr "Torsdag"
+
+#~ msgid "Friday"
+#~ msgstr "Fredag"
+
+#~ msgid "Saturday"
+#~ msgstr "Lördag"
+
+#~ msgid "Loading current weather ..."
+#~ msgstr "Laddar nuvarande väder..."

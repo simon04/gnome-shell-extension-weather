@@ -1,27 +1,25 @@
-# Chinese translation for gnome-shell-extension-weather
-# simon 軟體的繁體中文翻譯.
+# greek translation for gnome-shell-extension-weather
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
-# bill <bill_zt@sina.com>, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
+"Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-22 16:54+0200\n"
-"PO-Revision-Date: 2012-05-13 22:41+0100\n"
-"Last-Translator: Anton Yu <anton.tw@gmail.com>\n"
-"Language-Team: Chinese (Traditional)\n"
-"Language: zh_TW\n"
+"PO-Revision-Date: 2013-01-28 22:38+0100\n"
+"Last-Translator: Dancer69\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
 #: ../src/extension.js:247 ../src/extension.js:550
 #, fuzzy
 msgid "Weather"
-msgstr "氣象設定"
+msgstr "Ρυθμίσεις Καιρού"
 
 #: ../src/extension.js:225
 msgid "No location configured"
@@ -30,52 +28,52 @@ msgstr ""
 #: ../src/extension.js:233
 #, fuzzy
 msgid "Loading weather"
-msgstr "正在載入天氣預報 ..."
+msgstr "Φόρτωση μελλοντικής πρόγνωσης..."
 
 #: ../src/extension.js:249
 #, fuzzy
 msgid "Weather extension ready"
-msgstr "氣象設定"
+msgstr "Ρυθμίσεις Καιρού"
 
 #: ../src/extension.js:439
 msgid "Today"
-msgstr "今天"
+msgstr "Σήμερα"
 
 #: ../src/extension.js:445
 msgid "Tomorrow"
-msgstr "明天"
+msgstr "Αύριο"
 
 #: ../src/extension.js:451
 msgid "Yesterday"
-msgstr "昨天"
+msgstr "Χθες"
 
 #: ../src/extension.js:613
 msgid "Locations"
-msgstr ""
+msgstr "Τοποθεσίες"
 
 #: ../src/extension.js:617
 #, fuzzy
 msgid "Reload Weather Information"
-msgstr "重新載入氣象資訊"
+msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
 
 #: ../src/extension.js:622
 msgid "Weather Settings"
-msgstr "氣象設定"
+msgstr "Ρυθμίσεις Καιρού"
 
 #: ../src/extension.js:785
 #, fuzzy
 msgid "No weather information"
-msgstr "重新載入氣象資訊"
+msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
 
 #: ../src/extension.js:787
 #, fuzzy, python-format
 msgid "No weather information for %s"
-msgstr "重新載入氣象資訊"
+msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
 
 #: ../src/extension.js:872
 #, fuzzy
 msgid "Feels like"
-msgstr "感覺像"
+msgstr "Μοιάζει σαν:"
 
 #: ../src/extension.js:874
 msgid "Visibility"
@@ -84,22 +82,22 @@ msgstr ""
 #: ../src/extension.js:876
 #, fuzzy
 msgid "Humidity"
-msgstr "濕度："
+msgstr "Υγρασία:"
 
 #: ../src/extension.js:878
 #, fuzzy
 msgid "Pressure"
-msgstr "氣壓："
+msgstr "Πίεση:"
 
 #: ../src/extension.js:880
 #, fuzzy
 msgid "Wind"
-msgstr "風力："
+msgstr "Άνεμος:"
 
 #: ../src/extension.js:900
 #, fuzzy
 msgid "No forecast information"
-msgstr "重新載入氣象資訊"
+msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
 
 #: ../src/extension.js:1038
 #, python-format
@@ -126,67 +124,75 @@ msgstr ""
 
 #: ../src/extension.js:1072
 msgid "N"
-msgstr ""
+msgstr "Β"
 
 #: ../src/extension.js:1072
+#, fuzzy
 msgid "NNE"
-msgstr ""
+msgstr "ΒΑ"
 
 #: ../src/extension.js:1072
 msgid "NE"
-msgstr ""
+msgstr "ΒΑ"
 
 #: ../src/extension.js:1072
+#, fuzzy
 msgid "ENE"
-msgstr ""
+msgstr "ΒΑ"
 
 #: ../src/extension.js:1072
 msgid "E"
-msgstr ""
+msgstr "Α"
 
 #: ../src/extension.js:1072
+#, fuzzy
 msgid "ESE"
-msgstr ""
+msgstr "ΝΑ"
 
 #: ../src/extension.js:1072
 msgid "SE"
-msgstr ""
+msgstr "ΝΑ"
 
 #: ../src/extension.js:1072
+#, fuzzy
 msgid "SSE"
-msgstr ""
+msgstr "ΝΑ"
 
 #: ../src/extension.js:1073
 msgid "S"
-msgstr ""
+msgstr "Ν"
 
 #: ../src/extension.js:1073
+#, fuzzy
 msgid "SSW"
-msgstr ""
+msgstr "ΝΔ"
 
 #: ../src/extension.js:1073
 msgid "SW"
-msgstr ""
+msgstr "ΝΔ"
 
 #: ../src/extension.js:1073
+#, fuzzy
 msgid "WSW"
-msgstr ""
+msgstr "ΝΔ"
 
 #: ../src/extension.js:1073
 msgid "W"
-msgstr ""
+msgstr "Δ"
 
 #: ../src/extension.js:1073
+#, fuzzy
 msgid "WNW"
-msgstr ""
+msgstr "ΒΔ"
 
 #: ../src/extension.js:1073
 msgid "NW"
-msgstr ""
+msgstr "ΒΔ"
 
 #: ../src/extension.js:1073
+#, fuzzy
 msgid "NNW"
-msgstr ""
+msgstr "ΒΔ"
 
 #: ../src/extension.js:1083
 msgid "$d$s knots"
@@ -210,16 +216,16 @@ msgstr ""
 
 #: ../src/prefs.js:144
 msgid "Temperature Unit"
-msgstr "溫度："
+msgstr "Μονάδα Θερμοκρασίας"
 
 #: ../src/prefs.js:146
 msgid "Wind Speed Unit"
-msgstr "風速單位"
+msgstr "Ταχύτητα Ανέμου"
 
 #: ../src/prefs.js:148
 #, fuzzy
 msgid "Pressure Unit"
-msgstr "氣壓："
+msgstr "Μονάδα Πίεσης"
 
 #: ../src/prefs.js:150
 msgid "Distance Unit"
@@ -227,35 +233,35 @@ msgstr ""
 
 #: ../src/prefs.js:152
 msgid "Position in Panel"
-msgstr ""
+msgstr "Θέση στον Πίνακα"
 
 #: ../src/prefs.js:153
 msgid "Center"
-msgstr "中心"
+msgstr "Κέντρο"
 
 #: ../src/prefs.js:153
 msgid "Right"
-msgstr "右"
+msgstr "Δεξιά"
 
 #: ../src/prefs.js:153
 msgid "Left"
-msgstr "左"
+msgstr "Αριστερά"
 
 #: ../src/prefs.js:154
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "Κατεύθυνση Ανέμου με Βέλη"
 
 #: ../src/prefs.js:156
 msgid "Symbolic Icons"
-msgstr ""
+msgstr "Εικονίδια Συμβόλων"
 
 #: ../src/prefs.js:158
 msgid "Temperature in Panel"
-msgstr "溫度："
+msgstr "Θερμοκρασία στον Πίνακα"
 
 #: ../src/prefs.js:160
 msgid "Conditions in Panel"
-msgstr ""
+msgstr "Συνθήκες στον πίνακα"
 
 #: ../src/prefs.js:162
 msgid "Debug the extension"
@@ -263,178 +269,219 @@ msgstr ""
 
 #: ../src/prefs.js:320
 msgid "Name of the city"
-msgstr "城市名"
+msgstr "Όνομα πόλης"
 
 #: ../src/prefs.js:378
 #, python-format
 msgid "Remove %s ?"
-msgstr "移除 %s"
+msgstr "Αφαίρεση %s ;"
 
 #~ msgid "Please wait"
-#~ msgstr "請稍候"
+#~ msgstr "Παρακαλώ περιμένετε"
 
 #~ msgid "Loading ..."
-#~ msgstr "載入中 ..."
+#~ msgstr "Φόρτωση..."
 
 #~ msgid "Invalid city"
-#~ msgstr "無效的城市代碼"
+#~ msgstr "Μη έγκυρη πόλη"
 
 #~ msgid "..."
 #~ msgstr "..."
 
+#~ msgid "Schema \"%s\" not found."
+#~ msgstr "Το Σχήμα \"%s\" δε βρέθηκε"
+
 #~ msgid "Tornado"
-#~ msgstr "龍捲風"
+#~ msgstr "Τυφώνας"
 
 #~ msgid "Tropical storm"
-#~ msgstr "熱帶暴氣"
+#~ msgstr "Τροπική καταιγίδα"
 
 #~ msgid "Hurricane"
-#~ msgstr "熱帶氣旋"
+#~ msgstr "Θύελλα"
 
 #~ msgid "Severe thunderstorms"
-#~ msgstr "雷暴"
+#~ msgstr "Σοβαρές καταιγίδες"
 
 #~ msgid "Thunderstorms"
-#~ msgstr "雷陣雨"
+#~ msgstr "Καταιγίδες"
 
 #~ msgid "Mixed rain and snow"
-#~ msgstr "雨帶雪"
+#~ msgstr "Μικτή βροχή και χιόνι"
 
 #~ msgid "Mixed rain and sleet"
-#~ msgstr "雨帶雪"
+#~ msgstr "Μικτή βροχή και χιονόνερο"
 
 #~ msgid "Mixed snow and sleet"
-#~ msgstr "雨帶雪"
+#~ msgstr "Μικτό χιόνι και χιονόνερο"
 
 #~ msgid "Freezing drizzle"
-#~ msgstr "凍雨"
+#~ msgstr "Παγωμένο ψιλόβοροχο"
 
 #~ msgid "Drizzle"
-#~ msgstr "小雨"
+#~ msgstr "Ψιλόβροχο"
 
 #~ msgid "Freezing rain"
-#~ msgstr "冷死人的雨"
+#~ msgstr "Παγωμένη βροχή"
 
 #~ msgid "Showers"
-#~ msgstr "陣雨"
+#~ msgstr "Μπόρες"
 
 #~ msgid "Snow flurries"
-#~ msgstr "陣雪"
+#~ msgstr "Χιονοπτώσεις"
 
 #~ msgid "Light snow showers"
-#~ msgstr "小雪"
+#~ msgstr "Ελαφρί χιόνι και μπόρες"
 
 #~ msgid "Blowing snow"
-#~ msgstr "暴雪"
+#~ msgstr "Ανεμοχιόνι"
 
 #~ msgid "Snow"
-#~ msgstr "雪"
+#~ msgstr "Χιόνι"
 
 #~ msgid "Hail"
-#~ msgstr "冰雹"
+#~ msgstr "Χαλάζι"
 
 #~ msgid "Sleet"
-#~ msgstr "雨帶雪"
+#~ msgstr "Χιονόνερο"
 
 #~ msgid "Dust"
-#~ msgstr "沙塵暴"
+#~ msgstr "Σκόνη"
 
 #~ msgid "Foggy"
-#~ msgstr "霧"
+#~ msgstr "Ομιχλώδης"
 
 #~ msgid "Haze"
-#~ msgstr "霾"
+#~ msgstr "Καταχνιά"
 
 #~ msgid "Smoky"
-#~ msgstr "烟雾"
+#~ msgstr "Καπνώδης"
 
 #~ msgid "Blustery"
-#~ msgstr "大風"
+#~ msgstr "Δυνατοί άνεμοι"
 
 #~ msgid "Windy"
-#~ msgstr "刮風"
+#~ msgstr "Ανεμώδης"
 
 #~ msgid "Cold"
-#~ msgstr "冷"
+#~ msgstr "Κρύο"
 
 #~ msgid "Cloudy"
-#~ msgstr "多雲"
+#~ msgstr "Νεφελώδης"
 
 #~ msgid "Mostly cloudy"
-#~ msgstr "多雲"
+#~ msgstr "Κυρίως νεφελώδης"
 
 #~ msgid "Partly cloudy"
-#~ msgstr "晴時多雲 "
+#~ msgstr "Μερικώς νεφελώδης"
 
 #~ msgid "Clear"
-#~ msgstr "晴"
+#~ msgstr "Καθαρός"
 
 #~ msgid "Sunny"
-#~ msgstr "晴"
+#~ msgstr "Ηλιόλουστος"
 
 #~ msgid "Fair"
-#~ msgstr "晴"
+#~ msgstr "Καλός"
 
 #~ msgid "Mixed rain and hail"
-#~ msgstr "冰雹"
+#~ msgstr "Μικτή βροχή και χαλάζι"
 
 #~ msgid "Hot"
-#~ msgstr "炎热"
+#~ msgstr "Καύσωνας"
 
 #~ msgid "Isolated thunderstorms"
-#~ msgstr "局部雷陣雨"
+#~ msgstr "Μεμονωμένες καταιγίδες"
 
 #~ msgid "Scattered thunderstorms"
-#~ msgstr "零星雷陣雨"
+#~ msgstr "Σποραδικές καταιγίδες"
 
 #~ msgid "Scattered showers"
-#~ msgstr "零星小雪"
+#~ msgstr "Σποραδικές μπόρες"
 
 #~ msgid "Heavy snow"
-#~ msgstr "大雪"
+#~ msgstr "Δυνατό χιόνι"
 
 #~ msgid "Scattered snow showers"
-#~ msgstr "零星陣雪"
+#~ msgstr "Σποραδικές χιονοβροχές"
 
 #~ msgid "Thundershowers"
-#~ msgstr "雷陣雨"
+#~ msgstr "Καταιγίδες"
 
 #~ msgid "Snow showers"
-#~ msgstr "陣雪"
+#~ msgstr "Χιονοβροχές"
 
 #~ msgid "Isolated thundershowers"
-#~ msgstr "局部雷陣雨"
+#~ msgstr "Μεμονωμένες καταιγίδες"
 
 #~ msgid "Not available"
-#~ msgstr "無法使用"
+#~ msgstr "Μη διαθέσιμο"
+
+#~ msgid "Calm"
+#~ msgstr "Ήρεμος"
+
+#~ msgid "Light air"
+#~ msgstr "Ελαφριά αύρα"
+
+#~ msgid "Light breeze"
+#~ msgstr "Ελαφρύ αεράκι"
+
+#~ msgid "Gentle breeze"
+#~ msgstr "Ήρεμο αεράκι"
+
+#~ msgid "Moderate breeze"
+#~ msgstr "Μέτριο αεράκι"
+
+#~ msgid "Fresh breeze"
+#~ msgstr "Δροσερό αεράκι"
+
+#~ msgid "Strong breeze"
+#~ msgstr "Δυνατό αεράκι"
+
+#~ msgid "Moderate gale"
+#~ msgstr "Μέτρια ανεμοθύελλα"
+
+#~ msgid "Fresh gale"
+#~ msgstr "Δροσερή ανεμοθύελλα"
+
+#~ msgid "Strong gale"
+#~ msgstr "Δυνατή ανεμοθύελα"
+
+#~ msgid "Storm"
+#~ msgstr "Καταιγίδα"
+
+#~ msgid "Violent storm"
+#~ msgstr "Βίαια καταιγίδα"
 
 #~ msgid "Sunday"
-#~ msgstr "星期日"
+#~ msgstr "Κυριακή"
 
 #~ msgid "Monday"
-#~ msgstr "星期一"
+#~ msgstr "Δευτέρα"
 
 #~ msgid "Tuesday"
-#~ msgstr "星期二"
+#~ msgstr "Τρίτη"
 
 #~ msgid "Wednesday"
-#~ msgstr "星期三"
+#~ msgstr "Τετάρτη"
 
 #~ msgid "Thursday"
-#~ msgstr "星期四"
+#~ msgstr "Πέμπτη"
 
 #~ msgid "Friday"
-#~ msgstr "星期五"
+#~ msgstr "Παρασκευή"
 
 #~ msgid "Saturday"
-#~ msgstr "星期六"
+#~ msgstr "Σάββατο"
 
 #~ msgid "%s days ago"
-#~ msgstr "%s 天以前"
+#~ msgstr "εδώ και %s μέρες"
 
-#, fuzzy
 #~ msgid "In %s days"
-#~ msgstr "%s 天以前"
+#~ msgstr "Σε %s μέρες"
 
 #~ msgid "Loading current weather ..."
-#~ msgstr "正在載入即時天氣 ..."
+#~ msgstr "Φόρτωση τρέχουσας πρόγνωσης..."
+
+#~ msgid "Translate Conditions"
+#~ msgstr "Μετάφραση Καιρικών Συνθηκών"

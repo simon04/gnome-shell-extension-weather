@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-26 04:15+0100\n"
+"POT-Creation-Date: 2013-07-22 16:54+0200\n"
 "PO-Revision-Date: 2012-06-17 17:04+0700\n"
 "Last-Translator: Ngô Trung <ndtrung4419@gmail.com>\n"
 "Language-Team: \n"
@@ -17,419 +17,441 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/extension.js:125
-msgid "..."
-msgstr "..."
-
-#: ../src/extension.js:205
-msgid "Locations"
-msgstr ""
-
-#: ../src/extension.js:209
-msgid "Reload Weather Information"
-msgstr "Tải lại dữ liệu thời tiết"
-
-#: ../src/extension.js:213 ../src/weather-settings.js.in:655
-msgid "Weather Settings"
+#: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
+#: ../src/extension.js:247 ../src/extension.js:550
+#, fuzzy
+msgid "Weather"
 msgstr "Thiết lập thời tiết"
 
-#: ../src/extension.js:233 ../src/extension.js:243
-#: ../src/weather-settings.js.in:329
-#, python-format
-msgid "Schema \"%s\" not found."
-msgstr "Không tìm thấy schema \"%s\"."
-
-#: ../src/extension.js:522 ../src/weather-settings.js.in:539
-msgid "Invalid city"
-msgstr "Không có thành phố này"
-
-#: ../src/extension.js:736
-msgid "Tornado"
-msgstr "Lốc xoáy"
-
-#: ../src/extension.js:738
-msgid "Tropical storm"
-msgstr "Bão nhiệt đới"
-
-#: ../src/extension.js:740 ../src/extension.js:900
-msgid "Hurricane"
-msgstr "Cuồng phong"
-
-#: ../src/extension.js:742
-msgid "Severe thunderstorms"
-msgstr "Giông nguy hiểm"
-
-#: ../src/extension.js:744
-msgid "Thunderstorms"
-msgstr "Giông"
-
-#: ../src/extension.js:746
-msgid "Mixed rain and snow"
-msgstr "Mưa và tuyết"
-
-#: ../src/extension.js:748
-msgid "Mixed rain and sleet"
-msgstr "Mưa và mưa tuyết"
-
-#: ../src/extension.js:750
-msgid "Mixed snow and sleet"
-msgstr "Tuyết và mưa tuyết"
-
-#: ../src/extension.js:752
-msgid "Freezing drizzle"
-msgstr "Mưa phùn rét"
-
-#: ../src/extension.js:754
-msgid "Drizzle"
-msgstr "Mưa phùn"
-
-#: ../src/extension.js:756
-msgid "Freezing rain"
-msgstr "Mưa rét"
-
-#: ../src/extension.js:758 ../src/extension.js:760
-msgid "Showers"
-msgstr "Mưa rào"
-
-#: ../src/extension.js:762
-msgid "Snow flurries"
-msgstr "Tuyết bất chợt"
-
-#: ../src/extension.js:764
-msgid "Light snow showers"
-msgstr "Tuyết rào nhẹ"
-
-#: ../src/extension.js:766
-msgid "Blowing snow"
-msgstr "Gió tuyết"
-
-#: ../src/extension.js:768
-msgid "Snow"
-msgstr "Tuyết"
-
-#: ../src/extension.js:770
-msgid "Hail"
-msgstr "Mưa đá"
-
-#: ../src/extension.js:772
-msgid "Sleet"
-msgstr "Mưa tuyết"
-
-#: ../src/extension.js:774
-msgid "Dust"
-msgstr "Bụi mù"
-
-#: ../src/extension.js:776
-msgid "Foggy"
-msgstr "Sương mù"
-
-#: ../src/extension.js:778
-msgid "Haze"
-msgstr "Bụi mù"
-
-#: ../src/extension.js:780
-msgid "Smoky"
-msgstr "Khói mù"
-
-#: ../src/extension.js:782
-msgid "Blustery"
-msgstr "Gió dữ dội"
-
-#: ../src/extension.js:784
-msgid "Windy"
-msgstr "Gió"
-
-#: ../src/extension.js:786
-msgid "Cold"
-msgstr "Lạnh"
-
-#: ../src/extension.js:788
-msgid "Cloudy"
-msgstr "Mây mù"
-
-#: ../src/extension.js:791
-msgid "Mostly cloudy"
-msgstr "Nhiều mây"
-
-#: ../src/extension.js:794 ../src/extension.js:820
-msgid "Partly cloudy"
-msgstr "Ít mây"
-
-#: ../src/extension.js:796
-msgid "Clear"
-msgstr "Trời trong"
-
-#: ../src/extension.js:798
-msgid "Sunny"
-msgstr "Nắng"
-
-#: ../src/extension.js:801
-msgid "Fair"
-msgstr "Bình thường"
-
-#: ../src/extension.js:803
-msgid "Mixed rain and hail"
-msgstr "Mưa và mưa đá"
-
-#: ../src/extension.js:805
-msgid "Hot"
-msgstr "Nóng"
-
-#: ../src/extension.js:807
-msgid "Isolated thunderstorms"
-msgstr "Giông diện hẹp"
-
-#: ../src/extension.js:810
-msgid "Scattered thunderstorms"
-msgstr "Giông rải rác"
-
-#: ../src/extension.js:812
-msgid "Scattered showers"
-msgstr "Mưa rào rải rác"
-
-#: ../src/extension.js:814 ../src/extension.js:818
-msgid "Heavy snow"
-msgstr "Tuyết mạnh"
-
-#: ../src/extension.js:816
-msgid "Scattered snow showers"
-msgstr "Mưa tuyết rải rác"
-
-#: ../src/extension.js:822
-msgid "Thundershowers"
-msgstr "Mưa rào có sấm"
-
-#: ../src/extension.js:824
-msgid "Snow showers"
-msgstr "Mưa tuyết rào"
-
-#: ../src/extension.js:826
-msgid "Isolated thundershowers"
-msgstr "Mưa rào rải rác"
-
-#: ../src/extension.js:829
-msgid "Not available"
-msgstr "Không có dữ liệu"
-
-#: ../src/extension.js:876
-msgid "Calm"
+#: ../src/extension.js:225
+msgid "No location configured"
 msgstr ""
 
-#: ../src/extension.js:878
-msgid "Light air"
-msgstr ""
+#: ../src/extension.js:233
+#, fuzzy
+msgid "Loading weather"
+msgstr "Đang tải dữ liệu dự báo thời tiết..."
 
-#: ../src/extension.js:880
-msgid "Light breeze"
-msgstr ""
+#: ../src/extension.js:249
+#, fuzzy
+msgid "Weather extension ready"
+msgstr "Thiết lập thời tiết"
 
-#: ../src/extension.js:882
-msgid "Gentle breeze"
-msgstr ""
-
-#: ../src/extension.js:884
-msgid "Moderate breeze"
-msgstr ""
-
-#: ../src/extension.js:886
-msgid "Fresh breeze"
-msgstr ""
-
-#: ../src/extension.js:888
-msgid "Strong breeze"
-msgstr ""
-
-#: ../src/extension.js:890
-msgid "Moderate gale"
-msgstr ""
-
-#: ../src/extension.js:892
-msgid "Fresh gale"
-msgstr ""
-
-#: ../src/extension.js:894
-msgid "Strong gale"
-msgstr ""
-
-#: ../src/extension.js:896
-msgid "Storm"
-msgstr ""
-
-#: ../src/extension.js:898
-msgid "Violent storm"
-msgstr ""
-
-#: ../src/extension.js:905
-msgid "Sunday"
-msgstr "Chủ Nhật"
-
-#: ../src/extension.js:905
-msgid "Monday"
-msgstr "Thứ hai"
-
-#: ../src/extension.js:905
-msgid "Tuesday"
-msgstr "Thứ ba"
-
-#: ../src/extension.js:905
-msgid "Wednesday"
-msgstr "Thứ tư"
-
-#: ../src/extension.js:905
-msgid "Thursday"
-msgstr "Thứ năm"
-
-#: ../src/extension.js:905
-msgid "Friday"
-msgstr "Thứ sáu"
-
-#: ../src/extension.js:905
-msgid "Saturday"
-msgstr "Thứ bảy"
-
-#: ../src/extension.js:912
-msgid "N"
-msgstr "B"
-
-#: ../src/extension.js:912
-msgid "NE"
-msgstr "ĐB"
-
-#: ../src/extension.js:912
-msgid "E"
-msgstr "Đ"
-
-#: ../src/extension.js:912
-msgid "SE"
-msgstr "ĐN"
-
-#: ../src/extension.js:912
-msgid "S"
-msgstr "N"
-
-#: ../src/extension.js:912
-msgid "SW"
-msgstr "TN"
-
-#: ../src/extension.js:912
-msgid "W"
-msgstr "T"
-
-#: ../src/extension.js:912
-msgid "NW"
-msgstr "TB"
-
-#: ../src/extension.js:1190 ../src/extension.js:1319
-msgid "Yesterday"
-msgstr "Hôm qua"
-
-#: ../src/extension.js:1192 ../src/extension.js:1321
-#, python-format
-msgid "%s days ago"
-msgstr "%s ngày trước"
-
-#: ../src/extension.js:1313
+#: ../src/extension.js:439
 msgid "Today"
 msgstr "Hôm nay"
 
-#: ../src/extension.js:1315
+#: ../src/extension.js:445
 msgid "Tomorrow"
 msgstr "Ngày mai"
 
-#: ../src/extension.js:1317
+#: ../src/extension.js:451
+msgid "Yesterday"
+msgstr "Hôm qua"
+
+#: ../src/extension.js:613
+msgid "Locations"
+msgstr ""
+
+#: ../src/extension.js:617
+#, fuzzy
+msgid "Reload Weather Information"
+msgstr "Tải lại dữ liệu thời tiết"
+
+#: ../src/extension.js:622
+msgid "Weather Settings"
+msgstr "Thiết lập thời tiết"
+
+#: ../src/extension.js:785
+#, fuzzy
+msgid "No weather information"
+msgstr "Tải lại dữ liệu thời tiết"
+
+#: ../src/extension.js:787
 #, fuzzy, python-format
-msgid "In %s days"
-msgstr "%s ngày trước"
+msgid "No weather information for %s"
+msgstr "Tải lại dữ liệu thời tiết"
 
-#: ../src/extension.js:1352
-msgid "Loading current weather ..."
-msgstr "Đang tải dữ liệu thời tiết hiện tại..."
-
-#: ../src/extension.js:1353
-msgid "Loading future weather ..."
-msgstr "Đang tải dữ liệu dự báo thời tiết..."
-
-#: ../src/extension.js:1386
-msgid "Loading ..."
-msgstr "Đang tải..."
-
-#: ../src/extension.js:1389
-msgid "Please wait"
-msgstr "Xin đợi một lát"
-
-#: ../src/extension.js:1434
-msgid "Feel like:"
+#: ../src/extension.js:872
+#, fuzzy
+msgid "Feels like"
 msgstr "Cảm giác ngoài trời:"
 
-#: ../src/extension.js:1436
-msgid "Humidity:"
+#: ../src/extension.js:874
+msgid "Visibility"
+msgstr ""
+
+#: ../src/extension.js:876
+#, fuzzy
+msgid "Humidity"
 msgstr "Độ ẩm:"
 
-#: ../src/extension.js:1438
-msgid "Pressure:"
+#: ../src/extension.js:878
+#, fuzzy
+msgid "Pressure"
 msgstr "Áp suất:"
 
-#: ../src/extension.js:1440
-msgid "Wind:"
+#: ../src/extension.js:880
+#, fuzzy
+msgid "Wind"
 msgstr "Gió:"
 
-#: ../src/weather-settings.js.in:73
-msgid "Name of the city"
-msgstr "Tên thành phố"
+#: ../src/extension.js:900
+#, fuzzy
+msgid "No forecast information"
+msgstr "Tải lại dữ liệu thời tiết"
 
-#: ../src/weather-settings.js.in:235
+#: ../src/extension.js:1038
 #, python-format
-msgid "Remove %s ?"
-msgstr "Bạn có muốn xóa %s?"
+msgid "%s °F"
+msgstr ""
 
-#: ../src/weather-settings.js.in:693
+#: ../src/extension.js:1042
+#, python-format
+msgid "%s °C"
+msgstr ""
+
+#: ../src/extension.js:1046
+#, python-format
+msgid "%s K"
+msgstr ""
+
+#: ../src/extension.js:1052 ../src/extension.js:1105
+msgid "Unknown"
+msgstr ""
+
+#: ../src/extension.js:1069 ../src/extension.js:1072
+msgid "VAR"
+msgstr ""
+
+#: ../src/extension.js:1072
+msgid "N"
+msgstr "B"
+
+#: ../src/extension.js:1072
+#, fuzzy
+msgid "NNE"
+msgstr "ĐB"
+
+#: ../src/extension.js:1072
+msgid "NE"
+msgstr "ĐB"
+
+#: ../src/extension.js:1072
+#, fuzzy
+msgid "ENE"
+msgstr "ĐB"
+
+#: ../src/extension.js:1072
+msgid "E"
+msgstr "Đ"
+
+#: ../src/extension.js:1072
+#, fuzzy
+msgid "ESE"
+msgstr "ĐN"
+
+#: ../src/extension.js:1072
+msgid "SE"
+msgstr "ĐN"
+
+#: ../src/extension.js:1072
+#, fuzzy
+msgid "SSE"
+msgstr "ĐN"
+
+#: ../src/extension.js:1073
+msgid "S"
+msgstr "N"
+
+#: ../src/extension.js:1073
+#, fuzzy
+msgid "SSW"
+msgstr "TN"
+
+#: ../src/extension.js:1073
+msgid "SW"
+msgstr "TN"
+
+#: ../src/extension.js:1073
+#, fuzzy
+msgid "WSW"
+msgstr "TN"
+
+#: ../src/extension.js:1073
+msgid "W"
+msgstr "T"
+
+#: ../src/extension.js:1073
+#, fuzzy
+msgid "WNW"
+msgstr "TB"
+
+#: ../src/extension.js:1073
+msgid "NW"
+msgstr "TB"
+
+#: ../src/extension.js:1073
+#, fuzzy
+msgid "NNW"
+msgstr "TB"
+
+#: ../src/extension.js:1083
+msgid "$d$s knots"
+msgstr ""
+
+#: ../src/extension.js:1087
+msgid "$d$s mph"
+msgstr ""
+
+#: ../src/extension.js:1091
+msgid "$d$s km/h"
+msgstr ""
+
+#: ../src/extension.js:1095
+msgid "$d$s m/s"
+msgstr ""
+
+#: ../src/extension.js:1099
+msgid "$dBeaufort $s"
+msgstr ""
+
+#: ../src/prefs.js:144
 msgid "Temperature Unit"
 msgstr "Đơn vị đo nhiệt độ"
 
-#: ../src/weather-settings.js.in:695
+#: ../src/prefs.js:146
 msgid "Wind Speed Unit"
 msgstr "Đơn vị tốc độ gió"
 
-#: ../src/weather-settings.js.in:697
+#: ../src/prefs.js:148
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Áp suất:"
 
-#: ../src/weather-settings.js.in:699
+#: ../src/prefs.js:150
+msgid "Distance Unit"
+msgstr ""
+
+#: ../src/prefs.js:152
 msgid "Position in Panel"
 msgstr "Vị trí trên thanh pa-nen"
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:153
 msgid "Center"
 msgstr "Ở giữa"
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:153
 msgid "Right"
 msgstr "Bên phải"
 
-#: ../src/weather-settings.js.in:700
+#: ../src/prefs.js:153
 msgid "Left"
 msgstr "Bên trái"
 
-#: ../src/weather-settings.js.in:701
+#: ../src/prefs.js:154
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/weather-settings.js.in:703
-msgid "Translate Conditions"
-msgstr "Dịch tình hình thời tiết"
-
-#: ../src/weather-settings.js.in:705
+#: ../src/prefs.js:156
 msgid "Symbolic Icons"
 msgstr "Biểu tượng đơn giản"
 
-#: ../src/weather-settings.js.in:707
+#: ../src/prefs.js:158
 msgid "Temperature in Panel"
 msgstr "Hiện nhiệt độ trên pa-nen"
 
-#: ../src/weather-settings.js.in:709
+#: ../src/prefs.js:160
 msgid "Conditions in Panel"
 msgstr "Hiện thời tiết trên pa-nen"
+
+#: ../src/prefs.js:162
+msgid "Debug the extension"
+msgstr ""
+
+#: ../src/prefs.js:320
+msgid "Name of the city"
+msgstr "Tên thành phố"
+
+#: ../src/prefs.js:378
+#, python-format
+msgid "Remove %s ?"
+msgstr "Bạn có muốn xóa %s?"
+
+#~ msgid "Please wait"
+#~ msgstr "Xin đợi một lát"
+
+#~ msgid "Loading ..."
+#~ msgstr "Đang tải..."
+
+#~ msgid "Invalid city"
+#~ msgstr "Không có thành phố này"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Schema \"%s\" not found."
+#~ msgstr "Không tìm thấy schema \"%s\"."
+
+#~ msgid "Tornado"
+#~ msgstr "Lốc xoáy"
+
+#~ msgid "Tropical storm"
+#~ msgstr "Bão nhiệt đới"
+
+#~ msgid "Hurricane"
+#~ msgstr "Cuồng phong"
+
+#~ msgid "Severe thunderstorms"
+#~ msgstr "Giông nguy hiểm"
+
+#~ msgid "Thunderstorms"
+#~ msgstr "Giông"
+
+#~ msgid "Mixed rain and snow"
+#~ msgstr "Mưa và tuyết"
+
+#~ msgid "Mixed rain and sleet"
+#~ msgstr "Mưa và mưa tuyết"
+
+#~ msgid "Mixed snow and sleet"
+#~ msgstr "Tuyết và mưa tuyết"
+
+#~ msgid "Freezing drizzle"
+#~ msgstr "Mưa phùn rét"
+
+#~ msgid "Drizzle"
+#~ msgstr "Mưa phùn"
+
+#~ msgid "Freezing rain"
+#~ msgstr "Mưa rét"
+
+#~ msgid "Showers"
+#~ msgstr "Mưa rào"
+
+#~ msgid "Snow flurries"
+#~ msgstr "Tuyết bất chợt"
+
+#~ msgid "Light snow showers"
+#~ msgstr "Tuyết rào nhẹ"
+
+#~ msgid "Blowing snow"
+#~ msgstr "Gió tuyết"
+
+#~ msgid "Snow"
+#~ msgstr "Tuyết"
+
+#~ msgid "Hail"
+#~ msgstr "Mưa đá"
+
+#~ msgid "Sleet"
+#~ msgstr "Mưa tuyết"
+
+#~ msgid "Dust"
+#~ msgstr "Bụi mù"
+
+#~ msgid "Foggy"
+#~ msgstr "Sương mù"
+
+#~ msgid "Haze"
+#~ msgstr "Bụi mù"
+
+#~ msgid "Smoky"
+#~ msgstr "Khói mù"
+
+#~ msgid "Blustery"
+#~ msgstr "Gió dữ dội"
+
+#~ msgid "Windy"
+#~ msgstr "Gió"
+
+#~ msgid "Cold"
+#~ msgstr "Lạnh"
+
+#~ msgid "Cloudy"
+#~ msgstr "Mây mù"
+
+#~ msgid "Mostly cloudy"
+#~ msgstr "Nhiều mây"
+
+#~ msgid "Partly cloudy"
+#~ msgstr "Ít mây"
+
+#~ msgid "Clear"
+#~ msgstr "Trời trong"
+
+#~ msgid "Sunny"
+#~ msgstr "Nắng"
+
+#~ msgid "Fair"
+#~ msgstr "Bình thường"
+
+#~ msgid "Mixed rain and hail"
+#~ msgstr "Mưa và mưa đá"
+
+#~ msgid "Hot"
+#~ msgstr "Nóng"
+
+#~ msgid "Isolated thunderstorms"
+#~ msgstr "Giông diện hẹp"
+
+#~ msgid "Scattered thunderstorms"
+#~ msgstr "Giông rải rác"
+
+#~ msgid "Scattered showers"
+#~ msgstr "Mưa rào rải rác"
+
+#~ msgid "Heavy snow"
+#~ msgstr "Tuyết mạnh"
+
+#~ msgid "Scattered snow showers"
+#~ msgstr "Mưa tuyết rải rác"
+
+#~ msgid "Thundershowers"
+#~ msgstr "Mưa rào có sấm"
+
+#~ msgid "Snow showers"
+#~ msgstr "Mưa tuyết rào"
+
+#~ msgid "Isolated thundershowers"
+#~ msgstr "Mưa rào rải rác"
+
+#~ msgid "Not available"
+#~ msgstr "Không có dữ liệu"
+
+#~ msgid "Sunday"
+#~ msgstr "Chủ Nhật"
+
+#~ msgid "Monday"
+#~ msgstr "Thứ hai"
+
+#~ msgid "Tuesday"
+#~ msgstr "Thứ ba"
+
+#~ msgid "Wednesday"
+#~ msgstr "Thứ tư"
+
+#~ msgid "Thursday"
+#~ msgstr "Thứ năm"
+
+#~ msgid "Friday"
+#~ msgstr "Thứ sáu"
+
+#~ msgid "Saturday"
+#~ msgstr "Thứ bảy"
+
+#~ msgid "%s days ago"
+#~ msgstr "%s ngày trước"
+
+#, fuzzy
+#~ msgid "In %s days"
+#~ msgstr "%s ngày trước"
+
+#~ msgid "Loading current weather ..."
+#~ msgstr "Đang tải dữ liệu thời tiết hiện tại..."
+
+#~ msgid "Translate Conditions"
+#~ msgstr "Dịch tình hình thời tiết"
 
 #~ msgid "Sunrise"
 #~ msgstr "Bình minh"

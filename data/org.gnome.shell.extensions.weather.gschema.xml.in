@@ -1,72 +1,21 @@
 <schemalist gettext-domain="gnome-shell-extension-weather">
-  <enum id="org.gnome.shell.extensions.weather.unit">
-    <value nick="celsius" value="0" />
-    <value nick="fahrenheit" value="1" />
-    <value nick="kelvin" value="2" />
-    <value nick="rankine" value="3" />
-    <value nick="reaumur" value="4" />
-    <value nick="roemer" value="5" />
-    <value nick="delisle" value="6" />
-    <value nick="newton" value="7" />
-  </enum>
-  <enum id="org.gnome.shell.extensions.weather.pressure-unit">
-    <value nick="hPa" value="0" />
-    <value nick="inHg" value="1" />
-    <value nick="bar" value="2" />
-    <value nick="Pa" value="3" />
-    <value nick="kPa" value="4" />
-    <value nick="atm" value="5" />
-    <value nick="at" value="6" />
-    <value nick="Torr" value="7" />
-    <value nick="psi" value="8" />
-  </enum>
-  <enum id="org.gnome.shell.extensions.weather.wind-speed-unit">
-    <value nick="kph" value="0" />
-    <value nick="mph" value="1" />
-    <value nick="m/s" value="2" />
-    <value nick="knots" value="3" />
-    <value nick="ft/s" value="4" />
-    <value nick="Beaufort" value="5" />
-  </enum>
-  <enum id="org.gnome.shell.extensions.weather.wind-dir-indicators">
-    <value nick="arrows" value="0" />
-    <value nick="letters" value="1" />
-  </enum>
   <enum id="org.gnome.shell.extensions.weather.position">
     <value nick="center" value="0" />
     <value nick="right" value="1" />
     <value nick="left" value="2"  />
   </enum>
+  <enum id="org.gnome.shell.extensions.weather.wind-dir-indicators">
+    <value nick="arrows" value="0" />
+    <value nick="letters" value="1" />
+  </enum>
   <schema id="org.gnome.shell.extensions.weather" path="/org/gnome/shell/extensions/weather/">
-    <key name="unit" enum="org.gnome.shell.extensions.weather.unit">
-      <default>'fahrenheit'</default>
-      <_summary>Temperature Unit</_summary>
-    </key>
-    <key name="pressure-unit" enum="org.gnome.shell.extensions.weather.pressure-unit">
-      <default>'inHg'</default>
-      <_summary>Pressure Unit</_summary>
-    </key>
-    <key name="wind-speed-unit" enum="org.gnome.shell.extensions.weather.wind-speed-unit">
-      <default>'mph'</default>
-      <_summary>Wind Speed Units</_summary>
-      <_description>Choose the units used for wind speed. Allowed values are 'kph', 'mph', 'm/s', 'knots', 'ft/s' or 'Beaufort'.</_description>
-    </key>
-    <key name="wind-direction" type="b">
-      <default>true</default>
-      <_summary>Wind Direction by Arrows</_summary>
-      <_description>Choose whether to display wind direction through arrows or letters.</_description>
-    </key>
-    <key name="city" type="s">
-      <default>'2373572>Cambridge, Massachusetts (US)'</default>
+    <key name="city" type="av">
+      <default>[]</default>
       <_summary>City to be displayed</_summary>
     </key>
     <key name="actual-city" type="i">
       <default>0</default>
       <_summary>Actual City</_summary>
-    </key>
-    <key name="translate-condition" type="b">
-      <default>true</default>
-      <_summary>Translate Conditions</_summary>
     </key>
     <key name="use-symbolic-icons" type="b">
       <default>true</default>
@@ -84,9 +33,14 @@
       <default>'center'</default>
       <_summary>Position in Panel</_summary>
     </key>
-    <key name="refresh-interval" type="i">
-      <default>300</default>
-      <_summary>Refresh interval</_summary>
+    <key name="wind-direction" type="b">
+      <default>true</default>
+      <_summary>Wind Direction by Arrows</_summary>
+      <_description>Choose whether to display wind direction through arrows or letters.</_description>
+    </key>
+    <key name="debug-extension" type="b">
+      <default>false</default>
+      <_summary>Debug the extension</_summary>
     </key>
   </schema>
 </schemalist>
