@@ -4,6 +4,7 @@
 # Simon Claessens <gagalago@gmail.com>, 2011.
 # ecyrbe <ecyrbe@gmail.com>, 2011.
 # Jesse Jaara <jesse.jaara@gmail.com>, 2011.
+# Marko Häiväläinen marko@scemosystems.fi, 2013
 #
 msgid ""
 msgstr ""
@@ -11,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-06-11 13:27-0400\n"
 "PO-Revision-Date: 2011-07-25 18:39+0300\n"
-"Last-Translator: Jesse Jaara <jesse.jaara@gmail.com>\n"
+"Last-Translator: Marko Häiväläinen <marko@scemosystems.fi>\n"
 "Language-Team: suomi <>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -25,15 +26,15 @@ msgstr "..."
 
 #: applet.js:201
 msgid "Click to open"
-msgstr ""
+msgstr "Klikkaa avataksesi"
 
 #: applet.js:420
 msgid "Sunrise"
-msgstr ""
+msgstr "Auringonnousu"
 
 #: applet.js:421
 msgid "Sunset"
-msgstr ""
+msgstr "Auringonlasku"
 
 #: applet.js:426
 msgid "Today"
@@ -141,7 +142,7 @@ msgstr "Lumisadetta"
 
 #: applet.js:799
 msgid "Hail"
-msgstr "Viima"
+msgstr "Rakeita"
 
 #: applet.js:801
 msgid "Sleet"
@@ -201,7 +202,7 @@ msgstr "Lämmintä"
 
 #: applet.js:832
 msgid "Mixed rain and hail"
-msgstr "Puhreja ja viimaa"
+msgstr "Vesisadetta ja rakeita"
 
 #: applet.js:834
 msgid "Hot"
@@ -273,32 +274,32 @@ msgstr "Sunnuntai"
 
 #: applet.js:868
 msgid "N"
-msgstr ""
+msgstr "Pohjoinen"
 
 #: applet.js:868
 msgid "NE"
-msgstr ""
+msgstr "Koillinen"
 
 #: applet.js:868
 msgid "E"
-msgstr ""
+msgstr "Itä"
 
 #: applet.js:868
 msgid "SE"
-msgstr ""
+msgstr "Kaakko"
 
 #: applet.js:868
 msgid "S"
-msgstr ""
+msgstr "Etelä"
 
 #: applet.js:868
 msgid "SW"
-msgstr ""
+msgstr "Lounas"
 
 #: applet.js:868
 msgid "W"
-msgstr ""
+msgstr "Länsi"
 
 #: applet.js:868
 msgid "NW"
-msgstr ""
+msgstr "Luode"
