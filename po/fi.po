@@ -198,7 +198,7 @@ msgstr "Selkeää"
 
 #: applet.js:841
 msgid "Sunny"
-msgstr "Aurinko paistaa"
+msgstr "Aurinkoista"
 
 #: applet.js:844
 msgid "Fair"
