@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # David Štancl <dstancl@dstancl.cz>, 2011.
 # Lukáš Maňas <lukas.manas@gmail.com>, 2012.
-# Petr Šimáček <petr.simacek@gmail.com>, 2013
+# Petr Šimáček <petr.simacek@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
