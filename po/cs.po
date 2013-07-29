@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # David Štancl <dstancl@dstancl.cz>, 2011.
 # Lukáš Maňas <lukas.manas@gmail.com>, 2012.
+# Petr Šimáček <petr.simacek@gmail.com>, 2013
 #
 msgid ""
 msgstr ""
@@ -21,21 +22,21 @@ msgstr ""
 #: ../src/extension.js:247 ../src/extension.js:550
 #, fuzzy
 msgid "Weather"
-msgstr "Nastavení"
+msgstr "Počasí"
 
 #: ../src/extension.js:225
 msgid "No location configured"
-msgstr ""
+msgstr "Nebylo nastaveno místo"
 
 #: ../src/extension.js:233
 #, fuzzy
 msgid "Loading weather"
-msgstr "Načítání předpovědi…"
+msgstr "Načítání počasí"
 
 #: ../src/extension.js:249
 #, fuzzy
 msgid "Weather extension ready"
-msgstr "Nastavení"
+msgstr "Rozšíření Počasí je připraveno"
 
 #: ../src/extension.js:439
 msgid "Today"
@@ -51,7 +52,7 @@ msgstr "Včera"
 
 #: ../src/extension.js:613
 msgid "Locations"
-msgstr ""
+msgstr "Místa"
 
 #: ../src/extension.js:617
 #, fuzzy
@@ -60,26 +61,26 @@ msgstr "Obnovit informace o počasí"
 
 #: ../src/extension.js:622
 msgid "Weather Settings"
-msgstr "Nastavení"
+msgstr "Nastavení rozšíření Počasí"
 
 #: ../src/extension.js:785
 #, fuzzy
 msgid "No weather information"
-msgstr "Obnovit informace o počasí"
+msgstr "Informace o počasí nejsou k dispozici"
 
 #: ../src/extension.js:787
 #, fuzzy, python-format
 msgid "No weather information for %s"
-msgstr "Obnovit informace o počasí"
+msgstr "Informace o počasí pro %s nejsou k dispozici"
 
 #: ../src/extension.js:872
 #, fuzzy
 msgid "Feels like"
-msgstr "Pocitově:"
+msgstr "Pocitově jako:"
 
 #: ../src/extension.js:874
 msgid "Visibility"
-msgstr ""
+msgstr "Viditelnost"
 
 #: ../src/extension.js:876
 #, fuzzy
@@ -89,124 +90,124 @@ msgstr "Vlhkost:"
 #: ../src/extension.js:878
 #, fuzzy
 msgid "Pressure"
-msgstr "Tlak:"
+msgstr "Tlak"
 
 #: ../src/extension.js:880
 #, fuzzy
 msgid "Wind"
-msgstr "Vítr:"
+msgstr "Vítr"
 
 #: ../src/extension.js:900
 #, fuzzy
 msgid "No forecast information"
-msgstr "Obnovit informace o počasí"
+msgstr "Předpověď počasí není k dispozici"
 
 #: ../src/extension.js:1038
 #, python-format
 msgid "%s °F"
-msgstr ""
+msgstr "%s °F"
 
 #: ../src/extension.js:1042
 #, python-format
 msgid "%s °C"
-msgstr ""
+msgstr "%s °C"
 
 #: ../src/extension.js:1046
 #, python-format
 msgid "%s K"
-msgstr ""
+msgstr "%s K"
 
 #: ../src/extension.js:1052 ../src/extension.js:1105
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámý"
 
 #: ../src/extension.js:1069 ../src/extension.js:1072
 msgid "VAR"
-msgstr ""
+msgstr "VAR"
 
 #: ../src/extension.js:1072
 msgid "N"
-msgstr ""
+msgstr "S"
 
 #: ../src/extension.js:1072
 msgid "NNE"
-msgstr ""
+msgstr "SSV"
 
 #: ../src/extension.js:1072
 msgid "NE"
-msgstr ""
+msgstr "SV"
 
 #: ../src/extension.js:1072
 msgid "ENE"
-msgstr ""
+msgstr "VSV"
 
 #: ../src/extension.js:1072
 msgid "E"
-msgstr ""
+msgstr "V"
 
 #: ../src/extension.js:1072
 msgid "ESE"
-msgstr ""
+msgstr "VJV"
 
 #: ../src/extension.js:1072
 msgid "SE"
-msgstr ""
+msgstr "JV"
 
 #: ../src/extension.js:1072
 msgid "SSE"
-msgstr ""
+msgstr "JJV"
 
 #: ../src/extension.js:1073
 msgid "S"
-msgstr ""
+msgstr "J"
 
 #: ../src/extension.js:1073
 msgid "SSW"
-msgstr ""
+msgstr "JJZ"
 
 #: ../src/extension.js:1073
 msgid "SW"
-msgstr ""
+msgstr "JZ"
 
 #: ../src/extension.js:1073
 msgid "WSW"
-msgstr ""
+msgstr "ZJZ"
 
 #: ../src/extension.js:1073
 msgid "W"
-msgstr ""
+msgstr "Z"
 
 #: ../src/extension.js:1073
 msgid "WNW"
-msgstr ""
+msgstr "ZSZ"
 
 #: ../src/extension.js:1073
 msgid "NW"
-msgstr ""
+msgstr "SZ"
 
 #: ../src/extension.js:1073
 msgid "NNW"
-msgstr ""
+msgstr "SSZ"
 
 #: ../src/extension.js:1083
 msgid "$d$s knots"
-msgstr ""
+msgstr "$d$s uzlů"
 
 #: ../src/extension.js:1087
 msgid "$d$s mph"
-msgstr ""
+msgstr "$d$s mph"
 
 #: ../src/extension.js:1091
 msgid "$d$s km/h"
-msgstr ""
+msgstr "$d$s km/h"
 
 #: ../src/extension.js:1095
 msgid "$d$s m/s"
-msgstr ""
+msgstr "$d$s m/s"
 
 #: ../src/extension.js:1099
 msgid "$dBeaufort $s"
-msgstr ""
+msgstr "$dBeaufort $s"
 
 #: ../src/prefs.js:144
 msgid "Temperature Unit"
@@ -219,11 +220,11 @@ msgstr "Jednotka rychlosti větru"
 #: ../src/prefs.js:148
 #, fuzzy
 msgid "Pressure Unit"
-msgstr "Tlak:"
+msgstr "Jednotka tlaku:"
 
 #: ../src/prefs.js:150
 msgid "Distance Unit"
-msgstr ""
+msgstr "Jednotka vzdálenosti"
 
 #: ../src/prefs.js:152
 msgid "Position in Panel"
@@ -231,27 +232,27 @@ msgstr "Pozice na panelu"
 
 #: ../src/prefs.js:153
 msgid "Center"
-msgstr "uprostřed"
+msgstr "Uprostřed"
 
 #: ../src/prefs.js:153
 msgid "Right"
-msgstr "vpravo"
+msgstr "Vpravo"
 
 #: ../src/prefs.js:153
 msgid "Left"
-msgstr "vlevo"
+msgstr "Vlevo"
 
 #: ../src/prefs.js:154
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "Směr větru šipkami"
 
 #: ../src/prefs.js:156
 msgid "Symbolic Icons"
-msgstr "Použít symbolické ikony"
+msgstr "Symbolické ikony"
 
 #: ../src/prefs.js:158
 msgid "Temperature in Panel"
-msgstr "Zobrazit na panelu teplotu"
+msgstr "Zobrazit teplotu na panelu"
 
 #: ../src/prefs.js:160
 msgid "Conditions in Panel"
@@ -259,19 +260,19 @@ msgstr "Zobrazit na panelu podmínky"
 
 #: ../src/prefs.js:162
 msgid "Debug the extension"
-msgstr ""
+msgstr "Ladění rozšíření"
 
 #: ../src/prefs.js:320
 msgid "Name of the city"
-msgstr "Název města"
+msgstr "Jméno města"
 
 #: ../src/prefs.js:378
 #, python-format
 msgid "Remove %s ?"
-msgstr "Odstranit %s?"
+msgstr "Odstranit %s ?"
 
 #~ msgid "Please wait"
-#~ msgstr "Čekejte"
+#~ msgstr "Prosím, čekejte"
 
 #~ msgid "Loading ..."
 #~ msgstr "Načítání…"
@@ -304,10 +305,10 @@ msgstr "Odstranit %s?"
 #~ msgstr "Déšť se sněhem"
 
 #~ msgid "Mixed rain and sleet"
-#~ msgstr "Déšť s plískanicí"
+#~ msgstr "Déšť s mrznoucím deštěm"
 
 #~ msgid "Mixed snow and sleet"
-#~ msgstr "Sníh s plískanicí"
+#~ msgstr "Sníh s mrznoucím deštěm"
 
 #~ msgid "Freezing drizzle"
 #~ msgstr "Namrzající mrholení"
@@ -337,7 +338,7 @@ msgstr "Odstranit %s?"
 #~ msgstr "Kroupy"
 
 #~ msgid "Sleet"
-#~ msgstr "Plískanice"
+#~ msgstr "Mrznoucí déšť"
 
 #~ msgid "Dust"
 #~ msgstr "Prašno"
@@ -433,14 +434,14 @@ msgstr "Odstranit %s?"
 #~ msgstr "Sobota"
 
 #~ msgid "%s days ago"
-#~ msgstr "%s dní zpátky"
+#~ msgstr "Před %s dny"
 
 #, fuzzy
 #~ msgid "In %s days"
-#~ msgstr "%s dní zpátky"
+#~ msgstr "Do %s dnů"
 
 #~ msgid "Loading current weather ..."
 #~ msgstr "Načítání aktuálního počasí…"
 
 #~ msgid "Translate Conditions"
-#~ msgstr "Překládat podmínky"
+#~ msgstr "Přeložit podmínky"
