@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-22 16:54+0200\n"
-"PO-Revision-Date: 2013-07-22 20:00+0200\n"
+"PO-Revision-Date: 2013-08-03 08:30+0200\n"
 "Last-Translator: Odysseus86 <hal8600@hotmail.it>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
 #: ../src/extension.js:247 ../src/extension.js:550
 msgid "Weather"
-msgstr "Condizioni meteorologiche"
+msgstr "Condizioni meteo"
 
 #: ../src/extension.js:225
 msgid "No location configured"
@@ -27,7 +27,7 @@ msgstr "Nessuna località configurata"
 
 #: ../src/extension.js:233
 msgid "Loading weather"
-msgstr "Caricamento condizioni meteorologiche"
+msgstr "Caricamento condizioni meteo"
 
 #: ../src/extension.js:249
 msgid "Weather extension ready"
@@ -51,7 +51,7 @@ msgstr "Località"
 
 #: ../src/extension.js:617
 msgid "Reload Weather Information"
-msgstr "Ricarica le informazioni meteorologiche"
+msgstr "Ricarica le informazioni meteo"
 
 #: ../src/extension.js:622
 msgid "Weather Settings"
@@ -59,15 +59,15 @@ msgstr "Impostazioni meteo"
 
 #: ../src/extension.js:785
 msgid "No weather information"
-msgstr "Nessuna informazione meteorologica disponibile"
+msgstr "Nessuna informazione meteo disponibile"
 
 #: ../src/extension.js:787
 msgid "No weather information for %s"
-msgstr "Nessuna informazione meteorologica disponibile per %s"
+msgstr "Nessuna informazione meteo disponibile per %s"
 
 #: ../src/extension.js:872
 msgid "Feels like"
-msgstr "Percepiti:"
+msgstr "Temp. percepita:"
 
 #: ../src/extension.js:874
 msgid "Visibility"
@@ -87,7 +87,7 @@ msgstr "Vento:"
 
 #: ../src/extension.js:900
 msgid "No forecast information"
-msgstr "Nessuna previsione meteorologica disponibile"
+msgstr "Nessuna previsione meteo disponibile"
 
 #: ../src/extension.js:1038
 #, python-format
@@ -218,15 +218,15 @@ msgstr "Posizione nel pannello"
 
 #: ../src/prefs.js:153
 msgid "Center"
-msgstr "Centro"
+msgstr "centro"
 
 #: ../src/prefs.js:153
 msgid "Right"
-msgstr "Destra"
+msgstr "destra"
 
 #: ../src/prefs.js:153
 msgid "Left"
-msgstr "Sinistra"
+msgstr "sinistra"
 
 #: ../src/prefs.js:154
 msgid "Wind Direction by Arrows"
