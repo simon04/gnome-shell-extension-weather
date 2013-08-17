@@ -3,5 +3,5 @@
 "name": "Weather",
 "description": "View your local weather forecast",
 "max-instances": 3,
-"version": "1.8.5"
+"version": "v1.8.6"
 }
