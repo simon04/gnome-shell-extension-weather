@@ -72,7 +72,8 @@ Make sure you have the following dependencies installed:
 * *gnome-common*,
 * *autoconf*,
 * *automake*,
-* *intltool*.
+* *intltool*,
+* *gir1.2-gweather-3.0*.
 
 Run the following commands:
 
