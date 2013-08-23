@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-12 00:41+0300\n"
-"PO-Revision-Date: 2013-08-12 00:40+0200\n"
+"PO-Revision-Date: 2013-08-23 15:22+0200\n"
 "Last-Translator: alexxtasi <alextasikas@gmail.com>\n"
 "Language-Team: \n"
 "Language: el\n"
@@ -31,9 +31,8 @@ msgid "Loading weather"
 msgstr "Φόρτωση Weather"
 
 #: ../src/extension.js:253
-#, fuzzy
 msgid "Weather extension ready"
-msgstr "Πρόσθετο Weather σε ετοιμότητα"
+msgstr "Επέκταση Weather σε ετοιμότητα"
 
 #: ../src/extension.js:443
 msgid "Today"
@@ -52,9 +51,8 @@ msgid "Locations"
 msgstr "Τοποθεσίες"
 
 #: ../src/extension.js:621
-#, fuzzy
 msgid "Reload Weather Information"
-msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
+msgstr "Ανανέωση Πληροφοριών Καιρού"
 
 #: ../src/extension.js:626
 msgid "Weather Settings"
@@ -70,7 +68,6 @@ msgid "No weather information for %s"
 msgstr "Δεν υπάρχουν πληροφορίες καιρού για %s"
 
 #: ../src/extension.js:876
-#, fuzzy
 msgid "Feels like"
 msgstr "Αίσθηση σαν"
 
@@ -114,7 +111,6 @@ msgid "Unknown"
 msgstr "Άγνωστο"
 
 #: ../src/extension.js:1073 ../src/extension.js:1076
-#, fuzzy
 msgid "VAR"
 msgstr "VAR"
 
@@ -123,7 +119,6 @@ msgid "N"
 msgstr "Β"
 
 #: ../src/extension.js:1076
-#, fuzzy
 msgid "NNE"
 msgstr "ΒΒΑ"
 
@@ -132,7 +127,6 @@ msgid "NE"
 msgstr "ΒΑ"
 
 #: ../src/extension.js:1076
-#, fuzzy
 msgid "ENE"
 msgstr "ΑΒΑ"
 
@@ -141,7 +135,6 @@ msgid "E"
 msgstr "Α"
 
 #: ../src/extension.js:1076
-#, fuzzy
 msgid "ESE"
 msgstr "ΑΝΑ"
 
@@ -150,7 +143,6 @@ msgid "SE"
 msgstr "ΝΑ"
 
 #: ../src/extension.js:1076
-#, fuzzy
 msgid "SSE"
 msgstr "ΝΝΑ"
 
@@ -159,7 +151,6 @@ msgid "S"
 msgstr "Ν"
 
 #: ../src/extension.js:1077
-#, fuzzy
 msgid "SSW"
 msgstr "ΝΝΔ"
 
@@ -168,7 +159,6 @@ msgid "SW"
 msgstr "ΝΔ"
 
 #: ../src/extension.js:1077
-#, fuzzy
 msgid "WSW"
 msgstr "ΔΝΔ"
 
@@ -177,7 +167,6 @@ msgid "W"
 msgstr "Δ"
 
 #: ../src/extension.js:1077
-#, fuzzy
 msgid "WNW"
 msgstr "ΔΒΔ"
 
@@ -186,7 +175,6 @@ msgid "NW"
 msgstr "ΒΔ"
 
 #: ../src/extension.js:1077
-#, fuzzy
 msgid "NNW"
 msgstr "ΒΒΔ"
 
@@ -227,7 +215,6 @@ msgid "Distance Unit"
 msgstr "Μονάδα μήκους"
 
 #: ../src/prefs.js:152
-#, fuzzy
 msgid "Position in Panel"
 msgstr "Θέση στον panel"
 
@@ -252,19 +239,16 @@ msgid "Symbolic Icons"
 msgstr "Εικονίδια Συμβόλων"
 
 #: ../src/prefs.js:158
-#, fuzzy
 msgid "Temperature in Panel"
 msgstr "Θερμοκρασία στον panel"
 
 #: ../src/prefs.js:160
-#, fuzzy
 msgid "Conditions in Panel"
 msgstr "Συνθήκες στο panel"
 
 #: ../src/prefs.js:162
-#, fuzzy
 msgid "Debug the extension"
-msgstr "Αποσφαλμάτωση του πρόσθετου"
+msgstr "Αποσφαλμάτωση της επέκτασης"
 
 #: ../src/prefs.js:321
 msgid "Name of the city"
