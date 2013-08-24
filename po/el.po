@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-12 00:41+0300\n"
-"PO-Revision-Date: 2013-08-23 15:22+0200\n"
+"PO-Revision-Date: 2013-08-25 01:16+0200\n"
 "Last-Translator: alexxtasi <alextasikas@gmail.com>\n"
 "Language-Team: \n"
 "Language: el\n"
@@ -216,7 +216,7 @@ msgstr "Μονάδα μήκους"
 
 #: ../src/prefs.js:152
 msgid "Position in Panel"
-msgstr "Θέση στον panel"
+msgstr "Θέση στο panel"
 
 #: ../src/prefs.js:153
 msgid "Center"
@@ -240,7 +240,7 @@ msgstr "Εικονίδια Συμβόλων"
 
 #: ../src/prefs.js:158
 msgid "Temperature in Panel"
-msgstr "Θερμοκρασία στον panel"
+msgstr "Θερμοκρασία στο panel"
 
 #: ../src/prefs.js:160
 msgid "Conditions in Panel"
