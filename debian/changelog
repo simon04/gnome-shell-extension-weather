@@ -1,9 +1,0 @@
-gnome-shell-extension-weather (0.2-1+20120602) precise; urgency=high
-
- * Sunrise/Sunset times
- * Control for the wind speed unit
- * Add pressure state and feels like temperature
- * Change wind directions (arrow)
- * Auto-complete in the Weather Settings
-
- -- Christian METZLER <neroth@xeked.com>  Sat, 02 Jun 2012 13:10:00 +0100
