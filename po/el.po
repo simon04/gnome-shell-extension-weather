@@ -6,213 +6,197 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 16:54+0200\n"
-"PO-Revision-Date: 2013-01-28 22:38+0100\n"
-"Last-Translator: Dancer69\n"
+"POT-Creation-Date: 2013-08-12 00:41+0300\n"
+"PO-Revision-Date: 2013-08-25 01:16+0200\n"
+"Last-Translator: alexxtasi <alextasikas@gmail.com>\n"
+"Language-Team: \n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
-#: ../src/extension.js:247 ../src/extension.js:550
-#, fuzzy
+#: ../src/extension.js:227 ../src/extension.js:235 ../src/extension.js:243
+#: ../src/extension.js:251 ../src/extension.js:554
 msgid "Weather"
-msgstr "Ρυθμίσεις Καιρού"
+msgstr "Weather"
 
-#: ../src/extension.js:225
+#: ../src/extension.js:229
 msgid "No location configured"
-msgstr ""
+msgstr "Δεν έχει καθοριστεί τοποθεσία"
 
-#: ../src/extension.js:233
-#, fuzzy
+#: ../src/extension.js:237
 msgid "Loading weather"
-msgstr "Φόρτωση μελλοντικής πρόγνωσης..."
+msgstr "Φόρτωση Weather"
 
-#: ../src/extension.js:249
-#, fuzzy
+#: ../src/extension.js:253
 msgid "Weather extension ready"
-msgstr "Ρυθμίσεις Καιρού"
+msgstr "Επέκταση Weather σε ετοιμότητα"
 
-#: ../src/extension.js:439
+#: ../src/extension.js:443
 msgid "Today"
 msgstr "Σήμερα"
 
-#: ../src/extension.js:445
+#: ../src/extension.js:449
 msgid "Tomorrow"
 msgstr "Αύριο"
 
-#: ../src/extension.js:451
+#: ../src/extension.js:455
 msgid "Yesterday"
 msgstr "Χθες"
 
-#: ../src/extension.js:613
+#: ../src/extension.js:617
 msgid "Locations"
 msgstr "Τοποθεσίες"
 
-#: ../src/extension.js:617
-#, fuzzy
+#: ../src/extension.js:621
 msgid "Reload Weather Information"
-msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
+msgstr "Ανανέωση Πληροφοριών Καιρού"
 
-#: ../src/extension.js:622
+#: ../src/extension.js:626
 msgid "Weather Settings"
-msgstr "Ρυθμίσεις Καιρού"
+msgstr "Ρυθμίσεις Weather"
 
-#: ../src/extension.js:785
-#, fuzzy
+#: ../src/extension.js:789
 msgid "No weather information"
-msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
+msgstr "Δεν υπάρχουν πληροφορίες καιρού"
 
-#: ../src/extension.js:787
-#, fuzzy, python-format
+#: ../src/extension.js:791
+#, python-format
 msgid "No weather information for %s"
-msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
-
-#: ../src/extension.js:872
-#, fuzzy
-msgid "Feels like"
-msgstr "Μοιάζει σαν:"
-
-#: ../src/extension.js:874
-msgid "Visibility"
-msgstr ""
+msgstr "Δεν υπάρχουν πληροφορίες καιρού για %s"
 
 #: ../src/extension.js:876
-#, fuzzy
-msgid "Humidity"
-msgstr "Υγρασία:"
+msgid "Feels like"
+msgstr "Αίσθηση σαν"
 
 #: ../src/extension.js:878
-#, fuzzy
-msgid "Pressure"
-msgstr "Πίεση:"
+msgid "Visibility"
+msgstr "Ορατότητα"
 
 #: ../src/extension.js:880
-#, fuzzy
+msgid "Humidity"
+msgstr "Υγρασία"
+
+#: ../src/extension.js:882
+msgid "Pressure"
+msgstr "Πίεση"
+
+#: ../src/extension.js:884
 msgid "Wind"
-msgstr "Άνεμος:"
+msgstr "Άνεμος"
 
-#: ../src/extension.js:900
-#, fuzzy
+#: ../src/extension.js:904
 msgid "No forecast information"
-msgstr "Επαναφόρτωση Πληροφοριών Καιρού"
-
-#: ../src/extension.js:1038
-#, python-format
-msgid "%s °F"
-msgstr ""
+msgstr "Δεν υπάρχει πρόγνωση"
 
 #: ../src/extension.js:1042
 #, python-format
-msgid "%s °C"
-msgstr ""
+msgid "%s °F"
+msgstr "%s °F"
 
 #: ../src/extension.js:1046
 #, python-format
+msgid "%s °C"
+msgstr "%s °C"
+
+#: ../src/extension.js:1050
+#, python-format
 msgid "%s K"
-msgstr ""
+msgstr "%s K"
 
-#: ../src/extension.js:1052 ../src/extension.js:1105
+#: ../src/extension.js:1056 ../src/extension.js:1109
 msgid "Unknown"
-msgstr ""
+msgstr "Άγνωστο"
 
-#: ../src/extension.js:1069 ../src/extension.js:1072
+#: ../src/extension.js:1073 ../src/extension.js:1076
 msgid "VAR"
-msgstr ""
+msgstr "VAR"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1076
 msgid "N"
 msgstr "Β"
 
-#: ../src/extension.js:1072
-#, fuzzy
+#: ../src/extension.js:1076
 msgid "NNE"
-msgstr "ΒΑ"
+msgstr "ΒΒΑ"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1076
 msgid "NE"
 msgstr "ΒΑ"
 
-#: ../src/extension.js:1072
-#, fuzzy
+#: ../src/extension.js:1076
 msgid "ENE"
-msgstr "ΒΑ"
+msgstr "ΑΒΑ"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1076
 msgid "E"
 msgstr "Α"
 
-#: ../src/extension.js:1072
-#, fuzzy
+#: ../src/extension.js:1076
 msgid "ESE"
-msgstr "ΝΑ"
+msgstr "ΑΝΑ"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1076
 msgid "SE"
 msgstr "ΝΑ"
 
-#: ../src/extension.js:1072
-#, fuzzy
+#: ../src/extension.js:1076
 msgid "SSE"
-msgstr "ΝΑ"
+msgstr "ΝΝΑ"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1077
 msgid "S"
 msgstr "Ν"
 
-#: ../src/extension.js:1073
-#, fuzzy
+#: ../src/extension.js:1077
 msgid "SSW"
-msgstr "ΝΔ"
+msgstr "ΝΝΔ"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1077
 msgid "SW"
 msgstr "ΝΔ"
 
-#: ../src/extension.js:1073
-#, fuzzy
+#: ../src/extension.js:1077
 msgid "WSW"
-msgstr "ΝΔ"
+msgstr "ΔΝΔ"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1077
 msgid "W"
 msgstr "Δ"
 
-#: ../src/extension.js:1073
-#, fuzzy
+#: ../src/extension.js:1077
 msgid "WNW"
-msgstr "ΒΔ"
+msgstr "ΔΒΔ"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1077
 msgid "NW"
 msgstr "ΒΔ"
 
-#: ../src/extension.js:1073
-#, fuzzy
+#: ../src/extension.js:1077
 msgid "NNW"
-msgstr "ΒΔ"
-
-#: ../src/extension.js:1083
-msgid "$d$s knots"
-msgstr ""
+msgstr "ΒΒΔ"
 
 #: ../src/extension.js:1087
-msgid "$d$s mph"
-msgstr ""
+msgid "$d$s knots"
+msgstr "$d$s knots"
 
 #: ../src/extension.js:1091
-msgid "$d$s km/h"
-msgstr ""
+msgid "$d$s mph"
+msgstr "$d$s mph"
 
 #: ../src/extension.js:1095
-msgid "$d$s m/s"
-msgstr ""
+msgid "$d$s km/h"
+msgstr "$d$s km/h"
 
 #: ../src/extension.js:1099
+msgid "$d$s m/s"
+msgstr "$d$s m/s"
+
+#: ../src/extension.js:1103
 msgid "$dBeaufort $s"
-msgstr ""
+msgstr "$dBeaufort $s"
 
 #: ../src/prefs.js:144
 msgid "Temperature Unit"
@@ -220,20 +204,19 @@ msgstr "Μονάδα Θερμοκρασίας"
 
 #: ../src/prefs.js:146
 msgid "Wind Speed Unit"
-msgstr "Ταχύτητα Ανέμου"
+msgstr "Μονάδα Ταχύτητας Ανέμου"
 
 #: ../src/prefs.js:148
-#, fuzzy
 msgid "Pressure Unit"
 msgstr "Μονάδα Πίεσης"
 
 #: ../src/prefs.js:150
 msgid "Distance Unit"
-msgstr ""
+msgstr "Μονάδα μήκους"
 
 #: ../src/prefs.js:152
 msgid "Position in Panel"
-msgstr "Θέση στον Πίνακα"
+msgstr "Θέση στο panel"
 
 #: ../src/prefs.js:153
 msgid "Center"
@@ -257,21 +240,21 @@ msgstr "Εικονίδια Συμβόλων"
 
 #: ../src/prefs.js:158
 msgid "Temperature in Panel"
-msgstr "Θερμοκρασία στον Πίνακα"
+msgstr "Θερμοκρασία στο panel"
 
 #: ../src/prefs.js:160
 msgid "Conditions in Panel"
-msgstr "Συνθήκες στον πίνακα"
+msgstr "Συνθήκες στο panel"
 
 #: ../src/prefs.js:162
 msgid "Debug the extension"
-msgstr ""
+msgstr "Αποσφαλμάτωση της επέκτασης"
 
-#: ../src/prefs.js:320
+#: ../src/prefs.js:321
 msgid "Name of the city"
 msgstr "Όνομα πόλης"
 
-#: ../src/prefs.js:378
+#: ../src/prefs.js:379
 #, python-format
 msgid "Remove %s ?"
 msgstr "Αφαίρεση %s ;"
