@@ -418,6 +418,8 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 			for(let i in forecastList)
 			{
+			if (forecastList[i] == null) continue;
+			
 			nowDate = GLib.DateTime.new_from_unix_local(forecastList[i].get_value_update()[1]);
 
 				if(forecastList[i-1] != "undefined" && (oldDate.get_day_of_month() < nowDate.get_day_of_month() ||
