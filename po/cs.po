@@ -20,7 +20,6 @@ msgstr ""
 
 #: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
 #: ../src/extension.js:247 ../src/extension.js:550
-#, fuzzy
 msgid "Weather"
 msgstr "Počasí"
 
@@ -29,12 +28,10 @@ msgid "No location configured"
 msgstr "Nebylo nastaveno místo"
 
 #: ../src/extension.js:233
-#, fuzzy
 msgid "Loading weather"
 msgstr "Načítání počasí"
 
 #: ../src/extension.js:249
-#, fuzzy
 msgid "Weather extension ready"
 msgstr "Rozšíření Počasí je připraveno"
 
@@ -55,7 +52,6 @@ msgid "Locations"
 msgstr "Místa"
 
 #: ../src/extension.js:617
-#, fuzzy
 msgid "Reload Weather Information"
 msgstr "Obnovit informace o počasí"
 
@@ -64,41 +60,34 @@ msgid "Weather Settings"
 msgstr "Nastavení rozšíření Počasí"
 
 #: ../src/extension.js:785
-#, fuzzy
 msgid "No weather information"
-msgstr "Informace o počasí nejsou k dispozici"
+msgstr "Informace nejsou k dispozici"
 
 #: ../src/extension.js:787
-#, fuzzy, python-format
 msgid "No weather information for %s"
 msgstr "Informace o počasí pro %s nejsou k dispozici"
 
 #: ../src/extension.js:872
-#, fuzzy
 msgid "Feels like"
-msgstr "Pocitově jako:"
+msgstr "Pocitově jako"
 
 #: ../src/extension.js:874
 msgid "Visibility"
 msgstr "Viditelnost"
 
 #: ../src/extension.js:876
-#, fuzzy
 msgid "Humidity"
-msgstr "Vlhkost:"
+msgstr "Vlhkost"
 
 #: ../src/extension.js:878
-#, fuzzy
 msgid "Pressure"
 msgstr "Tlak"
 
 #: ../src/extension.js:880
-#, fuzzy
 msgid "Wind"
 msgstr "Vítr"
 
 #: ../src/extension.js:900
-#, fuzzy
 msgid "No forecast information"
 msgstr "Předpověď počasí není k dispozici"
 
@@ -218,9 +207,8 @@ msgid "Wind Speed Unit"
 msgstr "Jednotka rychlosti větru"
 
 #: ../src/prefs.js:148
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Jednotka tlaku:"
+msgstr "Jednotka tlaku"
 
 #: ../src/prefs.js:150
 msgid "Distance Unit"
@@ -436,7 +424,6 @@ msgstr "Odstranit %s ?"
 #~ msgid "%s days ago"
 #~ msgstr "Před %s dny"
 
-#, fuzzy
 #~ msgid "In %s days"
 #~ msgstr "Do %s dnů"
 
