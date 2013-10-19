@@ -159,13 +159,14 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		this.location = this.city;
 			if(this.city_name)
 			{											this.status("Location ("+this.city_name+") loaded");
-			this.info = new GWeather.Info({ world: this.world,
-                                       location: this.location,
-                                       forecast_type: GWeather.ForecastType.LIST,
-                                       enabled_providers: (GWeather.Provider.METAR |
-                                                           GWeather.Provider.YR_NO |
-							   GWeather.Provider.YAHOO |
-							   GWeather.Provider.IWIN) });				this.status("Information loaded");
+			this.info = new GWeather.Info({location: this.location});				this.status("Information loaded");
+
+			this.info.set_enabled_providers(GWeather.Provider.OWM   |
+                                                        GWeather.Provider.METAR |
+							GWeather.Provider.YR_NO |
+							GWeather.Provider.IWIN  |
+							GWeather.Provider.YAHOO);
+
 			this.infoC = this.info.connect("updated",function(){that.refresh();that.status(0);});	this.status("Information connection started");
 			}
 			else
@@ -553,7 +554,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 		this.UI = {};
 
-		this.UI.menuConditions = new St.Label({ text: _('Weather') });					this.status("UI.menuCoditions created");
+		this.UI.menuConditions = new St.Label({ y_align: Clutter.ActorAlign.CENTER, text: _('Weather') });	this.status("UI.menuCoditions created");
 
 		// Panel icon
 		this.UI.menuIcon = new St.Icon(
@@ -595,22 +596,23 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		Main.panel.menuManager.addMenu(this.menu);							this.status("menu added to menu manager (panel)");
 
-		this.UI.current = new St.Bin({ style_class: 'current' });					this.status("UI.current created");
-		this.UI.forecast = new St.Bin({ style_class: 'forecast' });					this.status("UI.forecast created");
-		this.UI.attribution = new St.Bin({ style_class: 'attribution' });				this.status("UI.attribution created");
-		this.menu.addActor(this.UI.current);								this.status("UI.current added to menu");
-
 		let item;
 
+		this.UI.current = new St.Bin({style_class: 'current'});						this.status("UI.current created");
+		this.UI.forecast = new St.Bin({style_class: 'forecast'});					this.status("UI.forecast created");
+		this.UI.attribution = new St.Bin({style_class: 'attribution'});					this.status("UI.attribution created");
+		
+		this.menu.box.add(this.UI.current);								this.status("UI.current added to menu");
+
 		item = new PopupMenu.PopupSeparatorMenuItem();
 		this.menu.addMenuItem(item);									this.status("Added separator");
+		
+		this.menu.box.add(this.UI.forecast);
 
-		this.menu.addActor(this.UI.forecast);								this.status("UI.forecast added to menu");
-
-		item = new PopupMenu.PopupSeparatorMenuItem();
+		item = new PopupMenu.PopupSeparatorMenuItem();							this.status("UI.forecast added to menu");
 		this.menu.addMenuItem(item);									this.status("Added separator");
-
-		this.menu.addActor(this.UI.attribution);							this.status("UI.attribution added to menu");
+		
+		this.menu.box.add(this.UI.attribution);								this.status("UI.attribution added to menu");
 		this.UI.attribution.hide();
 
 		item = new PopupMenu.PopupSeparatorMenuItem();
@@ -733,7 +735,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			item.location = i;
 
 				if(i == this.actual_city)
-				item.setShowDot(true);
+				(typeof item.setShowDot == "function") ? item.setShowDot(true) : item.setOrnament(PopupMenu.Ornament.DOT);
 
 			this.UI.locationSelector.menu.addMenuItem(item);
 
