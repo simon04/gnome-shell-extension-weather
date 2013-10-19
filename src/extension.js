@@ -606,27 +606,21 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		let item;
 
-		this.UI.current = new St.Bin();									this.status("UI.current created");
-		this.UI.forecast = new St.Bin();								this.status("UI.forecast created");
-		this.UI.attribution = new St.Bin();								this.status("UI.attribution created");
-
-		item = new PopupMenu.PopupBaseMenuItem({style_class: 'current', reactive:false});
-		item.actor.add_actor(this.UI.current);
-		this.menu.addMenuItem(item);									this.status("UI.current added to menu");
+		this.UI.current = new St.Bin({style_class: 'current'});						this.status("UI.current created");
+		this.UI.forecast = new St.Bin({style_class: 'forecast'});					this.status("UI.forecast created");
+		this.UI.attribution = new St.Bin({style_class: 'attribution'});					this.status("UI.attribution created");
+		
+		this.menu.box.add(this.UI.current);								this.status("UI.current added to menu");
 
 		item = new PopupMenu.PopupSeparatorMenuItem();
 		this.menu.addMenuItem(item);									this.status("Added separator");
 		
-		item = new PopupMenu.PopupBaseMenuItem({style_class: 'forecast', reactive:false});
-		item.actor.add_actor(this.UI.forecast);
-		this.menu.addMenuItem(item);									this.status("UI.forecast added to menu");
+		this.menu.box.add(this.UI.forecast);
 
-		item = new PopupMenu.PopupSeparatorMenuItem();
+		item = new PopupMenu.PopupSeparatorMenuItem();							this.status("UI.forecast added to menu");
 		this.menu.addMenuItem(item);									this.status("Added separator");
 		
-		item = new PopupMenu.PopupBaseMenuItem({style_class: 'attribution', reactive:false});
-		item.actor.add_actor(this.UI.attribution);
-		this.menu.addMenuItem(item);									this.status("UI.attribution added to menu");
+		this.menu.box.add(this.UI.attribution);								this.status("UI.attribution added to menu");
 		this.UI.attribution.hide();
 
 		item = new PopupMenu.PopupSeparatorMenuItem();
