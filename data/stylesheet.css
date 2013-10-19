@@ -39,10 +39,14 @@
 
 .forecast {
   width: 0;
+  spacing: 0px !important;
+  padding: 0px !important;
+border: red 1px solid;
 }
 
 .weather-forecasts {
   -st-hfade-offset: 60px;
+border: red 1px solid;
 }
 
 .weather-forecast-box {
