@@ -159,21 +159,13 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		this.location = this.city;
 			if(this.city_name)
 			{											this.status("Location ("+this.city_name+") loaded");
-			this.info = new GWeather.Info({location: this.location,
-                                       enabled_providers: (GWeather.Provider.METAR |
-                                                           GWeather.Provider.YR_NO |
-							   GWeather.Provider.YAHOO |
-							   GWeather.Provider.IWIN) });				this.status("Information loaded");
+			this.info = new GWeather.Info({location: this.location});				this.status("Information loaded");
 
-				if(this.info.forecast_type != "undefined")
-				this.info.forecast_type = GWeather.ForecastType.LIST;
-				if(this.info.world != "undefined")
-				this.info.world = this.world;
-				if(this.info.enabled_providers != "undefined")
-				this.info.enabled_providers = (GWeather.Provider.METAR |
-                                                               GWeather.Provider.YR_NO |
-							       GWeather.Provider.YAHOO |
-							       GWeather.Provider.IWIN);
+			this.info.set_enabled_providers(GWeather.Provider.OWM   |
+                                                        GWeather.Provider.METAR |
+							GWeather.Provider.YR_NO |
+							GWeather.Provider.IWIN  |
+							GWeather.Provider.YAHOO);
 
 			this.infoC = this.info.connect("updated",function(){that.refresh();that.status(0);});	this.status("Information connection started");
 			}
@@ -562,7 +554,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 		this.UI = {};
 
-		this.UI.menuConditions = new St.Label({ text: _('Weather') });					this.status("UI.menuCoditions created");
+		this.UI.menuConditions = new St.Label({ y_align: Clutter.ActorAlign.CENTER, text: _('Weather') });	this.status("UI.menuCoditions created");
 
 		// Panel icon
 		this.UI.menuIcon = new St.Icon(
