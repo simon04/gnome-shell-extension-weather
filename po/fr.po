@@ -27,7 +27,7 @@ msgstr "Météo"
 
 #: ../src/extension.js:225
 msgid "No location configured"
-msgstr "Pas de ville configuré"
+msgstr "Pas de ville configurée"
 
 #: ../src/extension.js:233
 msgid "Loading weather"
