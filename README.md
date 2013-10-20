@@ -18,8 +18,6 @@ We need translator ! [Translate the extension](https://github.com/Neroth/gnome-s
 
 ## Through extensions.gnome.org (Local installation)
 
-**Waiting for review / Version 9 : V1 (<= GNOME Shell 3.8) / Version 10 : V2 (>= GNOME Shell 3.8)**
-
 Go on the [Weather extension page](https://extensions.gnome.org/extension/613/weather/) on extensions.gnome.org, click on the switch ("OFF" => "ON"), click on the install button.
 That's it !
 
