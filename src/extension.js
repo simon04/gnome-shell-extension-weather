@@ -319,8 +319,12 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			if(!this.build)
 			{
 			first = true;										this.status("First build");
-			this.build = that.info.get_update();
+			this.build = this.info.get_update();
 			this.variation("build");
+			}
+			else
+			{
+			this.build = this.info.get_update();
 			}
 
 		let update = false;
