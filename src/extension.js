@@ -416,6 +416,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		let oldDate = {};
 		let nowDate = {};
+		let oneDay = 86400000000;
 
 		let forecastList = this.info.get_forecast_list();						this.status("Forecast list loaded ("+forecastList.length+")");
 
@@ -449,22 +450,15 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 					{
 					forecast[day].dayText = _("Today");					this.status("This day is today");
 					}
-					else if(actualDate.add_days(1).get_day_of_month() == nowDate.get_day_of_month() &&
-						actualDate.get_month() == nowDate.get_month() &&
-						actualDate.get_year() == nowDate.get_year())
+					else if(nowDate.difference(actualDate) <= oneDay)
 					{
 					forecast[day].dayText = _("Tomorrow");					this.status("This day is tomorrow");
 					}
-					else if(actualDate.add_days(-1).get_day_of_month() == nowDate.get_day_of_month() &&
-						actualDate.get_month() == nowDate.get_month() &&
-						actualDate.get_year() == nowDate.get_year())
+					else if(nowDate.difference(actualDate) < 0)
 					{
 					forecast[day].dayText = _("Yesterday");					this.status("This day is yesterday");
 					}
-					else if(actualDate.add_days(6).get_day_of_month() >= nowDate.get_day_of_month() &&
-						actualDate.get_day_of_month() <= nowDate.get_day_of_month() &&
-						actualDate.get_month() == nowDate.get_month() &&
-						actualDate.get_year() == nowDate.get_year())
+					else if(nowDate.difference(actualDate) > oneDay && nowDate.difference(actualDate) < oneDay*7)
 					{
 					let dow = nowDate.format("%A");
 					dow = dow.charAt(0).toUpperCase() + dow.slice(1);
