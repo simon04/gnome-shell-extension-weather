@@ -292,7 +292,20 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 			let getLocaleTime = function(date)
 			{
-			date = GLib.DateTime.new_from_unix_local(date);
+			let timezone = that.location.get_timezone().get_offset();
+			let tznp = "+"
+				if(timezone < 0)
+				tznp = "-";
+			timezone = Math.abs(timezone);
+			let tzh = timezone/60;
+				if(tzh <= 9)
+				tzh = "0"+tzh;
+				if(timezone == 0)
+				timezone = "Z";
+				else
+				timezone = tznp+tzh+":00";
+			timezone = GLib.TimeZone.new(timezone);
+			date = GLib.DateTime.new_from_unix_local(date).to_timezone(timezone);
 			let localeTime = "-";
 				if(that.clock_format == "12h")
 				{
