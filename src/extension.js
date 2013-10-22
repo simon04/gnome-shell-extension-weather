@@ -292,24 +292,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 			let getLocaleTime = function(date)
 			{
-			let timezone = that.location.get_timezone()
-				if(timezone.has_dst())
-				timezone = timezone.get_dst_offset();
-				else
-				timezone = timezone.get_offset();
-			let tznp = "+"
-				if(timezone < 0)
-				tznp = "-";
-			timezone = Math.abs(timezone);
-			let tzh = timezone/60;
-				if(tzh <= 9)
-				tzh = "0"+tzh;
-				if(timezone == 0)
-				timezone = "Z";
-				else
-				timezone = tznp+tzh+":00";
-			timezone = GLib.TimeZone.new(timezone);
-			date = GLib.DateTime.new_from_unix_local(date).to_timezone(timezone);
+			date = GLib.DateTime.new_from_unix_local(date).to_timezone(that.get_timezone());
 			let localeTime = "-";
 				if(that.clock_format == "12h")
 				{
@@ -437,17 +420,15 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		let forecastList = this.info.get_forecast_list();						this.status("Forecast list loaded ("+forecastList.length+")");
 
-		oldDate = GLib.DateTime.new_from_unix_local(forecastList[0].get_value_update()[1]);
+		oldDate = GLib.DateTime.new_from_unix_local(forecastList[0].get_value_update()[1]).to_timezone(this.get_timezone());
 
 			for(let i in forecastList)
 			{
 			if (forecastList[i] == null) continue;
 			
-			nowDate = GLib.DateTime.new_from_unix_local(forecastList[i].get_value_update()[1]);
+			nowDate = GLib.DateTime.new_from_unix_local(forecastList[i].get_value_update()[1]).to_timezone(this.get_timezone());
 
-				if(forecastList[i-1] != "undefined" && (oldDate.get_day_of_month() < nowDate.get_day_of_month() ||
-									oldDate.get_month() < nowDate.get_month() ||
-									oldDate.get_year() < nowDate.get_year()))
+				if(forecastList[i-1] != "undefined" && (oldDate.get_day_of_month() != nowDate.get_day_of_month()))
 				{										this.status("+1 day");
 				day++;
 				}
@@ -1044,6 +1025,28 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 		Util.spawn(["gnome-shell-extension-prefs","weather-extension@xeked.com"]);
 		return 0;
+		},
+
+		get_timezone : function()
+		{
+		let timezone = this.location.get_timezone();
+			if(timezone.has_dst())
+			timezone = timezone.get_dst_offset();
+			else
+			timezone = timezone.get_offset();
+		let tznp = "+"
+			if(timezone < 0)
+			tznp = "-";
+		timezone = Math.abs(timezone);
+		let tzh = timezone/60;
+			if(tzh <= 9)
+			tzh = "0"+tzh;
+			if(timezone == 0)
+			timezone = "Z";
+			else
+			timezone = tznp+tzh+":00";
+		timezone = GLib.TimeZone.new(timezone);
+		return timezone;
 		},
 
 		temperature_string : function(a)
