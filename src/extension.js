@@ -161,11 +161,9 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			{											this.status("Location ("+this.city_name+") loaded");
 			this.info = new GWeather.Info({location: this.location});				this.status("Information loaded");
 
-			this.info.set_enabled_providers(GWeather.Provider.OWM   |
-                                                        GWeather.Provider.METAR |
+			this.info.set_enabled_providers(GWeather.Provider.METAR |
 							GWeather.Provider.YR_NO |
-							GWeather.Provider.IWIN  |
-							GWeather.Provider.YAHOO);
+					                GWeather.Provider.OWM);
 
 			this.infoC = this.info.connect("updated",function(){that.refresh();that.status(0);});	this.status("Information connection started");
 			}
@@ -425,7 +423,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			for(let i in forecastList)
 			{
 			if (forecastList[i] == null) continue;
-			
+
 			nowDate = GLib.DateTime.new_from_unix_local(forecastList[i].get_value_update()[1]).to_timezone(this.get_timezone());
 
 				if(forecastList[i-1] != "undefined" && (oldDate.get_day_of_month() != nowDate.get_day_of_month()))
@@ -438,7 +436,11 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 				initialTemp = forecastList[i].get_value_temp(unit)[1];				this.status("Initial temperature : "+initialTemp);
 				forecast[day] = {hour : []};
 				forecast[day].minTemp = initialTemp;
+					if(forecastList[i].get_value_temp_min(unit)[0])
+					forecast[day].minTemp = forecastList[i].get_value_temp_min(unit)[1];
 				forecast[day].maxTemp = initialTemp;
+					if(forecastList[i].get_value_temp_max(unit)[0])
+					forecast[day].maxTemp = forecastList[i].get_value_temp_max(unit)[1];
 				forecast[day].icon = "";
 				forecast[day].dayText = "";
 														this.status("Searching day name :");
