@@ -292,7 +292,11 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 			let getLocaleTime = function(date)
 			{
-			let timezone = that.location.get_timezone().get_offset();
+			let timezone = that.location.get_timezone()
+				if(timezone.has_dst())
+				timezone = timezone.get_dst_offset();
+				else
+				timezone = timezone.get_offset();
 			let tznp = "+"
 				if(timezone < 0)
 				tznp = "-";
