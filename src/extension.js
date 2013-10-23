@@ -40,6 +40,7 @@ const Main = imports.ui.main;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
+const Mainloop = imports.mainloop;
 const St = imports.gi.St;
 const Clutter = imports.gi.Clutter;
 const PopupMenu = imports.ui.popupMenu;
@@ -176,6 +177,10 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 			if(this.city_name)
 			{
+				this.timer = Mainloop.timeout_add_seconds(30, Lang.bind(this, function() {
+				this.info.update();
+				return true;
+				}));										this.status("Timer started");
 			this.info.update();
 			}											this.status("Weather started"); this.status(0);
 		return 0;
@@ -183,6 +188,11 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		stop : function()
 		{												this.status("Stopping Weather");
+			if(this.timer)
+			{
+			Mainloop.source_remove(this.timer);							this.status("Timer stopped");
+			}
+
 			if(this.infoC)
 			{
 			this.info.disconnect(this.infoC);
