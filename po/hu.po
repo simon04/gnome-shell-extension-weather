@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Neroth-gnome-shell-extension-weather 3696468\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-25 15:10+0200\n"
+"POT-Creation-Date: 2013-10-23 16:23+0200\n"
 "PO-Revision-Date: 2013-07-25 15:05+0200\n"
 "Last-Translator: Peter Bojtos <ptr@ulx.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,184 +18,184 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../src/extension.js:227 ../src/extension.js:235 ../src/extension.js:243
-#: ../src/extension.js:251 ../src/extension.js:554
+#: ../src/extension.js:236 ../src/extension.js:244 ../src/extension.js:252
+#: ../src/extension.js:260 ../src/extension.js:565
 msgid "Weather"
 msgstr "Időjárás-előrejelzés"
 
-#: ../src/extension.js:229
+#: ../src/extension.js:238
 msgid "No location configured"
 msgstr "Nincsen helyszín beállítva"
 
-#: ../src/extension.js:237
+#: ../src/extension.js:246
 msgid "Loading weather"
 msgstr "Időjárás-előrejelzés betöltése"
 
-#: ../src/extension.js:253
+#: ../src/extension.js:262
 msgid "Weather extension ready"
 msgstr "Időjárás-előrejelzés kész"
 
-#: ../src/extension.js:443
+#: ../src/extension.js:461
 msgid "Today"
 msgstr "Ma"
 
-#: ../src/extension.js:449
+#: ../src/extension.js:465
 msgid "Tomorrow"
 msgstr "Holnap"
 
-#: ../src/extension.js:455
+#: ../src/extension.js:469
 msgid "Yesterday"
 msgstr "Tegnap"
 
-#: ../src/extension.js:617
+#: ../src/extension.js:629
 msgid "Locations"
 msgstr "Helyszínek"
 
-#: ../src/extension.js:621
+#: ../src/extension.js:633
 msgid "Reload Weather Information"
 msgstr "Meteorológiai információk újratöltése"
 
-#: ../src/extension.js:626
+#: ../src/extension.js:638
 msgid "Weather Settings"
 msgstr "Meteorológiai beállítások"
 
-#: ../src/extension.js:789
+#: ../src/extension.js:801
 msgid "No weather information"
 msgstr "Nem áll rendelkezésre időjárás-információ"
 
-#: ../src/extension.js:791
+#: ../src/extension.js:803
 #, python-format
 msgid "No weather information for %s"
 msgstr "Nem áll rendelkezésre időjárás-információ ehhez: %s"
 
-#: ../src/extension.js:876
+#: ../src/extension.js:888
 msgid "Feels like"
 msgstr "Hőérzet"
 
-#: ../src/extension.js:878
+#: ../src/extension.js:890
 msgid "Visibility"
 msgstr "Láthatóság"
 
-#: ../src/extension.js:880
+#: ../src/extension.js:892
 msgid "Humidity"
 msgstr "Páratartalom"
 
-#: ../src/extension.js:882
+#: ../src/extension.js:894
 msgid "Pressure"
 msgstr "Légnyomás"
 
-#: ../src/extension.js:884
+#: ../src/extension.js:896
 msgid "Wind"
 msgstr "Szél"
 
-#: ../src/extension.js:904
+#: ../src/extension.js:916
 msgid "No forecast information"
 msgstr "Nem található előrejelzés"
 
-#: ../src/extension.js:1042
+#: ../src/extension.js:1076
 #, python-format
 msgid "%s °F"
 msgstr "%s °F"
 
-#: ../src/extension.js:1046
+#: ../src/extension.js:1080
 #, python-format
 msgid "%s °C"
 msgstr "%s °C"
 
-#: ../src/extension.js:1050
+#: ../src/extension.js:1084
 #, python-format
 msgid "%s K"
 msgstr "%s K"
 
-#: ../src/extension.js:1056 ../src/extension.js:1109
+#: ../src/extension.js:1090 ../src/extension.js:1143
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: ../src/extension.js:1073 ../src/extension.js:1076
+#: ../src/extension.js:1107 ../src/extension.js:1110
 msgid "VAR"
 msgstr "VAR"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "N"
 msgstr "É"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "NNE"
 msgstr "ÉÉK"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "NE"
 msgstr "ÉK"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "ENE"
 msgstr "KÉK"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "E"
 msgstr "K"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "ESE"
 msgstr "KDK"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "SE"
 msgstr "DK"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "SSE"
 msgstr "DDK"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "S"
 msgstr "D"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "SSW"
 msgstr "DDNY"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "SW"
 msgstr "DNY"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "WSW"
 msgstr "NYDNY"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "W"
 msgstr "NY"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "WNW"
 msgstr "NYÉNY"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "NW"
 msgstr "ÉNY"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "NNW"
 msgstr "ÉÉNY"
 
-#: ../src/extension.js:1087
+#: ../src/extension.js:1121
 msgid "$d$s knots"
 msgstr "$d$s csomó"
 
-#: ../src/extension.js:1091
+#: ../src/extension.js:1125
 msgid "$d$s mph"
 msgstr "$d$s mérföld/h"
 
-#: ../src/extension.js:1095
+#: ../src/extension.js:1129
 msgid "$d$s km/h"
 msgstr "$d$s km/h"
 
-#: ../src/extension.js:1099
+#: ../src/extension.js:1133
 msgid "$d$s m/s"
 msgstr "$d$s m/s"
 
-#: ../src/extension.js:1103
+#: ../src/extension.js:1137
 msgid "$dBeaufort $s"
 msgstr "$dBeaufort $s"
 

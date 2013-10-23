@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-12 00:41+0300\n"
+"POT-Creation-Date: 2013-10-23 16:23+0200\n"
 "PO-Revision-Date: 2013-08-25 01:16+0200\n"
 "Last-Translator: alexxtasi <alextasikas@gmail.com>\n"
 "Language-Team: \n"
@@ -17,184 +17,184 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../src/extension.js:227 ../src/extension.js:235 ../src/extension.js:243
-#: ../src/extension.js:251 ../src/extension.js:554
+#: ../src/extension.js:236 ../src/extension.js:244 ../src/extension.js:252
+#: ../src/extension.js:260 ../src/extension.js:565
 msgid "Weather"
 msgstr "Weather"
 
-#: ../src/extension.js:229
+#: ../src/extension.js:238
 msgid "No location configured"
 msgstr "Δεν έχει καθοριστεί τοποθεσία"
 
-#: ../src/extension.js:237
+#: ../src/extension.js:246
 msgid "Loading weather"
 msgstr "Φόρτωση Weather"
 
-#: ../src/extension.js:253
+#: ../src/extension.js:262
 msgid "Weather extension ready"
 msgstr "Επέκταση Weather σε ετοιμότητα"
 
-#: ../src/extension.js:443
+#: ../src/extension.js:461
 msgid "Today"
 msgstr "Σήμερα"
 
-#: ../src/extension.js:449
+#: ../src/extension.js:465
 msgid "Tomorrow"
 msgstr "Αύριο"
 
-#: ../src/extension.js:455
+#: ../src/extension.js:469
 msgid "Yesterday"
 msgstr "Χθες"
 
-#: ../src/extension.js:617
+#: ../src/extension.js:629
 msgid "Locations"
 msgstr "Τοποθεσίες"
 
-#: ../src/extension.js:621
+#: ../src/extension.js:633
 msgid "Reload Weather Information"
 msgstr "Ανανέωση Πληροφοριών Καιρού"
 
-#: ../src/extension.js:626
+#: ../src/extension.js:638
 msgid "Weather Settings"
 msgstr "Ρυθμίσεις Weather"
 
-#: ../src/extension.js:789
+#: ../src/extension.js:801
 msgid "No weather information"
 msgstr "Δεν υπάρχουν πληροφορίες καιρού"
 
-#: ../src/extension.js:791
+#: ../src/extension.js:803
 #, python-format
 msgid "No weather information for %s"
 msgstr "Δεν υπάρχουν πληροφορίες καιρού για %s"
 
-#: ../src/extension.js:876
+#: ../src/extension.js:888
 msgid "Feels like"
 msgstr "Αίσθηση σαν"
 
-#: ../src/extension.js:878
+#: ../src/extension.js:890
 msgid "Visibility"
 msgstr "Ορατότητα"
 
-#: ../src/extension.js:880
+#: ../src/extension.js:892
 msgid "Humidity"
 msgstr "Υγρασία"
 
-#: ../src/extension.js:882
+#: ../src/extension.js:894
 msgid "Pressure"
 msgstr "Πίεση"
 
-#: ../src/extension.js:884
+#: ../src/extension.js:896
 msgid "Wind"
 msgstr "Άνεμος"
 
-#: ../src/extension.js:904
+#: ../src/extension.js:916
 msgid "No forecast information"
 msgstr "Δεν υπάρχει πρόγνωση"
 
-#: ../src/extension.js:1042
+#: ../src/extension.js:1076
 #, python-format
 msgid "%s °F"
 msgstr "%s °F"
 
-#: ../src/extension.js:1046
+#: ../src/extension.js:1080
 #, python-format
 msgid "%s °C"
 msgstr "%s °C"
 
-#: ../src/extension.js:1050
+#: ../src/extension.js:1084
 #, python-format
 msgid "%s K"
 msgstr "%s K"
 
-#: ../src/extension.js:1056 ../src/extension.js:1109
+#: ../src/extension.js:1090 ../src/extension.js:1143
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: ../src/extension.js:1073 ../src/extension.js:1076
+#: ../src/extension.js:1107 ../src/extension.js:1110
 msgid "VAR"
 msgstr "VAR"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "N"
 msgstr "Β"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "NNE"
 msgstr "ΒΒΑ"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "NE"
 msgstr "ΒΑ"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "ENE"
 msgstr "ΑΒΑ"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "E"
 msgstr "Α"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "ESE"
 msgstr "ΑΝΑ"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "SE"
 msgstr "ΝΑ"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1110
 msgid "SSE"
 msgstr "ΝΝΑ"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "S"
 msgstr "Ν"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "SSW"
 msgstr "ΝΝΔ"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "SW"
 msgstr "ΝΔ"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "WSW"
 msgstr "ΔΝΔ"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "W"
 msgstr "Δ"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "WNW"
 msgstr "ΔΒΔ"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "NW"
 msgstr "ΒΔ"
 
-#: ../src/extension.js:1077
+#: ../src/extension.js:1111
 msgid "NNW"
 msgstr "ΒΒΔ"
 
-#: ../src/extension.js:1087
+#: ../src/extension.js:1121
 msgid "$d$s knots"
 msgstr "$d$s knots"
 
-#: ../src/extension.js:1091
+#: ../src/extension.js:1125
 msgid "$d$s mph"
 msgstr "$d$s mph"
 
-#: ../src/extension.js:1095
+#: ../src/extension.js:1129
 msgid "$d$s km/h"
 msgstr "$d$s km/h"
 
-#: ../src/extension.js:1099
+#: ../src/extension.js:1133
 msgid "$d$s m/s"
 msgstr "$d$s m/s"
 
-#: ../src/extension.js:1103
+#: ../src/extension.js:1137
 msgid "$dBeaufort $s"
 msgstr "$dBeaufort $s"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 16:54+0200\n"
+"POT-Creation-Date: 2013-10-23 16:23+0200\n"
 "PO-Revision-Date: 2013-02-14 03:49+0100\n"
 "Last-Translator: Christian METZLER (Neroth) <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -17,202 +17,202 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../src/extension.js:223 ../src/extension.js:231 ../src/extension.js:239
-#: ../src/extension.js:247 ../src/extension.js:550
+#: ../src/extension.js:236 ../src/extension.js:244 ../src/extension.js:252
+#: ../src/extension.js:260 ../src/extension.js:565
 #, fuzzy
 msgid "Weather"
 msgstr "Einstellungen für Wetter"
 
-#: ../src/extension.js:225
+#: ../src/extension.js:238
 msgid "No location configured"
 msgstr ""
 
-#: ../src/extension.js:233
+#: ../src/extension.js:246
 #, fuzzy
 msgid "Loading weather"
 msgstr "Lade Wettervorhersage ..."
 
-#: ../src/extension.js:249
+#: ../src/extension.js:262
 #, fuzzy
 msgid "Weather extension ready"
 msgstr "Einstellungen für Wetter"
 
-#: ../src/extension.js:439
+#: ../src/extension.js:461
 msgid "Today"
 msgstr "Heute"
 
-#: ../src/extension.js:445
+#: ../src/extension.js:465
 msgid "Tomorrow"
 msgstr "Morgen"
 
-#: ../src/extension.js:451
+#: ../src/extension.js:469
 msgid "Yesterday"
 msgstr "Gestern"
 
-#: ../src/extension.js:613
+#: ../src/extension.js:629
 msgid "Locations"
 msgstr "Standorte"
 
-#: ../src/extension.js:617
+#: ../src/extension.js:633
 #, fuzzy
 msgid "Reload Weather Information"
 msgstr "Aktualisiere Wetterdaten"
 
-#: ../src/extension.js:622
+#: ../src/extension.js:638
 msgid "Weather Settings"
 msgstr "Einstellungen für Wetter"
 
-#: ../src/extension.js:785
+#: ../src/extension.js:801
 #, fuzzy
 msgid "No weather information"
 msgstr "Aktualisiere Wetterdaten"
 
-#: ../src/extension.js:787
+#: ../src/extension.js:803
 #, fuzzy, python-format
 msgid "No weather information for %s"
 msgstr "Aktualisiere Wetterdaten"
 
-#: ../src/extension.js:872
+#: ../src/extension.js:888
 #, fuzzy
 msgid "Feels like"
 msgstr "Gefühlte Temperatur:"
 
-#: ../src/extension.js:874
+#: ../src/extension.js:890
 msgid "Visibility"
 msgstr ""
 
-#: ../src/extension.js:876
+#: ../src/extension.js:892
 #, fuzzy
 msgid "Humidity"
 msgstr "Luftfeuchtigkeit:"
 
-#: ../src/extension.js:878
+#: ../src/extension.js:894
 #, fuzzy
 msgid "Pressure"
 msgstr "Luftdruck:"
 
-#: ../src/extension.js:880
+#: ../src/extension.js:896
 #, fuzzy
 msgid "Wind"
 msgstr "Windgeschwindigkeit:"
 
-#: ../src/extension.js:900
+#: ../src/extension.js:916
 #, fuzzy
 msgid "No forecast information"
 msgstr "Aktualisiere Wetterdaten"
 
-#: ../src/extension.js:1038
+#: ../src/extension.js:1076
 #, python-format
 msgid "%s °F"
 msgstr ""
 
-#: ../src/extension.js:1042
+#: ../src/extension.js:1080
 #, python-format
 msgid "%s °C"
 msgstr ""
 
-#: ../src/extension.js:1046
+#: ../src/extension.js:1084
 #, python-format
 msgid "%s K"
 msgstr ""
 
-#: ../src/extension.js:1052 ../src/extension.js:1105
+#: ../src/extension.js:1090 ../src/extension.js:1143
 msgid "Unknown"
 msgstr ""
 
-#: ../src/extension.js:1069 ../src/extension.js:1072
+#: ../src/extension.js:1107 ../src/extension.js:1110
 msgid "VAR"
 msgstr ""
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1110
 msgid "N"
 msgstr "N"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1110
 #, fuzzy
 msgid "NNE"
 msgstr "NO"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1110
 msgid "NE"
 msgstr "NO"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1110
 #, fuzzy
 msgid "ENE"
 msgstr "NO"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1110
 msgid "E"
 msgstr "O"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1110
 #, fuzzy
 msgid "ESE"
 msgstr "SO"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1110
 msgid "SE"
 msgstr "SO"
 
-#: ../src/extension.js:1072
+#: ../src/extension.js:1110
 #, fuzzy
 msgid "SSE"
 msgstr "SO"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1111
 msgid "S"
 msgstr "S"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1111
 #, fuzzy
 msgid "SSW"
 msgstr "SW"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1111
 msgid "SW"
 msgstr "SW"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1111
 #, fuzzy
 msgid "WSW"
 msgstr "SW"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1111
 msgid "W"
 msgstr "W"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1111
 #, fuzzy
 msgid "WNW"
 msgstr "NW"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1111
 msgid "NW"
 msgstr "NW"
 
-#: ../src/extension.js:1073
+#: ../src/extension.js:1111
 #, fuzzy
 msgid "NNW"
 msgstr "NW"
 
-#: ../src/extension.js:1083
+#: ../src/extension.js:1121
 msgid "$d$s knots"
 msgstr ""
 
-#: ../src/extension.js:1087
+#: ../src/extension.js:1125
 msgid "$d$s mph"
 msgstr ""
 
-#: ../src/extension.js:1091
+#: ../src/extension.js:1129
 msgid "$d$s km/h"
 msgstr ""
 
-#: ../src/extension.js:1095
+#: ../src/extension.js:1133
 msgid "$d$s m/s"
 msgstr ""
 
-#: ../src/extension.js:1099
+#: ../src/extension.js:1137
 msgid "$dBeaufort $s"
 msgstr ""
 
@@ -268,11 +268,11 @@ msgstr "Textanzeige im Panel"
 msgid "Debug the extension"
 msgstr ""
 
-#: ../src/prefs.js:320
+#: ../src/prefs.js:321
 msgid "Name of the city"
 msgstr "Name der Ortschaft"
 
-#: ../src/prefs.js:378
+#: ../src/prefs.js:379
 #, python-format
 msgid "Remove %s ?"
 msgstr "Enferne %s ?"
