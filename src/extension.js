@@ -51,7 +51,6 @@ const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
 const Pango = imports.gi.Pango;
-const EXTENSIONDIR = Me.dir.get_path();
 
 // Settings
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
@@ -129,7 +128,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 			if(typeof this.logfile == "undefined")
 			{
-			this.logfile = Gio.file_new_for_path(EXTENSIONDIR+"/weather.log");
+			this.logfile = Gio.file_new_for_path(GLib.get_home_dir()+"/.weather-extension.log");
 				if(this.logfile.query_exists(null))
 				this.logfile.delete(null);
 			}

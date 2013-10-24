@@ -41,8 +41,6 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
-const EXTENSIONDIR = Me.dir.get_path();
-
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_GWEATHER_SETTINGS_SCHEMA = 'org.gnome.GWeather';
 const WEATHER_TEMPERATURE_UNIT_KEY = 'temperature-unit';		// GWeather setting
@@ -79,7 +77,7 @@ Extends: Gtk.Box,
 	{
 		if(typeof __logfile__ == "undefined")
 		{
-		__logfile__ = Gio.file_new_for_path(EXTENSIONDIR+"/weather-prefs.log");
+		__logfile__ = Gio.file_new_for_path(GLib.get_home_dir()+"/.weather-extension-prefs.log");
 			if(__logfile__.query_exists(null))
 			__logfile__.delete(null);
 		}
