@@ -344,9 +344,13 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		let fuc = (first || update || cityVar);
 		let di_up = (first)?"displayed":"updated";
 
+			if(fuc || tempUnitVar)
+			{			
+			this.forecast = this.loadForecast();							this.status(this.forecast.length+" forecast");
+			}
+
 			if(fuc)
 			{
-			this.forecast = this.loadForecast();							this.status(this.forecast.length+" forecast");
 			this.rebuildCurrentItem(1);
 			this.rebuildForecastItem(this.forecast.length);
 			this.rebuildAttributionItem(this.info.get_attribution());
