@@ -794,6 +794,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			this.UI.attribution.show();
 			else
 			this.UI.attribution.hide();
+		return 0;
 		},
 
 		rebuildCurrentItem : function(n)
@@ -1169,6 +1170,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		let that = this;
 		this.InterfaceSettings = Convenience.getSettings("org.gnome.desktop.interface");
 		this.InterfaceSettingsC = this.InterfaceSettings.connect("changed",function(){that.status("**** INTERFACE SETTING CHANGED ("+arguments[1]+")  ****");that.settingsChanged();});
+		return 0;
 		},
 
 		settingsChanged : function()
@@ -1243,7 +1245,8 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 			if(!this.settings)
 			this.loadConfig();
-		return this.settings.set_boolean(WEATHER_WIND_DIRECTION_KEY,v);
+		this.settings.set_boolean(WEATHER_WIND_DIRECTION_KEY,v);
+		return 0;
 		},
 
 		get distance_units()
