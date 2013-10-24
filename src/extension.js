@@ -653,7 +653,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			else
 			this.UI.reloadButton.actor.hide();
 
-		let oldPosition = this.variation("position_in_panel",1);
+		let oldPosition = this.past.position_in_panel;
 
 			if(this.variation("position_in_panel"))
 			{
