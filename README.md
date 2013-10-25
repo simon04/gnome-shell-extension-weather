@@ -33,14 +33,6 @@ Add the PPA *ppa:gnome-shell-extensions* to your source list, update the package
 	sudo apt-get update
 	sudo apt-get install gnome-shell-extension-weather
 
-### [Debian](http://packages.debian.org/source/unstable/gnome-shell-extension-weather)
-
-For Debian "Wheezy" 7, add the (official backports archive)[http://backports.debian.org/Instructions/] to your sources list. This step is not needed for Debian "Jessie" or "Sid".
-
-Then install the package through APT:
-
-	sudo apt-get install gnome-shell-extension-weather
-
 ### [Fedora](http://rpmfusion.org/)
 
 Packages for Fedora are available in the [RPM Fusion](http://rpmfusion.org/) repositories. If these are not enabled on your system, please install them through the following command (root password required):
