@@ -1100,9 +1100,14 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		{
 		let that = this;
 		let unit = this.speed_units;
+
 		let wind = a;
 			if(!a)
 			wind = [this.info.get_value_wind(unit)[1], this.info.get_value_wind(unit)[2]];
+
+			if(!wind[0])
+			return "-";
+
 		let v = parseFloat(Math.round(wind[0]*10)/10).toLocaleString();
 		let d = wind[1];
 
