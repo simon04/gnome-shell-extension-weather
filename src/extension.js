@@ -271,6 +271,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			if(!this.info.is_valid())
 			{
 			this.weatherStatus("error");								this.status("Informations is invalid");
+			this.build = 0;
 			return 0;
 			}
 
