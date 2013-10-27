@@ -89,7 +89,7 @@ You can also use *dconf-editor* or *gsettings* to configure the extension throug
 
 To debug the extension, active the switch `Debug extension` in the settings:
 
-You have now two new file (".weather-extension.log" and ".weather-extension-prefs.log") in your home dir.
+You have now two new file ("weather-extension.log" and "weather-extension-prefs.log") in your user cache dir (~/.cache/).
 
 ----
 

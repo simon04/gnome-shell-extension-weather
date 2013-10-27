@@ -78,7 +78,7 @@ Extends: Gtk.Box,
 	{
 		if(typeof __logfile__ == "undefined")
 		{
-		__logfile__ = Gio.file_new_for_path(GLib.get_home_dir()+"/.weather-extension-prefs.log");
+		__logfile__ = Gio.file_new_for_path(GLib.get_user_cache_dir()+"/weather-extension-prefs.log");
 			if(__logfile__.query_exists(null))
 			__logfile__.delete(null);
 		}
