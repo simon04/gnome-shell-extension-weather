@@ -40,6 +40,7 @@ const Lang = imports.lang;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
+const EXTENSIONDIR = Me.dir.get_path();
 
 const WEATHER_SETTINGS_SCHEMA = 'org.gnome.shell.extensions.weather';
 const WEATHER_GWEATHER_SETTINGS_SCHEMA = 'org.gnome.GWeather';
