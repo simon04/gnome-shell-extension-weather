@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-23 16:23+0200\n"
+"POT-Creation-Date: 2013-10-27 14:19-0200\n"
 "PO-Revision-Date: 2013-08-10 18:19+0500\n"
 "Last-Translator: Timon <timosha@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
@@ -21,244 +21,244 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../src/extension.js:236 ../src/extension.js:244 ../src/extension.js:252
-#: ../src/extension.js:260 ../src/extension.js:565
+#: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
+#: ../src/extension.js:259 ../src/extension.js:569
 msgid "Weather"
 msgstr "Погода"
 
-#: ../src/extension.js:238
+#: ../src/extension.js:237
 msgid "No location configured"
 msgstr "Местоположение не указано"
 
-#: ../src/extension.js:246
+#: ../src/extension.js:245
 msgid "Loading weather"
 msgstr "Загрузка информации о погоде"
 
-#: ../src/extension.js:262
+#: ../src/extension.js:261
 msgid "Weather extension ready"
 msgstr "Апплет погоды готов"
 
-#: ../src/extension.js:461
+#: ../src/extension.js:465
 msgid "Today"
 msgstr "Сегодня"
 
-#: ../src/extension.js:465
+#: ../src/extension.js:469
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: ../src/extension.js:469
+#: ../src/extension.js:473
 msgid "Yesterday"
 msgstr "Вчера"
 
-#: ../src/extension.js:629
+#: ../src/extension.js:633
 msgid "Locations"
 msgstr "Города"
 
-#: ../src/extension.js:633
+#: ../src/extension.js:637
 msgid "Reload Weather Information"
 msgstr "Обновить информацию о погоде"
 
-#: ../src/extension.js:638
+#: ../src/extension.js:642
 msgid "Weather Settings"
 msgstr "Настройки апплета погоды"
 
-#: ../src/extension.js:801
+#: ../src/extension.js:806
 msgid "No weather information"
 msgstr "Нет информации о погоде"
 
-#: ../src/extension.js:803
+#: ../src/extension.js:808
 #, python-format
 msgid "No weather information for %s"
 msgstr "Нет информации о погоде для %s"
 
-#: ../src/extension.js:888
+#: ../src/extension.js:893
 msgid "Feels like"
 msgstr "Ощущаемая температура"
 
-#: ../src/extension.js:890
+#: ../src/extension.js:895
 msgid "Visibility"
 msgstr "Видимость"
 
-#: ../src/extension.js:892
+#: ../src/extension.js:897
 msgid "Humidity"
 msgstr "Влажность"
 
-#: ../src/extension.js:894
+#: ../src/extension.js:899
 msgid "Pressure"
 msgstr "Давление"
 
-#: ../src/extension.js:896
+#: ../src/extension.js:901
 msgid "Wind"
 msgstr "Ветер"
 
-#: ../src/extension.js:916
+#: ../src/extension.js:921
 msgid "No forecast information"
 msgstr "Нет инормации о прогнозе погоды"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1081
 #, python-format
 msgid "%s °F"
 msgstr "%s °F"
 
-#: ../src/extension.js:1080
+#: ../src/extension.js:1085
 #, python-format
 msgid "%s °C"
 msgstr "%s °C"
 
-#: ../src/extension.js:1084
+#: ../src/extension.js:1089
 #, python-format
 msgid "%s K"
 msgstr "%s К"
 
-#: ../src/extension.js:1090 ../src/extension.js:1143
+#: ../src/extension.js:1095 ../src/extension.js:1153
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: ../src/extension.js:1107 ../src/extension.js:1110
+#: ../src/extension.js:1117 ../src/extension.js:1120
 msgid "VAR"
 msgstr "ПЕР"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "N"
 msgstr "С"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "NNE"
 msgstr "ССВ"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "NE"
 msgstr "СВ"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "ENE"
 msgstr "ВСВ"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "E"
 msgstr "В"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "ESE"
 msgstr "ВЮВ"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "SE"
 msgstr "ЮВ"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "SSE"
 msgstr "ЮЮВ"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "S"
 msgstr "Ю"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "SSW"
 msgstr "ЮЮЗ"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "SW"
 msgstr "ЮЗ"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "WSW"
 msgstr "ЗЮЗ"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "W"
 msgstr "З"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "WNW"
 msgstr "ЗСЗ"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "NW"
 msgstr "СЗ"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "NNW"
 msgstr "ССВ"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1131
 msgid "$d$s knots"
 msgstr "$d$s узлов"
 
-#: ../src/extension.js:1125
+#: ../src/extension.js:1135
 msgid "$d$s mph"
 msgstr "$d$s миль/ч"
 
-#: ../src/extension.js:1129
+#: ../src/extension.js:1139
 msgid "$d$s km/h"
 msgstr "$d$s км/ч"
 
-#: ../src/extension.js:1133
+#: ../src/extension.js:1143
 msgid "$d$s m/s"
 msgstr "$d$s м/с"
 
-#: ../src/extension.js:1137
+#: ../src/extension.js:1147
 msgid "$dBeaufort $s"
 msgstr "$dБофорт $s"
 
-#: ../src/prefs.js:144
+#: ../src/prefs.js:143
 msgid "Temperature Unit"
 msgstr "Единицы измерения температуры"
 
-#: ../src/prefs.js:146
+#: ../src/prefs.js:145
 msgid "Wind Speed Unit"
 msgstr "Единицы измерения скорости ветра"
 
-#: ../src/prefs.js:148
+#: ../src/prefs.js:147
 msgid "Pressure Unit"
 msgstr "Единицы измерения давления"
 
-#: ../src/prefs.js:150
+#: ../src/prefs.js:149
 msgid "Distance Unit"
 msgstr "Единицы измерения расстояния"
 
-#: ../src/prefs.js:152
+#: ../src/prefs.js:151
 msgid "Position in Panel"
 msgstr "Положение на панели"
 
-#: ../src/prefs.js:153
+#: ../src/prefs.js:152
 msgid "Center"
 msgstr "По центру"
 
-#: ../src/prefs.js:153
+#: ../src/prefs.js:152
 msgid "Right"
 msgstr "Справа"
 
-#: ../src/prefs.js:153
+#: ../src/prefs.js:152
 msgid "Left"
 msgstr "Слева"
 
-#: ../src/prefs.js:154
+#: ../src/prefs.js:153
 msgid "Wind Direction by Arrows"
 msgstr "Отображать направление ветра стрелками"
 
-#: ../src/prefs.js:156
+#: ../src/prefs.js:155
 msgid "Symbolic Icons"
 msgstr "Использовать символические значки"
 
-#: ../src/prefs.js:158
+#: ../src/prefs.js:157
 msgid "Temperature in Panel"
 msgstr "Отображать температуру на панели"
 
-#: ../src/prefs.js:160
+#: ../src/prefs.js:159
 msgid "Conditions in Panel"
 msgstr "Отображать погодные условия на панели"
 
-#: ../src/prefs.js:162
+#: ../src/prefs.js:161
 msgid "Debug the extension"
 msgstr "Отладка расширения"
 
-#: ../src/prefs.js:321
+#: ../src/prefs.js:320
 msgid "Name of the city"
 msgstr "Название города"
 
-#: ../src/prefs.js:379
+#: ../src/prefs.js:378
 #, python-format
 msgid "Remove %s ?"
 msgstr "Удалить %s ?"
