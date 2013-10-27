@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-23 16:23+0200\n"
+"POT-Creation-Date: 2013-10-27 14:19-0200\n"
 "PO-Revision-Date: 2012-06-17 17:04+0700\n"
 "Last-Translator: Ngô Trung <ndtrung4419@gmail.com>\n"
 "Language-Team: \n"
@@ -17,263 +17,263 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/extension.js:236 ../src/extension.js:244 ../src/extension.js:252
-#: ../src/extension.js:260 ../src/extension.js:565
+#: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
+#: ../src/extension.js:259 ../src/extension.js:569
 #, fuzzy
 msgid "Weather"
 msgstr "Thiết lập thời tiết"
 
-#: ../src/extension.js:238
+#: ../src/extension.js:237
 msgid "No location configured"
 msgstr ""
 
-#: ../src/extension.js:246
+#: ../src/extension.js:245
 #, fuzzy
 msgid "Loading weather"
 msgstr "Đang tải dữ liệu dự báo thời tiết..."
 
-#: ../src/extension.js:262
+#: ../src/extension.js:261
 #, fuzzy
 msgid "Weather extension ready"
 msgstr "Thiết lập thời tiết"
 
-#: ../src/extension.js:461
+#: ../src/extension.js:465
 msgid "Today"
 msgstr "Hôm nay"
 
-#: ../src/extension.js:465
+#: ../src/extension.js:469
 msgid "Tomorrow"
 msgstr "Ngày mai"
 
-#: ../src/extension.js:469
+#: ../src/extension.js:473
 msgid "Yesterday"
 msgstr "Hôm qua"
 
-#: ../src/extension.js:629
+#: ../src/extension.js:633
 msgid "Locations"
 msgstr ""
 
-#: ../src/extension.js:633
+#: ../src/extension.js:637
 #, fuzzy
 msgid "Reload Weather Information"
 msgstr "Tải lại dữ liệu thời tiết"
 
-#: ../src/extension.js:638
+#: ../src/extension.js:642
 msgid "Weather Settings"
 msgstr "Thiết lập thời tiết"
 
-#: ../src/extension.js:801
+#: ../src/extension.js:806
 #, fuzzy
 msgid "No weather information"
 msgstr "Tải lại dữ liệu thời tiết"
 
-#: ../src/extension.js:803
+#: ../src/extension.js:808
 #, fuzzy, python-format
 msgid "No weather information for %s"
 msgstr "Tải lại dữ liệu thời tiết"
 
-#: ../src/extension.js:888
+#: ../src/extension.js:893
 #, fuzzy
 msgid "Feels like"
 msgstr "Cảm giác ngoài trời:"
 
-#: ../src/extension.js:890
+#: ../src/extension.js:895
 msgid "Visibility"
 msgstr ""
 
-#: ../src/extension.js:892
+#: ../src/extension.js:897
 #, fuzzy
 msgid "Humidity"
 msgstr "Độ ẩm:"
 
-#: ../src/extension.js:894
+#: ../src/extension.js:899
 #, fuzzy
 msgid "Pressure"
 msgstr "Áp suất:"
 
-#: ../src/extension.js:896
+#: ../src/extension.js:901
 #, fuzzy
 msgid "Wind"
 msgstr "Gió:"
 
-#: ../src/extension.js:916
+#: ../src/extension.js:921
 #, fuzzy
 msgid "No forecast information"
 msgstr "Tải lại dữ liệu thời tiết"
 
-#: ../src/extension.js:1076
+#: ../src/extension.js:1081
 #, python-format
 msgid "%s °F"
 msgstr ""
 
-#: ../src/extension.js:1080
+#: ../src/extension.js:1085
 #, python-format
 msgid "%s °C"
 msgstr ""
 
-#: ../src/extension.js:1084
+#: ../src/extension.js:1089
 #, python-format
 msgid "%s K"
 msgstr ""
 
-#: ../src/extension.js:1090 ../src/extension.js:1143
+#: ../src/extension.js:1095 ../src/extension.js:1153
 msgid "Unknown"
 msgstr ""
 
-#: ../src/extension.js:1107 ../src/extension.js:1110
+#: ../src/extension.js:1117 ../src/extension.js:1120
 msgid "VAR"
 msgstr ""
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "N"
 msgstr "B"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 #, fuzzy
 msgid "NNE"
 msgstr "ĐB"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "NE"
 msgstr "ĐB"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 #, fuzzy
 msgid "ENE"
 msgstr "ĐB"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "E"
 msgstr "Đ"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 #, fuzzy
 msgid "ESE"
 msgstr "ĐN"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 msgid "SE"
 msgstr "ĐN"
 
-#: ../src/extension.js:1110
+#: ../src/extension.js:1120
 #, fuzzy
 msgid "SSE"
 msgstr "ĐN"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "S"
 msgstr "N"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 #, fuzzy
 msgid "SSW"
 msgstr "TN"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "SW"
 msgstr "TN"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 #, fuzzy
 msgid "WSW"
 msgstr "TN"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "W"
 msgstr "T"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 #, fuzzy
 msgid "WNW"
 msgstr "TB"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 msgid "NW"
 msgstr "TB"
 
-#: ../src/extension.js:1111
+#: ../src/extension.js:1121
 #, fuzzy
 msgid "NNW"
 msgstr "TB"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1131
 msgid "$d$s knots"
 msgstr ""
 
-#: ../src/extension.js:1125
+#: ../src/extension.js:1135
 msgid "$d$s mph"
 msgstr ""
 
-#: ../src/extension.js:1129
+#: ../src/extension.js:1139
 msgid "$d$s km/h"
 msgstr ""
 
-#: ../src/extension.js:1133
+#: ../src/extension.js:1143
 msgid "$d$s m/s"
 msgstr ""
 
-#: ../src/extension.js:1137
+#: ../src/extension.js:1147
 msgid "$dBeaufort $s"
 msgstr ""
 
-#: ../src/prefs.js:144
+#: ../src/prefs.js:143
 msgid "Temperature Unit"
 msgstr "Đơn vị đo nhiệt độ"
 
-#: ../src/prefs.js:146
+#: ../src/prefs.js:145
 msgid "Wind Speed Unit"
 msgstr "Đơn vị tốc độ gió"
 
-#: ../src/prefs.js:148
+#: ../src/prefs.js:147
 #, fuzzy
 msgid "Pressure Unit"
 msgstr "Áp suất:"
 
-#: ../src/prefs.js:150
+#: ../src/prefs.js:149
 msgid "Distance Unit"
 msgstr ""
 
-#: ../src/prefs.js:152
+#: ../src/prefs.js:151
 msgid "Position in Panel"
 msgstr "Vị trí trên thanh pa-nen"
 
-#: ../src/prefs.js:153
+#: ../src/prefs.js:152
 msgid "Center"
 msgstr "Ở giữa"
 
-#: ../src/prefs.js:153
+#: ../src/prefs.js:152
 msgid "Right"
 msgstr "Bên phải"
 
-#: ../src/prefs.js:153
+#: ../src/prefs.js:152
 msgid "Left"
 msgstr "Bên trái"
 
-#: ../src/prefs.js:154
+#: ../src/prefs.js:153
 msgid "Wind Direction by Arrows"
 msgstr ""
 
-#: ../src/prefs.js:156
+#: ../src/prefs.js:155
 msgid "Symbolic Icons"
 msgstr "Biểu tượng đơn giản"
 
-#: ../src/prefs.js:158
+#: ../src/prefs.js:157
 msgid "Temperature in Panel"
 msgstr "Hiện nhiệt độ trên pa-nen"
 
-#: ../src/prefs.js:160
+#: ../src/prefs.js:159
 msgid "Conditions in Panel"
 msgstr "Hiện thời tiết trên pa-nen"
 
-#: ../src/prefs.js:162
+#: ../src/prefs.js:161
 msgid "Debug the extension"
 msgstr ""
 
-#: ../src/prefs.js:321
+#: ../src/prefs.js:320
 msgid "Name of the city"
 msgstr "Tên thành phố"
 
-#: ../src/prefs.js:379
+#: ../src/prefs.js:378
 #, python-format
 msgid "Remove %s ?"
 msgstr "Bạn có muốn xóa %s?"
