@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 19:22+0330\n"
-"PO-Revision-Date: 2013-11-13 20:16+0330\n"
+"PO-Revision-Date: 2013-11-14 20:22+0330\n"
 "Last-Translator: نصراله نوری <nanopqr@gmail.com>\n"
 "Language-Team: فارسی <>\n"
 "Language: \n"
@@ -123,31 +123,31 @@ msgstr "ش"
 
 #: ../src/extension.js:1120
 msgid "NNE"
-msgstr "ش ش‌شرق"
+msgstr "ش ش‌خ"
 
 #: ../src/extension.js:1120
 msgid "NE"
-msgstr "ش‌شرق"
+msgstr "ش‌خ"
 
 #: ../src/extension.js:1120
 msgid "ENE"
-msgstr "شرق ش‌شرق"
+msgstr "خ ش‌خ"
 
 #: ../src/extension.js:1120
 msgid "E"
-msgstr "شرق"
+msgstr "خ"
 
 #: ../src/extension.js:1120
 msgid "ESE"
-msgstr "شرق ج‌شرق"
+msgstr "خ ج‌خ"
 
 #: ../src/extension.js:1120
 msgid "SE"
-msgstr "ج‌شرق"
+msgstr "ج‌خ"
 
 #: ../src/extension.js:1120
 msgid "SSE"
-msgstr "ج ج‌شرق"
+msgstr "ج ج‌خ"
 
 #: ../src/extension.js:1121
 msgid "S"
@@ -155,31 +155,31 @@ msgstr "ج"
 
 #: ../src/extension.js:1121
 msgid "SSW"
-msgstr "ج ج‌غ"
+msgstr "ج ج‌ب"
 
 #: ../src/extension.js:1121
 msgid "SW"
-msgstr "ج‌غ"
+msgstr "ج‌ب"
 
 #: ../src/extension.js:1121
 msgid "WSW"
-msgstr "غ ج‌غ"
+msgstr "ب ج‌ب"
 
 #: ../src/extension.js:1121
 msgid "W"
-msgstr "غ"
+msgstr "ب"
 
 #: ../src/extension.js:1121
 msgid "WNW"
-msgstr "غ ش‌غ"
+msgstr "ب ش‌ب"
 
 #: ../src/extension.js:1121
 msgid "NW"
-msgstr "ش‌غ"
+msgstr "ش‌ب"
 
 #: ../src/extension.js:1121
 msgid "NNW"
-msgstr "ش ش‌غ"
+msgstr "ش ش‌ب"
 
 #: ../src/extension.js:1131
 msgid "$d$s knots"
@@ -199,7 +199,7 @@ msgstr "$d$s متر بر ثانیه"
 
 #: ../src/extension.js:1147
 msgid "$dBeaufort $s"
-msgstr "$dبی‌فورت $s"
+msgstr "$dبیوفورت $s"
 
 #: ../src/prefs.js:143
 msgid "Temperature Unit"
@@ -223,7 +223,7 @@ msgstr "جای‌گاه در پنل"
 
 #: ../src/prefs.js:152
 msgid "Center"
-msgstr "مرکز"
+msgstr "میانه"
 
 #: ../src/prefs.js:152
 msgid "Right"
@@ -247,7 +247,7 @@ msgstr "دما در پنل"
 
 #: ../src/prefs.js:159
 msgid "Conditions in Panel"
-msgstr "شرایط در پنل"
+msgstr "چگونگی در پنل"
 
 #: ../src/prefs.js:161
 msgid "Debug the extension"
