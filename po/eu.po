@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr "Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-17 12:58+0100\n"
+"PO-Revision-Date: 2013-11-17 18:00+0100\n"
+"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
+"Language-Team: Basque <librezale@librezale.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
+#: ../src/extension.js:259 ../src/extension.js:569
+msgid "Weather"
+msgstr "Eguraldia"
+
+#: ../src/extension.js:237
+msgid "No location configured"
+msgstr "Ez da kokapenik konfiguratu"
+
+#: ../src/extension.js:245
+msgid "Loading weather"
+msgstr "Eguraldia kargatzen"
+
+#: ../src/extension.js:261
+msgid "Weather extension ready"
+msgstr "Eguraldiaren hedapena prest"
+
+#: ../src/extension.js:465
+msgid "Today"
+msgstr "Gaur"
+
+#: ../src/extension.js:469
+msgid "Tomorrow"
+msgstr "Bihar"
+
+#: ../src/extension.js:473
+msgid "Yesterday"
+msgstr "Atzo"
+
+#: ../src/extension.js:633
+msgid "Locations"
+msgstr "Kokapenak"
+
+#: ../src/extension.js:637
+msgid "Reload Weather Information"
+msgstr "Birkargatu eguraldi-informazioa"
+
+#: ../src/extension.js:642
+msgid "Weather Settings"
+msgstr "Eguraldi-ezarpenak"
+
+#: ../src/extension.js:806
+msgid "No weather information"
+msgstr "Ez dago eguraldi-informaziorik"
+
+#: ../src/extension.js:808
+#, python-format
+msgid "No weather information for %s"
+msgstr "Ez dago eguraldi-informaziorik %s kokapenerako"
+
+#: ../src/extension.js:893
+msgid "Feels like"
+msgstr "Sentsazioa"
+
+#: ../src/extension.js:895
+msgid "Visibility"
+msgstr "Ikusgaitasuna"
+
+#: ../src/extension.js:897
+msgid "Humidity"
+msgstr "Hezetasuna"
+
+#: ../src/extension.js:899
+msgid "Pressure"
+msgstr "Presioa"
+
+#: ../src/extension.js:901
+msgid "Wind"
+msgstr "Haizea"
+
+#: ../src/extension.js:921
+msgid "No forecast information"
+msgstr "Ez dago aurreikuspen-informaziorik"
+
+#: ../src/extension.js:1081
+#, python-format
+msgid "%s °F"
+msgstr "%s °F"
+
+#: ../src/extension.js:1085
+#, python-format
+msgid "%s °C"
+msgstr "%s °C"
+
+#: ../src/extension.js:1089
+#, python-format
+msgid "%s K"
+msgstr "%s K"
+
+#: ../src/extension.js:1095 ../src/extension.js:1153
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: ../src/extension.js:1117 ../src/extension.js:1120
+msgid "VAR"
+msgstr ""
+
+#: ../src/extension.js:1120
+msgid "N"
+msgstr "I"
+
+#: ../src/extension.js:1120
+msgid "NNE"
+msgstr "IIE"
+
+#: ../src/extension.js:1120
+msgid "NE"
+msgstr "IE"
+
+#: ../src/extension.js:1120
+msgid "ENE"
+msgstr "EIE"
+
+#: ../src/extension.js:1120
+msgid "E"
+msgstr "E"
+
+#: ../src/extension.js:1120
+msgid "ESE"
+msgstr "EHE"
+
+#: ../src/extension.js:1120
+msgid "SE"
+msgstr "HE"
+
+#: ../src/extension.js:1120
+msgid "SSE"
+msgstr "HHE"
+
+#: ../src/extension.js:1121
+msgid "S"
+msgstr "H"
+
+#: ../src/extension.js:1121
+msgid "SSW"
+msgstr "HHM"
+
+#: ../src/extension.js:1121
+msgid "SW"
+msgstr "HM"
+
+#: ../src/extension.js:1121
+msgid "WSW"
+msgstr "MHM"
+
+#: ../src/extension.js:1121
+msgid "W"
+msgstr "AM"
+
+#: ../src/extension.js:1121
+msgid "WNW"
+msgstr "MIM"
+
+#: ../src/extension.js:1121
+msgid "NW"
+msgstr "MI"
+
+#: ../src/extension.js:1121
+msgid "NNW"
+msgstr "IIM"
+
+#: ../src/extension.js:1131
+msgid "$d$s knots"
+msgstr "$d$s korapilo"
+
+#: ../src/extension.js:1135
+msgid "$d$s mph"
+msgstr "$d$s milia orduko"
+
+#: ../src/extension.js:1139
+msgid "$d$s km/h"
+msgstr "$d$s km/h"
+
+#: ../src/extension.js:1143
+msgid "$d$s m/s"
+msgstr "$d$s m/s"
+
+#: ../src/extension.js:1147
+msgid "$dBeaufort $s"
+msgstr "$dBeaufort $s"
+
+#: ../src/prefs.js:143
+msgid "Temperature Unit"
+msgstr "Tenperatura-unitatea"
+
+#: ../src/prefs.js:145
+msgid "Wind Speed Unit"
+msgstr "Haize-abiaduraren unitatea"
+
+#: ../src/prefs.js:147
+msgid "Pressure Unit"
+msgstr "Presio-unitatea"
+
+#: ../src/prefs.js:149
+msgid "Distance Unit"
+msgstr "Distantzia-unitatea"
+
+#: ../src/prefs.js:151
+msgid "Position in Panel"
+msgstr "Kokapena panelean"
+
+#: ../src/prefs.js:152
+msgid "Center"
+msgstr "Erdia"
+
+#: ../src/prefs.js:152
+msgid "Right"
+msgstr "Eskuina"
+
+#: ../src/prefs.js:152
+msgid "Left"
+msgstr "Ezkerra"
+
+#: ../src/prefs.js:153
+msgid "Wind Direction by Arrows"
+msgstr "Haizearen norabidea gezien bidez"
+
+#: ../src/prefs.js:155
+msgid "Symbolic Icons"
+msgstr "Ikono sinbolikoak"
+
+#: ../src/prefs.js:157
+msgid "Temperature in Panel"
+msgstr "Tenperatura panelean"
+
+#: ../src/prefs.js:159
+msgid "Conditions in Panel"
+msgstr "Baldintzak panelean"
+
+#: ../src/prefs.js:161
+msgid "Debug the extension"
+msgstr "Araztu hedapena"
+
+#: ../src/prefs.js:320
+msgid "Name of the city"
+msgstr "Hiriaren izena"
+
+#: ../src/prefs.js:378
+#, python-format
+msgid "Remove %s ?"
+msgstr "Kendu %s ?"
