@@ -2,6 +2,7 @@
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # Peter van Ieperen <p.v.ieperen77@gmail.com>, 2011.
+# Pjotr <pjotrvertaat@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
@@ -9,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-27 14:01-0400\n"
 "PO-Revision-Date: 2012-01-05 10:00+0200\n"
-"Last-Translator: Peter van Ieperen <p.v.ieperen77@gmail.com>\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -22,19 +23,19 @@ msgstr "..."
 
 #: applet.js:209
 msgid "Click to open"
-msgstr ""
+msgstr "Klik om te openen"
 
 #: applet.js:242
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
 #: applet.js:434
 msgid "Sunrise"
-msgstr ""
+msgstr "Zonsopgang"
 
 #: applet.js:435
 msgid "Sunset"
-msgstr ""
+msgstr "Zonsondergang"
 
 #: applet.js:440
 msgid "Today"
@@ -46,19 +47,19 @@ msgstr "Morgen"
 
 #: applet.js:484
 msgid "Loading current weather ..."
-msgstr "Laden aktueel weer ..."
+msgstr "Huidig weer aan het laden..."
 
 #: applet.js:485
 msgid "Loading future weather ..."
-msgstr "Laden weersverwachting ..."
+msgstr "Weersverwachting aan het laden..."
 
 #: applet.js:507
 msgid "Loading ..."
-msgstr "Laden ..."
+msgstr "Bezig met laden..."
 
 #: applet.js:513
 msgid "Please wait"
-msgstr "Wachten alstublieft"
+msgstr "Een ogenblik geduld alstublieft"
 
 #: applet.js:571
 msgid "Temperature:"
@@ -90,23 +91,23 @@ msgstr "Orkaan"
 
 #: applet.js:785
 msgid "Severe thunderstorms"
-msgstr "Zware onweer"
+msgstr "Zware onweersbuien"
 
 #: applet.js:787
 msgid "Thunderstorms"
-msgstr "Onweer"
+msgstr "Onweersbuien"
 
 #: applet.js:789
 msgid "Mixed rain and snow"
-msgstr "Regen en sneeuw"
+msgstr "Gemengde regen en sneeuw"
 
 #: applet.js:791
 msgid "Mixed rain and sleet"
-msgstr "Regen en hagel"
+msgstr "Gemengde regen en natte sneeuw"
 
 #: applet.js:793
 msgid "Mixed snow and sleet"
-msgstr "Sneeuw en hagel"
+msgstr "Gemengde sneeuw en natte sneeuw"
 
 #: applet.js:795
 msgid "Freezing drizzle"
@@ -134,7 +135,7 @@ msgstr "Lichte sneeuwbuien"
 
 #: applet.js:809
 msgid "Blowing snow"
-msgstr "Sneeuwstorm"
+msgstr "Opwaaiende sneeuw"
 
 #: applet.js:811
 msgid "Snow"
@@ -146,7 +147,7 @@ msgstr "Hagel"
 
 #: applet.js:815
 msgid "Sleet"
-msgstr "Stofhagel"
+msgstr "Natte sneeuw"
 
 #: applet.js:817
 msgid "Dust"
@@ -154,15 +155,15 @@ msgstr "Stof"
 
 #: applet.js:819
 msgid "Foggy"
-msgstr "Nevelig"
+msgstr "Mistig"
 
 #: applet.js:821
 msgid "Haze"
-msgstr "Mistig"
+msgstr "Nevel"
 
 #: applet.js:823
 msgid "Smoky"
-msgstr "Smok"
+msgstr "Nevelig"
 
 #: applet.js:825
 msgid "Blustery"
@@ -174,7 +175,7 @@ msgstr "Winderig"
 
 #: applet.js:829
 msgid "Cold"
-msgstr "IJzig"
+msgstr "Koud"
 
 #: applet.js:831
 msgid "Cloudy"
@@ -182,7 +183,7 @@ msgstr "Bewolkt"
 
 #: applet.js:834
 msgid "Mostly cloudy"
-msgstr "Zwaar bewolkt"
+msgstr "Overwegend bewolkt"
 
 #: applet.js:837 applet.js:863
 msgid "Partly cloudy"
@@ -202,7 +203,7 @@ msgstr "Helder"
 
 #: applet.js:846
 msgid "Mixed rain and hail"
-msgstr "Regen en hagel"
+msgstr "Gemengde regen en hagel"
 
 #: applet.js:848
 msgid "Hot"
@@ -210,15 +211,15 @@ msgstr "Heet"
 
 #: applet.js:850
 msgid "Isolated thunderstorms"
-msgstr "Geïsoleerde onweer"
+msgstr "Plaatselijke onweersbuien"
 
 #: applet.js:853
 msgid "Scattered thunderstorms"
-msgstr "Verspreide onweer"
+msgstr "Verspreide onweersbuien"
 
 #: applet.js:855
 msgid "Scattered showers"
-msgstr "Verspreide buien"
+msgstr "Verspreide regenbuien"
 
 #: applet.js:857 applet.js:861
 msgid "Heavy snow"
@@ -238,7 +239,7 @@ msgstr "Sneeuwbuien"
 
 #: applet.js:869
 msgid "Isolated thundershowers"
-msgstr "Geïsoleerde onweersbuien"
+msgstr "Plaatselijke onweersbuien"
 
 #: applet.js:872
 msgid "Not available"
@@ -274,32 +275,32 @@ msgstr "Zondag"
 
 #: applet.js:882
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: applet.js:882
 msgid "NE"
-msgstr ""
+msgstr "NO"
 
 #: applet.js:882
 msgid "E"
-msgstr ""
+msgstr "O"
 
 #: applet.js:882
 msgid "SE"
-msgstr ""
+msgstr "ZO"
 
 #: applet.js:882
 msgid "S"
-msgstr ""
+msgstr "Z"
 
 #: applet.js:882
 msgid "SW"
-msgstr ""
+msgstr "ZW"
 
 #: applet.js:882
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: applet.js:882
 msgid "NW"
-msgstr ""
+msgstr "NW"
