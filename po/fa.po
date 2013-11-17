@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-13 19:22+0330\n"
-"PO-Revision-Date: 2013-11-14 20:22+0330\n"
+"PO-Revision-Date: 2013-11-16 23:04+0330\n"
 "Last-Translator: نصراله نوری <nanopqr@gmail.com>\n"
 "Language-Team: فارسی <>\n"
 "Language: \n"
@@ -76,7 +76,7 @@ msgstr "همانند"
 
 #: ../src/extension.js:895
 msgid "Visibility"
-msgstr "میدان دید"
+msgstr "دید"
 
 #: ../src/extension.js:897
 msgid "Humidity"
@@ -97,17 +97,17 @@ msgstr "داده‌های پیش‌بینی هواشناسی نیست"
 #: ../src/extension.js:1081
 #, python-format
 msgid "%s °F"
-msgstr "%s °فارنهایت"
+msgstr "%s °F"
 
 #: ../src/extension.js:1085
 #, python-format
 msgid "%s °C"
-msgstr "%s °سانتی‌گراد"
+msgstr "%s °C"
 
 #: ../src/extension.js:1089
 #, python-format
 msgid "%s K"
-msgstr "%s °کلوین"
+msgstr "%s K"
 
 #: ../src/extension.js:1095 ../src/extension.js:1153
 msgid "Unknown"
@@ -183,23 +183,23 @@ msgstr "ش ش‌ب"
 
 #: ../src/extension.js:1131
 msgid "$d$s knots"
-msgstr "$d$s نات"
+msgstr "$d$s knots"
 
 #: ../src/extension.js:1135
 msgid "$d$s mph"
-msgstr "$d$s مایل‌ بر ساعت"
+msgstr "$d$s mph"
 
 #: ../src/extension.js:1139
 msgid "$d$s km/h"
-msgstr "$d$s کیلومتر بر ساعت"
+msgstr "$d$s km/h"
 
 #: ../src/extension.js:1143
 msgid "$d$s m/s"
-msgstr "$d$s متر بر ثانیه"
+msgstr "$d$s m/s"
 
 #: ../src/extension.js:1147
 msgid "$dBeaufort $s"
-msgstr "$dبیوفورت $s"
+msgstr "$dBeaufort $s"
 
 #: ../src/prefs.js:143
 msgid "Temperature Unit"
