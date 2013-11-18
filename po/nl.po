@@ -2,6 +2,7 @@
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # Peter van Ieperen <p.v.ieperen77@gmail.com>, 2011.
+# Pjotr <pjotrvertaalt@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
@@ -9,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-27 14:19-0200\n"
 "PO-Revision-Date: 2012-05-13 22:39+0100\n"
-"Last-Translator: Christian METZLER <neroth@xeked.com>\n"
+"Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -19,20 +20,19 @@ msgstr ""
 #: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
 #: ../src/extension.js:259 ../src/extension.js:569
 msgid "Weather"
-msgstr ""
+msgstr "Weer"
 
 #: ../src/extension.js:237
 msgid "No location configured"
-msgstr ""
+msgstr "Geen lokatie ingesteld"
 
 #: ../src/extension.js:245
-#, fuzzy
 msgid "Loading weather"
-msgstr "Laden weersverwachting ..."
+msgstr "Laden van weer"
 
 #: ../src/extension.js:261
 msgid "Weather extension ready"
-msgstr ""
+msgstr "Weerextensie gereed"
 
 #: ../src/extension.js:465
 msgid "Today"
@@ -44,230 +44,226 @@ msgstr "Morgen"
 
 #: ../src/extension.js:473
 msgid "Yesterday"
-msgstr ""
+msgstr "Gisteren"
 
 #: ../src/extension.js:633
 msgid "Locations"
-msgstr ""
+msgstr "Lokaties"
 
 #: ../src/extension.js:637
 msgid "Reload Weather Information"
-msgstr ""
+msgstr "Weerinformatie herladen"
 
 #: ../src/extension.js:642
 msgid "Weather Settings"
-msgstr ""
+msgstr "Weerinstellingen"
 
 #: ../src/extension.js:806
 msgid "No weather information"
-msgstr ""
+msgstr "Geen weerinformatie"
 
 #: ../src/extension.js:808
 #, python-format
 msgid "No weather information for %s"
-msgstr ""
+msgstr "Geen weerinformatie voor %s"
 
 #: ../src/extension.js:893
 msgid "Feels like"
-msgstr ""
+msgstr "Voelt aan als"
 
 #: ../src/extension.js:895
 msgid "Visibility"
-msgstr ""
+msgstr "Zicht"
 
 #: ../src/extension.js:897
-#, fuzzy
 msgid "Humidity"
 msgstr "Luchtvochtigheid:"
 
 #: ../src/extension.js:899
-#, fuzzy
 msgid "Pressure"
 msgstr "Luchtdruk:"
 
 #: ../src/extension.js:901
-#, fuzzy
 msgid "Wind"
 msgstr "Wind:"
 
 #: ../src/extension.js:921
 msgid "No forecast information"
-msgstr ""
+msgstr "Geen voorspellingsinformatie"
 
 #: ../src/extension.js:1081
 #, python-format
 msgid "%s °F"
-msgstr ""
+msgstr "%s °F"
 
 #: ../src/extension.js:1085
 #, python-format
 msgid "%s °C"
-msgstr ""
+msgstr "%s °C"
 
 #: ../src/extension.js:1089
 #, python-format
 msgid "%s K"
-msgstr ""
+msgstr "%s °K"
 
 #: ../src/extension.js:1095 ../src/extension.js:1153
 msgid "Unknown"
-msgstr ""
+msgstr "Onbekend"
 
 #: ../src/extension.js:1117 ../src/extension.js:1120
 msgid "VAR"
-msgstr ""
+msgstr "VAR"
 
 #: ../src/extension.js:1120
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: ../src/extension.js:1120
 msgid "NNE"
-msgstr ""
+msgstr "NNO"
 
 #: ../src/extension.js:1120
 msgid "NE"
-msgstr ""
+msgstr "NO"
 
 #: ../src/extension.js:1120
 msgid "ENE"
-msgstr ""
+msgstr "ONO"
 
 #: ../src/extension.js:1120
 msgid "E"
-msgstr ""
+msgstr "O"
 
 #: ../src/extension.js:1120
 msgid "ESE"
-msgstr ""
+msgstr "OZO"
 
 #: ../src/extension.js:1120
 msgid "SE"
-msgstr ""
+msgstr "ZO"
 
 #: ../src/extension.js:1120
 msgid "SSE"
-msgstr ""
+msgstr "ZZO"
 
 #: ../src/extension.js:1121
 msgid "S"
-msgstr ""
+msgstr "Z"
 
 #: ../src/extension.js:1121
 msgid "SSW"
-msgstr ""
+msgstr "ZZW"
 
 #: ../src/extension.js:1121
 msgid "SW"
-msgstr ""
+msgstr "ZW"
 
 #: ../src/extension.js:1121
 msgid "WSW"
-msgstr ""
+msgstr "WZW"
 
 #: ../src/extension.js:1121
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: ../src/extension.js:1121
 msgid "WNW"
-msgstr ""
+msgstr "WNW"
 
 #: ../src/extension.js:1121
 msgid "NW"
-msgstr ""
+msgstr "NW"
 
 #: ../src/extension.js:1121
 msgid "NNW"
-msgstr ""
+msgstr "NNW"
 
 #: ../src/extension.js:1131
 msgid "$d$s knots"
-msgstr ""
+msgstr "$d$s knopen"
 
 #: ../src/extension.js:1135
 msgid "$d$s mph"
-msgstr ""
+msgstr "$d$s mijl/u"
 
 #: ../src/extension.js:1139
 msgid "$d$s km/h"
-msgstr ""
+msgstr "$d$s km/u"
 
 #: ../src/extension.js:1143
 msgid "$d$s m/s"
-msgstr ""
+msgstr "$d$s m/s"
 
 #: ../src/extension.js:1147
 msgid "$dBeaufort $s"
-msgstr ""
+msgstr "$dBeaufort $s"
 
 #: ../src/prefs.js:143
 msgid "Temperature Unit"
-msgstr "Temperatuur:"
+msgstr "Temperatuureenheid"
 
 #: ../src/prefs.js:145
 msgid "Wind Speed Unit"
-msgstr ""
+msgstr "Windsnelheideenheid"
 
 #: ../src/prefs.js:147
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "Luchtdruk:"
+msgstr "Luchtdrukeenheid"
 
 #: ../src/prefs.js:149
 msgid "Distance Unit"
-msgstr ""
+msgstr "Afstandeenheid"
 
 #: ../src/prefs.js:151
 msgid "Position in Panel"
-msgstr ""
+msgstr "Positie in werkbalk"
 
 #: ../src/prefs.js:152
 msgid "Center"
-msgstr ""
+msgstr "Midden"
 
 #: ../src/prefs.js:152
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: ../src/prefs.js:152
 msgid "Left"
-msgstr ""
+msgstr "Links"
 
 #: ../src/prefs.js:153
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "Windrichting met pijlen"
 
 #: ../src/prefs.js:155
 msgid "Symbolic Icons"
-msgstr ""
+msgstr "Symbolische pictogrammen"
 
 #: ../src/prefs.js:157
 msgid "Temperature in Panel"
-msgstr "Temperatuur:"
+msgstr "Temperatuur in werkbalk"
 
 #: ../src/prefs.js:159
 msgid "Conditions in Panel"
-msgstr ""
+msgstr "Weersomstandigheden in werkbalk"
 
 #: ../src/prefs.js:161
 msgid "Debug the extension"
-msgstr ""
+msgstr "Doe foutopsporing voor de extensie"
 
 #: ../src/prefs.js:320
 msgid "Name of the city"
-msgstr ""
+msgstr "Naam van de stad"
 
 #: ../src/prefs.js:378
 #, python-format
 msgid "Remove %s ?"
-msgstr ""
+msgstr "%s verwijderen?"
 
 #~ msgid "Please wait"
-#~ msgstr "Wachten alstublieft"
+#~ msgstr "Even wachten alstublieft"
 
 #~ msgid "Loading ..."
-#~ msgstr "Laden ..."
+#~ msgstr "Bezig met laden..."
 
 #~ msgid "..."
 #~ msgstr "..."
@@ -282,19 +278,19 @@ msgstr ""
 #~ msgstr "Orkaan"
 
 #~ msgid "Severe thunderstorms"
-#~ msgstr "Zware onweer"
+#~ msgstr "Zware onweersbuien"
 
 #~ msgid "Thunderstorms"
-#~ msgstr "Onweer"
+#~ msgstr "Onweersbuien"
 
 #~ msgid "Mixed rain and snow"
-#~ msgstr "Regen en sneeuw"
+#~ msgstr "Mengeling van regen en sneeuw"
 
 #~ msgid "Mixed rain and sleet"
-#~ msgstr "Regen en hagel"
+#~ msgstr "Mengeling van regen en natte sneeuw"
 
 #~ msgid "Mixed snow and sleet"
-#~ msgstr "Sneeuw en hagel"
+#~ msgstr "Mengeling van sneeuw en natte sneeuw"
 
 #~ msgid "Freezing drizzle"
 #~ msgstr "Motijzel"
@@ -309,13 +305,13 @@ msgstr ""
 #~ msgstr "Regenbuien"
 
 #~ msgid "Snow flurries"
-#~ msgstr "Lichte sneeuwval"
+#~ msgstr "Sneeuwvlagen"
 
 #~ msgid "Light snow showers"
 #~ msgstr "Lichte sneeuwbuien"
 
 #~ msgid "Blowing snow"
-#~ msgstr "Sneeuwstorm"
+#~ msgstr "Opwaaiende sneeuw"
 
 #~ msgid "Snow"
 #~ msgstr "Sneeuw"
@@ -324,19 +320,19 @@ msgstr ""
 #~ msgstr "Hagel"
 
 #~ msgid "Sleet"
-#~ msgstr "Stofhagel"
+#~ msgstr "Natte sneeuw"
 
 #~ msgid "Dust"
 #~ msgstr "Stof"
 
 #~ msgid "Foggy"
-#~ msgstr "Nevelig"
-
-#~ msgid "Haze"
 #~ msgstr "Mistig"
 
+#~ msgid "Haze"
+#~ msgstr "Nevel"
+
 #~ msgid "Smoky"
-#~ msgstr "Smok"
+#~ msgstr "Rokerig"
 
 #~ msgid "Blustery"
 #~ msgstr "Windvlagen"
@@ -345,13 +341,13 @@ msgstr ""
 #~ msgstr "Winderig"
 
 #~ msgid "Cold"
-#~ msgstr "IJzig"
+#~ msgstr "Koud"
 
 #~ msgid "Cloudy"
 #~ msgstr "Bewolkt"
 
 #~ msgid "Mostly cloudy"
-#~ msgstr "Zwaar bewolkt"
+#~ msgstr "Overwegend bewolkt"
 
 #~ msgid "Partly cloudy"
 #~ msgstr "Deels bewolkt"
@@ -363,19 +359,19 @@ msgstr ""
 #~ msgstr "Zonnig"
 
 #~ msgid "Fair"
-#~ msgstr "Helder"
+#~ msgstr "Mooi"
 
 #~ msgid "Mixed rain and hail"
-#~ msgstr "Regen en hagel"
+#~ msgstr "Mengeling van regen en hagel"
 
 #~ msgid "Hot"
-#~ msgstr "Heet"
+#~ msgstr "Warm"
 
 #~ msgid "Isolated thunderstorms"
-#~ msgstr "Geïsoleerde onweer"
+#~ msgstr "Plaatselijke onweersbuien"
 
 #~ msgid "Scattered thunderstorms"
-#~ msgstr "Verspreide onweer"
+#~ msgstr "Verspreide onweersbuien"
 
 #~ msgid "Scattered showers"
 #~ msgstr "Verspreide buien"
@@ -393,7 +389,7 @@ msgstr ""
 #~ msgstr "Sneeuwbuien"
 
 #~ msgid "Isolated thundershowers"
-#~ msgstr "Geïsoleerde onweersbuien"
+#~ msgstr "Plaatselijke onweersbuien"
 
 #~ msgid "Not available"
 #~ msgstr "Niet beschikbaar"
@@ -420,4 +416,4 @@ msgstr ""
 #~ msgstr "Zaterdag"
 
 #~ msgid "Loading current weather ..."
-#~ msgstr "Laden aktueel weer ..."
+#~ msgstr "Bezig met laden van huidig weer..."
