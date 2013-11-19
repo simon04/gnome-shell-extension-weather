@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-27 14:19-0200\n"
+"POT-Creation-Date: 2013-11-19 16:01+0200\n"
 "PO-Revision-Date: 2012-06-17 17:04+0700\n"
 "Last-Translator: Ngô Trung <ndtrung4419@gmail.com>\n"
 "Language-Team: \n"
@@ -36,6 +36,10 @@ msgstr "Đang tải dữ liệu dự báo thời tiết..."
 #, fuzzy
 msgid "Weather extension ready"
 msgstr "Thiết lập thời tiết"
+
+#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+msgid ", "
+msgstr ""
 
 #: ../src/extension.js:465
 msgid "Today"

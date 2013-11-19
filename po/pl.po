@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-27 14:19-0200\n"
+"POT-Creation-Date: 2013-11-19 15:54+0200\n"
 "PO-Revision-Date: 2012-10-30 18:37+0100\n"
 "Last-Translator: Piotr Sokół <psokol@jabster.pl>\n"
 "Language-Team: polski <>\n"
@@ -37,6 +37,10 @@ msgstr "Wczytywanie prognozy pogody..."
 #, fuzzy
 msgid "Weather extension ready"
 msgstr "Ustawienia pogody"
+
+#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+msgid ", "
+msgstr ""
 
 #: ../src/extension.js:465
 msgid "Today"
