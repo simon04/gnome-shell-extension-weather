@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-27 14:19-0200\n"
+"POT-Creation-Date: 2013-11-19 16:01+0200\n"
 "PO-Revision-Date: 2012-05-13 22:41+0100\n"
 "Last-Translator: Christian METZLER <neroth@xeked.com>\n"
 "Language-Team: \n"
@@ -32,6 +32,10 @@ msgstr "Завантаження прогнозу погоди ..."
 
 #: ../src/extension.js:261
 msgid "Weather extension ready"
+msgstr ""
+
+#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+msgid ", "
 msgstr ""
 
 #: ../src/extension.js:465

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-27 14:19-0200\n"
+"POT-Creation-Date: 2013-11-19 15:54+0200\n"
 "PO-Revision-Date: 2013-08-25 01:16+0200\n"
 "Last-Translator: alexxtasi <alextasikas@gmail.com>\n"
 "Language-Team: \n"
@@ -33,6 +33,10 @@ msgstr "Φόρτωση Weather"
 #: ../src/extension.js:261
 msgid "Weather extension ready"
 msgstr "Επέκταση Weather σε ετοιμότητα"
+
+#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+msgid ", "
+msgstr ""
 
 #: ../src/extension.js:465
 msgid "Today"

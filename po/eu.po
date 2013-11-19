@@ -4,9 +4,10 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\n"
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-17 12:58+0100\n"
+"POT-Creation-Date: 2013-11-19 15:54+0200\n"
 "PO-Revision-Date: 2013-11-17 18:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
@@ -31,6 +32,10 @@ msgstr "Eguraldia kargatzen"
 #: ../src/extension.js:261
 msgid "Weather extension ready"
 msgstr "Eguraldiaren hedapena prest"
+
+#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+msgid ", "
+msgstr ""
 
 #: ../src/extension.js:465
 msgid "Today"

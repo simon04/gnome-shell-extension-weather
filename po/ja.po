@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extension-weather 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-27 14:19-0200\n"
+"POT-Creation-Date: 2013-11-19 15:54+0200\n"
 "PO-Revision-Date: 2012-06-11 12:26+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
@@ -34,6 +34,10 @@ msgstr ""
 #, fuzzy
 msgid "Weather extension ready"
 msgstr "設定"
+
+#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+msgid ", "
+msgstr ""
 
 #: ../src/extension.js:465
 msgid "Today"

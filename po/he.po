@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-27 14:19-0200\n"
+"POT-Creation-Date: 2013-11-19 15:54+0200\n"
 "PO-Revision-Date: 2012-01-31 21:37+0200\n"
 "Last-Translator: Yaron Sheffer <yaronf@gmx.com>\n"
 "Language-Team: Hebrew <none@example.com>\n"
@@ -33,6 +33,10 @@ msgstr "טוען מזג אויר עתידי..."
 
 #: ../src/extension.js:261
 msgid "Weather extension ready"
+msgstr ""
+
+#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+msgid ", "
 msgstr ""
 
 #: ../src/extension.js:465
