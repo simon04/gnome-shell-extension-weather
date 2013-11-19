@@ -1,0 +1,262 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Khaled Hosny <khaledhosny@eglug.org>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-18 20:06+0100\n"
+"PO-Revision-Date: 2013-11-19 12:03+0200\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.7.1-rc1\n"
+"X-Project-Style: gnome\n"
+
+#: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
+#: ../src/extension.js:259 ../src/extension.js:569
+msgid "Weather"
+msgstr "الطقس"
+
+#: ../src/extension.js:237
+msgid "No location configured"
+msgstr "لم تحدد أي مكان"
+
+#: ../src/extension.js:245
+msgid "Loading weather"
+msgstr "يُحمّل الطقس"
+
+#: ../src/extension.js:261
+msgid "Weather extension ready"
+msgstr "امتداد الطقس جاهز"
+
+#: ../src/extension.js:465
+msgid "Today"
+msgstr "اليوم"
+
+#: ../src/extension.js:469
+msgid "Tomorrow"
+msgstr "غدًا"
+
+#: ../src/extension.js:473
+msgid "Yesterday"
+msgstr "أمس"
+
+#: ../src/extension.js:633
+msgid "Locations"
+msgstr "الأماكن"
+
+#: ../src/extension.js:637
+msgid "Reload Weather Information"
+msgstr "أعِد تحميل معلومات الطقس"
+
+#: ../src/extension.js:642
+msgid "Weather Settings"
+msgstr "إعدادات الطقس"
+
+#: ../src/extension.js:806
+msgid "No weather information"
+msgstr "لا معلومات عن الطقس"
+
+#: ../src/extension.js:808
+#, python-format
+msgid "No weather information for %s"
+msgstr "لا معلومات عن طقس %s"
+
+#: ../src/extension.js:893
+msgid "Feels like"
+msgstr "تبدو مثل"
+
+#: ../src/extension.js:895
+msgid "Visibility"
+msgstr "الرؤية"
+
+#: ../src/extension.js:897
+msgid "Humidity"
+msgstr "الرطوبة"
+
+#: ../src/extension.js:899
+msgid "Pressure"
+msgstr "الضغط"
+
+#: ../src/extension.js:901
+msgid "Wind"
+msgstr "الرياح"
+
+#: ../src/extension.js:921
+msgid "No forecast information"
+msgstr "لا نشرة جوية"
+
+#: ../src/extension.js:1081
+#, python-format
+msgid "%s °F"
+msgstr "%s °ف"
+
+#: ../src/extension.js:1085
+#, python-format
+msgid "%s °C"
+msgstr "%s °م"
+
+#: ../src/extension.js:1089
+#, python-format
+msgid "%s K"
+msgstr "%s ك"
+
+#: ../src/extension.js:1095 ../src/extension.js:1153
+msgid "Unknown"
+msgstr "غير معروف"
+
+#: ../src/extension.js:1117 ../src/extension.js:1120
+msgid "VAR"
+msgstr ""
+
+#: ../src/extension.js:1120
+msgid "N"
+msgstr "شمال"
+
+#: ../src/extension.js:1120
+msgid "NNE"
+msgstr "شمال شمال شرقي"
+
+#: ../src/extension.js:1120
+msgid "NE"
+msgstr "شمال شرقي"
+
+#: ../src/extension.js:1120
+msgid "ENE"
+msgstr "شرق شمال شرقي"
+
+#: ../src/extension.js:1120
+msgid "E"
+msgstr "شرق"
+
+#: ../src/extension.js:1120
+msgid "ESE"
+msgstr "شرق جنوب شرقي"
+
+#: ../src/extension.js:1120
+msgid "SE"
+msgstr "جنوب شرقي"
+
+#: ../src/extension.js:1120
+msgid "SSE"
+msgstr "جنوب جنوب شرقي"
+
+#: ../src/extension.js:1121
+msgid "S"
+msgstr "جنوب"
+
+#: ../src/extension.js:1121
+msgid "SSW"
+msgstr "جنوب جنوب غربي"
+
+#: ../src/extension.js:1121
+msgid "SW"
+msgstr "جنوب غربي"
+
+#: ../src/extension.js:1121
+msgid "WSW"
+msgstr "غرب جنوب غربي"
+
+#: ../src/extension.js:1121
+msgid "W"
+msgstr "غرب"
+
+#: ../src/extension.js:1121
+msgid "WNW"
+msgstr "غرب شمال غربي"
+
+#: ../src/extension.js:1121
+msgid "NW"
+msgstr "شمال غربي"
+
+#: ../src/extension.js:1121
+msgid "NNW"
+msgstr "شمال شمال غربي"
+
+#: ../src/extension.js:1131
+msgid "$d$s knots"
+msgstr "$d$s عقدة"
+
+#: ../src/extension.js:1135
+msgid "$d$s mph"
+msgstr "$d$s ميل\\س"
+
+#: ../src/extension.js:1139
+msgid "$d$s km/h"
+msgstr "$d$s كم\\س"
+
+#: ../src/extension.js:1143
+msgid "$d$s m/s"
+msgstr "$d$s م\\س"
+
+#: ../src/extension.js:1147
+msgid "$dBeaufort $s"
+msgstr "$d بوفورت $s"
+
+#: ../src/prefs.js:143
+msgid "Temperature Unit"
+msgstr "وحدة درجة الحرارة"
+
+#: ../src/prefs.js:145
+msgid "Wind Speed Unit"
+msgstr "وحدة سرعة الرياح"
+
+#: ../src/prefs.js:147
+msgid "Pressure Unit"
+msgstr "وحدة الضغط"
+
+#: ../src/prefs.js:149
+msgid "Distance Unit"
+msgstr "وحدة المسافة"
+
+#: ../src/prefs.js:151
+msgid "Position in Panel"
+msgstr "الموضع في اللوحة"
+
+#: ../src/prefs.js:152
+msgid "Center"
+msgstr "وسط"
+
+#: ../src/prefs.js:152
+msgid "Right"
+msgstr "يمين"
+
+#: ../src/prefs.js:152
+msgid "Left"
+msgstr "يسار"
+
+#: ../src/prefs.js:153
+msgid "Wind Direction by Arrows"
+msgstr "اتجاه الرياح بالأسهم"
+
+#: ../src/prefs.js:155
+msgid "Symbolic Icons"
+msgstr "أيقونات رمزية"
+
+#: ../src/prefs.js:157
+msgid "Temperature in Panel"
+msgstr "درجة الحرارة في اللوحة"
+
+#: ../src/prefs.js:159
+msgid "Conditions in Panel"
+msgstr "الأحوال في اللوحة"
+
+#: ../src/prefs.js:161
+msgid "Debug the extension"
+msgstr "نقّح الامتداد"
+
+#: ../src/prefs.js:320
+msgid "Name of the city"
+msgstr "اسم المدينة"
+
+#: ../src/prefs.js:378
+#, python-format
+msgid "Remove %s ?"
+msgstr "أأزيل %s؟"
