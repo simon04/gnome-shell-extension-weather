@@ -114,7 +114,7 @@ msgstr "غير معروف"
 
 #: ../src/extension.js:1117 ../src/extension.js:1120
 msgid "VAR"
-msgstr ""
+msgstr "متغيّر"
 
 #: ../src/extension.js:1120
 msgid "N"
