@@ -290,7 +290,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 				conditions += getConditions(info);
 
 				if(that.comment_in_panel && that.text_in_panel)
-				conditions += ", ";
+				conditions += _(", ");
 
 				if(that.text_in_panel)
 				conditions += that.temperature_string();
@@ -359,14 +359,14 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			this.UI.currentSunrise.text = getLocaleTime(this.info.get_value_sunrise()[1]);
 			this.UI.currentSunset.text = getLocaleTime(this.info.get_value_sunset()[1]);
 			this.UI.currentBuild.text = getLocaleTime(this.info.get_value_update()[1]);
-			this.UI.currentLocation.text = this.location.get_city_name()+", "+getConditions(this.info);
+			this.UI.currentLocation.text = this.location.get_city_name()+_(", ")+getConditions(this.info);
 			this.UI.currentHumidity.text = this.info.get_humidity();				this.status("Basics informations "+di_up);
 			}
 
 			if(fuc || tempUnitVar)
 			{
 			this.UI.currentSummary.text = this.temperature_string();
-			this.UI.currentLocation.text = this.location.get_city_name()+", "+getConditions(this.info);
+			this.UI.currentLocation.text = this.location.get_city_name()+_(", ")+getConditions(this.info);
 			this.UI.menuConditions.text = getMenuConditions(this.info);
 			this.UI.currentTemperature.text = this.temperature_string(this.info.get_value_apparent(this.temperature_units)[1]);
 														this.status("Temperatures informations "+di_up);
