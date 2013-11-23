@@ -35,7 +35,7 @@ msgstr "L'estensione è pronta"
 
 #: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: ../src/extension.js:465
 msgid "Today"
