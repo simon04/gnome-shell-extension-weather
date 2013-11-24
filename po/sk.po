@@ -36,7 +36,7 @@ msgstr "Rozšírenie Počasie je pripravené"
 
 #: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: ../src/extension.js:465
 msgid "Today"
@@ -56,7 +56,7 @@ msgstr "Umiestnenia"
 
 #: ../src/extension.js:637
 msgid "Reload Weather Information"
-msgstr "Znovu načítať informácie o počasí"
+msgstr "Obnoviť informácie o počasí"
 
 #: ../src/extension.js:642
 msgid "Weather Settings"
