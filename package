@@ -79,7 +79,7 @@ do_package() {
 
 	cat << EOF
 Done.	Release ${VERSION} is ready to publish at:
-	${zipfile}.zip
+	${BASEDIR}/${zipfile}.zip
 
 EOF
 }
