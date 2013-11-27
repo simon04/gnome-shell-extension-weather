@@ -30,6 +30,7 @@ const St = imports.gi.St
  * /usr/share/cinnamon/js/
  */
 const Applet = imports.ui.applet
+const Config = imports.misc.config
 const PopupMenu = imports.ui.popupMenu
 const Settings = imports.ui.settings
 const Util = imports.misc.util
@@ -238,11 +239,19 @@ MyApplet.prototype = {
         this.refreshWeather(false)
       }))
  
-      // context menu
-      let settingsMenuItem = new Applet.MenuItem(_("Settings"), Gtk.STOCK_EDIT, Lang.bind(this, function() {
-          Util.spawnCommandLine(CMD_SETTINGS)
-      }))
-      this._applet_context_menu.addMenuItem(settingsMenuItem)
+      // configuration via context menu is automatically provided in Cinnamon 2.0+
+      let cinnamonVersion = Config.PACKAGE_VERSION.split('.')
+      let majorVersion = parseInt(cinnamonVersion[0])
+      //log("cinnamonVersion=" + cinnamonVersion +  "; majorVersion=" + majorVersion)
+
+      // for Cinnamon 1.x, build a menu item
+      if (majorVersion < 2) {
+        let itemLabel = _("Settings")
+        let settingsMenuItem = new Applet.MenuItem(itemLabel, Gtk.STOCK_EDIT, Lang.bind(this, function() {
+            Util.spawnCommandLine(CMD_SETTINGS)
+        }))
+        this._applet_context_menu.addMenuItem(settingsMenuItem)
+      }
 
       //------------------------------
       // render graphics container
@@ -891,6 +900,6 @@ MyApplet.prototype = {
 //----------------------------------------------------------------------
 
 function main(metadata, orientation, panelHeight, instanceId) {
-  //log("v" + metadata.version)
+  //log("v" + metadata.version + ", cinnamon " + Config.PACKAGE_VERSION)
   return new MyApplet(metadata, orientation, panelHeight, instanceId)
 }
