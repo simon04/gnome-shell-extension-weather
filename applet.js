@@ -189,7 +189,7 @@ MyApplet.prototype = {
   }
 
 , dumpKeys: function dumpKeys() {
-    for (var k in KEYS) {
+    for (let k in KEYS) {
       let key = KEYS[k]
       let keyProp = "_" + key
       log(keyProp + "=" + this[keyProp])
@@ -218,7 +218,7 @@ MyApplet.prototype = {
       // bind settings
       //----------------------------------
 
-      for (var k in KEYS) {
+      for (let k in KEYS) {
         let key = KEYS[k]
         let keyProp = "_" + key
         this.settings.bindProperty(Settings.BindingDirection.IN, key, keyProp,
@@ -334,7 +334,7 @@ MyApplet.prototype = {
 
 , parseDay: function(abr) {
     let yahoo_days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-    for (var i = 0; i < yahoo_days.length; i++) {
+    for (let i = 0; i < yahoo_days.length; i++) {
       if (yahoo_days[i].substr(0, abr.length) == abr.toLowerCase()) {
         return i
       }
