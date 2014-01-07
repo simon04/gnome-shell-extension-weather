@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-27 16:14-0500\n"
+"POT-Creation-Date: 2014-01-07 13:47-0500\n"
 "PO-Revision-Date: 2012-12-21 12:43+0000\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -31,280 +31,285 @@ msgstr ""
 msgid "Settings"
 msgstr "Nustatymai (vietovė ir kt.)"
 
-#: applet.js:443
+#: applet.js:445
 msgid "Sunrise"
 msgstr ""
 
-#: applet.js:444
+#: applet.js:446
 msgid "Sunset"
 msgstr ""
 
-#: applet.js:449
+#: applet.js:451
 msgid "Today"
 msgstr "Šiandien"
 
-#: applet.js:449
+#: applet.js:451
 msgid "Tomorrow"
 msgstr "Rytoj"
 
-#: applet.js:493
+#: applet.js:495
 msgid "Loading current weather ..."
 msgstr "Įkeliami dabartiniai orai..."
 
-#: applet.js:494
+#: applet.js:496
 msgid "Loading future weather ..."
 msgstr "Įkeliama orų prognozė..."
 
-#: applet.js:516
+#: applet.js:518
 msgid "Loading ..."
 msgstr "Įkeliama..."
 
-#: applet.js:522
+#: applet.js:524
 msgid "Please wait"
 msgstr "Palaukite"
 
-#: applet.js:580
+#: applet.js:583
 #, fuzzy
 msgid "Temperature:"
 msgstr "Temperatūros vienetai:"
 
-#: applet.js:582
+#: applet.js:585
 msgid "Humidity:"
 msgstr "Drėgnumas:"
 
-#: applet.js:584
+#: applet.js:587
 msgid "Pressure:"
 msgstr "Slėgis:"
 
-#: applet.js:586
+#: applet.js:589
 msgid "Wind:"
 msgstr "Vėjas:"
 
-#: applet.js:788
+#: applet.js:591
+#, fuzzy
+msgid "Wind Chill:"
+msgstr "Vėjas:"
+
+#: applet.js:793
 msgid "Tornado"
 msgstr "Viesulas (tornadas)"
 
-#: applet.js:790
+#: applet.js:795
 msgid "Tropical storm"
 msgstr "Tropinė audra"
 
-#: applet.js:792
+#: applet.js:797
 msgid "Hurricane"
 msgstr "Uraganas"
 
-#: applet.js:794
+#: applet.js:799
 msgid "Severe thunderstorms"
 msgstr "Smarki audra su perkūnija"
 
-#: applet.js:796
+#: applet.js:801
 msgid "Thunderstorms"
 msgstr "Perkūnija (audringa)"
 
-#: applet.js:798
+#: applet.js:803
 msgid "Mixed rain and snow"
 msgstr "Šlapdriba (lietus ir sniegas)"
 
-#: applet.js:800
+#: applet.js:805
 msgid "Mixed rain and sleet"
 msgstr "Lietus bei šlapdriba"
 
-#: applet.js:802
+#: applet.js:807
 msgid "Mixed snow and sleet"
 msgstr "Sniegas bei šlapdriba"
 
-#: applet.js:804
+#: applet.js:809
 msgid "Freezing drizzle"
 msgstr "Šąlanti dulksna"
 
-#: applet.js:806
+#: applet.js:811
 msgid "Drizzle"
 msgstr "Dulksna"
 
-#: applet.js:808
+#: applet.js:813
 msgid "Freezing rain"
 msgstr "Lijundra"
 
-#: applet.js:810 applet.js:812
+#: applet.js:815 applet.js:817
 msgid "Showers"
 msgstr "Trumpi lietūs"
 
-#: applet.js:814
+#: applet.js:819
 msgid "Snow flurries"
 msgstr "Sniego šuorai"
 
-#: applet.js:816
+#: applet.js:821
 msgid "Light snow showers"
 msgstr "Protarpiais pasnigs"
 
-#: applet.js:818
+#: applet.js:823
 msgid "Blowing snow"
 msgstr "Pustomas sniegas"
 
-#: applet.js:820
+#: applet.js:825
 msgid "Snow"
 msgstr "Sniegas"
 
-#: applet.js:822
+#: applet.js:827
 msgid "Hail"
 msgstr "Kruša"
 
-#: applet.js:824
+#: applet.js:829
 msgid "Sleet"
 msgstr "Šlapdriba"
 
-#: applet.js:826
+#: applet.js:831
 msgid "Dust"
 msgstr "Dulkės"
 
-#: applet.js:828
+#: applet.js:833
 msgid "Foggy"
 msgstr "Ūkanota"
 
-#: applet.js:830
+#: applet.js:835
 msgid "Haze"
 msgstr "Miglelė"
 
-#: applet.js:832
+#: applet.js:837
 msgid "Smoky"
 msgstr "Dūmuotas oras"
 
-#: applet.js:834
+#: applet.js:839
 msgid "Blustery"
 msgstr "Audringa"
 
-#: applet.js:836
+#: applet.js:841
 msgid "Windy"
 msgstr "Vėjuota"
 
-#: applet.js:838
+#: applet.js:843
 msgid "Cold"
 msgstr ""
 
-#: applet.js:840
+#: applet.js:845
 msgid "Cloudy"
 msgstr "Debesuota"
 
-#: applet.js:843
+#: applet.js:848
 msgid "Mostly cloudy"
 msgstr "Daugiau debesuota"
 
-#: applet.js:846 applet.js:872
+#: applet.js:851 applet.js:877
 msgid "Partly cloudy"
 msgstr "Debesuota su pragiedruliais"
 
-#: applet.js:848
+#: applet.js:853
 msgid "Clear"
 msgstr "Giedra"
 
-#: applet.js:850
+#: applet.js:855
 msgid "Sunny"
 msgstr "Saulėta"
 
-#: applet.js:853
+#: applet.js:858
 msgid "Fair"
 msgstr "Gražus oras"
 
-#: applet.js:855
+#: applet.js:860
 msgid "Mixed rain and hail"
 msgstr "Lietus su kruša"
 
-#: applet.js:857
+#: applet.js:862
 msgid "Hot"
 msgstr "Karšta"
 
-#: applet.js:859
+#: applet.js:864
 msgid "Isolated thunderstorms"
 msgstr "Vietomis perkūnija"
 
-#: applet.js:862
+#: applet.js:867
 msgid "Scattered thunderstorms"
 msgstr "Vietomis perkūnija"
 
-#: applet.js:864
+#: applet.js:869
 msgid "Scattered showers"
 msgstr "Vietomis trumpi lietūs"
 
-#: applet.js:866 applet.js:870
+#: applet.js:871 applet.js:875
 msgid "Heavy snow"
 msgstr "Stipriai sninga"
 
-#: applet.js:868
+#: applet.js:873
 msgid "Scattered snow showers"
 msgstr "Vietomis pasnigs"
 
-#: applet.js:874
+#: applet.js:879
 msgid "Thundershowers"
 msgstr "Trumpi lietūs su perkūnija"
 
-#: applet.js:876
+#: applet.js:881
 msgid "Snow showers"
 msgstr ""
 
-#: applet.js:878
+#: applet.js:883
 msgid "Isolated thundershowers"
 msgstr "Pavienės liūtys su perkūnija"
 
-#: applet.js:881
+#: applet.js:886
 msgid "Not available"
 msgstr "Neprieinama"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Monday"
 msgstr "Pirmadienis"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Tuesday"
 msgstr "Antradienis"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Wednesday"
 msgstr "Trečiadienis"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Thursday"
 msgstr "Ketvirtadienis"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Friday"
 msgstr "Penktadienis"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Saturday"
 msgstr "Šeštadienis"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Sunday"
 msgstr "Sekmadienis"
 
-#: applet.js:891
+#: applet.js:896
 msgid "N"
 msgstr "Š"
 
-#: applet.js:891
+#: applet.js:896
 msgid "NE"
 msgstr "ŠR"
 
-#: applet.js:891
+#: applet.js:896
 msgid "E"
 msgstr "R"
 
-#: applet.js:891
+#: applet.js:896
 msgid "SE"
 msgstr "PR"
 
-#: applet.js:891
+#: applet.js:896
 msgid "S"
 msgstr "P"
 
-#: applet.js:891
+#: applet.js:896
 msgid "SW"
 msgstr "PV"
 
-#: applet.js:891
+#: applet.js:896
 msgid "W"
 msgstr "V"
 
-#: applet.js:891
+#: applet.js:896
 msgid "NW"
 msgstr "ŠV"
 

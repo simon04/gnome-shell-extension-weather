@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-27 16:14-0500\n"
+"POT-Creation-Date: 2014-01-07 13:47-0500\n"
 "PO-Revision-Date: 2012-01-31 21:37+0200\n"
 "Last-Translator: Yaron Sheffer <yaronf@gmx.com>\n"
 "Language-Team: Hebrew <none@example.com>\n"
@@ -29,278 +29,283 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: applet.js:443
+#: applet.js:445
 msgid "Sunrise"
 msgstr "شروق الشمس"
 
-#: applet.js:444
+#: applet.js:446
 msgid "Sunset"
 msgstr "غروب الشمس"
 
-#: applet.js:449
+#: applet.js:451
 msgid "Today"
 msgstr "اليوم"
 
-#: applet.js:449
+#: applet.js:451
 msgid "Tomorrow"
 msgstr "غداً"
 
-#: applet.js:493
+#: applet.js:495
 msgid "Loading current weather ..."
 msgstr "يحمل الطقس الحالي..."
 
-#: applet.js:494
+#: applet.js:496
 msgid "Loading future weather ..."
 msgstr "يحمل طقس المستقبل..."
 
-#: applet.js:516
+#: applet.js:518
 msgid "Loading ..."
 msgstr "يحمل..."
 
-#: applet.js:522
+#: applet.js:524
 msgid "Please wait"
 msgstr "انتظر رجاءً"
 
-#: applet.js:580
+#: applet.js:583
 msgid "Temperature:"
 msgstr "درجة الحرارة:"
 
-#: applet.js:582
+#: applet.js:585
 msgid "Humidity:"
 msgstr "الرطوبة:"
 
-#: applet.js:584
+#: applet.js:587
 msgid "Pressure:"
 msgstr "الضغط:"
 
-#: applet.js:586
+#: applet.js:589
 msgid "Wind:"
 msgstr "الريح:"
 
-#: applet.js:788
+#: applet.js:591
+#, fuzzy
+msgid "Wind Chill:"
+msgstr "الريح:"
+
+#: applet.js:793
 msgid "Tornado"
 msgstr "إعصار"
 
-#: applet.js:790
+#: applet.js:795
 msgid "Tropical storm"
 msgstr "عاصفة مدارية"
 
-#: applet.js:792
+#: applet.js:797
 msgid "Hurricane"
 msgstr "إعصار استوائي"
 
-#: applet.js:794
+#: applet.js:799
 msgid "Severe thunderstorms"
 msgstr "عواصف رعدية شديدة"
 
-#: applet.js:796
+#: applet.js:801
 msgid "Thunderstorms"
 msgstr "عواصف رعدية"
 
-#: applet.js:798
+#: applet.js:803
 msgid "Mixed rain and snow"
 msgstr "خليط من المطر والثلج"
 
-#: applet.js:800
+#: applet.js:805
 msgid "Mixed rain and sleet"
 msgstr "خليط من المطر والمطر الثلجي"
 
-#: applet.js:802
+#: applet.js:807
 msgid "Mixed snow and sleet"
 msgstr "خليط من الثلج والمطر الثلجي"
 
-#: applet.js:804
+#: applet.js:809
 msgid "Freezing drizzle"
 msgstr "رذاذ متجمد"
 
-#: applet.js:806
+#: applet.js:811
 msgid "Drizzle"
 msgstr "رذاذ"
 
-#: applet.js:808
+#: applet.js:813
 msgid "Freezing rain"
 msgstr "مطر متجمد"
 
-#: applet.js:810 applet.js:812
+#: applet.js:815 applet.js:817
 msgid "Showers"
 msgstr "رشات مطر"
 
-#: applet.js:814
+#: applet.js:819
 msgid "Snow flurries"
 msgstr "تساقط ثلوج"
 
-#: applet.js:816
+#: applet.js:821
 msgid "Light snow showers"
 msgstr "رشات ثلجية خفيفة"
 
-#: applet.js:818
+#: applet.js:823
 msgid "Blowing snow"
 msgstr "هبوب ثلوج"
 
-#: applet.js:820
+#: applet.js:825
 msgid "Snow"
 msgstr "ثلج"
 
-#: applet.js:822
+#: applet.js:827
 msgid "Hail"
 msgstr "بَرَد"
 
-#: applet.js:824
+#: applet.js:829
 msgid "Sleet"
 msgstr "مطر ثلجي"
 
-#: applet.js:826
+#: applet.js:831
 msgid "Dust"
 msgstr "غبار"
 
-#: applet.js:828
+#: applet.js:833
 msgid "Foggy"
 msgstr "ضبابي"
 
-#: applet.js:830
+#: applet.js:835
 msgid "Haze"
 msgstr "سديم"
 
-#: applet.js:832
+#: applet.js:837
 msgid "Smoky"
 msgstr "دخانيّ"
 
-#: applet.js:834
+#: applet.js:839
 msgid "Blustery"
 msgstr "ريح عاصف"
 
-#: applet.js:836
+#: applet.js:841
 msgid "Windy"
 msgstr "عاصف"
 
-#: applet.js:838
+#: applet.js:843
 msgid "Cold"
 msgstr "بارد"
 
-#: applet.js:840
+#: applet.js:845
 msgid "Cloudy"
 msgstr "غائم"
 
-#: applet.js:843
+#: applet.js:848
 msgid "Mostly cloudy"
 msgstr "غائم في أغلبه"
 
-#: applet.js:846 applet.js:872
+#: applet.js:851 applet.js:877
 msgid "Partly cloudy"
 msgstr "غائم جزئياً"
 
-#: applet.js:848
+#: applet.js:853
 msgid "Clear"
 msgstr "صافٍ"
 
-#: applet.js:850
+#: applet.js:855
 msgid "Sunny"
 msgstr "مشمس"
 
-#: applet.js:853
+#: applet.js:858
 msgid "Fair"
 msgstr "معتدل"
 
-#: applet.js:855
+#: applet.js:860
 msgid "Mixed rain and hail"
 msgstr "خليط من المطر والبَرَد"
 
-#: applet.js:857
+#: applet.js:862
 msgid "Hot"
 msgstr "حار"
 
-#: applet.js:859
+#: applet.js:864
 msgid "Isolated thunderstorms"
 msgstr "عواصف رعدية معزولة"
 
-#: applet.js:862
+#: applet.js:867
 msgid "Scattered thunderstorms"
 msgstr "סعواصف رعدية متفرقة"
 
-#: applet.js:864
+#: applet.js:869
 msgid "Scattered showers"
 msgstr "رشات متفرقة"
 
-#: applet.js:866 applet.js:870
+#: applet.js:871 applet.js:875
 msgid "Heavy snow"
 msgstr "ثلج كثيف"
 
-#: applet.js:868
+#: applet.js:873
 msgid "Scattered snow showers"
 msgstr "رشات ثلجية متفرقة"
 
-#: applet.js:874
+#: applet.js:879
 msgid "Thundershowers"
 msgstr "وابل رعدي"
 
-#: applet.js:876
+#: applet.js:881
 msgid "Snow showers"
 msgstr "رشات ثلجية متفرقة"
 
-#: applet.js:878
+#: applet.js:883
 msgid "Isolated thundershowers"
 msgstr "وابل ثلجي معزول"
 
-#: applet.js:881
+#: applet.js:886
 msgid "Not available"
 msgstr "غير متاح"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Monday"
 msgstr "الإثنين"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Tuesday"
 msgstr "الثلاثاء"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Wednesday"
 msgstr "الأربعاء"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Thursday"
 msgstr "الخميس"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Friday"
 msgstr "الجمعة"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Saturday"
 msgstr "السبت"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Sunday"
 msgstr "الأحد"
 
-#: applet.js:891
+#: applet.js:896
 msgid "N"
 msgstr "ش"
 
-#: applet.js:891
+#: applet.js:896
 msgid "NE"
 msgstr "ش ق"
 
-#: applet.js:891
+#: applet.js:896
 msgid "E"
 msgstr "ق"
 
-#: applet.js:891
+#: applet.js:896
 msgid "SE"
 msgstr "ج ق"
 
-#: applet.js:891
+#: applet.js:896
 msgid "S"
 msgstr "ج"
 
-#: applet.js:891
+#: applet.js:896
 msgid "SW"
 msgstr "ج غ"
 
-#: applet.js:891
+#: applet.js:896
 msgid "W"
 msgstr "غ"
 
-#: applet.js:891
+#: applet.js:896
 msgid "NW"
 msgstr "ش غ"

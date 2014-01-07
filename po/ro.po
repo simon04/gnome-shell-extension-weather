@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon04-gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-27 16:14-0500\n"
+"POT-Creation-Date: 2014-01-07 13:47-0500\n"
 "PO-Revision-Date: 2011-06-25 19:05+0200\n"
 "Last-Translator: Marian Vasile <marianvasile@upcmail.ro>\n"
 "Language-Team: \n"
@@ -33,278 +33,283 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: applet.js:443
+#: applet.js:445
 msgid "Sunrise"
 msgstr ""
 
-#: applet.js:444
+#: applet.js:446
 msgid "Sunset"
 msgstr ""
 
-#: applet.js:449
+#: applet.js:451
 msgid "Today"
 msgstr "Azi"
 
-#: applet.js:449
+#: applet.js:451
 msgid "Tomorrow"
 msgstr "Mâine"
 
-#: applet.js:493
+#: applet.js:495
 msgid "Loading current weather ..."
 msgstr "Se încarcă vremea curentă..."
 
-#: applet.js:494
+#: applet.js:496
 msgid "Loading future weather ..."
 msgstr "Se încarcă prognoza..."
 
-#: applet.js:516
+#: applet.js:518
 msgid "Loading ..."
 msgstr "Se încarcă"
 
-#: applet.js:522
+#: applet.js:524
 msgid "Please wait"
 msgstr "Așteptați"
 
-#: applet.js:580
+#: applet.js:583
 msgid "Temperature:"
 msgstr "Temperatură:"
 
-#: applet.js:582
+#: applet.js:585
 msgid "Humidity:"
 msgstr "Umiditate:"
 
-#: applet.js:584
+#: applet.js:587
 msgid "Pressure:"
 msgstr "Presiune:"
 
-#: applet.js:586
+#: applet.js:589
 msgid "Wind:"
 msgstr "Vânt:"
 
-#: applet.js:788
+#: applet.js:591
+#, fuzzy
+msgid "Wind Chill:"
+msgstr "Vânt:"
+
+#: applet.js:793
 msgid "Tornado"
 msgstr "Tornadă"
 
-#: applet.js:790
+#: applet.js:795
 msgid "Tropical storm"
 msgstr "Furtună tropicală"
 
-#: applet.js:792
+#: applet.js:797
 msgid "Hurricane"
 msgstr "Uragan"
 
-#: applet.js:794
+#: applet.js:799
 msgid "Severe thunderstorms"
 msgstr "Furtuni severe"
 
-#: applet.js:796
+#: applet.js:801
 msgid "Thunderstorms"
 msgstr "Furtuni"
 
-#: applet.js:798
+#: applet.js:803
 msgid "Mixed rain and snow"
 msgstr "Lapoviță"
 
-#: applet.js:800
+#: applet.js:805
 msgid "Mixed rain and sleet"
 msgstr "Măzăriche"
 
-#: applet.js:802
+#: applet.js:807
 msgid "Mixed snow and sleet"
 msgstr "Măzăriche"
 
-#: applet.js:804
+#: applet.js:809
 msgid "Freezing drizzle"
 msgstr "Burniță rece"
 
-#: applet.js:806
+#: applet.js:811
 msgid "Drizzle"
 msgstr "Burniță"
 
-#: applet.js:808
+#: applet.js:813
 msgid "Freezing rain"
 msgstr "Ploaie rece"
 
-#: applet.js:810 applet.js:812
+#: applet.js:815 applet.js:817
 msgid "Showers"
 msgstr "Averse"
 
-#: applet.js:814
+#: applet.js:819
 msgid "Snow flurries"
 msgstr "Ninsoare ușoară"
 
-#: applet.js:816
+#: applet.js:821
 msgid "Light snow showers"
 msgstr "Ninsoare ușoară în averse"
 
-#: applet.js:818
+#: applet.js:823
 msgid "Blowing snow"
 msgstr "Ninsoare viscolită"
 
-#: applet.js:820
+#: applet.js:825
 msgid "Snow"
 msgstr "Ninsoare"
 
-#: applet.js:822
+#: applet.js:827
 msgid "Hail"
 msgstr "Grindină"
 
-#: applet.js:824
+#: applet.js:829
 msgid "Sleet"
 msgstr "Lapoviță"
 
-#: applet.js:826
+#: applet.js:831
 msgid "Dust"
 msgstr "Praf"
 
-#: applet.js:828
+#: applet.js:833
 msgid "Foggy"
 msgstr "Ceață"
 
-#: applet.js:830
+#: applet.js:835
 msgid "Haze"
 msgstr "Ceață ușoară"
 
-#: applet.js:832
+#: applet.js:837
 msgid "Smoky"
 msgstr "Întunecat"
 
-#: applet.js:834
+#: applet.js:839
 msgid "Blustery"
 msgstr "Zgomotos"
 
-#: applet.js:836
+#: applet.js:841
 msgid "Windy"
 msgstr "Rafale de vânt"
 
-#: applet.js:838
+#: applet.js:843
 msgid "Cold"
 msgstr "Rece"
 
-#: applet.js:840
+#: applet.js:845
 msgid "Cloudy"
 msgstr "Înnorat"
 
-#: applet.js:843
+#: applet.js:848
 msgid "Mostly cloudy"
 msgstr "Majoritar înnorat "
 
-#: applet.js:846 applet.js:872
+#: applet.js:851 applet.js:877
 msgid "Partly cloudy"
 msgstr "Parțial înnorat"
 
-#: applet.js:848
+#: applet.js:853
 msgid "Clear"
 msgstr "Senin"
 
-#: applet.js:850
+#: applet.js:855
 msgid "Sunny"
 msgstr "Însorit"
 
-#: applet.js:853
+#: applet.js:858
 msgid "Fair"
 msgstr "Vreme bună"
 
-#: applet.js:855
+#: applet.js:860
 msgid "Mixed rain and hail"
 msgstr "Ploaie cu grindină"
 
-#: applet.js:857
+#: applet.js:862
 msgid "Hot"
 msgstr "Foarte cald"
 
-#: applet.js:859
+#: applet.js:864
 msgid "Isolated thunderstorms"
 msgstr "Furtuni izolate"
 
-#: applet.js:862
+#: applet.js:867
 msgid "Scattered thunderstorms"
 msgstr "Furtuni răzlețe"
 
-#: applet.js:864
+#: applet.js:869
 msgid "Scattered showers"
 msgstr "Averse răzlețe"
 
-#: applet.js:866 applet.js:870
+#: applet.js:871 applet.js:875
 msgid "Heavy snow"
 msgstr "Ninsoare abundentă"
 
-#: applet.js:868
+#: applet.js:873
 msgid "Scattered snow showers"
 msgstr "Ninsori răzlețe"
 
-#: applet.js:874
+#: applet.js:879
 msgid "Thundershowers"
 msgstr "Ploi abundente în averse"
 
-#: applet.js:876
+#: applet.js:881
 msgid "Snow showers"
 msgstr "Ninsori în averse"
 
-#: applet.js:878
+#: applet.js:883
 msgid "Isolated thundershowers"
 msgstr "Ploi izolate"
 
-#: applet.js:881
+#: applet.js:886
 msgid "Not available"
 msgstr "Indisponibil"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Monday"
 msgstr "Luni"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Tuesday"
 msgstr "Marți"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Wednesday"
 msgstr "Miercuri"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Thursday"
 msgstr "Joi"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Friday"
 msgstr "Vineri"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Saturday"
 msgstr "Sâmbătă"
 
-#: applet.js:886
+#: applet.js:891
 msgid "Sunday"
 msgstr "Duminică"
 
-#: applet.js:891
+#: applet.js:896
 msgid "N"
 msgstr ""
 
-#: applet.js:891
+#: applet.js:896
 msgid "NE"
 msgstr ""
 
-#: applet.js:891
+#: applet.js:896
 msgid "E"
 msgstr ""
 
-#: applet.js:891
+#: applet.js:896
 msgid "SE"
 msgstr ""
 
-#: applet.js:891
+#: applet.js:896
 msgid "S"
 msgstr ""
 
-#: applet.js:891
+#: applet.js:896
 msgid "SW"
 msgstr ""
 
-#: applet.js:891
+#: applet.js:896
 msgid "W"
 msgstr ""
 
-#: applet.js:891
+#: applet.js:896
 msgid "NW"
 msgstr ""
