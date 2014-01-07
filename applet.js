@@ -371,6 +371,7 @@ MyApplet.prototype = {
         let temperature = weather_c.get_string_member('temp')
 
         let wind = weather.get_object_member('wind').get_string_member('speed')
+        let wind_chill = weather.get_object_member('wind').get_string_member('chill')
         let wind_direction = this.compassDirection(weather.get_object_member('wind').get_string_member('direction'))
         let wind_unit = weather.get_object_member('units').get_string_member('speed')
 
@@ -433,6 +434,7 @@ MyApplet.prototype = {
             break
         }
         this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit
+        this._currentWeatherWindChill.text = wind_chill + ' ' + this.unitToUnicode()
 
         // location is a button
         this._currentWeatherLocation.style_class = STYLE_LOCATION_LINK
@@ -562,6 +564,7 @@ MyApplet.prototype = {
     this._currentWeatherHumidity = new St.Label(textOb)
     this._currentWeatherPressure = new St.Label(textOb)
     this._currentWeatherWind = new St.Label(textOb)
+    this._currentWeatherWindChill = new St.Label(textOb)
 
     let rb = new St.BoxLayout({
       style_class: STYLE_DATABOX
@@ -585,6 +588,8 @@ MyApplet.prototype = {
     rb_values.add_actor(this._currentWeatherPressure)
     rb_captions.add_actor(new St.Label({text: _('Wind:')}))
     rb_values.add_actor(this._currentWeatherWind)
+    rb_captions.add_actor(new St.Label({text: _('Wind Chill:')}))
+    rb_values.add_actor(this._currentWeatherWindChill)
 
     let xb = new St.BoxLayout()
     xb.add_actor(bb)
