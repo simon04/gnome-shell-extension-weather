@@ -80,7 +80,7 @@ msgstr "Wind:"
 #: applet.js:591
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "Windkilte:"
+msgstr "Gevoelstemperatuur (windverkilling):"
 
 #: applet.js:793
 msgid "Tornado"
@@ -132,7 +132,7 @@ msgstr "Regenbuien"
 
 #: applet.js:819
 msgid "Snow flurries"
-msgstr "Lichte sneeuwval"
+msgstr "Sneeuwvlagen"
 
 #: applet.js:821
 msgid "Light snow showers"
@@ -168,7 +168,7 @@ msgstr "Nevel"
 
 #: applet.js:837
 msgid "Smoky"
-msgstr "Nevelig"
+msgstr "Rokerig"
 
 #: applet.js:839
 msgid "Blustery"
