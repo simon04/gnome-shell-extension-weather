@@ -922,6 +922,8 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 
 		rebuildForecastItem : function(n)
 		{
+		let that = this;
+
 			if(!n)
 			{
 			this.UI.forecast.set_child(new St.Label({ text: _('No forecast information') }));
@@ -941,6 +943,47 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		this.UI.forecastBox.hscroll.hide();
 		this.UI.forecastBox.vscrollbar_policy = Gtk.PolicyType.NEVER;
 		this.UI.forecastBox.hscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
+
+			let scrollTo = function(scroller, v)
+			{
+			scroller.adjustment.value += v;
+			};
+
+			let onScroll = function(actor, event)
+			{
+			let dx = 0;
+				switch (event.get_scroll_direction())
+				{
+				case Clutter.ScrollDirection.UP:
+				dx = -1;
+				break;
+				case Clutter.ScrollDirection.DOWN:
+				dx = 1;
+				break;
+				default:
+				return true;
+				}
+
+			scrollTo(that.UI.forecastBox.hscroll, dx * that.UI.forecastBox.hscroll.adjustment.stepIncrement);
+			return false;
+			};
+
+		let action = new Clutter.PanAction({ interpolate: true });
+
+			action.connect('pan', function(act){
+			let [dist, dx, dy] = act.get_motion_delta(0);
+
+			scrollTo(that.UI.forecastBox.hscroll, (-1 * (dx / that.UI.forecastBox.width) * that.UI.forecastBox.hscroll.adjustment.page_size));
+
+			return false;
+			});
+
+		this.UI.forecastBox.add_action(action);
+
+		this.UI.forecastBox.connect('scroll-event', onScroll);
+		this.UI.forecastBox.hscroll.connect('scroll-event', onScroll);
+
+		this.UI.forecastBox.enable_mouse_scrolling = true;
 
 		this.UI.forecast.set_child(this.UI.forecastBox);
 
