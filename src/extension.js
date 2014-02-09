@@ -298,9 +298,13 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			return conditions;
 			};
 
-			let getLocaleTime = function(date)
+			let getLocaleTime = function(date, localTimezone)
 			{
-			date = GLib.DateTime.new_from_unix_local(date).to_timezone(that.get_timezone());
+				if(!localTimezone)
+				date = GLib.DateTime.new_from_unix_local(date).to_timezone(that.get_timezone());
+				else
+				date = GLib.DateTime.new_from_unix_local(date).to_timezone(GLib.TimeZone.new_local());
+
 			let localeTime = "-";
 				if(that.clock_format == "12h")
 				{
@@ -358,7 +362,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			this.UI.menuIcon.icon_name = this.UI.currentIcon.icon_name = this.icon_type(this.info.get_icon_name());
 			this.UI.currentSunrise.text = getLocaleTime(this.info.get_value_sunrise()[1]);
 			this.UI.currentSunset.text = getLocaleTime(this.info.get_value_sunset()[1]);
-			this.UI.currentBuild.text = getLocaleTime(this.info.get_value_update()[1]);
+			this.UI.currentBuild.text = getLocaleTime(this.info.get_value_update()[1], 1);
 			this.UI.currentLocation.text = this.location.get_city_name()+_(", ")+getConditions(this.info);
 			this.UI.currentHumidity.text = this.info.get_humidity();				this.status("Basics informations "+di_up);
 			}
@@ -396,7 +400,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			{
 			this.UI.currentSunrise.text = getLocaleTime(this.info.get_value_sunrise()[1]);
 			this.UI.currentSunset.text = getLocaleTime(this.info.get_value_sunset()[1]);
-			this.UI.currentBuild.text = getLocaleTime(this.info.get_value_update()[1])
+			this.UI.currentBuild.text = getLocaleTime(this.info.get_value_update()[1], 1)
 			}
 
 			for(let i in this.forecast)
@@ -426,9 +430,37 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		let initialTemp = 0;
 		let actualDate = GLib.DateTime.new_now_local();
 
+			let dayName = function(aD, nD)
+			{
+			let oneDay = 86400;
+			let today = GLib.DateTime.new_local(aD.get_year(), aD.get_month(), aD.get_day_of_month(), 0, 0, 0);
+			today = (today.to_unix()+(aD.get_utc_offset()/1000000));
+			let nDTS = (nD.to_unix()+(nD.get_utc_offset()/1000000));
+			let cur = (nDTS-today);
+
+			let dN = nD.format("%a, %x");
+			dN = dN.charAt(0).toUpperCase() + dN.slice(1);
+
+				if(cur >= oneDay && cur < oneDay*7)
+				{
+				dN = nD.format("%A");
+				dN = dN.charAt(0).toUpperCase() + dN.slice(1);
+				}
+
+				if(cur < oneDay && cur >= 0)
+				dN = _("Today");
+
+				if(cur >= oneDay && cur < oneDay*2)
+				dN = _("Tomorrow");
+
+				if(cur < 0 && cur > oneDay*-1)
+				dN = _("Yesterday");
+
+			return dN;
+			};
+
 		let oldDate = {};
 		let nowDate = {};
-		let oneDay = 86400000000;
 
 		let forecastList = this.info.get_forecast_list();						this.status("Forecast list loaded ("+forecastList.length+")");
 
@@ -456,34 +488,8 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 					if(forecastList[i].get_value_temp_max(unit)[0])
 					forecast[day].maxTemp = forecastList[i].get_value_temp_max(unit)[1];
 				forecast[day].icon = "";
-				forecast[day].dayText = "";
-														this.status("Searching day name :");
-					if(actualDate.get_day_of_month() == nowDate.get_day_of_month() &&
-					   actualDate.get_month() == nowDate.get_month() &&
-					   actualDate.get_year() == nowDate.get_year())
-					{
-					forecast[day].dayText = _("Today");					this.status("This day is today");
-					}
-					else if(nowDate.difference(actualDate) <= oneDay)
-					{
-					forecast[day].dayText = _("Tomorrow");					this.status("This day is tomorrow");
-					}
-					else if(nowDate.difference(actualDate) < 0)
-					{
-					forecast[day].dayText = _("Yesterday");					this.status("This day is yesterday");
-					}
-					else if(nowDate.difference(actualDate) > oneDay && nowDate.difference(actualDate) < oneDay*7)
-					{
-					let dow = nowDate.format("%A");
-					dow = dow.charAt(0).toUpperCase() + dow.slice(1);
-					forecast[day].dayText = dow;						this.status("This day is "+dow);
-					}
-					else
-					{
-					let dow = nowDate.format("%a, %x");
-					dow = dow.charAt(0).toUpperCase() + dow.slice(1);
-					forecast[day].dayText = dow;						this.status("This day is "+dow);
-					}									this.status("Forecast "+i+" inited");
+				forecast[day].dayText = dayName(actualDate, nowDate);				this.status("Day name : "+forecast[day].dayText);
+				this.status("Forecast "+i+" inited");
 				}
 
 			hour = nowDate.get_hour();
@@ -1047,23 +1053,7 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 		get_timezone : function()
 		{
 		let timezone = this.location.get_timezone();
-			if(timezone.has_dst())
-			timezone = timezone.get_dst_offset();
-			else
-			timezone = timezone.get_offset();
-		let tznp = "+"
-			if(timezone < 0)
-			tznp = "-";
-		timezone = Math.abs(timezone);
-		let tzh = timezone/60;
-			if(tzh <= 9)
-			tzh = "0"+tzh;
-			if(timezone == 0)
-			timezone = "Z";
-			else
-			timezone = tznp+tzh+":00";
-		timezone = GLib.TimeZone.new(timezone);
-		return timezone;
+		return GLib.TimeZone.new(timezone.get_tzid());
 		},
 
 		temperature_string : function(a)
