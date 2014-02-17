@@ -26,7 +26,7 @@ msgstr "Zum Öffnen klicken"
 
 #: applet.js:249
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: applet.js:445
 msgid "Sunrise"
@@ -46,15 +46,15 @@ msgstr "Morgen"
 
 #: applet.js:495
 msgid "Loading current weather ..."
-msgstr "Lade aktuelles Wetter ..."
+msgstr "Aktuelles Wetter wird geladen ..."
 
 #: applet.js:496
 msgid "Loading future weather ..."
-msgstr "Lade zukünftiges Wetter ..."
+msgstr "Zukünftiges Wetter wird geladen ..."
 
 #: applet.js:518
 msgid "Loading ..."
-msgstr "Lade ..."
+msgstr "Wird geladen ..."
 
 #: applet.js:524
 msgid "Please wait"
@@ -74,12 +74,12 @@ msgstr "Luftdruck:"
 
 #: applet.js:589
 msgid "Wind:"
-msgstr "Windgeschwindigkeit:"
+msgstr "Wind:"
 
 #: applet.js:591
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "Windgeschwindigkeit:"
+msgstr "Windkühle:"
 
 #: applet.js:793
 msgid "Tornado"
