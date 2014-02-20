@@ -1,6 +1,8 @@
-# Weather Extension V2
+# Weather Extension
 
 ![Screenshot](https://f.cloud.github.com/assets/1255506/833069/0f754966-f28b-11e2-9fb3-3ea413919c69.png)
+
+[![Gitter chat](https://badges.gitter.im/Neroth/gnome-shell-extension-weather.png)](https://gitter.im/Neroth/gnome-shell-extension-weather)
 
 *gnome-shell-extension-weather* is a simple extension for displaying weather conditions and forecasts in GNOME Shell, featuring support for multiple locations, no need for WOEID, a symmetrical layout and a settings panel through *gnome-shell-extension-prefs*.
 
@@ -95,7 +97,7 @@ You have now two new file ("weather-extension.log" and "weather-extension-prefs.
 
 # Licence
 
-Copyright (C) 2011 - 2013
+Copyright (C) 2011 - 2014
 
 * Christian Metzler <neroth@xeked.com>,
 * Elad Alfassa <elad@fedoraproject.org>,
