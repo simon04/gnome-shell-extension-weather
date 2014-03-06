@@ -19,21 +19,18 @@ msgstr ""
 
 #: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
 #: ../src/extension.js:259 ../src/extension.js:569
-#, fuzzy
 msgid "Weather"
 msgstr "氣象設定"
 
 #: ../src/extension.js:237
 msgid "No location configured"
-msgstr ""
+msgstr "尚未設定地點"
 
 #: ../src/extension.js:245
-#, fuzzy
 msgid "Loading weather"
 msgstr "正在載入天氣預報 ..."
 
 #: ../src/extension.js:261
-#, fuzzy
 msgid "Weather extension ready"
 msgstr "氣象設定"
 
@@ -55,10 +52,9 @@ msgstr "昨天"
 
 #: ../src/extension.js:633
 msgid "Locations"
-msgstr ""
+msgstr "地點"
 
 #: ../src/extension.js:637
-#, fuzzy
 msgid "Reload Weather Information"
 msgstr "重新載入氣象資訊"
 
@@ -67,41 +63,34 @@ msgid "Weather Settings"
 msgstr "氣象設定"
 
 #: ../src/extension.js:806
-#, fuzzy
 msgid "No weather information"
 msgstr "重新載入氣象資訊"
 
 #: ../src/extension.js:808
-#, fuzzy, python-format
 msgid "No weather information for %s"
 msgstr "重新載入氣象資訊"
 
 #: ../src/extension.js:893
-#, fuzzy
 msgid "Feels like"
-msgstr "感覺像"
+msgstr "體感溫度"
 
 #: ../src/extension.js:895
 msgid "Visibility"
-msgstr ""
+msgstr "能見度"
 
 #: ../src/extension.js:897
-#, fuzzy
 msgid "Humidity"
-msgstr "濕度："
+msgstr "濕度"
 
 #: ../src/extension.js:899
-#, fuzzy
 msgid "Pressure"
-msgstr "氣壓："
+msgstr "氣壓"
 
 #: ../src/extension.js:901
-#, fuzzy
 msgid "Wind"
-msgstr "風力："
+msgstr "風力"
 
 #: ../src/extension.js:921
-#, fuzzy
 msgid "No forecast information"
 msgstr "重新載入氣象資訊"
 
@@ -122,7 +111,7 @@ msgstr ""
 
 #: ../src/extension.js:1095 ../src/extension.js:1153
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: ../src/extension.js:1117 ../src/extension.js:1120
 msgid "VAR"
@@ -130,67 +119,67 @@ msgstr ""
 
 #: ../src/extension.js:1120
 msgid "N"
-msgstr ""
+msgstr "正北"
 
 #: ../src/extension.js:1120
 msgid "NNE"
-msgstr ""
+msgstr "北北東"
 
 #: ../src/extension.js:1120
 msgid "NE"
-msgstr ""
+msgstr "東北"
 
 #: ../src/extension.js:1120
 msgid "ENE"
-msgstr ""
+msgstr "東北東"
 
 #: ../src/extension.js:1120
 msgid "E"
-msgstr ""
+msgstr "東"
 
 #: ../src/extension.js:1120
 msgid "ESE"
-msgstr ""
+msgstr "東南東"
 
 #: ../src/extension.js:1120
 msgid "SE"
-msgstr ""
+msgstr "東南"
 
 #: ../src/extension.js:1120
 msgid "SSE"
-msgstr ""
+msgstr "南南東"
 
 #: ../src/extension.js:1121
 msgid "S"
-msgstr ""
+msgstr "正南"
 
 #: ../src/extension.js:1121
 msgid "SSW"
-msgstr ""
+msgstr "南南西"
 
 #: ../src/extension.js:1121
 msgid "SW"
-msgstr ""
+msgstr "西南"
 
 #: ../src/extension.js:1121
 msgid "WSW"
-msgstr ""
+msgstr "西南西"
 
 #: ../src/extension.js:1121
 msgid "W"
-msgstr ""
+msgstr "正西"
 
 #: ../src/extension.js:1121
 msgid "WNW"
-msgstr ""
+msgstr "西北西"
 
 #: ../src/extension.js:1121
 msgid "NW"
-msgstr ""
+msgstr "西北"
 
 #: ../src/extension.js:1121
 msgid "NNW"
-msgstr ""
+msgstr "北北西"
 
 #: ../src/extension.js:1131
 msgid "$d$s knots"
@@ -214,24 +203,23 @@ msgstr ""
 
 #: ../src/prefs.js:143
 msgid "Temperature Unit"
-msgstr "溫度："
+msgstr "溫度單位"
 
 #: ../src/prefs.js:145
 msgid "Wind Speed Unit"
 msgstr "風速單位"
 
 #: ../src/prefs.js:147
-#, fuzzy
 msgid "Pressure Unit"
-msgstr "氣壓："
+msgstr "氣壓單位"
 
 #: ../src/prefs.js:149
 msgid "Distance Unit"
-msgstr ""
+msgstr "距離單位"
 
 #: ../src/prefs.js:151
 msgid "Position in Panel"
-msgstr ""
+msgstr "面板位置"
 
 #: ../src/prefs.js:152
 msgid "Center"
@@ -247,23 +235,23 @@ msgstr "左"
 
 #: ../src/prefs.js:153
 msgid "Wind Direction by Arrows"
-msgstr ""
+msgstr "風向箭頭"
 
 #: ../src/prefs.js:155
 msgid "Symbolic Icons"
-msgstr ""
+msgstr "符號顯示"
 
 #: ../src/prefs.js:157
 msgid "Temperature in Panel"
-msgstr "溫度："
+msgstr "溫度顯示"
 
 #: ../src/prefs.js:159
 msgid "Conditions in Panel"
-msgstr ""
+msgstr "面板狀態"
 
 #: ../src/prefs.js:161
 msgid "Debug the extension"
-msgstr ""
+msgstr "除錯資訊"
 
 #: ../src/prefs.js:320
 msgid "Name of the city"
@@ -314,10 +302,7 @@ msgstr "移除 %s"
 #~ msgstr "凍雨"
 
 #~ msgid "Drizzle"
-#~ msgstr "小雨"
-
-#~ msgid "Freezing rain"
-#~ msgstr "冷死人的雨"
+#~ msgstr "細雨"
 
 #~ msgid "Showers"
 #~ msgstr "陣雨"
@@ -436,7 +421,6 @@ msgstr "移除 %s"
 #~ msgid "%s days ago"
 #~ msgstr "%s 天以前"
 
-#, fuzzy
 #~ msgid "In %s days"
 #~ msgstr "%s 天以前"
 
