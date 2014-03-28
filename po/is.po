@@ -2,24 +2,25 @@
 # Copyright (C) 2012 Free Software Foundation
 # This file is distributed under the same license as the Cinnamon package.
 #
-# Sveinn í Felli <sveinki@nett.is>, 2012.
+# Sveinn í Felli <sv1@fellsnet.is>, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: weather@mockturtl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-07 13:47-0500\n"
-"PO-Revision-Date: 2012-05-23 09:07+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"PO-Revision-Date: 2014-03-26 10:18+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
-"Language: \n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: applet.js:209
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: applet.js:210
 msgid "Click to open"
@@ -27,7 +28,7 @@ msgstr "Smelltu til að opna"
 
 #: applet.js:249
 msgid "Settings"
-msgstr ""
+msgstr "Stillingar"
 
 #: applet.js:445
 msgid "Sunrise"
@@ -78,9 +79,8 @@ msgid "Wind:"
 msgstr "Vindur:"
 
 #: applet.js:591
-#, fuzzy
 msgid "Wind Chill:"
-msgstr "Vindur:"
+msgstr "Vindkæling:"
 
 #: applet.js:793
 msgid "Tornado"
@@ -104,15 +104,15 @@ msgstr "Þrumuveður"
 
 #: applet.js:803
 msgid "Mixed rain and snow"
-msgstr "Blönduð rigning og snjókoma"
+msgstr "Ýmist rigning eða snjókoma"
 
 #: applet.js:805
 msgid "Mixed rain and sleet"
-msgstr "Blönduð rigning og slydda"
+msgstr "Ýmist rigning eða slydda"
 
 #: applet.js:807
 msgid "Mixed snow and sleet"
-msgstr "Blönduð snjókoma og slydda"
+msgstr "Ýmist snjókoma eða slydda"
 
 #: applet.js:809
 msgid "Freezing drizzle"
@@ -208,7 +208,7 @@ msgstr "Bjartviðri"
 
 #: applet.js:860
 msgid "Mixed rain and hail"
-msgstr "Blönduð rigning og haglél"
+msgstr "Ýmist rigning eða haglél"
 
 #: applet.js:862
 msgid "Hot"
@@ -244,7 +244,7 @@ msgstr "Snjóél"
 
 #: applet.js:883
 msgid "Isolated thundershowers"
-msgstr "Þrumuskúrir á köflum"
+msgstr "Þrumuskúrir á stöku stað"
 
 #: applet.js:886
 msgid "Not available"
