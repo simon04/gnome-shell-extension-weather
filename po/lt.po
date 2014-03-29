@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-19 15:54+0200\n"
+"POT-Creation-Date: 2014-03-29 18:16+0100\n"
 "PO-Revision-Date: 2012-12-21 12:43+0000\n"
 "Last-Translator: Mantas Kriaučiūnas <mantas@akl.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Launchpad (build 16378)\n"
 
 #: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
-#: ../src/extension.js:259 ../src/extension.js:569
+#: ../src/extension.js:259 ../src/extension.js:575
 #, fuzzy
 msgid "Weather"
 msgstr "Nustatymai (vietovė ir kt.)"
@@ -38,186 +38,186 @@ msgstr "Įkeliama orų prognozė..."
 msgid "Weather extension ready"
 msgstr "Nustatymai (vietovė ir kt.)"
 
-#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+#: ../src/extension.js:293 ../src/extension.js:366 ../src/extension.js:373
 msgid ", "
 msgstr ""
 
-#: ../src/extension.js:465
+#: ../src/extension.js:451
 msgid "Today"
 msgstr "Šiandien"
 
-#: ../src/extension.js:469
+#: ../src/extension.js:454
 msgid "Tomorrow"
 msgstr "Rytoj"
 
-#: ../src/extension.js:473
+#: ../src/extension.js:457
 msgid "Yesterday"
 msgstr "Vakar"
 
-#: ../src/extension.js:633
+#: ../src/extension.js:639
 msgid "Locations"
 msgstr "Vietovės"
 
-#: ../src/extension.js:637
+#: ../src/extension.js:643
 #, fuzzy
 msgid "Reload Weather Information"
 msgstr "Atnaujinti orų informaciją"
 
-#: ../src/extension.js:642
+#: ../src/extension.js:648
 msgid "Weather Settings"
 msgstr "Nustatymai (vietovė ir kt.)"
 
-#: ../src/extension.js:806
+#: ../src/extension.js:812
 #, fuzzy
 msgid "No weather information"
 msgstr "Atnaujinti orų informaciją"
 
-#: ../src/extension.js:808
+#: ../src/extension.js:814
 #, fuzzy, python-format
 msgid "No weather information for %s"
 msgstr "Atnaujinti orų informaciją"
 
-#: ../src/extension.js:893
+#: ../src/extension.js:899
 #, fuzzy
 msgid "Feels like"
 msgstr "Jaučiama kaip:"
 
-#: ../src/extension.js:895
+#: ../src/extension.js:901
 msgid "Visibility"
 msgstr ""
 
-#: ../src/extension.js:897
+#: ../src/extension.js:903
 #, fuzzy
 msgid "Humidity"
 msgstr "Drėgnumas:"
 
-#: ../src/extension.js:899
+#: ../src/extension.js:905
 #, fuzzy
 msgid "Pressure"
 msgstr "Slėgis:"
 
-#: ../src/extension.js:901
+#: ../src/extension.js:907
 #, fuzzy
 msgid "Wind"
 msgstr "Vėjas:"
 
-#: ../src/extension.js:921
+#: ../src/extension.js:929
 #, fuzzy
 msgid "No forecast information"
 msgstr "Atnaujinti orų informaciją"
 
-#: ../src/extension.js:1081
+#: ../src/extension.js:1114
 #, python-format
 msgid "%s °F"
 msgstr ""
 
-#: ../src/extension.js:1085
+#: ../src/extension.js:1118
 #, python-format
 msgid "%s °C"
 msgstr ""
 
-#: ../src/extension.js:1089
+#: ../src/extension.js:1122
 #, python-format
 msgid "%s K"
 msgstr ""
 
-#: ../src/extension.js:1095 ../src/extension.js:1153
+#: ../src/extension.js:1128 ../src/extension.js:1186
 msgid "Unknown"
 msgstr ""
 
-#: ../src/extension.js:1117 ../src/extension.js:1120
+#: ../src/extension.js:1150 ../src/extension.js:1153
 msgid "VAR"
 msgstr ""
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "N"
 msgstr "Š"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 #, fuzzy
 msgid "NNE"
 msgstr "ŠR"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "NE"
 msgstr "ŠR"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 #, fuzzy
 msgid "ENE"
 msgstr "ŠR"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "E"
 msgstr "R"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 #, fuzzy
 msgid "ESE"
 msgstr "PR"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "SE"
 msgstr "PR"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 #, fuzzy
 msgid "SSE"
 msgstr "PR"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "S"
 msgstr "P"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 #, fuzzy
 msgid "SSW"
 msgstr "PV"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "SW"
 msgstr "PV"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 #, fuzzy
 msgid "WSW"
 msgstr "PV"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "W"
 msgstr "V"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 #, fuzzy
 msgid "WNW"
 msgstr "ŠV"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "NW"
 msgstr "ŠV"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 #, fuzzy
 msgid "NNW"
 msgstr "ŠV"
 
-#: ../src/extension.js:1131
+#: ../src/extension.js:1164
 msgid "$d$s knots"
 msgstr ""
 
-#: ../src/extension.js:1135
+#: ../src/extension.js:1168
 msgid "$d$s mph"
 msgstr ""
 
-#: ../src/extension.js:1139
+#: ../src/extension.js:1172
 msgid "$d$s km/h"
 msgstr ""
 
-#: ../src/extension.js:1143
+#: ../src/extension.js:1176
 msgid "$d$s m/s"
 msgstr ""
 
-#: ../src/extension.js:1147
+#: ../src/extension.js:1180
 msgid "$dBeaufort $s"
 msgstr ""
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-19 16:01+0200\n"
+"POT-Creation-Date: 2014-03-29 18:16+0100\n"
 "PO-Revision-Date: 2013-11-19 12:03+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
-#: ../src/extension.js:259 ../src/extension.js:569
+#: ../src/extension.js:259 ../src/extension.js:575
 msgid "Weather"
 msgstr "الطقس"
 
@@ -36,171 +36,171 @@ msgstr "يُحمّل الطقس"
 msgid "Weather extension ready"
 msgstr "امتداد الطقس جاهز"
 
-#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+#: ../src/extension.js:293 ../src/extension.js:366 ../src/extension.js:373
 msgid ", "
 msgstr "، "
 
-#: ../src/extension.js:465
+#: ../src/extension.js:451
 msgid "Today"
 msgstr "اليوم"
 
-#: ../src/extension.js:469
+#: ../src/extension.js:454
 msgid "Tomorrow"
 msgstr "غدًا"
 
-#: ../src/extension.js:473
+#: ../src/extension.js:457
 msgid "Yesterday"
 msgstr "أمس"
 
-#: ../src/extension.js:633
+#: ../src/extension.js:639
 msgid "Locations"
 msgstr "الأماكن"
 
-#: ../src/extension.js:637
+#: ../src/extension.js:643
 msgid "Reload Weather Information"
 msgstr "أعِد تحميل معلومات الطقس"
 
-#: ../src/extension.js:642
+#: ../src/extension.js:648
 msgid "Weather Settings"
 msgstr "إعدادات الطقس"
 
-#: ../src/extension.js:806
+#: ../src/extension.js:812
 msgid "No weather information"
 msgstr "لا معلومات عن الطقس"
 
-#: ../src/extension.js:808
+#: ../src/extension.js:814
 #, python-format
 msgid "No weather information for %s"
 msgstr "لا معلومات عن طقس %s"
 
-#: ../src/extension.js:893
+#: ../src/extension.js:899
 msgid "Feels like"
 msgstr "تبدو مثل"
 
-#: ../src/extension.js:895
+#: ../src/extension.js:901
 msgid "Visibility"
 msgstr "الرؤية"
 
-#: ../src/extension.js:897
+#: ../src/extension.js:903
 msgid "Humidity"
 msgstr "الرطوبة"
 
-#: ../src/extension.js:899
+#: ../src/extension.js:905
 msgid "Pressure"
 msgstr "الضغط"
 
-#: ../src/extension.js:901
+#: ../src/extension.js:907
 msgid "Wind"
 msgstr "الرياح"
 
-#: ../src/extension.js:921
+#: ../src/extension.js:929
 msgid "No forecast information"
 msgstr "لا نشرة جوية"
 
-#: ../src/extension.js:1081
+#: ../src/extension.js:1114
 #, python-format
 msgid "%s °F"
 msgstr "%s °ف"
 
-#: ../src/extension.js:1085
+#: ../src/extension.js:1118
 #, python-format
 msgid "%s °C"
 msgstr "%s °م"
 
-#: ../src/extension.js:1089
+#: ../src/extension.js:1122
 #, python-format
 msgid "%s K"
 msgstr "%s ك"
 
-#: ../src/extension.js:1095 ../src/extension.js:1153
+#: ../src/extension.js:1128 ../src/extension.js:1186
 msgid "Unknown"
 msgstr "غير معروف"
 
-#: ../src/extension.js:1117 ../src/extension.js:1120
+#: ../src/extension.js:1150 ../src/extension.js:1153
 msgid "VAR"
 msgstr "متغيّر"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "N"
 msgstr "شمال"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "NNE"
 msgstr "شمال شمال شرقي"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "NE"
 msgstr "شمال شرقي"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "ENE"
 msgstr "شرق شمال شرقي"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "E"
 msgstr "شرق"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "ESE"
 msgstr "شرق جنوب شرقي"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "SE"
 msgstr "جنوب شرقي"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "SSE"
 msgstr "جنوب جنوب شرقي"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "S"
 msgstr "جنوب"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "SSW"
 msgstr "جنوب جنوب غربي"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "SW"
 msgstr "جنوب غربي"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "WSW"
 msgstr "غرب جنوب غربي"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "W"
 msgstr "غرب"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "WNW"
 msgstr "غرب شمال غربي"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "NW"
 msgstr "شمال غربي"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "NNW"
 msgstr "شمال شمال غربي"
 
-#: ../src/extension.js:1131
+#: ../src/extension.js:1164
 msgid "$d$s knots"
 msgstr "$d$s عقدة"
 
-#: ../src/extension.js:1135
+#: ../src/extension.js:1168
 msgid "$d$s mph"
 msgstr "$d$s ميل\\س"
 
-#: ../src/extension.js:1139
+#: ../src/extension.js:1172
 msgid "$d$s km/h"
 msgstr "$d$s كم\\س"
 
-#: ../src/extension.js:1143
+#: ../src/extension.js:1176
 msgid "$d$s m/s"
 msgstr "$d$s م\\س"
 
-#: ../src/extension.js:1147
+#: ../src/extension.js:1180
 msgid "$dBeaufort $s"
 msgstr "$d بوفورت $s"
 

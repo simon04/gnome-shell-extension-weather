@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-13 19:22+0330\n"
+"POT-Creation-Date: 2014-03-29 18:16+0100\n"
 "PO-Revision-Date: 2013-11-21 16:05+0330\n"
 "Last-Translator: نصراله نوری <nanopqr@gmail.com>\n"
 "Language-Team: فارسی <>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 
 #: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
-#: ../src/extension.js:259 ../src/extension.js:569
+#: ../src/extension.js:259 ../src/extension.js:575
 msgid "Weather"
 msgstr "هواشناسی"
 
@@ -37,167 +37,171 @@ msgstr "بارگیری هواشناسی"
 msgid "Weather extension ready"
 msgstr "افزونه هواشناسی آماده است"
 
-#: ../src/extension.js:465
+#: ../src/extension.js:293 ../src/extension.js:366 ../src/extension.js:373
+msgid ", "
+msgstr ""
+
+#: ../src/extension.js:451
 msgid "Today"
 msgstr "امروز"
 
-#: ../src/extension.js:469
+#: ../src/extension.js:454
 msgid "Tomorrow"
 msgstr "فردا"
 
-#: ../src/extension.js:473
+#: ../src/extension.js:457
 msgid "Yesterday"
 msgstr "دیروز"
 
-#: ../src/extension.js:633
+#: ../src/extension.js:639
 msgid "Locations"
 msgstr "مکان‌ها"
 
-#: ../src/extension.js:637
+#: ../src/extension.js:643
 msgid "Reload Weather Information"
 msgstr "بارگیری دوباره داده‌های هواشناسی"
 
-#: ../src/extension.js:642
+#: ../src/extension.js:648
 msgid "Weather Settings"
 msgstr "تنظیمات هواشناسی"
 
-#: ../src/extension.js:806
+#: ../src/extension.js:812
 msgid "No weather information"
 msgstr "داده‌های هواشناسی نیست"
 
-#: ../src/extension.js:808
+#: ../src/extension.js:814
 #, python-format
 msgid "No weather information for %s"
 msgstr "داده‌های هواشناسی برای «%s» نیست"
 
-#: ../src/extension.js:893
+#: ../src/extension.js:899
 msgid "Feels like"
 msgstr "همانند"
 
-#: ../src/extension.js:895
+#: ../src/extension.js:901
 msgid "Visibility"
 msgstr "دید"
 
-#: ../src/extension.js:897
+#: ../src/extension.js:903
 msgid "Humidity"
 msgstr "نمناکی"
 
-#: ../src/extension.js:899
+#: ../src/extension.js:905
 msgid "Pressure"
 msgstr "فشار"
 
-#: ../src/extension.js:901
+#: ../src/extension.js:907
 msgid "Wind"
 msgstr "باد"
 
-#: ../src/extension.js:921
+#: ../src/extension.js:929
 msgid "No forecast information"
 msgstr "داده‌های پیش‌بینی هواشناسی نیست"
 
-#: ../src/extension.js:1081
+#: ../src/extension.js:1114
 #, python-format
 msgid "%s °F"
 msgstr "%s °ف"
 
-#: ../src/extension.js:1085
+#: ../src/extension.js:1118
 #, python-format
 msgid "%s °C"
 msgstr "%s °س"
 
-#: ../src/extension.js:1089
+#: ../src/extension.js:1122
 #, python-format
 msgid "%s K"
 msgstr "%s ک"
 
-#: ../src/extension.js:1095 ../src/extension.js:1153
+#: ../src/extension.js:1128 ../src/extension.js:1186
 msgid "Unknown"
 msgstr "ناشناخته"
 
-#: ../src/extension.js:1117 ../src/extension.js:1120
+#: ../src/extension.js:1150 ../src/extension.js:1153
 msgid "VAR"
 msgstr "دگرگون"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "N"
 msgstr "ش"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "NNE"
 msgstr "ش ش‌خ"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "NE"
 msgstr "ش‌خ"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "ENE"
 msgstr "خ ش‌خ"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "E"
 msgstr "خ"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "ESE"
 msgstr "خ ج‌خ"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "SE"
 msgstr "ج‌خ"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "SSE"
 msgstr "ج ج‌خ"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "S"
 msgstr "ج"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "SSW"
 msgstr "ج ج‌ب"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "SW"
 msgstr "ج‌ب"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "WSW"
 msgstr "ب ج‌ب"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "W"
 msgstr "ب"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "WNW"
 msgstr "ب ش‌ب"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "NW"
 msgstr "ش‌ب"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "NNW"
 msgstr "ش ش‌ب"
 
-#: ../src/extension.js:1131
+#: ../src/extension.js:1164
 msgid "$d$s knots"
 msgstr "$d$s نات"
 
-#: ../src/extension.js:1135
+#: ../src/extension.js:1168
 msgid "$d$s mph"
 msgstr "$d$s مایل/ساعت"
 
-#: ../src/extension.js:1139
+#: ../src/extension.js:1172
 msgid "$d$s km/h"
 msgstr "$d$s ک‌متر/ساعت"
 
-#: ../src/extension.js:1143
+#: ../src/extension.js:1176
 msgid "$d$s m/s"
 msgstr "$d$s متر/ثانیه"
 
-#: ../src/extension.js:1147
+#: ../src/extension.js:1180
 msgid "$dBeaufort $s"
 msgstr "$dبیوفورت $s"
 

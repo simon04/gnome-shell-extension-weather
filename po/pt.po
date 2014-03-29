@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-19 15:54+0200\n"
+"POT-Creation-Date: 2014-03-29 18:16+0100\n"
 "PO-Revision-Date: 2013-12-07 11:39-0200\n"
 "Last-Translator: Kemel Zaidan <kemelzaidan@gmail.com>\n"
 "Language-Team: Português <kemelzaidan@gmail.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 
 #: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
-#: ../src/extension.js:259 ../src/extension.js:569
+#: ../src/extension.js:259 ../src/extension.js:575
 msgid "Weather"
 msgstr "Tempo"
 
@@ -36,172 +36,172 @@ msgstr "Carregando a previsão do tempo"
 msgid "Weather extension ready"
 msgstr "Extensão de previsão do tempo pronta"
 
-#: ../src/extension.js:293 ../src/extension.js:362 ../src/extension.js:369
+#: ../src/extension.js:293 ../src/extension.js:366 ../src/extension.js:373
 msgid ", "
 msgstr ","
 
-#: ../src/extension.js:465
+#: ../src/extension.js:451
 msgid "Today"
 msgstr "Hoje"
 
-#: ../src/extension.js:469
+#: ../src/extension.js:454
 msgid "Tomorrow"
 msgstr "Amanhã"
 
-#: ../src/extension.js:473
+#: ../src/extension.js:457
 msgid "Yesterday"
 msgstr "Ontem"
 
-#: ../src/extension.js:633
+#: ../src/extension.js:639
 msgid "Locations"
 msgstr "Locais"
 
-#: ../src/extension.js:637
+#: ../src/extension.js:643
 msgid "Reload Weather Information"
 msgstr "Recarregar informações meteorológicas"
 
-#: ../src/extension.js:642
+#: ../src/extension.js:648
 msgid "Weather Settings"
 msgstr "Configurações"
 
-#: ../src/extension.js:806
+#: ../src/extension.js:812
 msgid "No weather information"
 msgstr "Sem informações meteorológicas"
 
-#: ../src/extension.js:808
+#: ../src/extension.js:814
 #, python-format
 msgid "No weather information for %s"
 msgstr "Sem informações meteorológicas para %s"
 
-#: ../src/extension.js:893
+#: ../src/extension.js:899
 msgid "Feels like"
 msgstr "Sensação térmica"
 
-#: ../src/extension.js:895
+#: ../src/extension.js:901
 msgid "Visibility"
 msgstr "Visibilidade"
 
-#: ../src/extension.js:897
+#: ../src/extension.js:903
 msgid "Humidity"
 msgstr "Humidade"
 
-#: ../src/extension.js:899
+#: ../src/extension.js:905
 msgid "Pressure"
 msgstr "Pressão"
 
-#: ../src/extension.js:901
+#: ../src/extension.js:907
 msgid "Wind"
 msgstr "Vento"
 
-#: ../src/extension.js:921
+#: ../src/extension.js:929
 msgid "No forecast information"
 msgstr "Sem informações meteorológicas"
 
-#: ../src/extension.js:1081
+#: ../src/extension.js:1114
 #, python-format
 msgid "%s °F"
 msgstr "%s °F"
 
-#: ../src/extension.js:1085
+#: ../src/extension.js:1118
 #, python-format
 msgid "%s °C"
 msgstr "%s °C"
 
-#: ../src/extension.js:1089
+#: ../src/extension.js:1122
 #, python-format
 msgid "%s K"
 msgstr "%s K"
 
-#: ../src/extension.js:1095 ../src/extension.js:1153
+#: ../src/extension.js:1128 ../src/extension.js:1186
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: ../src/extension.js:1117 ../src/extension.js:1120
+#: ../src/extension.js:1150 ../src/extension.js:1153
 msgid "VAR"
 msgstr "VAR"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "N"
 msgstr "N"
 
 # Some points like NE, ENE, ESE and SSE haven't a translation to portuguese, and are  used in it's original form.
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "NNE"
 msgstr "NE"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "NE"
 msgstr "NE"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "ENE"
 msgstr "ENE"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "E"
 msgstr "E"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "ESE"
 msgstr "ESE"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "SE"
 msgstr "SE"
 
-#: ../src/extension.js:1120
+#: ../src/extension.js:1153
 msgid "SSE"
 msgstr "SSE"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "S"
 msgstr "S"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "SSW"
 msgstr "SSO"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "SW"
 msgstr "SO"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "WSW"
 msgstr "OSO"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "W"
 msgstr "O"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "WNW"
 msgstr "ONO"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "NW"
 msgstr "NO"
 
-#: ../src/extension.js:1121
+#: ../src/extension.js:1154
 msgid "NNW"
 msgstr "NNO"
 
-#: ../src/extension.js:1131
+#: ../src/extension.js:1164
 msgid "$d$s knots"
 msgstr "$d$s knots"
 
-#: ../src/extension.js:1135
+#: ../src/extension.js:1168
 msgid "$d$s mph"
 msgstr "$d$s mph"
 
-#: ../src/extension.js:1139
+#: ../src/extension.js:1172
 msgid "$d$s km/h"
 msgstr "$d$s km/h"
 
-#: ../src/extension.js:1143
+#: ../src/extension.js:1176
 msgid "$d$s m/s"
 msgstr "$d$s m/s"
 
-#: ../src/extension.js:1147
+#: ../src/extension.js:1180
 msgid "$dBeaufort $s"
 msgstr "$dBeaufort $s"
 
