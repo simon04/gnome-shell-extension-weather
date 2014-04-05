@@ -312,6 +312,87 @@ msgstr "T"
 msgid "NW"
 msgstr "TB"
 
+#. cinnamon-weather->settings-schema.json->woeidLookup->description
+msgid "Get WOEID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showTextInPanel->description
+#, fuzzy
+msgid "Display current temperature in panel"
+msgstr "Hiện nhiệt độ trên pa-nen"
+
+#. cinnamon-weather->settings-schema.json->woeid->description
+msgid "WOEID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->woeid->tooltip
+msgid "Where On Earth ID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->description
+#, fuzzy
+msgid "Temperature unit"
+msgstr "Đơn vị đo nhiệt độ:"
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->options
+msgid "fahrenheit"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->options
+msgid "celsius"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->translateCondition->description
+#, fuzzy
+msgid "Translate condition"
+msgstr "Dịch tình hình thời tiết"
+
+#. cinnamon-weather->settings-schema.json->locationLabelOverride->description
+msgid "Override location label"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showSunrise->description
+msgid "Show sunrise / sunset times"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->description
+#, fuzzy
+msgid "Wind speed unit"
+msgstr "Đơn vị tốc độ gió"
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "kph"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "m/s"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "knots"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "mph"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showCommentInPanel->description
+msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->refreshInterval->description
+msgid "Update interval (minutes)"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
+#, fuzzy
+msgid "Symbolic icons"
+msgstr "Biểu tượng đơn giản"
+
+#. cinnamon-weather->settings-schema.json->showFivedayForecast->description
+msgid "Show 5-day forecast"
+msgstr ""
+
 #~ msgid "Schema \"%s\" not found."
 #~ msgstr "Không tìm thấy schema \"%s\"."
 
@@ -340,9 +421,6 @@ msgstr "TB"
 #~ msgid "Remove %s ?"
 #~ msgstr "Bạn có muốn xóa %s?"
 
-#~ msgid "Wind Speed Unit"
-#~ msgstr "Đơn vị tốc độ gió"
-
 #, fuzzy
 #~ msgid "Pressure Unit"
 #~ msgstr "Áp suất:"
@@ -358,15 +436,6 @@ msgstr "TB"
 
 #~ msgid "Left"
 #~ msgstr "Bên trái"
-
-#~ msgid "Translate Conditions"
-#~ msgstr "Dịch tình hình thời tiết"
-
-#~ msgid "Symbolic Icons"
-#~ msgstr "Biểu tượng đơn giản"
-
-#~ msgid "Temperature in Panel"
-#~ msgstr "Hiện nhiệt độ trên pa-nen"
 
 #~ msgid "Conditions in Panel"
 #~ msgstr "Hiện thời tiết trên pa-nen"
