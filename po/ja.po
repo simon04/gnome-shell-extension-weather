@@ -310,6 +310,87 @@ msgstr ""
 msgid "NW"
 msgstr ""
 
+#. cinnamon-weather->settings-schema.json->woeidLookup->description
+msgid "Get WOEID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showTextInPanel->description
+#, fuzzy
+msgid "Display current temperature in panel"
+msgstr "パネルに気温を表示する"
+
+#. cinnamon-weather->settings-schema.json->woeid->description
+msgid "WOEID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->woeid->tooltip
+msgid "Where On Earth ID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->description
+#, fuzzy
+msgid "Temperature unit"
+msgstr "気温の単位"
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->options
+msgid "fahrenheit"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->options
+msgid "celsius"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->translateCondition->description
+#, fuzzy
+msgid "Translate condition"
+msgstr "状態を日本語にする"
+
+#. cinnamon-weather->settings-schema.json->locationLabelOverride->description
+msgid "Override location label"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showSunrise->description
+msgid "Show sunrise / sunset times"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->description
+#, fuzzy
+msgid "Wind speed unit"
+msgstr "風速の単位"
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "kph"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "m/s"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "knots"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "mph"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showCommentInPanel->description
+msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->refreshInterval->description
+msgid "Update interval (minutes)"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
+#, fuzzy
+msgid "Symbolic icons"
+msgstr "シンボリック・アイコンにする"
+
+#. cinnamon-weather->settings-schema.json->showFivedayForecast->description
+msgid "Show 5-day forecast"
+msgstr ""
+
 #~ msgid "Schema \"%s\" not found."
 #~ msgstr "次のスキーマが見つかりませんでした: \"%s\""
 
@@ -331,9 +412,6 @@ msgstr ""
 #~ msgid "Remove %s ?"
 #~ msgstr "\"%s\" を削除しますか？"
 
-#~ msgid "Wind Speed Unit"
-#~ msgstr "風速の単位"
-
 #~ msgid "Position in Panel"
 #~ msgstr "配置する場所"
 
@@ -345,15 +423,6 @@ msgstr ""
 
 #~ msgid "Left"
 #~ msgstr "左側"
-
-#~ msgid "Translate Conditions"
-#~ msgstr "状態を日本語にする"
-
-#~ msgid "Symbolic Icons"
-#~ msgstr "シンボリック・アイコンにする"
-
-#~ msgid "Temperature in Panel"
-#~ msgstr "パネルに気温を表示する"
 
 #~ msgid "Conditions in Panel"
 #~ msgstr "パネルに状態を表示する"

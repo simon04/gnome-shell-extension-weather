@@ -313,6 +313,86 @@ msgstr "V"
 msgid "NW"
 msgstr "ŠV"
 
+#. cinnamon-weather->settings-schema.json->woeidLookup->description
+msgid "Get WOEID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showTextInPanel->description
+#, fuzzy
+msgid "Display current temperature in panel"
+msgstr "Rodyti temperatūrą skydelyje"
+
+#. cinnamon-weather->settings-schema.json->woeid->description
+msgid "WOEID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->woeid->tooltip
+msgid "Where On Earth ID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->description
+#, fuzzy
+msgid "Temperature unit"
+msgstr "Temperatūros vienetai:"
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->options
+msgid "fahrenheit"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->temperatureUnit->options
+msgid "celsius"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->translateCondition->description
+#, fuzzy
+msgid "Translate condition"
+msgstr "Versti oro sąlygas"
+
+#. cinnamon-weather->settings-schema.json->locationLabelOverride->description
+msgid "Override location label"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showSunrise->description
+msgid "Show sunrise / sunset times"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->description
+#, fuzzy
+msgid "Wind speed unit"
+msgstr "Vėjo greičio vienetai"
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "kph"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "m/s"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "knots"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->windSpeedUnit->options
+msgid "mph"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showCommentInPanel->description
+msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->refreshInterval->description
+msgid "Update interval (minutes)"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
+msgid "Symbolic icons"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->showFivedayForecast->description
+msgid "Show 5-day forecast"
+msgstr ""
+
 #~ msgid "Locations"
 #~ msgstr "Vietovės"
 
@@ -367,9 +447,6 @@ msgstr "ŠV"
 #~ msgid "Remove %s ?"
 #~ msgstr "Pašalinti %s ?"
 
-#~ msgid "Wind Speed Unit"
-#~ msgstr "Vėjo greičio vienetai"
-
 #~ msgid "Pressure Unit"
 #~ msgstr "Slėgio vienetai"
 
@@ -387,12 +464,6 @@ msgstr "ŠV"
 
 #~ msgid "Wind Direction by Arrows"
 #~ msgstr "Vėjo krypčiai naudoti rodykles"
-
-#~ msgid "Translate Conditions"
-#~ msgstr "Versti oro sąlygas"
-
-#~ msgid "Temperature in Panel"
-#~ msgstr "Rodyti temperatūrą skydelyje"
 
 #~ msgid "Conditions in Panel"
 #~ msgstr "Rodyti oro sąlygas skydelyje"
