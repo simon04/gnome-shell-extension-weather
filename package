@@ -128,10 +128,14 @@ do_translate() {
 	UUID="$(find po/ -name *.pot | xargs -i basename {} .pot)"
 
 	cat << EOF
-Updating template for ${UUID}...
+WARNING: not updating template for ${UUID}; please investigate!
 EOF
 	# python mode is OK for javascript
-	xgettext -d ${UUID} -o po/${UUID}.pot -L python --keyword=_ applet.js
+	#xgettext -d ${UUID} -o po/${UUID}.pot -L python --keyword=_ applet.js
+
+  # settings-schema.json translation
+  # not idempotent! the xgettext call above will remove those lines
+  #cinnamon-json-makepot po/${UUID}.pot
 
 	cat << EOF
 Merging existing translation files with new template...
