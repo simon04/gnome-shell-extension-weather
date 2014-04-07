@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: weather@mockturtl\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-07 13:47-0500\n"
-"PO-Revision-Date: 2014-03-26 10:18+0000\n"
+"PO-Revision-Date: 2014-04-07 08:34+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "Language: is\n"
@@ -216,11 +216,11 @@ msgstr "Heitt"
 
 #: applet.js:864
 msgid "Isolated thunderstorms"
-msgstr "Þrumuveður á köflum"
+msgstr "Skúraveður á köflum"
 
 #: applet.js:867
 msgid "Scattered thunderstorms"
-msgstr "Þrumuveður á dreif"
+msgstr "Skúrir/él á dreif"
 
 #: applet.js:869
 msgid "Scattered showers"
@@ -244,7 +244,7 @@ msgstr "Snjóél"
 
 #: applet.js:883
 msgid "Isolated thundershowers"
-msgstr "Þrumuskúrir á stöku stað"
+msgstr "Skúrir/él á stöku stað"
 
 #: applet.js:886
 msgid "Not available"
@@ -312,80 +312,79 @@ msgstr "NV"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr ""
+msgstr "Sækja WOEID"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr ""
+msgstr "Birta núverandi hitastig á spjaldi"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
-msgstr ""
+msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "Staðstetningarauðkenni"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
-#, fuzzy
 msgid "Temperature unit"
-msgstr "Hiti:"
+msgstr "Eining fyrir hitastig"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
-msgstr ""
+msgstr "fahrenheit"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr ""
+msgstr "selsíus"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr ""
+msgstr "Þýða veðurskilyrði"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr ""
+msgstr "Yfirskrifa staðsetningarmerki"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr ""
+msgstr "Birta tíma fyrir sólarupprás / sólarlag"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr ""
+msgstr "Eining fyrir vindhraða"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
-msgstr ""
+msgstr "hn/klst"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "m/s"
-msgstr ""
+msgstr "m/sek"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
-msgstr ""
+msgstr "hnútar"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr ""
+msgstr "mi/klst"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr ""
+msgstr "Birta veðurlýsingu (t.d. \"Hvasst\", \"Heiðskírt\") á spjaldi"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval (minutes)"
-msgstr ""
+msgstr "Uppfærslutíðni (mínútur)"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr ""
+msgstr "Táknrænar táknmyndir"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr ""
+msgstr "Birta 5-daga spá"
 
 #~ msgid "Schema \"%s\" not found."
 #~ msgstr "Skemað \"%s\" fannst ekki."
