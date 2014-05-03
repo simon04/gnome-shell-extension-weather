@@ -116,6 +116,7 @@ const STYLE_PANEL_BUTTON = 'panel-button'
 const STYLE_POPUP_SEPARATOR_MENU_ITEM = 'popup-separator-menu-item'
 const STYLE_CURRENT = 'current'
 const STYLE_FORECAST = 'forecast'
+const STYLE_WEATHER_MENU = 'weather-menu'
 
 const WeatherUnits = {
   CELSIUS: 'celsius',
@@ -212,6 +213,7 @@ MyApplet.prototype = {
       // PopupMenu
       this.menuManager = new PopupMenu.PopupMenuManager(this)
       this.menu = new Applet.AppletPopupMenu(this, orientation)
+      this.menu.actor.add_style_class_name(STYLE_WEATHER_MENU)
       this.menuManager.addMenu(this.menu)
 
       //----------------------------------
