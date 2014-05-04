@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-07 13:47-0500\n"
+"POT-Creation-Date: 2014-05-04 15:06-0400\n"
 "PO-Revision-Date: 2012-11-12 01:51+0200\n"
 "Last-Translator: f <fatihmete@live.com>\n"
 "Language-Team: Turkish <fatihmete@live.com>\n"
@@ -19,301 +19,305 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: applet.js:209
+#: applet.js:210
 msgid "..."
 msgstr "..."
 
-#: applet.js:210
+#: applet.js:211
 msgid "Click to open"
 msgstr ""
 
-#: applet.js:249
+#: applet.js:251
 msgid "Settings"
 msgstr ""
 
-#: applet.js:445
+#: applet.js:447
 msgid "Sunrise"
 msgstr "Gün Doğumu"
 
-#: applet.js:446
+#: applet.js:448
 msgid "Sunset"
 msgstr "Gün Batımı"
 
-#: applet.js:451
+#: applet.js:453
 msgid "Today"
 msgstr "Bugün"
 
-#: applet.js:451
+#: applet.js:453
 msgid "Tomorrow"
 msgstr "Yarın"
 
-#: applet.js:495
+#: applet.js:497
 msgid "Loading current weather ..."
 msgstr "Geçerli hava durumu yükleniyor..."
 
-#: applet.js:496
+#: applet.js:498
 msgid "Loading future weather ..."
 msgstr "Gelecek hava durumu bilgisi yükleniyor..."
 
-#: applet.js:518
+#: applet.js:520
 msgid "Loading ..."
 msgstr "Yükleniyor ..."
 
-#: applet.js:524
+#: applet.js:526
 msgid "Please wait"
 msgstr "Lütfen bekleyiniz"
 
-#: applet.js:583
+#: applet.js:585
 msgid "Temperature:"
 msgstr "Sıcaklık :"
 
-#: applet.js:585
+#: applet.js:587
 msgid "Humidity:"
 msgstr "Nem :"
 
-#: applet.js:587
+#: applet.js:589
 msgid "Pressure:"
 msgstr "Basınç :"
 
-#: applet.js:589
+#: applet.js:591
 msgid "Wind:"
 msgstr "Rüzgar :"
 
-#: applet.js:591
+#: applet.js:593
 #, fuzzy
 msgid "Wind Chill:"
 msgstr "Rüzgar :"
 
-#: applet.js:793
+#: applet.js:795
 msgid "Tornado"
 msgstr "Hortum"
 
-#: applet.js:795
+#: applet.js:797
 msgid "Tropical storm"
 msgstr "Tropik Fırtına"
 
-#: applet.js:797
+#: applet.js:799
 msgid "Hurricane"
 msgstr "Kasırga"
 
-#: applet.js:799
+#: applet.js:801
 msgid "Severe thunderstorms"
 msgstr "Şiddetli Gökgürültülü"
 
-#: applet.js:801
+#: applet.js:803
 msgid "Thunderstorms"
 msgstr "Gök Gürültülü"
 
-#: applet.js:803
+#: applet.js:805
 msgid "Mixed rain and snow"
 msgstr "Karla karışık yağmur"
 
-#: applet.js:805
+#: applet.js:807
 msgid "Mixed rain and sleet"
 msgstr "Sulusepken Yağmur"
 
-#: applet.js:807
+#: applet.js:809
 msgid "Mixed snow and sleet"
 msgstr "Suluspken kar"
 
-#: applet.js:809
+#: applet.js:811
 msgid "Freezing drizzle"
 msgstr "Donduran çiseleme"
 
-#: applet.js:811
+#: applet.js:813
 msgid "Drizzle"
 msgstr "Çişeleme"
 
-#: applet.js:813
+#: applet.js:815
 msgid "Freezing rain"
 msgstr "Donduran Yağmur"
 
-#: applet.js:815 applet.js:817
+#: applet.js:817 applet.js:819
 msgid "Showers"
 msgstr "Kısa süreli yağmur"
 
-#: applet.js:819
+#: applet.js:821
 msgid "Snow flurries"
 msgstr "Neige"
 
-#: applet.js:821
+#: applet.js:823
 msgid "Light snow showers"
 msgstr "Neige"
 
-#: applet.js:823
+#: applet.js:825
 msgid "Blowing snow"
 msgstr "Kar Tipisi"
 
-#: applet.js:825
+#: applet.js:827
 msgid "Snow"
 msgstr "Kar"
 
-#: applet.js:827
+#: applet.js:829
 msgid "Hail"
 msgstr "Dolu"
 
-#: applet.js:829
+#: applet.js:831
 msgid "Sleet"
 msgstr "Sulusepken"
 
-#: applet.js:831
+#: applet.js:833
 msgid "Dust"
 msgstr "Tozlu"
 
-#: applet.js:833
+#: applet.js:835
 msgid "Foggy"
 msgstr "Sisli"
 
-#: applet.js:835
+#: applet.js:837
 msgid "Haze"
 msgstr "Puslu"
 
-#: applet.js:837
+#: applet.js:839
 msgid "Smoky"
 msgstr "Dumanlı"
 
-#: applet.js:839
+#: applet.js:841
 msgid "Blustery"
 msgstr "Fırtınalı"
 
-#: applet.js:841
+#: applet.js:843
 msgid "Windy"
 msgstr "Rüzgarlı"
 
-#: applet.js:843
+#: applet.js:845
 msgid "Cold"
 msgstr "Soğuk"
 
-#: applet.js:845
+#: applet.js:847
 msgid "Cloudy"
 msgstr "Bulutlu"
 
-#: applet.js:848
+#: applet.js:850
 msgid "Mostly cloudy"
 msgstr "Tamamen bulutlu"
 
-#: applet.js:851 applet.js:877
+#: applet.js:853 applet.js:879
 msgid "Partly cloudy"
 msgstr "Parçalı bulutlu"
 
-#: applet.js:853
+#: applet.js:855
 msgid "Clear"
 msgstr "Temiz"
 
-#: applet.js:855
+#: applet.js:857
 msgid "Sunny"
 msgstr "Güneşli"
 
-#: applet.js:858
+#: applet.js:860
 msgid "Fair"
 msgstr "Açık"
 
-#: applet.js:860
+#: applet.js:862
 msgid "Mixed rain and hail"
 msgstr "Yağmurla karışık dolu"
 
-#: applet.js:862
+#: applet.js:864
 msgid "Hot"
 msgstr "Sıcak"
 
-#: applet.js:864
+#: applet.js:866
 msgid "Isolated thunderstorms"
 msgstr "Orageux"
 
-#: applet.js:867
+#: applet.js:869
 msgid "Scattered thunderstorms"
 msgstr "Seyrek Gökgürültüsü"
 
-#: applet.js:869
+#: applet.js:871
 msgid "Scattered showers"
 msgstr "Seyrek yağış"
 
-#: applet.js:871 applet.js:875
+#: applet.js:873 applet.js:877
 msgid "Heavy snow"
 msgstr "Ağır kar"
 
-#: applet.js:873
+#: applet.js:875
 msgid "Scattered snow showers"
 msgstr "Seyrek kar sağanağı"
 
-#: applet.js:879
+#: applet.js:881
 msgid "Thundershowers"
 msgstr "Şimşekli ve yağmurlu fırtına"
 
-#: applet.js:881
+#: applet.js:883
 msgid "Snow showers"
 msgstr "Sağanak kar"
 
-#: applet.js:883
+#: applet.js:885
 msgid "Isolated thundershowers"
 msgstr "Orageux"
 
-#: applet.js:886
+#: applet.js:888
 msgid "Not available"
 msgstr "Mevcut değil"
 
-#: applet.js:891
+#: applet.js:893
 msgid "Monday"
 msgstr "Pazartesi"
 
-#: applet.js:891
+#: applet.js:893
 msgid "Tuesday"
 msgstr "Salı"
 
-#: applet.js:891
+#: applet.js:893
 msgid "Wednesday"
 msgstr "Çarşamba"
 
-#: applet.js:891
+#: applet.js:893
 msgid "Thursday"
 msgstr "Perşembe"
 
-#: applet.js:891
+#: applet.js:893
 msgid "Friday"
 msgstr "Cuma"
 
-#: applet.js:891
+#: applet.js:893
 msgid "Saturday"
 msgstr "Cumartesi"
 
-#: applet.js:891
+#: applet.js:893
 msgid "Sunday"
 msgstr "Pazar"
 
-#: applet.js:896
+#: applet.js:898
 msgid "N"
 msgstr "K"
 
-#: applet.js:896
+#: applet.js:898
 msgid "NE"
 msgstr "KD"
 
-#: applet.js:896
+#: applet.js:898
 msgid "E"
 msgstr "D"
 
-#: applet.js:896
+#: applet.js:898
 msgid "SE"
 msgstr "GD"
 
-#: applet.js:896
+#: applet.js:898
 msgid "S"
 msgstr "G"
 
-#: applet.js:896
+#: applet.js:898
 msgid "SW"
 msgstr "GB"
 
-#: applet.js:896
+#: applet.js:898
 msgid "W"
 msgstr "B"
 
-#: applet.js:896
+#: applet.js:898
 msgid "NW"
 msgstr "KB"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->woeidLookup->tooltip
+msgid "http://edg3.co.uk/snippets/weather-location-codes/"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
