@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-04 15:06-0400\n"
-"PO-Revision-Date: 2011-12-11 14:59+0100\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"PO-Revision-Date: 2014-05-31 09:02+0100\n"
+"Last-Translator: Roman Beňo <romanbeno273@gmail.com>\n"
 "Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,11 @@ msgstr "..."
 
 #: applet.js:211
 msgid "Click to open"
-msgstr ""
+msgstr "Kliknite pre otvorenie"
 
 #: applet.js:251
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenia"
 
 #: applet.js:447
 msgid "Sunrise"
@@ -77,9 +77,8 @@ msgid "Wind:"
 msgstr "Vietor:"
 
 #: applet.js:593
-#, fuzzy
 msgid "Wind Chill:"
-msgstr "Vietor:"
+msgstr "Pocitová teplota:"
 
 #: applet.js:795
 msgid "Tornado"
@@ -125,7 +124,8 @@ msgstr "Mrholenie"
 msgid "Freezing rain"
 msgstr "Mrznúci dážď"
 
-#: applet.js:817 applet.js:819
+#: applet.js:817
+#: applet.js:819
 msgid "Showers"
 msgstr "Prehánky"
 
@@ -189,7 +189,8 @@ msgstr "Oblačno"
 msgid "Mostly cloudy"
 msgstr "Zamračené"
 
-#: applet.js:853 applet.js:879
+#: applet.js:853
+#: applet.js:879
 msgid "Partly cloudy"
 msgstr "Polojasno"
 
@@ -225,7 +226,8 @@ msgstr "Občasné búrky"
 msgid "Scattered showers"
 msgstr "Občasné prehánky"
 
-#: applet.js:873 applet.js:877
+#: applet.js:873
+#: applet.js:877
 msgid "Heavy snow"
 msgstr "Husté sneženie"
 
@@ -311,84 +313,83 @@ msgstr "SZ"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr ""
+msgstr "Získať WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->tooltip
 msgid "http://edg3.co.uk/snippets/weather-location-codes/"
-msgstr ""
+msgstr "http://edg3.co.uk/snippets/weather-location-codes/"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr ""
+msgstr "Zobrazovať v paneli aktuálnu teplotu"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
-msgstr ""
+msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "Where On Earth ID"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
-#, fuzzy
 msgid "Temperature unit"
-msgstr "Teplota:"
+msgstr "Jednotka teploty"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
-msgstr ""
+msgstr "fahrenheita"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr ""
+msgstr "celzia"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr ""
+msgstr "Preložiť stav"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr ""
+msgstr "Nahradiť štítok umiestnenia"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr ""
+msgstr "Zobrazovať časy východu / západu slnka"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr ""
+msgstr "Jednotka rýchlosti vetra"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
-msgstr ""
+msgstr "km/h"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "m/s"
-msgstr ""
+msgstr "m/s"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
-msgstr ""
+msgstr "knoty"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr ""
+msgstr "m/h"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr ""
+msgstr "Zobrazovať stav počasia (napr. \"Veterno\", \"Jasno\") v paneli"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval (minutes)"
-msgstr ""
+msgstr "Interval aktualizácii (v minútach)"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr ""
+msgstr "Symbolické ikony"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr ""
+msgstr "Zobrazovať 5-dňovú predpoveď"
 
 #~ msgid "Schema \"%s\" not found."
 #~ msgstr "Schéma \"%s\" nenájdená."
