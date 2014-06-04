@@ -59,7 +59,7 @@ msgstr "Bezig met laden..."
 
 #: applet.js:526
 msgid "Please wait"
-msgstr "Een ogenblik geduld alstublieft"
+msgstr "Een ogenblik geduld a.u.b."
 
 #: applet.js:585
 msgid "Temperature:"
@@ -80,7 +80,7 @@ msgstr "Wind:"
 #: applet.js:593
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "Gevoelstemperatuur (windverkilling):"
+msgstr "Gevoelstemp.:"
 
 #: applet.js:795
 msgid "Tornado"
@@ -331,25 +331,24 @@ msgid "Where On Earth ID"
 msgstr "Waar ter wereld ID"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
-#, fuzzy
 msgid "Temperature unit"
 msgstr "Temperatuureenheid:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
-msgstr "fahrenheit"
+msgstr "Fahrenheit"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr "celsius"
+msgstr "Celsius"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr ""
+msgstr "Weersgesteldheid vertalen"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr "Plaatsbeschrijving passeren"
+msgstr "Eigen locatienaam gebruiken"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
