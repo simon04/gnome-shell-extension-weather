@@ -1,45 +1,45 @@
 # Chinese translation for gnome-shell-extension-weather
-# simon 软件包的简体中文翻译.
+# gnome-shell-extension-weather 软件包的简体中文翻译.
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # bill <bill_zt@sina.com>, 2011.
+# 绿色圣光 <lishaohui.qd@163.com>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
+"Project-Id-Version: gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-29 18:16+0100\n"
-"PO-Revision-Date: 2013-01-18 10:25+0800\n"
-"Last-Translator: Meng Zhuo <mengzhuo1203@gmail.com>\n"
-"Language-Team: Chinese (simplified)\n"
+"PO-Revision-Date: 2014-06-07 19:26+0800\n"
+"Last-Translator: 绿色圣光 <lishaohui.qd@163.com>\n"
+"Language-Team: Chinese (simplified) <>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
 #: ../src/extension.js:259 ../src/extension.js:575
-#, fuzzy
 msgid "Weather"
-msgstr "天气设定"
+msgstr "天气"
 
 #: ../src/extension.js:237
 msgid "No location configured"
-msgstr ""
+msgstr "没有设置地点"
 
 #: ../src/extension.js:245
-#, fuzzy
 msgid "Loading weather"
-msgstr "正在加载预报天气 ..."
+msgstr "正在加载天气"
 
 #: ../src/extension.js:261
-#, fuzzy
 msgid "Weather extension ready"
-msgstr "天气设定"
+msgstr "天气扩展已就绪"
 
 #: ../src/extension.js:293 ../src/extension.js:366 ../src/extension.js:373
 msgid ", "
-msgstr ""
+msgstr "，"
 
 #: ../src/extension.js:451
 msgid "Today"
@@ -58,52 +58,45 @@ msgid "Locations"
 msgstr "地点"
 
 #: ../src/extension.js:643
-#, fuzzy
 msgid "Reload Weather Information"
 msgstr "重载天气信息"
 
 #: ../src/extension.js:648
 msgid "Weather Settings"
-msgstr "天气设定"
+msgstr "天气设置"
 
 #: ../src/extension.js:812
-#, fuzzy
 msgid "No weather information"
-msgstr "重载天气信息"
+msgstr "没有天气信息"
 
 #: ../src/extension.js:814
-#, fuzzy, python-format
+#, python-format
 msgid "No weather information for %s"
-msgstr "重载天气信息"
+msgstr "没有 %s 的天气信息"
 
 #: ../src/extension.js:899
-#, fuzzy
 msgid "Feels like"
-msgstr "体感："
+msgstr "体感温度："
 
 #: ../src/extension.js:901
 msgid "Visibility"
-msgstr ""
+msgstr "能见度："
 
 #: ../src/extension.js:903
-#, fuzzy
 msgid "Humidity"
 msgstr "湿度："
 
 #: ../src/extension.js:905
-#, fuzzy
 msgid "Pressure"
 msgstr "气压："
 
 #: ../src/extension.js:907
-#, fuzzy
 msgid "Wind"
-msgstr "风力："
+msgstr "风："
 
 #: ../src/extension.js:929
-#, fuzzy
 msgid "No forecast information"
-msgstr "重载天气信息"
+msgstr "没有预报信息"
 
 #: ../src/extension.js:1114
 #, python-format
@@ -122,7 +115,7 @@ msgstr ""
 
 #: ../src/extension.js:1128 ../src/extension.js:1186
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: ../src/extension.js:1150 ../src/extension.js:1153
 msgid "VAR"
@@ -133,96 +126,88 @@ msgid "N"
 msgstr "北"
 
 #: ../src/extension.js:1153
-#, fuzzy
 msgid "NNE"
-msgstr "东北"
+msgstr "东北偏北"
 
 #: ../src/extension.js:1153
 msgid "NE"
 msgstr "东北"
 
 #: ../src/extension.js:1153
-#, fuzzy
 msgid "ENE"
-msgstr "东北"
+msgstr "东北偏东"
 
 #: ../src/extension.js:1153
 msgid "E"
 msgstr "东"
 
 #: ../src/extension.js:1153
-#, fuzzy
 msgid "ESE"
-msgstr "东南"
+msgstr "东南偏东"
 
 #: ../src/extension.js:1153
 msgid "SE"
 msgstr "东南"
 
 #: ../src/extension.js:1153
-#, fuzzy
 msgid "SSE"
-msgstr "东南"
+msgstr "东南偏南"
 
 #: ../src/extension.js:1154
 msgid "S"
 msgstr "南"
 
 #: ../src/extension.js:1154
-#, fuzzy
 msgid "SSW"
-msgstr "西南"
+msgstr "西南偏南"
 
 #: ../src/extension.js:1154
 msgid "SW"
 msgstr "西南"
 
 #: ../src/extension.js:1154
-#, fuzzy
 msgid "WSW"
-msgstr "西南"
+msgstr "西南偏西"
 
 #: ../src/extension.js:1154
 msgid "W"
 msgstr "西"
 
 #: ../src/extension.js:1154
-#, fuzzy
 msgid "WNW"
-msgstr "西北"
+msgstr "西北偏西"
 
 #: ../src/extension.js:1154
 msgid "NW"
 msgstr "西北"
 
 #: ../src/extension.js:1154
-#, fuzzy
 msgid "NNW"
-msgstr "西北"
+msgstr "西北偏北"
 
 #: ../src/extension.js:1164
 msgid "$d$s knots"
-msgstr ""
+msgstr "$d$s 节"
 
 #: ../src/extension.js:1168
 msgid "$d$s mph"
-msgstr ""
+msgstr "$d$s 英里每小时"
 
 #: ../src/extension.js:1172
 msgid "$d$s km/h"
-msgstr ""
+msgstr "$d$s 千米每小时"
 
 #: ../src/extension.js:1176
 msgid "$d$s m/s"
-msgstr ""
+msgstr "$d$s 米每秒"
 
 #: ../src/extension.js:1180
 msgid "$dBeaufort $s"
-msgstr ""
+msgstr "$d$s 级"
 
 #: ../src/prefs.js:143
 msgid "Temperature Unit"
-msgstr "温度："
+msgstr "温度单位"
 
 #: ../src/prefs.js:145
 msgid "Wind Speed Unit"
@@ -230,15 +215,15 @@ msgstr "风速单位"
 
 #: ../src/prefs.js:147
 msgid "Pressure Unit"
-msgstr "气压"
+msgstr "气压单位"
 
 #: ../src/prefs.js:149
 msgid "Distance Unit"
-msgstr ""
+msgstr "距离单位"
 
 #: ../src/prefs.js:151
 msgid "Position in Panel"
-msgstr "面板中的位置"
+msgstr "面板上的位置"
 
 #: ../src/prefs.js:152
 msgid "Center"
@@ -262,15 +247,15 @@ msgstr "象征性图标"
 
 #: ../src/prefs.js:157
 msgid "Temperature in Panel"
-msgstr "温度："
+msgstr "在面板上显示温度"
 
 #: ../src/prefs.js:159
 msgid "Conditions in Panel"
-msgstr "在面板中显示天气条件"
+msgstr "在面板上显示天气状态"
 
 #: ../src/prefs.js:161
 msgid "Debug the extension"
-msgstr ""
+msgstr "调试扩展"
 
 #: ../src/prefs.js:320
 msgid "Name of the city"
@@ -279,7 +264,7 @@ msgstr "城市名"
 #: ../src/prefs.js:378
 #, python-format
 msgid "Remove %s ?"
-msgstr "删除 %s 吗？"
+msgstr "移除 %s ？"
 
 #~ msgid "Please wait"
 #~ msgstr "请等待"
