@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: gnome-shell-extension-weather\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-29 18:16+0100\n"
-"PO-Revision-Date: 2014-06-07 19:26+0800\n"
+"PO-Revision-Date: 2014-06-14 23:43+0800\n"
 "Last-Translator: 绿色圣光 <lishaohui.qd@163.com>\n"
 "Language-Team: Chinese (simplified) <>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
 #: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
@@ -101,17 +101,17 @@ msgstr "没有预报信息"
 #: ../src/extension.js:1114
 #, python-format
 msgid "%s °F"
-msgstr ""
+msgstr "%s ℉"
 
 #: ../src/extension.js:1118
 #, python-format
 msgid "%s °C"
-msgstr ""
+msgstr "%s ℃"
 
 #: ../src/extension.js:1122
 #, python-format
 msgid "%s K"
-msgstr ""
+msgstr "%s K"
 
 #: ../src/extension.js:1128 ../src/extension.js:1186
 msgid "Unknown"
