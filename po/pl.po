@@ -161,7 +161,7 @@ msgstr "Pył"
 
 #: applet.js:835
 msgid "Foggy"
-msgstr "Mgła"
+msgstr "Mgliście"
 
 #: applet.js:837
 msgid "Haze"
@@ -173,7 +173,7 @@ msgstr "Dymny"
 
 #: applet.js:841
 msgid "Blustery"
-msgstr "Silny wiatr"
+msgstr "Przenikliwy wiatr"
 
 #: applet.js:843
 msgid "Windy"
@@ -393,4 +393,4 @@ msgid "Show 5-day forecast"
 msgstr "Pokaż prognozę na 5 dni"
 
 #~ msgid "Schema \"%s\" not found."
-#~ msgstr "Nie odnaleziono schematu \„%s”\."
+#~ msgstr "Nie odnaleziono schematu \"%s\"."
