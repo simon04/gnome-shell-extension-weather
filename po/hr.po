@@ -346,7 +346,7 @@ msgstr "Prevedi stanje"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr "Zaobiđi naziv lokacije"
+msgstr "Ručno upišite lokaciju"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
