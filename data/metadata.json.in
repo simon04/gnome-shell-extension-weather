@@ -2,7 +2,7 @@
 "uuid": "@uuid@",
 "name": "Weather",
 "description": "A simple extension for displaying weather information from several cities in GNOME Shell",
-"shell-version": [ "3.8", "3.10", "3.12" ],
+"shell-version": [ "3.8", "3.10", "3.12", "3.14" ],
 "localedir": "@LOCALEDIR@",
 "url": "@url@"
 }
