@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-04 15:06-0400\n"
 "PO-Revision-Date: 2011-06-25 19:05+0200\n"
-"Last-Translator: Marian Vasile <marianvasile@upcmail.ro>\n"
+"Last-Translator: Marian Vasile <marianvasile@upcmail.ro> și Dorian Baciu\n"
 "Language-Team: \n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -27,19 +27,19 @@ msgstr "..."
 
 #: applet.js:211
 msgid "Click to open"
-msgstr ""
+msgstr "Clic pentru a deschide"
 
 #: applet.js:251
 msgid "Settings"
-msgstr ""
+msgstr "Setări"
 
 #: applet.js:447
 msgid "Sunrise"
-msgstr ""
+msgstr "Răsărit"
 
 #: applet.js:448
 msgid "Sunset"
-msgstr ""
+msgstr "Apus de soare"
 
 #: applet.js:453
 msgid "Today"
@@ -192,7 +192,7 @@ msgstr "Înnorat"
 
 #: applet.js:850
 msgid "Mostly cloudy"
-msgstr "Majoritar înnorat "
+msgstr "Majoritar înnorat"
 
 #: applet.js:853 applet.js:879
 msgid "Partly cloudy"
@@ -284,35 +284,35 @@ msgstr "Duminică"
 
 #: applet.js:898
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: applet.js:898
 msgid "NE"
-msgstr ""
+msgstr "NE"
 
 #: applet.js:898
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #: applet.js:898
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 #: applet.js:898
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: applet.js:898
 msgid "SW"
-msgstr ""
+msgstr "SV"
 
 #: applet.js:898
 msgid "W"
-msgstr ""
+msgstr "V"
 
 #: applet.js:898
 msgid "NW"
-msgstr ""
+msgstr "NV"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
@@ -320,19 +320,19 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->tooltip
 msgid "http://edg3.co.uk/snippets/weather-location-codes/"
-msgstr ""
+msgstr "http://edg3.co.uk/snippets/weather-location-codes/"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr ""
+msgstr "Afișarea temperaturii curente în panou"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
-msgstr ""
+msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "Locația pe Pământ"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
@@ -341,11 +341,11 @@ msgstr "Temperatură:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
-msgstr ""
+msgstr "fahrenheit"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr ""
+msgstr "celsius"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
@@ -353,23 +353,23 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr ""
+msgstr "Suprapunere locație"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr ""
+msgstr "Arată timpul pentru răsărit/apus de soare"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr ""
+msgstr "Initatea de măsură pt. viteza vântului"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
-msgstr ""
+msgstr "km/oră"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "m/s"
-msgstr ""
+msgstr "m/s"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
@@ -377,20 +377,20 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr ""
+msgstr "mile/oră"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr ""
+msgstr "Arată condițiile vremii (de ex. \"Vânt"\, \"Clar"\) în panou"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval (minutes)"
-msgstr ""
+msgstr "Actualizare interval de timp (minute)"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr ""
+msgstr "Pictograme (iconițe)"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr ""
+msgstr "Arată vremea pentru 5 zile"
