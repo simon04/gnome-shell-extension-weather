@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-05-04 15:06-0400\n"
 "PO-Revision-Date: 2011-06-07 18:21+0100\n"
-"Last-Translator: Fitoschido <fitoschido@gmail.com>\n"
+"Last-Translator: ElStellino <luca@pedrazzi.eu>\n"
 "Language-Team: Español; Castellano <zodiac_es@yahoo.es>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -23,19 +23,19 @@ msgstr "..."
 
 #: applet.js:211
 msgid "Click to open"
-msgstr ""
+msgstr "Haga clic para abrir"
 
 #: applet.js:251
 msgid "Settings"
-msgstr ""
+msgstr "Ajustes"
 
 #: applet.js:447
 msgid "Sunrise"
-msgstr ""
+msgstr "Amanecer"
 
 #: applet.js:448
 msgid "Sunset"
-msgstr ""
+msgstr "Puesta del sol"
 
 #: applet.js:453
 msgid "Today"
@@ -80,7 +80,7 @@ msgstr "Viento:"
 #: applet.js:593
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "Viento:"
+msgstr "Temperatura percibida:"
 
 #: applet.js:795
 msgid "Tornado"
@@ -140,7 +140,7 @@ msgstr "Nieve"
 
 #: applet.js:825
 msgid "Blowing snow"
-msgstr "Nieve"
+msgstr "Viento nevado"
 
 #: applet.js:827
 msgid "Snow"
@@ -152,15 +152,15 @@ msgstr "Granizo"
 
 #: applet.js:831
 msgid "Sleet"
-msgstr "Granizo"
+msgstr "Aguanieve"
 
 #: applet.js:833
 msgid "Dust"
-msgstr "Niebla"
+msgstr "Polvo"
 
 #: applet.js:835
 msgid "Foggy"
-msgstr "Bruma"
+msgstr "Niebla"
 
 #: applet.js:837
 msgid "Haze"
@@ -168,7 +168,7 @@ msgstr "Neblina"
 
 #: applet.js:839
 msgid "Smoky"
-msgstr "Niebla"
+msgstr "Ahumado"
 
 #: applet.js:841
 msgid "Blustery"
@@ -180,7 +180,7 @@ msgstr "Ventoso"
 
 #: applet.js:845
 msgid "Cold"
-msgstr "Fría"
+msgstr "Frío"
 
 #: applet.js:847
 msgid "Cloudy"
@@ -212,7 +212,7 @@ msgstr "Lluvia y granizo"
 
 #: applet.js:864
 msgid "Hot"
-msgstr "Caluroso"
+msgstr "Caliente"
 
 #: applet.js:866
 msgid "Isolated thunderstorms"
@@ -280,39 +280,39 @@ msgstr "Domingo"
 
 #: applet.js:898
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: applet.js:898
 msgid "NE"
-msgstr ""
+msgstr "NE"
 
 #: applet.js:898
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #: applet.js:898
 msgid "SE"
-msgstr ""
+msgstr "SE"
 
 #: applet.js:898
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: applet.js:898
 msgid "SW"
-msgstr ""
+msgstr "SO"
 
 #: applet.js:898
 msgid "W"
-msgstr ""
+msgstr "O"
 
 #: applet.js:898
 msgid "NW"
-msgstr ""
+msgstr "NO"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr ""
+msgstr "Conseguir WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->tooltip
 msgid "http://edg3.co.uk/snippets/weather-location-codes/"
@@ -320,68 +320,68 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr ""
+msgstr "Muestra la temperatura actual en el panel"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
-msgstr ""
+msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "ID donde en la tierra"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
 msgid "Temperature unit"
-msgstr "Temperatura:"
+msgstr "Unitad de temperatura:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr ""
+msgstr "Celsius"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr ""
+msgstr "Traducir condición"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr ""
+msgstr "forzar el cambio de ubicación"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr ""
+msgstr "Mostrar horas almanecer / puesta del sol"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr ""
+msgstr "Unitad velocidad del viento"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
-msgstr ""
+msgstr "Km/h"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "m/s"
-msgstr ""
+msgstr "m/s"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
-msgstr ""
+msgstr "nudos"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr ""
+msgstr "mph"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr ""
+msgstr "Mostrar las condiciones climáticas (ejemplo, \"Vientoso\", \"Despejado\") en el panel"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval (minutes)"
-msgstr ""
+msgstr "Intervalo de actualización (minutos)"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
@@ -389,4 +389,5 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr ""
+msgstr "Mostrar pronóstico de 5 días"
+
