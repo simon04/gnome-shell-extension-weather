@@ -22,19 +22,19 @@ msgstr "..."
 
 #: applet.js:211
 msgid "Click to open"
-msgstr ""
+msgstr "Klicka för att öppna"
 
 #: applet.js:251
 msgid "Settings"
-msgstr ""
+msgstr "Inställningar"
 
 #: applet.js:447
 msgid "Sunrise"
-msgstr ""
+msgstr "Soluppgång"
 
 #: applet.js:448
 msgid "Sunset"
-msgstr ""
+msgstr "Solnedgång"
 
 #: applet.js:453
 msgid "Today"
@@ -279,55 +279,55 @@ msgstr "Söndag"
 
 #: applet.js:898
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: applet.js:898
 msgid "NE"
-msgstr ""
+msgstr "NÖ"
 
 #: applet.js:898
 msgid "E"
-msgstr ""
+msgstr "Ö"
 
 #: applet.js:898
 msgid "SE"
-msgstr ""
+msgstr "SÖ"
 
 #: applet.js:898
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: applet.js:898
 msgid "SW"
-msgstr ""
+msgstr "SV"
 
 #: applet.js:898
 msgid "W"
-msgstr ""
+msgstr "V"
 
 #: applet.js:898
 msgid "NW"
-msgstr ""
+msgstr "NV"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr ""
+msgstr "Hämta WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->tooltip
 msgid "http://edg3.co.uk/snippets/weather-location-codes/"
-msgstr ""
+msgstr "http://edg3.co.uk/snippets/weather-location-codes/"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr ""
+msgstr "Visa nuvarande temperatur i panelen"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
-msgstr ""
+msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "Var på joden ID"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
@@ -336,56 +336,56 @@ msgstr "Temperatur:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
-msgstr ""
+msgstr "fahrenheit"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr ""
+msgstr "celsius"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr ""
+msgstr "Översätt förhållande"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr ""
+msgstr "Förbigå lokal etikett"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr ""
+msgstr "Visa tid soluppgång / solnedgång"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr ""
+msgstr "Enhet för vidhastighet"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
-msgstr ""
+msgstr "kph"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "m/s"
-msgstr ""
+msgstr "m/s"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
-msgstr ""
+msgstr "knop"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr ""
+msgstr "mph"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr ""
+msgstr "Visa väderförhållande (dvs \"Blåsigt\", \"Klart\") i panelen"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval (minutes)"
-msgstr ""
+msgstr "Uppdateringsintervall (minuter)"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr ""
+msgstr "Symboliska ikoner"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr ""
+msgstr "Visa 5-dygnsprognos"
