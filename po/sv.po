@@ -327,7 +327,7 @@ msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr "Var på joden ID"
+msgstr "Var på jorden ID"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
