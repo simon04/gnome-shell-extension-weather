@@ -162,8 +162,9 @@ const WEATHER_DEBUG_EXTENSION = 'debug-extension';			// Weather extension settin
 			this.info = new GWeather.Info({location: this.location});				this.status("Information loaded");
 
 			this.info.set_enabled_providers(GWeather.Provider.METAR |
+					                GWeather.Provider.OWM |
 							GWeather.Provider.YR_NO |
-					                GWeather.Provider.OWM);
+							GWeather.Provider.IWIN);
 
 			this.infoC = this.info.connect("updated",function(){that.refresh();that.status(0);});	this.status("Information connection started");
 			}
