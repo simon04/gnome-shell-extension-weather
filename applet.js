@@ -73,6 +73,7 @@ const WEATHER_SHOW_FIVEDAY_FORECAST_KEY = 'showFivedayForecast'
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'showTextInPanel'
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translateCondition'
 const WEATHER_TEMPERATURE_UNIT_KEY = 'temperatureUnit'
+const WEATHER_PRESSURE_UNIT_KEY = 'pressureUnit'
 const WEATHER_USE_SYMBOLIC_ICONS_KEY = 'useSymbolicIcons'
 const WEATHER_WIND_SPEED_UNIT_KEY = 'windSpeedUnit'
 const WEATHER_WOEID_KEY = 'woeid'
@@ -87,7 +88,8 @@ const KEYS = [
   WEATHER_SHOW_COMMENT_IN_PANEL_KEY,
   WEATHER_SHOW_SUNRISE_KEY,
   WEATHER_SHOW_FIVEDAY_FORECAST_KEY,
-  WEATHER_REFRESH_INTERVAL
+  WEATHER_REFRESH_INTERVAL,
+  WEATHER_PRESSURE_UNIT_KEY
 ]
 
 // Signals
@@ -129,6 +131,36 @@ const WeatherWindSpeedUnits = {
   MPS: 'm/s',
   KNOTS: 'knots'
 }
+
+const WeatherPressureResponseUnits = {
+  MBAR: 'mb',
+  PSI: 'in'
+}
+
+const WeatherPressureUnits = {
+  MBAR: 'mbar',
+  MMHG: 'mm Hg',
+  INHG: 'in Hg',
+  PA: 'Pa',
+  PSI: 'psi',
+  ATM: 'atm',
+  AT: 'at'
+}
+
+// Pressure conversion factors
+const WEATHER_CONV_PA_IN_MBAR = 1e+2
+const WEATHER_CONV_MMHG_IN_MBAR = 750.06e-3
+const WEATHER_CONV_INHG_IN_MBAR = 750.06e-1/2539.
+const WEATHER_CONV_AT_IN_MBAR = 1.0197e-3
+const WEATHER_CONV_ATM_IN_MBAR = 0.98692e-3
+const WEATHER_CONV_PSI_IN_MBAR = 14.504e-3
+
+const WEATHER_CONV_MBAR_IN_PSI = 68.948
+const WEATHER_CONV_PA_IN_PSI = 6894.76
+const WEATHER_CONV_MMHG_IN_PSI = 51.715
+const WEATHER_CONV_INHG_IN_PSI = 51.715e+2/2539.
+const WEATHER_CONV_AT_IN_PSI = 70.307e-3
+const WEATHER_CONV_ATM_IN_PSI = 68.046e-3
 
 //----------------------------------------------------------------------
 //
@@ -365,7 +397,8 @@ MyApplet.prototype = {
         let humidity = weather.get_object_member('atmosphere').get_string_member('humidity') + ' %'
 
         let pressure = weather.get_object_member('atmosphere').get_string_member('pressure')
-        let pressure_unit = weather.get_object_member('units').get_string_member('pressure')
+        //let pressure_unit = weather.get_object_member('units').get_string_member('pressure')
+        //log('pressure: ' + pressure + ' ' + pressure_unit)
 
         let sunrise = weather.get_object_member('astronomy').get_string_member('sunrise')
         let sunset = weather.get_object_member('astronomy').get_string_member('sunset')
@@ -396,7 +429,6 @@ MyApplet.prototype = {
         this._currentWeatherSummary.text = comment
         this._currentWeatherTemperature.text = temperature + ' ' + this.unitToUnicode()
         this._currentWeatherHumidity.text = humidity
-        this._currentWeatherPressure.text = pressure + ' ' + pressure_unit
 
         // Override wind units with our preference
         // Need to consider what units the Yahoo API has returned it in
@@ -437,6 +469,66 @@ MyApplet.prototype = {
         }
         this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit
         this._currentWeatherWindChill.text = wind_chill + ' ' + this.unitToUnicode()
+
+        // Override pressure units with our preference
+        // Need to consider what units the Yahoo API has returned it in
+        switch (this._pressureUnit) {
+          case WeatherPressureUnits.MBAR:
+            if (this._temperatureUnit == WeatherUnits.FAHRENHEIT) {
+              pressure = pressure * WEATHER_CONV_MBAR_IN_PSI
+            }
+            // Otherwise no conversion needed - already in correct units
+            pressure = Math.round(pressure)
+            break
+          case WeatherPressureUnits.PSI:
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
+              pressure = pressure * WEATHER_CONV_PSI_IN_MBAR
+            }
+            // Otherwise no conversion needed - already in correct units
+            pressure = parseFloat(pressure).toFixed(3)
+            break
+          case WeatherPressureUnits.MMHG:
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
+              pressure = pressure * WEATHER_CONV_MMHG_IN_MBAR
+            } else {
+              pressure = pressure * WEATHER_CONV_MMHG_IN_PSI
+            }
+            pressure = Math.round(pressure)
+            break
+          case WeatherPressureUnits.INHG:
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
+              pressure = pressure * WEATHER_CONV_INHG_IN_MBAR
+            } else {
+              pressure = pressure * WEATHER_CONV_INHG_IN_PSI
+            }
+            pressure = Math.round(pressure)
+            break
+          case WeatherPressureUnits.AT:
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
+              pressure = pressure * WEATHER_CONV_AT_IN_MBAR
+            } else {
+              pressure = pressure * WEATHER_CONV_AT_IN_PSI
+            }
+            pressure = pressure.toFixed(4)
+            break
+          case WeatherPressureUnits.ATM:
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
+              pressure = pressure * WEATHER_CONV_ATM_IN_MBAR
+            } else {
+              pressure = pressure * WEATHER_CONV_ATM_IN_PSI
+            }
+            pressure = pressure.toFixed(4)
+            break
+          case WeatherPressureUnits.PA:
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
+              pressure = pressure * WEATHER_CONV_PA_IN_MBAR
+            } else {
+              pressure = pressure * WEATHER_CONV_PA_IN_PSI
+            }
+            pressure = Math.round(pressure)
+            break
+        }
+        this._currentWeatherPressure.text = pressure + ' ' + this._pressureUnit
 
         // location is a button
         this._currentWeatherLocation.style_class = STYLE_LOCATION_LINK
