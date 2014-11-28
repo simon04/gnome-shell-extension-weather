@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-04 15:06-0400\n"
+"POT-Creation-Date: 2014-11-28 08:04-0500\n"
 "PO-Revision-Date: 2012-07-07 18:09+0200\n"
 "Last-Translator: Vasil Kashilski <batvase@gmail.com>\n"
 "Language-Team: \n"
@@ -16,296 +16,296 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: applet.js:210
+#: applet.js:242
 msgid "..."
 msgstr "..."
 
-#: applet.js:211
+#: applet.js:243
 msgid "Click to open"
 msgstr "Натиснете за да се отвори"
 
-#: applet.js:251
+#: applet.js:283
 msgid "Settings"
 msgstr ""
 
-#: applet.js:447
+#: applet.js:539
 msgid "Sunrise"
 msgstr "Изгрев"
 
-#: applet.js:448
+#: applet.js:540
 msgid "Sunset"
 msgstr "Залез"
 
-#: applet.js:453
+#: applet.js:545
 msgid "Today"
 msgstr "Днес"
 
-#: applet.js:453
+#: applet.js:545
 msgid "Tomorrow"
 msgstr "Утре"
 
-#: applet.js:497
+#: applet.js:589
 msgid "Loading current weather ..."
 msgstr "Зареждане на текущата прогноза..."
 
-#: applet.js:498
+#: applet.js:590
 msgid "Loading future weather ..."
 msgstr "Зареждане на прогноза..."
 
-#: applet.js:520
+#: applet.js:612
 msgid "Loading ..."
 msgstr "Зареждане"
 
-#: applet.js:526
+#: applet.js:618
 msgid "Please wait"
 msgstr "Моля изчакайте"
 
-#: applet.js:585
+#: applet.js:677
 msgid "Temperature:"
 msgstr "Температура:"
 
-#: applet.js:587
+#: applet.js:679
 msgid "Humidity:"
 msgstr "Влажност:"
 
-#: applet.js:589
+#: applet.js:681
 msgid "Pressure:"
 msgstr "Налягане:"
 
-#: applet.js:591
+#: applet.js:683
 msgid "Wind:"
 msgstr "Вятър:"
 
-#: applet.js:593
+#: applet.js:685
 #, fuzzy
 msgid "Wind Chill:"
 msgstr "Вятър:"
 
-#: applet.js:795
+#: applet.js:887
 msgid "Tornado"
 msgstr "Торнадо"
 
-#: applet.js:797
+#: applet.js:889
 msgid "Tropical storm"
 msgstr "Тропическа буря"
 
-#: applet.js:799
+#: applet.js:891
 msgid "Hurricane"
 msgstr "Ураган"
 
-#: applet.js:801
+#: applet.js:893
 msgid "Severe thunderstorms"
 msgstr "Силна гръморевична буря"
 
-#: applet.js:803
+#: applet.js:895
 msgid "Thunderstorms"
 msgstr "Гръмотевици"
 
-#: applet.js:805
+#: applet.js:897
 msgid "Mixed rain and snow"
 msgstr "Дъжд и сняг"
 
-#: applet.js:807
+#: applet.js:899
 msgid "Mixed rain and sleet"
 msgstr "Дъжд и мокър сняг"
 
-#: applet.js:809
+#: applet.js:901
 msgid "Mixed snow and sleet"
 msgstr "Сняг и мокър сняг"
 
-#: applet.js:811
+#: applet.js:903
 msgid "Freezing drizzle"
 msgstr "Леден ситен дъжд"
 
-#: applet.js:813
+#: applet.js:905
 msgid "Drizzle"
 msgstr "Ръмене"
 
-#: applet.js:815
+#: applet.js:907
 msgid "Freezing rain"
 msgstr "Леден дъжд"
 
-#: applet.js:817 applet.js:819
+#: applet.js:909 applet.js:911
 msgid "Showers"
 msgstr "Дъжд"
 
-#: applet.js:821
+#: applet.js:913
 msgid "Snow flurries"
 msgstr "Силен сняг"
 
-#: applet.js:823
+#: applet.js:915
 msgid "Light snow showers"
 msgstr "Слаб сняг"
 
-#: applet.js:825
+#: applet.js:917
 msgid "Blowing snow"
 msgstr "Виелица"
 
-#: applet.js:827
+#: applet.js:919
 msgid "Snow"
 msgstr "Сняг"
 
-#: applet.js:829
+#: applet.js:921
 msgid "Hail"
 msgstr "Градушка"
 
-#: applet.js:831
+#: applet.js:923
 msgid "Sleet"
 msgstr "Киша"
 
-#: applet.js:833
+#: applet.js:925
 msgid "Dust"
 msgstr "Прашно"
 
-#: applet.js:835
+#: applet.js:927
 msgid "Foggy"
 msgstr "Мъгла"
 
-#: applet.js:837
+#: applet.js:929
 msgid "Haze"
 msgstr "Мъгливо, мараня"
 
-#: applet.js:839
+#: applet.js:931
 msgid "Smoky"
 msgstr "Задимено"
 
-#: applet.js:841
+#: applet.js:933
 msgid "Blustery"
 msgstr "Силен вятър"
 
-#: applet.js:843
+#: applet.js:935
 msgid "Windy"
 msgstr "Ветровито"
 
-#: applet.js:845
+#: applet.js:937
 msgid "Cold"
 msgstr "Студено"
 
-#: applet.js:847
+#: applet.js:939
 msgid "Cloudy"
 msgstr "Облачно"
 
-#: applet.js:850
+#: applet.js:942
 msgid "Mostly cloudy"
 msgstr "Предимно облачно"
 
-#: applet.js:853 applet.js:879
+#: applet.js:945 applet.js:971
 msgid "Partly cloudy"
 msgstr "Разкъсана облачност"
 
-#: applet.js:855
+#: applet.js:947
 msgid "Clear"
 msgstr "Безоблачно"
 
-#: applet.js:857
+#: applet.js:949
 msgid "Sunny"
 msgstr "Слънчево"
 
-#: applet.js:860
+#: applet.js:952
 msgid "Fair"
 msgstr "Ясно"
 
-#: applet.js:862
+#: applet.js:954
 msgid "Mixed rain and hail"
 msgstr "Дъжд и градушка"
 
-#: applet.js:864
+#: applet.js:956
 msgid "Hot"
 msgstr "Горещо"
 
-#: applet.js:866
+#: applet.js:958
 msgid "Isolated thunderstorms"
 msgstr "Изолирани гръмотевици"
 
-#: applet.js:869
+#: applet.js:961
 msgid "Scattered thunderstorms"
 msgstr "На места гръмотевици"
 
-#: applet.js:871
+#: applet.js:963
 msgid "Scattered showers"
 msgstr "Превалявания"
 
-#: applet.js:873 applet.js:877
+#: applet.js:965 applet.js:969
 msgid "Heavy snow"
 msgstr "Силен сняг"
 
-#: applet.js:875
+#: applet.js:967
 msgid "Scattered snow showers"
 msgstr "Превалявания от сняг"
 
-#: applet.js:881
+#: applet.js:973
 msgid "Thundershowers"
 msgstr "Гръмотевична буря"
 
-#: applet.js:883
+#: applet.js:975
 msgid "Snow showers"
 msgstr "Снеговалеж"
 
-#: applet.js:885
+#: applet.js:977
 msgid "Isolated thundershowers"
 msgstr "На места градушки"
 
-#: applet.js:888
+#: applet.js:980
 msgid "Not available"
 msgstr "Няма данни"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Monday"
 msgstr "Понеделник"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Tuesday"
 msgstr "Вторник"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Wednesday"
 msgstr "Сряда"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Thursday"
 msgstr "Четвъртък"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Friday"
 msgstr "Петък"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Saturday"
 msgstr "Събота"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Sunday"
 msgstr "Неделя"
 
-#: applet.js:898
+#: applet.js:990
 msgid "N"
 msgstr "C"
 
-#: applet.js:898
+#: applet.js:990
 msgid "NE"
 msgstr "CИ"
 
-#: applet.js:898
+#: applet.js:990
 msgid "E"
 msgstr "И"
 
-#: applet.js:898
+#: applet.js:990
 msgid "SE"
 msgstr "ЮИ"
 
-#: applet.js:898
+#: applet.js:990
 msgid "S"
 msgstr "Ю"
 
-#: applet.js:898
+#: applet.js:990
 msgid "SW"
 msgstr "ЮЗ"
 
-#: applet.js:898
+#: applet.js:990
 msgid "W"
 msgstr "З"
 
-#: applet.js:898
+#: applet.js:990
 msgid "NW"
 msgstr "CЗ"
 
@@ -313,8 +313,8 @@ msgstr "CЗ"
 msgid "Get WOEID"
 msgstr ""
 
-#. cinnamon-weather->settings-schema.json->woeidLookup->tooltip
-msgid "http://edg3.co.uk/snippets/weather-location-codes/"
+#. cinnamon-weather->settings-schema.json->pressureUnit->description
+msgid "Athmospheric pressure unit"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description

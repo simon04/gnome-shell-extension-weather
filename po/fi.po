@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-04 15:06-0400\n"
+"POT-Creation-Date: 2014-11-28 08:04-0500\n"
 "PO-Revision-Date: 2011-07-25 18:39+0300\n"
 "Last-Translator: Marko Häiväläinen <marko@scemosystems.fi>\n"
 "Language-Team: suomi <>\n"
@@ -20,296 +20,296 @@ msgstr ""
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: applet.js:210
+#: applet.js:242
 msgid "..."
 msgstr "..."
 
-#: applet.js:211
+#: applet.js:243
 msgid "Click to open"
 msgstr "Klikkaa avataksesi"
 
-#: applet.js:251
+#: applet.js:283
 msgid "Settings"
 msgstr ""
 
-#: applet.js:447
+#: applet.js:539
 msgid "Sunrise"
 msgstr "Auringonnousu"
 
-#: applet.js:448
+#: applet.js:540
 msgid "Sunset"
 msgstr "Auringonlasku"
 
-#: applet.js:453
+#: applet.js:545
 msgid "Today"
 msgstr "Tänään"
 
-#: applet.js:453
+#: applet.js:545
 msgid "Tomorrow"
 msgstr "Huomenna"
 
-#: applet.js:497
+#: applet.js:589
 msgid "Loading current weather ..."
 msgstr "Ladataan säätietoja"
 
-#: applet.js:498
+#: applet.js:590
 msgid "Loading future weather ..."
 msgstr "Ladataan huomisen säätietoja"
 
-#: applet.js:520
+#: applet.js:612
 msgid "Loading ..."
 msgstr "Ladataan..."
 
-#: applet.js:526
+#: applet.js:618
 msgid "Please wait"
 msgstr "Odota"
 
-#: applet.js:585
+#: applet.js:677
 msgid "Temperature:"
 msgstr "Lämpötila"
 
-#: applet.js:587
+#: applet.js:679
 msgid "Humidity:"
 msgstr "Kosteusprosentti:"
 
-#: applet.js:589
+#: applet.js:681
 msgid "Pressure:"
 msgstr "Ilmanpaine:"
 
-#: applet.js:591
+#: applet.js:683
 msgid "Wind:"
 msgstr "Tuulen nopeus:"
 
-#: applet.js:593
+#: applet.js:685
 #, fuzzy
 msgid "Wind Chill:"
 msgstr "Tuulen nopeus:"
 
-#: applet.js:795
+#: applet.js:887
 msgid "Tornado"
 msgstr "Tornado"
 
-#: applet.js:797
+#: applet.js:889
 msgid "Tropical storm"
 msgstr "Trooppinen myrsky"
 
-#: applet.js:799
+#: applet.js:891
 msgid "Hurricane"
 msgstr "Hurrikaani"
 
-#: applet.js:801
+#: applet.js:893
 msgid "Severe thunderstorms"
 msgstr "Voimakkaita ukkosmyrskyjä"
 
-#: applet.js:803
+#: applet.js:895
 msgid "Thunderstorms"
 msgstr "Ukkosmyrskyjä"
 
-#: applet.js:805
+#: applet.js:897
 msgid "Mixed rain and snow"
 msgstr "Räntäsade"
 
-#: applet.js:807
+#: applet.js:899
 msgid "Mixed rain and sleet"
 msgstr "Räntäsadetta ja loskaa"
 
-#: applet.js:809
+#: applet.js:901
 msgid "Mixed snow and sleet"
 msgstr "Lumisadetta ja loskaa"
 
-#: applet.js:811
+#: applet.js:903
 msgid "Freezing drizzle"
 msgstr "Kylmä tihkusade"
 
-#: applet.js:813
+#: applet.js:905
 msgid "Drizzle"
 msgstr "Tihkusadetta"
 
-#: applet.js:815
+#: applet.js:907
 msgid "Freezing rain"
 msgstr "Jäätävää sadetta"
 
-#: applet.js:817 applet.js:819
+#: applet.js:909 applet.js:911
 msgid "Showers"
 msgstr "Sadekuuroja"
 
-#: applet.js:821
+#: applet.js:913
 msgid "Snow flurries"
 msgstr "Lumikuuroja"
 
-#: applet.js:823
+#: applet.js:915
 msgid "Light snow showers"
 msgstr "Kevyttä lumisadetta"
 
-#: applet.js:825
+#: applet.js:917
 msgid "Blowing snow"
 msgstr "Lumipyry"
 
-#: applet.js:827
+#: applet.js:919
 msgid "Snow"
 msgstr "Lumisadetta"
 
-#: applet.js:829
+#: applet.js:921
 msgid "Hail"
 msgstr "Rakeita"
 
-#: applet.js:831
+#: applet.js:923
 msgid "Sleet"
 msgstr "Loskaa"
 
-#: applet.js:833
+#: applet.js:925
 msgid "Dust"
 msgstr "Pölyä"
 
-#: applet.js:835
+#: applet.js:927
 msgid "Foggy"
 msgstr "Sumua"
 
-#: applet.js:837
+#: applet.js:929
 msgid "Haze"
 msgstr "Usvaa"
 
-#: applet.js:839
+#: applet.js:931
 msgid "Smoky"
 msgstr "Savuinen sää"
 
-#: applet.js:841
+#: applet.js:933
 msgid "Blustery"
 msgstr "Myrskyisä"
 
-#: applet.js:843
+#: applet.js:935
 msgid "Windy"
 msgstr "Tuulinen"
 
-#: applet.js:845
+#: applet.js:937
 msgid "Cold"
 msgstr "Kylmä"
 
-#: applet.js:847
+#: applet.js:939
 msgid "Cloudy"
 msgstr "Pilvinen"
 
-#: applet.js:850
+#: applet.js:942
 msgid "Mostly cloudy"
 msgstr "Pilvipeite rakoilee"
 
-#: applet.js:853 applet.js:879
+#: applet.js:945 applet.js:971
 msgid "Partly cloudy"
 msgstr "Puolipilvistä"
 
-#: applet.js:855
+#: applet.js:947
 msgid "Clear"
 msgstr "Selkeää"
 
-#: applet.js:857
+#: applet.js:949
 msgid "Sunny"
 msgstr "Aurinkoista"
 
-#: applet.js:860
+#: applet.js:952
 msgid "Fair"
 msgstr "Lämmintä"
 
-#: applet.js:862
+#: applet.js:954
 msgid "Mixed rain and hail"
 msgstr "Vesisadetta ja rakeita"
 
-#: applet.js:864
+#: applet.js:956
 msgid "Hot"
 msgstr "Kuuma"
 
-#: applet.js:866
+#: applet.js:958
 msgid "Isolated thunderstorms"
 msgstr "Yksittäisiä ukkosmyrskyjä"
 
-#: applet.js:869
+#: applet.js:961
 msgid "Scattered thunderstorms"
 msgstr "Hajanaisia ukkosmyrskyjä"
 
-#: applet.js:871
+#: applet.js:963
 msgid "Scattered showers"
 msgstr "Hajanaisia sateita"
 
-#: applet.js:873 applet.js:877
+#: applet.js:965 applet.js:969
 msgid "Heavy snow"
 msgstr "Märkää lunta"
 
-#: applet.js:875
+#: applet.js:967
 msgid "Scattered snow showers"
 msgstr "Hajanaisia lumisateita"
 
-#: applet.js:881
+#: applet.js:973
 msgid "Thundershowers"
 msgstr "Ukkosta ja sadetta"
 
-#: applet.js:883
+#: applet.js:975
 msgid "Snow showers"
 msgstr "Lumikuuroja"
 
-#: applet.js:885
+#: applet.js:977
 msgid "Isolated thundershowers"
 msgstr "Yksittäisiä ukkosmyrskyjä ja sadetta"
 
-#: applet.js:888
+#: applet.js:980
 msgid "Not available"
 msgstr "Ei saatavilla"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Monday"
 msgstr "Maanantai"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Tuesday"
 msgstr "Tiistai"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Wednesday"
 msgstr "Keskiviikko"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Thursday"
 msgstr "Torstai"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Friday"
 msgstr "Perjantai"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Saturday"
 msgstr "Launtai"
 
-#: applet.js:893
+#: applet.js:985
 msgid "Sunday"
 msgstr "Sunnuntai"
 
-#: applet.js:898
+#: applet.js:990
 msgid "N"
 msgstr "Pohjoinen"
 
-#: applet.js:898
+#: applet.js:990
 msgid "NE"
 msgstr "Koillinen"
 
-#: applet.js:898
+#: applet.js:990
 msgid "E"
 msgstr "Itä"
 
-#: applet.js:898
+#: applet.js:990
 msgid "SE"
 msgstr "Kaakko"
 
-#: applet.js:898
+#: applet.js:990
 msgid "S"
 msgstr "Etelä"
 
-#: applet.js:898
+#: applet.js:990
 msgid "SW"
 msgstr "Lounas"
 
-#: applet.js:898
+#: applet.js:990
 msgid "W"
 msgstr "Länsi"
 
-#: applet.js:898
+#: applet.js:990
 msgid "NW"
 msgstr "Luode"
 
@@ -317,8 +317,8 @@ msgstr "Luode"
 msgid "Get WOEID"
 msgstr ""
 
-#. cinnamon-weather->settings-schema.json->woeidLookup->tooltip
-msgid "http://edg3.co.uk/snippets/weather-location-codes/"
+#. cinnamon-weather->settings-schema.json->pressureUnit->description
+msgid "Athmospheric pressure unit"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
