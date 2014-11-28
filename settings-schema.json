@@ -31,6 +31,20 @@
     , "knots": "knots"
     }
   }
+, "pressureUnit":
+  { "type": "radiogroup"
+  , "default": "mbar"
+  , "description": "Athmospheric pressure unit"
+  , "options":
+    { "mbar": "mbar"
+    , "psi": "psi"
+    , "mm Hg": "mm Hg"
+    , "in Hg": "in Hg"
+    , "at": "at"
+    , "atm": "atm"
+    , "Pa": "Pa"
+    }
+  }
 , "showSunrise":
   { "type": "checkbox"
   , "default": true
