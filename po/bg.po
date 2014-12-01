@@ -1,15 +1,15 @@
-# Russian translation for gnome-shell-extension-weather
-# Copyright (C) 2011
+# Bulgarian translation for gnome-shell-extension-weather
+# Copyright (C) 2014
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
-# Gankov Andrey <gav@qsolution.ru>, 2011.
+# DuMuT6p, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-28 08:04-0500\n"
-"PO-Revision-Date: 2012-07-07 18:09+0200\n"
-"Last-Translator: Vasil Kashilski <batvase@gmail.com>\n"
+"PO-Revision-Date: 2014-11-30 15:09+0200\n"
+"Last-Translator: DuMuT6p \n"
 "Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Натиснете за да се отвори"
 
 #: applet.js:283
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: applet.js:539
 msgid "Sunrise"
@@ -50,11 +50,11 @@ msgstr "Зареждане на текущата прогноза..."
 
 #: applet.js:590
 msgid "Loading future weather ..."
-msgstr "Зареждане на прогноза..."
+msgstr "Зареждане на прогноза ..."
 
 #: applet.js:612
 msgid "Loading ..."
-msgstr "Зареждане"
+msgstr "Зареждане ..."
 
 #: applet.js:618
 msgid "Please wait"
@@ -79,7 +79,7 @@ msgstr "Вятър:"
 #: applet.js:685
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "Вятър:"
+msgstr "Температура на вятъра:"
 
 #: applet.js:887
 msgid "Tornado"
@@ -107,11 +107,11 @@ msgstr "Дъжд и сняг"
 
 #: applet.js:899
 msgid "Mixed rain and sleet"
-msgstr "Дъжд и мокър сняг"
+msgstr "Дъжд и суграшица"
 
 #: applet.js:901
 msgid "Mixed snow and sleet"
-msgstr "Сняг и мокър сняг"
+msgstr "Сняг и суграшица"
 
 #: applet.js:903
 msgid "Freezing drizzle"
@@ -151,7 +151,7 @@ msgstr "Градушка"
 
 #: applet.js:923
 msgid "Sleet"
-msgstr "Киша"
+msgstr "Суграшица"
 
 #: applet.js:925
 msgid "Dust"
@@ -243,7 +243,7 @@ msgstr "Снеговалеж"
 
 #: applet.js:977
 msgid "Isolated thundershowers"
-msgstr "На места градушки"
+msgstr "Изолирани грамотевични бури"
 
 #: applet.js:980
 msgid "Not available"
@@ -311,40 +311,40 @@ msgstr "CЗ"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr ""
+msgstr "Получаване на картографски идентификатор"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Athmospheric pressure unit"
-msgstr ""
+msgstr "Единица за атмосферно налягане"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr ""
+msgstr "Покажи настояща температура в панела"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
-msgstr ""
+msgstr "Картографски идентификатор"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "Картографски идентификатор"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
 msgid "Temperature unit"
-msgstr "Температура:"
+msgstr "Температурна единица:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
-msgstr ""
+msgstr "Фаренхайт"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr ""
+msgstr "Целзий"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr ""
+msgstr "Преведи състояние"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
@@ -352,43 +352,43 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr ""
+msgstr "Покажи час на изгрев / залез"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr ""
+msgstr "Единица за скорост на вятъра"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
-msgstr ""
+msgstr "км/ч"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "m/s"
-msgstr ""
+msgstr "м/с"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
-msgstr ""
+msgstr "възела"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr ""
+msgstr "м/с"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr ""
+msgstr "Покажи състоянието на времето (например \"Вятър\", \"Безоблачно\") в панела"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval (minutes)"
-msgstr ""
+msgstr "Интервал на обновяване (минути)"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr ""
+msgstr "Символична икона"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr ""
+msgstr "Покажи петдневна прогноза"
 
 #~ msgid "Schema \"%s\" not found."
 #~ msgstr "Схемата \"%s\" не е намерена"
