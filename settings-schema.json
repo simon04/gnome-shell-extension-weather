@@ -37,9 +37,9 @@
   , "description": "Athmospheric pressure unit"
   , "options":
     { "mbar": "mbar"
-    , "psi": "psi"
-    , "mm Hg": "mm Hg"
     , "in Hg": "in Hg"
+    , "mm Hg": "mm Hg"
+    , "psi": "psi"
     , "at": "at"
     , "atm": "atm"
     , "Pa": "Pa"

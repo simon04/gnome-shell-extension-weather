@@ -148,19 +148,19 @@ const WeatherPressureUnits = {
 }
 
 // Pressure conversion factors
-const WEATHER_CONV_PA_IN_MBAR = 1e+2
-const WEATHER_CONV_MMHG_IN_MBAR = 750.06e-3
-const WEATHER_CONV_INHG_IN_MBAR = 750.06e-1/2539.
-const WEATHER_CONV_AT_IN_MBAR = 1.0197e-3
-const WEATHER_CONV_ATM_IN_MBAR = 0.98692e-3
-const WEATHER_CONV_PSI_IN_MBAR = 14.504e-3
+const WEATHER_CONV_PA_IN_MBAR = 100
+const WEATHER_CONV_MMHG_IN_MBAR = 750.0615613e-3
+const WEATHER_CONV_INHG_IN_MBAR = 2.952998307e-2
+const WEATHER_CONV_AT_IN_MBAR = 1.019716213e-3
+const WEATHER_CONV_ATM_IN_MBAR = 0.986923169e-3
+const WEATHER_CONV_PSI_IN_MBAR = 14.5037738e-3
 
-const WEATHER_CONV_MBAR_IN_PSI = 68.948
-const WEATHER_CONV_PA_IN_PSI = 6894.76
-const WEATHER_CONV_MMHG_IN_PSI = 51.715
-const WEATHER_CONV_INHG_IN_PSI = 51.715e+2/2539.
-const WEATHER_CONV_AT_IN_PSI = 70.307e-3
-const WEATHER_CONV_ATM_IN_PSI = 68.046e-3
+const WEATHER_CONV_MBAR_IN_INHG = 3.3863886667e+1
+const WEATHER_CONV_PA_IN_INHG = 3.386389e+3
+const WEATHER_CONV_MMHG_IN_INHG = 25.4
+const WEATHER_CONV_PSI_IN_INHG = 491.154152e-3
+const WEATHER_CONV_AT_IN_INHG = 34.531554e-3
+const WEATHER_CONV_ATM_IN_INHG = 33.421054e-3
 
 //----------------------------------------------------------------------
 //
@@ -475,31 +475,31 @@ MyApplet.prototype = {
         switch (this._pressureUnit) {
           case WeatherPressureUnits.MBAR:
             if (this._temperatureUnit == WeatherUnits.FAHRENHEIT) {
-              pressure = pressure * WEATHER_CONV_MBAR_IN_PSI
+              pressure = pressure * WEATHER_CONV_MBAR_IN_INHG
             }
             // Otherwise no conversion needed - already in correct units
-            pressure = Math.round(pressure)
+            pressure = parseFloat(pressure).toFixed(2)
+            break
+          case WeatherPressureUnits.INHG:
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
+              pressure = pressure * WEATHER_CONV_INHG_IN_MBAR
+            }
+            // Otherwise no conversion needed - already in correct units
+            pressure = parseFloat(pressure).toFixed(2)
             break
           case WeatherPressureUnits.PSI:
             if (this._temperatureUnit == WeatherUnits.CELSIUS) {
               pressure = pressure * WEATHER_CONV_PSI_IN_MBAR
+            } else {
+              pressure = pressure * WEATHER_CONV_PSI_IN_INHG
             }
-            // Otherwise no conversion needed - already in correct units
             pressure = parseFloat(pressure).toFixed(3)
             break
           case WeatherPressureUnits.MMHG:
             if (this._temperatureUnit == WeatherUnits.CELSIUS) {
               pressure = pressure * WEATHER_CONV_MMHG_IN_MBAR
             } else {
-              pressure = pressure * WEATHER_CONV_MMHG_IN_PSI
-            }
-            pressure = Math.round(pressure)
-            break
-          case WeatherPressureUnits.INHG:
-            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
-              pressure = pressure * WEATHER_CONV_INHG_IN_MBAR
-            } else {
-              pressure = pressure * WEATHER_CONV_INHG_IN_PSI
+              pressure = pressure * WEATHER_CONV_MMHG_IN_INHG
             }
             pressure = Math.round(pressure)
             break
@@ -507,7 +507,7 @@ MyApplet.prototype = {
             if (this._temperatureUnit == WeatherUnits.CELSIUS) {
               pressure = pressure * WEATHER_CONV_AT_IN_MBAR
             } else {
-              pressure = pressure * WEATHER_CONV_AT_IN_PSI
+              pressure = pressure * WEATHER_CONV_AT_IN_INHG
             }
             pressure = pressure.toFixed(4)
             break
@@ -515,7 +515,7 @@ MyApplet.prototype = {
             if (this._temperatureUnit == WeatherUnits.CELSIUS) {
               pressure = pressure * WEATHER_CONV_ATM_IN_MBAR
             } else {
-              pressure = pressure * WEATHER_CONV_ATM_IN_PSI
+              pressure = pressure * WEATHER_CONV_ATM_IN_INHG
             }
             pressure = pressure.toFixed(4)
             break
@@ -523,7 +523,7 @@ MyApplet.prototype = {
             if (this._temperatureUnit == WeatherUnits.CELSIUS) {
               pressure = pressure * WEATHER_CONV_PA_IN_MBAR
             } else {
-              pressure = pressure * WEATHER_CONV_PA_IN_PSI
+              pressure = pressure * WEATHER_CONV_PA_IN_INHG
             }
             pressure = Math.round(pressure)
             break
