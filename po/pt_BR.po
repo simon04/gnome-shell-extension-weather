@@ -24,11 +24,11 @@ msgstr "..."
 
 #: applet.js:243
 msgid "Click to open"
-msgstr ""
+msgstr "Clique para abrir"
 
 #: applet.js:283
 msgid "Settings"
-msgstr ""
+msgstr "Preferências"
 
 #: applet.js:539
 msgid "Sunrise"
@@ -313,15 +313,15 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr ""
+msgstr "Obter WOEID"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Athmospheric pressure unit"
-msgstr ""
+msgstr "Pressão Atmosférica"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr ""
+msgstr "Mostra temperatura atual no painel"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
@@ -358,7 +358,7 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr ""
+msgstr "Velocidade do vento"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
@@ -382,12 +382,12 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval (minutes)"
-msgstr ""
+msgstr "Intervalo actualização (minutos)"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr ""
+msgstr "Ícones simbólicos"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr ""
+msgstr "Mostra 5-dias previsão"
