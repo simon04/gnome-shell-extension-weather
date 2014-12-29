@@ -69,6 +69,7 @@ const WEATHER_CITY_KEY = 'locationLabelOverride'
 const WEATHER_REFRESH_INTERVAL = 'refreshInterval'
 const WEATHER_SHOW_COMMENT_IN_PANEL_KEY = 'showCommentInPanel'
 const WEATHER_SHOW_SUNRISE_KEY = 'showSunrise'
+const WEATHER_SHOW_24HOURS_KEY = 'show24Hours'
 const WEATHER_SHOW_FIVEDAY_FORECAST_KEY = 'showFivedayForecast'
 const WEATHER_SHOW_TEXT_IN_PANEL_KEY = 'showTextInPanel'
 const WEATHER_TRANSLATE_CONDITION_KEY = 'translateCondition'
@@ -87,6 +88,7 @@ const KEYS = [
   WEATHER_SHOW_TEXT_IN_PANEL_KEY,
   WEATHER_SHOW_COMMENT_IN_PANEL_KEY,
   WEATHER_SHOW_SUNRISE_KEY,
+  WEATHER_SHOW_24HOURS_KEY,
   WEATHER_SHOW_FIVEDAY_FORECAST_KEY,
   WEATHER_REFRESH_INTERVAL,
   WEATHER_PRESSURE_UNIT_KEY
@@ -236,12 +238,12 @@ MyApplet.prototype = {
     // Override Methods: TextIconApplet
 , _init: function _init(orientation, panelHeight, instanceId) {
     Applet.TextIconApplet.prototype._init.call(this, orientation, panelHeight, instanceId)
-      
+
       // Interface: TextIconApplet
       this.set_applet_icon_name(APPLET_ICON)
       this.set_applet_label(_("..."))
       this.set_applet_tooltip(_("Click to open"))
-      
+
       // PopupMenu
       this.menuManager = new PopupMenu.PopupMenuManager(this)
       this.menu = new Applet.AppletPopupMenu(this, orientation)
@@ -272,7 +274,7 @@ MyApplet.prototype = {
         }
         this.refreshWeather(false)
       }))
- 
+
       // configuration via context menu is automatically provided in Cinnamon 2.0+
       let cinnamonVersion = Config.PACKAGE_VERSION.split('.')
       let majorVersion = parseInt(cinnamonVersion[0])
@@ -351,8 +353,8 @@ MyApplet.prototype = {
   //----------------------------------------------------------------------
 
 , updateIconType: function updateIconType() {
-    this._icon_type = this.settings.getValue(WEATHER_USE_SYMBOLIC_ICONS_KEY) ? 
-                        St.IconType.SYMBOLIC : 
+    this._icon_type = this.settings.getValue(WEATHER_USE_SYMBOLIC_ICONS_KEY) ?
+                        St.IconType.SYMBOLIC :
                         St.IconType.FULLCOLOR
   }
 
@@ -538,11 +540,14 @@ MyApplet.prototype = {
         // gettext can't see these inline
         let sunriseText = _('Sunrise')
         let sunsetText = _('Sunset')
-        this._currentWeatherSunrise.text = this._showSunrise ? (sunriseText + ': ' + sunrise) : ''
-        this._currentWeatherSunset.text = this._showSunrise ? (sunsetText + ': ' + sunset) : ''
+
+        let sunriseTime = this._show24Hours ? (this.convertTo24(sunrise)) : sunrise
+        let sunsetTime = this._show24Hours ? (this.convertTo24(sunset)) : sunset
+
+        this._currentWeatherSunrise.text = this._showSunrise ? (sunriseText + ': ' + sunriseTime ) : ''
+        this._currentWeatherSunset.text = this._showSunrise ? (sunsetText + ': ' + sunsetTime) : ''
 
         // Refresh forecast
-        // let date_string = [_('Today'), _('Tomorrow')]
         let daysToShow = this._showFivedayForecast ? 5 : 2
         for (let i = 0; i < daysToShow; i++) {
           let forecastUi = this._forecast[i]
@@ -571,6 +576,30 @@ MyApplet.prototype = {
         this.refreshWeather(true)
       }))
     }
+  }
+
+, convertTo24: function convertTo24(timeStr) {
+    let s = timeStr.indexOf(':')
+    let t = timeStr.indexOf(' ')
+    let n = timeStr.length
+    let hh = timeStr.substr(0, s)
+    let mm = timeStr.substring(s + 1, t)
+
+    if (parseInt(hh) < 10) // pad
+      hh = '0' + hh
+
+    let beforeNoon = timeStr.substr(n - 2).toLowerCase() == 'am'
+    if (beforeNoon) {
+      if (hh == '12') // 12 AM -> 00
+        hh = '00'
+
+      return hh + ':' + mm
+    }
+    
+    if (hh == '12') // 12 PM -> ok
+      return hh + ':' + mm
+
+    return (parseInt(hh) + 12).toString() + ':' + mm
   }
 
 , destroyCurrentWeather: function destroyCurrentWeather() {
@@ -759,7 +788,7 @@ MyApplet.prototype = {
 
 , weatherUrl: function weatherUrl() {
     //let output = QUERY_URL + ' where location="' + this._woeid + '" and u="' + this.unitToUrl() + '"'
-    let output = QUERY_URL + this._woeid + '_' + this.unitToUrl() + '.xml"' 
+    let output = QUERY_URL + this._woeid + '_' + this.unitToUrl() + '.xml"'
     return output
   }
 

@@ -50,6 +50,11 @@
   , "default": true
   , "description": "Show sunrise / sunset times"
   }
+, "show24Hours":
+  { "type": "checkbox"
+  , "default": false
+  , "description": "Display time in 24 hour format"
+  }
 , "showFivedayForecast":
   { "type": "checkbox"
   , "default": false
