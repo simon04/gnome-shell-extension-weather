@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: weather@mockturtl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-28 08:04-0500\n"
+"POT-Creation-Date: 2014-12-30 16:58-0500\n"
 "PO-Revision-Date: 2014-04-07 08:34+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
@@ -18,295 +18,287 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: applet.js:242
+#: applet.js:244
 msgid "..."
 msgstr "..."
 
-#: applet.js:243
+#: applet.js:245
 msgid "Click to open"
 msgstr "Smelltu til að opna"
 
-#: applet.js:283
+#: applet.js:285
 msgid "Settings"
 msgstr "Stillingar"
 
-#: applet.js:539
+#: applet.js:541
 msgid "Sunrise"
 msgstr "Sólarupprás"
 
-#: applet.js:540
+#: applet.js:542
 msgid "Sunset"
 msgstr "Sólsetur"
 
-#: applet.js:545
-msgid "Today"
-msgstr "Í dag"
-
-#: applet.js:545
-msgid "Tomorrow"
-msgstr "Á morgun"
-
-#: applet.js:589
+#: applet.js:618
 msgid "Loading current weather ..."
 msgstr "Hleð inn veðurlýsingu ..."
 
-#: applet.js:590
+#: applet.js:619
 msgid "Loading future weather ..."
 msgstr "Hleð inn veðurspá ..."
 
-#: applet.js:612
+#: applet.js:641
 msgid "Loading ..."
 msgstr "Hleð inn ..."
 
-#: applet.js:618
+#: applet.js:647
 msgid "Please wait"
 msgstr "Hinkraðu aðeins"
 
-#: applet.js:677
+#: applet.js:706
 msgid "Temperature:"
 msgstr "Hiti:"
 
-#: applet.js:679
+#: applet.js:708
 msgid "Humidity:"
 msgstr "Raki:"
 
-#: applet.js:681
+#: applet.js:710
 msgid "Pressure:"
 msgstr "Þrýstingur:"
 
-#: applet.js:683
+#: applet.js:712
 msgid "Wind:"
 msgstr "Vindur:"
 
-#: applet.js:685
+#: applet.js:714
 msgid "Wind Chill:"
 msgstr "Vindkæling:"
 
-#: applet.js:887
+#: applet.js:916
 msgid "Tornado"
 msgstr "Hvirfilbylur"
 
-#: applet.js:889
+#: applet.js:918
 msgid "Tropical storm"
 msgstr "Hitabeltisstormur"
 
-#: applet.js:891
+#: applet.js:920
 msgid "Hurricane"
 msgstr "Fellibylur"
 
-#: applet.js:893
+#: applet.js:922
 msgid "Severe thunderstorms"
 msgstr "Hvasst þrumuveður"
 
-#: applet.js:895
+#: applet.js:924
 msgid "Thunderstorms"
 msgstr "Þrumuveður"
 
-#: applet.js:897
+#: applet.js:926
 msgid "Mixed rain and snow"
 msgstr "Ýmist rigning eða snjókoma"
 
-#: applet.js:899
+#: applet.js:928
 msgid "Mixed rain and sleet"
 msgstr "Ýmist rigning eða slydda"
 
-#: applet.js:901
+#: applet.js:930
 msgid "Mixed snow and sleet"
 msgstr "Ýmist snjókoma eða slydda"
 
-#: applet.js:903
+#: applet.js:932
 msgid "Freezing drizzle"
 msgstr "Frostsúld"
 
-#: applet.js:905
+#: applet.js:934
 msgid "Drizzle"
 msgstr "Súld"
 
-#: applet.js:907
+#: applet.js:936
 msgid "Freezing rain"
 msgstr "Frostrigning"
 
-#: applet.js:909 applet.js:911
+#: applet.js:938 applet.js:940
 msgid "Showers"
 msgstr "Skúrir"
 
-#: applet.js:913
+#: applet.js:942
 msgid "Snow flurries"
 msgstr "Snjóhryðjur"
 
-#: applet.js:915
+#: applet.js:944
 msgid "Light snow showers"
 msgstr "Dálítil snjóél"
 
-#: applet.js:917
+#: applet.js:946
 msgid "Blowing snow"
 msgstr "Snjóbylur"
 
-#: applet.js:919
+#: applet.js:948
 msgid "Snow"
 msgstr "Snjókoma"
 
-#: applet.js:921
+#: applet.js:950
 msgid "Hail"
 msgstr "Haglél"
 
-#: applet.js:923
+#: applet.js:952
 msgid "Sleet"
 msgstr "Slydda"
 
-#: applet.js:925
+#: applet.js:954
 msgid "Dust"
 msgstr "Ryk"
 
-#: applet.js:927
+#: applet.js:956
 msgid "Foggy"
 msgstr "Þokuveður"
 
-#: applet.js:929
+#: applet.js:958
 msgid "Haze"
 msgstr "Mistur"
 
-#: applet.js:931
+#: applet.js:960
 msgid "Smoky"
 msgstr "Reykjarkóf"
 
-#: applet.js:933
+#: applet.js:962
 msgid "Blustery"
 msgstr "Vindhviður"
 
-#: applet.js:935
+#: applet.js:964
 msgid "Windy"
 msgstr "Vindasamt"
 
-#: applet.js:937
+#: applet.js:966
 msgid "Cold"
 msgstr "Kalt"
 
-#: applet.js:939
+#: applet.js:968
 msgid "Cloudy"
 msgstr "Skýjað"
 
-#: applet.js:942
+#: applet.js:971
 msgid "Mostly cloudy"
 msgstr "Alskýjað"
 
-#: applet.js:945 applet.js:971
+#: applet.js:974 applet.js:1000
 msgid "Partly cloudy"
 msgstr "Hálfskýjað"
 
-#: applet.js:947
+#: applet.js:976
 msgid "Clear"
 msgstr "Heiðskírt"
 
-#: applet.js:949
+#: applet.js:978
 msgid "Sunny"
 msgstr "Sólskin"
 
-#: applet.js:952
+#: applet.js:981
 msgid "Fair"
 msgstr "Bjartviðri"
 
-#: applet.js:954
+#: applet.js:983
 msgid "Mixed rain and hail"
 msgstr "Ýmist rigning eða haglél"
 
-#: applet.js:956
+#: applet.js:985
 msgid "Hot"
 msgstr "Heitt"
 
-#: applet.js:958
+#: applet.js:987
 msgid "Isolated thunderstorms"
 msgstr "Skúraveður á köflum"
 
-#: applet.js:961
+#: applet.js:990
 msgid "Scattered thunderstorms"
 msgstr "Skúrir/él á dreif"
 
-#: applet.js:963
+#: applet.js:992
 msgid "Scattered showers"
 msgstr "Skúrir á dreif"
 
-#: applet.js:965 applet.js:969
+#: applet.js:994 applet.js:998
 msgid "Heavy snow"
 msgstr "Mikil snjókoma"
 
-#: applet.js:967
+#: applet.js:996
 msgid "Scattered snow showers"
 msgstr "Snjóél á dreif"
 
-#: applet.js:973
+#: applet.js:1002
 msgid "Thundershowers"
 msgstr "Þrumuskúrir"
 
-#: applet.js:975
+#: applet.js:1004
 msgid "Snow showers"
 msgstr "Snjóél"
 
-#: applet.js:977
+#: applet.js:1006
 msgid "Isolated thundershowers"
 msgstr "Skúrir/él á stöku stað"
 
-#: applet.js:980
+#: applet.js:1009
 msgid "Not available"
 msgstr "Ekki tiltækt"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Monday"
 msgstr "Mánudagur"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Tuesday"
 msgstr "Þriðjudagur"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Wednesday"
 msgstr "Miðvikudagur"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Thursday"
 msgstr "Fimmtudagur"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Friday"
 msgstr "Föstudagur"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Saturday"
 msgstr "Laugardagur"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Sunday"
 msgstr "Sunnudagur"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "N"
 msgstr "N"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "NE"
 msgstr "NA"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "E"
 msgstr "A"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "SE"
 msgstr "SA"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "S"
 msgstr "S"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "SW"
 msgstr "SV"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "W"
 msgstr "V"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "NW"
 msgstr "NV"
 
@@ -315,7 +307,35 @@ msgid "Get WOEID"
 msgstr "Sækja WOEID"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
-msgid "Athmospheric pressure unit"
+msgid "Atmospheric pressure unit"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "psi"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "atm"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "Pa"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "mm Hg"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "at"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "mbar"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "in Hg"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
@@ -349,6 +369,10 @@ msgstr "Þýða veðurskilyrði"
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
 msgstr "Yfirskrifa staðsetningarmerki"
+
+#. cinnamon-weather->settings-schema.json->show24Hours->description
+msgid "Display time in 24 hour format"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
@@ -389,6 +413,12 @@ msgstr "Táknrænar táknmyndir"
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
 msgstr "Birta 5-daga spá"
+
+#~ msgid "Today"
+#~ msgstr "Í dag"
+
+#~ msgid "Tomorrow"
+#~ msgstr "Á morgun"
 
 #~ msgid "Schema \"%s\" not found."
 #~ msgstr "Skemað \"%s\" fannst ekki."
