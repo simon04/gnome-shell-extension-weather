@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-28 08:04-0500\n"
+"POT-Creation-Date: 2014-12-30 16:58-0500\n"
 "PO-Revision-Date: 2014-05-31 09:02+0100\n"
 "Last-Translator: Roman Beňo <romanbeno273@gmail.com>\n"
 "Language-Team: \n"
@@ -16,295 +16,287 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: applet.js:242
+#: applet.js:244
 msgid "..."
 msgstr "..."
 
-#: applet.js:243
+#: applet.js:245
 msgid "Click to open"
 msgstr "Kliknite pre otvorenie"
 
-#: applet.js:283
+#: applet.js:285
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: applet.js:539
+#: applet.js:541
 msgid "Sunrise"
 msgstr "Východ slnka"
 
-#: applet.js:540
+#: applet.js:542
 msgid "Sunset"
 msgstr "Západ slnka"
 
-#: applet.js:545
-msgid "Today"
-msgstr "Dnes"
-
-#: applet.js:545
-msgid "Tomorrow"
-msgstr "Zajtra"
-
-#: applet.js:589
+#: applet.js:618
 msgid "Loading current weather ..."
 msgstr "Načítava sa aktuálne počasie ..."
 
-#: applet.js:590
+#: applet.js:619
 msgid "Loading future weather ..."
 msgstr "Načítava sa predpoveď počasia ..."
 
-#: applet.js:612
+#: applet.js:641
 msgid "Loading ..."
 msgstr "Načítava sa ..."
 
-#: applet.js:618
+#: applet.js:647
 msgid "Please wait"
 msgstr "Prosím, čakajte"
 
-#: applet.js:677
+#: applet.js:706
 msgid "Temperature:"
 msgstr "Teplota:"
 
-#: applet.js:679
+#: applet.js:708
 msgid "Humidity:"
 msgstr "Vlhkosť:"
 
-#: applet.js:681
+#: applet.js:710
 msgid "Pressure:"
 msgstr "Tlak:"
 
-#: applet.js:683
+#: applet.js:712
 msgid "Wind:"
 msgstr "Vietor:"
 
-#: applet.js:685
+#: applet.js:714
 msgid "Wind Chill:"
 msgstr "Pocitová teplota:"
 
-#: applet.js:887
+#: applet.js:916
 msgid "Tornado"
 msgstr "Tornádo"
 
-#: applet.js:889
+#: applet.js:918
 msgid "Tropical storm"
 msgstr "Tropická búrka"
 
-#: applet.js:891
+#: applet.js:920
 msgid "Hurricane"
 msgstr "Hurikán"
 
-#: applet.js:893
+#: applet.js:922
 msgid "Severe thunderstorms"
 msgstr "Výrazné búrky"
 
-#: applet.js:895
+#: applet.js:924
 msgid "Thunderstorms"
 msgstr "Búrky"
 
-#: applet.js:897
+#: applet.js:926
 msgid "Mixed rain and snow"
 msgstr "Dážď so snehom"
 
-#: applet.js:899
+#: applet.js:928
 msgid "Mixed rain and sleet"
 msgstr "Dážď a poľadovica"
 
-#: applet.js:901
+#: applet.js:930
 msgid "Mixed snow and sleet"
 msgstr "Sneh a poľadovica"
 
-#: applet.js:903
+#: applet.js:932
 msgid "Freezing drizzle"
 msgstr "Mráz a mrholenie"
 
-#: applet.js:905
+#: applet.js:934
 msgid "Drizzle"
 msgstr "Mrholenie"
 
-#: applet.js:907
+#: applet.js:936
 msgid "Freezing rain"
 msgstr "Mrznúci dážď"
 
-#: applet.js:909 applet.js:911
+#: applet.js:938 applet.js:940
 msgid "Showers"
 msgstr "Prehánky"
 
-#: applet.js:913
+#: applet.js:942
 msgid "Snow flurries"
 msgstr "Snehové záveje"
 
-#: applet.js:915
+#: applet.js:944
 msgid "Light snow showers"
 msgstr "Mierne snehové prehánky"
 
-#: applet.js:917
+#: applet.js:946
 msgid "Blowing snow"
 msgstr "Husté sneženie"
 
-#: applet.js:919
+#: applet.js:948
 msgid "Snow"
 msgstr "Sneženie"
 
-#: applet.js:921
+#: applet.js:950
 msgid "Hail"
 msgstr "Krúpy"
 
-#: applet.js:923
+#: applet.js:952
 msgid "Sleet"
 msgstr "Poľadovica"
 
-#: applet.js:925
+#: applet.js:954
 msgid "Dust"
 msgstr "Prašno"
 
-#: applet.js:927
+#: applet.js:956
 msgid "Foggy"
 msgstr "Hmlisto"
 
-#: applet.js:929
+#: applet.js:958
 msgid "Haze"
 msgstr "Hmla"
 
-#: applet.js:931
+#: applet.js:960
 msgid "Smoky"
 msgstr "Dym"
 
-#: applet.js:933
+#: applet.js:962
 msgid "Blustery"
 msgstr "Búrlivo"
 
-#: applet.js:935
+#: applet.js:964
 msgid "Windy"
 msgstr "Veterno"
 
-#: applet.js:937
+#: applet.js:966
 msgid "Cold"
 msgstr "Chladno"
 
-#: applet.js:939
+#: applet.js:968
 msgid "Cloudy"
 msgstr "Oblačno"
 
-#: applet.js:942
+#: applet.js:971
 msgid "Mostly cloudy"
 msgstr "Zamračené"
 
-#: applet.js:945 applet.js:971
+#: applet.js:974 applet.js:1000
 msgid "Partly cloudy"
 msgstr "Polojasno"
 
-#: applet.js:947
+#: applet.js:976
 msgid "Clear"
 msgstr "Jasno"
 
-#: applet.js:949
+#: applet.js:978
 msgid "Sunny"
 msgstr "Slnečno"
 
-#: applet.js:952
+#: applet.js:981
 msgid "Fair"
 msgstr "Pekne"
 
-#: applet.js:954
+#: applet.js:983
 msgid "Mixed rain and hail"
 msgstr "Dážď s krúpami"
 
-#: applet.js:956
+#: applet.js:985
 msgid "Hot"
 msgstr "Horúco"
 
-#: applet.js:958
+#: applet.js:987
 msgid "Isolated thunderstorms"
 msgstr "Ojedinelé búrky"
 
-#: applet.js:961
+#: applet.js:990
 msgid "Scattered thunderstorms"
 msgstr "Občasné búrky"
 
-#: applet.js:963
+#: applet.js:992
 msgid "Scattered showers"
 msgstr "Občasné prehánky"
 
-#: applet.js:965 applet.js:969
+#: applet.js:994 applet.js:998
 msgid "Heavy snow"
 msgstr "Husté sneženie"
 
-#: applet.js:967
+#: applet.js:996
 msgid "Scattered snow showers"
 msgstr "Občasné snehové prehánky"
 
-#: applet.js:973
+#: applet.js:1002
 msgid "Thundershowers"
 msgstr "Búrky s prehánkami"
 
-#: applet.js:975
+#: applet.js:1004
 msgid "Snow showers"
 msgstr "Snehové prehánky"
 
-#: applet.js:977
+#: applet.js:1006
 msgid "Isolated thundershowers"
 msgstr "Ojedinelé búrky s prehánkami"
 
-#: applet.js:980
+#: applet.js:1009
 msgid "Not available"
 msgstr "Nedostupný"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Monday"
 msgstr "Pondelok"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Tuesday"
 msgstr "Utorok"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Wednesday"
 msgstr "Streda"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Thursday"
 msgstr "Štvrtok"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Friday"
 msgstr "Piatok"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Saturday"
 msgstr "Sobota"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Sunday"
 msgstr "Nedeľa"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "N"
 msgstr "S"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "NE"
 msgstr "SV"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "E"
 msgstr "V"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "SE"
 msgstr "JV"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "S"
 msgstr "J"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "SW"
 msgstr "JZ"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "W"
 msgstr "Z"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "NW"
 msgstr "SZ"
 
@@ -313,7 +305,35 @@ msgid "Get WOEID"
 msgstr "Získať WOEID"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
-msgid "Athmospheric pressure unit"
+msgid "Atmospheric pressure unit"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "psi"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "atm"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "Pa"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "mm Hg"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "at"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "mbar"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "in Hg"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
@@ -347,6 +367,10 @@ msgstr "Preložiť stav"
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
 msgstr "Nahradiť štítok umiestnenia"
+
+#. cinnamon-weather->settings-schema.json->show24Hours->description
+msgid "Display time in 24 hour format"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
@@ -387,6 +411,12 @@ msgstr "Symbolické ikony"
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
 msgstr "Zobrazovať 5-dňovú predpoveď"
+
+#~ msgid "Today"
+#~ msgstr "Dnes"
+
+#~ msgid "Tomorrow"
+#~ msgstr "Zajtra"
 
 #~ msgid "http://edg3.co.uk/snippets/weather-location-codes/"
 #~ msgstr "http://edg3.co.uk/snippets/weather-location-codes/"

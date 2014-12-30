@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Neroth-gnome-shell-extension-weather 3696468\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-28 08:04-0500\n"
+"POT-Creation-Date: 2014-12-30 16:58-0500\n"
 "PO-Revision-Date: 2013-01-18 15:07+0100\n"
 "Last-Translator: Bojtos Péter <ptr@ulx.hu>\n"
 "Language-Team: Hungarian\n"
@@ -18,298 +18,290 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: applet.js:242
+#: applet.js:244
 msgid "..."
 msgstr "..."
 
-#: applet.js:243
+#: applet.js:245
 msgid "Click to open"
 msgstr ""
 
-#: applet.js:283
+#: applet.js:285
 #, fuzzy
 msgid "Settings"
 msgstr "Meteorológiai beállítások"
 
-#: applet.js:539
+#: applet.js:541
 msgid "Sunrise"
 msgstr ""
 
-#: applet.js:540
+#: applet.js:542
 msgid "Sunset"
 msgstr ""
 
-#: applet.js:545
-msgid "Today"
-msgstr "Ma"
-
-#: applet.js:545
-msgid "Tomorrow"
-msgstr "Holnap"
-
-#: applet.js:589
+#: applet.js:618
 msgid "Loading current weather ..."
 msgstr "Aktuális időjárás betöltése"
 
-#: applet.js:590
+#: applet.js:619
 msgid "Loading future weather ..."
 msgstr "Időjárás előrejelzés betöltése ..."
 
-#: applet.js:612
+#: applet.js:641
 msgid "Loading ..."
 msgstr "Betöltés ..."
 
-#: applet.js:618
+#: applet.js:647
 msgid "Please wait"
 msgstr "Kérem várjon"
 
-#: applet.js:677
+#: applet.js:706
 #, fuzzy
 msgid "Temperature:"
 msgstr "Hőmérsékleti egység"
 
-#: applet.js:679
+#: applet.js:708
 msgid "Humidity:"
 msgstr "Páratartalom:"
 
-#: applet.js:681
+#: applet.js:710
 msgid "Pressure:"
 msgstr "Légnyomás:"
 
-#: applet.js:683
+#: applet.js:712
 msgid "Wind:"
 msgstr "Szél:"
 
-#: applet.js:685
+#: applet.js:714
 #, fuzzy
 msgid "Wind Chill:"
 msgstr "Szél:"
 
-#: applet.js:887
+#: applet.js:916
 msgid "Tornado"
 msgstr "Tornádó"
 
-#: applet.js:889
+#: applet.js:918
 msgid "Tropical storm"
 msgstr "Trópusi vihar"
 
-#: applet.js:891
+#: applet.js:920
 msgid "Hurricane"
 msgstr "Hurrikán"
 
-#: applet.js:893
+#: applet.js:922
 msgid "Severe thunderstorms"
 msgstr "Erős zivatar"
 
-#: applet.js:895
+#: applet.js:924
 msgid "Thunderstorms"
 msgstr "Zivatar"
 
-#: applet.js:897
+#: applet.js:926
 msgid "Mixed rain and snow"
 msgstr "Havas eső"
 
-#: applet.js:899
+#: applet.js:928
 msgid "Mixed rain and sleet"
 msgstr "Ónos eső"
 
-#: applet.js:901
+#: applet.js:930
 msgid "Mixed snow and sleet"
 msgstr "Ónos eső és dara"
 
-#: applet.js:903
+#: applet.js:932
 msgid "Freezing drizzle"
 msgstr "Fagyos szitáló eső"
 
-#: applet.js:905
+#: applet.js:934
 msgid "Drizzle"
 msgstr "Szitáló eső"
 
-#: applet.js:907
+#: applet.js:936
 msgid "Freezing rain"
 msgstr "Fagyos eső"
 
-#: applet.js:909 applet.js:911
+#: applet.js:938 applet.js:940
 msgid "Showers"
 msgstr "Zápor"
 
-#: applet.js:913
+#: applet.js:942
 msgid "Snow flurries"
 msgstr "Hózápor"
 
-#: applet.js:915
+#: applet.js:944
 msgid "Light snow showers"
 msgstr "Könnyű havas zápor"
 
-#: applet.js:917
+#: applet.js:946
 msgid "Blowing snow"
 msgstr "Hóátfúvás"
 
-#: applet.js:919
+#: applet.js:948
 msgid "Snow"
 msgstr "Havazás"
 
-#: applet.js:921
+#: applet.js:950
 msgid "Hail"
 msgstr "Zápor"
 
-#: applet.js:923
+#: applet.js:952
 msgid "Sleet"
 msgstr "Ónos eső"
 
-#: applet.js:925
+#: applet.js:954
 msgid "Dust"
 msgstr "Por"
 
-#: applet.js:927
+#: applet.js:956
 msgid "Foggy"
 msgstr "Ködös"
 
-#: applet.js:929
+#: applet.js:958
 msgid "Haze"
 msgstr "Pára"
 
-#: applet.js:931
+#: applet.js:960
 msgid "Smoky"
 msgstr "Ködös"
 
-#: applet.js:933
+#: applet.js:962
 msgid "Blustery"
 msgstr "Enyhén szeles"
 
-#: applet.js:935
+#: applet.js:964
 msgid "Windy"
 msgstr "Szeles"
 
-#: applet.js:937
+#: applet.js:966
 msgid "Cold"
 msgstr "Fagy"
 
-#: applet.js:939
+#: applet.js:968
 msgid "Cloudy"
 msgstr "Felhős"
 
-#: applet.js:942
+#: applet.js:971
 msgid "Mostly cloudy"
 msgstr "Jobbára felhős"
 
-#: applet.js:945 applet.js:971
+#: applet.js:974 applet.js:1000
 msgid "Partly cloudy"
 msgstr "Részben felhős"
 
-#: applet.js:947
+#: applet.js:976
 msgid "Clear"
 msgstr "Tiszta"
 
-#: applet.js:949
+#: applet.js:978
 msgid "Sunny"
 msgstr "Napos"
 
-#: applet.js:952
+#: applet.js:981
 msgid "Fair"
 msgstr "Derült"
 
-#: applet.js:954
+#: applet.js:983
 msgid "Mixed rain and hail"
 msgstr "Eső és jégeső"
 
-#: applet.js:956
+#: applet.js:985
 msgid "Hot"
 msgstr "Forró"
 
-#: applet.js:958
+#: applet.js:987
 msgid "Isolated thunderstorms"
 msgstr "Elszigetelt viharok"
 
-#: applet.js:961
+#: applet.js:990
 msgid "Scattered thunderstorms"
 msgstr "Szórványos viharok"
 
-#: applet.js:963
+#: applet.js:992
 msgid "Scattered showers"
 msgstr "Szórványos zápor"
 
-#: applet.js:965 applet.js:969
+#: applet.js:994 applet.js:998
 msgid "Heavy snow"
 msgstr "Erős hóesés"
 
-#: applet.js:967
+#: applet.js:996
 msgid "Scattered snow showers"
 msgstr "Szórványos hózápor"
 
-#: applet.js:973
+#: applet.js:1002
 msgid "Thundershowers"
 msgstr "Felhőszakadás"
 
-#: applet.js:975
+#: applet.js:1004
 msgid "Snow showers"
 msgstr "Hózápor"
 
-#: applet.js:977
+#: applet.js:1006
 msgid "Isolated thundershowers"
 msgstr "Elszigetelt felhőszakadás"
 
-#: applet.js:980
+#: applet.js:1009
 msgid "Not available"
 msgstr "Nem elérhető"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Monday"
 msgstr "Hétfő"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Tuesday"
 msgstr "Kedd"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Wednesday"
 msgstr "Szerda"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Thursday"
 msgstr "Csütörtök"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Friday"
 msgstr "Péntek"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Saturday"
 msgstr "Szombat"
 
-#: applet.js:985
+#: applet.js:1014
 msgid "Sunday"
 msgstr "Vasárnap"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "N"
 msgstr "É"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "NE"
 msgstr "ÉK"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "E"
 msgstr "K"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "SE"
 msgstr "DK"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "S"
 msgstr "D"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "SW"
 msgstr "DNY"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "W"
 msgstr "NY"
 
-#: applet.js:990
+#: applet.js:1019
 msgid "NW"
 msgstr "ÉNY"
 
@@ -318,7 +310,35 @@ msgid "Get WOEID"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
-msgid "Athmospheric pressure unit"
+msgid "Atmospheric pressure unit"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "psi"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "atm"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "Pa"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "mm Hg"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "at"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "mbar"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "in Hg"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
@@ -354,6 +374,10 @@ msgstr "Fordítási feltételek"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->show24Hours->description
+msgid "Display time in 24 hour format"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
@@ -397,6 +421,12 @@ msgstr "Jelképes Ikonok"
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
 msgstr ""
+
+#~ msgid "Today"
+#~ msgstr "Ma"
+
+#~ msgid "Tomorrow"
+#~ msgstr "Holnap"
 
 #~ msgid "Schema \"%s\" not found."
 #~ msgstr "\"%s\" minta nem található."

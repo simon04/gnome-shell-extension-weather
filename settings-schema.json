@@ -34,7 +34,7 @@
 , "pressureUnit":
   { "type": "radiogroup"
   , "default": "mbar"
-  , "description": "Athmospheric pressure unit"
+  , "description": "Atmospheric pressure unit"
   , "options":
     { "mbar": "mbar"
     , "in Hg": "in Hg"
