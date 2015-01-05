@@ -71,7 +71,7 @@ msgstr "Vind:"
 #: applet.js:714
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "Vind:"
+msgstr "Vindavkylning:"
 
 #: applet.js:916
 msgid "Tornado"
@@ -207,15 +207,15 @@ msgstr "Varmt"
 
 #: applet.js:987
 msgid "Isolated thunderstorms"
-msgstr "Lokal åska"
+msgstr "Lokala åskbyar"
 
 #: applet.js:990
 msgid "Scattered thunderstorms"
-msgstr "Utspridd åska"
+msgstr "Enstaka åskabyar"
 
 #: applet.js:992
 msgid "Scattered showers"
-msgstr "Utspridda regnskurar"
+msgstr "Enstaka regnskurar"
 
 #: applet.js:994 applet.js:998
 msgid "Heavy snow"
@@ -223,7 +223,7 @@ msgstr "Häftigt snöfall"
 
 #: applet.js:996
 msgid "Scattered snow showers"
-msgstr "Utspridda snöbyar"
+msgstr "Enstaka snöbyar"
 
 #: applet.js:1002
 msgid "Thundershowers"
@@ -307,35 +307,35 @@ msgstr "Hämta WOEID"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Atmospheric pressure unit"
-msgstr ""
+msgstr "Atmosfärisk tryck-enhet"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
-msgstr ""
+msgstr "psi"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
-msgstr ""
+msgstr "atm"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
-msgstr ""
+msgstr "Pa"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mm Hg"
-msgstr ""
+msgstr "mm Hg"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "at"
-msgstr ""
+msgstr "at"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mbar"
-msgstr ""
+msgstr "mbar"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "in Hg"
-msgstr ""
+msgstr "in Hg"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
@@ -352,7 +352,7 @@ msgstr "Var på jorden ID"
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
 msgid "Temperature unit"
-msgstr "Temperatur:"
+msgstr "Enhet temperatur:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
@@ -372,7 +372,7 @@ msgstr "Förbigå lokal etikett"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
-msgstr ""
+msgstr "Visa tid i 24-timmarsformat"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
