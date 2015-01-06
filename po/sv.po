@@ -69,7 +69,6 @@ msgid "Wind:"
 msgstr "Vind:"
 
 #: applet.js:714
-#, fuzzy
 msgid "Wind Chill:"
 msgstr "Vindavkylning:"
 
@@ -179,7 +178,7 @@ msgstr "Molnigt"
 
 #: applet.js:971
 msgid "Mostly cloudy"
-msgstr "Mestadels molnigt"
+msgstr "Mest molnigt"
 
 #: applet.js:974 applet.js:1000
 msgid "Partly cloudy"
@@ -307,7 +306,7 @@ msgstr "Hämta WOEID"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Atmospheric pressure unit"
-msgstr "Atmosfärisk tryck-enhet"
+msgstr "Enhet för atmosfäriskt tryck"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
@@ -350,9 +349,8 @@ msgid "Where On Earth ID"
 msgstr "Var på jorden ID"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
-#, fuzzy
 msgid "Temperature unit"
-msgstr "Enhet temperatur:"
+msgstr "Enhet för temperatur:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
@@ -364,7 +362,7 @@ msgstr "celsius"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr "Översätt förhållande"
+msgstr "Översätt väderförhållande"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
@@ -403,13 +401,12 @@ msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
 msgstr "Visa väderförhållande (dvs \"Blåsigt\", \"Klart\") i panelen"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-#, fuzzy
 msgid "Update interval"
-msgstr "Uppdateringsintervall (minuter)"
+msgstr "Uppdateringsintervall"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->units
 msgid "minutes"
-msgstr ""
+msgstr "minuter"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
