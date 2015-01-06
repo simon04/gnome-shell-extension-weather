@@ -21,7 +21,7 @@
     }
   }
 , "windSpeedUnit":
-  { "type": "radiogroup"
+  { "type": "combobox"
   , "default": "kph"
   , "description": "Wind speed unit"
   , "options":
@@ -32,7 +32,7 @@
     }
   }
 , "pressureUnit":
-  { "type": "radiogroup"
+  { "type": "combobox"
   , "default": "mbar"
   , "description": "Atmospheric pressure unit"
   , "options":
@@ -86,11 +86,12 @@
   , "description": "Override location label"
   }
 , "refreshInterval":
-  { "type": "scale"
+  { "type": "spinbutton"
   , "default": 15
   , "min": 1
   , "max": 360
+  , "units": "minutes"
   , "step": 5
-  , "description": "Update interval (minutes)"
+  , "description": "Update interval"
   }
 }
