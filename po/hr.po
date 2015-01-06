@@ -402,8 +402,13 @@ msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
 msgstr "Prikaži stanje vremena (npr., \"Vjetrovito\", \"Vedro\") na panelu"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-msgid "Update interval (minutes)"
+#, fuzzy
+msgid "Update interval"
 msgstr "Razdoblje ažuriranja (minute)"
+
+#. cinnamon-weather->settings-schema.json->refreshInterval->units
+msgid "minutes"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"

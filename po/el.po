@@ -406,8 +406,13 @@ msgstr ""
 "Εμφάνιση των καιρικών συνθηκών (π.χ.  \"Ανεμώδης\", \"Αίθριος\") στο πάνελ"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-msgid "Update interval (minutes)"
+#, fuzzy
+msgid "Update interval"
 msgstr "Διάστημα ενημέρωσης (λεπτά)"
+
+#. cinnamon-weather->settings-schema.json->refreshInterval->units
+msgid "minutes"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"

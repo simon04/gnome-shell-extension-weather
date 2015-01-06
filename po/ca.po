@@ -405,7 +405,11 @@ msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-msgid "Update interval (minutes)"
+msgid "Update interval"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->refreshInterval->units
+msgid "minutes"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description

@@ -402,8 +402,13 @@ msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
 msgstr "Erakutsi eguraldiaren egoera (adb. \"Haizetsu\", \"Garbi\") panelean"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-msgid "Update interval (minutes)"
+#, fuzzy
+msgid "Update interval"
 msgstr "Eguneratze-tartea (minutuak)"
+
+#. cinnamon-weather->settings-schema.json->refreshInterval->units
+msgid "minutes"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"

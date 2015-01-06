@@ -405,8 +405,13 @@ msgstr ""
 "Toon de weersomstandigheden (bijv. 'Winderig', 'Helder') in de werkbalk"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-msgid "Update interval (minutes)"
+#, fuzzy
+msgid "Update interval"
 msgstr "Tussenpoze voor verversen (minuten)"
+
+#. cinnamon-weather->settings-schema.json->refreshInterval->units
+msgid "minutes"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
