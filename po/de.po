@@ -2,6 +2,7 @@
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # Evilandi666 <Evilandi.AUR@googlemail.com>, 2011.
+# Kghbln <kgh@kgh.info>, 2015.
 #
 msgid ""
 msgstr ""
@@ -303,11 +304,11 @@ msgstr "NW"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr "WOEID finden"
+msgstr "WOEID ermitteln"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Atmospheric pressure unit"
-msgstr ""
+msgstr "Einheit für den Luftdruck:"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
@@ -315,7 +316,7 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
-msgstr ""
+msgstr "atü"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
@@ -323,7 +324,7 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mm Hg"
-msgstr ""
+msgstr "mmHg"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "at"
@@ -335,7 +336,7 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "in Hg"
-msgstr ""
+msgstr "inHg"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
@@ -347,12 +348,11 @@ msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr "Where On Earth ID (Wo auf der Erde ID)"
+msgstr "Where On Earth ID (Wo-auf-der-Erde-Kennung)"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
-#, fuzzy
 msgid "Temperature unit"
-msgstr "Temperatur:"
+msgstr "Einheit für die Temperatur:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
@@ -364,23 +364,23 @@ msgstr "Celsius"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr ""
+msgstr "Wetterbedingungen übersetzt anzeigen"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr "Ortbeschriftung überschreiben"
+msgstr "Ortsbezeichnung überschreiben mit:"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
-msgstr ""
+msgstr "Zeit im 24-Stunden-Format anzeigen"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr "Zeiten von Sonnenaufgang/-untergang anzeigen"
+msgstr "Zeit zu Sonnenauf- und -untergang anzeigen"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr "Einheiten für Windgeschwindigkeit"
+msgstr "Einheit für die Windgeschwindigkeit:"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
@@ -392,33 +392,31 @@ msgstr "m/s"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
-msgstr ""
+msgstr "Knoten"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
-#, fuzzy
 msgid "mph"
 msgstr "km/h"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr "Wetterkonditionen wie \"Windig\", \"Heiter\" in der Leiste anzeigen"
+msgstr "Wetterbedingungen wie bspw. \"Windig\", \"Heiter\" in der Leiste anzeigen"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-#, fuzzy
 msgid "Update interval"
-msgstr "Aktualisierungsinterval (Minuten)"
+msgstr "Aktualisierungsintervall:"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->units
 msgid "minutes"
-msgstr ""
+msgstr "Minuten"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr "Symbolische Icons"
+msgstr "Wettersymbole anzeigen"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr "Vorhersage für 5 Tage"
+msgstr "Vorhersage für 5 Tage anzeigen"
 
 #~ msgid "Today"
 #~ msgstr "Heute"
@@ -427,4 +425,4 @@ msgstr "Vorhersage für 5 Tage"
 #~ msgstr "Morgen"
 
 #~ msgid "Schema \"%s\" not found."
-#~ msgstr "Schema \"%s\" nicht gefunden."
+#~ msgstr "Schema \"%s\" wurde nicht gefunden."
