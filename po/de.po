@@ -396,7 +396,7 @@ msgstr "Knoten"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr "km/h"
+msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
