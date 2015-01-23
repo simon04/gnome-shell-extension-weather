@@ -388,8 +388,8 @@ MyApplet.prototype = {
         let forecast = weather.get_object_member('item').get_array_member('forecast').get_elements()
 
         let location = weather.get_object_member('location').get_string_member('city')
-        if (this._city != null && this._city.length > 0)
-          location = this._city
+        if (this.nonempty(this._locationLabelOverride))
+          location = this._locationLabelOverride
 
         // Refresh current weather
         let comment = weather_c.get_string_member('text')
@@ -908,6 +908,10 @@ MyApplet.prototype = {
 
 , hasIcon: function(icon) {
     return Gtk.IconTheme.get_default().has_icon(icon + (this._icon_type == St.IconType.SYMBOLIC ? '-symbolic' : ''))
+  }
+
+, nonempty: function(str) {
+    return (str != null && str.length > 0)
   }
 
 , weatherCondition: function(code) {
