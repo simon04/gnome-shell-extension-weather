@@ -70,7 +70,6 @@ msgid "Wind:"
 msgstr "Wind:"
 
 #: applet.js:714
-#, fuzzy
 msgid "Wind Chill:"
 msgstr "Windkühle:"
 
@@ -396,11 +395,11 @@ msgstr "Knoten"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr ""
+msgstr "mi/h"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr "Wetterbedingungen wie bspw. \"Windig\", \"Heiter\" in der Leiste anzeigen"
+msgstr "Wetterbedingungen wie bspw. „windig“ oder „heiter“ in der Leiste anzeigen"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval"
