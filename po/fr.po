@@ -33,23 +33,23 @@ msgstr "Paramètres"
 
 #: applet.js:541
 msgid "Sunrise"
-msgstr "Lever du soleil"
+msgstr "Lever du soleil "
 
 #: applet.js:542
 msgid "Sunset"
-msgstr "Coucher du soleil"
+msgstr "Coucher du soleil "
 
 #: applet.js:618
 msgid "Loading current weather ..."
-msgstr "Chargement de la météo ..."
+msgstr "Chargement de la météo..."
 
 #: applet.js:619
 msgid "Loading future weather ..."
-msgstr "Chargement des prévisions ..."
+msgstr "Chargement des prévisions..."
 
 #: applet.js:641
 msgid "Loading ..."
-msgstr "Chargement ..."
+msgstr "Chargement..."
 
 #: applet.js:647
 msgid "Please wait"
@@ -238,7 +238,7 @@ msgstr "Chutes de neige"
 
 #: applet.js:1006
 msgid "Isolated thundershowers"
-msgstr "Averses orageuses isolés"
+msgstr "Averses orageuses isolées"
 
 #: applet.js:1009
 msgid "Not available"
@@ -310,39 +310,39 @@ msgstr "Obtenir WOEID"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Atmospheric pressure unit"
-msgstr ""
+msgstr "Unité de pression :"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
-msgstr ""
+msgstr "psi"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
-msgstr ""
+msgstr "atm"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
-msgstr ""
+msgstr "Pa"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mm Hg"
-msgstr ""
+msgstr "mmHg"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "at"
-msgstr ""
+msgstr "at"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mbar"
-msgstr ""
+msgstr "mbar"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "in Hg"
-msgstr ""
+msgstr "inHg"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr "Afficher la température courant dans le panneau"
+msgstr "Afficher la température actuelle dans le panneau"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
@@ -350,10 +350,9 @@ msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr "ID où sur la terre"
+msgstr "Where On Earth ID : identifiant de localité"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
-#, fuzzy
 msgid "Temperature unit"
 msgstr "Unité de température :"
 
@@ -367,7 +366,7 @@ msgstr "Celsius"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr "Traduire état"
+msgstr "Traduire les conditions météorologiques"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
@@ -375,7 +374,7 @@ msgstr "Remplacer la localisation"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
-msgstr ""
+msgstr "Afficher l'heure au format 24 heures"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
@@ -383,11 +382,11 @@ msgstr "Afficher les heures de lever / coucher du soleil"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr "Unité de vitesse du vent"
+msgstr "Unité de vitesse du vent :"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
-msgstr "Km/h"
+msgstr "km/h"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "m/s"
@@ -403,26 +402,23 @@ msgstr "mph"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr ""
-"Voir les conditions météorologiques (par ex. \"Venteux\", \"Beau\") dans le "
-"panneau"
+msgstr "Afficher les conditions météorologiques (par ex. \"Venteux\", \"Beau\") dans le panneau"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-#, fuzzy
 msgid "Update interval"
-msgstr "Intervalle de mise à jour (minutes)"
+msgstr "Intervalle de mise à jour :"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->units
 msgid "minutes"
-msgstr ""
+msgstr "minutes"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr ""
+msgstr "Utiliser des icônes monochromes"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr "Afficher prévisions à 5 jours"
+msgstr "Afficher les prévisions à 5 jours"
 
 #~ msgid "Today"
 #~ msgstr "Aujourd'hui"
