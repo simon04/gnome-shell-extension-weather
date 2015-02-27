@@ -311,15 +311,15 @@ msgstr "Einheit für den Luftdruck:"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
-msgstr ""
+msgstr "psi"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
-msgstr "atü"
+msgstr "atm"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
-msgstr ""
+msgstr "Pa"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mm Hg"
@@ -327,11 +327,11 @@ msgstr "mmHg"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "at"
-msgstr ""
+msgstr "at"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mbar"
-msgstr ""
+msgstr "mbar"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "in Hg"
@@ -375,7 +375,7 @@ msgstr "Zeit im 24-Stunden-Format anzeigen"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr "Zeit zu Sonnenauf- und -untergang anzeigen"
+msgstr "Sonnenauf- und Sonnenuntergangszeit anzeigen"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
@@ -395,11 +395,11 @@ msgstr "Knoten"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
-msgstr "mi/h"
+msgstr "mile/h"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr "Wetterbedingungen wie bspw. „windig“ oder „heiter“ in der Leiste anzeigen"
+msgstr "Wetterbedingungen wie bspw. »Windig« oder »Heiter« in der Leiste anzeigen"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval"
@@ -424,4 +424,4 @@ msgstr "Vorhersage für 5 Tage anzeigen"
 #~ msgstr "Morgen"
 
 #~ msgid "Schema \"%s\" not found."
-#~ msgstr "Schema \"%s\" wurde nicht gefunden."
+#~ msgstr "Schema »%s« wurde nicht gefunden."
