@@ -307,37 +307,36 @@ msgid "Get WOEID"
 msgstr "WOEID verkrijgen"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
-#, fuzzy
 msgid "Atmospheric pressure unit"
 msgstr "Eenheid voor luchtdruk"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
-msgstr ""
+msgstr "psi"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
-msgstr ""
+msgstr "atm"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
-msgstr ""
+msgstr "Pa"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mm Hg"
-msgstr ""
+msgstr "mm Hg"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "at"
-msgstr ""
+msgstr "at"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mbar"
-msgstr ""
+msgstr "mbar"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "in Hg"
-msgstr ""
+msgstr "in Hg"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
@@ -373,7 +372,7 @@ msgstr "Eigen locatienaam gebruiken"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
-msgstr ""
+msgstr "Tijd tonen in 24-uurs-opmaak"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
@@ -405,13 +404,12 @@ msgstr ""
 "Toon de weersomstandigheden (bijv. 'Winderig', 'Helder') in de werkbalk"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-#, fuzzy
 msgid "Update interval"
-msgstr "Tussenpoze voor verversen (minuten)"
+msgstr "Tussenpoze voor bijwerken"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->units
 msgid "minutes"
-msgstr ""
+msgstr "minuten"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
