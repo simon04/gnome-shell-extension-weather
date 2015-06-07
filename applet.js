@@ -410,7 +410,7 @@ MyApplet.prototype = {
         let wind = weather.get_object_member('wind').get_string_member('speed')
         let wind_chill = weather.get_object_member('wind').get_string_member('chill')
         let wind_direction = this.compassDirection(weather.get_object_member('wind').get_string_member('direction'))
-        let wind_unit = weather.get_object_member('units').get_string_member('speed')
+        //let wind_unit = weather.get_object_member('units').get_string_member('speed')
 
         let iconname = this.weatherIconSafely(weather_c.get_string_member('code'))
         this._currentWeatherIcon.icon_name = iconname
@@ -439,7 +439,6 @@ MyApplet.prototype = {
             // Round to whole units
             if (this._temperatureUnit == WeatherUnits.FAHRENHEIT) {
               wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KPH_IN_MPS)
-              wind_unit = 'km/h'
             }
             // Otherwise no conversion needed - already in correct units
             break
@@ -447,7 +446,6 @@ MyApplet.prototype = {
             // Round to whole units
             if (this._temperatureUnit == WeatherUnits.CELSIUS) {
               wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_MPH_IN_MPS)
-              wind_unit = 'mph'
             }
             // Otherwise no conversion needed - already in correct units
             break
@@ -458,18 +456,17 @@ MyApplet.prototype = {
             } else {
               wind = Math.round ((wind / WEATHER_CONV_MPH_IN_MPS) * 10)/ 10
             }
-            wind_unit = 'm/s'
             break
           case WeatherWindSpeedUnits.KNOTS:
             // Round to whole units
-            if (this._temperatureUnit == WeatherUnits.CELSIUS)
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
               wind = Math.round (wind / WEATHER_CONV_KPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS)
-            else
+            } else {
               wind = Math.round (wind / WEATHER_CONV_MPH_IN_MPS * WEATHER_CONV_KNOTS_IN_MPS)
-            wind_unit = 'knots'
+            }
             break
         }
-        this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + wind_unit
+        this._currentWeatherWind.text = (wind_direction ? wind_direction + ' ' : '') + wind + ' ' + _(this._windSpeedUnit)
         this._currentWeatherWindChill.text = wind_chill + ' ' + this.unitToUnicode()
 
         // Override pressure units with our preference
@@ -530,7 +527,7 @@ MyApplet.prototype = {
             pressure = Math.round(pressure)
             break
         }
-        this._currentWeatherPressure.text = pressure + ' ' + this._pressureUnit
+        this._currentWeatherPressure.text = pressure + ' ' + _(this._pressureUnit)
 
         // location is a button
         this._currentWeatherLocation.style_class = STYLE_LOCATION_LINK
