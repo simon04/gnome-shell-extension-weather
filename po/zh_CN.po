@@ -24,11 +24,11 @@ msgstr "..."
 
 #: applet.js:245
 msgid "Click to open"
-msgstr ""
+msgstr "点击打开"
 
 #: applet.js:285
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: applet.js:541
 msgid "Sunrise"
@@ -44,7 +44,7 @@ msgstr "正在加载当前天气 ..."
 
 #: applet.js:619
 msgid "Loading future weather ..."
-msgstr "正在加载预报天气 ..."
+msgstr "正在加载未来天气 ..."
 
 #: applet.js:641
 msgid "Loading ..."
@@ -64,7 +64,7 @@ msgstr "湿度："
 
 #: applet.js:710
 msgid "Pressure:"
-msgstr "气压："
+msgstr "压强："
 
 #: applet.js:712
 msgid "Wind:"
@@ -73,7 +73,7 @@ msgstr "风力："
 #: applet.js:714
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "风力："
+msgstr "风寒指数："
 
 #: applet.js:916
 msgid "Tornado"
@@ -89,11 +89,11 @@ msgstr "飓风"
 
 #: applet.js:922
 msgid "Severe thunderstorms"
-msgstr "雷暴"
+msgstr "强雷暴"
 
 #: applet.js:924
 msgid "Thunderstorms"
-msgstr "雷阵雨"
+msgstr "雷雨"
 
 #: applet.js:926
 msgid "Mixed rain and snow"
@@ -101,19 +101,19 @@ msgstr "雨夹雪"
 
 #: applet.js:928
 msgid "Mixed rain and sleet"
-msgstr "雨夹雪"
+msgstr "雨和雨夹雪"
 
 #: applet.js:930
 msgid "Mixed snow and sleet"
-msgstr "雨夹雪"
+msgstr "雪和雨夹雪"
 
 #: applet.js:932
 msgid "Freezing drizzle"
-msgstr "冻雨"
+msgstr "冻毛毛雨"
 
 #: applet.js:934
 msgid "Drizzle"
-msgstr "小雨"
+msgstr "毛毛雨"
 
 #: applet.js:936
 msgid "Freezing rain"
@@ -149,7 +149,7 @@ msgstr "雨夹雪"
 
 #: applet.js:954
 msgid "Dust"
-msgstr "扬沙"
+msgstr "尘"
 
 #: applet.js:956
 msgid "Foggy"
@@ -181,11 +181,11 @@ msgstr "多云"
 
 #: applet.js:971
 msgid "Mostly cloudy"
-msgstr "多云"
+msgstr "大部多云"
 
 #: applet.js:974 applet.js:1000
 msgid "Partly cloudy"
-msgstr "晴转多云 "
+msgstr "局部多云 "
 
 #: applet.js:976
 msgid "Clear"
@@ -201,7 +201,7 @@ msgstr "晴"
 
 #: applet.js:983
 msgid "Mixed rain and hail"
-msgstr "冰雹"
+msgstr "雨夹冰雹"
 
 #: applet.js:985
 msgid "Hot"
@@ -209,15 +209,15 @@ msgstr "炎热"
 
 #: applet.js:987
 msgid "Isolated thunderstorms"
-msgstr "局地雷阵雨"
+msgstr "局地雷雨"
 
 #: applet.js:990
 msgid "Scattered thunderstorms"
-msgstr "零星雷阵雨"
+msgstr "零星雷雨"
 
 #: applet.js:992
 msgid "Scattered showers"
-msgstr "零星小雪"
+msgstr "零星阵雨"
 
 #: applet.js:994 applet.js:998
 msgid "Heavy snow"
@@ -309,35 +309,35 @@ msgstr "获取 WOEID"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Atmospheric pressure unit"
-msgstr ""
+msgstr "气压单位"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
-msgstr ""
+msgstr "磅每平方英寸"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
-msgstr ""
+msgstr "标准大气压"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
-msgstr ""
+msgstr "帕斯卡"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mm Hg"
-msgstr ""
+msgstr "毫米汞柱"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "at"
-msgstr ""
+msgstr "工程大气压"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mbar"
-msgstr ""
+msgstr "毫巴"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "in Hg"
-msgstr ""
+msgstr "英寸汞柱"
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
@@ -346,16 +346,16 @@ msgstr "在系统面板显示当前气温"
 #. cinnamon-weather->settings-schema.json->woeid->description
 #, fuzzy
 msgid "WOEID"
-msgstr "获取 WOEID"
+msgstr "地区代号"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "地区代号"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
 msgid "Temperature unit"
-msgstr "温度："
+msgstr "温度单位："
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
@@ -367,19 +367,19 @@ msgstr "摄氏"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr ""
+msgstr "翻译天气情况"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr ""
+msgstr "修改地区名称为"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
-msgstr ""
+msgstr "使用24小时制显示时间"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr "显示日出日落时间"
+msgstr "显示日出/日落时间"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
@@ -412,15 +412,15 @@ msgstr "更新间隔（分钟）"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->units
 msgid "minutes"
-msgstr ""
+msgstr "分钟"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr "符号化图标"
+msgstr "使用天气现象符号"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr "显示五日预报"
+msgstr "显示五天预报"
 
 #~ msgid "Today"
 #~ msgstr "今天"
