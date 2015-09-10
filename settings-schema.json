@@ -43,6 +43,7 @@
     , "at": "at"
     , "atm": "atm"
     , "Pa": "Pa"
+    , "kPa": "kPa"
     }
   }
 , "showSunrise":
@@ -95,3 +96,4 @@
   , "description": "Update interval"
   }
 }
+

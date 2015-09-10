@@ -144,12 +144,14 @@ const WeatherPressureUnits = {
   MMHG: 'mm Hg',
   INHG: 'in Hg',
   PA: 'Pa',
+  KPA: 'kPa',
   PSI: 'psi',
   ATM: 'atm',
   AT: 'at'
 }
 
 // Pressure conversion factors
+const WEATHER_CONV_KPA_IN_MBAR = 0.1
 const WEATHER_CONV_PA_IN_MBAR = 100
 const WEATHER_CONV_MMHG_IN_MBAR = 750.0615613e-3
 const WEATHER_CONV_INHG_IN_MBAR = 2.952998307e-2
@@ -158,6 +160,7 @@ const WEATHER_CONV_ATM_IN_MBAR = 0.986923169e-3
 const WEATHER_CONV_PSI_IN_MBAR = 14.5037738e-3
 
 const WEATHER_CONV_MBAR_IN_INHG = 3.3863886667e+1
+const WEATHER_CONV_KPA_IN_INHG = 3.386389
 const WEATHER_CONV_PA_IN_INHG = 3.386389e+3
 const WEATHER_CONV_MMHG_IN_INHG = 25.4
 const WEATHER_CONV_PSI_IN_INHG = 491.154152e-3
@@ -526,6 +529,14 @@ MyApplet.prototype = {
             }
             pressure = Math.round(pressure)
             break
+          case WeatherPressureUnits.KPA:
+            if (this._temperatureUnit == WeatherUnits.CELSIUS) {
+              pressure = pressure * WEATHER_CONV_KPA_IN_MBAR
+            } else {
+              pressure = pressure * WEATHER_CONV_KPA_IN_INHG
+            }
+            pressure = parseFloat(pressure).toFixed(2)
+            break
         }
         this._currentWeatherPressure.text = pressure + ' ' + _(this._pressureUnit)
 
@@ -592,7 +603,7 @@ MyApplet.prototype = {
 
       return hh + ':' + mm
     }
-    
+
     if (hh == '12') // 12 PM -> ok
       return hh + ':' + mm
 
@@ -1032,3 +1043,4 @@ function main(metadata, orientation, panelHeight, instanceId) {
   //log("v" + metadata.version + ", cinnamon " + Config.PACKAGE_VERSION)
   return new MyApplet(metadata, orientation, panelHeight, instanceId)
 }
+
