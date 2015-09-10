@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-30 11:47-0500\n"
+"POT-Creation-Date: 2016-01-30 12:17-0500\n"
 "PO-Revision-Date: 2012-01-31 21:37+0200\n"
 "Last-Translator: Yaron Sheffer <yaronf@gmx.com>\n"
 "Language-Team: Hebrew <none@example.com>\n"
@@ -17,287 +17,287 @@ msgstr ""
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: applet.js:244
+#: applet.js:247
 msgid "..."
 msgstr "..."
 
-#: applet.js:245
+#: applet.js:248
 msgid "Click to open"
 msgstr ""
 
-#: applet.js:285
+#: applet.js:288
 msgid "Settings"
 msgstr ""
 
-#: applet.js:538
+#: applet.js:548
 msgid "Sunrise"
 msgstr ""
 
-#: applet.js:539
+#: applet.js:549
 msgid "Sunset"
 msgstr ""
 
-#: applet.js:615
+#: applet.js:625
 msgid "Loading current weather ..."
 msgstr "טוען מזג אויר עכשווי..."
 
-#: applet.js:616
+#: applet.js:626
 msgid "Loading future weather ..."
 msgstr "טוען מזג אויר עתידי..."
 
-#: applet.js:638
+#: applet.js:648
 msgid "Loading ..."
 msgstr "טוען..."
 
-#: applet.js:644
-msgid "Please wait"
-msgstr "נא להמתין"
+#: applet.js:654
+msgid "Refresh"
+msgstr ""
 
-#: applet.js:703
+#: applet.js:717
 msgid "Temperature:"
 msgstr "טמפרטורה:"
 
-#: applet.js:705
+#: applet.js:719
 msgid "Humidity:"
 msgstr "לחות:"
 
-#: applet.js:707
+#: applet.js:721
 msgid "Pressure:"
 msgstr "לחץ ברומטרי:"
 
-#: applet.js:709
+#: applet.js:723
 msgid "Wind:"
 msgstr "רוח:"
 
-#: applet.js:711
+#: applet.js:725
 msgid "Wind Chill:"
 msgstr "רוח:"
 
-#: applet.js:917
+#: applet.js:931
 msgid "Tornado"
 msgstr "טורנדו"
 
-#: applet.js:919
+#: applet.js:933
 msgid "Tropical storm"
 msgstr "סופה טרופית"
 
-#: applet.js:921
+#: applet.js:935
 msgid "Hurricane"
 msgstr "הוריקן"
 
-#: applet.js:923
+#: applet.js:937
 msgid "Severe thunderstorms"
 msgstr "סופות רעמים קשות"
 
-#: applet.js:925
+#: applet.js:939
 msgid "Thunderstorms"
 msgstr "סופות רעמים"
 
-#: applet.js:927
+#: applet.js:941
 msgid "Mixed rain and snow"
 msgstr "גשם מעורב בשלג"
 
-#: applet.js:929
+#: applet.js:943
 msgid "Mixed rain and sleet"
 msgstr "גשם ושלג מימי"
 
-#: applet.js:931
+#: applet.js:945
 msgid "Mixed snow and sleet"
 msgstr "שלג מימי בחלקו"
 
-#: applet.js:933
+#: applet.js:947
 msgid "Freezing drizzle"
 msgstr "טפטוף קפוא"
 
-#: applet.js:935
+#: applet.js:949
 msgid "Drizzle"
 msgstr "טפטוף"
 
-#: applet.js:937
+#: applet.js:951
 msgid "Freezing rain"
 msgstr "גשם קפוא"
 
-#: applet.js:939 applet.js:941
+#: applet.js:953 applet.js:955
 msgid "Showers"
 msgstr "ממטרים"
 
-#: applet.js:943
+#: applet.js:957
 msgid "Snow flurries"
 msgstr "מטחי שלג קצרים"
 
-#: applet.js:945
+#: applet.js:959
 msgid "Light snow showers"
 msgstr "ממטרי שלג קלים"
 
-#: applet.js:947
+#: applet.js:961
 msgid "Blowing snow"
 msgstr "שלג מנשב"
 
-#: applet.js:949
+#: applet.js:963
 msgid "Snow"
 msgstr "שלג"
 
-#: applet.js:951
+#: applet.js:965
 msgid "Hail"
 msgstr "ברד"
 
-#: applet.js:953
+#: applet.js:967
 msgid "Sleet"
 msgstr "שלג מימי"
 
-#: applet.js:955
+#: applet.js:969
 msgid "Dust"
 msgstr "אבק"
 
-#: applet.js:957
+#: applet.js:971
 msgid "Foggy"
 msgstr "מעורפל"
 
-#: applet.js:959
+#: applet.js:973
 msgid "Haze"
 msgstr "אובך"
 
-#: applet.js:961
+#: applet.js:975
 msgid "Smoky"
 msgstr "מלא עשן"
 
-#: applet.js:963
+#: applet.js:977
 msgid "Blustery"
 msgstr "סוער"
 
-#: applet.js:965
+#: applet.js:979
 msgid "Windy"
 msgstr "סוער"
 
-#: applet.js:967
+#: applet.js:981
 msgid "Cold"
 msgstr "קר"
 
-#: applet.js:969
+#: applet.js:983
 msgid "Cloudy"
 msgstr "מעונן"
 
-#: applet.js:972
+#: applet.js:986
 msgid "Mostly cloudy"
 msgstr "מעונן ברובו"
 
-#: applet.js:975 applet.js:1001
+#: applet.js:989 applet.js:1015
 msgid "Partly cloudy"
 msgstr "מעונן חלקית"
 
-#: applet.js:977
+#: applet.js:991
 msgid "Clear"
 msgstr "בהיר"
 
-#: applet.js:979
+#: applet.js:993
 msgid "Sunny"
 msgstr "שמשי"
 
-#: applet.js:982
+#: applet.js:996
 msgid "Fair"
 msgstr "נאה"
 
-#: applet.js:984
+#: applet.js:998
 msgid "Mixed rain and hail"
 msgstr "גשם מעורב בברד"
 
-#: applet.js:986
+#: applet.js:1000
 msgid "Hot"
 msgstr "חם"
 
-#: applet.js:988
+#: applet.js:1002
 msgid "Isolated thunderstorms"
 msgstr "סופות רעמים בודדות"
 
-#: applet.js:991
+#: applet.js:1005
 msgid "Scattered thunderstorms"
 msgstr "סופות רעמים מקומיות"
 
-#: applet.js:993
+#: applet.js:1007
 msgid "Scattered showers"
 msgstr "ממטרים מקומיים"
 
-#: applet.js:995 applet.js:999
+#: applet.js:1009 applet.js:1013
 msgid "Heavy snow"
 msgstr "שלג כבד"
 
-#: applet.js:997
+#: applet.js:1011
 msgid "Scattered snow showers"
 msgstr "ממטרי שלג מקומיים"
 
-#: applet.js:1003
+#: applet.js:1017
 msgid "Thundershowers"
 msgstr "סופות רעמים"
 
-#: applet.js:1005
+#: applet.js:1019
 msgid "Snow showers"
 msgstr "ממטרי שלג"
 
-#: applet.js:1007
+#: applet.js:1021
 msgid "Isolated thundershowers"
 msgstr "סופות רעמים בודדות"
 
-#: applet.js:1010
+#: applet.js:1024
 msgid "Not available"
 msgstr "לא זמין"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Monday"
 msgstr "יום ב"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Tuesday"
 msgstr "יום ג"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Wednesday"
 msgstr "יום ד"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Thursday"
 msgstr "יום ה"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Friday"
 msgstr "יום ו"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Saturday"
 msgstr "שבת"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Sunday"
 msgstr "יום א"
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "N"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "NE"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "E"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "SE"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "S"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "SW"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "W"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "NW"
 msgstr ""
 
@@ -315,6 +315,10 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "kPa"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
@@ -425,6 +429,9 @@ msgstr ""
 #. cinnamon-weather->metadata.json->name
 msgid "Weather"
 msgstr ""
+
+#~ msgid "Please wait"
+#~ msgstr "נא להמתין"
 
 #~ msgid "Today"
 #~ msgstr "היום"

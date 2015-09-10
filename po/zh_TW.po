@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: simon 04-gnome-shell-extension-weather-452bcfe\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-30 11:47-0500\n"
+"POT-Creation-Date: 2016-01-30 12:17-0500\n"
 "PO-Revision-Date: 2011-12-02 14:44+0800\n"
 "Last-Translator: Wenjie Huang\n"
 "Language-Team: Chinese (Traditional)\n"
@@ -17,287 +17,287 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: applet.js:244
+#: applet.js:247
 msgid "..."
 msgstr "..."
 
-#: applet.js:245
+#: applet.js:248
 msgid "Click to open"
 msgstr "開啟"
 
-#: applet.js:285
+#: applet.js:288
 msgid "Settings"
 msgstr ""
 
-#: applet.js:538
+#: applet.js:548
 msgid "Sunrise"
 msgstr "日出"
 
-#: applet.js:539
+#: applet.js:549
 msgid "Sunset"
 msgstr "日落"
 
-#: applet.js:615
+#: applet.js:625
 msgid "Loading current weather ..."
 msgstr "正在載入目前天氣 ..."
 
-#: applet.js:616
+#: applet.js:626
 msgid "Loading future weather ..."
 msgstr "正在載入天氣預報 ..."
 
-#: applet.js:638
+#: applet.js:648
 msgid "Loading ..."
 msgstr "正在載入 ..."
 
-#: applet.js:644
-msgid "Please wait"
-msgstr "請稍候"
+#: applet.js:654
+msgid "Refresh"
+msgstr ""
 
-#: applet.js:703
+#: applet.js:717
 msgid "Temperature:"
 msgstr "溫度："
 
-#: applet.js:705
+#: applet.js:719
 msgid "Humidity:"
 msgstr "濕度："
 
-#: applet.js:707
+#: applet.js:721
 msgid "Pressure:"
 msgstr "氣壓："
 
-#: applet.js:709
+#: applet.js:723
 msgid "Wind:"
 msgstr "風力："
 
-#: applet.js:711
+#: applet.js:725
 msgid "Wind Chill:"
 msgstr "風力："
 
-#: applet.js:917
+#: applet.js:931
 msgid "Tornado"
 msgstr "龍捲風"
 
-#: applet.js:919
+#: applet.js:933
 msgid "Tropical storm"
 msgstr "熱帶風暴"
 
-#: applet.js:921
+#: applet.js:935
 msgid "Hurricane"
 msgstr "颶風"
 
-#: applet.js:923
+#: applet.js:937
 msgid "Severe thunderstorms"
 msgstr "強雷暴雨"
 
-#: applet.js:925
+#: applet.js:939
 msgid "Thunderstorms"
 msgstr "雷雨"
 
-#: applet.js:927
+#: applet.js:941
 msgid "Mixed rain and snow"
 msgstr "雨雪交加"
 
-#: applet.js:929
+#: applet.js:943
 msgid "Mixed rain and sleet"
 msgstr "雨霰交加"
 
-#: applet.js:931
+#: applet.js:945
 msgid "Mixed snow and sleet"
 msgstr "雪霰交加"
 
-#: applet.js:933
+#: applet.js:947
 msgid "Freezing drizzle"
 msgstr "凍毛毛雨"
 
-#: applet.js:935
+#: applet.js:949
 msgid "Drizzle"
 msgstr "小雨"
 
-#: applet.js:937
+#: applet.js:951
 msgid "Freezing rain"
 msgstr "凍雨"
 
-#: applet.js:939 applet.js:941
+#: applet.js:953 applet.js:955
 msgid "Showers"
 msgstr "陣雨"
 
-#: applet.js:943
+#: applet.js:957
 msgid "Snow flurries"
 msgstr "飄雪"
 
-#: applet.js:945
+#: applet.js:959
 msgid "Light snow showers"
 msgstr "小雪"
 
-#: applet.js:947
+#: applet.js:961
 msgid "Blowing snow"
 msgstr "暴雪"
 
-#: applet.js:949
+#: applet.js:963
 msgid "Snow"
 msgstr "雪"
 
-#: applet.js:951
+#: applet.js:965
 msgid "Hail"
 msgstr "冰雹"
 
-#: applet.js:953
+#: applet.js:967
 msgid "Sleet"
 msgstr "霰"
 
-#: applet.js:955
+#: applet.js:969
 msgid "Dust"
 msgstr "灰塵"
 
-#: applet.js:957
+#: applet.js:971
 msgid "Foggy"
 msgstr "霧"
 
-#: applet.js:959
+#: applet.js:973
 msgid "Haze"
 msgstr "陰霾"
 
-#: applet.js:961
+#: applet.js:975
 msgid "Smoky"
 msgstr "煙霧"
 
-#: applet.js:963
+#: applet.js:977
 msgid "Blustery"
 msgstr "大風"
 
-#: applet.js:965
+#: applet.js:979
 msgid "Windy"
 msgstr "有風"
 
-#: applet.js:967
+#: applet.js:981
 msgid "Cold"
 msgstr "冷"
 
-#: applet.js:969
+#: applet.js:983
 msgid "Cloudy"
 msgstr "有雲"
 
-#: applet.js:972
+#: applet.js:986
 msgid "Mostly cloudy"
 msgstr "多雲"
 
-#: applet.js:975 applet.js:1001
+#: applet.js:989 applet.js:1015
 msgid "Partly cloudy"
 msgstr "晴時多雲"
 
-#: applet.js:977
+#: applet.js:991
 msgid "Clear"
 msgstr "明朗"
 
-#: applet.js:979
+#: applet.js:993
 msgid "Sunny"
 msgstr "晴"
 
-#: applet.js:982
+#: applet.js:996
 msgid "Fair"
 msgstr "晴"
 
-#: applet.js:984
+#: applet.js:998
 msgid "Mixed rain and hail"
 msgstr "冰雹"
 
-#: applet.js:986
+#: applet.js:1000
 msgid "Hot"
 msgstr "炎熱"
 
-#: applet.js:988
+#: applet.js:1002
 msgid "Isolated thunderstorms"
 msgstr "局部地區有雷暴"
 
-#: applet.js:991
+#: applet.js:1005
 msgid "Scattered thunderstorms"
 msgstr "零星雷暴"
 
-#: applet.js:993
+#: applet.js:1007
 msgid "Scattered showers"
 msgstr "零星陣雨"
 
-#: applet.js:995 applet.js:999
+#: applet.js:1009 applet.js:1013
 msgid "Heavy snow"
 msgstr "大雪"
 
-#: applet.js:997
+#: applet.js:1011
 msgid "Scattered snow showers"
 msgstr "零星陣雪"
 
-#: applet.js:1003
+#: applet.js:1017
 msgid "Thundershowers"
 msgstr "雷陣雨"
 
-#: applet.js:1005
+#: applet.js:1019
 msgid "Snow showers"
 msgstr "陣雪"
 
-#: applet.js:1007
+#: applet.js:1021
 msgid "Isolated thundershowers"
 msgstr "局部地區有雷陣雨"
 
-#: applet.js:1010
+#: applet.js:1024
 msgid "Not available"
 msgstr "不可用"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Monday"
 msgstr "星期一"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Tuesday"
 msgstr "星期二"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Wednesday"
 msgstr "星期三"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Thursday"
 msgstr "星期四"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Friday"
 msgstr "星期五"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Saturday"
 msgstr "星期六"
 
-#: applet.js:1015
+#: applet.js:1029
 msgid "Sunday"
 msgstr "星期日"
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "N"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "NE"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "E"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "SE"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "S"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "SW"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "W"
 msgstr ""
 
-#: applet.js:1020
+#: applet.js:1034
 msgid "NW"
 msgstr ""
 
@@ -315,6 +315,10 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
+msgstr ""
+
+#. cinnamon-weather->settings-schema.json->pressureUnit->options
+msgid "kPa"
 msgstr ""
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
@@ -425,6 +429,9 @@ msgstr ""
 #. cinnamon-weather->metadata.json->name
 msgid "Weather"
 msgstr ""
+
+#~ msgid "Please wait"
+#~ msgstr "請稍候"
 
 #~ msgid "Today"
 #~ msgstr "今天"

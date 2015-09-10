@@ -541,7 +541,6 @@ MyApplet.prototype = {
         this._currentWeatherPressure.text = pressure + ' ' + _(this._pressureUnit)
 
         // location is a button
-        this._currentWeatherLocation.style_class = STYLE_LOCATION_LINK
         this._currentWeatherLocation.url = weather.get_string_member('link')
         this._currentWeatherLocation.label = _(location)
 
@@ -652,17 +651,21 @@ MyApplet.prototype = {
 
     this._currentWeatherLocation = new St.Button({
       reactive: true,
-      label: _('Please wait')
+      label: _('Refresh')
     })
+
+    this._currentWeatherLocation.style_class = STYLE_LOCATION_LINK
 
     // link to the details page
     this._currentWeatherLocation.connect(SIGNAL_CLICKED, Lang.bind(this, function() {
-      if (this._currentWeatherLocation.url == null)
-        return
-      Gio.app_info_launch_default_for_uri(
-        this._currentWeatherLocation.url,
-        global.create_app_launch_context()
-      )
+      if (this._currentWeatherLocation.url == null) {
+        this.refreshWeather(false)
+      } else {
+        Gio.app_info_launch_default_for_uri(
+          this._currentWeatherLocation.url,
+          global.create_app_launch_context()
+        )
+      }
     }))
 
     let bb = new St.BoxLayout({
