@@ -1,20 +1,23 @@
-# Russian translation for gnome-shell-extension-weather
-# Copyright (C) 2011
-# This file is distributed under the same license as the gnome-shell-extension-weather package.
+# Russian translation for cinnamon-weather
+# Copyright (C) 2015
 # Gankov Andrey <gav@qsolution.ru>, 2011.
+# Timon <timosha@gmail.com>, 2014.
+# zluka <osam@tut.by>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.4\n"
+"Project-Id-Version: 0.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-30 16:58-0500\n"
-"PO-Revision-Date: 2012-04-04 16:03-0400\n"
-"Last-Translator: Timon <timosha@gmail.com>\n"
-"Language-Team: openSUSE <opensuse-translation-ru@opensuse.org>\n"
+"PO-Revision-Date: 2015-10-19 16:18+0300\n"
+"Last-Translator: zluka <osam@tut.by>\n"
+"Language-Team: русский <>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: applet.js:244
 msgid "..."
@@ -69,9 +72,8 @@ msgid "Wind:"
 msgstr "Ветер:"
 
 #: applet.js:714
-#, fuzzy
 msgid "Wind Chill:"
-msgstr "Ветер:"
+msgstr "Ощущается:"
 
 #: applet.js:916
 msgid "Tornado"
@@ -87,11 +89,11 @@ msgstr "Ураган"
 
 #: applet.js:922
 msgid "Severe thunderstorms"
-msgstr "Сильные грозы"
+msgstr "Сильная гроза"
 
 #: applet.js:924
 msgid "Thunderstorms"
-msgstr "Грозы"
+msgstr "Гроза"
 
 #: applet.js:926
 msgid "Mixed rain and snow"
@@ -103,7 +105,7 @@ msgstr "Дождь и мокрый снег"
 
 #: applet.js:930
 msgid "Mixed snow and sleet"
-msgstr "Снег и мокрый снег"
+msgstr "Мокрый снег"
 
 #: applet.js:932
 msgid "Freezing drizzle"
@@ -119,11 +121,11 @@ msgstr "Ледяной дождь"
 
 #: applet.js:938 applet.js:940
 msgid "Showers"
-msgstr "Ливни"
+msgstr "Ливень"
 
 #: applet.js:942
 msgid "Snow flurries"
-msgstr "Шквалистый снег"
+msgstr "Метель"
 
 #: applet.js:944
 msgid "Light snow showers"
@@ -131,11 +133,11 @@ msgstr "Небольшой снегопад"
 
 #: applet.js:946
 msgid "Blowing snow"
-msgstr "Низовая метель"
+msgstr "Позёмок"
 
 #: applet.js:948
 msgid "Snow"
-msgstr "Снег"
+msgstr "Снегопад"
 
 #: applet.js:950
 msgid "Hail"
@@ -207,7 +209,7 @@ msgstr "Жара"
 
 #: applet.js:987
 msgid "Isolated thunderstorms"
-msgstr "Единичные грозы"
+msgstr "Местами грозы"
 
 #: applet.js:990
 msgid "Scattered thunderstorms"
@@ -227,7 +229,7 @@ msgstr "Местами снегопад"
 
 #: applet.js:1002
 msgid "Thundershowers"
-msgstr "Грозовые ливни"
+msgstr "Грозовой ливень"
 
 #: applet.js:1004
 msgid "Snow showers"
@@ -235,7 +237,7 @@ msgstr "Снегопад"
 
 #: applet.js:1006
 msgid "Isolated thundershowers"
-msgstr "Единичные грозовые ливни"
+msgstr "Местами грозовые ливни"
 
 #: applet.js:1009
 msgid "Not available"
@@ -303,56 +305,55 @@ msgstr "CЗ"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr "Получить WOEID"
+msgstr "Узнать моё местонахождение"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Atmospheric pressure unit"
-msgstr ""
+msgstr "Размерность атм.давления"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
-msgstr ""
+msgstr "фунт на кв.дюйм"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "atm"
-msgstr ""
+msgstr "атм"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
-msgstr ""
+msgstr "Па"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mm Hg"
-msgstr ""
+msgstr "мм рт.ст."
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "at"
-msgstr ""
+msgstr "ат"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "mbar"
-msgstr ""
+msgstr "мбар"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "in Hg"
-msgstr ""
+msgstr "дюймов рт.ст."
 
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 msgid "Display current temperature in panel"
-msgstr "Показать текущую температуру в панеле"
+msgstr "Показать текущую температуру в панели"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
-msgstr "Идентификатор места на земле"
+msgstr "Местонахождение"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr "Где на Земле ID"
+msgstr "Местонахождение"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
-#, fuzzy
 msgid "Temperature unit"
-msgstr "Температура:"
+msgstr "Размерность температуры:"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
@@ -360,7 +361,7 @@ msgstr "фаренгейт"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr "цельсия"
+msgstr "цельсий"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
@@ -372,7 +373,7 @@ msgstr "Переписать вывод места"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
-msgstr ""
+msgstr "Показывать время в 24 часовом формате"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
@@ -380,7 +381,7 @@ msgstr "Показать время восхода/заката"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 msgid "Wind speed unit"
-msgstr "Единица скорости ветра"
+msgstr "Размерность скорости верта"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "kph"
@@ -392,7 +393,7 @@ msgstr "м/с"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
-msgstr "кноты"
+msgstr "узлы"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
@@ -400,16 +401,15 @@ msgstr "миль/ч"
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr "Показать погодные условия (\"Ветренно\", \"Безоблачно\")"
+msgstr "Показывать погодные условия (\"Ветренно\", \"Безоблачно\") на панели"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
-#, fuzzy
 msgid "Update interval"
-msgstr "Интервал обовления (минуты)"
+msgstr "Интервал обовления"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->units
 msgid "minutes"
-msgstr ""
+msgstr "минуты"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
@@ -417,7 +417,7 @@ msgstr "Иконки-символы"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr "Показать прогноз на 5 дней"
+msgstr "Показывать прогноз на 5 дней"
 
 #~ msgid "Today"
 #~ msgstr "Сегодня"
