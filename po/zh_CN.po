@@ -173,7 +173,7 @@ msgstr "刮风"
 
 #: applet.js:966
 msgid "Cold"
-msgstr "冷"
+msgstr "寒冷"
 
 #: applet.js:968
 msgid "Cloudy"
@@ -346,11 +346,11 @@ msgstr "在系统面板显示当前气温"
 #. cinnamon-weather->settings-schema.json->woeid->description
 #, fuzzy
 msgid "WOEID"
-msgstr "地区代号"
+msgstr "WOEID"
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr "地区代号"
+msgstr "位置识别码"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
@@ -367,11 +367,11 @@ msgstr "摄氏"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 msgid "Translate condition"
-msgstr "翻译天气情况"
+msgstr "翻译天气状况"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr "修改地区名称为"
+msgstr "替换位置名称为"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
@@ -408,7 +408,7 @@ msgstr "在系统面板显示天气情况（如：\" 晴朗\"）"
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 #, fuzzy
 msgid "Update interval"
-msgstr "更新间隔（分钟）"
+msgstr "更新间隔"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->units
 msgid "minutes"
