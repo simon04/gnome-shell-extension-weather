@@ -24,7 +24,7 @@ msgstr "..."
 
 #: applet.js:245
 msgid "Click to open"
-msgstr ""
+msgstr "Megnyitás"
 
 #: applet.js:285
 #, fuzzy
@@ -33,11 +33,11 @@ msgstr "Meteorológiai beállítások"
 
 #: applet.js:541
 msgid "Sunrise"
-msgstr ""
+msgstr "Napfelkelte"
 
 #: applet.js:542
 msgid "Sunset"
-msgstr ""
+msgstr "Napnyugta"
 
 #: applet.js:618
 msgid "Loading current weather ..."
@@ -75,7 +75,7 @@ msgstr "Szél:"
 #: applet.js:714
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "Szél:"
+msgstr "Szélérzet:"
 
 #: applet.js:916
 msgid "Tornado"
@@ -111,7 +111,7 @@ msgstr "Ónos eső és dara"
 
 #: applet.js:932
 msgid "Freezing drizzle"
-msgstr "Fagyos szitáló eső"
+msgstr "Fagyos, szitáló eső"
 
 #: applet.js:934
 msgid "Drizzle"
@@ -131,11 +131,11 @@ msgstr "Hózápor"
 
 #: applet.js:944
 msgid "Light snow showers"
-msgstr "Könnyű havas zápor"
+msgstr "Enyhe, havas zápor"
 
 #: applet.js:946
 msgid "Blowing snow"
-msgstr "Hóátfúvás"
+msgstr "Hófúvás"
 
 #: applet.js:948
 msgid "Snow"
@@ -163,7 +163,7 @@ msgstr "Pára"
 
 #: applet.js:960
 msgid "Smoky"
-msgstr "Ködös"
+msgstr "Párás"
 
 #: applet.js:962
 msgid "Blustery"
@@ -211,7 +211,7 @@ msgstr "Forró"
 
 #: applet.js:987
 msgid "Isolated thunderstorms"
-msgstr "Elszigetelt viharok"
+msgstr "Helyi viharok"
 
 #: applet.js:990
 msgid "Scattered thunderstorms"
@@ -239,7 +239,7 @@ msgstr "Hózápor"
 
 #: applet.js:1006
 msgid "Isolated thundershowers"
-msgstr "Elszigetelt felhőszakadás"
+msgstr "Helyi felhőszakadás"
 
 #: applet.js:1009
 msgid "Not available"
@@ -307,11 +307,11 @@ msgstr "ÉNY"
 
 #. cinnamon-weather->settings-schema.json->woeidLookup->description
 msgid "Get WOEID"
-msgstr ""
+msgstr "WOEID beszerzése"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->description
 msgid "Atmospheric pressure unit"
-msgstr ""
+msgstr "Légköri nyomás egysége"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "psi"
@@ -344,7 +344,7 @@ msgstr ""
 #. cinnamon-weather->settings-schema.json->showTextInPanel->description
 #, fuzzy
 msgid "Display current temperature in panel"
-msgstr "Hőmérséklet a panelen"
+msgstr "Hőmérséklet kijelzése panelen"
 
 #. cinnamon-weather->settings-schema.json->woeid->description
 msgid "WOEID"
@@ -352,20 +352,20 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->woeid->tooltip
 msgid "Where On Earth ID"
-msgstr ""
+msgstr "Helyazonosító (WOEID)"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 #, fuzzy
 msgid "Temperature unit"
-msgstr "Hőmérsékleti egység"
+msgstr "Hőmérséklet egysége"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
-msgstr ""
+msgstr "Fahrenheit"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "celsius"
-msgstr ""
+msgstr "Celsius"
 
 #. cinnamon-weather->settings-schema.json->translateCondition->description
 #, fuzzy
@@ -374,15 +374,15 @@ msgstr "Fordítási feltételek"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr ""
+msgstr "Hely megjelenített neve"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
-msgstr ""
+msgstr "Idő 24 órás formátumban"
 
 #. cinnamon-weather->settings-schema.json->showSunrise->description
 msgid "Show sunrise / sunset times"
-msgstr ""
+msgstr "Napfelkelte/-nyugta kijelzése"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->description
 #, fuzzy
@@ -399,7 +399,7 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "knots"
-msgstr ""
+msgstr "csomó"
 
 #. cinnamon-weather->settings-schema.json->windSpeedUnit->options
 msgid "mph"
@@ -407,24 +407,24 @@ msgstr ""
 
 #. cinnamon-weather->settings-schema.json->showCommentInPanel->description
 msgid "Show the weather condition (e.g., \"Windy\", \"Clear\") in the panel"
-msgstr ""
+msgstr "Időjárási körülmények (pl.: 'Szeles', 'Tiszta') kijelzése panelen"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->description
 msgid "Update interval"
-msgstr ""
+msgstr "Frissítési időköz"
 
 #. cinnamon-weather->settings-schema.json->refreshInterval->units
 msgid "minutes"
-msgstr ""
+msgstr "perc"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 #, fuzzy
 msgid "Symbolic icons"
-msgstr "Jelképes Ikonok"
+msgstr "Jelképes ikonok"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr ""
+msgstr "5 napos előrejelzés kijelzése"
 
 #~ msgid "Today"
 #~ msgstr "Ma"
@@ -436,7 +436,7 @@ msgstr ""
 #~ msgstr "\"%s\" minta nem található."
 
 #~ msgid "Locations"
-#~ msgstr "Helyszínek"
+#~ msgstr "Helyek"
 
 #~ msgid "Reload Weather Information"
 #~ msgstr "Meteorológiai információ újratöltése"
@@ -466,10 +466,10 @@ msgstr ""
 #~ msgstr "Erős szél"
 
 #~ msgid "Moderate gale"
-#~ msgstr "Mérsékelt viharos szél"
+#~ msgstr "Mérsékelt, viharos szél"
 
 #~ msgid "Fresh gale"
-#~ msgstr "Frissítő viharos szél"
+#~ msgstr "Frissítő, viharos szél"
 
 #~ msgid "Strong gale"
 #~ msgstr "Erős viharos szél"
