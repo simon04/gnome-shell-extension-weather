@@ -2,7 +2,7 @@
 # Copyright (C) 2011
 # This file is distributed under the same license as the gnome-shell-extension-weather package.
 # Peter van Ieperen <p.v.ieperen77@gmail.com>, 2011.
-# Pjotr <pjotrvertaalt@gmail.com>, 2013-2014.
+# Pjotr <pjotrvertaalt@gmail.com>, 2013-2016.
 #
 msgid ""
 msgstr ""
@@ -72,7 +72,7 @@ msgstr "Wind:"
 #: applet.js:714
 #, fuzzy
 msgid "Wind Chill:"
-msgstr "Gevoelstemp.:"
+msgstr "Gevoelstemp:"
 
 #: applet.js:916
 msgid "Tornado"
@@ -352,7 +352,7 @@ msgstr "Waar ter wereld ID"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->description
 msgid "Temperature unit"
-msgstr "Temperatuureenheid:"
+msgstr "Temperatuureenheid"
 
 #. cinnamon-weather->settings-schema.json->temperatureUnit->options
 msgid "fahrenheit"
