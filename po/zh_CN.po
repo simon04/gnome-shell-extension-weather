@@ -52,7 +52,7 @@ msgstr "正在加载 ..."
 
 #: applet.js:654
 msgid "Refresh"
-msgstr ""
+msgstr "刷新"
 
 #: applet.js:717
 msgid "Temperature:"
@@ -64,7 +64,7 @@ msgstr "湿度："
 
 #: applet.js:721
 msgid "Pressure:"
-msgstr "压强："
+msgstr "气压："
 
 #: applet.js:723
 msgid "Wind:"
@@ -168,7 +168,7 @@ msgstr "大风"
 
 #: applet.js:979
 msgid "Windy"
-msgstr "刮风"
+msgstr "多风"
 
 #: applet.js:981
 msgid "Cold"
@@ -375,7 +375,7 @@ msgstr "翻译天气状况"
 
 #. cinnamon-weather->settings-schema.json->locationLabelOverride->description
 msgid "Override location label"
-msgstr "替换位置名称为"
+msgstr "重写位置标签为"
 
 #. cinnamon-weather->settings-schema.json->show24Hours->description
 msgid "Display time in 24 hour format"
@@ -420,19 +420,19 @@ msgstr "分钟"
 
 #. cinnamon-weather->settings-schema.json->useSymbolicIcons->description
 msgid "Symbolic icons"
-msgstr "使用天气现象符号"
+msgstr "使用气象符号"
 
 #. cinnamon-weather->settings-schema.json->showFivedayForecast->description
 msgid "Show 5-day forecast"
-msgstr "显示五天预报"
+msgstr "显示未来五天的天气"
 
 #. cinnamon-weather->metadata.json->description
 msgid "View your local weather forecast"
-msgstr ""
+msgstr "查看本地天气预报"
 
 #. cinnamon-weather->metadata.json->name
 msgid "Weather"
-msgstr ""
+msgstr "天气"
 
 #~ msgid "Please wait"
 #~ msgstr "请等待"
