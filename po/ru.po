@@ -53,7 +53,7 @@ msgstr "Загрузка ..."
 
 #: applet.js:654
 msgid "Refresh"
-msgstr ""
+msgstr "Обновление"
 
 #: applet.js:717
 msgid "Temperature:"
@@ -425,11 +425,11 @@ msgstr "Показывать прогноз на 5 дней"
 
 #. cinnamon-weather->metadata.json->description
 msgid "View your local weather forecast"
-msgstr ""
+msgstr "Посмотреть ваш местный прогноз погоды"
 
 #. cinnamon-weather->metadata.json->name
 msgid "Weather"
-msgstr ""
+msgstr "Погода"
 
 #~ msgid "Please wait"
 #~ msgstr "Подождите"
