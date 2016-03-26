@@ -317,9 +317,8 @@ msgid "atm"
 msgstr "atm"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
-#, fuzzy
 msgid "kPa"
-msgstr "Pa"
+msgstr "kPa"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
