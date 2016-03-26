@@ -51,7 +51,7 @@ msgstr "Bezig met laden..."
 
 #: applet.js:654
 msgid "Refresh"
-msgstr ""
+msgstr "Verversen"
 
 #: applet.js:717
 msgid "Temperature:"
@@ -318,9 +318,8 @@ msgid "atm"
 msgstr "atm"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
-#, fuzzy
 msgid "kPa"
-msgstr "Pa"
+msgstr "kPa"
 
 #. cinnamon-weather->settings-schema.json->pressureUnit->options
 msgid "Pa"
@@ -425,11 +424,11 @@ msgstr "Toon vijfdaagse weersvoorspelling"
 
 #. cinnamon-weather->metadata.json->description
 msgid "View your local weather forecast"
-msgstr ""
+msgstr "Bekijk uw plaatselijke weersvoorspelling"
 
 #. cinnamon-weather->metadata.json->name
 msgid "Weather"
-msgstr ""
+msgstr "Weer"
 
 #~ msgid "Please wait"
 #~ msgstr "Een ogenblik geduld a.u.b."
