@@ -29,6 +29,7 @@
  */
 
 const Cairo = imports.cairo;
+const Clutter = imports.gi.Clutter;
 const Gettext = imports.gettext.domain('gnome-shell-extension-weather');
 const Gio = imports.gi.Gio;
 const Gtk = imports.gi.Gtk;
@@ -146,7 +147,7 @@ WeatherMenuButton.prototype = {
         this._weatherIcon = new St.Icon({
             icon_type: this._icon_type,
             icon_name: 'view-refresh-symbolic',
-            style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_direction() == St.TextDirection.RTL ? '-rtl' : '')
+            style_class: 'system-status-icon weather-icon' + (Main.panel.actor.get_text_direction() == Clutter.TextDirection.RTL ? '-rtl' : '')
         });
 
         // Label
@@ -154,7 +155,7 @@ WeatherMenuButton.prototype = {
 
         // Panel menu item - the current class
         let menuAlignment = 0.25;
-        if (St.Widget.get_default_direction() == St.TextDirection.RTL)
+        if (Clutter.get_default_text_direction() == Clutter.TextDirection.RTL)
             menuAlignment = 1.0 - menuAlignment;
         PanelMenu.Button.prototype._init.call(this, menuAlignment);
 
@@ -169,14 +170,14 @@ WeatherMenuButton.prototype = {
         switch (this._position_in_panel) {
             case WeatherPosition.LEFT:
                 children = Main.panel._leftBox.get_children();
-                Main.panel._leftBox.insert_actor (this.actor, children.length-1);
+                Main.panel._leftBox.insert_child_at_index(this.actor, children.length-1);
                 break;
             case WeatherPosition.CENTER:
                 Main.panel._centerBox.add(this.actor, { y_fill: true });
                 break;
             case WeatherPosition.RIGHT:
                 children = Main.panel._rightBox.get_children();
-                Main.panel._rightBox.insert_actor(this.actor, children.length-1);
+                Main.panel._rightBox.insert_child_at_index(this.actor, children.length-1);
                 break;
         }
 
