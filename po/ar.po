@@ -30,7 +30,7 @@ msgstr "لم تحدد أي مكان"
 
 #: ../src/extension.js:245
 msgid "Loading weather"
-msgstr "يُحمّل الطقس"
+msgstr "جاري تحميل معلومات الطقس"
 
 #: ../src/extension.js:261
 msgid "Weather extension ready"
@@ -95,7 +95,7 @@ msgstr "الرياح"
 
 #: ../src/extension.js:929
 msgid "No forecast information"
-msgstr "لا نشرة جوية"
+msgstr "معلومات الطقس غير متوفرة"
 
 #: ../src/extension.js:1114
 #, python-format
