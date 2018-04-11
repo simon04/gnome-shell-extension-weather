@@ -97,7 +97,7 @@ Extends: Gtk.Box,
 
 	Window : new Gtk.Builder(),
 
-	world : GWeather.Location.new_world(false),
+	world : GWeather.Location.get_world(),
 
 	initWindow : function()
 	{												this.status("Init window");
