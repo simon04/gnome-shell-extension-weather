@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-06 00:14+0300\n"
+"PO-Revision-Date: 2017-07-06 00:39+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"Last-Translator: Kerem Kuralay <keremkuralay@hotmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: tr\n"
+
+#: ../src/extension.js:235 ../src/extension.js:243 ../src/extension.js:251
+#: ../src/extension.js:259 ../src/extension.js:575
+msgid "Weather"
+msgstr "Hava Durumu"
+
+#: ../src/extension.js:237
+msgid "No location configured"
+msgstr "Hiçbir konum ayarlanmadı"
+
+#: ../src/extension.js:245
+msgid "Loading weather"
+msgstr "Hava durumu yükleniyor"
+
+#: ../src/extension.js:261
+msgid "Weather extension ready"
+msgstr "Hava durumu eklentisi hazır"
+
+#: ../src/extension.js:293 ../src/extension.js:366 ../src/extension.js:373
+msgid ", "
+msgstr ", "
+
+#: ../src/extension.js:451
+msgid "Today"
+msgstr "Bugün"
+
+#: ../src/extension.js:454
+msgid "Tomorrow"
+msgstr "Yarın"
+
+#: ../src/extension.js:457
+msgid "Yesterday"
+msgstr "Dün"
+
+#: ../src/extension.js:639
+msgid "Locations"
+msgstr "Konumlar"
+
+#: ../src/extension.js:643
+msgid "Reload Weather Information"
+msgstr "Hava durumu bilgisini yenile"
+
+#: ../src/extension.js:648
+msgid "Weather Settings"
+msgstr "Hava durumu ayarları"
+
+#: ../src/extension.js:812
+msgid "No weather information"
+msgstr "Hava durumu bilgisi yok"
+
+#: ../src/extension.js:814
+#, python-format
+msgid "No weather information for %s"
+msgstr "%s için hava durumu bilgisi yok"
+
+#: ../src/extension.js:899
+msgid "Feels like"
+msgstr "Hissedilen"
+
+#: ../src/extension.js:901
+msgid "Visibility"
+msgstr "Görüş Mesafesi"
+
+#: ../src/extension.js:903
+msgid "Humidity"
+msgstr "Nem"
+
+#: ../src/extension.js:905
+msgid "Pressure"
+msgstr "Basınç"
+
+#: ../src/extension.js:907
+msgid "Wind"
+msgstr "Rüzgar"
+
+#: ../src/extension.js:929
+msgid "No forecast information"
+msgstr "Tahmin bilgilsi yok"
+
+#: ../src/extension.js:1114
+#, python-format
+msgid "%s °F"
+msgstr "%s °F"
+
+#: ../src/extension.js:1118
+#, python-format
+msgid "%s °C"
+msgstr "%s °C"
+
+#: ../src/extension.js:1122
+#, python-format
+msgid "%s K"
+msgstr "%s K"
+
+#: ../src/extension.js:1128 ../src/extension.js:1186
+msgid "Unknown"
+msgstr "Bilinmeyen"
+
+#: ../src/extension.js:1150 ../src/extension.js:1153
+msgid "VAR"
+msgstr "VAR"
+
+#: ../src/extension.js:1153
+msgid "N"
+msgstr "K"
+
+#: ../src/extension.js:1153
+msgid "NNE"
+msgstr "KKD"
+
+#: ../src/extension.js:1153
+msgid "NE"
+msgstr "KD"
+
+#: ../src/extension.js:1153
+msgid "ENE"
+msgstr "DKD"
+
+#: ../src/extension.js:1153
+msgid "E"
+msgstr "D"
+
+#: ../src/extension.js:1153
+msgid "ESE"
+msgstr "DGD"
+
+#: ../src/extension.js:1153
+msgid "SE"
+msgstr "GD"
+
+#: ../src/extension.js:1153
+msgid "SSE"
+msgstr "GGD"
+
+#: ../src/extension.js:1154
+msgid "S"
+msgstr "G"
+
+#: ../src/extension.js:1154
+msgid "SSW"
+msgstr "GGB"
+
+#: ../src/extension.js:1154
+msgid "SW"
+msgstr "GB"
+
+#: ../src/extension.js:1154
+msgid "WSW"
+msgstr "BGB"
+
+#: ../src/extension.js:1154
+msgid "W"
+msgstr "B"
+
+#: ../src/extension.js:1154
+msgid "WNW"
+msgstr "BKB"
+
+#: ../src/extension.js:1154
+msgid "NW"
+msgstr "KB"
+
+#: ../src/extension.js:1154
+msgid "NNW"
+msgstr "KKB"
+
+#: ../src/extension.js:1164
+msgid "$d$s knots"
+msgstr "$d$s knot"
+
+#: ../src/extension.js:1168
+msgid "$d$s mph"
+msgstr "$d$s mil/sa"
+
+#: ../src/extension.js:1172
+msgid "$d$s km/h"
+msgstr "$d$s km/sa"
+
+#: ../src/extension.js:1176
+msgid "$d$s m/s"
+msgstr "$d$s m/sa"
+
+#: ../src/extension.js:1180
+msgid "$dBeaufort $s"
+msgstr "$dBeaufort $s"
+
+#: ../src/prefs.js:143
+msgid "Temperature Unit"
+msgstr "Sıcaklık Birimi"
+
+#: ../src/prefs.js:145
+msgid "Wind Speed Unit"
+msgstr "Rüzgar Hızı Birimi"
+
+#: ../src/prefs.js:147
+msgid "Pressure Unit"
+msgstr "Basınç Birimi"
+
+#: ../src/prefs.js:149
+msgid "Distance Unit"
+msgstr "Mesafe Birimi"
+
+#: ../src/prefs.js:151
+msgid "Position in Panel"
+msgstr "Çubuktaki Konumu"
+
+#: ../src/prefs.js:152
+msgid "Center"
+msgstr "Orta"
+
+#: ../src/prefs.js:152
+msgid "Right"
+msgstr "Sağ"
+
+#: ../src/prefs.js:152
+msgid "Left"
+msgstr "Sol"
+
+#: ../src/prefs.js:153
+msgid "Wind Direction by Arrows"
+msgstr "Rüzgar yönünü ok işaretleriyle görüntüle"
+
+#: ../src/prefs.js:155
+msgid "Symbolic Icons"
+msgstr "Renksiz Simgeler"
+
+#: ../src/prefs.js:157
+msgid "Temperature in Panel"
+msgstr "Çubukta Sıcaklığı Görüntüle"
+
+#: ../src/prefs.js:159
+msgid "Conditions in Panel"
+msgstr "Çubukta Durumu Görüntüle"
+
+#: ../src/prefs.js:161
+msgid "Debug the extension"
+msgstr "Eklentide hata ayıkla"
+
+#: ../src/prefs.js:320
+msgid "Name of the city"
+msgstr "Şehir adı"
+
+#: ../src/prefs.js:378
+#, python-format
+msgid "Remove %s ?"
+msgstr "%s konumu silinsin mi?"
